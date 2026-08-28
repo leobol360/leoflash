@@ -540,7 +540,10 @@ const Store = {
     return shuffle(this.scopedPhrases()).slice(0, size);
   },
 
-  // Grade one answered phrase: right -> next box, wrong -> back to box 1.
+  // Grade one answered phrase. A hit moves it one box up (so it comes back
+  // less often); a miss drops it about halfway down (so it comes back
+  // sooner, but a slip on a well-known phrase isn't reset to zero).
+  // Returns { card, dueInDays } so the UI can show when it's next due.
   gradePhrase(id, wasCorrect) {
     const card = this.phraseCard(id);
     card.seen = true;
@@ -549,12 +552,13 @@ const Store = {
       card.correct++;
       card.box = Math.min(PHRASE_MASTERED_BOX, card.box + 1);
     } else {
-      card.box = 1;
+      card.box = Math.max(1, Math.floor(card.box / 2));
     }
-    card.due = addDays(todayStr(), PHRASE_BOX_DAYS[card.box]);
+    const dueInDays = PHRASE_BOX_DAYS[card.box];
+    card.due = addDays(todayStr(), dueInDays);
     card.lastReviewed = todayStr();
     this.save();
-    return card;
+    return { card, dueInDays };
   },
 };
 

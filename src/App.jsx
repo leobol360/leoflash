@@ -12,15 +12,15 @@ import Settings from "./views/Settings.jsx";
 import LevelPicker from "./views/LevelPicker.jsx";
 
 const NAV = [
-  { id: "home", label: "Home", icon: "🏠" },
+  { id: "home", label: "Cards", icon: "🃏" },
+  { id: "phrases", label: "Phrases", icon: "💬" },
   { id: "browse", label: "Deck", icon: "📚" },
   { id: "grammar", label: "Grammar", icon: "📖" },
-  { id: "phrases", label: "Phrases", icon: "💬" },
   { id: "stats", label: "Stats", icon: "📈" },
   { id: "settings", label: "Settings", icon: "⚙️" },
 ];
 
-const VIEWS = ["home", "browse", "grammar", "phrases", "stats", "settings"];
+const VIEWS = ["home", "phrases", "browse", "grammar", "stats", "settings"];
 
 export default function App() {
   const store = useStore();

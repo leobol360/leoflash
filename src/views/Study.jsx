@@ -188,7 +188,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
               </button>
             )}
             <button className="btn btn-ghost" onClick={onExit}>
-              Back to dashboard
+              Back to Cards
             </button>
           </div>
         </div>

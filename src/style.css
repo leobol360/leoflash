@@ -242,7 +242,8 @@ main { padding-bottom: 120px; padding-top: 8px; }
   color: var(--muted); font-weight: 600;
 }
 
-/* flip card */
+/* flip card — the back face stays in normal flow so the card grows to
+   fit its content; the (short) front face is overlaid on top of it. */
 .flip { perspective: 1400px; cursor: pointer; }
 .flip-inner {
   position: relative; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.4,.15,.25,1);
@@ -250,14 +251,17 @@ main { padding-bottom: 120px; padding-top: 8px; }
 }
 .flip.flipped .flip-inner { transform: rotateY(180deg); }
 .flip-face {
-  position: absolute; inset: 0; backface-visibility: hidden;
+  backface-visibility: hidden;
   background: linear-gradient(160deg, var(--surface), var(--surface-2));
   border: 1px solid var(--border); border-radius: var(--radius);
   box-shadow: var(--shadow);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 12px; padding: 28px; text-align: center;
 }
-.flip-face.back { transform: rotateY(180deg); }
+/* back is in flow → it sets the card's height */
+.flip-face.back { transform: rotateY(180deg); min-height: 300px; }
+/* front is short — overlay it on the back */
+.flip-face.front { position: absolute; inset: 0; }
 .fc-word { font-family: var(--font-serif); font-size: clamp(2rem, 8vw, 3rem); font-weight: 600; }
 .fc-ipa { color: var(--muted); font-size: .95rem; }
 .fc-hint { font-size: .78rem; color: var(--muted); margin-top: 8px; }
@@ -480,6 +484,17 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 .gr-list { display: flex; flex-direction: column; gap: 8px; }
 
 /* ---- Phrases section ---- */
+.phrase-sections { padding: 4px 12px 12px; gap: 8px; }
+.phrase-section { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
+.phrase-section.open { border-color: var(--accent); }
+.phrase-section-head {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; padding: 10px 12px; background: none; border: 0; color: var(--text);
+  font: inherit; font-size: .92rem; font-weight: 600; cursor: pointer; text-align: left;
+}
+.phrase-section-head:hover { background: var(--accent-soft); }
+.phrase-section .phrase-list { padding: 0 12px 8px; }
+
 .phrase-list { display: flex; flex-direction: column; }
 .phrase-row { padding: 10px 0; border-top: 1px solid var(--border); }
 .phrase-row:first-child { border-top: 0; }

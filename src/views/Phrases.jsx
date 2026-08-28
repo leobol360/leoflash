@@ -1,17 +1,23 @@
 import { useMemo, useRef, useState, useEffect } from "react";
 import { PHRASES, PHRASE_CATEGORIES, splitOnGap, checkGap } from "../phrases.js";
+import { LEVELS } from "../data.js";
 import { Store, shuffle } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
 
 const CATEGORY = Object.fromEntries(PHRASE_CATEGORIES.map((c) => [c.key, c]));
+const LEVEL_ORDER = ["a1", "a2", "b1", "b2"];
 
 const STATUS_LABEL = {
-  new: "nueva",
-  learning: "aprendiendo",
-  review: "en repaso",
-  mastered: "dominada",
+  new: "new",
+  learning: "learning",
+  review: "review",
+  mastered: "mastered",
 };
+
+// "vuelve mañana" / "vuelve en 4 días"
+const dueLabel = (days) =>
+  days <= 1 ? "vuelve mañana" : `vuelve en ${days} días`;
 
 export default function Phrases() {
   const [session, setSession] = useState(null); // null = browsing the list
@@ -39,11 +45,41 @@ export default function Phrases() {
   return <Browse onPractice={start} />;
 }
 
+function PhraseRow({ phrase, showLevel }) {
+  const store = useStore();
+  const status = store.phraseStatus(phrase.id);
+  return (
+    <div className="phrase-row">
+      <div className="phrase-en">
+        <span>{phrase.en}</span>
+        <button
+          type="button"
+          className="wf-speak"
+          title="Escuchar"
+          onClick={() => Speech.say(phrase.en)}
+        >
+          🔊
+        </button>
+        {showLevel && (
+          <span className="phrase-level">{phrase.level.toUpperCase()}</span>
+        )}
+        {status !== "new" && (
+          <span className={"phrase-status ph-" + status}>
+            {STATUS_LABEL[status]}
+          </span>
+        )}
+      </div>
+      <div className="phrase-es">{phrase.es}</div>
+    </div>
+  );
+}
+
 /* ---------------- reference list ---------------- */
 function Browse({ onPractice }) {
   const store = useStore();
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("all");
+  const [openLevels, setOpenLevels] = useState(() => new Set());
+  const [openSections, setOpenSections] = useState(() => new Set());
   const progress = store.phraseStats();
 
   const version = store.getVersion();
@@ -53,22 +89,45 @@ function Browse({ onPractice }) {
     .filter((key) => key !== "software")
     .map((key) => key.toUpperCase());
 
-  const rows = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    return scoped.filter((phrase) => {
-      if (category !== "all" && phrase.category !== category) return false;
-      if (!needle) return true;
-      return (
-        phrase.en.toLowerCase().includes(needle) ||
-        phrase.es.toLowerCase().includes(needle)
-      );
-    });
-  }, [scoped, query, category]);
+  const needle = query.trim().toLowerCase();
+  const searching = needle.length > 0;
 
-  const groups = PHRASE_CATEGORIES.map((cat) => ({
-    ...cat,
-    items: rows.filter((phrase) => phrase.category === cat.key),
-  })).filter((group) => group.items.length);
+  const matches = useMemo(
+    () =>
+      searching
+        ? scoped.filter(
+            (phrase) =>
+              phrase.en.toLowerCase().includes(needle) ||
+              phrase.es.toLowerCase().includes(needle)
+          )
+        : [],
+    [scoped, needle, searching]
+  );
+
+  // scoped phrases grouped: level -> [{ category, items }]
+  const levelGroups = useMemo(
+    () =>
+      LEVEL_ORDER.filter((lv) => store.levelEnabled(lv))
+        .map((lv) => {
+          const inLevel = scoped.filter((phrase) => phrase.level === lv);
+          const sections = PHRASE_CATEGORIES.map((cat) => ({
+            ...cat,
+            items: inLevel.filter((phrase) => phrase.category === cat.key),
+          })).filter((section) => section.items.length);
+          return { level: lv, count: inLevel.length, sections };
+        })
+        .filter((group) => group.count),
+    [scoped, version]
+  );
+
+  const toggle = (setter) => (key) =>
+    setter((prev) => {
+      const next = new Set(prev);
+      next.has(key) ? next.delete(key) : next.add(key);
+      return next;
+    });
+  const toggleLevel = toggle(setOpenLevels);
+  const toggleSection = toggle(setOpenSections);
 
   return (
     <div className="page">
@@ -87,72 +146,96 @@ function Browse({ onPractice }) {
         </p>
         <p className="muted small">
           Nivel{activeLevels.length === 1 ? "" : "es"}:{" "}
-          <b>{activeLevels.join(" · ") || "—"}</b> · {progress.seen} de{" "}
-          {progress.total} practicadas · {progress.learning} aprendiendo ·{" "}
-          {progress.review} en repaso · {progress.mastered} dominadas
+          <b>{activeLevels.join(" · ") || "—"}</b> · {progress.seen}/
+          {progress.total} · {progress.learning} learning · {progress.review}{" "}
+          review · {progress.mastered} mastered
         </p>
       </div>
 
-      {rows.length === 0 && scoped.length === 0 && (
+      {scoped.length === 0 && (
         <p className="muted">
           Activa un nivel A1–B2 en el inicio para ver frases de ese nivel.
         </p>
       )}
 
-      <div className="browse-bar card">
-        <input
-          type="search"
-          placeholder="Buscar una frase o su significado…"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
-          <option value="all">Todas las categorías</option>
-          {PHRASE_CATEGORIES.map((cat) => (
-            <option value={cat.key} key={cat.key}>
-              {cat.icon} {cat.label}
-            </option>
-          ))}
-        </select>
-      </div>
+      {scoped.length > 0 && (
+        <div className="browse-bar card">
+          <input
+            type="search"
+            placeholder="Buscar una frase o su significado…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
+      )}
 
-      {groups.map((group) => (
-        <div className="card" key={group.key}>
+      {searching ? (
+        <div className="card">
           <h3 className="gr-group">
-            {group.icon} {group.label}
+            {matches.length} resultado{matches.length === 1 ? "" : "s"}
           </h3>
           <div className="phrase-list">
-            {group.items.map((phrase) => {
-              const status = store.phraseStatus(phrase.id);
-              return (
-                <div className="phrase-row" key={phrase.id}>
-                  <div className="phrase-en">
-                    <span>{phrase.en}</span>
-                    <button
-                      type="button"
-                      className="wf-speak"
-                      title="Escuchar"
-                      onClick={() => Speech.say(phrase.en)}
-                    >
-                      🔊
-                    </button>
-                    <span className="phrase-level">{phrase.level.toUpperCase()}</span>
-                    {status !== "new" && (
-                      <span className={"phrase-status ph-" + status}>
-                        {STATUS_LABEL[status]}
-                      </span>
-                    )}
-                  </div>
-                  <div className="phrase-es">{phrase.es}</div>
-                </div>
-              );
-            })}
+            {matches.map((phrase) => (
+              <PhraseRow key={phrase.id} phrase={phrase} showLevel />
+            ))}
           </div>
+          {matches.length === 0 && (
+            <p className="muted">Nada coincide con la búsqueda.</p>
+          )}
         </div>
-      ))}
+      ) : (
+        levelGroups.map((group) => {
+          const levelOpen = openLevels.has(group.level);
+          return (
+            <div
+              className={"gr-card" + (levelOpen ? " open" : "")}
+              key={group.level}
+            >
+              <button className="gr-head" onClick={() => toggleLevel(group.level)}>
+                <span className="gr-title">
+                  {LEVELS[group.level].label}
+                  <span className="gr-es"> · {group.count} frases</span>
+                </span>
+                <span className="gr-caret">{levelOpen ? "▲" : "▼"}</span>
+              </button>
 
-      {rows.length === 0 && scoped.length > 0 && (
-        <p className="muted">Nada coincide con la búsqueda.</p>
+              {levelOpen && (
+                <div className="gr-body phrase-sections">
+                  {group.sections.map((section) => {
+                    const key = group.level + "|" + section.key;
+                    const sectionOpen = openSections.has(key);
+                    return (
+                      <div
+                        className={"phrase-section" + (sectionOpen ? " open" : "")}
+                        key={key}
+                      >
+                        <button
+                          className="phrase-section-head"
+                          onClick={() => toggleSection(key)}
+                        >
+                          <span>
+                            {section.icon} {section.label}
+                            <span className="gr-es"> ({section.items.length})</span>
+                          </span>
+                          <span className="gr-caret">
+                            {sectionOpen ? "▲" : "▼"}
+                          </span>
+                        </button>
+                        {sectionOpen && (
+                          <div className="phrase-list">
+                            {section.items.map((phrase) => (
+                              <PhraseRow key={phrase.id} phrase={phrase} />
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          );
+        })
       )}
     </div>
   );
@@ -252,6 +335,7 @@ function Quiz({ phrases, onQuit, onRestart }) {
   const [correct, setCorrect] = useState(0);
   const [typed, setTyped] = useState("");
   const [result, setResult] = useState(null); // "right" | "wrong" | null
+  const [dueInDays, setDueInDays] = useState(0); // when the graded phrase comes back
   const inputRef = useRef(null);
 
   const finished = index >= order.length;
@@ -298,7 +382,8 @@ function Quiz({ phrases, onQuit, onRestart }) {
     const right = checkGap(typed, phrase);
     setResult(right ? "right" : "wrong");
     if (right) setCorrect((n) => n + 1);
-    Store.gradePhrase(phrase.id, right);
+    const { dueInDays: days } = Store.gradePhrase(phrase.id, right);
+    setDueInDays(days);
     Speech.say(phrase.en);
   };
 
@@ -355,6 +440,7 @@ function Quiz({ phrases, onQuit, onRestart }) {
           <div className="feedback fb-ok">
             <div className="fb-head">¡Correcto!</div>
             <div className="fb-es">{phrase.en}</div>
+            <div className="muted small">🔁 {dueLabel(dueInDays)}</div>
           </div>
         )}
         {result === "wrong" && (
@@ -364,6 +450,7 @@ function Quiz({ phrases, onQuit, onRestart }) {
               Respuesta correcta: <b>{phrase.gap}</b>
             </div>
             <div className="muted small">{phrase.en}</div>
+            <div className="muted small">🔁 {dueLabel(dueInDays)}</div>
           </div>
         )}
       </div>
