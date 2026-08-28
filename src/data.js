@@ -3392,6 +3392,90 @@ const SOFTWARE_RAW = [
   ["machine learning","noun","/məˌʃiːn ˈlɜːnɪŋ/","aprendizaje automático","a way of making computers learn from data instead of being given every rule","Machine learning is used to filter spam email."],
   ["open source","adjective","/ˌəʊpən ˈsɔːs/","código abierto","(of software) with code that anyone can read, use and change for free","We use several open source libraries in this project."],
   ["test","noun/verb","/test/","prueba / probar","code that automatically checks whether other code works correctly","Write a test before you fix the bug."],
+
+  /* -- version control & collaboration -- */
+  ["pull request","noun","/ˌpʊl rɪˈkwest/","solicitud de cambios (PR)","a request for others to review and merge your code changes into the main branch","Open a pull request when your feature is ready."],
+  ["merge conflict","noun","/ˈmɜːdʒ ˌkɒnflɪkt/","conflicto de fusión","a clash that happens when two branches change the same lines of code","I spent an hour resolving a merge conflict in the config."],
+  ["rebase","verb","/ˌriːˈbeɪs/","rebasar","to move a branch's commits on top of another branch to keep the history tidy","Rebase your branch onto main before you merge."],
+  ["revert","verb","/rɪˈvɜːt/","revertir","to undo an earlier commit by applying the opposite change","We reverted the commit that broke the build."],
+  ["rollback","noun","/ˈrəʊlbæk/","reversión, vuelta atrás","a return to a previous working version after a bad change","The failed deploy triggered an automatic rollback."],
+  ["clone","verb","/kləʊn/","clonar","to make a local copy of a remote repository","Clone the repo and run the setup script."],
+  ["fork","noun/verb","/fɔːk/","bifurcación / hacer un fork","a personal copy of someone else's repository that you can change freely","I forked the project to fix a typo in the docs."],
+  ["changelog","noun","/ˈtʃeɪndʒlɒɡ/","registro de cambios","a file that lists what changed in each version","Add a line to the changelog for every release."],
+  ["code review","noun","/ˈkəʊd rɪˌvjuː/","revisión de código","the step where another developer reads your code before it is merged","Her code review caught a security bug."],
+  ["staging","noun","/ˈsteɪdʒɪŋ/","preproducción, entorno de pruebas","a test environment that copies production and is used just before release","It works on staging but fails in production."],
+
+  /* -- build, deploy & operations -- */
+  ["pipeline","noun","/ˈpaɪplaɪn/","canalización, flujo CI/CD","an automated series of steps that builds, tests and deploys code","The pipeline runs the whole test suite on every push."],
+  ["container","noun","/kənˈteɪnə/","contenedor","a lightweight package that holds an app and everything it needs to run","Each service runs in its own container."],
+  ["rollout","noun","/ˈrəʊlaʊt/","despliegue progresivo","the gradual release of a change to more and more users","We did a slow rollout to 5% of users first."],
+  ["downtime","noun","/ˈdaʊntaɪm/","tiempo de inactividad, caída","a period when a system is not available","The upgrade caused ten minutes of downtime."],
+  ["uptime","noun","/ˈʌptaɪm/","tiempo de actividad, disponibilidad","the proportion of time a system stays available","Our servers have 99.9% uptime."],
+  ["latency","noun","/ˈleɪtənsi/","latencia","the delay between a request and its response","Users far from the server see higher latency."],
+  ["throughput","noun","/ˈθruːpʊt/","rendimiento, caudal","the amount of work a system handles in a given time","The queue's throughput dropped after the update."],
+  ["load balancer","noun","/ˈləʊd ˌbælənsə/","balanceador de carga","a component that spreads incoming traffic across several servers","The load balancer sends you to the nearest server."],
+  ["scalability","noun","/ˌskeɪləˈbɪləti/","escalabilidad","how well a system copes with a growing amount of work","We picked this database for its scalability."],
+  ["outage","noun","/ˈaʊtɪdʒ/","interrupción del servicio, caída","a period when a service stops working","A cloud outage took down half the internet."],
+  ["monitoring","noun","/ˈmɒnɪtərɪŋ/","monitorización, supervisión","watching a system's health and performance over time","Monitoring alerted us before users noticed."],
+  ["logging","noun","/ˈlɒɡɪŋ/","registro de eventos","recording what a program does so problems can be traced later","Add some logging around the payment step."],
+  ["environment","noun","/ɪnˈvaɪrənmənt/","entorno","a setup where code runs, such as development, staging or production","This bug only shows up in the production environment."],
+  ["provisioning","noun","/prəˈvɪʒənɪŋ/","aprovisionamiento","setting up the servers and resources an app needs","Provisioning a new server now takes minutes, not days."],
+
+  /* -- testing -- */
+  ["unit test","noun","/ˈjuːnɪt test/","prueba unitaria","a test that checks one small piece of code on its own","Every function should have at least one unit test."],
+  ["integration test","noun","/ˌɪntɪˈɡreɪʃən test/","prueba de integración","a test that checks that several parts work together","The integration test runs against a real database."],
+  ["regression","noun","/rɪˈɡreʃən/","regresión","a bug that brings back a problem that was already fixed","The update introduced a regression in search."],
+  ["mock","noun/verb","/mɒk/","simulacro / simular (un componente)","a fake version of a component used to isolate a test","We mock the API so the tests run offline."],
+  ["edge case","noun","/ˈedʒ keɪs/","caso límite, caso extremo","an unusual situation at the edge of what the code expects","Empty input is an edge case we forgot to handle."],
+  ["flaky test","noun","/ˈfleɪki test/","prueba inestable","a test that passes and fails at random without any code change","A flaky test is worse than no test at all."],
+  ["test coverage","noun","/ˈtest ˌkʌvərɪdʒ/","cobertura de pruebas","how much of the code is exercised by the tests","Test coverage dropped below 70% this week."],
+
+  /* -- code & architecture -- */
+  ["endpoint","noun","/ˈendpɔɪnt/","punto de acceso, endpoint","a single URL that an API exposes for a specific action","The login endpoint returns a token."],
+  ["payload","noun","/ˈpeɪləʊd/","carga útil, cuerpo de datos","the actual data carried inside a request or message","Send the user id in the request payload."],
+  ["middleware","noun","/ˈmɪdəlweə/","middleware, capa intermedia","code that runs between a request and the final handler","The auth middleware checks every request."],
+  ["dependency","noun","/dɪˈpendənsi/","dependencia","an external piece of code that your project needs to work","Updating one dependency broke three others."],
+  ["runtime","noun","/ˈrʌntaɪm/","tiempo de ejecución","the period when a program is running, or the software that runs it","The error only appears at runtime, never at compile time."],
+  ["compiler","noun","/kəmˈpaɪlə/","compilador","a program that turns source code into a form the computer can run","The compiler flags the type error before you run anything."],
+  ["refactor","verb","/ˌriːˈfæktə/","refactorizar","to rewrite code so it is cleaner without changing what it does","Let's refactor this file before we add more features."],
+  ["legacy code","noun","/ˈleɡəsi kəʊd/","código heredado","old code that is still in use and hard to change safely","Nobody on the team wants to touch the legacy code."],
+  ["technical debt","noun","/ˌteknɪkəl ˈdet/","deuda técnica","the future cost of choosing a quick solution over a solid one","We're paying down technical debt this sprint."],
+  ["boilerplate","noun","/ˈbɔɪləpleɪt/","código repetitivo, plantilla","standard code that has to be written the same way every time","The framework removes a lot of boilerplate."],
+  ["concurrency","noun","/kənˈkʌrənsi/","concurrencia","several tasks making progress at overlapping times","The bug only appears under high concurrency."],
+  ["race condition","noun","/ˈreɪs kənˌdɪʃən/","condición de carrera","a bug where the result depends on the exact timing of events","Two threads wrote at the same time — a classic race condition."],
+  ["memory leak","noun","/ˈmeməri liːk/","fuga de memoria","a fault where a program keeps memory it no longer needs","The memory leak crashed the server after about a day."],
+  ["caching","noun","/ˈkæʃɪŋ/","almacenamiento en caché","keeping a copy of data so it can be served faster next time","Caching cut the page load time in half."],
+  ["rate limit","noun","/ˈreɪt ˌlɪmɪt/","límite de peticiones","a cap on how many requests you can make in a period of time","You hit the API's rate limit — wait a minute and retry."],
+  ["throttling","noun","/ˈθrɒtlɪŋ/","limitación, estrangulamiento","deliberately slowing down requests to protect a system","The service starts throttling clients under heavy load."],
+
+  /* -- data -- */
+  ["schema","noun","/ˈskiːmə/","esquema","the structure that defines how data is organised in a database","The migration changes the users table schema."],
+  ["migration","noun","/maɪˈɡreɪʃən/","migración (de base de datos)","a script that changes the database structure in a controlled way","Run the migrations after you pull the latest code."],
+  ["database transaction","noun","/ˈdeɪtəbeɪs trænˌzækʃən/","transacción (de base de datos)","a group of database changes that all succeed or all fail together","Wrap both updates in a single database transaction."],
+  ["replication","noun","/ˌreplɪˈkeɪʃən/","replicación","keeping copies of data on several servers in sync","Read queries are served from a replication follower."],
+
+  /* -- web, auth & security -- */
+  ["authentication","noun","/ɔːˌθentɪˈkeɪʃən/","autenticación","checking that users are who they say they are","We added two-factor authentication last month."],
+  ["authorization","noun","/ˌɔːθəraɪˈzeɪʃən/","autorización","deciding what an authenticated user is allowed to do","Authentication passed but authorization failed."],
+  ["token","noun","/ˈtəʊkən/","token","a string that proves a user is logged in, sent with each request","The token expires one hour after you log in."],
+  ["session","noun","/ˈseʃən/","sesión","the period a user stays logged in, tracked by the server","Closing the browser tab ended the session."],
+  ["webhook","noun","/ˈwebhʊk/","webhook","an automatic message a service sends to a URL when an event happens","GitHub fires a webhook on every push."],
+  ["vulnerability","noun","/ˌvʌlnərəˈbɪləti/","vulnerabilidad","a weakness in software that an attacker could take advantage of","The scanner found a vulnerability in an old library."],
+  ["encryption","noun","/ɪnˈkrɪpʃən/","cifrado, encriptación","turning data into a coded form that only authorised people can read","All traffic between the apps uses end-to-end encryption."],
+  ["SQL injection","noun","/ˌes kjuː ˈel ɪnˌdʒekʃən/","inyección SQL","an attack that slips malicious database commands into an input field","Escaping user input prevents SQL injection."],
+
+  /* -- agile & process -- */
+  ["sprint","noun","/sprɪnt/","sprint, iteración","a short fixed period in which a team completes a planned set of work","This feature is scheduled for the next sprint."],
+  ["standup","noun","/ˈstændʌp/","reunión diaria, daily","a short daily meeting where the team shares progress and blockers","Mention that blocker at standup tomorrow."],
+  ["retrospective","noun","/ˌretrəˈspektɪv/","retrospectiva","a meeting to review how the last sprint went and what to improve","The retrospective raised the flaky tests again."],
+  ["roadmap","noun","/ˈrəʊdmæp/","hoja de ruta","a high-level plan of what will be built and roughly when","Dark mode is on the roadmap for next quarter."],
+
+  /* -- AI / ML -- */
+  ["prompt","noun","/prɒmpt/","instrucción, prompt","the text you give an AI model to tell it what you want","A clearer prompt gave a much better answer."],
+  ["inference","noun","/ˈɪnfərəns/","inferencia","the step where a trained model produces an output for new input","Inference runs on the GPU to keep it fast."],
+  ["fine-tuning","noun","/ˌfaɪnˈtjuːnɪŋ/","ajuste fino","extra training that adapts a general model to a specific task","Fine-tuning on our own tickets improved the classifier."],
+  ["embedding","noun","/ɪmˈbedɪŋ/","vector semántico, embedding","a list of numbers that represents the meaning of text or an image","We store the embeddings in a vector database."],
+  ["overfitting","noun","/ˌəʊvəˈfɪtɪŋ/","sobreajuste","when a model learns the training data too closely and fails on new data","The gap between train and test accuracy points to overfitting."],
 ];
 
 const VOCAB = [];

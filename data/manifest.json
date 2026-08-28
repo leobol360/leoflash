@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T03:55:59.993Z",
-  "total": 3022,
+  "generatedAt": "2026-08-28T13:42:38.849Z",
+  "total": 3090,
   "levels": [
     {
       "key": "a1",
@@ -34,7 +34,7 @@
       "key": "software",
       "label": "Software & IT",
       "icon": "🧑‍💻",
-      "count": 20,
+      "count": 88,
       "file": "vocab.software.json"
     }
   ]

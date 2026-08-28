@@ -30218,5 +30218,685 @@
     "ex": "Write a test before you fix the bug.",
     "level": "software",
     "rank": 99999
+  },
+  {
+    "word": "pull request",
+    "pos": "noun",
+    "ipa": "/ˌpʊl rɪˈkwest/",
+    "es": "solicitud de cambios (PR)",
+    "def": "a request for others to review and merge your code changes into the main branch",
+    "ex": "Open a pull request when your feature is ready.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "merge conflict",
+    "pos": "noun",
+    "ipa": "/ˈmɜːdʒ ˌkɒnflɪkt/",
+    "es": "conflicto de fusión",
+    "def": "a clash that happens when two branches change the same lines of code",
+    "ex": "I spent an hour resolving a merge conflict in the config.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "rebase",
+    "pos": "verb",
+    "ipa": "/ˌriːˈbeɪs/",
+    "es": "rebasar",
+    "def": "to move a branch's commits on top of another branch to keep the history tidy",
+    "ex": "Rebase your branch onto main before you merge.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "revert",
+    "pos": "verb",
+    "ipa": "/rɪˈvɜːt/",
+    "es": "revertir",
+    "def": "to undo an earlier commit by applying the opposite change",
+    "ex": "We reverted the commit that broke the build.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "rollback",
+    "pos": "noun",
+    "ipa": "/ˈrəʊlbæk/",
+    "es": "reversión, vuelta atrás",
+    "def": "a return to a previous working version after a bad change",
+    "ex": "The failed deploy triggered an automatic rollback.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "clone",
+    "pos": "verb",
+    "ipa": "/kləʊn/",
+    "es": "clonar",
+    "def": "to make a local copy of a remote repository",
+    "ex": "Clone the repo and run the setup script.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "fork",
+    "pos": "noun/verb",
+    "ipa": "/fɔːk/",
+    "es": "bifurcación / hacer un fork",
+    "def": "a personal copy of someone else's repository that you can change freely",
+    "ex": "I forked the project to fix a typo in the docs.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "changelog",
+    "pos": "noun",
+    "ipa": "/ˈtʃeɪndʒlɒɡ/",
+    "es": "registro de cambios",
+    "def": "a file that lists what changed in each version",
+    "ex": "Add a line to the changelog for every release.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "code review",
+    "pos": "noun",
+    "ipa": "/ˈkəʊd rɪˌvjuː/",
+    "es": "revisión de código",
+    "def": "the step where another developer reads your code before it is merged",
+    "ex": "Her code review caught a security bug.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "staging",
+    "pos": "noun",
+    "ipa": "/ˈsteɪdʒɪŋ/",
+    "es": "preproducción, entorno de pruebas",
+    "def": "a test environment that copies production and is used just before release",
+    "ex": "It works on staging but fails in production.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "pipeline",
+    "pos": "noun",
+    "ipa": "/ˈpaɪplaɪn/",
+    "es": "canalización, flujo CI/CD",
+    "def": "an automated series of steps that builds, tests and deploys code",
+    "ex": "The pipeline runs the whole test suite on every push.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "container",
+    "pos": "noun",
+    "ipa": "/kənˈteɪnə/",
+    "es": "contenedor",
+    "def": "a lightweight package that holds an app and everything it needs to run",
+    "ex": "Each service runs in its own container.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "rollout",
+    "pos": "noun",
+    "ipa": "/ˈrəʊlaʊt/",
+    "es": "despliegue progresivo",
+    "def": "the gradual release of a change to more and more users",
+    "ex": "We did a slow rollout to 5% of users first.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "downtime",
+    "pos": "noun",
+    "ipa": "/ˈdaʊntaɪm/",
+    "es": "tiempo de inactividad, caída",
+    "def": "a period when a system is not available",
+    "ex": "The upgrade caused ten minutes of downtime.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "uptime",
+    "pos": "noun",
+    "ipa": "/ˈʌptaɪm/",
+    "es": "tiempo de actividad, disponibilidad",
+    "def": "the proportion of time a system stays available",
+    "ex": "Our servers have 99.9% uptime.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "latency",
+    "pos": "noun",
+    "ipa": "/ˈleɪtənsi/",
+    "es": "latencia",
+    "def": "the delay between a request and its response",
+    "ex": "Users far from the server see higher latency.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "throughput",
+    "pos": "noun",
+    "ipa": "/ˈθruːpʊt/",
+    "es": "rendimiento, caudal",
+    "def": "the amount of work a system handles in a given time",
+    "ex": "The queue's throughput dropped after the update.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "load balancer",
+    "pos": "noun",
+    "ipa": "/ˈləʊd ˌbælənsə/",
+    "es": "balanceador de carga",
+    "def": "a component that spreads incoming traffic across several servers",
+    "ex": "The load balancer sends you to the nearest server.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "scalability",
+    "pos": "noun",
+    "ipa": "/ˌskeɪləˈbɪləti/",
+    "es": "escalabilidad",
+    "def": "how well a system copes with a growing amount of work",
+    "ex": "We picked this database for its scalability.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "outage",
+    "pos": "noun",
+    "ipa": "/ˈaʊtɪdʒ/",
+    "es": "interrupción del servicio, caída",
+    "def": "a period when a service stops working",
+    "ex": "A cloud outage took down half the internet.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "monitoring",
+    "pos": "noun",
+    "ipa": "/ˈmɒnɪtərɪŋ/",
+    "es": "monitorización, supervisión",
+    "def": "watching a system's health and performance over time",
+    "ex": "Monitoring alerted us before users noticed.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "logging",
+    "pos": "noun",
+    "ipa": "/ˈlɒɡɪŋ/",
+    "es": "registro de eventos",
+    "def": "recording what a program does so problems can be traced later",
+    "ex": "Add some logging around the payment step.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "environment",
+    "pos": "noun",
+    "ipa": "/ɪnˈvaɪrənmənt/",
+    "es": "entorno",
+    "def": "a setup where code runs, such as development, staging or production",
+    "ex": "This bug only shows up in the production environment.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "provisioning",
+    "pos": "noun",
+    "ipa": "/prəˈvɪʒənɪŋ/",
+    "es": "aprovisionamiento",
+    "def": "setting up the servers and resources an app needs",
+    "ex": "Provisioning a new server now takes minutes, not days.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "unit test",
+    "pos": "noun",
+    "ipa": "/ˈjuːnɪt test/",
+    "es": "prueba unitaria",
+    "def": "a test that checks one small piece of code on its own",
+    "ex": "Every function should have at least one unit test.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "integration test",
+    "pos": "noun",
+    "ipa": "/ˌɪntɪˈɡreɪʃən test/",
+    "es": "prueba de integración",
+    "def": "a test that checks that several parts work together",
+    "ex": "The integration test runs against a real database.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "regression",
+    "pos": "noun",
+    "ipa": "/rɪˈɡreʃən/",
+    "es": "regresión",
+    "def": "a bug that brings back a problem that was already fixed",
+    "ex": "The update introduced a regression in search.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "mock",
+    "pos": "noun/verb",
+    "ipa": "/mɒk/",
+    "es": "simulacro / simular (un componente)",
+    "def": "a fake version of a component used to isolate a test",
+    "ex": "We mock the API so the tests run offline.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "edge case",
+    "pos": "noun",
+    "ipa": "/ˈedʒ keɪs/",
+    "es": "caso límite, caso extremo",
+    "def": "an unusual situation at the edge of what the code expects",
+    "ex": "Empty input is an edge case we forgot to handle.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "flaky test",
+    "pos": "noun",
+    "ipa": "/ˈfleɪki test/",
+    "es": "prueba inestable",
+    "def": "a test that passes and fails at random without any code change",
+    "ex": "A flaky test is worse than no test at all.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "test coverage",
+    "pos": "noun",
+    "ipa": "/ˈtest ˌkʌvərɪdʒ/",
+    "es": "cobertura de pruebas",
+    "def": "how much of the code is exercised by the tests",
+    "ex": "Test coverage dropped below 70% this week.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "endpoint",
+    "pos": "noun",
+    "ipa": "/ˈendpɔɪnt/",
+    "es": "punto de acceso, endpoint",
+    "def": "a single URL that an API exposes for a specific action",
+    "ex": "The login endpoint returns a token.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "payload",
+    "pos": "noun",
+    "ipa": "/ˈpeɪləʊd/",
+    "es": "carga útil, cuerpo de datos",
+    "def": "the actual data carried inside a request or message",
+    "ex": "Send the user id in the request payload.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "middleware",
+    "pos": "noun",
+    "ipa": "/ˈmɪdəlweə/",
+    "es": "middleware, capa intermedia",
+    "def": "code that runs between a request and the final handler",
+    "ex": "The auth middleware checks every request.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "dependency",
+    "pos": "noun",
+    "ipa": "/dɪˈpendənsi/",
+    "es": "dependencia",
+    "def": "an external piece of code that your project needs to work",
+    "ex": "Updating one dependency broke three others.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "runtime",
+    "pos": "noun",
+    "ipa": "/ˈrʌntaɪm/",
+    "es": "tiempo de ejecución",
+    "def": "the period when a program is running, or the software that runs it",
+    "ex": "The error only appears at runtime, never at compile time.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "compiler",
+    "pos": "noun",
+    "ipa": "/kəmˈpaɪlə/",
+    "es": "compilador",
+    "def": "a program that turns source code into a form the computer can run",
+    "ex": "The compiler flags the type error before you run anything.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "refactor",
+    "pos": "verb",
+    "ipa": "/ˌriːˈfæktə/",
+    "es": "refactorizar",
+    "def": "to rewrite code so it is cleaner without changing what it does",
+    "ex": "Let's refactor this file before we add more features.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "legacy code",
+    "pos": "noun",
+    "ipa": "/ˈleɡəsi kəʊd/",
+    "es": "código heredado",
+    "def": "old code that is still in use and hard to change safely",
+    "ex": "Nobody on the team wants to touch the legacy code.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "technical debt",
+    "pos": "noun",
+    "ipa": "/ˌteknɪkəl ˈdet/",
+    "es": "deuda técnica",
+    "def": "the future cost of choosing a quick solution over a solid one",
+    "ex": "We're paying down technical debt this sprint.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "boilerplate",
+    "pos": "noun",
+    "ipa": "/ˈbɔɪləpleɪt/",
+    "es": "código repetitivo, plantilla",
+    "def": "standard code that has to be written the same way every time",
+    "ex": "The framework removes a lot of boilerplate.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "concurrency",
+    "pos": "noun",
+    "ipa": "/kənˈkʌrənsi/",
+    "es": "concurrencia",
+    "def": "several tasks making progress at overlapping times",
+    "ex": "The bug only appears under high concurrency.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "race condition",
+    "pos": "noun",
+    "ipa": "/ˈreɪs kənˌdɪʃən/",
+    "es": "condición de carrera",
+    "def": "a bug where the result depends on the exact timing of events",
+    "ex": "Two threads wrote at the same time — a classic race condition.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "memory leak",
+    "pos": "noun",
+    "ipa": "/ˈmeməri liːk/",
+    "es": "fuga de memoria",
+    "def": "a fault where a program keeps memory it no longer needs",
+    "ex": "The memory leak crashed the server after about a day.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "caching",
+    "pos": "noun",
+    "ipa": "/ˈkæʃɪŋ/",
+    "es": "almacenamiento en caché",
+    "def": "keeping a copy of data so it can be served faster next time",
+    "ex": "Caching cut the page load time in half.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "rate limit",
+    "pos": "noun",
+    "ipa": "/ˈreɪt ˌlɪmɪt/",
+    "es": "límite de peticiones",
+    "def": "a cap on how many requests you can make in a period of time",
+    "ex": "You hit the API's rate limit — wait a minute and retry.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "throttling",
+    "pos": "noun",
+    "ipa": "/ˈθrɒtlɪŋ/",
+    "es": "limitación, estrangulamiento",
+    "def": "deliberately slowing down requests to protect a system",
+    "ex": "The service starts throttling clients under heavy load.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "schema",
+    "pos": "noun",
+    "ipa": "/ˈskiːmə/",
+    "es": "esquema",
+    "def": "the structure that defines how data is organised in a database",
+    "ex": "The migration changes the users table schema.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "migration",
+    "pos": "noun",
+    "ipa": "/maɪˈɡreɪʃən/",
+    "es": "migración (de base de datos)",
+    "def": "a script that changes the database structure in a controlled way",
+    "ex": "Run the migrations after you pull the latest code.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "database transaction",
+    "pos": "noun",
+    "ipa": "/ˈdeɪtəbeɪs trænˌzækʃən/",
+    "es": "transacción (de base de datos)",
+    "def": "a group of database changes that all succeed or all fail together",
+    "ex": "Wrap both updates in a single database transaction.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "replication",
+    "pos": "noun",
+    "ipa": "/ˌreplɪˈkeɪʃən/",
+    "es": "replicación",
+    "def": "keeping copies of data on several servers in sync",
+    "ex": "Read queries are served from a replication follower.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "authentication",
+    "pos": "noun",
+    "ipa": "/ɔːˌθentɪˈkeɪʃən/",
+    "es": "autenticación",
+    "def": "checking that users are who they say they are",
+    "ex": "We added two-factor authentication last month.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "authorization",
+    "pos": "noun",
+    "ipa": "/ˌɔːθəraɪˈzeɪʃən/",
+    "es": "autorización",
+    "def": "deciding what an authenticated user is allowed to do",
+    "ex": "Authentication passed but authorization failed.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "token",
+    "pos": "noun",
+    "ipa": "/ˈtəʊkən/",
+    "es": "token",
+    "def": "a string that proves a user is logged in, sent with each request",
+    "ex": "The token expires one hour after you log in.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "session",
+    "pos": "noun",
+    "ipa": "/ˈseʃən/",
+    "es": "sesión",
+    "def": "the period a user stays logged in, tracked by the server",
+    "ex": "Closing the browser tab ended the session.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "webhook",
+    "pos": "noun",
+    "ipa": "/ˈwebhʊk/",
+    "es": "webhook",
+    "def": "an automatic message a service sends to a URL when an event happens",
+    "ex": "GitHub fires a webhook on every push.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "vulnerability",
+    "pos": "noun",
+    "ipa": "/ˌvʌlnərəˈbɪləti/",
+    "es": "vulnerabilidad",
+    "def": "a weakness in software that an attacker could take advantage of",
+    "ex": "The scanner found a vulnerability in an old library.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "encryption",
+    "pos": "noun",
+    "ipa": "/ɪnˈkrɪpʃən/",
+    "es": "cifrado, encriptación",
+    "def": "turning data into a coded form that only authorised people can read",
+    "ex": "All traffic between the apps uses end-to-end encryption.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "SQL injection",
+    "pos": "noun",
+    "ipa": "/ˌes kjuː ˈel ɪnˌdʒekʃən/",
+    "es": "inyección SQL",
+    "def": "an attack that slips malicious database commands into an input field",
+    "ex": "Escaping user input prevents SQL injection.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "sprint",
+    "pos": "noun",
+    "ipa": "/sprɪnt/",
+    "es": "sprint, iteración",
+    "def": "a short fixed period in which a team completes a planned set of work",
+    "ex": "This feature is scheduled for the next sprint.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "standup",
+    "pos": "noun",
+    "ipa": "/ˈstændʌp/",
+    "es": "reunión diaria, daily",
+    "def": "a short daily meeting where the team shares progress and blockers",
+    "ex": "Mention that blocker at standup tomorrow.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "retrospective",
+    "pos": "noun",
+    "ipa": "/ˌretrəˈspektɪv/",
+    "es": "retrospectiva",
+    "def": "a meeting to review how the last sprint went and what to improve",
+    "ex": "The retrospective raised the flaky tests again.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "roadmap",
+    "pos": "noun",
+    "ipa": "/ˈrəʊdmæp/",
+    "es": "hoja de ruta",
+    "def": "a high-level plan of what will be built and roughly when",
+    "ex": "Dark mode is on the roadmap for next quarter.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "prompt",
+    "pos": "noun",
+    "ipa": "/prɒmpt/",
+    "es": "instrucción, prompt",
+    "def": "the text you give an AI model to tell it what you want",
+    "ex": "A clearer prompt gave a much better answer.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "inference",
+    "pos": "noun",
+    "ipa": "/ˈɪnfərəns/",
+    "es": "inferencia",
+    "def": "the step where a trained model produces an output for new input",
+    "ex": "Inference runs on the GPU to keep it fast.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "fine-tuning",
+    "pos": "noun",
+    "ipa": "/ˌfaɪnˈtjuːnɪŋ/",
+    "es": "ajuste fino",
+    "def": "extra training that adapts a general model to a specific task",
+    "ex": "Fine-tuning on our own tickets improved the classifier.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "embedding",
+    "pos": "noun",
+    "ipa": "/ɪmˈbedɪŋ/",
+    "es": "vector semántico, embedding",
+    "def": "a list of numbers that represents the meaning of text or an image",
+    "ex": "We store the embeddings in a vector database.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "overfitting",
+    "pos": "noun",
+    "ipa": "/ˌəʊvəˈfɪtɪŋ/",
+    "es": "sobreajuste",
+    "def": "when a model learns the training data too closely and fails on new data",
+    "ex": "The gap between train and test accuracy points to overfitting.",
+    "level": "software",
+    "rank": 99999
   }
 ]
