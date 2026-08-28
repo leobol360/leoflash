@@ -53,8 +53,7 @@ function Browse({ onPractice }) {
       if (!needle) return true;
       return (
         phrase.en.toLowerCase().includes(needle) ||
-        phrase.es.toLowerCase().includes(needle) ||
-        (phrase.literal || "").toLowerCase().includes(needle)
+        phrase.es.toLowerCase().includes(needle)
       );
     });
   }, [query, category]);
@@ -130,9 +129,6 @@ function Browse({ onPractice }) {
                     )}
                   </div>
                   <div className="phrase-es">{phrase.es}</div>
-                  {phrase.literal && (
-                    <div className="phrase-literal">literal: {phrase.literal}</div>
-                  )}
                 </div>
               );
             })}
@@ -218,9 +214,6 @@ function Study({ phrases, onQuit, onReady }) {
           </button>
         </div>
         <div className="study-es">{phrase.es}</div>
-        {phrase.literal && (
-          <div className="phrase-literal">literal: {phrase.literal}</div>
-        )}
       </div>
 
       <div className="controls">
@@ -309,7 +302,6 @@ function Quiz({ phrases, onQuit, onRestart }) {
           {CATEGORY[phrase.category].icon} {CATEGORY[phrase.category].label}
         </div>
         <div className="practice-es">{phrase.es}</div>
-        {phrase.literal && <div className="phrase-literal">literal: {phrase.literal}</div>}
 
         <div className="practice-gap">
           <span>{parts.before}</span>
