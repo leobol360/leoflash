@@ -1,5 +1,7 @@
 # LeoFlash — English A1–B2 Vocabulary Trainer
 
+**Live:** https://leobol360.github.io/leoflash/ · auto-deployed from `main` via GitHub Actions.
+
 A React app for building English vocabulary. It teaches the most useful words
 **in frequency order** with a spaced‑repetition schedule, five practice modes,
 audio pronunciation and progress tracking. Everything runs in the browser and

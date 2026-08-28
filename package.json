@@ -18,5 +18,6 @@
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^6.0.7",
     "vite-plugin-singlefile": "^2.3.3"
-  }
+  },
+  "homepage": "https://leobol360.github.io/leoflash/"
 }
