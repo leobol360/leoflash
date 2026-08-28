@@ -60,7 +60,7 @@ export default function App() {
     const q = buildSessionQueue(opts);
     if (q.length === 0) {
       alert(
-        "Nothing to study right now — every card is scheduled for later. Try 'Quick 10' or a level from the dashboard."
+        "You've studied every word in your loaded levels. Add another level in the level picker, or come back when reviews are due."
       );
       return;
     }

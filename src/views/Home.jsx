@@ -1,5 +1,6 @@
 import { ACTIVE_THEMES } from "../data.js";
 import { useStore } from "../useStore.js";
+import { relDate } from "../format.js";
 import { Ring, StatCard, ProgressBar } from "../components/ui.jsx";
 
 export default function Home({ onStart, onOpenLevels }) {
@@ -15,23 +16,54 @@ export default function Home({ onStart, onOpenLevels }) {
 
   const notLoaded = Object.keys(ACTIVE_THEMES).filter((k) => !loaded.includes(k));
 
+  let statusLine;
+  if (canStart) {
+    statusLine = (
+      <>
+        {sum.due} card{sum.due === 1 ? "" : "s"} to review
+        {sum.newLeft > 0
+          ? ` · ${sum.newLeft} new word${sum.newLeft === 1 ? "" : "s"} today`
+          : ""}
+        .
+      </>
+    );
+  } else if (sum.aheadAvailable) {
+    statusLine = (
+      <>
+        Today's {s.newPerDay} new words are done — nice.{" "}
+        {sum.nextDue
+          ? `Next scheduled review: ${relDate(sum.nextDue)}. `
+          : ""}
+        Want to keep going? <b>Study ahead</b> pulls the next batch now.
+      </>
+    );
+  } else {
+    statusLine = (
+      <>You've studied every word in your loaded levels. Load another level, or come back tomorrow.</>
+    );
+  }
+
   return (
     <div className="page">
       <div className="hero card">
         <div className="hero-left">
           <p className="eyebrow">{eyebrow} · Vocabulary trainer</p>
           <h1>Ready for today's practice?</h1>
-          <p className="muted">
-            {sum.due} card{sum.due === 1 ? "" : "s"} to review
-            {sum.newLeft > 0
-              ? ` · ${sum.newLeft} new word${sum.newLeft === 1 ? "" : "s"} available`
-              : ""}
-            .
-          </p>
+          <p className="muted">{statusLine}</p>
           <div className="hero-actions">
-            <button className="btn btn-primary big" onClick={() => onStart({})}>
-              {canStart ? "Start studying" : "Practice anyway"}
-            </button>
+            {canStart ? (
+              <button className="btn btn-primary big" onClick={() => onStart({})}>
+                Start studying
+              </button>
+            ) : sum.aheadAvailable ? (
+              <button className="btn btn-primary big" onClick={() => onStart({ ahead: true })}>
+                Study ahead
+              </button>
+            ) : (
+              <button className="btn btn-primary big" onClick={onOpenLevels}>
+                Load a level
+              </button>
+            )}
             <button
               className="btn btn-ghost"
               onClick={() => onStart({ limit: 10, allowAheadNew: true })}

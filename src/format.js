@@ -4,6 +4,19 @@ export function clamp(n, a, b) {
   return Math.max(a, Math.min(b, n));
 }
 
+// "tomorrow" / "in 3 days" / "Sat 30 Aug" for a YYYY-MM-DD date string.
+export function relDate(dateStr) {
+  if (!dateStr) return "—";
+  const d = new Date(dateStr + "T00:00:00");
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const days = Math.round((d - today) / 86400000);
+  if (days <= 0) return "today";
+  if (days === 1) return "tomorrow";
+  if (days < 7) return `in ${days} days`;
+  return d.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" });
+}
+
 // Human-readable spaced-repetition interval.
 export function fmtInterval(days) {
   if (days <= 0) return "today";

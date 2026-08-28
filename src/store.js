@@ -26,20 +26,26 @@ const DEFAULT_SETTINGS = {
   levelsChosen: false,  // has the learner picked their levels yet?
 };
 
+// YYYY-MM-DD in the LOCAL timezone, so the "day" rolls over at local
+// midnight for everyone (toISOString would use UTC and shift the boundary).
+function ymd(t) {
+  const y = t.getFullYear();
+  const m = String(t.getMonth() + 1).padStart(2, "0");
+  const d = String(t.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
 function todayStr(d) {
-  const t = d ? new Date(d) : new Date();
-  t.setHours(0, 0, 0, 0);
-  return t.toISOString().slice(0, 10);
+  return ymd(d ? new Date(d) : new Date());
 }
 
 function addDays(dateStr, n) {
-  const t = new Date(dateStr + "T00:00:00");
-  t.setDate(t.getDate() + n);
-  return t.toISOString().slice(0, 10);
+  const [y, m, d] = dateStr.split("-").map(Number);
+  return ymd(new Date(y, m - 1, d + n));
 }
 
 function daysBetween(a, b) {
-  return Math.round((new Date(b) - new Date(a)) / 86400000);
+  return Math.round((new Date(b + "T00:00:00") - new Date(a + "T00:00:00")) / 86400000);
 }
 
 const Store = {
@@ -285,16 +291,19 @@ const Store = {
     const inScope = (v) => !enabled || enabled.includes(v.theme);
     const today = todayStr();
     let due = 0, learning = 0, newLeft = 0, mature = 0, unseen = 0, known = 0;
+    let nextDue = null;                          // soonest upcoming review date
     const newSeenToday = this.logToday().newSeen;
     for (const v of VOCAB.filter(inScope)) {
       const c = this.data.cards[v.id];
       if (!c || !c.seen) { unseen++; continue; }
       if (c.known) { known++; mature++; continue; }
       if (c.due <= today) due++;
+      else if (!nextDue || c.due < nextDue) nextDue = c.due;
       if (c.interval >= 21) mature++; else learning++;
     }
     newLeft = Math.max(0, s.newPerDay - newSeenToday);
-    return { due, learning, mature, unseen, known, newLeft };
+    const aheadAvailable = unseen > 0 || nextDue != null;
+    return { due, learning, mature, unseen, known, newLeft, nextDue, aheadAvailable };
   },
 
   /* ---- grading (SM-2 variant) --------------------------- */

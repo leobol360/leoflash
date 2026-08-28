@@ -3,34 +3,52 @@ import { VOCAB } from "./data.js";
 import { Store, srsUtil } from "./store.js";
 
 // Build the list of card ids for a new session.
-// opts: { themeOnly?, limit?, allowAheadNew? }
+// opts: { themeOnly?, limit?, allowAheadNew?, ahead? }
+//   ahead        → deliberately study upcoming work (past the daily cap /
+//                  before cards are due) when the scheduled queue is empty
+//   allowAheadNew → top the queue up to `limit` with unseen words (Quick 10)
 export function buildSessionQueue(opts = {}) {
+  const today = srsUtil.todayStr();
   let queue;
+
   if (opts.themeOnly) {
     const ids = VOCAB.filter((v) => v.theme === opts.themeOnly)
       .map((v) => v.id)
       .filter((id) => !(Store.data.cards[id] || {}).known);
-    const today = srsUtil.todayStr();
     queue = ids.filter((id) => {
       const c = Store.data.cards[id];
       return !c || !c.seen || c.due <= today;
     });
-    if (queue.length === 0) queue = ids.slice();
+    if (queue.length === 0) queue = ids.slice(); // whole level if nothing due
     srsUtil.shuffle(queue);
   } else {
-    const built = Store.buildQueue();
+    const built = Store.buildQueue(); // due-today + up to newPerDay new, in loaded levels
     queue = built.queue;
-    if (opts.allowAheadNew && queue.length < (opts.limit || 10)) {
+
+    const wantAhead =
+      opts.ahead || (opts.allowAheadNew && queue.length < (opts.limit || 10));
+
+    if (wantAhead) {
       const have = new Set(queue);
-      const extra = VOCAB.filter((v) => {
+      const unseen = [];
+      const future = []; // [id, dueDate] — seen, not known, not due yet
+      for (const v of VOCAB) {
+        if (!Store.inScope(v) || have.has(v.id)) continue;
         const c = Store.data.cards[v.id];
-        return !have.has(v.id) && (!c || !c.seen);
-      }).map((v) => v.id);
-      srsUtil.shuffle(extra);
-      queue = queue.concat(extra);
+        if (!c || !c.seen) unseen.push(v.id);
+        else if (!c.known && c.due > today) future.push([v.id, c.due]);
+      }
+      srsUtil.shuffle(unseen);
+      future.sort((a, b) => a[1].localeCompare(b[1])); // soonest review first
+      queue = queue.concat(unseen, future.map((f) => f[0]));
     }
   }
-  if (opts.limit) queue = queue.slice(0, opts.limit);
+
+  // cap: explicit limit, or one "day" worth when studying ahead
+  const cap =
+    opts.limit ||
+    (opts.ahead ? Math.max(10, Store.settings().newPerDay) : Infinity);
+  if (cap !== Infinity) queue = queue.slice(0, cap);
   return queue;
 }
 
