@@ -363,6 +363,17 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 .gloss:active .gloss-tip { opacity: 1; visibility: visible; }
 @media (max-width: 400px) { .gloss-tip { white-space: normal; min-width: 8ch; max-width: 60vw; } }
 
+/* richer tooltip: one line per meaning, each with an example */
+.gloss-tip-rich {
+  white-space: normal; text-align: left; width: max-content; max-width: min(300px, 82vw);
+  padding: 7px 10px; line-height: 1.35;
+}
+.gloss-tip-rich::after { display: none; } /* arrow can't stay aligned once shifted */
+.gloss-sense { display: block; }
+.gloss-sense + .gloss-sense { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); }
+.gloss-sense b { color: var(--accent-strong); }
+.gloss-eg { display: block; font-style: italic; color: var(--muted); font-size: .95em; margin-top: 1px; }
+
 .controls { display: flex; flex-direction: column; gap: 10px; }
 .grade-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .grade-row.three { grid-template-columns: repeat(3, 1fr); }

@@ -1,0 +1,15 @@
+{
+  "name": "LeoFlash",
+  "short_name": "LeoFlash",
+  "description": "CEFR A1–B2 English vocabulary trainer",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#17161f",
+  "theme_color": "#12101c",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

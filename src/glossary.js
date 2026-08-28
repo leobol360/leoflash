@@ -10,6 +10,7 @@
 import { VOCAB } from "./data.js";
 import EXTRA from "../data/glossary-extra.json";
 import FUNCTION_WORDS from "../data/glossary-function.json";
+import WORD_SENSES from "../data/word-senses.json";
 import { verbForms, nounForms, primaryPos } from "./inflect.js";
 
 const translations = new Map();
@@ -22,6 +23,8 @@ function addForm(form, entry) {
 
 for (const word of VOCAB) {
   const entry = { word: word.word, es: word.es, pos: word.pos };
+  const senses = WORD_SENSES[word.word.toLowerCase()];
+  if (senses) entry.senses = senses; // per-meaning glosses + examples
   addForm(word.word, entry);
   const pos = primaryPos(word.pos);
   if (pos === "verb") {

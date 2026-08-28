@@ -1,13 +1,32 @@
 import { highlightParts } from "../format.js";
 import { lookup } from "../glossary.js";
 
+// Keep a (possibly wide) tooltip from spilling off either screen edge.
+function keepTipOnScreen(glossEl) {
+  const tip = glossEl.querySelector(".gloss-tip");
+  if (!tip) return;
+  requestAnimationFrame(() => {
+    tip.style.marginLeft = "0px";
+    const r = tip.getBoundingClientRect();
+    const pad = 8;
+    const vw = document.documentElement.clientWidth;
+    if (r.left < pad) tip.style.marginLeft = `${Math.ceil(pad - r.left)}px`;
+    else if (r.right > vw - pad) tip.style.marginLeft = `${Math.floor(vw - pad - r.right)}px`;
+  });
+}
+
+const onGlossPointer = (e) => {
+  const gloss = e.target.closest && e.target.closest(".gloss");
+  if (gloss) keepTipOnScreen(gloss);
+};
+
 // Runs of English text where each known word gets a hover/tap tooltip
 // with its Spanish translation.
 export function Glossable({ text }) {
   if (!text) return null;
   const tokens = text.split(/(\s+)/);
   return (
-    <>
+    <span onPointerOver={onGlossPointer} onFocusCapture={onGlossPointer}>
       {tokens.map((tok, i) => {
         if (!/[a-zA-Z]/.test(tok)) return <span key={i}>{tok}</span>;
         const m = tok.match(/^([^a-zA-Z]*)(.*?)([^a-zA-Z]*)$/);
@@ -19,15 +38,29 @@ export function Glossable({ text }) {
             {pre}
             <span className="gloss" tabIndex={0}>
               {core}
-              <span className="gloss-tip" role="tooltip">
-                {hit.es}
+              <span
+                className={"gloss-tip" + (hit.senses ? " gloss-tip-rich" : "")}
+                role="tooltip"
+              >
+                {hit.senses ? (
+                  hit.senses.map((sense, s) => (
+                    <span className="gloss-sense" key={s}>
+                      <b>{sense.g}</b>
+                      <i className="gloss-eg">
+                        “{sense.en}” — {sense.es}
+                      </i>
+                    </span>
+                  ))
+                ) : (
+                  hit.es
+                )}
               </span>
             </span>
             {post}
           </span>
         );
       })}
-    </>
+    </span>
   );
 }
 

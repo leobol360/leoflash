@@ -23,12 +23,14 @@ npm install     # once
 **Everyday use — no server needed:**
 
 ```bash
-npm run build          # produces a single self-contained dist/index.html
+npm run build          # dist/index.html + the home-screen icons & manifest
 ```
 
 Then just **open `dist/index.html`** in your browser (double-click it). Everything
 — the app and the whole ~3000-word deck — is inlined into that one file, so it
-works fully offline and reloading any section is fine. Re-run `npm run build`
+works fully offline and reloading any section is fine. (`dist/` also carries the
+lion icons + `manifest.webmanifest` so "Add to Home Screen" on a phone gets the
+lion icon and opens fullscreen.) Re-run `npm run build`
 whenever you change the code or the deck.
 
 **Development (hot reload):**

@@ -1,0 +1,4705 @@
+{
+  "about": [
+    {
+      "g": "sobre, acerca de",
+      "en": "A book about Rome.",
+      "es": "Un libro sobre Roma."
+    },
+    {
+      "g": "aproximadamente",
+      "en": "About twenty people.",
+      "es": "Unas veinte personas."
+    }
+  ],
+  "abrasive": [
+    {
+      "g": "abrasivo, áspero",
+      "en": "An abrasive cleaner.",
+      "es": "Un limpiador abrasivo."
+    },
+    {
+      "g": "brusco, hiriente (trato)",
+      "en": "An abrasive manner.",
+      "es": "Un trato brusco."
+    }
+  ],
+  "accommodate": [
+    {
+      "g": "alojar, dar cabida a",
+      "en": "The hall accommodates 500.",
+      "es": "La sala tiene cabida para 500."
+    },
+    {
+      "g": "adaptarse a, complacer",
+      "en": "We'll accommodate your needs.",
+      "es": "Nos adaptaremos a tus necesidades."
+    }
+  ],
+  "account": [
+    {
+      "g": "cuenta (banco/web)",
+      "en": "Open a bank account.",
+      "es": "Abre una cuenta bancaria."
+    },
+    {
+      "g": "relato, versión",
+      "en": "Give an account of events.",
+      "es": "Da una versión de los hechos."
+    }
+  ],
+  "add": [
+    {
+      "g": "añadir, agregar",
+      "en": "Add some salt.",
+      "es": "Añade un poco de sal."
+    },
+    {
+      "g": "sumar",
+      "en": "Add the two numbers.",
+      "es": "Suma los dos números."
+    }
+  ],
+  "adhere": [
+    {
+      "g": "adherirse, pegarse",
+      "en": "The label adheres to glass.",
+      "es": "La etiqueta se adhiere al cristal."
+    },
+    {
+      "g": "atenerse a, cumplir",
+      "en": "Adhere to the rules.",
+      "es": "Atente a las normas."
+    }
+  ],
+  "afraid": [
+    {
+      "g": "asustado, con miedo",
+      "en": "Don't be afraid.",
+      "es": "No tengas miedo."
+    },
+    {
+      "g": "lamentar (I'm afraid...)",
+      "en": "I'm afraid I can't come.",
+      "es": "Me temo que no puedo venir."
+    }
+  ],
+  "agree": [
+    {
+      "g": "estar de acuerdo",
+      "en": "I agree with you.",
+      "es": "Estoy de acuerdo contigo."
+    },
+    {
+      "g": "acordar, quedar en",
+      "en": "We agreed to meet at six.",
+      "es": "Acordamos vernos a las seis."
+    }
+  ],
+  "allowance": [
+    {
+      "g": "asignación, paga",
+      "en": "A weekly allowance.",
+      "es": "Una paga semanal."
+    },
+    {
+      "g": "margen, tolerancia",
+      "en": "Make allowances for delays.",
+      "es": "Ten en cuenta posibles retrasos."
+    }
+  ],
+  "answer": [
+    {
+      "g": "respuesta",
+      "en": "The right answer.",
+      "es": "La respuesta correcta."
+    },
+    {
+      "g": "responder, contestar",
+      "en": "Answer the phone.",
+      "es": "Contesta el teléfono."
+    }
+  ],
+  "appear": [
+    {
+      "g": "aparecer",
+      "en": "A ship appeared on the horizon.",
+      "es": "Un barco apareció en el horizonte."
+    },
+    {
+      "g": "parecer",
+      "en": "She appears tired.",
+      "es": "Parece cansada."
+    }
+  ],
+  "apply": [
+    {
+      "g": "solicitar (empleo/plaza)",
+      "en": "Apply for the job.",
+      "es": "Solicita el puesto."
+    },
+    {
+      "g": "aplicar (crema/regla)",
+      "en": "Apply the cream twice a day.",
+      "es": "Aplica la crema dos veces al día."
+    }
+  ],
+  "argue": [
+    {
+      "g": "discutir, pelearse",
+      "en": "They argue a lot.",
+      "es": "Discuten mucho."
+    },
+    {
+      "g": "argumentar, sostener",
+      "en": "She argued that it was unfair.",
+      "es": "Sostuvo que era injusto."
+    }
+  ],
+  "ask": [
+    {
+      "g": "preguntar",
+      "en": "Ask her the time.",
+      "es": "Pregúntale la hora."
+    },
+    {
+      "g": "pedir",
+      "en": "He asked for help.",
+      "es": "Pidió ayuda."
+    }
+  ],
+  "assemble": [
+    {
+      "g": "reunir(se), congregar(se)",
+      "en": "The crowd assembled.",
+      "es": "La multitud se congregó."
+    },
+    {
+      "g": "montar, ensamblar",
+      "en": "Assemble the furniture.",
+      "es": "Monta el mueble."
+    }
+  ],
+  "asset": [
+    {
+      "g": "activo, bien",
+      "en": "The company's assets.",
+      "es": "Los activos de la empresa."
+    },
+    {
+      "g": "ventaja, baza",
+      "en": "She's a great asset to the team.",
+      "es": "Es una gran baza para el equipo."
+    }
+  ],
+  "attach": [
+    {
+      "g": "sujetar, fijar",
+      "en": "Attach the label to the box.",
+      "es": "Fija la etiqueta a la caja."
+    },
+    {
+      "g": "adjuntar (archivo/correo)",
+      "en": "I attached the file.",
+      "es": "Adjunté el archivo."
+    }
+  ],
+  "authority": [
+    {
+      "g": "autoridad (poder)",
+      "en": "He has no authority here.",
+      "es": "Aquí no tiene autoridad."
+    },
+    {
+      "g": "organismo, autoridades",
+      "en": "The local authority.",
+      "es": "El ayuntamiento, las autoridades locales."
+    }
+  ],
+  "avert": [
+    {
+      "g": "evitar, prevenir",
+      "en": "Avert a disaster.",
+      "es": "Evitar un desastre."
+    },
+    {
+      "g": "apartar (la mirada)",
+      "en": "She averted her eyes.",
+      "es": "Apartó la mirada."
+    }
+  ],
+  "back": [
+    {
+      "g": "espalda",
+      "en": "My back hurts.",
+      "es": "Me duele la espalda."
+    },
+    {
+      "g": "parte de atrás",
+      "en": "Sit in the back of the car.",
+      "es": "Siéntate en la parte de atrás."
+    },
+    {
+      "g": "de vuelta",
+      "en": "I'll be back soon.",
+      "es": "Vuelvo pronto."
+    }
+  ],
+  "backup": [
+    {
+      "g": "copia de seguridad",
+      "en": "Make a backup.",
+      "es": "Haz una copia de seguridad."
+    },
+    {
+      "g": "apoyo, refuerzos",
+      "en": "Call for backup.",
+      "es": "Pide refuerzos."
+    }
+  ],
+  "balance": [
+    {
+      "g": "equilibrio",
+      "en": "Lose your balance.",
+      "es": "Perder el equilibrio."
+    },
+    {
+      "g": "saldo (de cuenta)",
+      "en": "Check your bank balance.",
+      "es": "Consulta el saldo de tu cuenta."
+    }
+  ],
+  "bank": [
+    {
+      "g": "banco (dinero)",
+      "en": "I went to the bank.",
+      "es": "Fui al banco."
+    },
+    {
+      "g": "orilla (de un río)",
+      "en": "We sat on the river bank.",
+      "es": "Nos sentamos en la orilla del río."
+    }
+  ],
+  "beam": [
+    {
+      "g": "viga",
+      "en": "A wooden beam.",
+      "es": "Una viga de madera."
+    },
+    {
+      "g": "rayo, haz de luz",
+      "en": "A beam of light.",
+      "es": "Un haz de luz."
+    },
+    {
+      "g": "sonreír de oreja a oreja",
+      "en": "She beamed with joy.",
+      "es": "Sonrió de oreja a oreja de alegría."
+    }
+  ],
+  "beat": [
+    {
+      "g": "golpear, pegar",
+      "en": "Don't beat the dog.",
+      "es": "No le pegues al perro."
+    },
+    {
+      "g": "batir (huevos)",
+      "en": "Beat the eggs.",
+      "es": "Bate los huevos."
+    },
+    {
+      "g": "vencer, ganar a",
+      "en": "We beat them 3-0.",
+      "es": "Les ganamos 3 a 0."
+    }
+  ],
+  "bleak": [
+    {
+      "g": "desolador, poco prometedor",
+      "en": "A bleak future.",
+      "es": "Un futuro desolador."
+    },
+    {
+      "g": "inhóspito, gris (paisaje)",
+      "en": "A bleak landscape.",
+      "es": "Un paisaje inhóspito."
+    }
+  ],
+  "break down": [
+    {
+      "g": "averiarse (coche/máquina)",
+      "en": "The car broke down.",
+      "es": "El coche se averió."
+    },
+    {
+      "g": "derrumbarse, echarse a llorar",
+      "en": "She broke down in tears.",
+      "es": "Se echó a llorar."
+    },
+    {
+      "g": "desglosar",
+      "en": "Break down the costs.",
+      "es": "Desglosa los costes."
+    }
+  ],
+  "break out": [
+    {
+      "g": "estallar (guerra/incendio)",
+      "en": "A fire broke out.",
+      "es": "Estalló un incendio."
+    },
+    {
+      "g": "escaparse, fugarse",
+      "en": "He broke out of prison.",
+      "es": "Se fugó de la cárcel."
+    }
+  ],
+  "break up": [
+    {
+      "g": "romper, cortar (una pareja)",
+      "en": "They broke up last year.",
+      "es": "Cortaron el año pasado."
+    },
+    {
+      "g": "disolver, dispersar",
+      "en": "Police broke up the crowd.",
+      "es": "La policía dispersó a la multitud."
+    }
+  ],
+  "bright": [
+    {
+      "g": "brillante, luminoso",
+      "en": "A bright light.",
+      "es": "Una luz brillante."
+    },
+    {
+      "g": "listo, inteligente",
+      "en": "A bright student.",
+      "es": "Un alumno listo."
+    }
+  ],
+  "bring up": [
+    {
+      "g": "criar, educar",
+      "en": "She brought up three kids.",
+      "es": "Crió a tres hijos."
+    },
+    {
+      "g": "sacar (un tema)",
+      "en": "Don't bring that up.",
+      "es": "No saques ese tema."
+    }
+  ],
+  "busy": [
+    {
+      "g": "ocupado",
+      "en": "I'm busy right now.",
+      "es": "Estoy ocupado ahora."
+    },
+    {
+      "g": "concurrido, con mucho movimiento",
+      "en": "A busy street.",
+      "es": "Una calle concurrida."
+    }
+  ],
+  "card": [
+    {
+      "g": "tarjeta",
+      "en": "Do you take card?",
+      "es": "¿Aceptan tarjeta?"
+    },
+    {
+      "g": "carta (de la baraja)",
+      "en": "A game of cards.",
+      "es": "Una partida de cartas."
+    }
+  ],
+  "care": [
+    {
+      "g": "cuidado, atención",
+      "en": "Handle it with care.",
+      "es": "Manéjalo con cuidado."
+    },
+    {
+      "g": "importar; preocuparse",
+      "en": "I don't care.",
+      "es": "Me da igual."
+    }
+  ],
+  "casual": [
+    {
+      "g": "informal (ropa)",
+      "en": "Casual clothes.",
+      "es": "Ropa informal."
+    },
+    {
+      "g": "despreocupado, informal (actitud)",
+      "en": "A casual remark.",
+      "es": "Un comentario despreocupado."
+    }
+  ],
+  "catch": [
+    {
+      "g": "atrapar, coger",
+      "en": "Catch the ball.",
+      "es": "Atrapa la pelota."
+    },
+    {
+      "g": "coger (un tren/bus)",
+      "en": "I caught the last bus.",
+      "es": "Cogí el último autobús."
+    },
+    {
+      "g": "pillar (una enfermedad)",
+      "en": "I caught a cold.",
+      "es": "Pillé un resfriado."
+    }
+  ],
+  "cater": [
+    {
+      "g": "proveer comida (para un evento)",
+      "en": "They catered the wedding.",
+      "es": "Se encargaron del catering de la boda."
+    },
+    {
+      "g": "atender, satisfacer (necesidades)",
+      "en": "Cater to all tastes.",
+      "es": "Satisfacer todos los gustos."
+    }
+  ],
+  "certain": [
+    {
+      "g": "seguro, convencido",
+      "en": "I'm certain she's right.",
+      "es": "Estoy seguro de que tiene razón."
+    },
+    {
+      "g": "cierto, determinado",
+      "en": "Certain people don't like it.",
+      "es": "A ciertas personas no les gusta."
+    }
+  ],
+  "chance": [
+    {
+      "g": "oportunidad",
+      "en": "Give me a chance.",
+      "es": "Dame una oportunidad."
+    },
+    {
+      "g": "posibilidad, probabilidad",
+      "en": "There's a chance of rain.",
+      "es": "Hay posibilidad de lluvia."
+    }
+  ],
+  "change": [
+    {
+      "g": "cambio",
+      "en": "There's been a change of plan.",
+      "es": "Ha habido un cambio de planes."
+    },
+    {
+      "g": "cambiar",
+      "en": "I changed my mind.",
+      "es": "Cambié de opinión."
+    },
+    {
+      "g": "cambio, vuelto",
+      "en": "Keep the change.",
+      "es": "Quédate con el cambio."
+    }
+  ],
+  "charge": [
+    {
+      "g": "cobrar",
+      "en": "They charged me €50.",
+      "es": "Me cobraron 50 €."
+    },
+    {
+      "g": "cargar (batería)",
+      "en": "Charge your phone.",
+      "es": "Carga el móvil."
+    },
+    {
+      "g": "cargo, acusación",
+      "en": "A serious charge.",
+      "es": "Un cargo grave."
+    }
+  ],
+  "chasm": [
+    {
+      "g": "abismo, sima",
+      "en": "A deep chasm.",
+      "es": "Un abismo profundo."
+    },
+    {
+      "g": "brecha, distancia (entre grupos)",
+      "en": "A chasm between rich and poor.",
+      "es": "Una brecha entre ricos y pobres."
+    }
+  ],
+  "chest": [
+    {
+      "g": "pecho",
+      "en": "A pain in my chest.",
+      "es": "Un dolor en el pecho."
+    },
+    {
+      "g": "cofre, baúl",
+      "en": "A treasure chest.",
+      "es": "Un cofre del tesoro."
+    }
+  ],
+  "clear": [
+    {
+      "g": "claro, evidente",
+      "en": "The instructions are clear.",
+      "es": "Las instrucciones son claras."
+    },
+    {
+      "g": "despejado (cielo/vía)",
+      "en": "A clear sky.",
+      "es": "Un cielo despejado."
+    },
+    {
+      "g": "despejar, retirar",
+      "en": "Clear the table.",
+      "es": "Recoge la mesa."
+    }
+  ],
+  "clinch": [
+    {
+      "g": "cerrar (un trato)",
+      "en": "Clinch the deal.",
+      "es": "Cerrar el trato."
+    },
+    {
+      "g": "decidir, sentenciar",
+      "en": "That goal clinched the match.",
+      "es": "Ese gol sentenció el partido."
+    }
+  ],
+  "coach": [
+    {
+      "g": "entrenador",
+      "en": "The team's coach.",
+      "es": "El entrenador del equipo."
+    },
+    {
+      "g": "autocar",
+      "en": "Travel by coach.",
+      "es": "Viajar en autocar."
+    }
+  ],
+  "coarse": [
+    {
+      "g": "grueso, basto (textura)",
+      "en": "Coarse sand.",
+      "es": "Arena gruesa."
+    },
+    {
+      "g": "grosero, vulgar (lenguaje)",
+      "en": "Coarse language.",
+      "es": "Lenguaje grosero."
+    }
+  ],
+  "code": [
+    {
+      "g": "código (informática)",
+      "en": "She writes clean code.",
+      "es": "Escribe código limpio."
+    },
+    {
+      "g": "código, normas",
+      "en": "A dress code.",
+      "es": "Un código de vestimenta."
+    }
+  ],
+  "collect": [
+    {
+      "g": "coleccionar",
+      "en": "He collects stamps.",
+      "es": "Colecciona sellos."
+    },
+    {
+      "g": "recoger, recaudar",
+      "en": "Collect the kids from school.",
+      "es": "Recoge a los niños del colegio."
+    }
+  ],
+  "comfort": [
+    {
+      "g": "comodidad, confort",
+      "en": "Travel in comfort.",
+      "es": "Viajar con comodidad."
+    },
+    {
+      "g": "consuelo; consolar",
+      "en": "Her words were a comfort.",
+      "es": "Sus palabras fueron un consuelo."
+    }
+  ],
+  "commit": [
+    {
+      "g": "cometer (un delito)",
+      "en": "Commit a crime.",
+      "es": "Cometer un delito."
+    },
+    {
+      "g": "comprometerse",
+      "en": "Commit to the project.",
+      "es": "Comprométete con el proyecto."
+    },
+    {
+      "g": "confirmar cambios (git)",
+      "en": "Commit your changes.",
+      "es": "Confirma tus cambios."
+    }
+  ],
+  "compelling": [
+    {
+      "g": "convincente, de peso",
+      "en": "A compelling argument.",
+      "es": "Un argumento convincente."
+    },
+    {
+      "g": "fascinante, absorbente",
+      "en": "A compelling story.",
+      "es": "Una historia fascinante."
+    }
+  ],
+  "compound": [
+    {
+      "g": "compuesto (químico/palabra)",
+      "en": "A chemical compound.",
+      "es": "Un compuesto químico."
+    },
+    {
+      "g": "recinto, complejo",
+      "en": "A guarded compound.",
+      "es": "Un recinto vigilado."
+    },
+    {
+      "g": "agravar, empeorar",
+      "en": "This compounds the problem.",
+      "es": "Esto agrava el problema."
+    }
+  ],
+  "concede": [
+    {
+      "g": "admitir, reconocer",
+      "en": "He conceded he was wrong.",
+      "es": "Admitió que se equivocaba."
+    },
+    {
+      "g": "ceder, conceder",
+      "en": "Concede defeat.",
+      "es": "Reconocer la derrota."
+    }
+  ],
+  "concerned": [
+    {
+      "g": "preocupado",
+      "en": "I'm concerned about him.",
+      "es": "Estoy preocupado por él."
+    },
+    {
+      "g": "implicado, en cuestión",
+      "en": "The people concerned.",
+      "es": "Las personas implicadas."
+    }
+  ],
+  "concoct": [
+    {
+      "g": "preparar, improvisar (una mezcla)",
+      "en": "She concocted a strange soup.",
+      "es": "Improvisó una sopa rara."
+    },
+    {
+      "g": "inventarse, urdir (una historia)",
+      "en": "He concocted an alibi.",
+      "es": "Se inventó una coartada."
+    }
+  ],
+  "confer": [
+    {
+      "g": "conceder, otorgar",
+      "en": "The title was conferred on her.",
+      "es": "Le concedieron el título."
+    },
+    {
+      "g": "deliberar, consultar",
+      "en": "Let me confer with my team.",
+      "es": "Déjame consultarlo con mi equipo."
+    }
+  ],
+  "conscious": [
+    {
+      "g": "consciente (despierto)",
+      "en": "He was conscious after the fall.",
+      "es": "Estaba consciente tras la caída."
+    },
+    {
+      "g": "consciente (de algo)",
+      "en": "She's conscious of the risk.",
+      "es": "Es consciente del riesgo."
+    }
+  ],
+  "contemplate": [
+    {
+      "g": "plantearse, considerar",
+      "en": "She's contemplating a move.",
+      "es": "Se está planteando una mudanza."
+    },
+    {
+      "g": "contemplar, observar",
+      "en": "He contemplated the sunset.",
+      "es": "Contempló el atardecer."
+    }
+  ],
+  "contend": [
+    {
+      "g": "afirmar, sostener",
+      "en": "They contend it's unfair.",
+      "es": "Sostienen que es injusto."
+    },
+    {
+      "g": "competir, luchar por",
+      "en": "Three teams contend for the title.",
+      "es": "Tres equipos luchan por el título."
+    }
+  ],
+  "control": [
+    {
+      "g": "control",
+      "en": "He lost control of the car.",
+      "es": "Perdió el control del coche."
+    },
+    {
+      "g": "controlar, dominar",
+      "en": "Try to control your temper.",
+      "es": "Intenta controlar tu genio."
+    }
+  ],
+  "couple": [
+    {
+      "g": "pareja",
+      "en": "A married couple.",
+      "es": "Un matrimonio, una pareja casada."
+    },
+    {
+      "g": "un par de",
+      "en": "A couple of days.",
+      "es": "Un par de días."
+    }
+  ],
+  "course": [
+    {
+      "g": "curso (clases)",
+      "en": "An English course.",
+      "es": "Un curso de inglés."
+    },
+    {
+      "g": "plato (comida)",
+      "en": "The main course.",
+      "es": "El plato principal."
+    },
+    {
+      "g": "rumbo, trayecto",
+      "en": "The ship changed course.",
+      "es": "El barco cambió de rumbo."
+    }
+  ],
+  "court": [
+    {
+      "g": "tribunal, juzgado",
+      "en": "See you in court.",
+      "es": "Nos vemos en el juzgado."
+    },
+    {
+      "g": "pista, cancha",
+      "en": "A tennis court.",
+      "es": "Una pista de tenis."
+    }
+  ],
+  "crisp": [
+    {
+      "g": "crujiente",
+      "en": "Crisp bacon.",
+      "es": "Bacon crujiente."
+    },
+    {
+      "g": "fresco y despejado (tiempo)",
+      "en": "A crisp autumn morning.",
+      "es": "Una fresca mañana de otoño."
+    }
+  ],
+  "cut off": [
+    {
+      "g": "cortar (suministro/comunicación)",
+      "en": "They cut off the electricity.",
+      "es": "Cortaron la electricidad."
+    },
+    {
+      "g": "aislar, dejar incomunicado",
+      "en": "The village was cut off by snow.",
+      "es": "El pueblo quedó aislado por la nieve."
+    }
+  ],
+  "decisive": [
+    {
+      "g": "decisivo, determinante",
+      "en": "A decisive moment.",
+      "es": "Un momento decisivo."
+    },
+    {
+      "g": "decidido, resuelto",
+      "en": "A decisive leader.",
+      "es": "Un líder decidido."
+    }
+  ],
+  "decline": [
+    {
+      "g": "rechazar, declinar",
+      "en": "She declined the offer.",
+      "es": "Rechazó la oferta."
+    },
+    {
+      "g": "disminuir, decaer",
+      "en": "Sales declined.",
+      "es": "Las ventas disminuyeron."
+    }
+  ],
+  "deflate": [
+    {
+      "g": "desinflar(se)",
+      "en": "The tyre deflated.",
+      "es": "El neumático se desinfló."
+    },
+    {
+      "g": "desanimar, bajar los ánimos",
+      "en": "The news deflated us.",
+      "es": "La noticia nos desanimó."
+    }
+  ],
+  "degree": [
+    {
+      "g": "grado (temperatura/ángulo)",
+      "en": "Thirty degrees.",
+      "es": "Treinta grados."
+    },
+    {
+      "g": "carrera, título universitario",
+      "en": "A degree in law.",
+      "es": "Una carrera de derecho."
+    },
+    {
+      "g": "grado, nivel",
+      "en": "A high degree of skill.",
+      "es": "Un alto grado de destreza."
+    }
+  ],
+  "demonstrate": [
+    {
+      "g": "demostrar, mostrar",
+      "en": "Let me demonstrate.",
+      "es": "Deja que te lo demuestre."
+    },
+    {
+      "g": "manifestarse (protesta)",
+      "en": "They demonstrated against the law.",
+      "es": "Se manifestaron contra la ley."
+    }
+  ],
+  "discretion": [
+    {
+      "g": "discreción, prudencia",
+      "en": "Use discretion.",
+      "es": "Actúa con discreción."
+    },
+    {
+      "g": "criterio, potestad",
+      "en": "At the manager's discretion.",
+      "es": "A criterio del gerente."
+    }
+  ],
+  "divert": [
+    {
+      "g": "desviar",
+      "en": "Traffic was diverted.",
+      "es": "Desviaron el tráfico."
+    },
+    {
+      "g": "distraer, entretener",
+      "en": "To divert attention.",
+      "es": "Para distraer la atención."
+    }
+  ],
+  "domestic": [
+    {
+      "g": "doméstico, del hogar",
+      "en": "Domestic chores.",
+      "es": "Tareas domésticas."
+    },
+    {
+      "g": "nacional, interno",
+      "en": "A domestic flight.",
+      "es": "Un vuelo nacional."
+    }
+  ],
+  "dramatic": [
+    {
+      "g": "drástico, espectacular",
+      "en": "A dramatic change.",
+      "es": "Un cambio drástico."
+    },
+    {
+      "g": "teatral, exagerado",
+      "en": "Don't be so dramatic.",
+      "es": "No seas tan dramático."
+    }
+  ],
+  "draw": [
+    {
+      "g": "dibujar",
+      "en": "She drew a map.",
+      "es": "Dibujó un mapa."
+    },
+    {
+      "g": "empate",
+      "en": "The match ended in a draw.",
+      "es": "El partido acabó en empate."
+    },
+    {
+      "g": "atraer",
+      "en": "The show drew a big crowd.",
+      "es": "El espectáculo atrajo a mucha gente."
+    }
+  ],
+  "drop": [
+    {
+      "g": "gota",
+      "en": "A drop of rain.",
+      "es": "Una gota de lluvia."
+    },
+    {
+      "g": "dejar caer; caerse",
+      "en": "Don't drop the plate.",
+      "es": "No dejes caer el plato."
+    },
+    {
+      "g": "bajar, disminuir",
+      "en": "Prices dropped.",
+      "es": "Los precios bajaron."
+    }
+  ],
+  "drop off": [
+    {
+      "g": "dejar (a alguien/algo en un sitio)",
+      "en": "Drop me off at the station.",
+      "es": "Déjame en la estación."
+    },
+    {
+      "g": "quedarse dormido",
+      "en": "He dropped off during the film.",
+      "es": "Se quedó dormido durante la película."
+    }
+  ],
+  "drug": [
+    {
+      "g": "medicamento, fármaco",
+      "en": "A new drug for the illness.",
+      "es": "Un nuevo medicamento para la enfermedad."
+    },
+    {
+      "g": "droga",
+      "en": "Drug abuse is a problem.",
+      "es": "El consumo de drogas es un problema."
+    }
+  ],
+  "dubious": [
+    {
+      "g": "dudoso, poco fiable",
+      "en": "A dubious claim.",
+      "es": "Una afirmación dudosa."
+    },
+    {
+      "g": "receloso, poco convencido",
+      "en": "I'm dubious about the plan.",
+      "es": "Tengo mis dudas sobre el plan."
+    }
+  ],
+  "dwell": [
+    {
+      "g": "morar, residir",
+      "en": "They dwell in the forest.",
+      "es": "Moran en el bosque."
+    },
+    {
+      "g": "detenerse en, obsesionarse con",
+      "en": "Don't dwell on the past.",
+      "es": "No te obsesiones con el pasado."
+    }
+  ],
+  "effectively": [
+    {
+      "g": "eficazmente, con eficacia",
+      "en": "Deal with it effectively.",
+      "es": "Trátalo con eficacia."
+    },
+    {
+      "g": "en realidad, de hecho",
+      "en": "He's effectively in charge.",
+      "es": "En la práctica, él manda."
+    }
+  ],
+  "embellish": [
+    {
+      "g": "embellecer, adornar",
+      "en": "Embellish the dress with beads.",
+      "es": "Adorna el vestido con cuentas."
+    },
+    {
+      "g": "exagerar, adornar (un relato)",
+      "en": "He embellished the story.",
+      "es": "Adornó la historia."
+    }
+  ],
+  "embrace": [
+    {
+      "g": "abrazar",
+      "en": "She embraced her son.",
+      "es": "Abrazó a su hijo."
+    },
+    {
+      "g": "adoptar, aceptar (una idea)",
+      "en": "Embrace change.",
+      "es": "Acepta el cambio."
+    }
+  ],
+  "end": [
+    {
+      "g": "final, fin",
+      "en": "The end of the film.",
+      "es": "El final de la película."
+    },
+    {
+      "g": "terminar, acabar",
+      "en": "The show ends at ten.",
+      "es": "El espectáculo termina a las diez."
+    }
+  ],
+  "endure": [
+    {
+      "g": "soportar, aguantar",
+      "en": "She endured the pain.",
+      "es": "Soportó el dolor."
+    },
+    {
+      "g": "perdurar, durar",
+      "en": "Their love endured.",
+      "es": "Su amor perduró."
+    }
+  ],
+  "engagement": [
+    {
+      "g": "compromiso (de boda)",
+      "en": "An engagement ring.",
+      "es": "Un anillo de compromiso."
+    },
+    {
+      "g": "compromiso, cita (agenda)",
+      "en": "A prior engagement.",
+      "es": "Un compromiso previo."
+    }
+  ],
+  "enterprise": [
+    {
+      "g": "empresa",
+      "en": "A small enterprise.",
+      "es": "Una pequeña empresa."
+    },
+    {
+      "g": "iniciativa, espíritu emprendedor",
+      "en": "She showed great enterprise.",
+      "es": "Mostró mucha iniciativa."
+    }
+  ],
+  "erode": [
+    {
+      "g": "erosionar (terreno)",
+      "en": "The sea erodes the cliff.",
+      "es": "El mar erosiona el acantilado."
+    },
+    {
+      "g": "mermar, debilitar",
+      "en": "It eroded public trust.",
+      "es": "Mermó la confianza pública."
+    }
+  ],
+  "exchange": [
+    {
+      "g": "intercambio",
+      "en": "An exchange of ideas.",
+      "es": "Un intercambio de ideas."
+    },
+    {
+      "g": "cambiar, canjear",
+      "en": "Can I exchange this shirt?",
+      "es": "¿Puedo cambiar esta camisa?"
+    }
+  ],
+  "experience": [
+    {
+      "g": "experiencia (vivencia)",
+      "en": "A wonderful experience.",
+      "es": "Una experiencia maravillosa."
+    },
+    {
+      "g": "experiencia (laboral)",
+      "en": "She has years of experience.",
+      "es": "Tiene años de experiencia."
+    }
+  ],
+  "expose": [
+    {
+      "g": "exponer, dejar al descubierto",
+      "en": "The rock was exposed by the tide.",
+      "es": "La marea dejó al descubierto la roca."
+    },
+    {
+      "g": "destapar, desenmascarar",
+      "en": "The report exposed the fraud.",
+      "es": "El informe destapó el fraude."
+    }
+  ],
+  "face": [
+    {
+      "g": "cara, rostro",
+      "en": "Wash your face.",
+      "es": "Lávate la cara."
+    },
+    {
+      "g": "enfrentar(se) a",
+      "en": "We must face the truth.",
+      "es": "Debemos afrontar la verdad."
+    }
+  ],
+  "fail": [
+    {
+      "g": "suspender (un examen)",
+      "en": "He failed the test.",
+      "es": "Suspendió el examen."
+    },
+    {
+      "g": "fracasar; fallar",
+      "en": "The plan failed.",
+      "es": "El plan fracasó."
+    }
+  ],
+  "failure": [
+    {
+      "g": "fracaso",
+      "en": "The plan was a failure.",
+      "es": "El plan fue un fracaso."
+    },
+    {
+      "g": "fallo, avería",
+      "en": "Engine failure.",
+      "es": "Fallo del motor."
+    }
+  ],
+  "fair": [
+    {
+      "g": "justo",
+      "en": "That's not fair.",
+      "es": "Eso no es justo."
+    },
+    {
+      "g": "feria",
+      "en": "A book fair.",
+      "es": "Una feria del libro."
+    },
+    {
+      "g": "rubio; claro (piel)",
+      "en": "She has fair hair.",
+      "es": "Tiene el pelo rubio."
+    }
+  ],
+  "fend": [
+    {
+      "g": "defenderse, valerse por sí mismo",
+      "en": "Fend for yourself.",
+      "es": "Valerse por uno mismo."
+    },
+    {
+      "g": "repeler, rechazar (fend off)",
+      "en": "Fend off an attack.",
+      "es": "Repeler un ataque."
+    }
+  ],
+  "figure": [
+    {
+      "g": "cifra, número",
+      "en": "Sales figures rose.",
+      "es": "Las cifras de ventas subieron."
+    },
+    {
+      "g": "figura, silueta",
+      "en": "A figure in the dark.",
+      "es": "Una figura en la oscuridad."
+    }
+  ],
+  "fill in": [
+    {
+      "g": "rellenar (un formulario)",
+      "en": "Fill in the form.",
+      "es": "Rellena el formulario."
+    },
+    {
+      "g": "sustituir (a alguien)",
+      "en": "Can you fill in for me?",
+      "es": "¿Puedes sustituirme?"
+    }
+  ],
+  "fine": [
+    {
+      "g": "bien",
+      "en": "I'm fine, thanks.",
+      "es": "Estoy bien, gracias."
+    },
+    {
+      "g": "multa",
+      "en": "A parking fine.",
+      "es": "Una multa de aparcamiento."
+    },
+    {
+      "g": "fino, delicado",
+      "en": "Fine sand.",
+      "es": "Arena fina."
+    }
+  ],
+  "floor": [
+    {
+      "g": "suelo",
+      "en": "The keys are on the floor.",
+      "es": "Las llaves están en el suelo."
+    },
+    {
+      "g": "piso, planta",
+      "en": "We live on the third floor.",
+      "es": "Vivimos en el tercer piso."
+    }
+  ],
+  "forge": [
+    {
+      "g": "forjar (metal/relación)",
+      "en": "Forge a strong bond.",
+      "es": "Forjar un vínculo fuerte."
+    },
+    {
+      "g": "falsificar",
+      "en": "He forged the signature.",
+      "es": "Falsificó la firma."
+    }
+  ],
+  "fork": [
+    {
+      "g": "tenedor",
+      "en": "Eat with a fork.",
+      "es": "Come con tenedor."
+    },
+    {
+      "g": "bifurcación (camino)",
+      "en": "Take the left fork.",
+      "es": "Toma el desvío de la izquierda."
+    },
+    {
+      "g": "copia de un repositorio (código)",
+      "en": "I forked the project.",
+      "es": "Hice un fork del proyecto."
+    }
+  ],
+  "form": [
+    {
+      "g": "formulario",
+      "en": "Fill in this form.",
+      "es": "Rellena este formulario."
+    },
+    {
+      "g": "forma",
+      "en": "A cloud in the form of a heart.",
+      "es": "Una nube con forma de corazón."
+    },
+    {
+      "g": "formar, crear",
+      "en": "Water forms ice.",
+      "es": "El agua forma hielo."
+    }
+  ],
+  "forthcoming": [
+    {
+      "g": "próximo, venidero",
+      "en": "The forthcoming election.",
+      "es": "Las próximas elecciones."
+    },
+    {
+      "g": "comunicativo, abierto",
+      "en": "He wasn't very forthcoming.",
+      "es": "No fue muy comunicativo."
+    }
+  ],
+  "foster": [
+    {
+      "g": "fomentar, promover",
+      "en": "Foster good habits.",
+      "es": "Fomenta los buenos hábitos."
+    },
+    {
+      "g": "acoger (en familia)",
+      "en": "They foster children.",
+      "es": "Acogen a niños en familia."
+    }
+  ],
+  "fraught": [
+    {
+      "g": "lleno de, cargado de (fraught with)",
+      "en": "Fraught with danger.",
+      "es": "Lleno de peligro."
+    },
+    {
+      "g": "tenso, angustioso",
+      "en": "A fraught meeting.",
+      "es": "Una reunión tensa."
+    }
+  ],
+  "free": [
+    {
+      "g": "gratis, gratuito",
+      "en": "The tickets are free.",
+      "es": "Las entradas son gratis."
+    },
+    {
+      "g": "libre",
+      "en": "Are you free tonight?",
+      "es": "¿Estás libre esta noche?"
+    }
+  ],
+  "freeze": [
+    {
+      "g": "congelar(se)",
+      "en": "Freeze the meat.",
+      "es": "Congela la carne."
+    },
+    {
+      "g": "quedarse inmóvil",
+      "en": "He froze with fear.",
+      "es": "Se quedó paralizado del miedo."
+    }
+  ],
+  "fresh": [
+    {
+      "g": "fresco (comida)",
+      "en": "Fresh bread.",
+      "es": "Pan fresco."
+    },
+    {
+      "g": "nuevo, reciente",
+      "en": "A fresh start.",
+      "es": "Un nuevo comienzo."
+    }
+  ],
+  "funny": [
+    {
+      "g": "gracioso, divertido",
+      "en": "A funny joke.",
+      "es": "Un chiste gracioso."
+    },
+    {
+      "g": "raro, extraño",
+      "en": "A funny smell.",
+      "es": "Un olor raro."
+    }
+  ],
+  "gain": [
+    {
+      "g": "ganar, obtener",
+      "en": "She gained experience.",
+      "es": "Ganó experiencia."
+    },
+    {
+      "g": "aumento; beneficio",
+      "en": "A weight gain.",
+      "es": "Un aumento de peso."
+    }
+  ],
+  "garage": [
+    {
+      "g": "garaje (de casa)",
+      "en": "The car is in the garage.",
+      "es": "El coche está en el garaje."
+    },
+    {
+      "g": "taller mecánico",
+      "en": "Take it to the garage.",
+      "es": "Llévalo al taller."
+    }
+  ],
+  "gate": [
+    {
+      "g": "puerta (de valla), verja",
+      "en": "Close the gate.",
+      "es": "Cierra la verja."
+    },
+    {
+      "g": "puerta de embarque",
+      "en": "Go to gate 12.",
+      "es": "Diríjase a la puerta 12."
+    }
+  ],
+  "gather": [
+    {
+      "g": "reunirse, juntarse",
+      "en": "A crowd gathered.",
+      "es": "Se reunió una multitud."
+    },
+    {
+      "g": "recoger, recolectar",
+      "en": "Gather the apples.",
+      "es": "Recoge las manzanas."
+    }
+  ],
+  "get": [
+    {
+      "g": "conseguir, obtener",
+      "en": "I got a new job.",
+      "es": "Conseguí un trabajo nuevo."
+    },
+    {
+      "g": "llegar",
+      "en": "We got home late.",
+      "es": "Llegamos a casa tarde."
+    },
+    {
+      "g": "ponerse (estado)",
+      "en": "It's getting cold.",
+      "es": "Está haciendo frío."
+    }
+  ],
+  "get on": [
+    {
+      "g": "subir(se) (a un transporte)",
+      "en": "Get on the bus.",
+      "es": "Súbete al autobús."
+    },
+    {
+      "g": "llevarse bien",
+      "en": "Do you get on with your boss?",
+      "es": "¿Te llevas bien con tu jefe?"
+    }
+  ],
+  "get through": [
+    {
+      "g": "superar, aguantar (un mal momento)",
+      "en": "We'll get through this.",
+      "es": "Superaremos esto."
+    },
+    {
+      "g": "contactar, comunicar (por teléfono)",
+      "en": "I couldn't get through to her.",
+      "es": "No conseguí contactar con ella."
+    }
+  ],
+  "give away": [
+    {
+      "g": "regalar, dar gratis",
+      "en": "They gave away free samples.",
+      "es": "Regalaron muestras gratis."
+    },
+    {
+      "g": "revelar, delatar",
+      "en": "His face gave him away.",
+      "es": "Su cara lo delató."
+    }
+  ],
+  "give up": [
+    {
+      "g": "rendirse, abandonar",
+      "en": "Don't give up.",
+      "es": "No te rindas."
+    },
+    {
+      "g": "dejar (un hábito)",
+      "en": "He gave up smoking.",
+      "es": "Dejó de fumar."
+    }
+  ],
+  "glass": [
+    {
+      "g": "vidrio, cristal",
+      "en": "The window is made of glass.",
+      "es": "La ventana es de cristal."
+    },
+    {
+      "g": "vaso; copa",
+      "en": "A glass of water.",
+      "es": "Un vaso de agua."
+    }
+  ],
+  "go off": [
+    {
+      "g": "sonar (alarma); estallar",
+      "en": "The alarm went off.",
+      "es": "Sonó la alarma."
+    },
+    {
+      "g": "estropearse (comida)",
+      "en": "The milk has gone off.",
+      "es": "La leche se ha estropeado."
+    }
+  ],
+  "go on": [
+    {
+      "g": "seguir, continuar",
+      "en": "Go on, I'm listening.",
+      "es": "Sigue, te escucho."
+    },
+    {
+      "g": "pasar, ocurrir",
+      "en": "What's going on?",
+      "es": "¿Qué está pasando?"
+    }
+  ],
+  "go through": [
+    {
+      "g": "pasar por, sufrir",
+      "en": "She's going through a hard time.",
+      "es": "Está pasando por un mal momento."
+    },
+    {
+      "g": "revisar, examinar",
+      "en": "Go through the documents.",
+      "es": "Revisa los documentos."
+    }
+  ],
+  "goal": [
+    {
+      "g": "objetivo, meta",
+      "en": "My goal is to learn English.",
+      "es": "Mi objetivo es aprender inglés."
+    },
+    {
+      "g": "gol",
+      "en": "She scored a goal.",
+      "es": "Marcó un gol."
+    }
+  ],
+  "grapple": [
+    {
+      "g": "forcejear, luchar (físicamente)",
+      "en": "They grappled on the floor.",
+      "es": "Forcejearon en el suelo."
+    },
+    {
+      "g": "lidiar con (un problema)",
+      "en": "Grappling with debt.",
+      "es": "Lidiando con las deudas."
+    }
+  ],
+  "grasp": [
+    {
+      "g": "agarrar, aferrar",
+      "en": "Grasp the rope.",
+      "es": "Agarra la cuerda."
+    },
+    {
+      "g": "captar, entender",
+      "en": "I can't grasp the idea.",
+      "es": "No consigo captar la idea."
+    }
+  ],
+  "great": [
+    {
+      "g": "grande, enorme",
+      "en": "A great success.",
+      "es": "Un gran éxito."
+    },
+    {
+      "g": "estupendo, genial",
+      "en": "That's a great idea.",
+      "es": "Es una idea genial."
+    }
+  ],
+  "greedy": [
+    {
+      "g": "codicioso, avaricioso",
+      "en": "Greedy for money.",
+      "es": "Codicioso de dinero."
+    },
+    {
+      "g": "glotón, comilón",
+      "en": "Don't be greedy, share.",
+      "es": "No seas glotón, comparte."
+    }
+  ],
+  "grow": [
+    {
+      "g": "crecer",
+      "en": "Children grow fast.",
+      "es": "Los niños crecen rápido."
+    },
+    {
+      "g": "cultivar",
+      "en": "They grow tomatoes.",
+      "es": "Cultivan tomates."
+    }
+  ],
+  "guest": [
+    {
+      "g": "invitado",
+      "en": "We have guests tonight.",
+      "es": "Tenemos invitados esta noche."
+    },
+    {
+      "g": "huésped (de hotel)",
+      "en": "The hotel has 200 guests.",
+      "es": "El hotel tiene 200 huéspedes."
+    }
+  ],
+  "hard": [
+    {
+      "g": "duro, firme",
+      "en": "The bed is too hard.",
+      "es": "La cama es demasiado dura."
+    },
+    {
+      "g": "difícil",
+      "en": "A hard question.",
+      "es": "Una pregunta difícil."
+    }
+  ],
+  "have": [
+    {
+      "g": "tener",
+      "en": "I have two brothers.",
+      "es": "Tengo dos hermanos."
+    },
+    {
+      "g": "haber (auxiliar)",
+      "en": "I have finished.",
+      "es": "He terminado."
+    },
+    {
+      "g": "tomar (comida)",
+      "en": "Let's have lunch.",
+      "es": "Vamos a comer."
+    }
+  ],
+  "hold on": [
+    {
+      "g": "esperar",
+      "en": "Hold on a minute.",
+      "es": "Espera un momento."
+    },
+    {
+      "g": "agarrarse",
+      "en": "Hold on tight.",
+      "es": "Agárrate fuerte."
+    }
+  ],
+  "holiday": [
+    {
+      "g": "vacaciones",
+      "en": "We're going on holiday.",
+      "es": "Nos vamos de vacaciones."
+    },
+    {
+      "g": "día festivo",
+      "en": "Monday is a public holiday.",
+      "es": "El lunes es festivo."
+    }
+  ],
+  "hot": [
+    {
+      "g": "caliente",
+      "en": "The soup is hot.",
+      "es": "La sopa está caliente."
+    },
+    {
+      "g": "picante",
+      "en": "A hot curry.",
+      "es": "Un curry picante."
+    }
+  ],
+  "hunt": [
+    {
+      "g": "cazar",
+      "en": "They hunt deer.",
+      "es": "Cazan ciervos."
+    },
+    {
+      "g": "buscar (con esfuerzo)",
+      "en": "I'm hunting for a job.",
+      "es": "Estoy buscando trabajo."
+    }
+  ],
+  "hurt": [
+    {
+      "g": "doler",
+      "en": "My leg hurts.",
+      "es": "Me duele la pierna."
+    },
+    {
+      "g": "hacer daño, lastimar",
+      "en": "I didn't mean to hurt you.",
+      "es": "No quería hacerte daño."
+    }
+  ],
+  "illuminate": [
+    {
+      "g": "iluminar",
+      "en": "Lamps illuminate the path.",
+      "es": "Las farolas iluminan el camino."
+    },
+    {
+      "g": "aclarar, arrojar luz sobre",
+      "en": "The study illuminates the causes.",
+      "es": "El estudio aclara las causas."
+    }
+  ],
+  "inaugurate": [
+    {
+      "g": "inaugurar",
+      "en": "They inaugurated the bridge.",
+      "es": "Inauguraron el puente."
+    },
+    {
+      "g": "investir (en un cargo)",
+      "en": "The president was inaugurated.",
+      "es": "El presidente tomó posesión."
+    }
+  ],
+  "industry": [
+    {
+      "g": "industria (sector)",
+      "en": "The car industry.",
+      "es": "La industria del automóvil."
+    },
+    {
+      "g": "laboriosidad, aplicación",
+      "en": "Praised for her industry.",
+      "es": "Elogiada por su laboriosidad."
+    }
+  ],
+  "inflate": [
+    {
+      "g": "inflar",
+      "en": "Inflate the balloon.",
+      "es": "Infla el globo."
+    },
+    {
+      "g": "exagerar, inflar (cifras)",
+      "en": "Inflated prices.",
+      "es": "Precios inflados."
+    }
+  ],
+  "interpret": [
+    {
+      "g": "interpretar, entender",
+      "en": "How do you interpret this?",
+      "es": "¿Cómo interpretas esto?"
+    },
+    {
+      "g": "traducir (oralmente)",
+      "en": "She interpreted for the visitors.",
+      "es": "Interpretó para los visitantes."
+    }
+  ],
+  "introduce": [
+    {
+      "g": "presentar (a alguien)",
+      "en": "Let me introduce my friend.",
+      "es": "Deja que te presente a mi amigo."
+    },
+    {
+      "g": "introducir, implantar",
+      "en": "They introduced a new rule.",
+      "es": "Introdujeron una nueva norma."
+    }
+  ],
+  "join": [
+    {
+      "g": "unirse a, hacerse socio de",
+      "en": "Join the club.",
+      "es": "Hazte socio del club."
+    },
+    {
+      "g": "unir, juntar",
+      "en": "Join the two ends.",
+      "es": "Une los dos extremos."
+    }
+  ],
+  "just": [
+    {
+      "g": "justo, exactamente",
+      "en": "That's just what I need.",
+      "es": "Es justo lo que necesito."
+    },
+    {
+      "g": "solo, solamente",
+      "en": "Just a minute.",
+      "es": "Solo un momento."
+    },
+    {
+      "g": "acabar de",
+      "en": "I've just arrived.",
+      "es": "Acabo de llegar."
+    }
+  ],
+  "keep": [
+    {
+      "g": "quedarse con, guardar",
+      "en": "Keep the receipt.",
+      "es": "Guarda el recibo."
+    },
+    {
+      "g": "seguir (haciendo algo)",
+      "en": "Keep going!",
+      "es": "¡Sigue así!"
+    }
+  ],
+  "key": [
+    {
+      "g": "llave",
+      "en": "I lost my keys.",
+      "es": "Perdí las llaves."
+    },
+    {
+      "g": "tecla",
+      "en": "Press the enter key.",
+      "es": "Pulsa la tecla enter."
+    },
+    {
+      "g": "clave, fundamental",
+      "en": "The key point.",
+      "es": "El punto clave."
+    }
+  ],
+  "kind": [
+    {
+      "g": "tipo, clase",
+      "en": "What kind of music?",
+      "es": "¿Qué tipo de música?"
+    },
+    {
+      "g": "amable",
+      "en": "That's very kind of you.",
+      "es": "Es muy amable de tu parte."
+    }
+  ],
+  "labour": [
+    {
+      "g": "trabajo, mano de obra",
+      "en": "Manual labour.",
+      "es": "Trabajo manual."
+    },
+    {
+      "g": "parto",
+      "en": "She went into labour.",
+      "es": "Se puso de parto."
+    }
+  ],
+  "landmark": [
+    {
+      "g": "lugar emblemático, monumento",
+      "en": "A famous landmark.",
+      "es": "Un lugar emblemático famoso."
+    },
+    {
+      "g": "hito, momento clave",
+      "en": "A landmark ruling.",
+      "es": "Una sentencia histórica."
+    }
+  ],
+  "lapse": [
+    {
+      "g": "lapso, desliz",
+      "en": "A lapse of memory.",
+      "es": "Un lapso de memoria."
+    },
+    {
+      "g": "caducar, expirar",
+      "en": "My licence lapsed.",
+      "es": "Se me caducó el carné."
+    }
+  ],
+  "last": [
+    {
+      "g": "último",
+      "en": "The last day of the year.",
+      "es": "El último día del año."
+    },
+    {
+      "g": "durar",
+      "en": "The film lasts two hours.",
+      "es": "La película dura dos horas."
+    }
+  ],
+  "late": [
+    {
+      "g": "tarde",
+      "en": "Sorry I'm late.",
+      "es": "Perdón por llegar tarde."
+    },
+    {
+      "g": "difunto, fallecido",
+      "en": "Her late husband.",
+      "es": "Su difunto marido."
+    }
+  ],
+  "lead": [
+    {
+      "g": "dirigir, liderar",
+      "en": "She leads the team.",
+      "es": "Dirige el equipo."
+    },
+    {
+      "g": "llevar, conducir a",
+      "en": "This road leads to the sea.",
+      "es": "Esta carretera lleva al mar."
+    }
+  ],
+  "lean": [
+    {
+      "g": "inclinar(se)",
+      "en": "Don't lean out of the window.",
+      "es": "No te asomes por la ventana."
+    },
+    {
+      "g": "apoyar(se)",
+      "en": "He leaned against the wall.",
+      "es": "Se apoyó en la pared."
+    }
+  ],
+  "leave": [
+    {
+      "g": "irse, marcharse; salir",
+      "en": "The train leaves at six.",
+      "es": "El tren sale a las seis."
+    },
+    {
+      "g": "dejar",
+      "en": "Leave your coat here.",
+      "es": "Deja tu abrigo aquí."
+    }
+  ],
+  "letter": [
+    {
+      "g": "carta",
+      "en": "She wrote a letter.",
+      "es": "Escribió una carta."
+    },
+    {
+      "g": "letra",
+      "en": "The letter A.",
+      "es": "La letra A."
+    }
+  ],
+  "leverage": [
+    {
+      "g": "influencia, poder de negociación",
+      "en": "We have no leverage.",
+      "es": "No tenemos poder de negociación."
+    },
+    {
+      "g": "aprovechar, sacar partido de",
+      "en": "Leverage your contacts.",
+      "es": "Aprovecha tus contactos."
+    }
+  ],
+  "liability": [
+    {
+      "g": "responsabilidad (legal)",
+      "en": "The company denies liability.",
+      "es": "La empresa niega su responsabilidad."
+    },
+    {
+      "g": "carga, lastre",
+      "en": "He's a liability to the team.",
+      "es": "Es un lastre para el equipo."
+    }
+  ],
+  "light": [
+    {
+      "g": "luz",
+      "en": "Turn on the light.",
+      "es": "Enciende la luz."
+    },
+    {
+      "g": "ligero, liviano",
+      "en": "The bag is light.",
+      "es": "La bolsa es ligera."
+    },
+    {
+      "g": "claro (color)",
+      "en": "A light blue shirt.",
+      "es": "Una camisa azul claro."
+    }
+  ],
+  "line": [
+    {
+      "g": "línea; raya",
+      "en": "Draw a straight line.",
+      "es": "Dibuja una línea recta."
+    },
+    {
+      "g": "fila, cola",
+      "en": "Stand in line, please.",
+      "es": "Ponte en la fila, por favor."
+    }
+  ],
+  "little": [
+    {
+      "g": "pequeño",
+      "en": "A little dog.",
+      "es": "Un perro pequeño."
+    },
+    {
+      "g": "poco",
+      "en": "There's little time.",
+      "es": "Hay poco tiempo."
+    }
+  ],
+  "locate": [
+    {
+      "g": "localizar, encontrar",
+      "en": "We couldn't locate the file.",
+      "es": "No pudimos localizar el archivo."
+    },
+    {
+      "g": "situar, ubicar",
+      "en": "The shop is located downtown.",
+      "es": "La tienda está situada en el centro."
+    }
+  ],
+  "lock": [
+    {
+      "g": "cerradura",
+      "en": "The key is in the lock.",
+      "es": "La llave está en la cerradura."
+    },
+    {
+      "g": "cerrar con llave",
+      "en": "Lock the door.",
+      "es": "Cierra la puerta con llave."
+    }
+  ],
+  "look": [
+    {
+      "g": "mirar",
+      "en": "Look at this photo.",
+      "es": "Mira esta foto."
+    },
+    {
+      "g": "parecer, verse",
+      "en": "You look tired.",
+      "es": "Pareces cansado."
+    }
+  ],
+  "lucid": [
+    {
+      "g": "lúcido, con la mente clara",
+      "en": "He had a lucid moment.",
+      "es": "Tuvo un momento de lucidez."
+    },
+    {
+      "g": "claro, comprensible",
+      "en": "A lucid explanation.",
+      "es": "Una explicación clara."
+    }
+  ],
+  "make up": [
+    {
+      "g": "inventarse",
+      "en": "He made up an excuse.",
+      "es": "Se inventó una excusa."
+    },
+    {
+      "g": "reconciliarse",
+      "en": "They kissed and made up.",
+      "es": "Se besaron y se reconciliaron."
+    },
+    {
+      "g": "maquillaje (make-up)",
+      "en": "She wears little make-up.",
+      "es": "Se maquilla poco."
+    }
+  ],
+  "mark": [
+    {
+      "g": "marca, mancha",
+      "en": "A dirty mark on the shirt.",
+      "es": "Una mancha en la camisa."
+    },
+    {
+      "g": "nota, calificación",
+      "en": "She got a high mark.",
+      "es": "Sacó una nota alta."
+    },
+    {
+      "g": "marcar, señalar",
+      "en": "Mark the correct answer.",
+      "es": "Marca la respuesta correcta."
+    }
+  ],
+  "matter": [
+    {
+      "g": "asunto, cuestión",
+      "en": "It's a serious matter.",
+      "es": "Es un asunto serio."
+    },
+    {
+      "g": "importar",
+      "en": "It doesn't matter.",
+      "es": "No importa."
+    }
+  ],
+  "mean": [
+    {
+      "g": "significar, querer decir",
+      "en": "What does this word mean?",
+      "es": "¿Qué significa esta palabra?"
+    },
+    {
+      "g": "tener la intención de",
+      "en": "I didn't mean to hurt you.",
+      "es": "No quería hacerte daño."
+    }
+  ],
+  "meet": [
+    {
+      "g": "conocer (por primera vez)",
+      "en": "Nice to meet you.",
+      "es": "Encantado de conocerte."
+    },
+    {
+      "g": "quedar, reunirse con",
+      "en": "Let's meet at six.",
+      "es": "Quedamos a las seis."
+    }
+  ],
+  "memory": [
+    {
+      "g": "memoria",
+      "en": "He has a good memory.",
+      "es": "Tiene buena memoria."
+    },
+    {
+      "g": "recuerdo",
+      "en": "Happy childhood memories.",
+      "es": "Recuerdos felices de la infancia."
+    }
+  ],
+  "mind": [
+    {
+      "g": "mente",
+      "en": "It slipped my mind.",
+      "es": "Se me fue de la cabeza."
+    },
+    {
+      "g": "importar, molestar",
+      "en": "Do you mind if I sit here?",
+      "es": "¿Te importa si me siento aquí?"
+    }
+  ],
+  "mock": [
+    {
+      "g": "burlarse de",
+      "en": "Don't mock him.",
+      "es": "No te burles de él."
+    },
+    {
+      "g": "simulado, de prueba",
+      "en": "A mock exam.",
+      "es": "Un examen de prueba."
+    }
+  ],
+  "most": [
+    {
+      "g": "la mayoría de",
+      "en": "Most people agree.",
+      "es": "La mayoría de la gente está de acuerdo."
+    },
+    {
+      "g": "el más (superlativo)",
+      "en": "The most beautiful city.",
+      "es": "La ciudad más bonita."
+    }
+  ],
+  "move": [
+    {
+      "g": "mover(se)",
+      "en": "Don't move.",
+      "es": "No te muevas."
+    },
+    {
+      "g": "mudarse",
+      "en": "We moved to Madrid.",
+      "es": "Nos mudamos a Madrid."
+    }
+  ],
+  "nail": [
+    {
+      "g": "uña",
+      "en": "She painted her nails.",
+      "es": "Se pintó las uñas."
+    },
+    {
+      "g": "clavo",
+      "en": "Hammer the nail in.",
+      "es": "Clava el clavo."
+    }
+  ],
+  "name": [
+    {
+      "g": "nombre",
+      "en": "What's your name?",
+      "es": "¿Cómo te llamas?"
+    },
+    {
+      "g": "nombrar, poner nombre",
+      "en": "They named the baby Ana.",
+      "es": "Llamaron Ana a la bebé."
+    }
+  ],
+  "navigate": [
+    {
+      "g": "navegar; orientarse",
+      "en": "Navigate by the stars.",
+      "es": "Orientarse por las estrellas."
+    },
+    {
+      "g": "desenvolverse en (un sistema)",
+      "en": "Navigate the website.",
+      "es": "Moverse por la web."
+    }
+  ],
+  "notably": [
+    {
+      "g": "en particular, especialmente",
+      "en": "Several cities, notably Rome.",
+      "es": "Varias ciudades, en particular Roma."
+    },
+    {
+      "g": "notablemente",
+      "en": "Notably better.",
+      "es": "Notablemente mejor."
+    }
+  ],
+  "nut": [
+    {
+      "g": "fruto seco, nuez",
+      "en": "A bag of nuts.",
+      "es": "Una bolsa de frutos secos."
+    },
+    {
+      "g": "tuerca",
+      "en": "Tighten the nut.",
+      "es": "Aprieta la tuerca."
+    }
+  ],
+  "oblige": [
+    {
+      "g": "obligar",
+      "en": "The law obliges us to pay.",
+      "es": "La ley nos obliga a pagar."
+    },
+    {
+      "g": "hacer un favor, complacer",
+      "en": "Happy to oblige.",
+      "es": "Encantado de ayudar."
+    }
+  ],
+  "oblivion": [
+    {
+      "g": "olvido (caer en el)",
+      "en": "Fade into oblivion.",
+      "es": "Caer en el olvido."
+    },
+    {
+      "g": "inconsciencia",
+      "en": "He drank himself into oblivion.",
+      "es": "Bebió hasta perder el sentido."
+    }
+  ],
+  "odd": [
+    {
+      "g": "raro, extraño",
+      "en": "That's odd.",
+      "es": "Qué raro."
+    },
+    {
+      "g": "impar",
+      "en": "Odd numbers: 1, 3, 5.",
+      "es": "Números impares: 1, 3, 5."
+    }
+  ],
+  "oil": [
+    {
+      "g": "aceite",
+      "en": "Olive oil.",
+      "es": "Aceite de oliva."
+    },
+    {
+      "g": "petróleo",
+      "en": "An oil company.",
+      "es": "Una petrolera."
+    }
+  ],
+  "old": [
+    {
+      "g": "viejo, mayor (edad)",
+      "en": "An old man.",
+      "es": "Un hombre mayor."
+    },
+    {
+      "g": "antiguo",
+      "en": "An old castle.",
+      "es": "Un castillo antiguo."
+    }
+  ],
+  "once": [
+    {
+      "g": "una vez",
+      "en": "I've been there once.",
+      "es": "He estado allí una vez."
+    },
+    {
+      "g": "en cuanto, una vez que",
+      "en": "Once you finish, call me.",
+      "es": "En cuanto termines, llámame."
+    }
+  ],
+  "operate": [
+    {
+      "g": "funcionar; manejar (máquina)",
+      "en": "How do you operate this?",
+      "es": "¿Cómo se maneja esto?"
+    },
+    {
+      "g": "operar (cirugía)",
+      "en": "They operated on her knee.",
+      "es": "La operaron de la rodilla."
+    }
+  ],
+  "order": [
+    {
+      "g": "orden (secuencia)",
+      "en": "In alphabetical order.",
+      "es": "En orden alfabético."
+    },
+    {
+      "g": "pedido",
+      "en": "Can I take your order?",
+      "es": "¿Puedo tomar su pedido?"
+    },
+    {
+      "g": "ordenar, mandar",
+      "en": "The judge ordered silence.",
+      "es": "El juez ordenó silencio."
+    }
+  ],
+  "outlook": [
+    {
+      "g": "perspectiva, previsión",
+      "en": "The economic outlook.",
+      "es": "Las perspectivas económicas."
+    },
+    {
+      "g": "actitud, forma de ver la vida",
+      "en": "A positive outlook.",
+      "es": "Una actitud positiva."
+    }
+  ],
+  "overlook": [
+    {
+      "g": "pasar por alto",
+      "en": "They overlooked one detail.",
+      "es": "Pasaron por alto un detalle."
+    },
+    {
+      "g": "dar a, tener vistas a",
+      "en": "The room overlooks the sea.",
+      "es": "La habitación da al mar."
+    }
+  ],
+  "overtake": [
+    {
+      "g": "adelantar (en la carretera)",
+      "en": "Don't overtake on a bend.",
+      "es": "No adelantes en una curva."
+    },
+    {
+      "g": "superar, sobrepasar",
+      "en": "China overtook them in sales.",
+      "es": "China los superó en ventas."
+    }
+  ],
+  "overturn": [
+    {
+      "g": "volcar",
+      "en": "The car overturned.",
+      "es": "El coche volcó."
+    },
+    {
+      "g": "anular, revocar",
+      "en": "The verdict was overturned.",
+      "es": "Se anuló el veredicto."
+    }
+  ],
+  "partner": [
+    {
+      "g": "pareja",
+      "en": "My partner and I.",
+      "es": "Mi pareja y yo."
+    },
+    {
+      "g": "socio (de empresa)",
+      "en": "A business partner.",
+      "es": "Un socio comercial."
+    }
+  ],
+  "pass": [
+    {
+      "g": "pasar (por un sitio)",
+      "en": "We passed the church.",
+      "es": "Pasamos por delante de la iglesia."
+    },
+    {
+      "g": "aprobar (un examen)",
+      "en": "She passed the exam.",
+      "es": "Aprobó el examen."
+    },
+    {
+      "g": "pasar, alcanzar (algo)",
+      "en": "Pass me the salt.",
+      "es": "Pásame la sal."
+    }
+  ],
+  "pastry": [
+    {
+      "g": "masa, hojaldre",
+      "en": "Roll out the pastry.",
+      "es": "Extiende la masa."
+    },
+    {
+      "g": "pastel, bollo",
+      "en": "A coffee and a pastry.",
+      "es": "Un café y un bollo."
+    }
+  ],
+  "pattern": [
+    {
+      "g": "patrón, pauta",
+      "en": "A pattern of behaviour.",
+      "es": "Un patrón de comportamiento."
+    },
+    {
+      "g": "estampado, dibujo",
+      "en": "A floral pattern.",
+      "es": "Un estampado de flores."
+    }
+  ],
+  "pay off": [
+    {
+      "g": "terminar de pagar, saldar",
+      "en": "Pay off the loan.",
+      "es": "Termina de pagar el préstamo."
+    },
+    {
+      "g": "valer la pena, dar sus frutos",
+      "en": "The hard work paid off.",
+      "es": "El esfuerzo dio sus frutos."
+    }
+  ],
+  "peak": [
+    {
+      "g": "pico, cima",
+      "en": "The mountain peak.",
+      "es": "La cima de la montaña."
+    },
+    {
+      "g": "punto máximo, apogeo",
+      "en": "At the peak of her career.",
+      "es": "En el apogeo de su carrera."
+    }
+  ],
+  "pepper": [
+    {
+      "g": "pimienta",
+      "en": "Salt and pepper.",
+      "es": "Sal y pimienta."
+    },
+    {
+      "g": "pimiento",
+      "en": "A red pepper.",
+      "es": "Un pimiento rojo."
+    }
+  ],
+  "perform": [
+    {
+      "g": "actuar, interpretar",
+      "en": "The band performed live.",
+      "es": "La banda actuó en directo."
+    },
+    {
+      "g": "realizar, llevar a cabo",
+      "en": "Perform a test.",
+      "es": "Realizar una prueba."
+    }
+  ],
+  "performance": [
+    {
+      "g": "actuación (espectáculo)",
+      "en": "A great performance.",
+      "es": "Una gran actuación."
+    },
+    {
+      "g": "rendimiento, desempeño",
+      "en": "Job performance.",
+      "es": "El rendimiento laboral."
+    }
+  ],
+  "pick": [
+    {
+      "g": "elegir, escoger",
+      "en": "Pick a card.",
+      "es": "Elige una carta."
+    },
+    {
+      "g": "coger, recoger (fruta/flores)",
+      "en": "Pick some apples.",
+      "es": "Coge unas manzanas."
+    }
+  ],
+  "plan": [
+    {
+      "g": "plan",
+      "en": "What's the plan?",
+      "es": "¿Cuál es el plan?"
+    },
+    {
+      "g": "planear, planificar",
+      "en": "We planned the trip.",
+      "es": "Planeamos el viaje."
+    }
+  ],
+  "play": [
+    {
+      "g": "jugar",
+      "en": "The kids play in the park.",
+      "es": "Los niños juegan en el parque."
+    },
+    {
+      "g": "tocar (instrumento/música)",
+      "en": "She plays the guitar.",
+      "es": "Toca la guitarra."
+    },
+    {
+      "g": "obra de teatro",
+      "en": "A play by Shakespeare.",
+      "es": "Una obra de Shakespeare."
+    }
+  ],
+  "plead": [
+    {
+      "g": "suplicar, rogar",
+      "en": "She pleaded for help.",
+      "es": "Suplicó ayuda."
+    },
+    {
+      "g": "declararse (culpable/inocente)",
+      "en": "He pleaded guilty.",
+      "es": "Se declaró culpable."
+    }
+  ],
+  "point": [
+    {
+      "g": "punto; lugar",
+      "en": "At this point, we stopped.",
+      "es": "En este punto, paramos."
+    },
+    {
+      "g": "argumento, idea",
+      "en": "That's a good point.",
+      "es": "Ese es un buen argumento."
+    },
+    {
+      "g": "señalar, apuntar",
+      "en": "She pointed at the map.",
+      "es": "Señaló el mapa."
+    }
+  ],
+  "poll": [
+    {
+      "g": "encuesta, sondeo",
+      "en": "Opinion polls.",
+      "es": "Sondeos de opinión."
+    },
+    {
+      "g": "votación; elecciones",
+      "en": "Go to the polls.",
+      "es": "Ir a las urnas."
+    }
+  ],
+  "poor": [
+    {
+      "g": "pobre",
+      "en": "A poor family.",
+      "es": "Una familia pobre."
+    },
+    {
+      "g": "malo, de mala calidad",
+      "en": "Poor quality.",
+      "es": "Mala calidad."
+    }
+  ],
+  "powerful": [
+    {
+      "g": "poderoso, influyente",
+      "en": "A powerful leader.",
+      "es": "Un líder poderoso."
+    },
+    {
+      "g": "potente",
+      "en": "A powerful engine.",
+      "es": "Un motor potente."
+    }
+  ],
+  "prescribe": [
+    {
+      "g": "recetar",
+      "en": "The doctor prescribed rest.",
+      "es": "El médico recetó reposo."
+    },
+    {
+      "g": "prescribir, ordenar (norma)",
+      "en": "The rules prescribe a fine.",
+      "es": "Las normas prescriben una multa."
+    }
+  ],
+  "prickly": [
+    {
+      "g": "espinoso, con pinchos",
+      "en": "A prickly cactus.",
+      "es": "Un cactus con pinchos."
+    },
+    {
+      "g": "quisquilloso, irritable",
+      "en": "He's prickly about criticism.",
+      "es": "Es quisquilloso con las críticas."
+    }
+  ],
+  "promote": [
+    {
+      "g": "ascender",
+      "en": "She was promoted to manager.",
+      "es": "La ascendieron a directora."
+    },
+    {
+      "g": "promocionar, fomentar",
+      "en": "Promote the new product.",
+      "es": "Promociona el nuevo producto."
+    }
+  ],
+  "promotion": [
+    {
+      "g": "ascenso",
+      "en": "She got a promotion.",
+      "es": "Consiguió un ascenso."
+    },
+    {
+      "g": "promoción, oferta",
+      "en": "A special promotion.",
+      "es": "Una promoción especial."
+    }
+  ],
+  "put off": [
+    {
+      "g": "aplazar, posponer",
+      "en": "Don't put it off.",
+      "es": "No lo dejes para más tarde."
+    },
+    {
+      "g": "echar para atrás, desanimar",
+      "en": "The smell put me off.",
+      "es": "El olor me echó para atrás."
+    }
+  ],
+  "put on": [
+    {
+      "g": "ponerse (ropa)",
+      "en": "Put on your coat.",
+      "es": "Ponte el abrigo."
+    },
+    {
+      "g": "encender, poner (música/luz)",
+      "en": "Put on some music.",
+      "es": "Pon algo de música."
+    },
+    {
+      "g": "engordar, coger (peso)",
+      "en": "I put on two kilos.",
+      "es": "Engordé dos kilos."
+    }
+  ],
+  "quality": [
+    {
+      "g": "calidad",
+      "en": "High quality.",
+      "es": "Alta calidad."
+    },
+    {
+      "g": "cualidad",
+      "en": "Patience is a good quality.",
+      "es": "La paciencia es una buena cualidad."
+    }
+  ],
+  "quash": [
+    {
+      "g": "anular, revocar (sentencia)",
+      "en": "The court quashed the conviction.",
+      "es": "El tribunal anuló la condena."
+    },
+    {
+      "g": "sofocar, reprimir",
+      "en": "Quash the rumours.",
+      "es": "Sofocar los rumores."
+    }
+  ],
+  "query": [
+    {
+      "g": "consulta, duda",
+      "en": "If you have a query, ask.",
+      "es": "Si tienes alguna duda, pregunta."
+    },
+    {
+      "g": "consulta (a base de datos)",
+      "en": "Run the query.",
+      "es": "Ejecuta la consulta."
+    }
+  ],
+  "quiet": [
+    {
+      "g": "silencioso, callado",
+      "en": "Be quiet!",
+      "es": "¡Silencio!"
+    },
+    {
+      "g": "tranquilo",
+      "en": "A quiet street.",
+      "es": "Una calle tranquila."
+    }
+  ],
+  "quotation": [
+    {
+      "g": "cita (textual)",
+      "en": "A quotation from the Bible.",
+      "es": "Una cita de la Biblia."
+    },
+    {
+      "g": "presupuesto (precio)",
+      "en": "Ask for a quotation.",
+      "es": "Pide un presupuesto."
+    }
+  ],
+  "quote": [
+    {
+      "g": "cita (textual)",
+      "en": "A famous quote.",
+      "es": "Una cita famosa."
+    },
+    {
+      "g": "presupuesto (precio)",
+      "en": "Get a quote for the work.",
+      "es": "Pide un presupuesto del trabajo."
+    },
+    {
+      "g": "citar",
+      "en": "She quoted Shakespeare.",
+      "es": "Citó a Shakespeare."
+    }
+  ],
+  "raise": [
+    {
+      "g": "levantar, alzar",
+      "en": "Raise your hand.",
+      "es": "Levanta la mano."
+    },
+    {
+      "g": "criar (hijos/animales)",
+      "en": "They raised three kids.",
+      "es": "Criaron a tres hijos."
+    },
+    {
+      "g": "recaudar (dinero)",
+      "en": "We raised €500 for charity.",
+      "es": "Recaudamos 500 € para una ONG."
+    }
+  ],
+  "range": [
+    {
+      "g": "gama, variedad",
+      "en": "A wide range of products.",
+      "es": "Una amplia gama de productos."
+    },
+    {
+      "g": "alcance",
+      "en": "Out of range.",
+      "es": "Fuera de alcance."
+    }
+  ],
+  "rate": [
+    {
+      "g": "tasa, índice",
+      "en": "The unemployment rate rose.",
+      "es": "La tasa de desempleo subió."
+    },
+    {
+      "g": "tarifa, precio",
+      "en": "The hotel rate is high.",
+      "es": "La tarifa del hotel es alta."
+    },
+    {
+      "g": "velocidad, ritmo",
+      "en": "At this rate, we'll be late.",
+      "es": "A este ritmo, llegaremos tarde."
+    }
+  ],
+  "rather": [
+    {
+      "g": "bastante",
+      "en": "It's rather cold.",
+      "es": "Hace bastante frío."
+    },
+    {
+      "g": "más bien; mejor dicho",
+      "en": "He's tired, or rather exhausted.",
+      "es": "Está cansado, o mejor dicho, agotado."
+    }
+  ],
+  "reach": [
+    {
+      "g": "llegar a, alcanzar",
+      "en": "We reached the top.",
+      "es": "Llegamos a la cima."
+    },
+    {
+      "g": "contactar con",
+      "en": "You can reach me by email.",
+      "es": "Puedes contactarme por correo."
+    }
+  ],
+  "reckon": [
+    {
+      "g": "creer, pensar",
+      "en": "I reckon it'll rain.",
+      "es": "Creo que va a llover."
+    },
+    {
+      "g": "calcular, estimar",
+      "en": "Reckon the total cost.",
+      "es": "Calcula el coste total."
+    }
+  ],
+  "reconcile": [
+    {
+      "g": "reconciliar(se)",
+      "en": "They reconciled after the fight.",
+      "es": "Se reconciliaron tras la pelea."
+    },
+    {
+      "g": "conciliar, compaginar",
+      "en": "Reconcile work and family.",
+      "es": "Compaginar el trabajo y la familia."
+    }
+  ],
+  "record": [
+    {
+      "g": "registro; historial",
+      "en": "A criminal record.",
+      "es": "Antecedentes penales."
+    },
+    {
+      "g": "récord, marca",
+      "en": "She broke the world record.",
+      "es": "Batió el récord mundial."
+    },
+    {
+      "g": "grabar",
+      "en": "Record the meeting.",
+      "es": "Graba la reunión."
+    }
+  ],
+  "recover": [
+    {
+      "g": "recuperarse (salud)",
+      "en": "He recovered from the flu.",
+      "es": "Se recuperó de la gripe."
+    },
+    {
+      "g": "recuperar (algo)",
+      "en": "Police recovered the car.",
+      "es": "La policía recuperó el coche."
+    }
+  ],
+  "redolent": [
+    {
+      "g": "que huele a (redolent of)",
+      "en": "Redolent of fresh coffee.",
+      "es": "Que huele a café recién hecho."
+    },
+    {
+      "g": "que evoca, que recuerda a",
+      "en": "A style redolent of the 1920s.",
+      "es": "Un estilo que evoca los años 20."
+    }
+  ],
+  "redundant": [
+    {
+      "g": "redundante, superfluo",
+      "en": "A redundant word.",
+      "es": "Una palabra redundante."
+    },
+    {
+      "g": "despedido (por reducción de plantilla)",
+      "en": "He was made redundant.",
+      "es": "Lo despidieron por recorte de plantilla."
+    }
+  ],
+  "refer": [
+    {
+      "g": "referirse (a)",
+      "en": "What are you referring to?",
+      "es": "¿A qué te refieres?"
+    },
+    {
+      "g": "remitir, derivar",
+      "en": "The doctor referred her to a specialist.",
+      "es": "El médico la derivó a un especialista."
+    }
+  ],
+  "reflect": [
+    {
+      "g": "reflejar",
+      "en": "The lake reflected the sky.",
+      "es": "El lago reflejaba el cielo."
+    },
+    {
+      "g": "reflexionar",
+      "en": "Reflect on your choices.",
+      "es": "Reflexiona sobre tus decisiones."
+    }
+  ],
+  "release": [
+    {
+      "g": "liberar, soltar",
+      "en": "They released the prisoner.",
+      "es": "Liberaron al preso."
+    },
+    {
+      "g": "lanzar, estrenar",
+      "en": "The album was released today.",
+      "es": "El álbum se lanzó hoy."
+    }
+  ],
+  "relegate": [
+    {
+      "g": "relegar, arrinconar",
+      "en": "Relegated to a minor role.",
+      "es": "Relegado a un papel menor."
+    },
+    {
+      "g": "descender de categoría (deporte)",
+      "en": "The team was relegated.",
+      "es": "El equipo descendió."
+    }
+  ],
+  "remote": [
+    {
+      "g": "remoto, aislado",
+      "en": "A remote village.",
+      "es": "Un pueblo remoto."
+    },
+    {
+      "g": "mando a distancia",
+      "en": "Where's the remote?",
+      "es": "¿Dónde está el mando?"
+    }
+  ],
+  "render": [
+    {
+      "g": "dejar (en un estado)",
+      "en": "The blow rendered him unconscious.",
+      "es": "El golpe lo dejó inconsciente."
+    },
+    {
+      "g": "prestar, dar (servicio)",
+      "en": "Services rendered.",
+      "es": "Servicios prestados."
+    }
+  ],
+  "report": [
+    {
+      "g": "informe",
+      "en": "She wrote a report.",
+      "es": "Escribió un informe."
+    },
+    {
+      "g": "informar; denunciar",
+      "en": "He reported the theft.",
+      "es": "Denunció el robo."
+    }
+  ],
+  "reprieve": [
+    {
+      "g": "indulto, suspensión (de condena)",
+      "en": "The prisoner won a reprieve.",
+      "es": "El preso obtuvo un indulto."
+    },
+    {
+      "g": "respiro, tregua",
+      "en": "A brief reprieve from the heat.",
+      "es": "Un breve respiro del calor."
+    }
+  ],
+  "resignation": [
+    {
+      "g": "dimisión, renuncia",
+      "en": "He handed in his resignation.",
+      "es": "Presentó su dimisión."
+    },
+    {
+      "g": "resignación",
+      "en": "She accepted it with resignation.",
+      "es": "Lo aceptó con resignación."
+    }
+  ],
+  "resonate": [
+    {
+      "g": "resonar (sonido)",
+      "en": "Her voice resonated in the hall.",
+      "es": "Su voz resonó en la sala."
+    },
+    {
+      "g": "calar, tener eco (idea)",
+      "en": "The message resonated with young people.",
+      "es": "El mensaje caló entre los jóvenes."
+    }
+  ],
+  "restore": [
+    {
+      "g": "restaurar (edificio/obra)",
+      "en": "They restored the old church.",
+      "es": "Restauraron la iglesia antigua."
+    },
+    {
+      "g": "restablecer, devolver",
+      "en": "Power was restored.",
+      "es": "Se restableció la electricidad."
+    }
+  ],
+  "return": [
+    {
+      "g": "volver, regresar",
+      "en": "They returned home.",
+      "es": "Volvieron a casa."
+    },
+    {
+      "g": "devolver",
+      "en": "Return the book to the library.",
+      "es": "Devuelve el libro a la biblioteca."
+    }
+  ],
+  "reverse": [
+    {
+      "g": "invertir, dar la vuelta a",
+      "en": "Reverse the order.",
+      "es": "Invierte el orden."
+    },
+    {
+      "g": "dar marcha atrás",
+      "en": "He reversed into the garage.",
+      "es": "Entró marcha atrás al garaje."
+    }
+  ],
+  "review": [
+    {
+      "g": "reseña, crítica",
+      "en": "A good film review.",
+      "es": "Una buena crítica de la película."
+    },
+    {
+      "g": "revisar, repasar",
+      "en": "Review your notes.",
+      "es": "Repasa tus apuntes."
+    }
+  ],
+  "right": [
+    {
+      "g": "correcto, acertado",
+      "en": "That's the right answer.",
+      "es": "Esa es la respuesta correcta."
+    },
+    {
+      "g": "derecha",
+      "en": "Turn right at the corner.",
+      "es": "Gira a la derecha en la esquina."
+    },
+    {
+      "g": "derecho",
+      "en": "The right to vote.",
+      "es": "El derecho a votar."
+    }
+  ],
+  "ring": [
+    {
+      "g": "anillo, aro",
+      "en": "A gold ring.",
+      "es": "Un anillo de oro."
+    },
+    {
+      "g": "sonar (timbre/teléfono)",
+      "en": "The phone is ringing.",
+      "es": "Está sonando el teléfono."
+    }
+  ],
+  "rise": [
+    {
+      "g": "subir, aumentar",
+      "en": "Prices are rising.",
+      "es": "Los precios están subiendo."
+    },
+    {
+      "g": "levantarse; salir (el sol)",
+      "en": "The sun rises at six.",
+      "es": "El sol sale a las seis."
+    }
+  ],
+  "roar": [
+    {
+      "g": "rugido; rugir",
+      "en": "The lion roared.",
+      "es": "El león rugió."
+    },
+    {
+      "g": "bramar (motor/multitud)",
+      "en": "The crowd roared.",
+      "es": "La multitud bramó."
+    }
+  ],
+  "roll": [
+    {
+      "g": "rodar; hacer rodar",
+      "en": "The ball rolled away.",
+      "es": "La pelota rodó lejos."
+    },
+    {
+      "g": "panecillo, bollo",
+      "en": "A bread roll.",
+      "es": "Un panecillo."
+    }
+  ],
+  "rough": [
+    {
+      "g": "áspero, rugoso",
+      "en": "Rough skin.",
+      "es": "Piel áspera."
+    },
+    {
+      "g": "aproximado",
+      "en": "A rough estimate.",
+      "es": "Un cálculo aproximado."
+    },
+    {
+      "g": "duro, violento",
+      "en": "A rough neighbourhood.",
+      "es": "Un barrio conflictivo."
+    }
+  ],
+  "roughly": [
+    {
+      "g": "aproximadamente",
+      "en": "Roughly fifty people.",
+      "es": "Unas cincuenta personas."
+    },
+    {
+      "g": "con brusquedad",
+      "en": "He pushed me roughly.",
+      "es": "Me empujó con brusquedad."
+    }
+  ],
+  "royalty": [
+    {
+      "g": "realeza, familia real",
+      "en": "A member of royalty.",
+      "es": "Un miembro de la realeza."
+    },
+    {
+      "g": "derechos de autor (pagos)",
+      "en": "She earns royalties on the book.",
+      "es": "Cobra derechos de autor por el libro."
+    }
+  ],
+  "rugged": [
+    {
+      "g": "escarpado, abrupto (terreno)",
+      "en": "A rugged coastline.",
+      "es": "Una costa escarpada."
+    },
+    {
+      "g": "resistente, robusto",
+      "en": "A rugged laptop.",
+      "es": "Un portátil resistente."
+    }
+  ],
+  "run": [
+    {
+      "g": "correr",
+      "en": "I run every morning.",
+      "es": "Corro todas las mañanas."
+    },
+    {
+      "g": "dirigir, llevar (un negocio)",
+      "en": "She runs a bakery.",
+      "es": "Lleva una panadería."
+    },
+    {
+      "g": "funcionar (máquina/programa)",
+      "en": "The engine runs smoothly.",
+      "es": "El motor funciona bien."
+    }
+  ],
+  "run into": [
+    {
+      "g": "encontrarse con (por casualidad)",
+      "en": "I ran into an old friend.",
+      "es": "Me encontré con un viejo amigo."
+    },
+    {
+      "g": "chocar con",
+      "en": "The car ran into a wall.",
+      "es": "El coche chocó contra un muro."
+    }
+  ],
+  "save": [
+    {
+      "g": "salvar, rescatar",
+      "en": "He saved her life.",
+      "es": "Le salvó la vida."
+    },
+    {
+      "g": "ahorrar",
+      "en": "Save money for a car.",
+      "es": "Ahorra para un coche."
+    },
+    {
+      "g": "guardar (un archivo)",
+      "en": "Save the file.",
+      "es": "Guarda el archivo."
+    }
+  ],
+  "scan": [
+    {
+      "g": "escanear",
+      "en": "Scan the document.",
+      "es": "Escanea el documento."
+    },
+    {
+      "g": "echar un vistazo, ojear",
+      "en": "She scanned the page quickly.",
+      "es": "Ojeó la página rápidamente."
+    }
+  ],
+  "scene": [
+    {
+      "g": "escena",
+      "en": "The final scene of the film.",
+      "es": "La escena final de la película."
+    },
+    {
+      "g": "lugar (de un suceso)",
+      "en": "The scene of the accident.",
+      "es": "El lugar del accidente."
+    }
+  ],
+  "scour": [
+    {
+      "g": "fregar, restregar",
+      "en": "Scour the pan.",
+      "es": "Restriega la sartén."
+    },
+    {
+      "g": "rastrear, peinar (un lugar)",
+      "en": "Police scoured the woods.",
+      "es": "La policía peinó el bosque."
+    }
+  ],
+  "scratch": [
+    {
+      "g": "arañazo; rasguño",
+      "en": "A scratch on the car.",
+      "es": "Un arañazo en el coche."
+    },
+    {
+      "g": "rascar(se); arañar",
+      "en": "Don't scratch the bite.",
+      "es": "No te rasques la picadura."
+    }
+  ],
+  "season": [
+    {
+      "g": "estación (del año)",
+      "en": "Winter is my favourite season.",
+      "es": "El invierno es mi estación favorita."
+    },
+    {
+      "g": "temporada",
+      "en": "The football season starts today.",
+      "es": "La temporada de fútbol empieza hoy."
+    }
+  ],
+  "seize": [
+    {
+      "g": "agarrar, aferrar",
+      "en": "He seized my arm.",
+      "es": "Me agarró del brazo."
+    },
+    {
+      "g": "incautar, confiscar",
+      "en": "Police seized the drugs.",
+      "es": "La policía incautó la droga."
+    }
+  ],
+  "sensitive": [
+    {
+      "g": "sensible (emocional)",
+      "en": "A sensitive child.",
+      "es": "Un niño sensible."
+    },
+    {
+      "g": "delicado (tema/información)",
+      "en": "Sensitive data.",
+      "es": "Datos delicados."
+    }
+  ],
+  "serious": [
+    {
+      "g": "serio, grave",
+      "en": "A serious problem.",
+      "es": "Un problema grave."
+    },
+    {
+      "g": "en serio, formal",
+      "en": "Are you serious?",
+      "es": "¿Lo dices en serio?"
+    }
+  ],
+  "seriously": [
+    {
+      "g": "en serio",
+      "en": "Take it seriously.",
+      "es": "Tómatelo en serio."
+    },
+    {
+      "g": "gravemente",
+      "en": "Seriously injured.",
+      "es": "Gravemente herido."
+    }
+  ],
+  "serve": [
+    {
+      "g": "servir (comida/bebida)",
+      "en": "Dinner is served.",
+      "es": "La cena está servida."
+    },
+    {
+      "g": "servir para, valer",
+      "en": "It serves no purpose.",
+      "es": "No sirve para nada."
+    }
+  ],
+  "set": [
+    {
+      "g": "conjunto, juego",
+      "en": "A set of keys.",
+      "es": "Un juego de llaves."
+    },
+    {
+      "g": "poner, colocar; fijar",
+      "en": "Set the alarm for seven.",
+      "es": "Pon la alarma a las siete."
+    },
+    {
+      "g": "ponerse (el sol)",
+      "en": "The sun set at eight.",
+      "es": "El sol se puso a las ocho."
+    }
+  ],
+  "set off": [
+    {
+      "g": "ponerse en camino, salir",
+      "en": "We set off at dawn.",
+      "es": "Salimos al amanecer."
+    },
+    {
+      "g": "hacer sonar; provocar",
+      "en": "The smoke set off the alarm.",
+      "es": "El humo hizo sonar la alarma."
+    }
+  ],
+  "set up": [
+    {
+      "g": "montar, crear (una empresa)",
+      "en": "She set up her own business.",
+      "es": "Montó su propio negocio."
+    },
+    {
+      "g": "configurar, instalar",
+      "en": "Set up the printer.",
+      "es": "Configura la impresora."
+    }
+  ],
+  "settle": [
+    {
+      "g": "resolver, arreglar",
+      "en": "Let's settle this now.",
+      "es": "Resolvamos esto ahora."
+    },
+    {
+      "g": "instalarse, establecerse",
+      "en": "They settled in Canada.",
+      "es": "Se establecieron en Canadá."
+    }
+  ],
+  "shake": [
+    {
+      "g": "agitar, sacudir",
+      "en": "Shake the bottle.",
+      "es": "Agita la botella."
+    },
+    {
+      "g": "temblar",
+      "en": "Her hands were shaking.",
+      "es": "Le temblaban las manos."
+    }
+  ],
+  "sharp": [
+    {
+      "g": "afilado, cortante",
+      "en": "A sharp knife.",
+      "es": "Un cuchillo afilado."
+    },
+    {
+      "g": "brusco, pronunciado",
+      "en": "A sharp turn.",
+      "es": "Una curva pronunciada."
+    },
+    {
+      "g": "agudo, listo",
+      "en": "A sharp mind.",
+      "es": "Una mente aguda."
+    }
+  ],
+  "shoot": [
+    {
+      "g": "disparar",
+      "en": "Don't shoot!",
+      "es": "¡No dispares!"
+    },
+    {
+      "g": "rodar, filmar",
+      "en": "They shot the film in Spain.",
+      "es": "Rodaron la película en España."
+    }
+  ],
+  "short": [
+    {
+      "g": "corto",
+      "en": "A short walk.",
+      "es": "Un paseo corto."
+    },
+    {
+      "g": "bajo (de estatura)",
+      "en": "He's short and thin.",
+      "es": "Es bajo y delgado."
+    }
+  ],
+  "show": [
+    {
+      "g": "espectáculo, programa",
+      "en": "A TV show.",
+      "es": "Un programa de televisión."
+    },
+    {
+      "g": "mostrar, enseñar",
+      "en": "Show me the photos.",
+      "es": "Enséñame las fotos."
+    }
+  ],
+  "sift": [
+    {
+      "g": "tamizar, cerner",
+      "en": "Sift the flour.",
+      "es": "Tamiza la harina."
+    },
+    {
+      "g": "examinar minuciosamente",
+      "en": "Sift through the evidence.",
+      "es": "Examinar las pruebas a fondo."
+    }
+  ],
+  "simply": [
+    {
+      "g": "simplemente, solo",
+      "en": "I simply forgot.",
+      "es": "Simplemente se me olvidó."
+    },
+    {
+      "g": "de forma sencilla",
+      "en": "Explain it simply.",
+      "es": "Explícalo de forma sencilla."
+    }
+  ],
+  "since": [
+    {
+      "g": "desde",
+      "en": "I've lived here since 2010.",
+      "es": "Vivo aquí desde 2010."
+    },
+    {
+      "g": "ya que, puesto que",
+      "en": "Since it's raining, let's stay.",
+      "es": "Ya que llueve, quedémonos."
+    }
+  ],
+  "single": [
+    {
+      "g": "solo, único",
+      "en": "Not a single mistake.",
+      "es": "Ni un solo error."
+    },
+    {
+      "g": "soltero",
+      "en": "She's still single.",
+      "es": "Sigue soltera."
+    }
+  ],
+  "sit": [
+    {
+      "g": "sentarse",
+      "en": "Sit down, please.",
+      "es": "Siéntate, por favor."
+    },
+    {
+      "g": "estar situado, encontrarse",
+      "en": "The house sits on a hill.",
+      "es": "La casa está en una colina."
+    }
+  ],
+  "site": [
+    {
+      "g": "lugar, sitio; solar",
+      "en": "A building site.",
+      "es": "Una obra, un solar en construcción."
+    },
+    {
+      "g": "sitio web",
+      "en": "Visit our site.",
+      "es": "Visita nuestro sitio web."
+    }
+  ],
+  "slip": [
+    {
+      "g": "resbalar(se)",
+      "en": "I slipped on the ice.",
+      "es": "Me resbalé en el hielo."
+    },
+    {
+      "g": "deslizar; poner con disimulo",
+      "en": "He slipped the note into her bag.",
+      "es": "Le metió la nota en el bolso a escondidas."
+    }
+  ],
+  "smell": [
+    {
+      "g": "olor",
+      "en": "A strange smell.",
+      "es": "Un olor raro."
+    },
+    {
+      "g": "oler",
+      "en": "It smells of coffee.",
+      "es": "Huele a café."
+    }
+  ],
+  "sniff": [
+    {
+      "g": "olfatear, oler",
+      "en": "The dog sniffed the ground.",
+      "es": "El perro olfateó el suelo."
+    },
+    {
+      "g": "sorberse la nariz",
+      "en": "Stop sniffing and blow your nose.",
+      "es": "Deja de sorberte y suénate."
+    }
+  ],
+  "soar": [
+    {
+      "g": "dispararse, subir mucho",
+      "en": "Prices soared.",
+      "es": "Los precios se dispararon."
+    },
+    {
+      "g": "planear, volar alto",
+      "en": "The eagle soared.",
+      "es": "El águila planeó."
+    }
+  ],
+  "sort out": [
+    {
+      "g": "solucionar, arreglar",
+      "en": "I'll sort it out.",
+      "es": "Yo lo soluciono."
+    },
+    {
+      "g": "ordenar, clasificar",
+      "en": "Sort out these papers.",
+      "es": "Ordena estos papeles."
+    }
+  ],
+  "spell": [
+    {
+      "g": "deletrear; escribir (ortografía)",
+      "en": "How do you spell it?",
+      "es": "¿Cómo se escribe?"
+    },
+    {
+      "g": "periodo, racha",
+      "en": "A cold spell.",
+      "es": "Una racha de frío."
+    }
+  ],
+  "spend": [
+    {
+      "g": "gastar (dinero)",
+      "en": "I spent all my money.",
+      "es": "Gasté todo mi dinero."
+    },
+    {
+      "g": "pasar (tiempo)",
+      "en": "We spent a week in Rome.",
+      "es": "Pasamos una semana en Roma."
+    }
+  ],
+  "spread": [
+    {
+      "g": "extender(se), propagar(se)",
+      "en": "The fire spread fast.",
+      "es": "El fuego se propagó rápido."
+    },
+    {
+      "g": "untar",
+      "en": "Spread butter on the bread.",
+      "es": "Unta mantequilla en el pan."
+    }
+  ],
+  "square": [
+    {
+      "g": "cuadrado",
+      "en": "Draw a square.",
+      "es": "Dibuja un cuadrado."
+    },
+    {
+      "g": "plaza",
+      "en": "We met in the town square.",
+      "es": "Nos vimos en la plaza del pueblo."
+    }
+  ],
+  "stage": [
+    {
+      "g": "etapa, fase",
+      "en": "The first stage of the plan.",
+      "es": "La primera etapa del plan."
+    },
+    {
+      "g": "escenario",
+      "en": "The band walked on stage.",
+      "es": "La banda salió al escenario."
+    }
+  ],
+  "stalk": [
+    {
+      "g": "acechar, seguir de cerca",
+      "en": "The lion stalked the deer.",
+      "es": "El león acechó al ciervo."
+    },
+    {
+      "g": "tallo (de planta)",
+      "en": "A celery stalk.",
+      "es": "Un tallo de apio."
+    }
+  ],
+  "stand": [
+    {
+      "g": "estar de pie; ponerse de pie",
+      "en": "Please stand.",
+      "es": "Póngase de pie, por favor."
+    },
+    {
+      "g": "soportar, aguantar",
+      "en": "I can't stand the noise.",
+      "es": "No soporto el ruido."
+    }
+  ],
+  "stand for": [
+    {
+      "g": "significar, representar (siglas)",
+      "en": "What does NASA stand for?",
+      "es": "¿Qué significan las siglas NASA?"
+    },
+    {
+      "g": "tolerar, aguantar",
+      "en": "I won't stand for rudeness.",
+      "es": "No pienso tolerar la mala educación."
+    }
+  ],
+  "start": [
+    {
+      "g": "comienzo, inicio",
+      "en": "From the start.",
+      "es": "Desde el principio."
+    },
+    {
+      "g": "empezar, comenzar",
+      "en": "The film starts at eight.",
+      "es": "La película empieza a las ocho."
+    }
+  ],
+  "state": [
+    {
+      "g": "estado, situación",
+      "en": "The house is in a bad state.",
+      "es": "La casa está en mal estado."
+    },
+    {
+      "g": "estado (región/país)",
+      "en": "Texas is a large state.",
+      "es": "Texas es un estado grande."
+    },
+    {
+      "g": "afirmar, declarar",
+      "en": "Please state your name.",
+      "es": "Diga su nombre, por favor."
+    }
+  ],
+  "stick": [
+    {
+      "g": "palo, rama",
+      "en": "A walking stick.",
+      "es": "Un bastón."
+    },
+    {
+      "g": "pegar, adherir",
+      "en": "Stick the stamp here.",
+      "es": "Pega el sello aquí."
+    },
+    {
+      "g": "clavar(se), atascarse",
+      "en": "The door is stuck.",
+      "es": "La puerta está atascada."
+    }
+  ],
+  "stiff": [
+    {
+      "g": "rígido, tieso",
+      "en": "Stiff cardboard.",
+      "es": "Cartón rígido."
+    },
+    {
+      "g": "agarrotado (músculos)",
+      "en": "A stiff neck.",
+      "es": "Tortícolis, el cuello agarrotado."
+    }
+  ],
+  "stock": [
+    {
+      "g": "existencias, stock",
+      "en": "Out of stock.",
+      "es": "Agotado, sin existencias."
+    },
+    {
+      "g": "acciones (bolsa)",
+      "en": "Buy stocks.",
+      "es": "Comprar acciones."
+    },
+    {
+      "g": "caldo",
+      "en": "Chicken stock.",
+      "es": "Caldo de pollo."
+    }
+  ],
+  "strike": [
+    {
+      "g": "golpear",
+      "en": "Lightning struck the tree.",
+      "es": "Un rayo golpeó el árbol."
+    },
+    {
+      "g": "huelga",
+      "en": "The workers are on strike.",
+      "es": "Los trabajadores están en huelga."
+    }
+  ],
+  "study": [
+    {
+      "g": "estudio (investigación)",
+      "en": "A study on sleep.",
+      "es": "Un estudio sobre el sueño."
+    },
+    {
+      "g": "estudiar",
+      "en": "I study every evening.",
+      "es": "Estudio todas las tardes."
+    }
+  ],
+  "stumble": [
+    {
+      "g": "tropezar",
+      "en": "He stumbled on a step.",
+      "es": "Tropezó con un escalón."
+    },
+    {
+      "g": "encontrarse por casualidad",
+      "en": "I stumbled upon an old letter.",
+      "es": "Me encontré una carta vieja por casualidad."
+    }
+  ],
+  "subject": [
+    {
+      "g": "tema, asunto",
+      "en": "Let's change the subject.",
+      "es": "Cambiemos de tema."
+    },
+    {
+      "g": "asignatura",
+      "en": "Maths is my best subject.",
+      "es": "Matemáticas es mi mejor asignatura."
+    }
+  ],
+  "subside": [
+    {
+      "g": "amainar, calmarse",
+      "en": "The storm subsided.",
+      "es": "La tormenta amainó."
+    },
+    {
+      "g": "hundirse (terreno)",
+      "en": "The ground subsided.",
+      "es": "El terreno se hundió."
+    }
+  ],
+  "suit": [
+    {
+      "g": "traje",
+      "en": "He wore a dark suit.",
+      "es": "Llevaba un traje oscuro."
+    },
+    {
+      "g": "quedar bien, sentar bien",
+      "en": "That colour suits you.",
+      "es": "Ese color te queda bien."
+    },
+    {
+      "g": "venir bien, convenir",
+      "en": "Does Friday suit you?",
+      "es": "¿Te viene bien el viernes?"
+    }
+  ],
+  "support": [
+    {
+      "g": "apoyar",
+      "en": "I support your decision.",
+      "es": "Apoyo tu decisión."
+    },
+    {
+      "g": "sostener, sujetar",
+      "en": "These columns support the roof.",
+      "es": "Estas columnas sostienen el tejado."
+    },
+    {
+      "g": "mantener (económicamente)",
+      "en": "He supports his family.",
+      "es": "Mantiene a su familia."
+    }
+  ],
+  "surgery": [
+    {
+      "g": "cirugía, operación",
+      "en": "She needs surgery.",
+      "es": "Necesita cirugía."
+    },
+    {
+      "g": "consulta (médica)",
+      "en": "The doctor's surgery opens at nine.",
+      "es": "La consulta del médico abre a las nueve."
+    }
+  ],
+  "survey": [
+    {
+      "g": "encuesta",
+      "en": "Fill in the survey.",
+      "es": "Rellena la encuesta."
+    },
+    {
+      "g": "estudio, inspección",
+      "en": "A survey of the land.",
+      "es": "Un estudio del terreno."
+    }
+  ],
+  "swear": [
+    {
+      "g": "jurar",
+      "en": "I swear it's true.",
+      "es": "Juro que es verdad."
+    },
+    {
+      "g": "decir palabrotas, maldecir",
+      "en": "Don't swear in class.",
+      "es": "No digas palabrotas en clase."
+    }
+  ],
+  "sweet": [
+    {
+      "g": "dulce",
+      "en": "Too sweet for me.",
+      "es": "Demasiado dulce para mí."
+    },
+    {
+      "g": "caramelo, golosina",
+      "en": "A bag of sweets.",
+      "es": "Una bolsa de caramelos."
+    },
+    {
+      "g": "tierno, encantador",
+      "en": "That's so sweet of you.",
+      "es": "Qué detalle tan bonito."
+    }
+  ],
+  "switch": [
+    {
+      "g": "interruptor",
+      "en": "Turn off the switch.",
+      "es": "Apaga el interruptor."
+    },
+    {
+      "g": "cambiar (de)",
+      "en": "She switched jobs.",
+      "es": "Cambió de trabajo."
+    }
+  ],
+  "tablet": [
+    {
+      "g": "tableta (dispositivo)",
+      "en": "I read on my tablet.",
+      "es": "Leo en la tableta."
+    },
+    {
+      "g": "pastilla, comprimido",
+      "en": "Take one tablet a day.",
+      "es": "Toma una pastilla al día."
+    }
+  ],
+  "take": [
+    {
+      "g": "tomar, coger",
+      "en": "Take an umbrella.",
+      "es": "Coge un paraguas."
+    },
+    {
+      "g": "llevar",
+      "en": "I'll take you home.",
+      "es": "Te llevo a casa."
+    },
+    {
+      "g": "tardar, llevar (tiempo)",
+      "en": "It takes an hour.",
+      "es": "Lleva una hora."
+    }
+  ],
+  "take in": [
+    {
+      "g": "asimilar, entender",
+      "en": "It's a lot to take in.",
+      "es": "Es mucho que asimilar."
+    },
+    {
+      "g": "acoger, alojar",
+      "en": "They took in a refugee.",
+      "es": "Acogieron a un refugiado."
+    },
+    {
+      "g": "engañar",
+      "en": "Don't be taken in by him.",
+      "es": "No te dejes engañar por él."
+    }
+  ],
+  "take off": [
+    {
+      "g": "despegar (avión)",
+      "en": "The plane took off.",
+      "es": "El avión despegó."
+    },
+    {
+      "g": "quitarse (ropa)",
+      "en": "Take off your shoes.",
+      "es": "Quítate los zapatos."
+    }
+  ],
+  "take up": [
+    {
+      "g": "empezar (una afición)",
+      "en": "She took up painting.",
+      "es": "Empezó a pintar."
+    },
+    {
+      "g": "ocupar (espacio/tiempo)",
+      "en": "The sofa takes up too much room.",
+      "es": "El sofá ocupa demasiado espacio."
+    }
+  ],
+  "taste": [
+    {
+      "g": "sabor, gusto",
+      "en": "A bitter taste.",
+      "es": "Un sabor amargo."
+    },
+    {
+      "g": "probar, saborear",
+      "en": "Taste the soup.",
+      "es": "Prueba la sopa."
+    }
+  ],
+  "tender": [
+    {
+      "g": "tierno, cariñoso",
+      "en": "A tender kiss.",
+      "es": "Un beso tierno."
+    },
+    {
+      "g": "tierno, blando (comida)",
+      "en": "The meat is tender.",
+      "es": "La carne está tierna."
+    },
+    {
+      "g": "dolorido, sensible al tacto",
+      "en": "The bruise is still tender.",
+      "es": "El moratón aún está dolorido."
+    }
+  ],
+  "tentative": [
+    {
+      "g": "provisional, tentativo",
+      "en": "A tentative date.",
+      "es": "Una fecha provisional."
+    },
+    {
+      "g": "vacilante, dubitativo",
+      "en": "A tentative smile.",
+      "es": "Una sonrisa vacilante."
+    }
+  ],
+  "tenure": [
+    {
+      "g": "mandato, periodo en el cargo",
+      "en": "During his tenure as mayor.",
+      "es": "Durante su mandato como alcalde."
+    },
+    {
+      "g": "plaza fija (universidad)",
+      "en": "She was granted tenure.",
+      "es": "Le dieron plaza fija."
+    }
+  ],
+  "tepid": [
+    {
+      "g": "tibio (líquido)",
+      "en": "Tepid water.",
+      "es": "Agua tibia."
+    },
+    {
+      "g": "poco entusiasta, frío",
+      "en": "A tepid response.",
+      "es": "Una respuesta poco entusiasta."
+    }
+  ],
+  "term": [
+    {
+      "g": "término, palabra",
+      "en": "A technical term.",
+      "es": "Un término técnico."
+    },
+    {
+      "g": "trimestre (escolar)",
+      "en": "The spring term ends in April.",
+      "es": "El trimestre de primavera acaba en abril."
+    }
+  ],
+  "test": [
+    {
+      "g": "prueba, examen",
+      "en": "A driving test.",
+      "es": "Un examen de conducir."
+    },
+    {
+      "g": "probar, poner a prueba",
+      "en": "Test the software.",
+      "es": "Prueba el software."
+    }
+  ],
+  "then": [
+    {
+      "g": "entonces, en ese momento",
+      "en": "I was a child then.",
+      "es": "Entonces era un niño."
+    },
+    {
+      "g": "luego, después",
+      "en": "First eat, then sleep.",
+      "es": "Primero comer, luego dormir."
+    }
+  ],
+  "thick": [
+    {
+      "g": "grueso",
+      "en": "A thick book.",
+      "es": "Un libro grueso."
+    },
+    {
+      "g": "espeso, denso",
+      "en": "Thick soup.",
+      "es": "Sopa espesa."
+    }
+  ],
+  "thoughtful": [
+    {
+      "g": "considerado, atento",
+      "en": "A thoughtful gift.",
+      "es": "Un regalo considerado."
+    },
+    {
+      "g": "pensativo, reflexivo",
+      "en": "A thoughtful look.",
+      "es": "Una mirada pensativa."
+    }
+  ],
+  "thrash": [
+    {
+      "g": "dar una paliza, apalear",
+      "en": "He thrashed the intruder.",
+      "es": "Le dio una paliza al intruso."
+    },
+    {
+      "g": "dar un repaso, ganar por goleada",
+      "en": "We thrashed them 6-0.",
+      "es": "Les dimos un repaso 6 a 0."
+    }
+  ],
+  "tile": [
+    {
+      "g": "baldosa; azulejo",
+      "en": "Bathroom tiles.",
+      "es": "Azulejos del baño."
+    },
+    {
+      "g": "teja",
+      "en": "A roof tile.",
+      "es": "Una teja."
+    }
+  ],
+  "too": [
+    {
+      "g": "demasiado",
+      "en": "It's too expensive.",
+      "es": "Es demasiado caro."
+    },
+    {
+      "g": "también",
+      "en": "Me too.",
+      "es": "Yo también."
+    }
+  ],
+  "topple": [
+    {
+      "g": "derribar, tumbar",
+      "en": "The wind toppled the tree.",
+      "es": "El viento derribó el árbol."
+    },
+    {
+      "g": "derrocar (a un gobierno)",
+      "en": "The coup toppled the leader.",
+      "es": "El golpe derrocó al líder."
+    }
+  ],
+  "trade": [
+    {
+      "g": "comercio",
+      "en": "International trade.",
+      "es": "El comercio internacional."
+    },
+    {
+      "g": "oficio",
+      "en": "He's a carpenter by trade.",
+      "es": "Es carpintero de oficio."
+    },
+    {
+      "g": "intercambiar",
+      "en": "Trade cards with a friend.",
+      "es": "Intercambia cartas con un amigo."
+    }
+  ],
+  "transfer": [
+    {
+      "g": "traslado; transferencia",
+      "en": "A bank transfer.",
+      "es": "Una transferencia bancaria."
+    },
+    {
+      "g": "trasladar, transferir",
+      "en": "He was transferred to Madrid.",
+      "es": "Lo trasladaron a Madrid."
+    }
+  ],
+  "transpire": [
+    {
+      "g": "revelarse, salir a la luz",
+      "en": "It transpired that he had lied.",
+      "es": "Se supo que había mentido."
+    },
+    {
+      "g": "ocurrir, suceder",
+      "en": "Nobody knows what transpired.",
+      "es": "Nadie sabe qué ocurrió."
+    }
+  ],
+  "treat": [
+    {
+      "g": "tratar (a alguien)",
+      "en": "Treat people with respect.",
+      "es": "Trata a la gente con respeto."
+    },
+    {
+      "g": "tratar, curar (médico)",
+      "en": "Doctors treated the wound.",
+      "es": "Los médicos trataron la herida."
+    },
+    {
+      "g": "invitar; capricho",
+      "en": "Let me treat you to dinner.",
+      "es": "Deja que te invite a cenar."
+    }
+  ],
+  "trial": [
+    {
+      "g": "juicio",
+      "en": "He's on trial.",
+      "es": "Está siendo juzgado."
+    },
+    {
+      "g": "prueba, ensayo",
+      "en": "A free trial.",
+      "es": "Una prueba gratuita."
+    }
+  ],
+  "trunk": [
+    {
+      "g": "tronco (de árbol)",
+      "en": "The trunk of the oak.",
+      "es": "El tronco del roble."
+    },
+    {
+      "g": "baúl",
+      "en": "An old wooden trunk.",
+      "es": "Un viejo baúl de madera."
+    },
+    {
+      "g": "trompa (de elefante)",
+      "en": "The elephant's trunk.",
+      "es": "La trompa del elefante."
+    }
+  ],
+  "try": [
+    {
+      "g": "intentar, tratar de",
+      "en": "Try to relax.",
+      "es": "Intenta relajarte."
+    },
+    {
+      "g": "probar",
+      "en": "Try this cake.",
+      "es": "Prueba este pastel."
+    }
+  ],
+  "turn": [
+    {
+      "g": "turno",
+      "en": "It's your turn.",
+      "es": "Es tu turno."
+    },
+    {
+      "g": "girar, dar la vuelta",
+      "en": "Turn left here.",
+      "es": "Gira a la izquierda aquí."
+    },
+    {
+      "g": "volverse, ponerse",
+      "en": "The leaves turned brown.",
+      "es": "Las hojas se pusieron marrones."
+    }
+  ],
+  "turn around": [
+    {
+      "g": "darse la vuelta, girar",
+      "en": "Turn around and look.",
+      "es": "Date la vuelta y mira."
+    },
+    {
+      "g": "enderezar, dar la vuelta a (una situación)",
+      "en": "They turned the company around.",
+      "es": "Enderezaron la empresa."
+    }
+  ],
+  "turn down": [
+    {
+      "g": "rechazar (oferta)",
+      "en": "He turned down the job.",
+      "es": "Rechazó el trabajo."
+    },
+    {
+      "g": "bajar (volumen/calor)",
+      "en": "Turn down the heating.",
+      "es": "Baja la calefacción."
+    }
+  ],
+  "turn up": [
+    {
+      "g": "aparecer, presentarse",
+      "en": "She turned up late.",
+      "es": "Apareció tarde."
+    },
+    {
+      "g": "subir (volumen/calor)",
+      "en": "Turn up the music.",
+      "es": "Sube la música."
+    }
+  ],
+  "turnover": [
+    {
+      "g": "facturación, volumen de ventas",
+      "en": "Annual turnover of €2m.",
+      "es": "Facturación anual de 2 millones."
+    },
+    {
+      "g": "rotación (de personal)",
+      "en": "High staff turnover.",
+      "es": "Alta rotación de personal."
+    }
+  ],
+  "type": [
+    {
+      "g": "tipo, clase",
+      "en": "What type of coffee?",
+      "es": "¿Qué tipo de café?"
+    },
+    {
+      "g": "escribir a máquina, teclear",
+      "en": "Type your password.",
+      "es": "Escribe tu contraseña."
+    }
+  ],
+  "undertaking": [
+    {
+      "g": "tarea, empresa (proyecto)",
+      "en": "A huge undertaking.",
+      "es": "Una tarea enorme."
+    },
+    {
+      "g": "compromiso, promesa",
+      "en": "He gave an undertaking to pay.",
+      "es": "Se comprometió a pagar."
+    }
+  ],
+  "union": [
+    {
+      "g": "sindicato",
+      "en": "Join the union.",
+      "es": "Afíliate al sindicato."
+    },
+    {
+      "g": "unión",
+      "en": "The European Union.",
+      "es": "La Unión Europea."
+    }
+  ],
+  "unravel": [
+    {
+      "g": "deshacer(se), desenredar",
+      "en": "The sweater unravelled.",
+      "es": "El jersey se deshizo."
+    },
+    {
+      "g": "desentrañar, esclarecer",
+      "en": "Unravel the mystery.",
+      "es": "Desentrañar el misterio."
+    }
+  ],
+  "upgrade": [
+    {
+      "g": "mejora, actualización",
+      "en": "A software upgrade.",
+      "es": "Una actualización de software."
+    },
+    {
+      "g": "mejorar; subir de categoría",
+      "en": "They upgraded us to business class.",
+      "es": "Nos subieron a clase business."
+    }
+  ],
+  "uphold": [
+    {
+      "g": "confirmar, ratificar (decisión)",
+      "en": "The court upheld the ruling.",
+      "es": "El tribunal confirmó la sentencia."
+    },
+    {
+      "g": "defender, mantener (valores)",
+      "en": "Uphold the law.",
+      "es": "Hacer respetar la ley."
+    }
+  ],
+  "use": [
+    {
+      "g": "uso",
+      "en": "The use of phones is banned.",
+      "es": "Está prohibido el uso de móviles."
+    },
+    {
+      "g": "usar, utilizar",
+      "en": "Can I use your pen?",
+      "es": "¿Puedo usar tu bolígrafo?"
+    }
+  ],
+  "vacancy": [
+    {
+      "g": "vacante, puesto libre",
+      "en": "A job vacancy.",
+      "es": "Una vacante de empleo."
+    },
+    {
+      "g": "habitación libre",
+      "en": "No vacancies.",
+      "es": "No hay habitaciones libres."
+    }
+  ],
+  "venom": [
+    {
+      "g": "veneno (de animal)",
+      "en": "Snake venom.",
+      "es": "Veneno de serpiente."
+    },
+    {
+      "g": "malicia, rencor",
+      "en": "He spoke with venom.",
+      "es": "Habló con malicia."
+    }
+  ],
+  "view": [
+    {
+      "g": "vista, panorama",
+      "en": "A room with a sea view.",
+      "es": "Una habitación con vistas al mar."
+    },
+    {
+      "g": "opinión, punto de vista",
+      "en": "In my view, it's wrong.",
+      "es": "En mi opinión, está mal."
+    }
+  ],
+  "vote": [
+    {
+      "g": "voto",
+      "en": "Every vote counts.",
+      "es": "Cada voto cuenta."
+    },
+    {
+      "g": "votar",
+      "en": "Who did you vote for?",
+      "es": "¿A quién votaste?"
+    }
+  ],
+  "wardrobe": [
+    {
+      "g": "armario, ropero",
+      "en": "Hang it in the wardrobe.",
+      "es": "Cuélgalo en el armario."
+    },
+    {
+      "g": "vestuario, guardarropa",
+      "en": "A new summer wardrobe.",
+      "es": "Un nuevo vestuario de verano."
+    }
+  ],
+  "watch": [
+    {
+      "g": "ver, mirar",
+      "en": "We watched a film.",
+      "es": "Vimos una película."
+    },
+    {
+      "g": "vigilar, cuidar",
+      "en": "Watch the kids.",
+      "es": "Vigila a los niños."
+    },
+    {
+      "g": "reloj (de pulsera)",
+      "en": "A new watch.",
+      "es": "Un reloj nuevo."
+    }
+  ],
+  "wave": [
+    {
+      "g": "ola",
+      "en": "Big waves at the beach.",
+      "es": "Olas grandes en la playa."
+    },
+    {
+      "g": "saludar con la mano",
+      "en": "She waved goodbye.",
+      "es": "Se despidió con la mano."
+    }
+  ],
+  "way": [
+    {
+      "g": "manera, modo",
+      "en": "Do it this way.",
+      "es": "Hazlo de esta manera."
+    },
+    {
+      "g": "camino, dirección",
+      "en": "Which way is the station?",
+      "es": "¿Por dónde se va a la estación?"
+    }
+  ],
+  "welfare": [
+    {
+      "g": "bienestar",
+      "en": "The children's welfare.",
+      "es": "El bienestar de los niños."
+    },
+    {
+      "g": "prestaciones sociales, subsidio",
+      "en": "He lives on welfare.",
+      "es": "Vive de las prestaciones."
+    }
+  ],
+  "wild": [
+    {
+      "g": "salvaje, silvestre",
+      "en": "Wild animals.",
+      "es": "Animales salvajes."
+    },
+    {
+      "g": "descontrolado, alocado",
+      "en": "A wild party.",
+      "es": "Una fiesta alocada."
+    }
+  ],
+  "withdraw": [
+    {
+      "g": "retirar, sacar (dinero)",
+      "en": "Withdraw €100.",
+      "es": "Saca 100 €."
+    },
+    {
+      "g": "retirarse, apartarse",
+      "en": "He withdrew from the race.",
+      "es": "Se retiró de la carrera."
+    }
+  ],
+  "wood": [
+    {
+      "g": "madera",
+      "en": "A table made of wood.",
+      "es": "Una mesa de madera."
+    },
+    {
+      "g": "bosque",
+      "en": "A walk in the woods.",
+      "es": "Un paseo por el bosque."
+    }
+  ],
+  "work": [
+    {
+      "g": "trabajo",
+      "en": "I have a lot of work.",
+      "es": "Tengo mucho trabajo."
+    },
+    {
+      "g": "trabajar; funcionar",
+      "en": "The lift doesn't work.",
+      "es": "El ascensor no funciona."
+    }
+  ],
+  "work out": [
+    {
+      "g": "resolver, calcular",
+      "en": "Work out the total.",
+      "es": "Calcula el total."
+    },
+    {
+      "g": "salir bien, resultar",
+      "en": "It all worked out.",
+      "es": "Al final todo salió bien."
+    },
+    {
+      "g": "hacer ejercicio",
+      "en": "I work out at the gym.",
+      "es": "Hago ejercicio en el gimnasio."
+    }
+  ],
+  "wrestle": [
+    {
+      "g": "luchar (cuerpo a cuerpo)",
+      "en": "They wrestled on the mat.",
+      "es": "Lucharon en la colchoneta."
+    },
+    {
+      "g": "lidiar con, debatirse",
+      "en": "She wrestled with the decision.",
+      "es": "Se debatió con la decisión."
+    }
+  ],
+  "yield": [
+    {
+      "g": "producir, dar (fruto/beneficio)",
+      "en": "The land yields wheat.",
+      "es": "La tierra produce trigo."
+    },
+    {
+      "g": "ceder",
+      "en": "Yield to pressure.",
+      "es": "Ceder a la presión."
+    }
+  ]
+}
