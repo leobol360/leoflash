@@ -46,27 +46,21 @@ npm run preview        # serve the built dist/ on the same port
 > one way of opening the app (either always `localhost:4173`, or always the same
 > `dist/index.html`).
 
-## The word data lives in your project
+## The data lives in `data/`
 
-Every word is committed to the repo, split by level, under `data/`:
+All app content is plain JSON in `data/`, the single source of truth:
 
 ```
-data/vocab.a1.json        500 words   (A1 · Beginner)
-data/vocab.a2.json        500 words   (A2 · Elementary)
-data/vocab.b1.json      1 000 words   (B1 · Intermediate)
-data/vocab.b2.json      1 002 words   (B2 · Upper-intermediate)
-data/vocab.software.json   20 words   (Software & IT)
-data/vocab.all.json     3 022 words   (everything, one file)
-data/manifest.json                    (counts + metadata)
+data/vocab.json      every word: { word, pos, ipa, es, def, ex, level, rank }
+data/levels.json     the CEFR bands + "software" track: { key: { label, icon } }
+data/grammar.json    the tenses & structures reference: { groups, entries }
+data/phrases.json    common phrases & idioms: { categories, phrases }
 ```
 
-These are a plain‑JSON backup of the whole deck. The running app loads the deck
-from `src/data.js` (bundled into the build, so it works fully offline). If you
-edit the deck, regenerate the JSON with:
-
-```bash
-npm run export-levels
-```
+The `src/*.js` modules just import these (Vite bundles the JSON into the build,
+so the app works fully offline) and add the derived bits — a stable `id` per
+word/phrase, which levels actually contain words, etc. Edit the JSON directly to
+change the content; no build step to regenerate anything.
 
 ### Loading a level
 
@@ -119,30 +113,27 @@ src/
   main.jsx                 bootstraps React
   App.jsx                  shell: nav, routing, session handling
   style.css                all styling (light/dark, 5 accents)
-  data.js                  the ~3000-word deck (source of truth)
-  grammar.js               the tenses & structures reference
-  store.js                 localStorage + SM-2 + id migration + backup/restore + pub/sub
+  data.js                  loads data/vocab.json + data/levels.json, adds ids
+  grammar.js               re-exports data/grammar.json
+  phrases.js               loads data/phrases.json + the practice helpers
+  store.js                 localStorage + SM-2 + Leitner phrases + backup/restore + pub/sub
   session.js               queue building, mode choice, answer checking
   speech.js                Web Speech API wrapper
   format.js                small shared helpers
   useStore.js              React hook (useSyncExternalStore)
   components/ui.jsx        Ring, ProgressBar, StatCard, Sentence…
-  views/                   LevelPicker, Home, Study, Browse, Grammar, Stats, Settings
-data/vocab.<level>.json    the deck as committed JSON, split by CEFR level
-tools/export-levels.js     regenerates data/*.json from src/data.js
+  views/                   LevelPicker, Home, Study, Browse, Grammar, Phrases, Stats, Settings
+data/*.json                all app content — the single source of truth
 ```
 
 ### Adding your own words
 
-Append a row to `VOCAB_RAW` in `src/data.js` (frequency‑ordered — its position
-sets its CEFR level automatically via `levelOf()`):
+Append an object to `data/vocab.json` with an explicit `level`
+(`a1`/`a2`/`b1`/`b2`/`software`):
 
-```js
-["word", "part of speech", "spanish gloss", "simple english definition", "An example sentence."],
+```json
+{ "word": "…", "pos": "…", "ipa": "", "es": "…", "def": "…", "ex": "…", "level": "b1", "rank": 3100 }
 ```
-
-For a Software & IT word, add it to `SOFTWARE_RAW` (that array keeps an IPA field
-as the 3rd item). Then refresh the JSON backup with `npm run export-levels`.
 
 Card history is keyed by the word text, so reordering the list never loses
 progress. Older installs keyed by number are migrated automatically.

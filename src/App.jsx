@@ -143,7 +143,15 @@ export default function App() {
 
       <main>
         {screen}
-        {showNav && <footer className="site-credit">By Leonardo Pineda</footer>}
+        {showNav && (
+          <footer className="site-credit">
+            <span className="site-credit-name">LeoFlash</span>
+            <span>© {new Date().getFullYear()} Leonardo Pineda · Todos los derechos reservados.</span>
+            <span>
+              Creado por Leonardo Pineda en colaboración con Claude (Anthropic).
+            </span>
+          </footer>
+        )}
       </main>
 
       {showNav && (

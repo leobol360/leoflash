@@ -497,9 +497,15 @@ const Store = {
     return "learning";
   },
 
+  // Phrases within the levels the learner picked at the start.
+  scopedPhrases() {
+    return PHRASES.filter((phrase) => this.levelEnabled(phrase.level));
+  },
+
   phraseStats() {
     let learning = 0, review = 0, mastered = 0, seen = 0;
-    for (const phrase of PHRASES) {
+    const scoped = this.scopedPhrases();
+    for (const phrase of scoped) {
       const status = this.phraseStatus(phrase.id);
       if (status === "new") continue;
       seen++;
@@ -507,16 +513,17 @@ const Store = {
       else if (status === "review") review++;
       else learning++;
     }
-    return { total: PHRASES.length, seen, learning, review, mastered };
+    return { total: scoped.length, seen, learning, review, mastered };
   },
 
   // Phrases for one practice round: those due for review first (most
   // overdue first), then unseen ones, capped at PHRASE_SESSION_SIZE.
+  // Only phrases inside the learner's chosen levels.
   buildPhraseSession(size = PHRASE_SESSION_SIZE) {
     const today = todayStr();
     const due = [];
     const fresh = [];
-    for (const phrase of PHRASES) {
+    for (const phrase of this.scopedPhrases()) {
       const card = this.data.phraseCards[phrase.id];
       if (!card || !card.seen) fresh.push(phrase);
       else if (card.due <= today) due.push(phrase);
@@ -530,7 +537,7 @@ const Store = {
 
   // A random round ignoring the schedule (used when nothing is due).
   randomPhraseSession(size = PHRASE_SESSION_SIZE) {
-    return shuffle([...PHRASES]).slice(0, size);
+    return shuffle(this.scopedPhrases()).slice(0, size);
   },
 
   // Grade one answered phrase: right -> next box, wrong -> back to box 1.

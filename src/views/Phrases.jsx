@@ -46,9 +46,16 @@ function Browse({ onPractice }) {
   const [category, setCategory] = useState("all");
   const progress = store.phraseStats();
 
+  const version = store.getVersion();
+  const scoped = useMemo(() => store.scopedPhrases(), [version]);
+  const activeLevels = store
+    .enabledLevels()
+    .filter((key) => key !== "software")
+    .map((key) => key.toUpperCase());
+
   const rows = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return PHRASES.filter((phrase) => {
+    return scoped.filter((phrase) => {
       if (category !== "all" && phrase.category !== category) return false;
       if (!needle) return true;
       return (
@@ -56,7 +63,7 @@ function Browse({ onPractice }) {
         phrase.es.toLowerCase().includes(needle)
       );
     });
-  }, [query, category]);
+  }, [scoped, query, category]);
 
   const groups = PHRASE_CATEGORIES.map((cat) => ({
     ...cat,
@@ -79,11 +86,18 @@ function Browse({ onPractice }) {
           flashcards.
         </p>
         <p className="muted small">
-          {progress.seen} de {progress.total} practicadas ·{" "}
-          {progress.learning} aprendiendo · {progress.review} en repaso ·{" "}
-          {progress.mastered} dominadas
+          Nivel{activeLevels.length === 1 ? "" : "es"}:{" "}
+          <b>{activeLevels.join(" · ") || "—"}</b> · {progress.seen} de{" "}
+          {progress.total} practicadas · {progress.learning} aprendiendo ·{" "}
+          {progress.review} en repaso · {progress.mastered} dominadas
         </p>
       </div>
+
+      {rows.length === 0 && scoped.length === 0 && (
+        <p className="muted">
+          Activa un nivel A1–B2 en el inicio para ver frases de ese nivel.
+        </p>
+      )}
 
       <div className="browse-bar card">
         <input
@@ -122,6 +136,7 @@ function Browse({ onPractice }) {
                     >
                       🔊
                     </button>
+                    <span className="phrase-level">{phrase.level.toUpperCase()}</span>
                     {status !== "new" && (
                       <span className={"phrase-status ph-" + status}>
                         {STATUS_LABEL[status]}
@@ -136,7 +151,9 @@ function Browse({ onPractice }) {
         </div>
       ))}
 
-      {rows.length === 0 && <p className="muted">Nada coincide con la búsqueda.</p>}
+      {rows.length === 0 && scoped.length > 0 && (
+        <p className="muted">Nada coincide con la búsqueda.</p>
+      )}
     </div>
   );
 }

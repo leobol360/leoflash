@@ -1,0 +1,22 @@
+{
+  "a1": {
+    "label": "A1 · Beginner",
+    "icon": "🌱"
+  },
+  "a2": {
+    "label": "A2 · Elementary",
+    "icon": "🌿"
+  },
+  "b1": {
+    "label": "B1 · Intermediate",
+    "icon": "🌳"
+  },
+  "b2": {
+    "label": "B2 · Upper-intermediate",
+    "icon": "🌲"
+  },
+  "software": {
+    "label": "Software & IT",
+    "icon": "🧑‍💻"
+  }
+}

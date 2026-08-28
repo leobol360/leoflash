@@ -96,7 +96,12 @@ kbd {
 
 main { padding-bottom: 120px; padding-top: 8px; }
 .page { display: flex; flex-direction: column; gap: 18px; }
-.site-credit { margin-top: 34px; text-align: right; font-size: .74rem; letter-spacing: .02em; color: var(--muted); opacity: .75; }
+.site-credit {
+  margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 2px; text-align: right;
+  font-size: .72rem; line-height: 1.5; letter-spacing: .01em; color: var(--muted);
+}
+.site-credit-name { font-weight: 700; letter-spacing: .04em; color: var(--accent-strong); }
 
 /* mobile tab bar */
 .tabbar { display: none; }
@@ -264,10 +269,11 @@ main { padding-bottom: 120px; padding-top: 8px; }
 /* "read the example aloud" button */
 .ex-line { display: inline; }
 .ex-speak {
-  background: none; border: 0; cursor: pointer; padding: 0 0 0 4px;
-  font-size: .8em; opacity: .5; vertical-align: baseline; line-height: 1;
+  cursor: pointer; margin-left: 6px; padding: 2px 7px; line-height: 1;
+  font-size: .9rem; border-radius: 7px; vertical-align: middle;
+  background: var(--surface-2); border: 1px solid var(--border); color: inherit;
 }
-.ex-speak:hover { opacity: 1; }
+.ex-speak:hover { background: var(--accent-soft); border-color: var(--accent); }
 
 .theme-tag {
   font-size: .72rem; color: var(--muted); background: var(--surface-2);
@@ -479,6 +485,10 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 .phrase-row:first-child { border-top: 0; }
 .phrase-en { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; font-weight: 600; }
 .phrase-es { color: var(--muted); font-size: .92rem; margin-top: 2px; }
+.phrase-level {
+  font-size: .66rem; font-weight: 700; letter-spacing: .04em; padding: 1px 6px;
+  border-radius: 5px; background: var(--surface-2); color: var(--muted); white-space: nowrap;
+}
 .phrase-status {
   font-size: .68rem; font-weight: 600; padding: 1px 7px; border-radius: 999px;
   border: 1px solid var(--border); color: var(--muted); white-space: nowrap;
@@ -639,10 +649,11 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 }
 .wf-value { font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
 .wf-speak {
-  background: none; border: 0; cursor: pointer; font-size: .78rem; opacity: .55;
-  padding: 0; line-height: 1;
+  flex: none; align-self: center; cursor: pointer; line-height: 1;
+  font-size: .95rem; padding: 3px 8px; border-radius: 8px;
+  background: var(--surface-2); border: 1px solid var(--border); color: inherit;
 }
-.wf-speak:hover { opacity: 1; }
+.wf-speak:hover { background: var(--accent-soft); border-color: var(--accent); }
 .wf-note {
   grid-column: 1 / -1;
   margin: 2px 0 0;

@@ -1,0 +1,1050 @@
+{
+  "categories": [
+    {
+      "key": "greetings",
+      "label": "Saludos y despedidas",
+      "icon": "👋"
+    },
+    {
+      "key": "courtesy",
+      "label": "Cortesía y disculpas",
+      "icon": "🙏"
+    },
+    {
+      "key": "requests",
+      "label": "Pedir, ofrecer y responder",
+      "icon": "🤝"
+    },
+    {
+      "key": "conversation",
+      "label": "Reaccionar en una conversación",
+      "icon": "💬"
+    },
+    {
+      "key": "opinions",
+      "label": "Opiniones y acuerdo",
+      "icon": "🤔"
+    },
+    {
+      "key": "work",
+      "label": "Trabajo y reuniones",
+      "icon": "💼"
+    },
+    {
+      "key": "travel",
+      "label": "Viajes, direcciones y compras",
+      "icon": "✈️"
+    },
+    {
+      "key": "time",
+      "label": "Tiempo, prisa y planes",
+      "icon": "⏰"
+    },
+    {
+      "key": "idioms",
+      "label": "Expresiones y modismos",
+      "icon": "🎭"
+    },
+    {
+      "key": "slang",
+      "label": "Inglés informal / slang",
+      "icon": "😎"
+    }
+  ],
+  "phrases": [
+    {
+      "level": "a1",
+      "category": "greetings",
+      "en": "Nice to meet you.",
+      "es": "Encantado de conocerte.",
+      "gap": "Nice to meet you"
+    },
+    {
+      "level": "a1",
+      "category": "greetings",
+      "en": "Take care.",
+      "es": "Cuídate.",
+      "gap": "Take care"
+    },
+    {
+      "level": "a2",
+      "category": "greetings",
+      "en": "How's it going?",
+      "es": "¿Qué tal? / ¿Cómo va todo?",
+      "gap": "How's it going"
+    },
+    {
+      "level": "a2",
+      "category": "greetings",
+      "en": "How have you been?",
+      "es": "¿Cómo has estado?",
+      "gap": "How have you been"
+    },
+    {
+      "level": "a2",
+      "category": "greetings",
+      "en": "See you around.",
+      "es": "Nos vemos por ahí.",
+      "gap": "See you around"
+    },
+    {
+      "level": "b1",
+      "category": "greetings",
+      "en": "Long time no see.",
+      "es": "Cuánto tiempo sin verte.",
+      "gap": "Long time no see"
+    },
+    {
+      "level": "b1",
+      "category": "greetings",
+      "en": "What have you been up to?",
+      "es": "¿Qué has estado haciendo últimamente?",
+      "gap": "up to"
+    },
+    {
+      "level": "b1",
+      "category": "greetings",
+      "en": "Catch you later.",
+      "es": "Hasta luego. / Nos vemos.",
+      "gap": "Catch you later"
+    },
+    {
+      "level": "b1",
+      "category": "greetings",
+      "en": "Have a good one.",
+      "es": "Que te vaya bien.",
+      "gap": "Have a good one"
+    },
+    {
+      "level": "b1",
+      "category": "greetings",
+      "en": "It's been a while.",
+      "es": "Ha pasado tiempo.",
+      "gap": "been a while"
+    },
+    {
+      "level": "a1",
+      "category": "courtesy",
+      "en": "Excuse me.",
+      "es": "Disculpe. / Perdón.",
+      "gap": "Excuse me"
+    },
+    {
+      "level": "a2",
+      "category": "courtesy",
+      "en": "No worries.",
+      "es": "No pasa nada. / Tranquilo.",
+      "gap": "No worries"
+    },
+    {
+      "level": "a2",
+      "category": "courtesy",
+      "en": "Don't mention it.",
+      "es": "No hay de qué.",
+      "gap": "Don't mention it"
+    },
+    {
+      "level": "a2",
+      "category": "courtesy",
+      "en": "After you.",
+      "es": "Usted primero. / Pasa tú.",
+      "gap": "After you"
+    },
+    {
+      "level": "a2",
+      "category": "courtesy",
+      "en": "Bless you.",
+      "es": "Salud (cuando alguien estornuda).",
+      "gap": "Bless you"
+    },
+    {
+      "level": "a2",
+      "category": "courtesy",
+      "en": "It's my fault.",
+      "es": "Es culpa mía.",
+      "gap": "my fault"
+    },
+    {
+      "level": "b1",
+      "category": "courtesy",
+      "en": "I'm sorry to bother you.",
+      "es": "Siento molestarte.",
+      "gap": "to bother you"
+    },
+    {
+      "level": "b1",
+      "category": "courtesy",
+      "en": "My apologies.",
+      "es": "Mis disculpas.",
+      "gap": "My apologies"
+    },
+    {
+      "level": "b1",
+      "category": "courtesy",
+      "en": "I didn't mean to.",
+      "es": "No fue mi intención.",
+      "gap": "didn't mean to"
+    },
+    {
+      "level": "b1",
+      "category": "courtesy",
+      "en": "I owe you one.",
+      "es": "Te debo una.",
+      "gap": "owe you one"
+    },
+    {
+      "level": "a1",
+      "category": "requests",
+      "en": "Here you go.",
+      "es": "Aquí tienes.",
+      "gap": "Here you go"
+    },
+    {
+      "level": "a2",
+      "category": "requests",
+      "en": "Do you have a minute?",
+      "es": "¿Tienes un minuto?",
+      "gap": "have a minute"
+    },
+    {
+      "level": "a2",
+      "category": "requests",
+      "en": "Can you do me a favor?",
+      "es": "¿Me haces un favor?",
+      "gap": "do me a favor"
+    },
+    {
+      "level": "a2",
+      "category": "requests",
+      "en": "Help yourself.",
+      "es": "Sírvete tú mismo.",
+      "gap": "Help yourself"
+    },
+    {
+      "level": "a2",
+      "category": "requests",
+      "en": "Go ahead.",
+      "es": "Adelante.",
+      "gap": "Go ahead"
+    },
+    {
+      "level": "a2",
+      "category": "requests",
+      "en": "Let me know.",
+      "es": "Avísame. / Dime algo.",
+      "gap": "Let me know"
+    },
+    {
+      "level": "b1",
+      "category": "requests",
+      "en": "Could you give me a hand?",
+      "es": "¿Me echas una mano?",
+      "gap": "give me a hand"
+    },
+    {
+      "level": "b1",
+      "category": "requests",
+      "en": "Would you mind opening the window?",
+      "es": "¿Te importaría abrir la ventana?",
+      "gap": "Would you mind"
+    },
+    {
+      "level": "b1",
+      "category": "requests",
+      "en": "Be my guest.",
+      "es": "Adelante, todo tuyo.",
+      "gap": "Be my guest"
+    },
+    {
+      "level": "b1",
+      "category": "requests",
+      "en": "Keep me posted.",
+      "es": "Mantenme al tanto.",
+      "gap": "Keep me posted"
+    },
+    {
+      "level": "b2",
+      "category": "requests",
+      "en": "Suit yourself.",
+      "es": "Como quieras. / Allá tú.",
+      "gap": "Suit yourself"
+    },
+    {
+      "level": "a1",
+      "category": "conversation",
+      "en": "What do you mean?",
+      "es": "¿Qué quieres decir?",
+      "gap": "What do you mean"
+    },
+    {
+      "level": "a2",
+      "category": "conversation",
+      "en": "No way!",
+      "es": "¡No me digas! / ¡Ni hablar!",
+      "gap": "No way"
+    },
+    {
+      "level": "a2",
+      "category": "conversation",
+      "en": "That makes sense.",
+      "es": "Tiene sentido.",
+      "gap": "makes sense"
+    },
+    {
+      "level": "a2",
+      "category": "conversation",
+      "en": "I have no idea.",
+      "es": "No tengo ni idea.",
+      "gap": "no idea"
+    },
+    {
+      "level": "a2",
+      "category": "conversation",
+      "en": "Good point.",
+      "es": "Buen punto.",
+      "gap": "Good point"
+    },
+    {
+      "level": "a2",
+      "category": "conversation",
+      "en": "Never mind.",
+      "es": "Déjalo. / No importa.",
+      "gap": "Never mind"
+    },
+    {
+      "level": "a2",
+      "category": "conversation",
+      "en": "It's up to you.",
+      "es": "Tú decides.",
+      "gap": "up to you"
+    },
+    {
+      "level": "a2",
+      "category": "conversation",
+      "en": "Guess what!",
+      "es": "¡Adivina qué!",
+      "gap": "Guess what"
+    },
+    {
+      "level": "b1",
+      "category": "conversation",
+      "en": "You're kidding!",
+      "es": "¡Estás de broma!",
+      "gap": "You're kidding"
+    },
+    {
+      "level": "b1",
+      "category": "conversation",
+      "en": "I see what you mean.",
+      "es": "Ya veo a qué te refieres.",
+      "gap": "what you mean"
+    },
+    {
+      "level": "b1",
+      "category": "conversation",
+      "en": "Fair enough.",
+      "es": "Me parece justo. / Vale.",
+      "gap": "Fair enough"
+    },
+    {
+      "level": "b1",
+      "category": "conversation",
+      "en": "You bet.",
+      "es": "Por supuesto. / Claro.",
+      "gap": "You bet"
+    },
+    {
+      "level": "b2",
+      "category": "conversation",
+      "en": "Tell me about it.",
+      "es": "Ni me lo digas. / A quién se lo dices.",
+      "gap": "Tell me about it"
+    },
+    {
+      "level": "b2",
+      "category": "conversation",
+      "en": "That's the thing.",
+      "es": "Ahí está el tema.",
+      "gap": "the thing"
+    },
+    {
+      "level": "a1",
+      "category": "opinions",
+      "en": "Not really.",
+      "es": "La verdad es que no.",
+      "gap": "Not really"
+    },
+    {
+      "level": "a2",
+      "category": "opinions",
+      "en": "In my opinion, it's too expensive.",
+      "es": "En mi opinión, es demasiado caro.",
+      "gap": "In my opinion"
+    },
+    {
+      "level": "a2",
+      "category": "opinions",
+      "en": "It depends.",
+      "es": "Depende.",
+      "gap": "It depends"
+    },
+    {
+      "level": "a2",
+      "category": "opinions",
+      "en": "I guess so.",
+      "es": "Supongo que sí.",
+      "gap": "I guess so"
+    },
+    {
+      "level": "a2",
+      "category": "opinions",
+      "en": "That's a good question.",
+      "es": "Buena pregunta.",
+      "gap": "good question"
+    },
+    {
+      "level": "b1",
+      "category": "opinions",
+      "en": "If you ask me, we should wait.",
+      "es": "Si me preguntas, deberíamos esperar.",
+      "gap": "If you ask me"
+    },
+    {
+      "level": "b1",
+      "category": "opinions",
+      "en": "I'm not so sure about that.",
+      "es": "No estoy tan seguro de eso.",
+      "gap": "not so sure"
+    },
+    {
+      "level": "b1",
+      "category": "opinions",
+      "en": "I doubt it.",
+      "es": "Lo dudo.",
+      "gap": "I doubt it"
+    },
+    {
+      "level": "b2",
+      "category": "opinions",
+      "en": "I couldn't agree more.",
+      "es": "No podría estar más de acuerdo.",
+      "gap": "couldn't agree more"
+    },
+    {
+      "level": "b2",
+      "category": "opinions",
+      "en": "I'm on the fence.",
+      "es": "Estoy indeciso.",
+      "gap": "on the fence"
+    },
+    {
+      "level": "b1",
+      "category": "work",
+      "en": "Let's call it a day.",
+      "es": "Dejémoslo por hoy.",
+      "gap": "call it a day"
+    },
+    {
+      "level": "b1",
+      "category": "work",
+      "en": "I'll get back to you.",
+      "es": "Te respondo luego.",
+      "gap": "get back to you"
+    },
+    {
+      "level": "b1",
+      "category": "work",
+      "en": "Ping me when you're done.",
+      "es": "Avísame cuando termines.",
+      "gap": "Ping me"
+    },
+    {
+      "level": "b1",
+      "category": "work",
+      "en": "Let's keep it short.",
+      "es": "Vamos a ser breves.",
+      "gap": "keep it short"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "Let's touch base tomorrow.",
+      "es": "Pongámonos al día mañana.",
+      "gap": "touch base"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "Let's circle back to this later.",
+      "es": "Retomemos esto más tarde.",
+      "gap": "circle back"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "We're on the same page.",
+      "es": "Estamos de acuerdo. / En sintonía.",
+      "gap": "the same page"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "Can we push it back a week?",
+      "es": "¿Podemos aplazarlo una semana?",
+      "gap": "push it back"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "That's out of scope.",
+      "es": "Eso está fuera del alcance.",
+      "gap": "out of scope"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "Let's play it by ear.",
+      "es": "Vamos viendo sobre la marcha.",
+      "gap": "play it by ear"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "I'm swamped this week.",
+      "es": "Estoy hasta arriba de trabajo esta semana.",
+      "gap": "swamped"
+    },
+    {
+      "level": "b2",
+      "category": "work",
+      "en": "Let's take this offline.",
+      "es": "Hablemos esto aparte / luego.",
+      "gap": "take this offline"
+    },
+    {
+      "level": "a1",
+      "category": "travel",
+      "en": "How much is it?",
+      "es": "¿Cuánto cuesta?",
+      "gap": "How much is it"
+    },
+    {
+      "level": "a1",
+      "category": "travel",
+      "en": "Where's the restroom?",
+      "es": "¿Dónde está el baño?",
+      "gap": "the restroom"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "How do I get to the station?",
+      "es": "¿Cómo llego a la estación?",
+      "gap": "How do I get to"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "Is this seat taken?",
+      "es": "¿Está ocupado este asiento?",
+      "gap": "seat taken"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "I'd like a table for two.",
+      "es": "Quisiera una mesa para dos.",
+      "gap": "a table for two"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "Can I get the check, please?",
+      "es": "¿Me trae la cuenta, por favor?",
+      "gap": "the check"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "Keep the change.",
+      "es": "Quédese con el cambio.",
+      "gap": "Keep the change"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "I'll have the same.",
+      "es": "Yo tomaré lo mismo.",
+      "gap": "the same"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "Do you take card?",
+      "es": "¿Aceptan tarjeta?",
+      "gap": "take card"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "I'm just looking, thanks.",
+      "es": "Solo estoy mirando, gracias.",
+      "gap": "just looking"
+    },
+    {
+      "level": "a2",
+      "category": "travel",
+      "en": "Could you take a picture of us?",
+      "es": "¿Nos puede hacer una foto?",
+      "gap": "take a picture"
+    },
+    {
+      "level": "b1",
+      "category": "travel",
+      "en": "Could you tell me the way to the museum?",
+      "es": "¿Me puede indicar cómo llegar al museo?",
+      "gap": "the way to"
+    },
+    {
+      "level": "a1",
+      "category": "time",
+      "en": "Give me a second.",
+      "es": "Dame un segundo.",
+      "gap": "a second"
+    },
+    {
+      "level": "a2",
+      "category": "time",
+      "en": "I'm running late.",
+      "es": "Voy con retraso.",
+      "gap": "running late"
+    },
+    {
+      "level": "a2",
+      "category": "time",
+      "en": "I'll be there in a bit.",
+      "es": "Llego en un rato.",
+      "gap": "in a bit"
+    },
+    {
+      "level": "a2",
+      "category": "time",
+      "en": "Hang on a minute.",
+      "es": "Espera un momento.",
+      "gap": "Hang on"
+    },
+    {
+      "level": "a2",
+      "category": "time",
+      "en": "We're out of time.",
+      "es": "Se nos acabó el tiempo.",
+      "gap": "out of time"
+    },
+    {
+      "level": "a2",
+      "category": "time",
+      "en": "Take your time.",
+      "es": "Tómate tu tiempo.",
+      "gap": "Take your time"
+    },
+    {
+      "level": "b1",
+      "category": "time",
+      "en": "Better late than never.",
+      "es": "Más vale tarde que nunca.",
+      "gap": "Better late than never"
+    },
+    {
+      "level": "b1",
+      "category": "time",
+      "en": "Time flies.",
+      "es": "Cómo pasa el tiempo.",
+      "gap": "Time flies"
+    },
+    {
+      "level": "b2",
+      "category": "time",
+      "en": "Let's take a rain check.",
+      "es": "Dejémoslo para otro día.",
+      "gap": "rain check"
+    },
+    {
+      "level": "b2",
+      "category": "time",
+      "en": "You made it just in the nick of time.",
+      "es": "Llegaste justo a tiempo.",
+      "gap": "the nick of time"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "It's raining cats and dogs.",
+      "es": "Está lloviendo a cántaros.",
+      "gap": "cats and dogs"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "It's a piece of cake.",
+      "es": "Es pan comido. / Está chupado.",
+      "gap": "a piece of cake"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "Break a leg!",
+      "es": "¡Mucha suerte! / ¡Mucha mierda!",
+      "gap": "Break a leg"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "I'm feeling under the weather.",
+      "es": "Estoy pachucho / malito.",
+      "gap": "under the weather"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "It cost an arm and a leg.",
+      "es": "Costó un ojo de la cara / un riñón.",
+      "gap": "an arm and a leg"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "He's pulling your leg.",
+      "es": "Te está tomando el pelo.",
+      "gap": "pulling your leg"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "Go the extra mile.",
+      "es": "Hacer un esfuerzo extra.",
+      "gap": "the extra mile"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "It's not rocket science.",
+      "es": "No es tan difícil.",
+      "gap": "rocket science"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "No pain, no gain.",
+      "es": "El que algo quiere, algo le cuesta.",
+      "gap": "no gain"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "Don't throw in the towel.",
+      "es": "No te rindas.",
+      "gap": "throw in the towel"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "It's a small world.",
+      "es": "El mundo es un pañuelo.",
+      "gap": "a small world"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "Actions speak louder than words.",
+      "es": "Del dicho al hecho hay mucho trecho.",
+      "gap": "louder than words"
+    },
+    {
+      "level": "b1",
+      "category": "idioms",
+      "en": "Don't judge a book by its cover.",
+      "es": "Las apariencias engañan.",
+      "gap": "by its cover"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Once in a blue moon.",
+      "es": "De higos a brevas. / Muy de vez en cuando.",
+      "gap": "a blue moon"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Don't spill the beans.",
+      "es": "No te vayas de la lengua.",
+      "gap": "spill the beans"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "The ball is in your court.",
+      "es": "Te toca mover ficha a ti.",
+      "gap": "in your court"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Let's bite the bullet.",
+      "es": "Hagámoslo de una vez, aunque cueste.",
+      "gap": "bite the bullet"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Let's cut to the chase.",
+      "es": "Vayamos al grano.",
+      "gap": "cut to the chase"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Stop beating around the bush.",
+      "es": "Deja de andarte con rodeos.",
+      "gap": "beating around the bush"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "It's a blessing in disguise.",
+      "es": "No hay mal que por bien no venga.",
+      "gap": "in disguise"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Speak of the devil.",
+      "es": "Hablando del rey de Roma…",
+      "gap": "of the devil"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "When pigs fly.",
+      "es": "Cuando las ranas críen pelo.",
+      "gap": "pigs fly"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "You hit the nail on the head.",
+      "es": "Diste en el clavo.",
+      "gap": "the nail on the head"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "The cat's out of the bag.",
+      "es": "Se descubrió el pastel.",
+      "gap": "out of the bag"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Back to the drawing board.",
+      "es": "A empezar de cero otra vez.",
+      "gap": "the drawing board"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "I'm burning the midnight oil.",
+      "es": "Estoy quemándome las pestañas.",
+      "gap": "the midnight oil"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "I'm getting cold feet.",
+      "es": "Me estoy echando atrás.",
+      "gap": "cold feet"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "Kill two birds with one stone.",
+      "es": "Matar dos pájaros de un tiro.",
+      "gap": "two birds with one stone"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "You missed the boat.",
+      "es": "Se te pasó el tren.",
+      "gap": "the boat"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "It came out of the blue.",
+      "es": "Salió de la nada, sin avisar.",
+      "gap": "out of the blue"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "That's the last straw.",
+      "es": "Es la gota que colma el vaso.",
+      "gap": "the last straw"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "I can't wrap my head around it.",
+      "es": "No consigo entenderlo.",
+      "gap": "wrap my head around"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "It's the best of both worlds.",
+      "es": "Lo mejor de los dos mundos.",
+      "gap": "both worlds"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "The early bird catches the worm.",
+      "es": "A quien madruga, Dios le ayuda.",
+      "gap": "catches the worm"
+    },
+    {
+      "level": "b2",
+      "category": "idioms",
+      "en": "We'll cross that bridge when we come to it.",
+      "es": "Ya nos preocuparemos de eso cuando toque.",
+      "gap": "cross that bridge"
+    },
+    {
+      "level": "a1",
+      "category": "slang",
+      "en": "It's awesome.",
+      "es": "Es genial.",
+      "gap": "awesome"
+    },
+    {
+      "level": "a2",
+      "category": "slang",
+      "en": "What's up?",
+      "es": "¿Qué pasa? / ¿Qué tal?",
+      "gap": "What's up"
+    },
+    {
+      "level": "a2",
+      "category": "slang",
+      "en": "Chill out.",
+      "es": "Relájate. / Tranquilo.",
+      "gap": "Chill out"
+    },
+    {
+      "level": "a2",
+      "category": "slang",
+      "en": "Let's hang out this weekend.",
+      "es": "Quedemos este finde.",
+      "gap": "hang out"
+    },
+    {
+      "level": "a2",
+      "category": "slang",
+      "en": "Sounds good.",
+      "es": "Me parece bien.",
+      "gap": "Sounds good"
+    },
+    {
+      "level": "a2",
+      "category": "slang",
+      "en": "Same here.",
+      "es": "Yo igual. / Lo mismo digo.",
+      "gap": "Same here"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "My bad.",
+      "es": "Culpa mía. / Perdón.",
+      "gap": "My bad"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "No biggie.",
+      "es": "No es para tanto. / Nada grave.",
+      "gap": "No biggie"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "You rock!",
+      "es": "¡Eres genial! / ¡Grande!",
+      "gap": "rock"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "You rule!",
+      "es": "¡Eres el mejor! / ¡Máquina!",
+      "gap": "rule"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "For real.",
+      "es": "En serio. / De verdad.",
+      "gap": "For real"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "Hang in there.",
+      "es": "Aguanta. / Ánimo.",
+      "gap": "Hang in there"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "Wrap it up.",
+      "es": "Ve terminando.",
+      "gap": "Wrap it up"
+    },
+    {
+      "level": "b1",
+      "category": "slang",
+      "en": "Cut it out.",
+      "es": "Basta ya. / Para.",
+      "gap": "Cut it out"
+    },
+    {
+      "level": "b2",
+      "category": "slang",
+      "en": "That's sick!",
+      "es": "¡Qué bueno! / ¡Brutal!",
+      "gap": "sick"
+    },
+    {
+      "level": "b2",
+      "category": "slang",
+      "en": "I'm beat.",
+      "es": "Estoy hecho polvo.",
+      "gap": "beat"
+    },
+    {
+      "level": "b2",
+      "category": "slang",
+      "en": "I'm down for that.",
+      "es": "Me apunto a eso.",
+      "gap": "I'm down"
+    },
+    {
+      "level": "b2",
+      "category": "slang",
+      "en": "That's a rip-off.",
+      "es": "Es una estafa / un timo.",
+      "gap": "a rip-off"
+    }
+  ]
+}
