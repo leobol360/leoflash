@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-08-28T03:55:59.993Z",
+  "total": 3022,
+  "levels": [
+    {
+      "key": "a1",
+      "label": "A1 · Beginner",
+      "icon": "🌱",
+      "count": 500,
+      "file": "vocab.a1.json"
+    },
+    {
+      "key": "a2",
+      "label": "A2 · Elementary",
+      "icon": "🌿",
+      "count": 500,
+      "file": "vocab.a2.json"
+    },
+    {
+      "key": "b1",
+      "label": "B1 · Intermediate",
+      "icon": "🌳",
+      "count": 1000,
+      "file": "vocab.b1.json"
+    },
+    {
+      "key": "b2",
+      "label": "B2 · Upper-intermediate",
+      "icon": "🌲",
+      "count": 1002,
+      "file": "vocab.b2.json"
+    },
+    {
+      "key": "software",
+      "label": "Software & IT",
+      "icon": "🧑‍💻",
+      "count": 20,
+      "file": "vocab.software.json"
+    }
+  ]
+}

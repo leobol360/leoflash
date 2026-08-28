@@ -1,0 +1,202 @@
+[
+  {
+    "word": "bug",
+    "pos": "noun",
+    "ipa": "/bʌɡ/",
+    "es": "error, fallo (de software)",
+    "def": "a mistake in a program that stops it working correctly",
+    "ex": "Users reported a bug when they try to log in.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "feature",
+    "pos": "noun",
+    "ipa": "/ˈfiːtʃə/",
+    "es": "funcionalidad, característica",
+    "def": "a part of a program that does something useful for the user",
+    "ex": "The new version adds a dark mode feature.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "code",
+    "pos": "noun/verb",
+    "ipa": "/kəʊd/",
+    "es": "código / programar",
+    "def": "the instructions, written by a programmer, that tell a computer what to do",
+    "ex": "She writes clean, easy-to-read code.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "debug",
+    "pos": "verb",
+    "ipa": "/ˌdiːˈbʌɡ/",
+    "es": "depurar",
+    "def": "to find and remove the errors in a program",
+    "ex": "I spent the afternoon debugging the payment page.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "server",
+    "pos": "noun",
+    "ipa": "/ˈsɜːvə/",
+    "es": "servidor",
+    "def": "a computer that stores data and sends it to other computers over a network",
+    "ex": "The website is slow because the server is overloaded.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "database",
+    "pos": "noun",
+    "ipa": "/ˈdeɪtəbeɪs/",
+    "es": "base de datos",
+    "def": "an organised collection of information stored in a computer",
+    "ex": "All the user accounts are kept in a database.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "query",
+    "pos": "noun/verb",
+    "ipa": "/ˈkwɪəri/",
+    "es": "consulta / consultar",
+    "def": "a request for information from a database",
+    "ex": "This query returns all the orders from last month.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "frontend",
+    "pos": "noun",
+    "ipa": "/ˈfrʌntend/",
+    "es": "frontend, parte visible",
+    "def": "the part of a website or app that the user sees and interacts with",
+    "ex": "He works on the frontend, mostly forms and buttons.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "backend",
+    "pos": "noun",
+    "ipa": "/ˈbækend/",
+    "es": "backend, parte interna",
+    "def": "the part of a system that users do not see, where data is stored and processed",
+    "ex": "The backend checks your password before letting you in.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "repository",
+    "pos": "noun",
+    "ipa": "/rɪˈpɒzətri/",
+    "es": "repositorio",
+    "def": "a place where all the code of a project is stored and its changes are tracked",
+    "ex": "Push your changes to the shared repository.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "commit",
+    "pos": "noun/verb",
+    "ipa": "/kəˈmɪt/",
+    "es": "commit / confirmar cambios",
+    "def": "a saved set of changes to the code, with a short message describing it",
+    "ex": "Each commit should do one clear thing.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "crash",
+    "pos": "verb",
+    "ipa": "/kræʃ/",
+    "es": "fallar, colgarse, caerse",
+    "def": "(of a program or computer) to stop working suddenly",
+    "ex": "The app crashes when you open a very large file.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "deployment",
+    "pos": "noun",
+    "ipa": "/dɪˈplɔɪmənt/",
+    "es": "despliegue",
+    "def": "the act of putting a new version of software into use",
+    "ex": "The deployment failed because of a wrong setting.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "API",
+    "pos": "noun",
+    "ipa": "/ˌeɪ piː ˈaɪ/",
+    "es": "API, interfaz de programación",
+    "def": "a set of rules that lets two programs exchange data with each other",
+    "ex": "The mobile app gets its data from our API.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "backup",
+    "pos": "noun/verb",
+    "ipa": "/ˈbækʌp/",
+    "es": "copia de seguridad / respaldar",
+    "def": "a spare copy of data kept in case the original is lost",
+    "ex": "The database backup runs every night.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "algorithm",
+    "pos": "noun",
+    "ipa": "/ˈælɡərɪðəm/",
+    "es": "algoritmo",
+    "def": "a set of steps that a computer follows to solve a problem",
+    "ex": "The search algorithm sorts the results by date.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "dataset",
+    "pos": "noun",
+    "ipa": "/ˈdeɪtəset/",
+    "es": "conjunto de datos",
+    "def": "a collection of data used for analysis or to train a model",
+    "ex": "We trained the model on a dataset of 10,000 images.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "machine learning",
+    "pos": "noun",
+    "ipa": "/məˌʃiːn ˈlɜːnɪŋ/",
+    "es": "aprendizaje automático",
+    "def": "a way of making computers learn from data instead of being given every rule",
+    "ex": "Machine learning is used to filter spam email.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "open source",
+    "pos": "adjective",
+    "ipa": "/ˌəʊpən ˈsɔːs/",
+    "es": "código abierto",
+    "def": "(of software) with code that anyone can read, use and change for free",
+    "ex": "We use several open source libraries in this project.",
+    "level": "software",
+    "rank": 99999
+  },
+  {
+    "word": "test",
+    "pos": "noun/verb",
+    "ipa": "/test/",
+    "es": "prueba / probar",
+    "def": "code that automatically checks whether other code works correctly",
+    "ex": "Write a test before you fix the bug.",
+    "level": "software",
+    "rank": 99999
+  }
+]
