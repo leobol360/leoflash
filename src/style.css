@@ -75,12 +75,19 @@ kbd {
 }
 
 /* ---- layout ---- */
-#app { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(14px, 4vw, 28px); }
+#app {
+  max-width: var(--maxw); margin: 0 auto;
+  padding-left: max(clamp(14px, 4vw, 28px), env(safe-area-inset-left));
+  padding-right: max(clamp(14px, 4vw, 28px), env(safe-area-inset-right));
+}
 
+/* env(safe-area-inset-top) keeps the header clear of the iOS status bar /
+   notch when the app is launched from the home screen (standalone). */
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 18px 0 14px; position: sticky; top: 0; z-index: 20;
-  background: linear-gradient(var(--bg) 60%, transparent);
+  padding: calc(18px + env(safe-area-inset-top)) 0 14px;
+  position: sticky; top: 0; z-index: 20;
+  background: linear-gradient(var(--bg) 70%, transparent);
   backdrop-filter: blur(4px);
 }
 .brand { display: flex; align-items: center; gap: 9px; font-size: 1.15rem; }
