@@ -4,7 +4,8 @@
 
    Each entry:
      id, name, es, level (a1..b2), group
-     uses:   [ "cuándo se usa" ]
+     gist:   "una frase sencilla: para qué sirve"
+     uses:   [ "cuándo se usa, en lenguaje llano" ]
      forms:  { affirmative, negative, question, whQuestion?, short? }
              each of affirmative/negative/question is { s: "estructura", ex: [ ... ] }
      signals: [ marcadores temporales ]
@@ -28,11 +29,12 @@ export const GRAMMAR = [
     es: "Presente simple",
     level: "a1",
     group: "present",
+    gist: "Lo que haces siempre o normalmente, y las cosas que son verdad en general.",
     uses: [
-      "Hábitos y rutinas: I go to work by bus.",
-      "Hechos y verdades generales: Water boils at 100 °C.",
-      "Horarios fijos (futuro): The train leaves at 6.",
-      "Verbos de estado (no continuos): I know / want / believe…",
+      "Costumbres y rutinas: I get up at 7 every day.",
+      "Cosas que siempre son así: The sun rises in the east.",
+      "Gustos, opiniones y sentimientos (like, want, think, know…): I like tea. I don't understand.",
+      "Horarios (sirve para el futuro): The shop opens at 9 tomorrow.",
     ],
     forms: {
       affirmative: {
@@ -66,12 +68,12 @@ export const GRAMMAR = [
     es: "Presente continuo",
     level: "a1",
     group: "present",
+    gist: "Algo que está pasando ahora, o en esta temporada, aunque no en este segundo exacto.",
     uses: [
-      "Acción en curso ahora mismo: I'm reading a book.",
-      "Situación temporal: I'm staying with my parents this month.",
-      "Planes futuros con hora/lugar: We're meeting Ana at 7.",
-      "Tendencias y cambios: Prices are rising.",
-      "Quejas con always: You're always losing your keys!",
+      "Justo ahora: She's cooking dinner.",
+      "Una temporada (no para siempre): I'm staying with my parents this month.",
+      "Planes ya cerrados para el futuro: We're meeting Ana at 7.",
+      "Algo que está cambiando: Prices are rising.",
     ],
     forms: {
       affirmative: { s: "sujeto + am / is / are + verbo (-ing)", ex: ["I'm working right now.", "They're playing outside."] },
@@ -93,11 +95,11 @@ export const GRAMMAR = [
     es: "Pretérito perfecto",
     level: "a2",
     group: "present",
+    gist: "Une el pasado con el ahora: algo que pasó (no dices cuándo) y que todavía importa hoy.",
     uses: [
-      "Experiencias de vida (sin decir cuándo): I've been to Japan.",
-      "Acción pasada con resultado en el presente: I've lost my keys (= no las tengo ahora).",
-      "Acción que empezó en el pasado y continúa (for / since): I've lived here for ten years.",
-      "Noticias recientes: just, already, yet.",
+      "Experiencias de tu vida (¿alguna vez?): I've been to Japan. I've never tried sushi.",
+      "Algo que empezó antes y sigue ahora: I've lived here for ten years.",
+      "Algo reciente que se nota ahora: I've lost my keys (por eso no puedo entrar).",
     ],
     forms: {
       affirmative: { s: "sujeto + have / has + verbo (participio)", ex: ["I have finished.", "She has arrived."] },
@@ -109,8 +111,8 @@ export const GRAMMAR = [
     signals: ["ever", "never", "already", "yet", "just", "so far", "recently", "lately", "for", "since", "this week/year"],
     passive: "have / has been + verbo (participio)  →  The results have been published.",
     notes: [
-      "NO se usa con un tiempo pasado terminado y concreto: yesterday, last week, in 2010 → usa Past Simple.",
-      "for + periodo (for two years) · since + punto de inicio (since 2015).",
+      "Si dices exactamente cuándo (yesterday, last week, in 2010), NO uses este tiempo → ahí va el Past Simple.",
+      "for + cuánto tiempo (for two years) · since + desde cuándo (since 2015).",
     ],
   },
   {
@@ -119,9 +121,10 @@ export const GRAMMAR = [
     es: "Pretérito perfecto continuo",
     level: "b1",
     group: "present",
+    gist: "Igual que el Present Perfect, pero el foco está en cuánto tiempo llevas haciendo algo.",
     uses: [
-      "Acción que empezó en el pasado y sigue ahora, enfatizando la duración: I've been studying all day.",
-      "Acción reciente cuyos efectos se ven ahora: You're out of breath — have you been running?",
+      "Llevas un rato y sigues: I've been studying all day.",
+      "Se te nota lo que estuviste haciendo: You're out of breath — have you been running?",
     ],
     forms: {
       affirmative: { s: "sujeto + have / has been + verbo (-ing)", ex: ["I've been waiting for an hour.", "It's been raining."] },
@@ -144,10 +147,11 @@ export const GRAMMAR = [
     es: "Pretérito indefinido",
     level: "a1",
     group: "past",
+    gist: "Algo terminado en el pasado, en un momento que sabes cuál fue.",
     uses: [
-      "Acción terminada en un momento concreto del pasado: I saw her yesterday.",
-      "Secuencia de hechos pasados: I woke up, had breakfast and left.",
-      "Hábitos y estados pasados: When I was a child, I lived in Peru.",
+      "Con ayer, la semana pasada, en 2010…: I saw her yesterday.",
+      "Contar cosas que pasaron, una tras otra: I woke up, had breakfast and left.",
+      "Costumbres de antes: When I was a child, I lived in Peru.",
     ],
     forms: {
       affirmative: { s: "sujeto + verbo (pasado)   ·   regulares: -ed  ·  irregulares: forma propia", ex: ["We watched a film.", "I went home.", "She had a car."] },
@@ -169,11 +173,12 @@ export const GRAMMAR = [
     es: "Pretérito imperfecto (continuo)",
     level: "a2",
     group: "past",
+    gist: "Lo que estaba pasando en cierto momento del pasado — la 'escena de fondo'.",
     uses: [
-      "Acción en desarrollo en un momento del pasado: At 8 pm I was cooking.",
-      "Acción larga interrumpida por otra corta: I was sleeping when the phone rang.",
-      "Dos acciones simultáneas (while): While she was reading, he was cooking.",
-      "Ambientar una historia: The sun was shining and the birds were singing.",
+      "En un momento concreto: At 8 pm I was cooking.",
+      "Algo largo que se corta con algo corto: I was sleeping when the phone rang.",
+      "Dos cosas a la vez: While she was reading, he was cooking.",
+      "Poner ambiente en una historia: The sun was shining and the birds were singing.",
     ],
     forms: {
       affirmative: { s: "sujeto + was / were + verbo (-ing)", ex: ["I was working.", "They were waiting outside."] },
@@ -194,10 +199,10 @@ export const GRAMMAR = [
     es: "Pretérito pluscuamperfecto",
     level: "b1",
     group: "past",
+    gist: "El pasado de antes del pasado: dejas claro qué ocurrió primero.",
     uses: [
-      "Acción anterior a otra acción pasada — 'el pasado del pasado': The train had left when we arrived.",
-      "En estilo indirecto: She said she had seen the film.",
-      "Con by the time / after / before / already / just.",
+      "Una cosa antes de otra en el pasado: When we arrived, the train had already left.",
+      "Al contar lo que alguien dijo: She said she had seen the film.",
     ],
     forms: {
       affirmative: { s: "sujeto + had + verbo (participio)", ex: ["I had already eaten.", "They had gone."] },
@@ -208,8 +213,8 @@ export const GRAMMAR = [
     signals: ["already", "just", "never", "by the time", "after", "before", "until then", "when"],
     passive: "had been + verbo (participio)  →  The room had been cleaned.",
     notes: [
-      "Si before / after ya dejan claro el orden, el past perfect es opcional: She left before I arrived.",
-      "Es el tiempo de la 3ª condicional: If I had known…",
+      "Si 'before' o 'after' ya dejan claro el orden, puedes usar solo el Past Simple: She left before I arrived.",
+      "Es el tiempo que se usa en la 3ª condicional (If I had known…).",
     ],
   },
   {
@@ -218,9 +223,10 @@ export const GRAMMAR = [
     es: "Pluscuamperfecto continuo",
     level: "b2",
     group: "past",
+    gist: "Cuánto tiempo llevabas haciendo algo hasta cierto punto del pasado.",
     uses: [
-      "Duración de una acción que ocurría antes de otro momento pasado: I had been driving for hours when I stopped.",
-      "Causa pasada de un resultado pasado: She was tired because she had been working all night.",
+      "Duración hasta un momento pasado: I had been driving for hours when I finally stopped.",
+      "La causa de algo que pasó: She was exhausted — she had been working all night.",
     ],
     forms: {
       affirmative: { s: "sujeto + had been + verbo (-ing)", ex: ["We had been waiting for ages.", "It had been snowing."] },
@@ -240,11 +246,11 @@ export const GRAMMAR = [
     es: "Futuro simple (will)",
     level: "a2",
     group: "future",
+    gist: "Decisiones que tomas en el momento, promesas, y lo que crees que va a pasar.",
     uses: [
-      "Decisiones espontáneas (en el momento de hablar): It's cold — I'll close the window.",
-      "Predicciones basadas en opinión: I think it will rain.",
-      "Promesas, ofertas y peticiones: I'll help you. / Will you open the door?",
-      "Hechos futuros inevitables: She'll be 30 next month.",
+      "Lo decides al hablar: It's cold — I'll close the window.",
+      "Ofrecer ayuda o prometer: I'll help you. / Will you open the door?",
+      "Lo que crees o esperas (con I think, probably…): I think it will rain.",
     ],
     forms: {
       affirmative: { s: "sujeto + will + verbo (base)", ex: ["I'll call you tomorrow.", "It will be fine."] },
@@ -266,9 +272,10 @@ export const GRAMMAR = [
     es: "Futuro con 'be going to'",
     level: "a2",
     group: "future",
+    gist: "Planes que ya tenías decididos, y lo que se ve venir por lo que hay ahora.",
     uses: [
-      "Planes e intenciones ya decididos antes de hablar: We're going to move house.",
-      "Predicciones con evidencia presente: Look at those clouds — it's going to rain.",
+      "Ya lo habías decidido: We're going to move house.",
+      "Se ve venir: Look at those clouds — it's going to rain.",
     ],
     forms: {
       affirmative: { s: "sujeto + am / is / are + going to + verbo (base)", ex: ["I'm going to study medicine.", "They're going to sell the car."] },
@@ -286,9 +293,10 @@ export const GRAMMAR = [
     es: "Presentes con valor de futuro",
     level: "b1",
     group: "future",
+    gist: "Usar un presente para hablar del futuro cuando ya hay algo fijado.",
     uses: [
-      "Present continuous: planes fijos con hora/lugar (una cita, una reserva): I'm seeing the dentist at 4.",
-      "Present simple: horarios y programaciones oficiales: The flight departs at 09:15. The course starts on Monday.",
+      "Una cita o reserva (present continuous): I'm seeing the dentist at 4.",
+      "Un horario oficial (present simple): The flight departs at 09:15.",
     ],
     forms: {
       affirmative: { s: "sujeto + am/is/are + verbo (-ing)   ·   sujeto + verbo (presente)", ex: ["We're flying to Rome on Friday.", "The museum opens at ten tomorrow."] },
@@ -305,9 +313,10 @@ export const GRAMMAR = [
     es: "Futuro continuo",
     level: "b1",
     group: "future",
+    gist: "Algo que estará en marcha en cierto momento del futuro.",
     uses: [
-      "Acción en desarrollo en un momento futuro: This time tomorrow I'll be flying to Rome.",
-      "Preguntar por planes de forma educada: Will you be using the car tonight?",
+      "En un momento futuro concreto: This time tomorrow I'll be flying to Rome.",
+      "Preguntar por planes sin sonar brusco: Will you be using the car tonight?",
     ],
     forms: {
       affirmative: { s: "sujeto + will be + verbo (-ing)", ex: ["At 9 pm I'll be watching the match."] },
@@ -325,8 +334,10 @@ export const GRAMMAR = [
     es: "Futuro perfecto",
     level: "b2",
     group: "future",
+    gist: "Algo que ya estará terminado antes de cierto momento del futuro.",
     uses: [
-      "Acción que estará terminada antes de un momento futuro: By 2030 they will have built the bridge.",
+      "Con by / by the time / before: By Friday I'll have finished the report.",
+      "En una fecha futura: By 2030 they will have built the bridge.",
     ],
     forms: {
       affirmative: { s: "sujeto + will have + verbo (participio)", ex: ["I'll have finished by six.", "She will have left by then."] },
@@ -344,7 +355,10 @@ export const GRAMMAR = [
     es: "Futuro perfecto continuo",
     level: "b2",
     group: "future",
-    uses: ["Duración de una acción hasta un momento futuro: In May I'll have been working here for ten years."],
+    gist: "Cuánto tiempo llevarás haciendo algo llegado cierto momento del futuro.",
+    uses: [
+      "Con by + for: In May I'll have been working here for ten years.",
+    ],
     forms: {
       affirmative: { s: "sujeto + will have been + verbo (-ing)", ex: ["By midnight we'll have been driving for eight hours."] },
       negative: { s: "sujeto + won't have been + verbo (-ing)", ex: ["She won't have been studying for very long."] },
@@ -362,7 +376,11 @@ export const GRAMMAR = [
     es: "Condicional cero",
     level: "a2",
     group: "conditional",
-    uses: ["Verdades generales, leyes científicas y hábitos automáticos: cuando pasa A, siempre pasa B."],
+    gist: "Cosas que siempre pasan: si haces A, pasa B — sin excepción.",
+    uses: [
+      "Verdades y reglas: If you heat water to 100 °C, it boils.",
+      "Costumbres automáticas: If I skip breakfast, I get a headache.",
+    ],
     forms: {
       affirmative: { s: "If + presente simple , presente simple", ex: ["If you heat ice, it melts.", "If I drink coffee at night, I don't sleep."] },
       question: { s: "¿Qué pasa si…?  →  What happens if + presente?", ex: ["What happens if you press this button?"] },
@@ -377,7 +395,11 @@ export const GRAMMAR = [
     es: "Primer condicional",
     level: "a2",
     group: "conditional",
-    uses: ["Situación futura real o probable y su consecuencia: si ocurre X, pasará Y."],
+    gist: "Algo que sí puede pasar en el futuro, y lo que ocurrirá si pasa.",
+    uses: [
+      "Una posibilidad real: If it rains tomorrow, we'll stay home.",
+      "Un aviso o un trato: If you don't hurry, you'll miss the bus.",
+    ],
     forms: {
       affirmative: { s: "If + presente simple , will + verbo (base)", ex: ["If it rains, we'll stay in.", "If you help me, I'll finish sooner."] },
       negative: { s: "If + presente , won't + verbo (base)   ·   Unless + presente , will…", ex: ["If you don't hurry, you'll miss the bus.", "Unless you leave now, you'll be late."] },
@@ -396,9 +418,11 @@ export const GRAMMAR = [
     es: "Segundo condicional",
     level: "b1",
     group: "conditional",
+    gist: "Imaginar algo que hoy no es así, o que es poco probable. También para dar consejos.",
     uses: [
-      "Situación presente o futura irreal, imaginaria o poco probable: If I won the lottery…",
-      "Dar consejos: If I were you, I'd apologise.",
+      "Situación imaginaria: If I won the lottery, I'd travel the world.",
+      "Algo poco probable: If she asked me, I would say yes.",
+      "Dar un consejo: If I were you, I'd apologise.",
     ],
     forms: {
       affirmative: { s: "If + pasado simple , would + verbo (base)", ex: ["If I had more time, I would travel.", "If I were rich, I'd help everyone."] },
@@ -418,7 +442,11 @@ export const GRAMMAR = [
     es: "Tercer condicional",
     level: "b1",
     group: "conditional",
-    uses: ["Situación pasada irreal y su consecuencia — arrepentimientos y críticas: lo que habría pasado si…"],
+    gist: "Imaginar un pasado distinto: lo que habría pasado si… (arrepentimientos, reproches).",
+    uses: [
+      "Lamentar algo: If I had studied more, I would have passed.",
+      "Un reproche: If you had told me, I could have helped.",
+    ],
     forms: {
       affirmative: { s: "If + pasado perfecto , would have + verbo (participio)", ex: ["If I had studied, I would have passed.", "If we had left earlier, we would have caught the train."] },
       negative: { s: "If + hadn't + verbo (participio) , wouldn't have + verbo (participio)", ex: ["If you hadn't helped me, I wouldn't have finished."] },
@@ -434,9 +462,10 @@ export const GRAMMAR = [
     es: "Condicionales mixtos",
     level: "b2",
     group: "conditional",
+    gist: "La condición y el resultado están en momentos distintos (uno pasado, otro presente).",
     uses: [
-      "Condición pasada → resultado presente: If I had taken that job, I would be in London now.",
-      "Condición presente (permanente) → resultado pasado: If I weren't so shy, I would have spoken up.",
+      "Pasado → presente: If I had taken that job, I would be in London now.",
+      "Presente → pasado: If I weren't so shy, I would have spoken up yesterday.",
     ],
     forms: {
       affirmative: { s: "If + pasado perfecto , would + verbo (base)   ·   If + pasado simple , would have + verbo (participio)", ex: ["If she had saved money, she wouldn't be in debt now.", "If he were more careful, he wouldn't have crashed."] },
@@ -453,7 +482,11 @@ export const GRAMMAR = [
     es: "'used to' (hábitos pasados)",
     level: "a2",
     group: "other",
-    uses: ["Hábitos y estados del pasado que ya no ocurren: I used to smoke, but I quit."],
+    gist: "Costumbres o situaciones del pasado que ya no son ciertas.",
+    uses: [
+      "Algo que hacías y dejaste: I used to smoke, but I stopped.",
+      "Algo que era así y cambió: This used to be a cinema.",
+    ],
     forms: {
       affirmative: { s: "sujeto + used to + verbo (base)", ex: ["I used to live in Madrid.", "She used to have long hair."] },
       negative: { s: "sujeto + didn't use to + verbo (base)", ex: ["We didn't use to lock the door.", "He didn't use to like vegetables."] },
@@ -473,7 +506,11 @@ export const GRAMMAR = [
     es: "'would' para rutinas pasadas",
     level: "b1",
     group: "other",
-    uses: ["Acciones repetidas del pasado, en tono narrativo o nostálgico: Every summer we would go to the coast."],
+    gist: "Recordar cosas que hacías una y otra vez en el pasado, con tono de recuerdo.",
+    uses: [
+      "Rutinas de antes: Every summer we would go to the coast.",
+      "Solo para acciones repetidas — para situaciones o estados usa 'used to'.",
+    ],
     forms: {
       affirmative: { s: "sujeto + would + verbo (base)", ex: ["My grandfather would tell us stories for hours."] },
       negative: { s: "sujeto + wouldn't + verbo (base)", ex: ["She wouldn't eat anything green."] },
@@ -491,10 +528,11 @@ export const GRAMMAR = [
     es: "La voz pasiva",
     level: "b1",
     group: "other",
+    gist: "Cuando lo importante es la acción o la cosa, no quién la hizo.",
     uses: [
-      "Cuando la acción o el objeto importan más que quién la hace: The bridge was built in 1890.",
-      "Cuando no se sabe o no interesa el agente: My bike has been stolen.",
-      "En textos formales, científicos y noticias.",
+      "No se sabe o no interesa quién: My bike has been stolen.",
+      "La cosa importa más que la persona: This bridge was built in 1890.",
+      "En noticias y textos formales: The new law was approved yesterday.",
     ],
     forms: {
       affirmative: { s: "objeto + be (en el tiempo correspondiente) + verbo (participio)  (+ by + agente)", ex: ["The letter was written by Ana.", "This bridge is used by thousands of people."] },
@@ -512,6 +550,9 @@ export const GRAMMAR = [
       "Future (will) → will be + verbo (participio)",
       "Modales → can/must/should be + verbo (participio)",
     ].join("\n"),
-    notes: ["Solo los verbos transitivos (con objeto) tienen pasiva.", "El agente (by…) se omite muy a menudo."],
+    notes: [
+      "Solo funciona con verbos que llevan objeto (algo o alguien que recibe la acción).",
+      "Casi siempre se omite 'by + quién lo hizo'.",
+    ],
   },
 ];

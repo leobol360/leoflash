@@ -31,9 +31,9 @@ export default function Grammar() {
       <div className="card">
         <h2>Grammar · English tenses &amp; structures</h2>
         <p className="muted small">
-          Todas las estructuras de los tiempos verbales y sus formas
-          (afirmativa, negativa, interrogativa) con ejemplos. Explicaciones en
-          español, ejemplos en inglés.
+          Los tiempos verbales explicados con palabras sencillas: para qué sirve
+          cada uno, cuándo usarlo y cómo se forma (afirmativa, negativa y
+          pregunta), con ejemplos. Explicaciones en español, ejemplos en inglés.
         </p>
       </div>
 
@@ -96,8 +96,10 @@ function GrammarCard({ g, open, onToggle }) {
 
       {open && (
         <div className="gr-body">
+          {g.gist && <p className="gr-gist">{g.gist}</p>}
+
           <div className="gr-block">
-            <h4>Se usa para</h4>
+            <h4>¿Cuándo se usa?</h4>
             <ul className="gr-uses">
               {g.uses.map((u, i) => (
                 <li key={i}>{u}</li>
@@ -127,7 +129,11 @@ function GrammarCard({ g, open, onToggle }) {
 
           {g.signals && g.signals.length > 0 && (
             <div className="gr-block">
-              <h4>Marcadores temporales</h4>
+              <h4>Palabras que suelen acompañarlo</h4>
+              <p className="gr-hint">
+                Si ves alguna de estas palabras en una frase, casi siempre te está
+                pidiendo este tiempo verbal.
+              </p>
               <div className="gr-signals">
                 {g.signals.map((s, i) => (
                   <span className="chip" key={i}>

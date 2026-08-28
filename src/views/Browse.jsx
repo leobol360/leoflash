@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { VOCAB, ACTIVE_THEMES, THEMES } from "../data.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
+import WordForms from "../components/WordForms.jsx";
 
 export default function Browse({ onOpenLevels }) {
   const store = useStore();
@@ -94,6 +95,7 @@ export default function Browse({ onOpenLevels }) {
               <div className="es">{v.es}</div>
               <div className="def">{v.def}</div>
               <div className="ex">“{v.ex}”</div>
+              <WordForms word={v.word} pos={v.pos} />
               <div className="theme-tag">
                 {THEMES[v.theme].icon} {THEMES[v.theme].label}
               </div>
