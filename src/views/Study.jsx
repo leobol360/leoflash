@@ -10,7 +10,7 @@ import {
   checkTyped,
   projectedDays,
 } from "../session.js";
-import { Sentence, Example } from "../components/ui.jsx";
+import { Sentence, Example, Glossable } from "../components/ui.jsx";
 import WordForms from "../components/WordForms.jsx";
 
 const STREAK_MILESTONES = [3, 7, 14, 21, 30, 50, 75, 100, 150, 200, 300, 365];
@@ -250,6 +250,14 @@ export default function Study({ queue, onExit, onKeepGoing }) {
   );
 }
 
+// Small caption under a grade button: when the card will come back.
+function backIn(days) {
+  const s = fmtInterval(days);
+  if (s === "today") return "back today";
+  if (s === "removed") return "removed";
+  return `back in ${s}`;
+}
+
 /* ---------- flashcard (new word) ---------- */
 function LearnCard({ v, card, stage, onReveal, onGrade }) {
   const revealed = stage === "revealed";
@@ -277,7 +285,7 @@ function LearnCard({ v, card, stage, onReveal, onGrade }) {
           </div>
           <div className="flip-face back">
             <div className="fc-es">{v.es}</div>
-            <div className="fc-def">{v.def}</div>
+            <div className="fc-def"><Glossable text={v.def} /></div>
             <div className="fc-ex">
               <Example text={v.ex} word={v.word} onSpeak={(t) => Speech.say(t)} />
             </div>
@@ -299,19 +307,18 @@ function LearnCard({ v, card, stage, onReveal, onGrade }) {
             <div className="ask-label">Did you know it?</div>
             <div className="grade-row four">
               <button className="btn grade g0" onClick={() => onGrade(0)}>
-                No<small>{fmtInterval(projectedDays(card, 0))}</small>
+                No<small>{backIn(projectedDays(card, 0))}</small>
               </button>
               <button className="btn grade g1" onClick={() => onGrade(1)}>
-                Almost<small>{fmtInterval(projectedDays(card, 1))}</small>
+                Almost<small>{backIn(projectedDays(card, 1))}</small>
               </button>
               <button className="btn grade g2" onClick={() => onGrade(2)}>
-                Yes<small>{fmtInterval(projectedDays(card, 2))}</small>
+                Yes<small>{backIn(projectedDays(card, 2))}</small>
               </button>
               <button className="btn grade gN" onClick={() => onGrade("never")}>
                 Never<small>never again</small>
               </button>
             </div>
-            <div className="kbd-hint">Keys 1–4 · Never = you already know it</div>
           </>
         )}
       </div>
@@ -478,7 +485,7 @@ function Feedback({ v, feedback }) {
       <div className="fb-es">
         {v.es} · <span className="muted">{v.pos}</span>
       </div>
-      <div className="fb-def">{v.def}</div>
+      <div className="fb-def"><Glossable text={v.def} /></div>
       <div className="fb-ex">
         <Example text={v.ex} word={v.word} onSpeak={(t) => Speech.say(t)} />
       </div>

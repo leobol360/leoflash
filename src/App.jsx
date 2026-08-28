@@ -136,7 +136,10 @@ export default function App() {
         </header>
       )}
 
-      <main>{body}</main>
+      <main>
+        {body}
+        {showNav && <footer className="site-credit">By Leonardo Pineda</footer>}
+      </main>
 
       {showNav && (
         <nav className="tabbar">
