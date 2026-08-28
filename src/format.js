@@ -5,7 +5,7 @@ export function clamp(n, a, b) {
 }
 
 // "tomorrow" / "in 3 days" / "Sat 30 Aug" for a YYYY-MM-DD date string.
-export function relDate(dateStr) {
+export function formatRelativeDate(dateStr) {
   if (!dateStr) return "—";
   const d = new Date(dateStr + "T00:00:00");
   const today = new Date();
@@ -18,7 +18,7 @@ export function relDate(dateStr) {
 }
 
 // Human-readable spaced-repetition interval.
-export function fmtInterval(days) {
+export function formatInterval(days) {
   if (days <= 0) return "today";
   if (days < 1.5) return "1 day";
   if (days < 10) return Math.round(days) + " days";

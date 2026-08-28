@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { VOCAB, THEMES } from "../data.js";
+import { VOCAB, LEVELS } from "../data.js";
 import { Store } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
-import { fmtInterval, relDate } from "../format.js";
+import { formatInterval, formatRelativeDate } from "../format.js";
 import {
   pickMode,
   choiceOptions,
@@ -15,12 +15,18 @@ import WordForms from "../components/WordForms.jsx";
 
 const STREAK_MILESTONES = [3, 7, 14, 21, 30, 50, 75, 100, 150, 200, 300, 365];
 
+// keyboard shortcut -> grade on a revealed new-word card
+const NEW_WORD_GRADE_KEYS = { 1: 0, 2: 1, 3: 2, 4: "never" };
+
+const AUTO_SPEAK_DELAY_MS = 250;
+const LISTEN_MODE_SPEAK_DELAY_MS = 300;
+
 export default function Study({ queue, onExit, onKeepGoing }) {
   const store = useStore();
   const total = queue.length;
   const startedAt = useRef(Date.now());
 
-  const [idx, setIdx] = useState(0);
+  const [position, setPosition] = useState(0);
   const [done, setDone] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [stage, setStage] = useState("prompt"); // learn: prompt | revealed
@@ -28,62 +34,62 @@ export default function Study({ queue, onExit, onKeepGoing }) {
   const [feedback, setFeedback] = useState(null); // { grade, almost }
   const [typed, setTyped] = useState("");
 
-  const finished = idx >= total;
-  const id = finished ? null : queue[idx];
-  const v = useMemo(() => (id ? VOCAB.find((x) => x.id === id) : null), [id]);
+  const finished = position >= total;
+  const id = finished ? null : queue[position];
+  const entry = useMemo(() => (id ? VOCAB.find((word) => word.id === id) : null), [id]);
   const mode = useMemo(() => (id ? pickMode(Store.data.cards[id]) : null), [id]);
-  const options = useMemo(() => (v && mode === "choice" ? choiceOptions(v) : []), [id, mode]);
+  const options = useMemo(() => (entry && mode === "choice" ? choiceOptions(entry) : []), [id, mode]);
 
   // reset per-card state + audio
   useEffect(() => {
-    if (!v) return;
+    if (!entry) return;
     setStage("prompt");
     setAnswered(false);
     setFeedback(null);
     setTyped("");
-    const s = Store.settings();
-    if (mode === "learn" && s.autoSpeak) {
-      const t = setTimeout(() => Speech.say(v.word), 250);
-      return () => clearTimeout(t);
+    const settings = Store.settings();
+    if (mode === "learn" && settings.autoSpeak) {
+      const timer = setTimeout(() => Speech.say(entry.word), AUTO_SPEAK_DELAY_MS);
+      return () => clearTimeout(timer);
     }
     if (mode === "listen") {
-      const t = setTimeout(() => Speech.say(v.word), 300);
-      return () => clearTimeout(t);
+      const timer = setTimeout(() => Speech.say(entry.word), LISTEN_MODE_SPEAK_DELAY_MS);
+      return () => clearTimeout(timer);
     }
   }, [id, mode]);
 
   const advance = () => {
-    setDone((d) => d + 1);
-    setIdx((i) => i + 1);
+    setDone((n) => n + 1);
+    setPosition((n) => n + 1);
   };
 
-  const gradeLearn = (g) => {
-    if (g === "never") {
+  const gradeNewWord = (grade) => {
+    if (grade === "never") {
       Store.markKnown(id);
-      setCorrect((c) => c + 1);
+      setCorrect((n) => n + 1);
     } else {
-      Store.grade(id, g, false);
-      if (g >= 2) setCorrect((c) => c + 1);
+      Store.grade(id, grade, false);
+      if (grade >= 2) setCorrect((n) => n + 1);
     }
     advance();
   };
 
   const submitAnswer = () => {
-    const res = checkTyped(typed, v.word);
-    if (!res) return;
-    Store.grade(id, res.grade, true);
-    if (res.grade >= 2) setCorrect((c) => c + 1);
-    setFeedback(res);
+    const result = checkTyped(typed, entry.word);
+    if (!result) return;
+    Store.grade(id, result.grade, true);
+    if (result.grade >= 2) setCorrect((n) => n + 1);
+    setFeedback(result);
     setAnswered(true);
-    if (mode !== "choice") Speech.say(v.word);
+    if (mode !== "choice") Speech.say(entry.word);
   };
 
-  const chooseOption = (opt) => {
+  const chooseOption = (option) => {
     if (answered) return;
-    const ok = opt.id === v.id;
-    Store.grade(id, ok ? 2 : 0, true);
-    if (ok) setCorrect((c) => c + 1);
-    setFeedback({ grade: ok ? 2 : 0, almost: false, picked: opt.id });
+    const isCorrect = option.id === entry.id;
+    Store.grade(id, isCorrect ? 2 : 0, true);
+    if (isCorrect) setCorrect((n) => n + 1);
+    setFeedback({ grade: isCorrect ? 2 : 0, almost: false, picked: option.id });
     setAnswered(true);
   };
 
@@ -95,7 +101,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
   /* ---- keyboard ---- */
   useEffect(() => {
     const onKey = (e) => {
-      if (finished || !v) return;
+      if (finished || !entry) return;
       const inInput =
         document.activeElement && document.activeElement.tagName === "INPUT";
       if (e.key === " " && mode === "learn" && stage === "prompt" && !inInput) {
@@ -103,14 +109,13 @@ export default function Study({ queue, onExit, onKeepGoing }) {
         setStage("revealed");
         return;
       }
-      if (mode === "learn" && stage === "revealed" && ["1", "2", "3"].includes(e.key)) {
+      if (
+        mode === "learn" &&
+        stage === "revealed" &&
+        Object.hasOwn(NEW_WORD_GRADE_KEYS, e.key)
+      ) {
         e.preventDefault();
-        gradeLearn(+e.key - 1);
-        return;
-      }
-      if (mode === "learn" && stage === "revealed" && e.key === "4") {
-        e.preventDefault();
-        gradeLearn("never");
+        gradeNewWord(NEW_WORD_GRADE_KEYS[e.key]);
         return;
       }
       if (answered && e.key === "Enter" && mode !== "learn") {
@@ -118,7 +123,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
         advance();
         return;
       }
-      if (e.key.toLowerCase() === "s" && !inInput) Speech.say(v.word);
+      if (e.key.toLowerCase() === "s" && !inInput) Speech.say(entry.word);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -126,16 +131,16 @@ export default function Study({ queue, onExit, onKeepGoing }) {
 
   /* ---- finish screen ---- */
   if (finished) {
-    const secs = Math.round((Date.now() - startedAt.current) / 1000);
-    const acc = total ? Math.round((correct / total) * 100) : 0;
-    const sum = store.dueSummary();
+    const elapsedSeconds = Math.round((Date.now() - startedAt.current) / 1000);
+    const accuracy = total ? Math.round((correct / total) * 100) : 0;
+    const summary = store.dueSummary();
     const name = store.settings().name;
     const streak = store.data.streak;
     const isBestStreak = streak >= 3 && streak === (store.data.maxStreak || 0);
     const milestone = STREAK_MILESTONES.includes(streak);
-    const doneForToday = sum.due === 0 && sum.newLeft === 0;
+    const doneForToday = summary.due === 0 && summary.newLeft === 0;
 
-    const emoji = milestone ? "🏅" : doneForToday ? "🎉" : acc >= 90 ? "🏆" : acc >= 70 ? "🎉" : "💪";
+    const emoji = milestone ? "🏅" : doneForToday ? "🎉" : accuracy >= 90 ? "🏆" : accuracy >= 70 ? "🎉" : "💪";
     const heading = milestone
       ? `${streak} days in a row!`
       : doneForToday
@@ -149,8 +154,8 @@ export default function Study({ queue, onExit, onKeepGoing }) {
           <h1>{heading}</h1>
           <div className="done-stats">
             <div><b>{total}</b><span>cards</span></div>
-            <div><b>{acc}%</b><span>correct</span></div>
-            <div><b>{Math.floor(secs / 60)}m {secs % 60}s</b><span>time</span></div>
+            <div><b>{accuracy}%</b><span>correct</span></div>
+            <div><b>{Math.floor(elapsedSeconds / 60)}m {elapsedSeconds % 60}s</b><span>time</span></div>
           </div>
 
           <p className="done-streak">
@@ -161,23 +166,23 @@ export default function Study({ queue, onExit, onKeepGoing }) {
           {doneForToday ? (
             <p className="muted">
               You've cleared the queue.
-              {sum.nextDue ? ` Next review ${relDate(sum.nextDue)}.` : ""}
+              {summary.nextDue ? ` Next review ${formatRelativeDate(summary.nextDue)}.` : ""}
               {" "}Come back tomorrow to keep the streak going.
             </p>
           ) : (
             <p className="muted">
-              {sum.due} card{sum.due === 1 ? "" : "s"} still due
-              {sum.newLeft > 0 ? ` · ${sum.newLeft} new word${sum.newLeft === 1 ? "" : "s"} left today` : ""}.
+              {summary.due} card{summary.due === 1 ? "" : "s"} still due
+              {summary.newLeft > 0 ? ` · ${summary.newLeft} new word${summary.newLeft === 1 ? "" : "s"} left today` : ""}.
             </p>
           )}
 
           <div className="done-actions">
-            {(sum.due > 0 || sum.newLeft > 0) && (
+            {(summary.due > 0 || summary.newLeft > 0) && (
               <button className="btn btn-primary" onClick={() => onKeepGoing({})}>
                 Keep going
               </button>
             )}
-            {doneForToday && sum.aheadAvailable && (
+            {doneForToday && summary.aheadAvailable && (
               <button className="btn btn-primary" onClick={() => onKeepGoing({ ahead: true })}>
                 Study ahead
               </button>
@@ -210,17 +215,17 @@ export default function Study({ queue, onExit, onKeepGoing }) {
       <div className="stage">
         {mode === "learn" && (
           <LearnCard
-            v={v}
+            entry={entry}
             card={card}
             stage={stage}
             onReveal={() => setStage("revealed")}
-            onGrade={gradeLearn}
+            onGrade={gradeNewWord}
           />
         )}
 
         {(mode === "type" || mode === "gap" || mode === "listen") && (
           <TypedCard
-            v={v}
+            entry={entry}
             mode={mode}
             typed={typed}
             setTyped={setTyped}
@@ -235,7 +240,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
 
         {mode === "choice" && (
           <ChoiceCard
-            v={v}
+            entry={entry}
             options={options}
             answered={answered}
             feedback={feedback}
@@ -252,14 +257,14 @@ export default function Study({ queue, onExit, onKeepGoing }) {
 
 // Small caption under a grade button: when the card will come back.
 function backIn(days) {
-  const s = fmtInterval(days);
-  if (s === "today") return "back today";
-  if (s === "removed") return "removed";
-  return `back in ${s}`;
+  const label = formatInterval(days);
+  if (label === "today") return "back today";
+  if (label === "removed") return "removed";
+  return `back in ${label}`;
 }
 
 /* ---------- flashcard (new word) ---------- */
-function LearnCard({ v, card, stage, onReveal, onGrade }) {
+function LearnCard({ entry, card, stage, onReveal, onGrade }) {
   const revealed = stage === "revealed";
   return (
     <>
@@ -267,16 +272,16 @@ function LearnCard({ v, card, stage, onReveal, onGrade }) {
       <div className={"flip" + (revealed ? " flipped" : "")} onClick={() => !revealed && onReveal()}>
         <div className="flip-inner">
           <div className="flip-face front">
-            <div className="fc-word">{v.word}</div>
+            <div className="fc-word">{entry.word}</div>
             <div className="fc-ipa">
-              {v.ipa ? v.ipa + " · " : ""}
-              <span className="muted">{v.pos}</span>
+              {entry.ipa ? entry.ipa + " · " : ""}
+              <span className="muted">{entry.pos}</span>
             </div>
             <button
               className="icon-btn big-speak"
               onClick={(e) => {
                 e.stopPropagation();
-                Speech.say(v.word);
+                Speech.say(entry.word);
               }}
             >
               🔊
@@ -284,14 +289,14 @@ function LearnCard({ v, card, stage, onReveal, onGrade }) {
             <div className="fc-hint">Press Space to see the meaning</div>
           </div>
           <div className="flip-face back">
-            <div className="fc-es">{v.es}</div>
-            <div className="fc-def"><Glossable text={v.def} /></div>
+            <div className="fc-es">{entry.es}</div>
+            <div className="fc-def"><Glossable text={entry.def} /></div>
             <div className="fc-ex">
-              <Example text={v.ex} word={v.word} onSpeak={(t) => Speech.say(t)} />
+              <Example text={entry.ex} word={entry.word} onSpeak={(t) => Speech.say(t)} />
             </div>
-            <WordForms word={v.word} pos={v.pos} onSpeak={(t) => Speech.say(t)} />
+            <WordForms word={entry.word} pos={entry.pos} onSpeak={(t) => Speech.say(t)} />
             <div className="theme-tag">
-              {THEMES[v.theme].icon} {THEMES[v.theme].label}
+              {LEVELS[entry.level].icon} {LEVELS[entry.level].label}
             </div>
           </div>
         </div>
@@ -327,13 +332,13 @@ function LearnCard({ v, card, stage, onReveal, onGrade }) {
 }
 
 /* ---------- typed answer (type / gap / listen) ---------- */
-function TypedCard({ v, mode, typed, setTyped, answered, feedback, onSubmit, onAdvance, onNever, card }) {
+function TypedCard({ entry, mode, typed, setTyped, answered, feedback, onSubmit, onAdvance, onNever, card }) {
   const inputRef = useRef(null);
   useEffect(() => {
     if (!answered) inputRef.current?.focus();
-  }, [answered, v.id]);
+  }, [answered, entry.id]);
 
-  const tag =
+  const promptLabel =
     mode === "type"
       ? "Type the English word"
       : mode === "gap"
@@ -342,11 +347,11 @@ function TypedCard({ v, mode, typed, setTyped, answered, feedback, onSubmit, onA
 
   return (
     <>
-      <div className="mode-tag">{tag}</div>
+      <div className="mode-tag">{promptLabel}</div>
 
       {mode === "listen" ? (
         <div className="listen-box">
-          <button className="icon-btn huge-speak" onClick={() => Speech.say(v.word)}>
+          <button className="icon-btn huge-speak" onClick={() => Speech.say(entry.word)}>
             🔊
           </button>
           <p className="muted">Tap to hear it again</p>
@@ -354,19 +359,19 @@ function TypedCard({ v, mode, typed, setTyped, answered, feedback, onSubmit, onA
       ) : mode === "gap" ? (
         <div className="prompt-box">
           <div className="gap-sentence">
-            <Sentence text={v.ex} word={v.word} blank />
+            <Sentence text={entry.ex} word={entry.word} blank />
           </div>
           <div className="p-def muted">
-            {v.es} — {v.def}
+            {entry.es} — {entry.def}
           </div>
         </div>
       ) : (
         <div className="prompt-box">
-          <div className="p-es">{v.es}</div>
-          <div className="p-def">{v.def}</div>
+          <div className="p-es">{entry.es}</div>
+          <div className="p-def">{entry.def}</div>
           <div className="p-pos muted">
-            {v.pos}
-            {v.word.includes(" ") ? " · two words" : ""}
+            {entry.pos}
+            {entry.word.includes(" ") ? " · two words" : ""}
           </div>
         </div>
       )}
@@ -395,7 +400,7 @@ function TypedCard({ v, mode, typed, setTyped, answered, feedback, onSubmit, onA
         </button>
       </form>
 
-      {feedback && <Feedback v={v} feedback={feedback} />}
+      {feedback && <Feedback entry={entry} feedback={feedback} />}
 
       {answered && (
         <div className="controls">
@@ -404,7 +409,7 @@ function TypedCard({ v, mode, typed, setTyped, answered, feedback, onSubmit, onA
           </button>
           <div className="post-answer">
             <span className="muted small">
-              Next review in {fmtInterval((card && card.interval) || 1)}
+              Next review in {formatInterval((card && card.interval) || 1)}
             </span>
             <button className="btn btn-ghost tiny-btn" onClick={onNever}>
               I already know this — never repeat
@@ -417,36 +422,36 @@ function TypedCard({ v, mode, typed, setTyped, answered, feedback, onSubmit, onA
 }
 
 /* ---------- multiple choice ---------- */
-function ChoiceCard({ v, options, answered, feedback, onChoose, onAdvance, onNever, card }) {
+function ChoiceCard({ entry, options, answered, feedback, onChoose, onAdvance, onNever, card }) {
   return (
     <>
       <div className="mode-tag">Choose the right word</div>
       <div className="prompt-box">
-        <div className="p-es">{v.es}</div>
-        <div className="p-def">{v.def}</div>
+        <div className="p-es">{entry.es}</div>
+        <div className="p-def">{entry.def}</div>
       </div>
 
       <div className="choice-grid">
-        {options.map((o) => {
-          let cls = "choice-btn";
+        {options.map((option) => {
+          let className = "choice-btn";
           if (answered) {
-            if (o.id === v.id) cls += " right";
-            else if (feedback && feedback.picked === o.id) cls += " wrong";
+            if (option.id === entry.id) className += " right";
+            else if (feedback && feedback.picked === option.id) className += " wrong";
           }
           return (
             <button
-              key={o.id}
-              className={cls}
+              key={option.id}
+              className={className}
               disabled={answered}
-              onClick={() => onChoose(o)}
+              onClick={() => onChoose(option)}
             >
-              {o.word}
+              {option.word}
             </button>
           );
         })}
       </div>
 
-      {feedback && <Feedback v={v} feedback={feedback} />}
+      {feedback && <Feedback entry={entry} feedback={feedback} />}
 
       {answered && (
         <div className="controls">
@@ -455,7 +460,7 @@ function ChoiceCard({ v, options, answered, feedback, onChoose, onAdvance, onNev
           </button>
           <div className="post-answer">
             <span className="muted small">
-              Next review in {fmtInterval((card && card.interval) || 1)}
+              Next review in {formatInterval((card && card.interval) || 1)}
             </span>
             <button className="btn btn-ghost tiny-btn" onClick={onNever}>
               I already know this — never repeat
@@ -467,29 +472,29 @@ function ChoiceCard({ v, options, answered, feedback, onChoose, onAdvance, onNev
   );
 }
 
-function Feedback({ v, feedback }) {
-  const ok = feedback.grade > 0;
+function Feedback({ entry, feedback }) {
+  const isCorrect = feedback.grade > 0;
   const almost = !!feedback.almost;
-  const cls = ok ? (almost ? "fb-almost" : "fb-ok") : "fb-bad";
-  const head = ok ? (almost ? "Almost — spelling" : "Correct!") : "Not quite";
+  const className = isCorrect ? (almost ? "fb-almost" : "fb-ok") : "fb-bad";
+  const heading = isCorrect ? (almost ? "Almost — spelling" : "Correct!") : "Not quite";
   return (
-    <div className={"feedback " + cls}>
-      <div className="fb-head">{head}</div>
+    <div className={"feedback " + className}>
+      <div className="fb-head">{heading}</div>
       <div className="fb-word">
-        <b>{v.word}</b>
-        {v.ipa && <span className="ipa">{v.ipa}</span>}
-        <button className="icon-btn" onClick={() => Speech.say(v.word)}>
+        <b>{entry.word}</b>
+        {entry.ipa && <span className="ipa">{entry.ipa}</span>}
+        <button className="icon-btn" onClick={() => Speech.say(entry.word)}>
           🔊
         </button>
       </div>
       <div className="fb-es">
-        {v.es} · <span className="muted">{v.pos}</span>
+        {entry.es} · <span className="muted">{entry.pos}</span>
       </div>
-      <div className="fb-def"><Glossable text={v.def} /></div>
+      <div className="fb-def"><Glossable text={entry.def} /></div>
       <div className="fb-ex">
-        <Example text={v.ex} word={v.word} onSpeak={(t) => Speech.say(t)} />
+        <Example text={entry.ex} word={entry.word} onSpeak={(t) => Speech.say(t)} />
       </div>
-      <WordForms word={v.word} pos={v.pos} onSpeak={(t) => Speech.say(t)} />
+      <WordForms word={entry.word} pos={entry.pos} onSpeak={(t) => Speech.say(t)} />
     </div>
   );
 }

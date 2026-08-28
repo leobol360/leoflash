@@ -18,95 +18,96 @@ const NAV = [
   { id: "settings", label: "Settings", icon: "⚙️" },
 ];
 
+const VIEWS = ["home", "browse", "grammar", "stats", "settings"];
+
 export default function App() {
   const store = useStore();
-  const s = store.settings();
-  const VIEWS = ["home", "browse", "grammar", "stats", "settings"];
+  const settings = store.settings();
   const [view, setView] = useState(() => {
-    const h = location.hash.replace("#", "");
-    return VIEWS.includes(h) ? h : "home";
+    const hash = location.hash.replace("#", "");
+    return VIEWS.includes(hash) ? hash : "home";
   });
   const [session, setSession] = useState(null); // { queue, key } | null
   const [pickingLevels, setPickingLevels] = useState(false);
 
   // keep <html> theme attributes in sync
   useEffect(() => {
-    document.documentElement.dataset.appTheme = s.theme;
-    document.documentElement.dataset.accent = s.accent;
-  }, [s.theme, s.accent]);
+    document.documentElement.dataset.appTheme = settings.theme;
+    document.documentElement.dataset.accent = settings.accent;
+  }, [settings.theme, settings.accent]);
 
   // simple hash routing for the top-level views
   useEffect(() => {
-    const onHash = () => {
-      const h = location.hash.replace("#", "");
-      if (VIEWS.includes(h)) {
+    const onHashChange = () => {
+      const hash = location.hash.replace("#", "");
+      if (VIEWS.includes(hash)) {
         setSession(null);
         setPickingLevels(false);
-        setView(h);
+        setView(hash);
       }
     };
-    window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
 
-  const go = (v) => {
+  const navigate = (nextView) => {
     setSession(null);
     setPickingLevels(false);
-    setView(v);
-    if (VIEWS.includes(v)) location.hash = v;
+    setView(nextView);
+    if (VIEWS.includes(nextView)) location.hash = nextView;
   };
 
   const startSession = (opts) => {
-    const q = buildSessionQueue(opts);
-    if (q.length === 0) {
+    const queue = buildSessionQueue(opts);
+    if (queue.length === 0) {
       alert(
         "You've studied every word in your loaded levels. Add another level in the level picker, or come back when reviews are due."
       );
       return;
     }
     setPickingLevels(false);
-    setSession({ queue: q, key: Date.now() });
+    setSession({ queue, key: Date.now() });
     setView("study");
   };
 
   // first run: force the level picker
-  const needsLevels = !s.levelsChosen;
+  const needsLevels = !settings.levelsChosen;
 
-  let body;
+  let screen;
   if (needsLevels) {
-    body = <LevelPicker firstRun onDone={() => go("home")} />;
+    screen = <LevelPicker firstRun onDone={() => navigate("home")} />;
   } else if (pickingLevels) {
-    body = (
+    screen = (
       <LevelPicker
         onDone={() => setPickingLevels(false)}
         onCancel={() => setPickingLevels(false)}
       />
     );
   } else if (view === "study" && session) {
-    body = (
+    screen = (
       <Study
         key={session.key}
         queue={session.queue}
-        onExit={() => go("home")}
+        onExit={() => navigate("home")}
         onKeepGoing={(opts) => startSession(opts || {})}
       />
     );
   } else if (view === "stats") {
-    body = <Stats />;
+    screen = <Stats />;
   } else if (view === "browse") {
-    body = <Browse onOpenLevels={() => setPickingLevels(true)} />;
+    screen = <Browse onOpenLevels={() => setPickingLevels(true)} />;
   } else if (view === "grammar") {
-    body = <Grammar />;
+    screen = <Grammar />;
   } else if (view === "settings") {
-    body = (
+    screen = (
       <Settings
         onOpenLevels={() => setPickingLevels(true)}
-        onRestored={() => go("home")}
-        onReset={() => go("home")}
+        onRestored={() => navigate("home")}
+        onReset={() => navigate("home")}
       />
     );
   } else {
-    body = <Home onStart={startSession} onOpenLevels={() => setPickingLevels(true)} />;
+    screen = <Home onStart={startSession} onOpenLevels={() => setPickingLevels(true)} />;
   }
 
   const showNav = !needsLevels;
@@ -123,13 +124,13 @@ export default function App() {
             </span>
           </div>
           <nav className="nav">
-            {NAV.map((n) => (
+            {NAV.map((item) => (
               <button
-                key={n.id}
-                className={"nav-btn" + (activeNav === n.id ? " active" : "")}
-                onClick={() => go(n.id)}
+                key={item.id}
+                className={"nav-btn" + (activeNav === item.id ? " active" : "")}
+                onClick={() => navigate(item.id)}
               >
-                {n.label}
+                {item.label}
               </button>
             ))}
           </nav>
@@ -137,20 +138,20 @@ export default function App() {
       )}
 
       <main>
-        {body}
+        {screen}
         {showNav && <footer className="site-credit">By Leonardo Pineda</footer>}
       </main>
 
       {showNav && (
         <nav className="tabbar">
-          {NAV.map((n) => (
+          {NAV.map((item) => (
             <button
-              key={n.id}
-              className={"nav-btn" + (activeNav === n.id ? " active" : "")}
-              onClick={() => go(n.id)}
+              key={item.id}
+              className={"nav-btn" + (activeNav === item.id ? " active" : "")}
+              onClick={() => navigate(item.id)}
             >
-              <span>{n.icon}</span>
-              {n.label}
+              <span>{item.icon}</span>
+              {item.label}
             </button>
           ))}
         </nav>

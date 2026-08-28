@@ -1,43 +1,43 @@
 import { useRef } from "react";
-import { ACTIVE_THEMES } from "../data.js";
-import { Store, srsUtil } from "../store.js";
+import { ACTIVE_LEVELS } from "../data.js";
+import { Store, todayStr } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
 import { clamp } from "../format.js";
 
 export default function Settings({ onOpenLevels, onRestored, onReset }) {
   const store = useStore();
-  const s = store.settings();
-  const st = store.stats();
-  const fileRef = useRef(null);
-  const themeKeys = Object.keys(ACTIVE_THEMES);
-  const enabled = s.themesEnabled || themeKeys;
-  const idle = store.lastActivityDays();
+  const settings = store.settings();
+  const stats = store.stats();
+  const fileInput = useRef(null);
+  const allLevelKeys = Object.keys(ACTIVE_LEVELS);
+  const enabledLevels = settings.enabledLevels || allLevelKeys;
+  const idleDays = store.lastActivityDays();
 
-  const set = (patch) => {
-    Object.assign(s, patch);
+  const update = (patch) => {
+    Object.assign(settings, patch);
     Store.save();
   };
 
-  const toggleLevel = (k) => {
-    const chosen = new Set(enabled);
-    chosen.has(k) ? chosen.delete(k) : chosen.add(k);
+  const toggleLevel = (level) => {
+    const chosen = new Set(enabledLevels);
+    chosen.has(level) ? chosen.delete(level) : chosen.add(level);
     if (chosen.size === 0) return; // keep at least one
     const list = [...chosen];
-    s.themesEnabled = list.length === themeKeys.length ? null : list;
-    s.levelsChosen = true;
+    settings.enabledLevels = list.length === allLevelKeys.length ? null : list;
+    settings.levelsChosen = true;
     Store.save();
   };
 
   const download = () => {
-    const blob = new Blob([Store.exportBlob()], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `leoflash-backup-${srsUtil.todayStr()}.json`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    const blob = new Blob([Store.exportJSON()], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `leoflash-backup-${todayStr()}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(link.href), 1000);
   };
 
   const restore = (e) => {
@@ -74,9 +74,9 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
             type="text"
             placeholder="Your name"
             maxLength={24}
-            value={s.name}
-            onChange={(e) => set({ name: e.target.value })}
-            onBlur={(e) => set({ name: e.target.value.trim() })}
+            value={settings.name}
+            onChange={(e) => update({ name: e.target.value })}
+            onBlur={(e) => update({ name: e.target.value.trim() })}
           />
         </label>
 
@@ -93,14 +93,14 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
             type="number"
             min="1"
             max="200"
-            value={s.newPerDay}
-            onChange={(e) => set({ newPerDay: clamp(+e.target.value || 1, 1, 200) })}
+            value={settings.newPerDay}
+            onChange={(e) => update({ newPerDay: clamp(+e.target.value || 1, 1, 200) })}
           />
         </label>
 
         <label className="field">
           <span>Theme</span>
-          <select value={s.theme} onChange={(e) => set({ theme: e.target.value })}>
+          <select value={settings.theme} onChange={(e) => update({ theme: e.target.value })}>
             <option value="dark">Dark</option>
             <option value="light">Light</option>
           </select>
@@ -108,10 +108,10 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
 
         <label className="field">
           <span>Accent colour</span>
-          <select value={s.accent} onChange={(e) => set({ accent: e.target.value })}>
-            {["violet", "emerald", "sky", "amber", "rose"].map((a) => (
-              <option value={a} key={a}>
-                {a}
+          <select value={settings.accent} onChange={(e) => update({ accent: e.target.value })}>
+            {["violet", "emerald", "sky", "amber", "rose"].map((color) => (
+              <option value={color} key={color}>
+                {color}
               </option>
             ))}
           </select>
@@ -119,11 +119,11 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
 
         <label className="field">
           <span>Pronunciation voice</span>
-          <select value={s.voice} onChange={(e) => set({ voice: e.target.value })}>
+          <select value={settings.voice} onChange={(e) => update({ voice: e.target.value })}>
             <option value="">Auto (English)</option>
-            {Speech.voices().map((v) => (
-              <option value={v.name} key={v.name}>
-                {v.name} ({v.lang})
+            {Speech.voices().map((voice) => (
+              <option value={voice.name} key={voice.name}>
+                {voice.name} ({voice.lang})
               </option>
             ))}
           </select>
@@ -132,8 +132,8 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
         <label className="field checkbox">
           <input
             type="checkbox"
-            checked={s.autoSpeak}
-            onChange={(e) => set({ autoSpeak: e.target.checked })}
+            checked={settings.autoSpeak}
+            onChange={(e) => update({ autoSpeak: e.target.checked })}
           />
           <span>Speak the word automatically on flashcards</span>
         </label>
@@ -144,15 +144,15 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
           words; your history per word is kept either way.
         </p>
         <div className="topic-toggles">
-          {Object.entries(ACTIVE_THEMES).map(([k, m]) => (
-            <label className="chip-toggle" key={k}>
+          {Object.entries(ACTIVE_LEVELS).map(([key, level]) => (
+            <label className="chip-toggle" key={key}>
               <input
                 type="checkbox"
-                checked={enabled.includes(k)}
-                onChange={() => toggleLevel(k)}
+                checked={enabledLevels.includes(key)}
+                onChange={() => toggleLevel(key)}
               />
               <span>
-                {m.icon} {m.label}
+                {level.icon} {level.label}
               </span>
             </label>
           ))}
@@ -170,11 +170,11 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
           <button className="btn" onClick={download}>
             ⬇︎ Download backup
           </button>
-          <button className="btn" onClick={() => fileRef.current.click()}>
+          <button className="btn" onClick={() => fileInput.current.click()}>
             ⬆︎ Restore from file
           </button>
           <input
-            ref={fileRef}
+            ref={fileInput}
             type="file"
             accept="application/json,.json"
             hidden
@@ -182,13 +182,13 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
           />
         </div>
         <p className="muted small">
-          You have started {st.seen} of {st.total} words · {st.reviews} reviews so
+          You have started {stats.seen} of {stats.total} words · {stats.reviews} reviews so
           far
-          {idle == null
+          {idleDays == null
             ? ""
-            : idle === 0
+            : idleDays === 0
             ? " · studied today"
-            : ` · last studied ${idle} day${idle === 1 ? "" : "s"} ago`}
+            : ` · last studied ${idleDays} day${idleDays === 1 ? "" : "s"} ago`}
         </p>
 
         <div className="danger-zone">

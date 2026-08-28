@@ -16,24 +16,24 @@ import { fileURLToPath } from "node:url";
 import { dirname, join, relative } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const { VOCAB, THEMES } = await import(join(__dirname, "..", "src", "data.js"));
+const { VOCAB, LEVELS } = await import(join(__dirname, "..", "src", "data.js"));
 
 const OUT = join(__dirname, "..", "data");
 mkdirSync(OUT, { recursive: true });
 
-const pick = (v) => ({
-  word: v.word,
-  pos: v.pos,
-  ipa: v.ipa || "",
-  es: v.es,
-  def: v.def,
-  ex: v.ex,
-  level: v.level,
-  rank: v.rank,
+const pick = (entry) => ({
+  word: entry.word,
+  pos: entry.pos,
+  ipa: entry.ipa || "",
+  es: entry.es,
+  def: entry.def,
+  ex: entry.ex,
+  level: entry.level,
+  rank: entry.rank,
 });
 
 const byLevel = {};
-for (const v of VOCAB) (byLevel[v.level] ||= []).push(pick(v));
+for (const entry of VOCAB) (byLevel[entry.level] ||= []).push(pick(entry));
 
 const manifest = {
   generatedAt: new Date().toISOString(),
@@ -41,11 +41,11 @@ const manifest = {
   levels: [],
 };
 
-for (const [key, meta] of Object.entries(THEMES)) {
+for (const [key, level] of Object.entries(LEVELS)) {
   const rows = byLevel[key] || [];
   const file = `vocab.${key}.json`;
   writeFileSync(join(OUT, file), JSON.stringify(rows, null, 2) + "\n");
-  manifest.levels.push({ key, label: meta.label, icon: meta.icon, count: rows.length, file });
+  manifest.levels.push({ key, label: level.label, icon: level.icon, count: rows.length, file });
   console.log(`  ${file.padEnd(22)} ${rows.length} words`);
 }
 

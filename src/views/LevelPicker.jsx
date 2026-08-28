@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { ACTIVE_THEMES } from "../data.js";
+import { ACTIVE_LEVELS } from "../data.js";
 import { Store } from "../store.js";
 import { useStore } from "../useStore.js";
 
 export default function LevelPicker({ firstRun, onDone, onCancel }) {
   const store = useStore();
-  const s = store.settings();
-  const initial = s.themesEnabled || (s.levelsChosen ? Object.keys(ACTIVE_THEMES) : ["a1"]);
+  const settings = store.settings();
+  const initial = settings.enabledLevels || (settings.levelsChosen ? Object.keys(ACTIVE_LEVELS) : ["a1"]);
   const [chosen, setChosen] = useState(new Set(initial));
-  const [name, setName] = useState(s.name || "");
+  const [name, setName] = useState(settings.name || "");
 
-  const toggle = (k) => {
+  const toggle = (level) => {
     setChosen((prev) => {
       const next = new Set(prev);
-      next.has(k) ? next.delete(k) : next.add(k);
+      next.has(level) ? next.delete(level) : next.add(level);
       return next;
     });
   };
@@ -23,11 +23,11 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
 
   const save = () => {
     if (!canSave) return;
-    const all = Object.keys(ACTIVE_THEMES);
+    const allLevelKeys = Object.keys(ACTIVE_LEVELS);
     const list = [...chosen];
-    s.themesEnabled = list.length === all.length ? null : list;
-    s.levelsChosen = true;
-    if (firstRun) s.name = name.trim();
+    settings.enabledLevels = list.length === allLevelKeys.length ? null : list;
+    settings.levelsChosen = true;
+    if (firstRun) settings.name = name.trim();
     Store.save();
     onDone();
   };
@@ -68,21 +68,21 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
         </p>
 
         <div className="level-list">
-          {Object.entries(ACTIVE_THEMES).map(([k, meta]) => {
-            const tp = store.topicProgress(k);
+          {Object.entries(ACTIVE_LEVELS).map(([key, level]) => {
+            const progress = store.levelProgress(key);
             return (
-              <label className="level-row" key={k}>
+              <label className="level-row" key={key}>
                 <input
                   type="checkbox"
-                  checked={chosen.has(k)}
-                  onChange={() => toggle(k)}
+                  checked={chosen.has(key)}
+                  onChange={() => toggle(key)}
                 />
-                <span className="level-ic">{meta.icon}</span>
+                <span className="level-ic">{level.icon}</span>
                 <span className="level-main">
-                  <span className="level-name">{meta.label}</span>
+                  <span className="level-name">{level.label}</span>
                   <span className="level-sub muted">
-                    {tp.total} words
-                    {tp.started ? ` · ${tp.started} started` : ""}
+                    {progress.total} words
+                    {progress.started ? ` · ${progress.started} started` : ""}
                   </span>
                 </span>
               </label>

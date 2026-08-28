@@ -14,7 +14,9 @@
        npm run export-levels
    ============================================================ */
 
-const THEMES = {
+// The bands the deck is grouped by: the four CEFR levels plus a thematic
+// "Software & IT" track. Keyed by the value stored on each word's `level`.
+const LEVELS = {
   a1:       { label: "A1 · Beginner",           icon: "🌱" },
   a2:       { label: "A2 · Elementary",         icon: "🌿" },
   b1:       { label: "B1 · Intermediate",       icon: "🌳" },
@@ -3479,39 +3481,43 @@ const SOFTWARE_RAW = [
 ];
 
 const VOCAB = [];
-const _seen = new Set();
-let _rank = 0;
-const _slug = (w) => w.toLowerCase().trim();
+const seenSlugs = new Set();
+let rank = 0;
+const slugify = (word) => word.toLowerCase().trim();
 
+// A word can only appear once; the first occurrence wins and its rank
+// (frequency order) is what levelOf() maps to a CEFR level.
 VOCAB_RAW.forEach((row) => {
-  const key = _slug(row[0]);
-  if (_seen.has(key)) return;          // skip accidental duplicates
-  _seen.add(key);
-  _rank++;
-  const level = levelOf(_rank);
+  const id = slugify(row[0]);
+  if (seenSlugs.has(id)) return;       // skip accidental duplicates
+  seenSlugs.add(id);
+  rank++;
   VOCAB.push({
-    id: key,                           // stable id = the word itself (survives reordering)
+    id,                                // stable id = the word itself (survives reordering)
     word: row[0], pos: row[1], ipa: "",
     es: row[2], def: row[3], ex: row[4],
-    theme: level, level, rank: _rank,
+    level: levelOf(rank), rank,
   });
 });
 SOFTWARE_RAW.forEach((row) => {
-  const key = _slug(row[0]);
-  if (_seen.has(key)) return;
-  _seen.add(key);
+  const id = slugify(row[0]);
+  if (seenSlugs.has(id)) return;
+  seenSlugs.add(id);
   VOCAB.push({
-    id: key,
+    id,
     word: row[0], pos: row[1], ipa: row[2],
     es: row[3], def: row[4], ex: row[5],
-    theme: "software", level: "software", rank: 99999,
+    level: "software", rank: 99999,
   });
 });
 
-// themes that actually contain at least one word (bands fill up over time)
-const _themeCounts = VOCAB.reduce((a, v) => ((a[v.theme] = (a[v.theme] || 0) + 1), a), {});
-const ACTIVE_THEMES = Object.fromEntries(
-  Object.entries(THEMES).filter(([k]) => _themeCounts[k] > 0)
+// levels that actually contain at least one word (bands fill up over time)
+const levelCounts = VOCAB.reduce((counts, entry) => {
+  counts[entry.level] = (counts[entry.level] || 0) + 1;
+  return counts;
+}, {});
+const ACTIVE_LEVELS = Object.fromEntries(
+  Object.entries(LEVELS).filter(([key]) => levelCounts[key] > 0)
 );
 
-export { THEMES, ACTIVE_THEMES, VOCAB, levelOf };
+export { LEVELS, ACTIVE_LEVELS, VOCAB, levelOf };
