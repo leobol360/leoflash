@@ -4,6 +4,7 @@
    ============================================================ */
 
 import { VOCAB, ACTIVE_LEVELS } from "./data.js";
+import { PHRASES } from "./phrases.js";
 
 const STORAGE_KEY = "leoflash";
 // older key names, read once and migrated into STORAGE_KEY so progress carries over
@@ -20,6 +21,12 @@ const LEARNED_INTERVAL_DAYS = 7;   // interval at which a card counts as "learne
 const MIN_STARTED_MASTERY = 0.08;  // a touched-but-weak card still shows some progress
 const REVIEWS_PER_NEW_WORD = 2.5;  // rough reviews each new word generates once ramped
 const MIN_DAILY_GOAL = 10;         // floor for the daily activity target
+
+// Phrase practice uses a simple Leitner box: days until a phrase comes
+// back, indexed by box (0 = brand new / just missed, 6 = well known).
+const PHRASE_BOX_DAYS = [0, 1, 2, 4, 8, 16, 30];
+const PHRASE_MASTERED_BOX = 6;
+const PHRASE_SESSION_SIZE = 10;
 
 /* ---- tiny pub/sub so the UI can react to changes ---- */
 let revision = 0;
@@ -91,6 +98,7 @@ function migrate(data) {
   }
 
   data.maxStreak = Math.max(data.maxStreak || 0, data.streak || 0);
+  data.phraseCards = data.phraseCards || {}; // id -> Leitner progress for phrase practice
   return data;
 }
 
@@ -462,6 +470,84 @@ const Store = {
       studiedToday: this.data.lastStudied === todayStr(),
       today: this.logToday(),
     };
+  },
+
+  /* ---- phrase practice (Leitner) ----------------------- */
+  phraseCard(id) {
+    if (!this.data.phraseCards[id]) {
+      this.data.phraseCards[id] = {
+        id,
+        box: 0,
+        due: todayStr(),
+        seen: false,
+        correct: 0,
+        attempts: 0,
+        lastReviewed: null,
+      };
+    }
+    return this.data.phraseCards[id];
+  },
+
+  // "new" | "learning" | "review" | "mastered" for the reference list badges
+  phraseStatus(id) {
+    const card = this.data.phraseCards[id];
+    if (!card || !card.seen) return "new";
+    if (card.box >= PHRASE_MASTERED_BOX) return "mastered";
+    if (card.box >= 3) return "review";
+    return "learning";
+  },
+
+  phraseStats() {
+    let learning = 0, review = 0, mastered = 0, seen = 0;
+    for (const phrase of PHRASES) {
+      const status = this.phraseStatus(phrase.id);
+      if (status === "new") continue;
+      seen++;
+      if (status === "mastered") mastered++;
+      else if (status === "review") review++;
+      else learning++;
+    }
+    return { total: PHRASES.length, seen, learning, review, mastered };
+  },
+
+  // Phrases for one practice round: those due for review first (most
+  // overdue first), then unseen ones, capped at PHRASE_SESSION_SIZE.
+  buildPhraseSession(size = PHRASE_SESSION_SIZE) {
+    const today = todayStr();
+    const due = [];
+    const fresh = [];
+    for (const phrase of PHRASES) {
+      const card = this.data.phraseCards[phrase.id];
+      if (!card || !card.seen) fresh.push(phrase);
+      else if (card.due <= today) due.push(phrase);
+    }
+    due.sort((a, b) =>
+      this.data.phraseCards[a.id].due.localeCompare(this.data.phraseCards[b.id].due)
+    );
+    shuffle(fresh);
+    return [...due, ...fresh].slice(0, size);
+  },
+
+  // A random round ignoring the schedule (used when nothing is due).
+  randomPhraseSession(size = PHRASE_SESSION_SIZE) {
+    return shuffle([...PHRASES]).slice(0, size);
+  },
+
+  // Grade one answered phrase: right -> next box, wrong -> back to box 1.
+  gradePhrase(id, wasCorrect) {
+    const card = this.phraseCard(id);
+    card.seen = true;
+    card.attempts++;
+    if (wasCorrect) {
+      card.correct++;
+      card.box = Math.min(PHRASE_MASTERED_BOX, card.box + 1);
+    } else {
+      card.box = 1;
+    }
+    card.due = addDays(todayStr(), PHRASE_BOX_DAYS[card.box]);
+    card.lastReviewed = todayStr();
+    this.save();
+    return card;
   },
 };
 
