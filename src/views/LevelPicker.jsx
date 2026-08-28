@@ -8,6 +8,7 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
   const s = store.settings();
   const initial = s.themesEnabled || (s.levelsChosen ? Object.keys(ACTIVE_THEMES) : ["a1"]);
   const [chosen, setChosen] = useState(new Set(initial));
+  const [name, setName] = useState(s.name || "");
 
   const toggle = (k) => {
     setChosen((prev) => {
@@ -17,12 +18,16 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
     });
   };
 
+  const nameOk = !firstRun || name.trim().length > 0;
+  const canSave = chosen.size > 0 && nameOk;
+
   const save = () => {
-    if (chosen.size === 0) return alert("Choose at least one level.");
+    if (!canSave) return;
     const all = Object.keys(ACTIVE_THEMES);
     const list = [...chosen];
     s.themesEnabled = list.length === all.length ? null : list;
     s.levelsChosen = true;
+    if (firstRun) s.name = name.trim();
     Store.save();
     onDone();
   };
@@ -31,9 +36,32 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
     <div className="page">
       <div className="card level-picker">
         <p className="eyebrow">CEFR · A1 → B2</p>
-        <h1>{firstRun ? "Which levels do you want to load?" : "Levels loaded into your study"}</h1>
+        <h1>
+          {firstRun
+            ? name.trim()
+              ? `Welcome, ${name.trim()}!`
+              : "Welcome to LeoFlash"
+            : "Levels loaded into your study"}
+        </h1>
+
+        {firstRun && (
+          <label className="name-field">
+            <span>What should we call you? <em className="req">(required)</em></span>
+            <input
+              type="text"
+              placeholder="Your name"
+              value={name}
+              maxLength={24}
+              autoComplete="off"
+              autoFocus
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+        )}
+
         <p className="muted">
-          Pick one or more. The words come from your project's{" "}
+          {firstRun ? "Now pick the levels you want to load. " : "Pick one or more. "}
+          The words come from your project's{" "}
           <code>data/vocab.&lt;level&gt;.json</code> files and go into this
           browser's storage, where your repetition history builds up. You can add
           levels later without losing progress.
@@ -63,7 +91,7 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
         </div>
 
         <div className="hero-actions">
-          <button className="btn btn-primary big" onClick={save}>
+          <button className="btn btn-primary big" onClick={save} disabled={!canSave}>
             {firstRun ? "Load and start" : "Save"}
           </button>
           {!firstRun && (
@@ -72,6 +100,11 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
             </button>
           )}
         </div>
+        {firstRun && !canSave && (
+          <p className="muted small">
+            {!nameOk ? "Enter your name to continue." : "Choose at least one level."}
+          </p>
+        )}
       </div>
     </div>
   );

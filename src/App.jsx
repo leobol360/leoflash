@@ -88,7 +88,7 @@ export default function App() {
         key={session.key}
         queue={session.queue}
         onExit={() => go("home")}
-        onKeepGoing={() => startSession({})}
+        onKeepGoing={(opts) => startSession(opts || {})}
       />
     );
   } else if (view === "stats") {

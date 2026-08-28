@@ -3,7 +3,7 @@ import { VOCAB, THEMES } from "../data.js";
 import { Store } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
-import { fmtInterval } from "../format.js";
+import { fmtInterval, relDate } from "../format.js";
 import {
   pickMode,
   choiceOptions,
@@ -11,6 +11,8 @@ import {
   projectedDays,
 } from "../session.js";
 import { Sentence } from "../components/ui.jsx";
+
+const STREAK_MILESTONES = [3, 7, 14, 21, 30, 50, 75, 100, 150, 200, 300, 365];
 
 export default function Study({ queue, onExit, onKeepGoing }) {
   const store = useStore();
@@ -126,35 +128,57 @@ export default function Study({ queue, onExit, onKeepGoing }) {
     const secs = Math.round((Date.now() - startedAt.current) / 1000);
     const acc = total ? Math.round((correct / total) * 100) : 0;
     const sum = store.dueSummary();
+    const name = store.settings().name;
+    const streak = store.data.streak;
+    const isBestStreak = streak >= 3 && streak === (store.data.maxStreak || 0);
+    const milestone = STREAK_MILESTONES.includes(streak);
+    const doneForToday = sum.due === 0 && sum.newLeft === 0;
+
+    const emoji = milestone ? "🏅" : doneForToday ? "🎉" : acc >= 90 ? "🏆" : acc >= 70 ? "🎉" : "💪";
+    const heading = milestone
+      ? `${streak} days in a row!`
+      : doneForToday
+      ? `That's everything for today${name ? `, ${name}` : ""}!`
+      : "Session complete";
+
     return (
       <div className="study">
         <div className="done-card card">
-          <div className="done-emoji">{acc >= 90 ? "🏆" : acc >= 70 ? "🎉" : "💪"}</div>
-          <h1>Session complete</h1>
+          <div className="done-emoji">{emoji}</div>
+          <h1>{heading}</h1>
           <div className="done-stats">
-            <div>
-              <b>{total}</b>
-              <span>cards</span>
-            </div>
-            <div>
-              <b>{acc}%</b>
-              <span>correct</span>
-            </div>
-            <div>
-              <b>
-                {Math.floor(secs / 60)}m {secs % 60}s
-              </b>
-              <span>time</span>
-            </div>
+            <div><b>{total}</b><span>cards</span></div>
+            <div><b>{acc}%</b><span>correct</span></div>
+            <div><b>{Math.floor(secs / 60)}m {secs % 60}s</b><span>time</span></div>
           </div>
-          <p className="muted">
-            {store.data.streak} day streak · {sum.due} card
-            {sum.due === 1 ? "" : "s"} still due today
+
+          <p className="done-streak">
+            🔥 {streak}-day streak
+            {isBestStreak && <span className="badge-best"> new best!</span>}
           </p>
+
+          {doneForToday ? (
+            <p className="muted">
+              You've cleared the queue.
+              {sum.nextDue ? ` Next review ${relDate(sum.nextDue)}.` : ""}
+              {" "}Come back tomorrow to keep the streak going.
+            </p>
+          ) : (
+            <p className="muted">
+              {sum.due} card{sum.due === 1 ? "" : "s"} still due
+              {sum.newLeft > 0 ? ` · ${sum.newLeft} new word${sum.newLeft === 1 ? "" : "s"} left today` : ""}.
+            </p>
+          )}
+
           <div className="done-actions">
             {(sum.due > 0 || sum.newLeft > 0) && (
-              <button className="btn btn-primary" onClick={onKeepGoing}>
+              <button className="btn btn-primary" onClick={() => onKeepGoing({})}>
                 Keep going
+              </button>
+            )}
+            {doneForToday && sum.aheadAvailable && (
+              <button className="btn btn-primary" onClick={() => onKeepGoing({ ahead: true })}>
+                Study ahead
               </button>
             )}
             <button className="btn btn-ghost" onClick={onExit}>

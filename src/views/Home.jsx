@@ -48,7 +48,11 @@ export default function Home({ onStart, onOpenLevels }) {
       <div className="hero card">
         <div className="hero-left">
           <p className="eyebrow">{eyebrow} · Vocabulary trainer</p>
-          <h1>Ready for today's practice?</h1>
+          <h1>
+            {s.name
+              ? `Ready for today's practice, ${s.name}?`
+              : "Ready for today's practice?"}
+          </h1>
           <p className="muted">{statusLine}</p>
           <div className="hero-actions">
             {canStart ? (

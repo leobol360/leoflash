@@ -5,8 +5,9 @@
 
 import { VOCAB, ACTIVE_THEMES } from "./data.js";
 
-// kept as-is on the LeoFlash rename so existing progress is not lost
-const STORE_KEY = "flashb1.v2";
+const STORE_KEY = "leoflash";
+// older key names, read once and migrated into STORE_KEY so progress carries over
+const LEGACY_STORE_KEYS = ["flashb1.v2"];
 
 /* ---- tiny pub/sub so the UI can react to changes ---- */
 let _version = 0;
@@ -17,6 +18,7 @@ function _emit() {
 }
 
 const DEFAULT_SETTINGS = {
+  name: "",             // the learner's name, for a personalised greeting
   newPerDay: 15,        // the ONE configurable number: new words to learn each day
   theme: "dark",        // "dark" | "light"
   accent: "violet",
@@ -54,6 +56,20 @@ const Store = {
   load() {
     let raw = null;
     try { raw = localStorage.getItem(STORE_KEY); } catch (e) {}
+    if (!raw) {
+      // first run after a key rename: move the old data over, then drop the old key
+      for (const k of LEGACY_STORE_KEYS) {
+        try {
+          const old = localStorage.getItem(k);
+          if (old) {
+            raw = old;
+            localStorage.setItem(STORE_KEY, old);
+            localStorage.removeItem(k);
+            break;
+          }
+        } catch (e) {}
+      }
+    }
     if (raw) {
       try { this.data = JSON.parse(raw); } catch (e) { this.data = null; }
     }
@@ -69,6 +85,7 @@ const Store = {
     }
     // fill any missing settings after an update
     this.data.settings = { ...DEFAULT_SETTINGS, ...this.data.settings };
+    this.data.maxStreak = Math.max(this.data.maxStreak || 0, this.data.streak || 0);
     this.migrateIds();
     this.save();
     return this.data;
@@ -354,6 +371,20 @@ const Store = {
     if (this.data.lastStudied === addDays(d, -1)) this.data.streak++;
     else this.data.streak = 1;
     this.data.lastStudied = d;
+    this.data.maxStreak = Math.max(this.data.maxStreak || 0, this.data.streak);
+  },
+
+  // last `n` days for the Stats activity strip; `active` = studied that day
+  activityDays(n = 35) {
+    const out = [];
+    const today = todayStr();
+    for (let i = n - 1; i >= 0; i--) {
+      const day = addDays(today, -i);
+      const l = this.data.log[day];
+      const reviews = l ? l.reviews : 0;
+      out.push({ day, reviews, active: reviews > 0 });
+    }
+    return out;
   },
 
   /* ---- global stats ------------------------------------- */
@@ -374,7 +405,10 @@ const Store = {
     const accuracy = reviews ? Math.round((correct / reviews) * 100) : 0;
     return {
       total, seen: cards.length, learned, mature,
-      reviews, accuracy, streak: this.data.streak,
+      reviews, accuracy,
+      streak: this.data.streak,
+      maxStreak: this.data.maxStreak || this.data.streak || 0,
+      studiedToday: this.data.lastStudied === todayStr(),
       today: this.logToday(),
     };
   },

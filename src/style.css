@@ -505,6 +505,45 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 .gr-notes { border-left: 2px solid var(--warn); padding-left: 12px; }
 .gr-notes h4 { color: var(--warn); }
 
+/* ---- session-complete extras ---- */
+.done-streak { font-size: 1.05rem; font-weight: 600; margin: 2px 0; }
+.badge-best {
+  font-size: .72rem; font-weight: 700; color: var(--accent-strong);
+  border: 1px solid var(--accent); border-radius: 999px; padding: 2px 8px; margin-left: 6px;
+}
+
+/* ---- first-run name field ---- */
+.name-field { display: flex; flex-direction: column; gap: 6px; margin: 14px 0 4px; }
+.name-field span { font-size: .9rem; color: var(--muted); }
+.name-field .req { font-style: normal; color: var(--accent-strong); font-size: .82rem; }
+.btn:disabled { opacity: .45; cursor: not-allowed; filter: none; }
+.name-field input {
+  font: inherit; font-size: 1.05rem; padding: 11px 14px; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); max-width: 320px;
+}
+.name-field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* ============================================================
+   STATS — streak card
+   ============================================================ */
+.streak-card { display: flex; flex-direction: column; gap: 14px; }
+.streak-big { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.streak-num { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 600; line-height: 1; }
+.streak-flame { font-size: 1.6rem; }
+.streak-label { font-size: .95rem; color: var(--muted); }
+.streak-warn { color: var(--warn); font-style: normal; }
+
+.streak-strip { display: flex; flex-wrap: wrap; gap: 4px; }
+.streak-cell {
+  width: 16px; height: 16px; border-radius: 4px;
+  background: var(--border);
+}
+.streak-cell.on { background: color-mix(in srgb, var(--accent) 45%, transparent); }
+.streak-cell.run { background: var(--accent); }
+@supports not (background: color-mix(in srgb, red, blue)) {
+  .streak-cell.on { background: var(--accent-soft); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
   .flip-inner { transition: none !important; }

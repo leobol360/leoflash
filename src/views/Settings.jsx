@@ -69,6 +69,18 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
         <h2>Settings</h2>
 
         <label className="field">
+          <span>Your name</span>
+          <input
+            type="text"
+            placeholder="Your name"
+            maxLength={24}
+            value={s.name}
+            onChange={(e) => set({ name: e.target.value })}
+            onBlur={(e) => set({ name: e.target.value.trim() })}
+          />
+        </label>
+
+        <label className="field">
           <span>
             New words per day
             <small className="field-hint">
