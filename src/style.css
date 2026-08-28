@@ -260,6 +260,14 @@ main { padding-bottom: 120px; padding-top: 8px; }
 .fc-def { font-size: 1rem; max-width: 34ch; }
 .fc-ex { font-style: italic; color: var(--muted); max-width: 40ch; }
 
+/* "read the example aloud" button */
+.ex-line { display: inline; }
+.ex-speak {
+  background: none; border: 0; cursor: pointer; padding: 0 0 0 4px;
+  font-size: .8em; opacity: .5; vertical-align: baseline; line-height: 1;
+}
+.ex-speak:hover { opacity: 1; }
+
 .theme-tag {
   font-size: .72rem; color: var(--muted); background: var(--surface-2);
   border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px;

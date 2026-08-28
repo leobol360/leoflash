@@ -18,6 +18,28 @@ export function Sentence({ text, word, blank }) {
   );
 }
 
+// Example sentence in quotes with a "read it aloud" button.
+export function Example({ text, word, onSpeak }) {
+  return (
+    <span className="ex-line">
+      “<Sentence text={text} word={word} />”
+      {onSpeak && (
+        <button
+          type="button"
+          className="ex-speak"
+          title="Escuchar la frase"
+          onClick={(e) => {
+            e.stopPropagation();
+            onSpeak(text);
+          }}
+        >
+          🔊
+        </button>
+      )}
+    </span>
+  );
+}
+
 export function Ring({ value, max, label, sub }) {
   const p = Math.min(100, Math.round((value / Math.max(1, max)) * 100));
   return (

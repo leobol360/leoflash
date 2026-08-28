@@ -10,7 +10,7 @@ import {
   checkTyped,
   projectedDays,
 } from "../session.js";
-import { Sentence } from "../components/ui.jsx";
+import { Sentence, Example } from "../components/ui.jsx";
 import WordForms from "../components/WordForms.jsx";
 
 const STREAK_MILESTONES = [3, 7, 14, 21, 30, 50, 75, 100, 150, 200, 300, 365];
@@ -279,7 +279,7 @@ function LearnCard({ v, card, stage, onReveal, onGrade }) {
             <div className="fc-es">{v.es}</div>
             <div className="fc-def">{v.def}</div>
             <div className="fc-ex">
-              “<Sentence text={v.ex} word={v.word} />”
+              <Example text={v.ex} word={v.word} onSpeak={(t) => Speech.say(t)} />
             </div>
             <WordForms word={v.word} pos={v.pos} onSpeak={(t) => Speech.say(t)} />
             <div className="theme-tag">
@@ -480,7 +480,7 @@ function Feedback({ v, feedback }) {
       </div>
       <div className="fb-def">{v.def}</div>
       <div className="fb-ex">
-        “<Sentence text={v.ex} word={v.word} />”
+        <Example text={v.ex} word={v.word} onSpeak={(t) => Speech.say(t)} />
       </div>
       <WordForms word={v.word} pos={v.pos} onSpeak={(t) => Speech.say(t)} />
     </div>

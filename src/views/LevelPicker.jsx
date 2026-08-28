@@ -60,11 +60,11 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
         )}
 
         <p className="muted">
-          {firstRun ? "Now pick the levels you want to load. " : "Pick one or more. "}
-          The words come from your project's{" "}
-          <code>data/vocab.&lt;level&gt;.json</code> files and go into this
-          browser's storage, where your repetition history builds up. You can add
-          levels later without losing progress.
+          {firstRun
+            ? "Now pick the levels you want to study. "
+            : "Pick one or more. "}
+          Your progress is saved in this browser, so you can add levels later
+          without losing anything.
         </p>
 
         <div className="level-list">
