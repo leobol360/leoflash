@@ -496,6 +496,9 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 @media (max-width: 520px) { .gr-form-row { grid-template-columns: 1fr; gap: 4px; } }
 .gr-form-label { font-size: .82rem; font-weight: 600; color: var(--accent-strong); padding-top: 3px; }
 .gr-form-content { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.gr-variant { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.gr-variant + .gr-variant { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
+.gr-variant-when { font-size: .78rem; font-weight: 600; color: var(--muted); }
 .gr-struct {
   display: inline-block; align-self: flex-start; max-width: 100%;
   background: var(--surface); border: 1px solid var(--border); border-radius: 8px;

@@ -98,7 +98,7 @@ export default function Browse({ onOpenLevels }) {
               <div className="ex">
                 <Example text={v.ex} word={v.word} onSpeak={(t) => Speech.say(t)} />
               </div>
-              <WordForms word={v.word} pos={v.pos} />
+              <WordForms word={v.word} pos={v.pos} onSpeak={(t) => Speech.say(t)} />
               <div className="theme-tag">
                 {THEMES[v.theme].icon} {THEMES[v.theme].label}
               </div>

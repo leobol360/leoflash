@@ -168,16 +168,26 @@ function GrammarCard({ g, open, onToggle }) {
 }
 
 function FormRow({ label, row }) {
+  // A form can have one pattern (row.s / row.ex) or several alternatives,
+  // each on its own line with a "when" subtitle (row.variants).
+  const variants = row.variants || [{ s: row.s, ex: row.ex }];
   return (
     <div className="gr-form-row">
       <div className="gr-form-label">{label}</div>
       <div className="gr-form-content">
-        <code className="gr-struct">{row.s}</code>
-        <div className="gr-form-ex">
-          {row.ex.map((e, i) => (
-            <div key={i}>“{e}”</div>
-          ))}
-        </div>
+        {variants.map((v, i) => (
+          <div className="gr-variant" key={i}>
+            {v.when && <div className="gr-variant-when">{v.when}</div>}
+            <code className="gr-struct">{v.s}</code>
+            {v.ex && v.ex.length > 0 && (
+              <div className="gr-form-ex">
+                {v.ex.map((e, j) => (
+                  <div key={j}>“{e}”</div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

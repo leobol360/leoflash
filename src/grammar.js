@@ -38,8 +38,18 @@ export const GRAMMAR = [
     ],
     forms: {
       affirmative: {
-        s: "sujeto + verbo (presente)   ·   3ª persona: + -s / -es",
-        ex: ["I work from home.", "She works from home."],
+        variants: [
+          {
+            when: "I / you / we / they",
+            s: "sujeto + verbo (base)",
+            ex: ["I work from home."],
+          },
+          {
+            when: "he / she / it (3ª persona)",
+            s: "sujeto + verbo + -s / -es",
+            ex: ["She works from home."],
+          },
+        ],
       },
       negative: {
         s: "sujeto + don't / doesn't + verbo (base)",
@@ -154,10 +164,23 @@ export const GRAMMAR = [
       "Costumbres de antes: When I was a child, I lived in Peru.",
     ],
     forms: {
-      affirmative: { s: "sujeto + verbo (pasado)   ·   regulares: -ed  ·  irregulares: forma propia", ex: ["We watched a film.", "I went home.", "She had a car."] },
+      affirmative: { s: "sujeto + verbo (pasado)", ex: ["We watched a film.", "I went home.", "She had a car."] },
       negative: { s: "sujeto + didn't + verbo (base)", ex: ["They didn't come.", "He didn't know."] },
       question: { s: "Did + sujeto + verbo (base)?", ex: ["Did you call her?", "Did it work?"] },
-      whQuestion: { s: "Wh- + did + sujeto + verbo (base)?  ·  sujeto: Who + verbo (pasado)?", ex: ["Where did you go?", "Who called you?"] },
+      whQuestion: {
+        variants: [
+          {
+            when: "Preguntando por un dato (dónde, cuándo, qué…)",
+            s: "Wh- + did + sujeto + verbo (base)?",
+            ex: ["Where did you go?"],
+          },
+          {
+            when: "Preguntando por el sujeto (quién / qué hizo la acción)",
+            s: "Who / What + verbo (pasado)?",
+            ex: ["Who called you?"],
+          },
+        ],
+      },
       short: ["Yes, I did. / No, I didn't."],
     },
     signals: ["yesterday", "last night/week/year", "… ago", "in 1999", "then", "when", "that day"],
@@ -299,7 +322,20 @@ export const GRAMMAR = [
       "Un horario oficial (present simple): The flight departs at 09:15.",
     ],
     forms: {
-      affirmative: { s: "sujeto + am/is/are + verbo (-ing)   ·   sujeto + verbo (presente)", ex: ["We're flying to Rome on Friday.", "The museum opens at ten tomorrow."] },
+      affirmative: {
+        variants: [
+          {
+            when: "Cita o plan personal (present continuous)",
+            s: "sujeto + am/is/are + verbo (-ing)",
+            ex: ["We're flying to Rome on Friday."],
+          },
+          {
+            when: "Horario o calendario oficial (present simple)",
+            s: "sujeto + verbo (presente)",
+            ex: ["The museum opens at ten tomorrow."],
+          },
+        ],
+      },
       negative: { s: "sujeto + am/is/are + not + verbo (-ing)", ex: ["I'm not working next Monday."] },
       question: { s: "Am/Is/Are + sujeto + verbo (-ing)?", ex: ["Are you doing anything on Saturday?"] },
     },
@@ -402,7 +438,20 @@ export const GRAMMAR = [
     ],
     forms: {
       affirmative: { s: "If + presente simple , will + verbo (base)", ex: ["If it rains, we'll stay in.", "If you help me, I'll finish sooner."] },
-      negative: { s: "If + presente , won't + verbo (base)   ·   Unless + presente , will…", ex: ["If you don't hurry, you'll miss the bus.", "Unless you leave now, you'll be late."] },
+      negative: {
+        variants: [
+          {
+            when: "Con if + verbo negativo",
+            s: "If + presente (negativo) , will + verbo (base)",
+            ex: ["If you don't hurry, you'll miss the bus."],
+          },
+          {
+            when: "Con unless (= si no)",
+            s: "Unless + presente (afirmativo) , will + verbo (base)",
+            ex: ["Unless you leave now, you'll be late."],
+          },
+        ],
+      },
       question: { s: "What will you do if + presente?", ex: ["What will you do if they say no?"] },
     },
     signals: ["if", "unless", "as soon as", "when", "in case"],
@@ -468,7 +517,20 @@ export const GRAMMAR = [
       "Presente → pasado: If I weren't so shy, I would have spoken up yesterday.",
     ],
     forms: {
-      affirmative: { s: "If + pasado perfecto , would + verbo (base)   ·   If + pasado simple , would have + verbo (participio)", ex: ["If she had saved money, she wouldn't be in debt now.", "If he were more careful, he wouldn't have crashed."] },
+      affirmative: {
+        variants: [
+          {
+            when: "Condición pasada → resultado ahora",
+            s: "If + pasado perfecto , would + verbo (base)",
+            ex: ["If she had saved money, she wouldn't be in debt now."],
+          },
+          {
+            when: "Condición general → resultado en el pasado",
+            s: "If + pasado simple , would have + verbo (participio)",
+            ex: ["If he were more careful, he wouldn't have crashed."],
+          },
+        ],
+      },
     },
     signals: ["if", "now", "still", "today"],
     passive: null,

@@ -19,7 +19,7 @@ function _emit() {
 
 const DEFAULT_SETTINGS = {
   name: "",             // the learner's name, for a personalised greeting
-  newPerDay: 15,        // the ONE configurable number: new words to learn each day
+  newPerDay: 20,        // the ONE configurable number: new words to learn each day
   theme: "dark",        // "dark" | "light"
   accent: "violet",
   voice: "",            // preferred speechSynthesis voice name
