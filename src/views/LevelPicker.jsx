@@ -9,6 +9,8 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
   const initial = settings.enabledLevels || (settings.levelsChosen ? Object.keys(ACTIVE_LEVELS) : ["a1"]);
   const [chosen, setChosen] = useState(new Set(initial));
   const [name, setName] = useState(settings.name || "");
+  // only ask for a name on a true first run — after a reset the name is kept
+  const askName = firstRun && !settings.name;
 
   const toggle = (level) => {
     setChosen((prev) => {
@@ -18,7 +20,7 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
     });
   };
 
-  const nameOk = !firstRun || name.trim().length > 0;
+  const nameOk = !askName || name.trim().length > 0;
   const canSave = chosen.size > 0 && nameOk;
 
   const save = () => {
@@ -27,7 +29,7 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
     const list = [...chosen];
     settings.enabledLevels = list.length === allLevelKeys.length ? null : list;
     settings.levelsChosen = true;
-    if (firstRun) settings.name = name.trim();
+    if (askName) settings.name = name.trim();
     Store.save();
     onDone();
   };
@@ -44,7 +46,7 @@ export default function LevelPicker({ firstRun, onDone, onCancel }) {
             : "Levels loaded into your study"}
         </h1>
 
-        {firstRun && (
+        {askName && (
           <label className="name-field">
             <span>What should we call you? <em className="req">(required)</em></span>
             <input

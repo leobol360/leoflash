@@ -135,7 +135,11 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
   };
 
   const reset = () => {
-    if (confirm("Delete ALL progress and start over?")) {
+    if (
+      confirm(
+        "Delete all your study progress and start over?\n\nYour name and preferences are kept; you'll be asked to pick your levels again."
+      )
+    ) {
       Store.reset();
       onReset();
     }
@@ -205,16 +209,48 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
         </label>
 
         <label className="field">
-          <span>Pronunciation voice</span>
+          <span>English accent</span>
+          <select
+            value={settings.voiceAccent}
+            onChange={(e) => update({ voiceAccent: e.target.value, voice: "" })}
+          >
+            <option value="any">Either</option>
+            <option value="us">American 🇺🇸</option>
+            <option value="gb">British 🇬🇧</option>
+          </select>
+        </label>
+
+        <label className="field">
+          <span>
+            Pronunciation voice
+            <small className="field-hint">
+              Only clear US / UK voices are listed; ✨ marks the best ones. The
+              list depends on your device.
+            </small>
+          </span>
           <select value={settings.voice} onChange={(e) => update({ voice: e.target.value })}>
-            <option value="">Auto (English)</option>
+            <option value="">Auto (best available)</option>
             {Speech.voices().map((voice) => (
               <option value={voice.name} key={voice.name}>
-                {voice.name} ({voice.lang})
+                {Speech.accentOf(voice) === "gb" ? "🇬🇧" : "🇺🇸"} {voice.name}
+                {Speech.isRecommended(voice) ? " ✨" : ""}
               </option>
             ))}
           </select>
         </label>
+
+        <button
+          type="button"
+          className="btn btn-ghost tiny-btn"
+          style={{ marginTop: 10 }}
+          onClick={() =>
+            Speech.say(
+              "Hi! This is how I sound. The quick brown fox jumps over the lazy dog."
+            )
+          }
+        >
+          🔊 Test voice
+        </button>
 
         <label className="field checkbox">
           <input
@@ -281,7 +317,9 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
         <div className="danger-zone">
           <h3>Reset</h3>
           <p className="muted">
-            This deletes all your progress, streak and stats. It cannot be undone.
+            This deletes all your study progress, streak and stats, and clears
+            your level selection. Your name and preferences stay. It cannot be
+            undone.
           </p>
           <div className="backup-row">
             <InstallButton />

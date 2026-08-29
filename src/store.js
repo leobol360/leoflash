@@ -45,6 +45,7 @@ const DEFAULT_SETTINGS = {
   theme: "dark",        // colour scheme: "dark" | "light"
   accent: "violet",
   voice: "",            // preferred speechSynthesis voice name
+  voiceAccent: "any",   // "us" | "gb" | "any" — which English accent to offer
   autoSpeak: true,
   enabledLevels: null,  // null = all levels; otherwise ["a1","a2",...] loaded into study
   levelsChosen: false,  // has the learner picked their levels yet?
@@ -190,10 +191,20 @@ const Store = {
   getVersion() { return revision; },
   touch() { notifyListeners(); },
 
+  // Wipe all study progress (cards, phrases, logs, streaks, stats) but keep
+  // the learner's profile — name and preferences. The level choice is
+  // cleared, so the level picker asks again.
   reset() {
+    const keptSettings = this.data?.settings ? { ...this.data.settings } : {};
     try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
     this.data = null;
-    return this.load();
+    this.load(); // fresh, empty data with default settings
+    Object.assign(this.data.settings, keptSettings, {
+      enabledLevels: null,
+      levelsChosen: false,
+    });
+    this.save();
+    return this.data;
   },
 
   /* ---- backup / restore -------------------------------- */
