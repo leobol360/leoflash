@@ -5,16 +5,20 @@ import { Store, todayStr, shuffle } from "./store.js";
 const NEVER_REPEAT_DAYS = 3650; // matches KNOWN_INTERVAL_DAYS in store.js
 
 // Build the list of card ids for a new session.
-// opts: { levelOnly?, limit?, allowAheadNew?, ahead? }
+// opts: { levelOnly?, limit?, allowAheadNew?, reviewOnly?, ahead? }
 //   ahead         → deliberately study upcoming work (past the daily cap /
 //                   before cards are due) when the scheduled queue is empty
-//   allowAheadNew → top the queue up to `limit` with unseen words (Quick 10)
+//   allowAheadNew → top the queue up to `limit` with more cards (Quick 10)
+//   reviewOnly    → when topping up, use only words you've already started
+//                   (pulled-forward reviews) — never introduce new words
 export function buildSessionQueue(opts = {}) {
   const today = todayStr();
   let queue;
 
   if (opts.levelOnly) {
-    const ids = VOCAB.filter((entry) => entry.level === opts.levelOnly)
+    const ids = VOCAB.filter(
+      (entry) => entry.level === opts.levelOnly && !Store.isRemoved(entry.id)
+    )
       .map((entry) => entry.id)
       .filter((id) => !(Store.data.cards[id] || {}).known);
     queue = ids.filter((id) => {
@@ -42,7 +46,10 @@ export function buildSessionQueue(opts = {}) {
       }
       shuffle(unseen);
       future.sort((a, b) => a[1].localeCompare(b[1])); // soonest review first
-      queue = queue.concat(unseen, future.map(([id]) => id));
+      const futureIds = future.map(([id]) => id);
+      queue = queue.concat(
+        opts.reviewOnly ? futureIds : [...unseen, ...futureIds]
+      );
     }
   }
 
@@ -68,13 +75,14 @@ export function pickMode(card) {
 
 // four multiple-choice options (correct + 3 distractors), shuffled
 export function choiceOptions(entry) {
+  const pickable = (x) => x.id !== entry.id && !Store.isRemoved(x.id);
   let distractors = shuffle(
-    VOCAB.filter((x) => x.id !== entry.id && x.pos === entry.pos)
+    VOCAB.filter((x) => pickable(x) && x.pos === entry.pos)
   ).slice(0, 3);
   if (distractors.length < 3) {
     distractors = distractors.concat(
       shuffle(
-        VOCAB.filter((x) => x.id !== entry.id && !distractors.includes(x))
+        VOCAB.filter((x) => pickable(x) && !distractors.includes(x))
       ).slice(0, 3 - distractors.length)
     );
   }

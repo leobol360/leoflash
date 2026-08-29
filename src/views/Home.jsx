@@ -1,45 +1,68 @@
+import { useState } from "react";
 import { ACTIVE_LEVELS } from "../data.js";
 import { useStore } from "../useStore.js";
 import { formatRelativeDate } from "../format.js";
 import { Ring, StatCard, ProgressBar } from "../components/ui.jsx";
+import DeckTable from "./DeckTable.jsx";
 
 export default function Home({ onStart, onOpenLevels }) {
   const store = useStore();
+  const [deckOpen, setDeckOpen] = useState(false);
   const settings = store.settings();
   const stats = store.stats();
   const summary = store.dueSummary();
   const loadedLevels = settings.enabledLevels || Object.keys(ACTIVE_LEVELS);
 
-  const canStart = summary.due + Math.min(summary.newLeft, settings.newPerDay) > 0;
   const eyebrow =
     loadedLevels.filter((key) => key !== "software").map((key) => key.toUpperCase()).join(" · ") || "CEFR";
 
   const notLoadedLevels = Object.keys(ACTIVE_LEVELS).filter((key) => !loadedLevels.includes(key));
 
+  // "Start studying" while today's new-word target isn't met; once it is,
+  // only "Quick 10" (reviews + a little extra) — never both at once.
+  const quotaDone = summary.newLeft === 0;
+  const canDoDaily = summary.unseen > 0 || summary.due > 0;
+  const somethingLeft = canDoDaily || summary.aheadAvailable;
+
+  let action = null;
+  if (!quotaDone && canDoDaily) {
+    action = { label: "Start studying", run: () => onStart({}) };
+  } else if (quotaDone && somethingLeft) {
+    // extra practice only — no new words past the daily target
+    action = {
+      label: "Quick 10",
+      run: () => onStart({ limit: 10, allowAheadNew: true, reviewOnly: true }),
+    };
+  } else if (notLoadedLevels.length > 0) {
+    action = { label: "Load a level", run: onOpenLevels };
+  }
+
   let statusLine;
-  if (canStart) {
+  if (!quotaDone && canDoDaily) {
     statusLine = (
       <>
-        {summary.due} card{summary.due === 1 ? "" : "s"} to review
-        {summary.newLeft > 0
-          ? ` · ${summary.newLeft} new word${summary.newLeft === 1 ? "" : "s"} today`
+        {summary.due > 0
+          ? `${summary.due} card${summary.due === 1 ? "" : "s"} to review · `
           : ""}
-        .
+        {summary.newLeft} new word{summary.newLeft === 1 ? "" : "s"} today.
       </>
     );
-  } else if (summary.aheadAvailable) {
+  } else if (quotaDone && somethingLeft) {
     statusLine = (
       <>
-        Today's {settings.newPerDay} new words are done — nice.{" "}
-        {summary.nextDue
-          ? `Next scheduled review: ${formatRelativeDate(summary.nextDue)}. `
-          : ""}
-        Want to keep going? <b>Study ahead</b> pulls the next batch now.
+        🎉 Today's {settings.newPerDay} new words — done! Nice work.
+        <br />
+        {summary.due > 0
+          ? `🔁 ${summary.due} review${summary.due === 1 ? "" : "s"} still waiting. `
+          : summary.nextDue
+          ? `🔁 Next review: ${formatRelativeDate(summary.nextDue)}. `
+          : "✨ All caught up. "}
+        <b>Quick 10</b> keeps you going 💪
       </>
     );
   } else {
     statusLine = (
-      <>You've studied every word in your loaded levels. Load another level, or come back tomorrow.</>
+      <>🌱 You've studied every word in your loaded levels — load another, or come back tomorrow.</>
     );
   }
 
@@ -54,27 +77,13 @@ export default function Home({ onStart, onOpenLevels }) {
               : "Ready for today's practice?"}
           </h1>
           <p className="muted">{statusLine}</p>
-          <div className="hero-actions">
-            {canStart ? (
-              <button className="btn btn-primary big" onClick={() => onStart({})}>
-                Start studying
+          {action && (
+            <div className="hero-actions">
+              <button className="btn btn-primary big" onClick={action.run}>
+                {action.label}
               </button>
-            ) : summary.aheadAvailable ? (
-              <button className="btn btn-primary big" onClick={() => onStart({ ahead: true })}>
-                Study ahead
-              </button>
-            ) : (
-              <button className="btn btn-primary big" onClick={onOpenLevels}>
-                Load a level
-              </button>
-            )}
-            <button
-              className="btn btn-ghost"
-              onClick={() => onStart({ limit: 10, allowAheadNew: true })}
-            >
-              Quick 10
-            </button>
-          </div>
+            </div>
+          )}
         </div>
         <Ring
           value={stats.today.newSeen}
@@ -150,6 +159,21 @@ export default function Home({ onStart, onOpenLevels }) {
             </button>
           )}
         </div>
+      </div>
+
+      <div className={"gr-card" + (deckOpen ? " open" : "")}>
+        <button className="gr-head" onClick={() => setDeckOpen((v) => !v)}>
+          <span className="gr-title">
+            Deck
+            <span className="gr-es"> · {stats.total} words · remove any you don't want</span>
+          </span>
+          <span className="gr-caret">{deckOpen ? "▲" : "▼"}</span>
+        </button>
+        {deckOpen && (
+          <div className="gr-body">
+            <DeckTable onOpenLevels={onOpenLevels} />
+          </div>
+        )}
       </div>
     </div>
   );

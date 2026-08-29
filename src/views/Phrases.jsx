@@ -4,6 +4,8 @@ import { LEVELS } from "../data.js";
 import { Store, shuffle } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
+import { Ring, StatCard } from "../components/ui.jsx";
+import { formatRelativeDate } from "../format.js";
 
 const CATEGORY = Object.fromEntries(PHRASE_CATEGORIES.map((c) => [c.key, c]));
 const LEVEL_ORDER = ["a1", "a2", "b1", "b2"];
@@ -15,9 +17,9 @@ const STATUS_LABEL = {
   mastered: "mastered",
 };
 
-// "vuelve mañana" / "vuelve en 4 días"
+// "back tomorrow" / "back in 4 days"
 const dueLabel = (days) =>
-  days <= 1 ? "vuelve mañana" : `vuelve en ${days} días`;
+  days <= 1 ? "back tomorrow" : `back in ${days} days`;
 
 export default function Phrases() {
   const [session, setSession] = useState(null); // null = browsing the list
@@ -26,6 +28,8 @@ export default function Phrases() {
     setSession({ id: Date.now(), phrases: Store.buildPhraseSession() });
   const startRandom = () =>
     setSession({ id: Date.now(), phrases: Store.randomPhraseSession() });
+  const startQuick = () =>
+    setSession({ id: Date.now(), phrases: Store.quickPhraseSession() });
 
   if (session) {
     if (session.phrases.length === 0) {
@@ -42,7 +46,112 @@ export default function Phrases() {
       />
     );
   }
-  return <Browse onPractice={start} />;
+  return <Browse onPractice={start} onQuick={startQuick} />;
+}
+
+/* ---------------- daily practice dashboard ---------------- */
+function PhraseHero({ onPractice, onQuick }) {
+  const store = useStore();
+  const perDay = store.newPhrasesPerDay();
+  const stats = store.phraseStats();
+  const summary = store.phraseDaySummary();
+
+  const quotaDone = summary.newLeft === 0;
+  const canPractice = summary.due > 0 || summary.unseen > 0;
+  const somethingLeft = canPractice || summary.aheadAvailable;
+
+  let action = null;
+  if (!quotaDone && canPractice) {
+    action = { label: "Practice", run: onPractice };
+  } else if (quotaDone && somethingLeft) {
+    action = { label: "Quick 5", run: onQuick };
+  }
+
+  let statusLine;
+  if (!quotaDone && canPractice) {
+    statusLine = (
+      <>
+        {summary.due > 0
+          ? `${summary.due} phrase${summary.due === 1 ? "" : "s"} to review · `
+          : ""}
+        {summary.newLeft} new phrase{summary.newLeft === 1 ? "" : "s"} today.
+      </>
+    );
+  } else if (quotaDone && somethingLeft) {
+    statusLine = (
+      <>
+        🎉 Today's {perDay} new phrases — done! Nice work.
+        <br />
+        {summary.due > 0
+          ? `🔁 ${summary.due} review${summary.due === 1 ? "" : "s"} still waiting. `
+          : summary.nextDue
+          ? `🔁 Next review: ${formatRelativeDate(summary.nextDue)}. `
+          : "✨ All caught up. "}
+        <b>Quick 5</b> keeps you going 💪
+      </>
+    );
+  } else {
+    statusLine = (
+      <>🌱 You've practised every phrase in your loaded levels — come back tomorrow.</>
+    );
+  }
+
+  const pctStarted = stats.total
+    ? Math.round((stats.seen / stats.total) * 100)
+    : 0;
+  const pctMastered = stats.total
+    ? Math.round((stats.mastered / stats.total) * 100)
+    : 0;
+
+  return (
+    <>
+      <div className="hero card">
+        <div className="hero-left">
+          <p className="eyebrow">Daily practice</p>
+          <h1>Phrases · Common phrases &amp; idioms</h1>
+          <p className="muted">{statusLine}</p>
+          {action && (
+            <div className="hero-actions">
+              <button className="btn btn-primary big" onClick={action.run}>
+                {action.label}
+              </button>
+            </div>
+          )}
+        </div>
+        <Ring
+          value={stats.today.newSeen}
+          max={perDay}
+          label="New phrases today"
+          sub={`${stats.today.reviews} review${
+            stats.today.reviews === 1 ? "" : "s"
+          } today`}
+        />
+      </div>
+
+      <div className="stat-grid">
+        <StatCard
+          label="Phrase streak"
+          value={`${stats.streak} 🔥`}
+          sub={stats.streak > 0 ? "Keep it going" : "Practise to start"}
+        />
+        <StatCard
+          label="Phrases started"
+          value={`${stats.seen}/${stats.total}`}
+          sub={`${pctStarted}% of your levels`}
+        />
+        <StatCard
+          label="Mastered"
+          value={stats.mastered}
+          sub={`${pctMastered}% of all`}
+        />
+        <StatCard
+          label="Accuracy"
+          value={`${stats.accuracy}%`}
+          sub={`${stats.reviews} answer${stats.reviews === 1 ? "" : "s"}`}
+        />
+      </div>
+    </>
+  );
 }
 
 function PhraseRow({ phrase, showLevel }) {
@@ -55,7 +164,7 @@ function PhraseRow({ phrase, showLevel }) {
         <button
           type="button"
           className="wf-speak"
-          title="Escuchar"
+          title="Listen"
           onClick={() => Speech.say(phrase.en)}
         >
           🔊
@@ -75,19 +184,14 @@ function PhraseRow({ phrase, showLevel }) {
 }
 
 /* ---------------- reference list ---------------- */
-function Browse({ onPractice }) {
+function Browse({ onPractice, onQuick }) {
   const store = useStore();
   const [query, setQuery] = useState("");
   const [openLevels, setOpenLevels] = useState(() => new Set());
   const [openSections, setOpenSections] = useState(() => new Set());
-  const progress = store.phraseStats();
 
   const version = store.getVersion();
   const scoped = useMemo(() => store.scopedPhrases(), [version]);
-  const activeLevels = store
-    .enabledLevels()
-    .filter((key) => key !== "software")
-    .map((key) => key.toUpperCase());
 
   const needle = query.trim().toLowerCase();
   const searching = needle.length > 0;
@@ -131,30 +235,13 @@ function Browse({ onPractice }) {
 
   return (
     <div className="page">
-      <div className="card">
-        <div className="card-head">
-          <h2>Phrases · Frases y expresiones</h2>
-          <button className="btn btn-primary tiny-btn" onClick={onPractice}>
-            Practicar
-          </button>
-        </div>
-        <p className="muted small">
-          Las frases más usadas del inglés hablado y los modismos más comunes.
-          <b> Practicar</b> primero te muestra las frases de la ronda para tener
-          contexto y luego te pregunta; las que aciertas van espaciándose como
-          flashcards.
-        </p>
-        <p className="muted small">
-          Nivel{activeLevels.length === 1 ? "" : "es"}:{" "}
-          <b>{activeLevels.join(" · ") || "—"}</b> · {progress.seen}/
-          {progress.total} · {progress.learning} learning · {progress.review}{" "}
-          review · {progress.mastered} mastered
-        </p>
-      </div>
+      {scoped.length > 0 && (
+        <PhraseHero onPractice={onPractice} onQuick={onQuick} />
+      )}
 
       {scoped.length === 0 && (
         <p className="muted">
-          Activa un nivel A1–B2 en el inicio para ver frases de ese nivel.
+          Turn on an A1–B2 level on the home screen to see its phrases.
         </p>
       )}
 
@@ -162,7 +249,7 @@ function Browse({ onPractice }) {
         <div className="browse-bar card">
           <input
             type="search"
-            placeholder="Buscar una frase o su significado…"
+            placeholder="Search a phrase or its meaning…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -172,7 +259,7 @@ function Browse({ onPractice }) {
       {searching ? (
         <div className="card">
           <h3 className="gr-group">
-            {matches.length} resultado{matches.length === 1 ? "" : "s"}
+            {matches.length} result{matches.length === 1 ? "" : "s"}
           </h3>
           <div className="phrase-list">
             {matches.map((phrase) => (
@@ -180,7 +267,7 @@ function Browse({ onPractice }) {
             ))}
           </div>
           {matches.length === 0 && (
-            <p className="muted">Nada coincide con la búsqueda.</p>
+            <p className="muted">Nothing matches your search.</p>
           )}
         </div>
       ) : (
@@ -194,7 +281,7 @@ function Browse({ onPractice }) {
               <button className="gr-head" onClick={() => toggleLevel(group.level)}>
                 <span className="gr-title">
                   {LEVELS[group.level].label}
-                  <span className="gr-es"> · {group.count} frases</span>
+                  <span className="gr-es"> · {group.count} phrases</span>
                 </span>
                 <span className="gr-caret">{levelOpen ? "▲" : "▼"}</span>
               </button>
@@ -246,17 +333,17 @@ function AllCaughtUp({ onRandom, onQuit }) {
     <div className="page">
       <div className="card done-card">
         <div className="done-emoji">🎉</div>
-        <h1>Todo al día</h1>
+        <h1>All caught up</h1>
         <p className="muted">
-          Has repasado todas las frases pendientes por hoy. Vuelve más tarde o
-          practica algunas al azar.
+          You've reviewed every phrase due today. Come back later, or practise a
+          few at random.
         </p>
         <div className="done-actions">
           <button className="btn btn-primary" onClick={onRandom}>
-            Practicar {Store.phrasesPerRound()} al azar
+            Practise {Store.phrasesPerRound()} at random
           </button>
           <button className="btn btn-ghost" onClick={onQuit}>
-            Volver a la lista
+            Back to the list
           </button>
         </div>
       </div>
@@ -289,14 +376,14 @@ function Study({ phrases, onQuit, onReady }) {
   return (
     <div className="page">
       <div className="study-top">
-        <button className="icon-btn" title="Salir" onClick={onQuit}>✕</button>
+        <button className="icon-btn" title="Quit" onClick={onQuit}>✕</button>
         <div className="progress">
           <span style={{ width: `${((index + 1) / phrases.length) * 100}%` }} />
         </div>
         <div className="count">{index + 1}/{phrases.length}</div>
       </div>
 
-      <div className="mode-tag">Estudia las frases de esta ronda</div>
+      <div className="mode-tag">Study this round's phrases</div>
 
       <div className="card practice-card">
         <div className="phrase-cat">
@@ -307,7 +394,7 @@ function Study({ phrases, onQuit, onReady }) {
           <button
             type="button"
             className="wf-speak"
-            title="Escuchar"
+            title="Listen"
             onClick={() => Speech.say(phrase.en)}
           >
             🔊
@@ -321,7 +408,7 @@ function Study({ phrases, onQuit, onReady }) {
           className="btn btn-primary wide"
           onClick={() => (last ? onReady() : setIndex((n) => n + 1))}
         >
-          {last ? "Empezar preguntas" : "Siguiente"}
+          {last ? "Start questions" : "Next"}
         </button>
       </div>
     </div>
@@ -355,15 +442,15 @@ function Quiz({ phrases, onQuit, onRestart }) {
           <div className="done-emoji">{pct >= 80 ? "🎉" : pct >= 50 ? "💪" : "📚"}</div>
           <h1>{correct} / {total}</h1>
           <p className="muted">
-            {pct}% de aciertos. Las acertadas vuelven más adelante; las falladas,
-            pronto.
+            {pct}% correct. The ones you got come back later; the ones you
+            missed, soon.
           </p>
           <div className="done-actions">
             <button className="btn btn-primary" onClick={onRestart}>
-              Otra ronda
+              Another round
             </button>
             <button className="btn btn-ghost" onClick={onQuit}>
-              Volver a la lista
+              Back to the list
             </button>
           </div>
         </div>
@@ -390,14 +477,14 @@ function Quiz({ phrases, onQuit, onRestart }) {
   return (
     <div className="page">
       <div className="study-top">
-        <button className="icon-btn" title="Salir" onClick={onQuit}>✕</button>
+        <button className="icon-btn" title="Quit" onClick={onQuit}>✕</button>
         <div className="progress">
           <span style={{ width: `${(index / order.length) * 100}%` }} />
         </div>
         <div className="count">{index + 1}/{order.length}</div>
       </div>
 
-      <div className="mode-tag">Completa el hueco</div>
+      <div className="mode-tag">Fill the gap</div>
 
       <div className="card practice-card">
         <div className="phrase-cat">
@@ -425,29 +512,29 @@ function Quiz({ phrases, onQuit, onRestart }) {
             type="text"
             value={typed}
             onChange={(e) => setTyped(e.target.value)}
-            placeholder="Completa el hueco en inglés…"
+            placeholder="Fill the gap in English…"
             autoCapitalize="off"
             autoCorrect="off"
             spellCheck="false"
             disabled={!!result}
           />
           <button className="btn btn-primary" type="submit">
-            {result ? "Siguiente" : "Comprobar"}
+            {result ? "Next" : "Check"}
           </button>
         </form>
 
         {result === "right" && (
           <div className="feedback fb-ok">
-            <div className="fb-head">¡Correcto!</div>
+            <div className="fb-head">Correct!</div>
             <div className="fb-es">{phrase.en}</div>
             <div className="muted small">🔁 {dueLabel(dueInDays)}</div>
           </div>
         )}
         {result === "wrong" && (
           <div className="feedback fb-bad">
-            <div className="fb-head">No exacto</div>
+            <div className="fb-head">Not quite</div>
             <div className="fb-es">
-              Respuesta correcta: <b>{phrase.gap}</b>
+              Correct answer: <b>{phrase.gap}</b>
             </div>
             <div className="muted small">{phrase.en}</div>
             <div className="muted small">🔁 {dueLabel(dueInDays)}</div>

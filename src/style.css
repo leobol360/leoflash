@@ -87,7 +87,7 @@ kbd {
 
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 18px 0 14px;
+  padding: 18px 8px 14px;
   position: sticky; top: env(safe-area-inset-top); z-index: 20;
   background: linear-gradient(var(--bg) 70%, transparent);
   backdrop-filter: blur(4px);
@@ -432,7 +432,7 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 }
 
 /* ============================================================
-   BROWSE
+   DECK (filter bar + table)
    ============================================================ */
 .browse-bar { display: flex; gap: 10px; flex-wrap: wrap; }
 .browse-bar input, .browse-bar select {
@@ -441,21 +441,6 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 }
 .browse-bar input[type="search"] { flex: 1; min-width: 160px; }
 
-.word-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-.word-card {
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
-  padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;
-}
-.word-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
-.word-head .w { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; }
-.word-head .pos { font-size: .72rem; color: var(--muted); margin-left: 6px; }
-.word-head .ipa { display: block; font-size: .78rem; color: var(--muted); margin-top: 2px; }
-.word-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-.word-actions .icon-btn { width: 32px; height: 32px; font-size: .85rem; }
-.word-card .es { color: var(--accent-strong); font-weight: 600; font-size: .92rem; }
-.word-card .def { font-size: .86rem; }
-.word-card .ex { font-size: .82rem; font-style: italic; color: var(--muted); }
-.word-card .theme-tag { align-self: flex-start; margin-top: 4px; }
 .status {
   font-size: .66rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 700;
   padding: 3px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted);
@@ -463,6 +448,38 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 .status.learning { color: var(--warn); border-color: var(--warn); }
 .status.known { color: var(--ok); border-color: var(--ok); }
 .status.mature { color: var(--accent-strong); border-color: var(--accent); }
+
+.deck-table-wrap { overflow-x: auto; margin-top: 10px; }
+.deck-table { width: 100%; border-collapse: collapse; font-size: .86rem; table-layout: fixed; }
+.deck-table th {
+  text-align: left; font-weight: 600; color: var(--muted); cursor: pointer;
+  padding: 6px 6px; border-bottom: 1px solid var(--border); white-space: nowrap; user-select: none;
+}
+.deck-table th:hover { color: var(--text); }
+.deck-table td {
+  padding: 8px 6px; border-top: 1px solid var(--border); vertical-align: middle;
+  white-space: nowrap;
+}
+.deck-table td:nth-child(1), .deck-table td:nth-child(2) {
+  overflow: hidden; text-overflow: ellipsis;
+}
+.deck-table tr:first-child td { border-top: 0; }
+/* Palabra ~36% · Traducción fills · Estado ~74px · action ~32px */
+.deck-table th:nth-child(1), .deck-table td:nth-child(1) { width: 36%; }
+.deck-table th:nth-child(3), .deck-table td:nth-child(3) { width: 74px; }
+.deck-table th:nth-child(4), .deck-table td:nth-child(4) { width: 32px; }
+.deck-table td:first-child { font-weight: 600; }
+.deck-es { color: var(--muted); }
+/* keep the action column in view when the row is wider than the screen */
+.deck-table th:nth-child(4), .deck-action {
+  position: sticky; right: 0; background: var(--surface-2);
+  text-align: center; overflow: visible;
+}
+.deck-del {
+  background: none; border: 0; cursor: pointer; font-size: .95rem; padding: 2px 3px;
+  border-radius: 6px; opacity: .7; color: inherit;
+}
+.deck-del:hover { opacity: 1; background: rgba(251,113,133,.15); }
 
 /* ============================================================
    SETTINGS

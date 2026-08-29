@@ -5,7 +5,6 @@ import { buildSessionQueue } from "./session.js";
 import Home from "./views/Home.jsx";
 import Study from "./views/Study.jsx";
 import Stats from "./views/Stats.jsx";
-import Browse from "./views/Browse.jsx";
 import Grammar from "./views/Grammar.jsx";
 import Phrases from "./views/Phrases.jsx";
 import Settings from "./views/Settings.jsx";
@@ -14,13 +13,12 @@ import LevelPicker from "./views/LevelPicker.jsx";
 const NAV = [
   { id: "home", label: "Cards", icon: "🃏" },
   { id: "phrases", label: "Phrases", icon: "💬" },
-  { id: "browse", label: "Deck", icon: "📚" },
   { id: "grammar", label: "Grammar", icon: "📖" },
   { id: "stats", label: "Stats", icon: "📈" },
   { id: "settings", label: "Settings", icon: "⚙️" },
 ];
 
-const VIEWS = ["home", "phrases", "browse", "grammar", "stats", "settings"];
+const VIEWS = ["home", "phrases", "grammar", "stats", "settings"];
 
 export default function App() {
   const store = useStore();
@@ -96,8 +94,6 @@ export default function App() {
     );
   } else if (view === "stats") {
     screen = <Stats />;
-  } else if (view === "browse") {
-    screen = <Browse onOpenLevels={() => setPickingLevels(true)} />;
   } else if (view === "grammar") {
     screen = <Grammar />;
   } else if (view === "phrases") {

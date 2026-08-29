@@ -24,7 +24,9 @@ const MIN_STARTED_MASTERY = 0.08;  // a touched-but-weak card still shows some p
 // back, indexed by box (0 = brand new / just missed, 6 = well known).
 const PHRASE_BOX_DAYS = [0, 1, 2, 4, 8, 16, 30];
 const PHRASE_MASTERED_BOX = 6;
-const DEFAULT_PHRASES_PER_ROUND = 10; // used when the setting is missing/invalid
+const DEFAULT_PHRASES_PER_ROUND = 10;   // round size, when the setting is missing/invalid
+const DEFAULT_NEW_PHRASES_PER_DAY = 10; // daily new-phrase target, when the setting is missing/invalid
+const QUICK_PHRASE_ROUND = 5;           // "Quick 5": extra practice past the daily target
 
 /* ---- tiny pub/sub so the UI can react to changes ---- */
 let revision = 0;
@@ -37,7 +39,8 @@ function notifyListeners() {
 const DEFAULT_SETTINGS = {
   name: "",             // the learner's name, for a personalised greeting
   newPerDay: 20,        // the ONE configurable number: new words to learn each day
-  phrasesPerRound: 10,  // phrases in one Phrases practice round
+  phrasesPerRound: 10,     // phrases in one Phrases practice round
+  newPhrasesPerDay: 10,    // brand-new phrases the daily practice introduces each day
   theme: "dark",        // colour scheme: "dark" | "light"
   accent: "violet",
   voice: "",            // preferred speechSynthesis voice name
@@ -98,6 +101,11 @@ function migrate(data) {
 
   data.maxStreak = Math.max(data.maxStreak || 0, data.streak || 0);
   data.phraseCards = data.phraseCards || {}; // id -> Leitner progress for phrase practice
+  data.phraseLog = data.phraseLog || {};     // date -> { reviews, correct, newSeen } for phrases
+  data.phraseStreak = data.phraseStreak || 0;
+  data.phraseMaxStreak = data.phraseMaxStreak || 0;
+  data.phraseLastStudied = data.phraseLastStudied || null;
+  data.removedWords = data.removedWords || {}; // id -> true: hidden from the deck
   return data;
 }
 
@@ -217,9 +225,16 @@ const Store = {
     const enabled = this.settings().enabledLevels;
     return !enabled || enabled.includes(level);
   },
-  // Predicate: is this word inside a loaded level?
+
+  /* ---- removed words (curated out of the deck, kept in localStorage) ---- */
+  isRemoved(id) { return !!this.data.removedWords[id]; },
+  removeWord(id) { this.data.removedWords[id] = true; this.save(); },
+  restoreWord(id) { delete this.data.removedWords[id]; this.save(); },
+  removedCount() { return Object.keys(this.data.removedWords).length; },
+
+  // Predicate: is this word in a loaded level AND not removed from the deck?
   inScope(entry) {
-    return this.levelEnabled(entry.level);
+    return this.levelEnabled(entry.level) && !this.isRemoved(entry.id);
   },
   // Words that belong to the loaded levels only.
   scopedVocab() {
@@ -238,7 +253,9 @@ const Store = {
 
   // Aggregate progress for one level: average mastery + words touched.
   levelProgress(level) {
-    const words = VOCAB.filter((entry) => entry.level === level);
+    const words = VOCAB.filter(
+      (entry) => entry.level === level && !this.isRemoved(entry.id)
+    );
     let masterySum = 0, started = 0, known = 0;
     for (const entry of words) {
       const m = this.mastery(entry.id);
@@ -315,7 +332,8 @@ const Store = {
   buildQueue() {
     const settings = this.settings();
     const enabled = settings.enabledLevels;
-    const inScope = (entry) => !enabled || enabled.includes(entry.level);
+    const inScope = (entry) =>
+      (!enabled || enabled.includes(entry.level)) && !this.isRemoved(entry.id);
     const today = todayStr();
 
     const pool = VOCAB.filter(inScope);
@@ -350,7 +368,8 @@ const Store = {
   dueSummary() {
     const settings = this.settings();
     const enabled = settings.enabledLevels;
-    const inScope = (entry) => !enabled || enabled.includes(entry.level);
+    const inScope = (entry) =>
+      (!enabled || enabled.includes(entry.level)) && !this.isRemoved(entry.id);
     const today = todayStr();
     let due = 0, learning = 0, newLeft = 0, mature = 0, unseen = 0, known = 0;
     let nextDue = null;                          // soonest upcoming review date
@@ -503,7 +522,101 @@ const Store = {
       else if (status === "review") review++;
       else learning++;
     }
-    return { total: scoped.length, seen, learning, review, mastered };
+    let reviews = 0, correct = 0;
+    for (const day of Object.values(this.data.phraseLog || {})) {
+      reviews += day.reviews;
+      correct += day.correct;
+    }
+    return {
+      total: scoped.length, seen, learning, review, mastered,
+      reviews,
+      accuracy: reviews ? Math.round((correct / reviews) * 100) : 0,
+      streak: this.data.phraseStreak || 0,
+      maxStreak: this.data.phraseMaxStreak || this.data.phraseStreak || 0,
+      today: this.phraseLogToday(),
+    };
+  },
+
+  // date -> { reviews, correct, newSeen } for phrase practice
+  phraseLogToday() {
+    const today = todayStr();
+    if (!this.data.phraseLog[today])
+      this.data.phraseLog[today] = { reviews: 0, correct: 0, newSeen: 0 };
+    return this.data.phraseLog[today];
+  },
+
+  // Daily target of brand-new phrases (Settings, 1..100).
+  newPhrasesPerDay() {
+    const n = Math.round(this.settings().newPhrasesPerDay);
+    return Number.isFinite(n) && n > 0
+      ? Math.min(100, n)
+      : DEFAULT_NEW_PHRASES_PER_DAY;
+  },
+
+  updatePhraseStreak() {
+    const today = todayStr();
+    if (this.data.phraseLastStudied === today) return;
+    if (this.data.phraseLastStudied === addDays(today, -1)) this.data.phraseStreak++;
+    else this.data.phraseStreak = 1;
+    this.data.phraseLastStudied = today;
+    this.data.phraseMaxStreak = Math.max(
+      this.data.phraseMaxStreak || 0,
+      this.data.phraseStreak
+    );
+  },
+
+  // Today's phrase practice at a glance (mirrors dueSummary() for words).
+  phraseDaySummary() {
+    const today = todayStr();
+    let due = 0, unseen = 0;
+    let nextDue = null;
+    for (const phrase of this.scopedPhrases()) {
+      const card = this.data.phraseCards[phrase.id];
+      if (!card || !card.seen) { unseen++; continue; }
+      if (card.box >= PHRASE_MASTERED_BOX) continue;
+      if (card.due <= today) due++;
+      else if (!nextDue || card.due < nextDue) nextDue = card.due;
+    }
+    const newLeft = Math.max(
+      0,
+      this.newPhrasesPerDay() - this.phraseLogToday().newSeen
+    );
+    return {
+      due,
+      unseen,
+      newLeft,
+      nextDue,
+      aheadAvailable: unseen > 0 || nextDue != null,
+    };
+  },
+
+  // "Quick 5": extra practice once the daily target is met. Due phrases and
+  // already-started ones only — never introduces a brand-new phrase.
+  quickPhraseSession(size = QUICK_PHRASE_ROUND) {
+    const today = todayStr();
+    const due = [];
+    const ahead = [];
+    for (const phrase of this.scopedPhrases()) {
+      const card = this.data.phraseCards[phrase.id];
+      if (!card || !card.seen || card.box >= PHRASE_MASTERED_BOX) continue;
+      (card.due <= today ? due : ahead).push(phrase);
+    }
+    const bySoonest = (a, b) =>
+      this.data.phraseCards[a.id].due.localeCompare(this.data.phraseCards[b.id].due);
+    due.sort(bySoonest);
+    ahead.sort(bySoonest);
+    let round = [...due, ...ahead];
+    if (round.length < size) {
+      // top up with any seen phrase (mastered included) so Quick 5 is never empty
+      const extra = shuffle(
+        this.scopedPhrases().filter((phrase) => {
+          const card = this.data.phraseCards[phrase.id];
+          return card && card.seen && !round.includes(phrase);
+        })
+      );
+      round = round.concat(extra);
+    }
+    return round.slice(0, size);
   },
 
   // How many phrases one practice round holds (Settings, 1..50).
@@ -542,6 +655,7 @@ const Store = {
   // Returns { card, dueInDays } so the UI can show when it's next due.
   gradePhrase(id, wasCorrect) {
     const card = this.phraseCard(id);
+    const firstTime = !card.seen;
     card.seen = true;
     card.attempts++;
     if (wasCorrect) {
@@ -553,6 +667,14 @@ const Store = {
     const dueInDays = PHRASE_BOX_DAYS[card.box];
     card.due = addDays(todayStr(), dueInDays);
     card.lastReviewed = todayStr();
+
+    // record it for the daily ring / streak / accuracy (doesn't touch the quiz flow)
+    const log = this.phraseLogToday();
+    log.reviews++;
+    if (wasCorrect) log.correct++;
+    if (firstTime) log.newSeen++;
+    this.updatePhraseStreak();
+
     this.save();
     return { card, dueInDays };
   },

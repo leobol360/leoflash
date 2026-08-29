@@ -72,8 +72,13 @@ keyed by the word itself — so you can add a level later (Home → *Change leve
 or Settings → *Levels loaded*) **without losing any progress**.
 
 The whole app is limited to the loaded levels: the study queue, the **Deck**
-list, the dashboard counts and the Stats page only ever show words from the
+table, the dashboard counts and the Stats page only ever show words from the
 levels you have loaded.
+
+The **Deck** lives inside the **Cards** tab as a collapsible table (word ·
+translation · status · delete). Deleting a word removes it from your deck — it
+stops showing up in study, counts and stats. It's recoverable: the *Removed*
+status filter lists deleted words with a **restore** button.
 
 ## Never lose your progress
 
@@ -96,6 +101,7 @@ Do a backup now and then, and before clearing browser data.
 | **Level‑based, frequency‑ordered** | Words taught most‑common‑first, grouped into A1/A2/B1/B2. Each has POS, Spanish gloss, a simple English definition and an example sentence. |
 | **"Never" button** | On a new word: *No / Almost / Yes / **Never*** — "Never" means you already know it, so it leaves the rotation for good. Each button shows the next interval. |
 | **One dial** | *New words per day* drives everything; reviews of started words stack on top. |
+| **Phrases** | Common phrases & idioms with a daily target (*New phrases per day*), a Leitner practice loop, a streak of its own, and **Quick 5** for extra rounds once the target is met. |
 | **Grammar reference** | A **Grammar** tab with all English tenses (the 12 core ones + future forms, past habits, conditionals, passive) — uses, structure for the affirmative / negative / question forms, examples, time markers and common mistakes. Explanations in Spanish, examples in English. |
 
 ## Keyboard shortcuts (during study)
@@ -124,7 +130,7 @@ src/
   format.js                small shared helpers
   useStore.js              React hook (useSyncExternalStore)
   components/ui.jsx        Ring, ProgressBar, StatCard, Sentence…
-  views/                   LevelPicker, Home, Study, Browse, Grammar, Phrases, Stats, Settings
+  views/                   LevelPicker, Home (+ DeckTable), Study, Grammar, Phrases, Stats, Settings
 data/*.json                all app content — the single source of truth
 ```
 

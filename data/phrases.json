@@ -2,52 +2,52 @@
   "categories": [
     {
       "key": "greetings",
-      "label": "Saludos y despedidas",
+      "label": "Greetings & goodbyes",
       "icon": "👋"
     },
     {
       "key": "courtesy",
-      "label": "Cortesía y disculpas",
+      "label": "Politeness & apologies",
       "icon": "🙏"
     },
     {
       "key": "requests",
-      "label": "Pedir, ofrecer y responder",
+      "label": "Asking, offering & replying",
       "icon": "🤝"
     },
     {
       "key": "conversation",
-      "label": "Reaccionar en una conversación",
+      "label": "Reacting in conversation",
       "icon": "💬"
     },
     {
       "key": "opinions",
-      "label": "Opiniones y acuerdo",
+      "label": "Opinions & agreeing",
       "icon": "🤔"
     },
     {
       "key": "work",
-      "label": "Trabajo y reuniones",
+      "label": "Work & meetings",
       "icon": "💼"
     },
     {
       "key": "travel",
-      "label": "Viajes, direcciones y compras",
+      "label": "Travel, directions & shopping",
       "icon": "✈️"
     },
     {
       "key": "time",
-      "label": "Tiempo, prisa y planes",
+      "label": "Time, hurry & plans",
       "icon": "⏰"
     },
     {
       "key": "idioms",
-      "label": "Expresiones y modismos",
+      "label": "Idioms & expressions",
       "icon": "🎭"
     },
     {
       "key": "slang",
-      "label": "Inglés informal / slang",
+      "label": "Informal English / slang",
       "icon": "😎"
     }
   ],
