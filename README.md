@@ -102,6 +102,7 @@ Do a backup now and then, and before clearing browser data.
 | **"Never" button** | On a new word: *No / Almost / Yes / **Never*** — "Never" means you already know it, so it leaves the rotation for good. Each button shows the next interval. |
 | **One dial** | *New words per day* drives everything; reviews of started words stack on top. |
 | **Phrases** | Common phrases & idioms with a daily target (*New phrases per day*), a Leitner practice loop, a streak of its own, and **Quick 5** for extra rounds once the target is met. |
+| **Stats** | What you've mastered for good (words at interval ≥ 21 days, phrases in the top Leitner box), a 35-day practice calendar (words *and* phrases) with current / best streak, and per-level completion — how many words and phrases are left to finish each loaded level. |
 | **Grammar reference** | A **Grammar** tab with all English tenses (the 12 core ones + future forms, past habits, conditionals, passive) — uses, structure for the affirmative / negative / question forms, examples, time markers and common mistakes. Explanations in Spanish, examples in English. |
 
 ## Keyboard shortcuts (during study)
@@ -127,11 +128,13 @@ src/
   store.js                 localStorage + SM-2 + Leitner phrases + backup/restore + pub/sub
   session.js               queue building, mode choice, answer checking
   speech.js                Web Speech API wrapper
+  install.js               "Add to Home Screen" helper (captures beforeinstallprompt)
   format.js                small shared helpers
   useStore.js              React hook (useSyncExternalStore)
   components/ui.jsx        Ring, ProgressBar, StatCard, Sentence…
   views/                   LevelPicker, Home (+ DeckTable), Study, Grammar, Phrases, Stats, Settings
 data/*.json                all app content — the single source of truth
+public/                    home-screen icons, manifest.webmanifest, sw.js (minimal, no caching)
 ```
 
 ### Adding your own words

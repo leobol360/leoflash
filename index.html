@@ -13,6 +13,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="LeoFlash" />
     <meta name="mobile-web-app-capable" content="yes" />
+    <script>
+      // stash the install prompt before the app loads, so the Settings
+      // "Add to Home Screen" button can trigger it later
+      window.addEventListener("beforeinstallprompt", function (e) {
+        e.preventDefault();
+        window.__bip = e;
+      });
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

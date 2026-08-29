@@ -421,6 +421,36 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 .chart-bar.empty { background: var(--border); }
 .chart-x { font-size: .64rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 
+/* stacked word / phrase bar */
+.chart-col { justify-content: flex-end; }
+.chart-stack {
+  width: 100%; max-width: 26px; min-height: 3px; align-self: flex-end;
+  display: flex; flex-direction: column; overflow: hidden;
+  border-radius: 6px 6px 3px 3px; transition: height .4s;
+}
+.chart-seg { display: block; width: 100%; min-height: 0; }
+.chart-seg.empty { background: var(--border); }
+.seg-word { background: var(--accent); }
+.seg-phrase { background: var(--accent); opacity: .4; }
+.chart-legend { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+.chart-legend .dot { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
+
+/* what you've mastered */
+.mastery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mastery-cell { display: flex; flex-direction: column; gap: 6px; }
+.mastery-num { font-family: var(--font-serif); font-size: 2rem; font-weight: 600; line-height: 1; }
+.mastery-num small { font-family: var(--font-sans); font-size: .8rem; color: var(--muted); margin-left: 4px; }
+.mastery-label { font-size: .82rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+
+/* per-level completion */
+.lvlp-list { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
+.lvlp-row { display: flex; flex-direction: column; gap: 5px; }
+.lvlp-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.lvlp-name { font-size: .9rem; font-weight: 500; }
+.lvlp-count { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lvlp-note { font-size: .76rem; color: var(--muted); }
+.lvlp-done { color: var(--ok); font-weight: 600; }
+
 .watch-list { display: flex; flex-direction: column; gap: 8px; }
 .watch-item {
   background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;

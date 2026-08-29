@@ -2,23 +2,103 @@ import { VOCAB } from "../data.js";
 import { useStore } from "../useStore.js";
 import { StatCard } from "../components/ui.jsx";
 
+// One level's completion row: a bar plus "N to go" / "complete".
+function LevelRow({ row, noun }) {
+  const startedPct = row.total ? (row.started / row.total) * 100 : 0;
+  return (
+    <div className="lvlp-row">
+      <div className="lvlp-top">
+        <span className="lvlp-name">
+          {row.icon} {row.label}
+        </span>
+        <span className="lvlp-count">
+          {row.mastered}/{row.total}
+        </span>
+      </div>
+      <span className="bar">
+        <span className="bar-seen" style={{ width: `${startedPct}%` }} />
+        <span className="bar-known" style={{ width: `${row.pct}%` }} />
+      </span>
+      <span className="lvlp-note">
+        {row.remaining === 0 ? (
+          <b className="lvlp-done">✅ Level complete</b>
+        ) : (
+          <>
+            <b>{row.remaining}</b> {noun}
+            {row.remaining === 1 ? "" : "s"} to master · {row.pct}%
+          </>
+        )}
+      </span>
+    </div>
+  );
+}
+
+function LevelCompletion({ title, rows, noun }) {
+  if (rows.length === 0) return null;
+  const mastered = rows.reduce((n, r) => n + r.mastered, 0);
+  const total = rows.reduce((n, r) => n + r.total, 0);
+  const remaining = total - mastered;
+  return (
+    <div className="card">
+      <div className="card-head">
+        <h2>{title}</h2>
+        <span className="muted small">
+          {mastered}/{total} mastered
+        </span>
+      </div>
+      <p className="muted small">
+        {remaining === 0
+          ? `Every ${noun} in your loaded levels is mastered. 🎉`
+          : `${remaining} ${noun}${remaining === 1 ? "" : "s"} left to finish your loaded levels.`}
+      </p>
+      <div className="lvlp-list">
+        {rows.map((row) => (
+          <LevelRow key={row.level} row={row} noun={noun} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Stats() {
   const store = useStore();
   const stats = store.stats();
-  const recentDays = store.activityDays(14);
-  const activity = store.activityDays(35);
-  const maxReviews = Math.max(1, ...recentDays.map((day) => day.reviews));
+  const practice = store.practiceSummary(35);
+  const wordLevels = store.wordLevelProgress();
+  const phraseLevels = store.phraseLevelProgress();
 
-  // which cells belong to the current streak (for the highlight)
+  const wordsMastered = wordLevels.reduce((n, r) => n + r.mastered, 0);
+  const wordsTotal = wordLevels.reduce((n, r) => n + r.total, 0);
+  const phrasesMastered = phraseLevels.reduce((n, r) => n + r.mastered, 0);
+  const phrasesTotal = phraseLevels.reduce((n, r) => n + r.total, 0);
+
+  const wordsPct = wordsTotal ? Math.round((wordsMastered / wordsTotal) * 100) : 0;
+  const phrasesPct = phrasesTotal
+    ? Math.round((phrasesMastered / phrasesTotal) * 100)
+    : 0;
+
+  // 14-day chart from the same calendar
+  const chart = practice.calendar.slice(-14);
+  const maxDay = Math.max(
+    1,
+    ...chart.map((d) => d.wordReviews + d.phraseReviews)
+  );
+
+  // which calendar cells are part of the ongoing streak (for the highlight)
   const streakCells = new Set();
-  let remaining = stats.streak;
-  for (let i = activity.length - 1; i >= 0 && remaining > 0; i--) {
-    if (activity[i].active) { streakCells.add(i); remaining--; }
-    else if (i === activity.length - 1) continue; // today, not studied yet
-    else break;
+  let left = practice.currentStreak;
+  for (let i = practice.calendar.length - 1; i >= 0 && left > 0; i--) {
+    if (practice.calendar[i].active) {
+      streakCells.add(i);
+      left--;
+    } else if (i === practice.calendar.length - 1) {
+      continue; // today, not practised yet
+    } else break;
   }
 
-  const scopeIds = new Set(VOCAB.filter((entry) => store.inScope(entry)).map((entry) => entry.id));
+  const scopeIds = new Set(
+    VOCAB.filter((entry) => store.inScope(entry)).map((entry) => entry.id)
+  );
   const leeches = Object.entries(store.data.cards)
     .filter(([id, card]) => card.lapses >= 2 && scopeIds.has(id))
     .map(([, card]) => card)
@@ -27,58 +107,127 @@ export default function Stats() {
 
   return (
     <div className="page">
-      {/* streak / activity */}
+      {/* ---- what you've mastered ---- */}
+      <div className="card">
+        <h2>Mastered for good</h2>
+        <div className="mastery-grid">
+          <div className="mastery-cell">
+            <div className="mastery-num">
+              {wordsMastered}
+              <small>/ {wordsTotal}</small>
+            </div>
+            <div className="mastery-label">words</div>
+            <span className="bar">
+              <span className="bar-known" style={{ width: `${wordsPct}%` }} />
+            </span>
+            <span className="muted tiny">{wordsPct}% · interval ≥ 21 days</span>
+          </div>
+          <div className="mastery-cell">
+            <div className="mastery-num">
+              {phrasesMastered}
+              <small>/ {phrasesTotal}</small>
+            </div>
+            <div className="mastery-label">phrases</div>
+            <span className="bar">
+              <span className="bar-known" style={{ width: `${phrasesPct}%` }} />
+            </span>
+            <span className="muted tiny">{phrasesPct}% · top Leitner box</span>
+          </div>
+        </div>
+      </div>
+
+      {/* ---- practice consistency ---- */}
       <div className="card streak-card">
         <div className="streak-big">
-          <span className="streak-num">{stats.streak}</span>
+          <span className="streak-num">{practice.currentStreak}</span>
           <span className="streak-flame">🔥</span>
           <span className="streak-label">
-            day{stats.streak === 1 ? "" : "s"} in a row
-            {!stats.studiedToday && stats.streak > 0 && (
-              <em className="streak-warn"> · study today to keep it</em>
+            day{practice.currentStreak === 1 ? "" : "s"} in a row
+            {!practice.practisedToday && practice.currentStreak > 0 && (
+              <em className="streak-warn"> · practise today to keep it</em>
             )}
           </span>
         </div>
+
         <div className="streak-strip" title="last 35 days">
-          {activity.map((day, i) => (
+          {practice.calendar.map((day, i) => (
             <span
               key={day.day}
               className={
-                "streak-cell" + (day.active ? " on" : "") + (streakCells.has(i) ? " run" : "")
+                "streak-cell" +
+                (day.active ? " on" : "") +
+                (streakCells.has(i) ? " run" : "")
               }
-              title={`${day.day}: ${day.reviews} reviews`}
+              title={`${day.day}: ${day.wordReviews} words · ${day.phraseReviews} phrases`}
             />
           ))}
         </div>
-        <p className="muted small">
-          Best streak: <b>{stats.maxStreak} day{stats.maxStreak === 1 ? "" : "s"}</b> ·{" "}
-          {activity.filter((day) => day.active).length} of the last 35 days studied
-        </p>
-      </div>
 
-      <div className="card">
-        <h2>Last 14 days</h2>
-        <div className="chart">
-          {recentDays.map((day) => (
-            <div className="chart-col" key={day.day}>
-              <div
-                className={"chart-bar" + (day.reviews === 0 ? " empty" : "")}
-                style={{ height: `${Math.round((day.reviews / maxReviews) * 100)}%` }}
-                title={`${day.day}: ${day.reviews} reviews`}
-              />
-              <span className="chart-x">{day.day.slice(8)}</span>
-            </div>
-          ))}
+        <div className="stat-grid">
+          <StatCard
+            label="Practised"
+            value={`${practice.activeInWindow}/${practice.windowDays}`}
+            sub="last 35 days"
+          />
+          <StatCard
+            label="Missed"
+            value={practice.missedInWindow}
+            sub="last 35 days"
+          />
+          <StatCard label="Best streak" value={`${practice.bestStreak} d`} />
+          <StatCard label="Days practised" value={practice.daysPractised} sub="all time" />
         </div>
       </div>
 
-      <div className="stat-grid">
-        <StatCard label="Total reviews" value={stats.reviews} />
-        <StatCard label="Overall accuracy" value={`${stats.accuracy}%`} />
-        <StatCard label="Words started" value={`${stats.seen}/${stats.total}`} />
-        <StatCard label="Mature words" value={stats.mature} sub="interval ≥ 21 days" />
+      {/* ---- recent effort ---- */}
+      <div className="card">
+        <h2>Last 14 days</h2>
+        <div className="chart">
+          {chart.map((day) => {
+            const total = day.wordReviews + day.phraseReviews;
+            return (
+              <div className="chart-col" key={day.day}>
+                <div
+                  className="chart-stack"
+                  style={{ height: `${Math.round((total / maxDay) * 100)}%` }}
+                  title={`${day.day}: ${day.wordReviews} words · ${day.phraseReviews} phrases`}
+                >
+                  {total === 0 ? (
+                    <span className="chart-seg empty" style={{ flexGrow: 1 }} />
+                  ) : (
+                    <>
+                      <span
+                        className="chart-seg seg-phrase"
+                        style={{ flexGrow: day.phraseReviews }}
+                      />
+                      <span
+                        className="chart-seg seg-word"
+                        style={{ flexGrow: day.wordReviews }}
+                      />
+                    </>
+                  )}
+                </div>
+                <span className="chart-x">{day.day.slice(8)}</span>
+              </div>
+            );
+          })}
+        </div>
+        <p className="muted small chart-legend">
+          <span className="dot seg-word" /> words &nbsp;
+          <span className="dot seg-phrase" /> phrases &nbsp;·&nbsp;
+          {stats.reviews} word reviews all time · {stats.accuracy}% accuracy
+        </p>
       </div>
 
+      {/* ---- level completion ---- */}
+      <LevelCompletion title="Words — level completion" rows={wordLevels} noun="word" />
+      <LevelCompletion
+        title="Phrases — level completion"
+        rows={phraseLevels}
+        noun="phrase"
+      />
+
+      {/* ---- leeches ---- */}
       <div className="card">
         <h2>Words to watch</h2>
         {leeches.length === 0 ? (

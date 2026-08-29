@@ -481,6 +481,120 @@ const Store = {
     };
   },
 
+  /* ---- progress for the Stats view --------------------- */
+
+  // Every date (YYYY-MM-DD) with any practice at all — words OR phrases.
+  practiceDays() {
+    const days = new Set();
+    for (const [day, log] of Object.entries(this.data.log || {}))
+      if (log.reviews > 0) days.add(day);
+    for (const [day, log] of Object.entries(this.data.phraseLog || {}))
+      if (log.reviews > 0) days.add(day);
+    return [...days].sort();
+  },
+
+  // Practice consistency: a day-by-day window plus current / best streak
+  // and lifetime days practised. Words and phrases both count.
+  practiceSummary(windowDays = 35) {
+    const today = todayStr();
+    const active = new Set(this.practiceDays());
+
+    let currentStreak = 0;
+    for (let i = 0; i < 3650; i++) {
+      const day = addDays(today, -i);
+      if (active.has(day)) currentStreak++;
+      else if (i > 0) break; // today isn't a miss until it's over
+    }
+
+    let bestStreak = 0, run = 0, prev = null;
+    for (const day of [...active].sort()) {
+      run = prev && daysBetween(prev, day) === 1 ? run + 1 : 1;
+      if (run > bestStreak) bestStreak = run;
+      prev = day;
+    }
+
+    const calendar = [];
+    for (let i = windowDays - 1; i >= 0; i--) {
+      const day = addDays(today, -i);
+      const wordReviews = (this.data.log[day] || {}).reviews || 0;
+      const phraseReviews = (this.data.phraseLog[day] || {}).reviews || 0;
+      calendar.push({
+        day,
+        wordReviews,
+        phraseReviews,
+        active: wordReviews + phraseReviews > 0,
+      });
+    }
+
+    return {
+      calendar,
+      windowDays,
+      activeInWindow: calendar.filter((d) => d.active).length,
+      missedInWindow: calendar.filter((d) => !d.active).length,
+      daysPractised: active.size,
+      currentStreak,
+      bestStreak,
+      practisedToday: calendar[calendar.length - 1].active,
+    };
+  },
+
+  // Per-level word completion, counting only words mastered for good
+  // (interval ≥ 21 days, or marked "known"). Loaded levels only.
+  wordLevelProgress() {
+    return Object.keys(ACTIVE_LEVELS)
+      .filter((level) => this.levelEnabled(level))
+      .map((level) => {
+        const words = VOCAB.filter(
+          (entry) => entry.level === level && !this.isRemoved(entry.id)
+        );
+        let mastered = 0, started = 0;
+        for (const entry of words) {
+          const card = this.data.cards[entry.id];
+          if (!card || !card.seen) continue;
+          started++;
+          if (card.known || (card.interval || 0) >= MATURE_INTERVAL_DAYS) mastered++;
+        }
+        return {
+          level,
+          label: ACTIVE_LEVELS[level].label,
+          icon: ACTIVE_LEVELS[level].icon,
+          total: words.length,
+          started,
+          mastered,
+          remaining: words.length - mastered,
+          pct: words.length ? Math.round((mastered / words.length) * 100) : 0,
+        };
+      })
+      .filter((group) => group.total > 0);
+  },
+
+  // Per-level phrase completion, counting only mastered phrases (Leitner box 6).
+  phraseLevelProgress() {
+    return Object.keys(ACTIVE_LEVELS)
+      .filter((level) => this.levelEnabled(level))
+      .map((level) => {
+        const phrases = PHRASES.filter((phrase) => phrase.level === level);
+        let mastered = 0, started = 0;
+        for (const phrase of phrases) {
+          const status = this.phraseStatus(phrase.id);
+          if (status === "new") continue;
+          started++;
+          if (status === "mastered") mastered++;
+        }
+        return {
+          level,
+          label: ACTIVE_LEVELS[level].label,
+          icon: ACTIVE_LEVELS[level].icon,
+          total: phrases.length,
+          started,
+          mastered,
+          remaining: phrases.length - mastered,
+          pct: phrases.length ? Math.round((mastered / phrases.length) * 100) : 0,
+        };
+      })
+      .filter((group) => group.total > 0);
+  },
+
   /* ---- phrase practice (Leitner) ----------------------- */
   phraseCard(id) {
     if (!this.data.phraseCards[id]) {

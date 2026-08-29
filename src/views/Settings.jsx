@@ -4,6 +4,49 @@ import { Store, todayStr } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
 import { clamp } from "../format.js";
+import { InstallPrompt } from "../install.js";
+
+// "Add to Home Screen" button — native prompt where the browser allows it,
+// short instructions where it doesn't (iOS, or before Chrome is ready).
+function InstallButton() {
+  const [, bump] = useState(0);
+  useEffect(() => InstallPrompt.subscribe(() => bump((n) => n + 1)), []);
+
+  if (InstallPrompt.isStandalone()) {
+    return (
+      <button className="btn" disabled>
+        ✓ Added to Home Screen
+      </button>
+    );
+  }
+
+  const onClick = async () => {
+    if (InstallPrompt.canPrompt()) {
+      const outcome = await InstallPrompt.promptInstall();
+      if (outcome === "unavailable") showHelp();
+      return;
+    }
+    showHelp();
+  };
+
+  const showHelp = () => {
+    if (InstallPrompt.isIOS()) {
+      alert(
+        "On iPhone / iPad:\n\n1. Tap the Share button  ⬆️  in Safari's toolbar\n2. Choose “Add to Home Screen”\n3. Tap “Add”\n\n(Apple doesn't let apps do this automatically.)"
+      );
+    } else {
+      alert(
+        "Open your browser menu (⋮) and choose “Add to Home screen” or “Install app”.\n\nIf you don't see it yet, use the app a little more and try again."
+      );
+    }
+  };
+
+  return (
+    <button className="btn" onClick={onClick}>
+      📲 Add to Home Screen
+    </button>
+  );
+}
 
 // A number setting you can fully clear while typing; on blur an empty or
 // invalid field falls back to `fallback`, otherwise it's clamped to min..max.
@@ -254,9 +297,12 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
           <p className="muted">
             This deletes all your progress, streak and stats. It cannot be undone.
           </p>
-          <button className="btn btn-danger" onClick={reset}>
-            Reset all progress
-          </button>
+          <div className="backup-row">
+            <InstallButton />
+            <button className="btn btn-danger" onClick={reset}>
+              Reset all progress
+            </button>
+          </div>
         </div>
       </div>
     </div>
