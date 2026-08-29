@@ -52,7 +52,7 @@ export default function Phrases() {
 /* ---------------- daily practice dashboard ---------------- */
 function PhraseHero({ onPractice, onQuick }) {
   const store = useStore();
-  const perDay = store.newPhrasesPerDay();
+  const perDay = store.phrasesPerDay();
   const stats = store.phraseStats();
   const summary = store.phraseDaySummary();
 
@@ -340,7 +340,7 @@ function AllCaughtUp({ onRandom, onQuit }) {
         </p>
         <div className="done-actions">
           <button className="btn btn-primary" onClick={onRandom}>
-            Practise {Store.phrasesPerRound()} at random
+            Practise {Store.phrasesPerDay()} at random
           </button>
           <button className="btn btn-ghost" onClick={onQuit}>
             Back to the list

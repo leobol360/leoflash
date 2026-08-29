@@ -24,9 +24,11 @@ const MIN_STARTED_MASTERY = 0.08;  // a touched-but-weak card still shows some p
 // back, indexed by box (0 = brand new / just missed, 6 = well known).
 const PHRASE_BOX_DAYS = [0, 1, 2, 4, 8, 16, 30];
 const PHRASE_MASTERED_BOX = 6;
-const DEFAULT_PHRASES_PER_ROUND = 10;   // round size, when the setting is missing/invalid
-const DEFAULT_NEW_PHRASES_PER_DAY = 10; // daily new-phrase target, when the setting is missing/invalid
-const QUICK_PHRASE_ROUND = 5;           // "Quick 5": extra practice past the daily target
+// one number drives phrases: it's both the daily new-phrase target AND
+// the size of a Practice round. Used when the setting is missing/invalid.
+const DEFAULT_PHRASES_PER_DAY = 10;
+const MAX_PHRASES_PER_DAY = 50;
+const QUICK_PHRASE_ROUND = 5; // "Quick 5": extra practice past the daily target
 
 /* ---- tiny pub/sub so the UI can react to changes ---- */
 let revision = 0;
@@ -39,8 +41,7 @@ function notifyListeners() {
 const DEFAULT_SETTINGS = {
   name: "",             // the learner's name, for a personalised greeting
   newPerDay: 20,        // the ONE configurable number: new words to learn each day
-  phrasesPerRound: 10,     // phrases in one Phrases practice round
-  newPhrasesPerDay: 10,    // brand-new phrases the daily practice introduces each day
+  phrasesPerDay: 10,    // phrases per day: the daily target AND the Practice round size
   theme: "dark",        // colour scheme: "dark" | "light"
   accent: "violet",
   voice: "",            // preferred speechSynthesis voice name
@@ -86,6 +87,18 @@ function migrate(data) {
     data.settings.enabledLevels = data.settings.themesEnabled;
   }
   delete data.settings.themesEnabled;
+
+  // settings.phrasesPerRound + settings.newPhrasesPerDay merged into one
+  // settings.phrasesPerDay (keep whichever the learner had customised)
+  if (
+    data.settings.phrasesPerRound !== undefined ||
+    data.settings.newPhrasesPerDay !== undefined
+  ) {
+    data.settings.phrasesPerDay =
+      data.settings.phrasesPerRound ?? data.settings.newPhrasesPerDay;
+  }
+  delete data.settings.phrasesPerRound;
+  delete data.settings.newPhrasesPerDay;
 
   // per-card: ef -> easeFactor, last -> lastReviewed
   for (const card of Object.values(data.cards || {})) {
@@ -659,12 +672,13 @@ const Store = {
     return this.data.phraseLog[today];
   },
 
-  // Daily target of brand-new phrases (Settings, 1..100).
-  newPhrasesPerDay() {
-    const n = Math.round(this.settings().newPhrasesPerDay);
+  // Phrases per day: the daily new-phrase target and the Practice round
+  // size, in one setting (Settings, 1..50).
+  phrasesPerDay() {
+    const n = Math.round(this.settings().phrasesPerDay);
     return Number.isFinite(n) && n > 0
-      ? Math.min(100, n)
-      : DEFAULT_NEW_PHRASES_PER_DAY;
+      ? Math.min(MAX_PHRASES_PER_DAY, n)
+      : DEFAULT_PHRASES_PER_DAY;
   },
 
   updatePhraseStreak() {
@@ -693,7 +707,7 @@ const Store = {
     }
     const newLeft = Math.max(
       0,
-      this.newPhrasesPerDay() - this.phraseLogToday().newSeen
+      this.phrasesPerDay() - this.phraseLogToday().newSeen
     );
     return {
       due,
@@ -733,16 +747,10 @@ const Store = {
     return round.slice(0, size);
   },
 
-  // How many phrases one practice round holds (Settings, 1..50).
-  phrasesPerRound() {
-    const n = Math.round(this.settings().phrasesPerRound);
-    return Number.isFinite(n) && n > 0 ? Math.min(50, n) : DEFAULT_PHRASES_PER_ROUND;
-  },
-
   // Phrases for one practice round: those due for review first (most
-  // overdue first), then unseen ones, capped at phrasesPerRound().
+  // overdue first), then unseen ones, capped at phrasesPerDay().
   // Only phrases inside the learner's chosen levels.
-  buildPhraseSession(size = this.phrasesPerRound()) {
+  buildPhraseSession(size = this.phrasesPerDay()) {
     const today = todayStr();
     const due = [];
     const fresh = [];
@@ -759,7 +767,7 @@ const Store = {
   },
 
   // A random round ignoring the schedule (used when nothing is due).
-  randomPhraseSession(size = this.phrasesPerRound()) {
+  randomPhraseSession(size = this.phrasesPerDay()) {
     return shuffle(this.scopedPhrases()).slice(0, size);
   },
 

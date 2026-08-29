@@ -169,34 +169,20 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
         />
 
         <NumberField
-          label="Phrases per practice round"
+          label="Phrases per day"
           hint={
             <>
-              How many phrases each <b>Practice</b> round shows you (study then
-              quiz). Due phrases come first.
-            </>
-          }
-          value={settings.phrasesPerRound}
-          min={1}
-          max={50}
-          fallback={10}
-          onCommit={(phrasesPerRound) => update({ phrasesPerRound })}
-        />
-
-        <NumberField
-          label="New phrases per day"
-          hint={
-            <>
-              The daily target shown on the <b>Phrases</b> screen. Phrases you've
-              already started come back for review on top, automatically. Once
+              One number for phrases: your daily target on the <b>Phrases</b>{" "}
+              screen, and how many a <b>Practice</b> round shows you (study then
+              quiz). Due phrases come back for review on top, automatically; once
               you hit the target, <b>Quick 5</b> keeps you going.
             </>
           }
-          value={settings.newPhrasesPerDay}
+          value={settings.phrasesPerDay}
           min={1}
-          max={100}
+          max={50}
           fallback={10}
-          onCommit={(newPhrasesPerDay) => update({ newPhrasesPerDay })}
+          onCommit={(phrasesPerDay) => update({ phrasesPerDay })}
         />
 
         <label className="field">
