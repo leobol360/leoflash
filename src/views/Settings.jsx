@@ -1,9 +1,44 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ACTIVE_LEVELS } from "../data.js";
 import { Store, todayStr } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
 import { clamp } from "../format.js";
+
+// A number setting you can fully clear while typing; on blur an empty or
+// invalid field falls back to `fallback`, otherwise it's clamped to min..max.
+function NumberField({ label, hint, value, min, max, fallback, onCommit }) {
+  const [text, setText] = useState(String(value));
+  useEffect(() => setText(String(value)), [value]);
+
+  const commit = () => {
+    const n = parseInt(text, 10);
+    const next = Number.isFinite(n) ? clamp(n, min, max) : fallback;
+    setText(String(next));
+    if (next !== value) onCommit(next);
+  };
+
+  return (
+    <label className="field">
+      <span>
+        {label}
+        {hint && <small className="field-hint">{hint}</small>}
+      </span>
+      <input
+        type="number"
+        min={min}
+        max={max}
+        value={text}
+        onChange={(e) => {
+          setText(e.target.value);
+          const n = parseInt(e.target.value, 10);
+          if (Number.isFinite(n) && n >= min && n <= max && n !== value) onCommit(n);
+        }}
+        onBlur={commit}
+      />
+    </label>
+  );
+}
 
 export default function Settings({ onOpenLevels, onRestored, onReset }) {
   const store = useStore();
@@ -80,23 +115,30 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
           />
         </label>
 
-        <label className="field">
-          <span>
-            New words per day
-            <small className="field-hint">
-              Your one dial. Reviews of words you already started are always
-              included on top — the daily target adjusts automatically (
-              {store.dailyGoal()} today).
-            </small>
-          </span>
-          <input
-            type="number"
-            min="1"
-            max="200"
-            value={settings.newPerDay}
-            onChange={(e) => update({ newPerDay: clamp(+e.target.value || 1, 1, 200) })}
-          />
-        </label>
+        <NumberField
+          label="New words per day"
+          hint="How many brand-new words the app shows you each day. On top of that, words you've already started come back for review when they're due, automatically. A steady pace is 10–20."
+          value={settings.newPerDay}
+          min={1}
+          max={200}
+          fallback={20}
+          onCommit={(newPerDay) => update({ newPerDay })}
+        />
+
+        <NumberField
+          label="Phrases per practice round"
+          hint={
+            <>
+              How many phrases each <b>Practicar</b> round shows you (study then
+              quiz). Due phrases come first.
+            </>
+          }
+          value={settings.phrasesPerRound}
+          min={1}
+          max={50}
+          fallback={10}
+          onCommit={(phrasesPerRound) => update({ phrasesPerRound })}
+        />
 
         <label className="field">
           <span>Theme</span>

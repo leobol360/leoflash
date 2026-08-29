@@ -253,7 +253,7 @@ function AllCaughtUp({ onRandom, onQuit }) {
         </p>
         <div className="done-actions">
           <button className="btn btn-primary" onClick={onRandom}>
-            Practicar 10 al azar
+            Practicar {Store.phrasesPerRound()} al azar
           </button>
           <button className="btn btn-ghost" onClick={onQuit}>
             Volver a la lista

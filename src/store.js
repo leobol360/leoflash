@@ -19,14 +19,12 @@ const KNOWN_INTERVAL_DAYS = 3650;  // "Never repeat" — effectively retired (~1
 const MATURE_INTERVAL_DAYS = 21;   // interval at which a card counts as fully learned
 const LEARNED_INTERVAL_DAYS = 7;   // interval at which a card counts as "learned"
 const MIN_STARTED_MASTERY = 0.08;  // a touched-but-weak card still shows some progress
-const REVIEWS_PER_NEW_WORD = 2.5;  // rough reviews each new word generates once ramped
-const MIN_DAILY_GOAL = 10;         // floor for the daily activity target
 
 // Phrase practice uses a simple Leitner box: days until a phrase comes
 // back, indexed by box (0 = brand new / just missed, 6 = well known).
 const PHRASE_BOX_DAYS = [0, 1, 2, 4, 8, 16, 30];
 const PHRASE_MASTERED_BOX = 6;
-const PHRASE_SESSION_SIZE = 10;
+const DEFAULT_PHRASES_PER_ROUND = 10; // used when the setting is missing/invalid
 
 /* ---- tiny pub/sub so the UI can react to changes ---- */
 let revision = 0;
@@ -39,6 +37,7 @@ function notifyListeners() {
 const DEFAULT_SETTINGS = {
   name: "",             // the learner's name, for a personalised greeting
   newPerDay: 20,        // the ONE configurable number: new words to learn each day
+  phrasesPerRound: 10,  // phrases in one Phrases practice round
   theme: "dark",        // colour scheme: "dark" | "light"
   accent: "violet",
   voice: "",            // preferred speechSynthesis voice name
@@ -225,15 +224,6 @@ const Store = {
   // Words that belong to the loaded levels only.
   scopedVocab() {
     return VOCAB.filter((entry) => this.inScope(entry));
-  },
-
-  // Everything derives from the single "new words per day" number.
-  // The daily activity target = new words + the reviews they generate.
-  dailyGoal() {
-    return Math.max(
-      MIN_DAILY_GOAL,
-      Math.round(this.settings().newPerDay * REVIEWS_PER_NEW_WORD)
-    );
   },
 
   // How well a single card is known: 0 = unseen, 1 = mature (21-day interval).
@@ -516,10 +506,16 @@ const Store = {
     return { total: scoped.length, seen, learning, review, mastered };
   },
 
+  // How many phrases one practice round holds (Settings, 1..50).
+  phrasesPerRound() {
+    const n = Math.round(this.settings().phrasesPerRound);
+    return Number.isFinite(n) && n > 0 ? Math.min(50, n) : DEFAULT_PHRASES_PER_ROUND;
+  },
+
   // Phrases for one practice round: those due for review first (most
-  // overdue first), then unseen ones, capped at PHRASE_SESSION_SIZE.
+  // overdue first), then unseen ones, capped at phrasesPerRound().
   // Only phrases inside the learner's chosen levels.
-  buildPhraseSession(size = PHRASE_SESSION_SIZE) {
+  buildPhraseSession(size = this.phrasesPerRound()) {
     const today = todayStr();
     const due = [];
     const fresh = [];
@@ -536,7 +532,7 @@ const Store = {
   },
 
   // A random round ignoring the schedule (used when nothing is due).
-  randomPhraseSession(size = PHRASE_SESSION_SIZE) {
+  randomPhraseSession(size = this.phrasesPerRound()) {
     return shuffle(this.scopedPhrases()).slice(0, size);
   },
 

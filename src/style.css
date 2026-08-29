@@ -75,18 +75,20 @@ kbd {
 }
 
 /* ---- layout ---- */
+/* env(safe-area-inset-*) keeps content clear of the iOS status bar / notch
+   when launched from the home screen (standalone). Applied on #app so it
+   also covers the first-run screen, which has no top bar. */
 #app {
   max-width: var(--maxw); margin: 0 auto;
+  padding-top: env(safe-area-inset-top);
   padding-left: max(clamp(14px, 4vw, 28px), env(safe-area-inset-left));
   padding-right: max(clamp(14px, 4vw, 28px), env(safe-area-inset-right));
 }
 
-/* env(safe-area-inset-top) keeps the header clear of the iOS status bar /
-   notch when the app is launched from the home screen (standalone). */
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: calc(18px + env(safe-area-inset-top)) 0 14px;
-  position: sticky; top: 0; z-index: 20;
+  padding: 18px 0 14px;
+  position: sticky; top: env(safe-area-inset-top); z-index: 20;
   background: linear-gradient(var(--bg) 70%, transparent);
   backdrop-filter: blur(4px);
 }
