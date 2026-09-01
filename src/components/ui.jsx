@@ -84,24 +84,28 @@ export function Sentence({ text, word, blank, gloss }) {
   );
 }
 
-// Example sentence in quotes with a "read it aloud" button.
-export function Example({ text, word, onSpeak }) {
+// Example sentence in quotes with a "read it aloud" button, and its
+// Spanish translation underneath.
+export function Example({ text, es, word, onSpeak }) {
   return (
     <span className="ex-line">
-      “<Sentence text={text} word={word} gloss />”
-      {onSpeak && (
-        <button
-          type="button"
-          className="ex-speak"
-          title="Escuchar la frase"
-          onClick={(e) => {
-            e.stopPropagation();
-            onSpeak(text);
-          }}
-        >
-          🔊
-        </button>
-      )}
+      <span className="ex-en">
+        “<Sentence text={text} word={word} />”
+        {onSpeak && (
+          <button
+            type="button"
+            className="ex-speak"
+            title="Escuchar la frase"
+            onClick={(e) => {
+              e.stopPropagation();
+              onSpeak(text);
+            }}
+          >
+            🔊
+          </button>
+        )}
+      </span>
+      {es && <span className="ex-es">{es}</span>}
     </span>
   );
 }

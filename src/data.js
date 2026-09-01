@@ -2,15 +2,17 @@
    LeoFlash vocabulary deck.
 
    The data lives in JSON under data/ (the single source of truth):
-     data/vocab.json   — every word: { word, pos, ipa, es, def, ex, level, rank }
-     data/levels.json  — the CEFR bands + the "software" track: { key: { label, icon } }
+     data/vocab.json      — every word: { word, pos, ipa, es, def, ex, level, rank }
+     data/levels.json     — the CEFR bands + the "software" track: { key: { label, icon } }
+     data/example-es.json — Spanish translation of each word's `ex` sentence
 
-   This module just loads those, gives each word a stable id, and
-   exposes the list plus which levels actually have words.
+   This module just loads those, gives each word a stable id and the
+   translated example, and exposes the list plus which levels have words.
    ============================================================ */
 
 import VOCAB_JSON from "../data/vocab.json";
 import LEVELS from "../data/levels.json";
+import EXAMPLE_ES from "../data/example-es.json";
 
 const slugify = (word) => word.toLowerCase().trim();
 
@@ -20,7 +22,7 @@ for (const row of VOCAB_JSON) {
   const id = slugify(row.word);
   if (seenSlugs.has(id)) continue; // guard against accidental duplicates
   seenSlugs.add(id);
-  VOCAB.push({ id, ...row });
+  VOCAB.push({ id, ...row, exEs: EXAMPLE_ES[row.word] || "" });
 }
 
 // levels that actually contain at least one word (bands fill up over time)

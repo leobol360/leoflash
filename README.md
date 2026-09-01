@@ -54,6 +54,7 @@ All app content is plain JSON in `data/`, the single source of truth:
 
 ```
 data/vocab.json      every word: { word, pos, ipa, es, def, ex, level, rank }
+data/example-es.json Spanish translation of each word's `ex` sentence, keyed by word
 data/levels.json     the CEFR bands + "software" track: { key: { label, icon } }
 data/grammar.json    the tenses & structures reference: { groups, entries }
 data/phrases.json    common phrases & idioms: { categories, phrases }
@@ -96,6 +97,7 @@ Do a backup now and then, and before clearing browser data.
 |---|---|
 | **Spaced repetition (SM‑2)** | Each word comes back right before you'd forget it. Interval grows on success, resets on a slip. |
 | **5 mixed modes** | Flashcard + self‑rating, *type the word*, listening dictation, sentence gap‑fill, multiple choice. Retrieval, not re‑reading. |
+| **Both directions** | Flashcards flip *both ways*: ~half show the English word (→ meaning), the rest show the Spanish meaning (→ recall the English word). |
 | **Production practice** | Type English from a Spanish prompt + definition — the hardest, most useful direction. |
 | **Audio** | Web Speech API pronounces every word; a listening mode trains your ear. |
 | **Level‑based, frequency‑ordered** | Words taught most‑common‑first, grouped into A1/A2/B1/B2. Each has POS, Spanish gloss, a simple English definition and an example sentence. |
@@ -122,7 +124,7 @@ src/
   main.jsx                 bootstraps React
   App.jsx                  shell: nav, routing, session handling
   style.css                all styling (light/dark, 5 accents)
-  data.js                  loads data/vocab.json + data/levels.json, adds ids
+  data.js                  loads data/vocab.json + levels.json + example-es.json, adds ids
   grammar.js               re-exports data/grammar.json
   phrases.js               loads data/phrases.json + the practice helpers
   store.js                 localStorage + SM-2 + Leitner phrases + backup/restore + pub/sub
@@ -145,6 +147,10 @@ Append an object to `data/vocab.json` with an explicit `level`
 ```json
 { "word": "…", "pos": "…", "ipa": "", "es": "…", "def": "…", "ex": "…", "level": "b1", "rank": 3100 }
 ```
+
+Add the Spanish translation of the example to `data/example-es.json`
+(`{ "word": "traducción de la frase" }`). Words without an entry just
+show the English example with no translation line.
 
 Card history is keyed by the word text, so reordering the list never loses
 progress. Older installs keyed by number are migrated automatically.

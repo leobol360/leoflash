@@ -280,7 +280,9 @@ main { padding-bottom: 120px; padding-top: 8px; }
 .fc-ex { font-style: italic; color: var(--muted); max-width: 40ch; }
 
 /* "read the example aloud" button */
-.ex-line { display: inline; }
+.ex-line { display: block; }
+.ex-en { display: block; }
+.ex-es { display: block; margin-top: 3px; font-style: normal; color: var(--muted); opacity: .85; }
 .ex-speak {
   cursor: pointer; margin-left: 6px; padding: 2px 7px; line-height: 1;
   font-size: .9rem; border-radius: 7px; vertical-align: middle;

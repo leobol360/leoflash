@@ -21,6 +21,10 @@ const NEW_WORD_GRADE_KEYS = { 1: 0, 2: 1, 3: 2, 4: "never" };
 const AUTO_SPEAK_DELAY_MS = 250;
 const LISTEN_MODE_SPEAK_DELAY_MS = 300;
 
+// share of new-word flashcards shown "backwards" — Spanish on the front,
+// the English word on the back — so you practise recall in both directions
+const LEARN_REVERSE_RATE = 0.5;
+
 export default function Study({ queue, onExit, onKeepGoing }) {
   const store = useStore();
   const total = queue.length;
@@ -38,6 +42,11 @@ export default function Study({ queue, onExit, onKeepGoing }) {
   const id = finished ? null : queue[position];
   const entry = useMemo(() => (id ? VOCAB.find((word) => word.id === id) : null), [id]);
   const mode = useMemo(() => (id ? pickMode(Store.data.cards[id]) : null), [id]);
+  // some flashcards are shown Spanish-first (front = meaning, back = the English word)
+  const learnDir = useMemo(
+    () => (Math.random() < LEARN_REVERSE_RATE ? "es" : "en"),
+    [id]
+  );
   const options = useMemo(() => (entry && mode === "choice" ? choiceOptions(entry) : []), [id, mode]);
 
   // reset per-card state + audio
@@ -48,7 +57,9 @@ export default function Study({ queue, onExit, onKeepGoing }) {
     setFeedback(null);
     setTyped("");
     const settings = Store.settings();
-    if (mode === "learn" && settings.autoSpeak) {
+    // don't auto-speak a Spanish-first card on the prompt — it would give
+    // away the English word before you've tried to recall it
+    if (mode === "learn" && settings.autoSpeak && learnDir === "en") {
       const timer = setTimeout(() => Speech.say(entry.word), AUTO_SPEAK_DELAY_MS);
       return () => clearTimeout(timer);
     }
@@ -56,11 +67,20 @@ export default function Study({ queue, onExit, onKeepGoing }) {
       const timer = setTimeout(() => Speech.say(entry.word), LISTEN_MODE_SPEAK_DELAY_MS);
       return () => clearTimeout(timer);
     }
-  }, [id, mode]);
+  }, [id, mode, learnDir]);
 
   const advance = () => {
     setDone((n) => n + 1);
     setPosition((n) => n + 1);
+  };
+
+  // turn a flashcard over. A Spanish-first card stays silent on the prompt
+  // and only speaks the English word here, when it's actually flipped.
+  const revealCard = () => {
+    setStage("revealed");
+    if (mode === "learn" && learnDir === "es" && Store.settings().autoSpeak) {
+      Speech.say(entry.word);
+    }
   };
 
   const gradeNewWord = (grade) => {
@@ -106,7 +126,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
         document.activeElement && document.activeElement.tagName === "INPUT";
       if (e.key === " " && mode === "learn" && stage === "prompt" && !inInput) {
         e.preventDefault();
-        setStage("revealed");
+        revealCard();
         return;
       }
       if (
@@ -123,11 +143,15 @@ export default function Study({ queue, onExit, onKeepGoing }) {
         advance();
         return;
       }
-      if (e.key.toLowerCase() === "s" && !inInput) Speech.say(entry.word);
+      if (e.key.toLowerCase() === "s" && !inInput) {
+        // on a Spanish-first flashcard, don't speak the answer before it's revealed
+        if (mode === "learn" && learnDir === "es" && stage !== "revealed") return;
+        Speech.say(entry.word);
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [id, mode, stage, answered, finished]);
+  }, [id, mode, stage, answered, finished, learnDir]);
 
   /* ---- finish screen ---- */
   if (finished) {
@@ -235,8 +259,9 @@ export default function Study({ queue, onExit, onKeepGoing }) {
           <LearnCard
             entry={entry}
             card={card}
+            dir={learnDir}
             stage={stage}
-            onReveal={() => setStage("revealed")}
+            onReveal={revealCard}
             onGrade={gradeNewWord}
           />
         )}
@@ -282,40 +307,92 @@ function backIn(days) {
 }
 
 /* ---------- flashcard (new word) ---------- */
-function LearnCard({ entry, card, stage, onReveal, onGrade }) {
+function LearnCard({ entry, card, dir, stage, onReveal, onGrade }) {
   const revealed = stage === "revealed";
+  const reversed = dir === "es";
+
+  // the full "answer" side: the English word, how it sounds, and everything about it
+  const englishDetail = (
+    <>
+      <div className="fc-word">{entry.word}</div>
+      <div className="fc-ipa">
+        {entry.ipa ? entry.ipa + " · " : ""}
+        <span className="muted">{entry.pos}</span>
+      </div>
+      <button
+        className="icon-btn big-speak"
+        onClick={(e) => {
+          e.stopPropagation();
+          Speech.say(entry.word);
+        }}
+      >
+        🔊
+      </button>
+      <div className="fc-def"><Glossable text={entry.def} /></div>
+      <div className="fc-ex">
+        <Example text={entry.ex} es={entry.exEs} word={entry.word} onSpeak={(t) => Speech.say(t)} />
+      </div>
+      <WordForms word={entry.word} pos={entry.pos} onSpeak={(t) => Speech.say(t)} />
+      <div className="theme-tag">
+        {LEVELS[entry.level].icon} {LEVELS[entry.level].label}
+      </div>
+    </>
+  );
+
   return (
     <>
-      <div className="mode-tag">New word · read, listen, then rate yourself</div>
+      <div className="mode-tag">
+        {reversed
+          ? "New word · what's it in English? Then rate yourself"
+          : "New word · read, listen, then rate yourself"}
+      </div>
       <div className={"flip" + (revealed ? " flipped" : "")} onClick={() => !revealed && onReveal()}>
         <div className="flip-inner">
           <div className="flip-face front">
-            <div className="fc-word">{entry.word}</div>
-            <div className="fc-ipa">
-              {entry.ipa ? entry.ipa + " · " : ""}
-              <span className="muted">{entry.pos}</span>
-            </div>
-            <button
-              className="icon-btn big-speak"
-              onClick={(e) => {
-                e.stopPropagation();
-                Speech.say(entry.word);
-              }}
-            >
-              🔊
-            </button>
-            <div className="fc-hint">Press Space to see the meaning</div>
+            {reversed ? (
+              <>
+                <div className="fc-es">{entry.es}</div>
+                <div className="fc-ipa">
+                  <span className="muted">{entry.pos}</span>
+                </div>
+                <div className="fc-hint">Press Space to see the English word</div>
+              </>
+            ) : (
+              <>
+                <div className="fc-word">{entry.word}</div>
+                <div className="fc-ipa">
+                  {entry.ipa ? entry.ipa + " · " : ""}
+                  <span className="muted">{entry.pos}</span>
+                </div>
+                <button
+                  className="icon-btn big-speak"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    Speech.say(entry.word);
+                  }}
+                >
+                  🔊
+                </button>
+                <div className="fc-hint">Press Space to see the meaning</div>
+              </>
+            )}
           </div>
           <div className="flip-face back">
-            <div className="fc-es">{entry.es}</div>
-            <div className="fc-def"><Glossable text={entry.def} /></div>
-            <div className="fc-ex">
-              <Example text={entry.ex} word={entry.word} onSpeak={(t) => Speech.say(t)} />
-            </div>
-            <WordForms word={entry.word} pos={entry.pos} onSpeak={(t) => Speech.say(t)} />
-            <div className="theme-tag">
-              {LEVELS[entry.level].icon} {LEVELS[entry.level].label}
-            </div>
+            {reversed ? (
+              englishDetail
+            ) : (
+              <>
+                <div className="fc-es">{entry.es}</div>
+                <div className="fc-def"><Glossable text={entry.def} /></div>
+                <div className="fc-ex">
+                  <Example text={entry.ex} es={entry.exEs} word={entry.word} onSpeak={(t) => Speech.say(t)} />
+                </div>
+                <WordForms word={entry.word} pos={entry.pos} onSpeak={(t) => Speech.say(t)} />
+                <div className="theme-tag">
+                  {LEVELS[entry.level].icon} {LEVELS[entry.level].label}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -327,7 +404,9 @@ function LearnCard({ entry, card, stage, onReveal, onGrade }) {
           </button>
         ) : (
           <>
-            <div className="ask-label">Did you know it?</div>
+            <div className="ask-label">
+              {reversed ? "Did you recall it?" : "Did you know it?"}
+            </div>
             <div className="grade-row four">
               <button className="btn grade g0" onClick={() => onGrade(0)}>
                 No<small>{backIn(projectedDays(card, 0))}</small>
@@ -510,7 +589,7 @@ function Feedback({ entry, feedback }) {
       </div>
       <div className="fb-def"><Glossable text={entry.def} /></div>
       <div className="fb-ex">
-        <Example text={entry.ex} word={entry.word} onSpeak={(t) => Speech.say(t)} />
+        <Example text={entry.ex} es={entry.exEs} word={entry.word} onSpeak={(t) => Speech.say(t)} />
       </div>
       <WordForms word={entry.word} pos={entry.pos} onSpeak={(t) => Speech.say(t)} />
     </div>
