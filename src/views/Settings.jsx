@@ -164,7 +164,15 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
 
         <NumberField
           label="New words per day"
-          hint="How many brand-new words the app shows you each day. On top of that, words you've already started come back for review when they're due, automatically. A steady pace is 10–20."
+          hint={
+            <>
+              Your daily target. <b>Due reviews always come first</b> and count
+              toward it — new words only fill the slots left over. So on a heavy
+              review day you'll get fewer new words (or none), and the app tells
+              you when your reviews alone reach the target. A steady pace is
+              10–20.
+            </>
+          }
           value={settings.newPerDay}
           min={1}
           max={200}

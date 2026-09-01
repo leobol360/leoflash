@@ -100,7 +100,7 @@ Do a backup now and then, and before clearing browser data.
 | **Audio** | Web Speech API pronounces every word; a listening mode trains your ear. |
 | **Level‑based, frequency‑ordered** | Words taught most‑common‑first, grouped into A1/A2/B1/B2. Each has POS, Spanish gloss, a simple English definition and an example sentence. |
 | **"Never" button** | On a new word: *No / Almost / Yes / **Never*** — "Never" means you already know it, so it leaves the rotation for good. Each button shows the next interval. |
-| **One dial** | *New words per day* drives everything; reviews of started words stack on top. |
+| **One dial** | *New words per day* is a daily goal. **Due reviews always come first** and count toward it; new words only fill the slots left over. If your reviews alone reach the goal you get no new words that day and the app warns you the backlog is growing. Clear the goal and you're done — the button disappears until tomorrow. |
 | **Phrases** | Common phrases & idioms with one dial (*Phrases per day* — the daily target and the Practice round size), a Leitner practice loop, a streak of its own, and **Quick 5** for extra rounds once the target is met. |
 | **Stats** | What you've mastered for good (words at interval ≥ 21 days, phrases in the top Leitner box), a 35-day practice calendar (words *and* phrases) with current / best streak, and per-level completion — how many words and phrases are left to finish each loaded level. |
 | **Grammar reference** | A **Grammar** tab with all English tenses (the 12 core ones + future forms, past habits, conditionals, passive) — uses, structure for the affirmative / negative / question forms, examples, time markers and common mistakes. Explanations in Spanish, examples in English. |

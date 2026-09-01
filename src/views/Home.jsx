@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ACTIVE_LEVELS } from "../data.js";
 import { useStore } from "../useStore.js";
-import { formatRelativeDate } from "../format.js";
 import { Ring, StatCard, ProgressBar } from "../components/ui.jsx";
 import DeckTable from "./DeckTable.jsx";
 
@@ -18,46 +17,55 @@ export default function Home({ onStart, onOpenLevels }) {
 
   const notLoadedLevels = Object.keys(ACTIVE_LEVELS).filter((key) => !loadedLevels.includes(key));
 
-  // "Start studying" while today's new-word target isn't met; once it is,
-  // only "Quick 10" (reviews + a little extra) — never both at once.
-  const quotaDone = summary.newLeft === 0;
-  const canDoDaily = summary.unseen > 0 || summary.due > 0;
-  const somethingLeft = canDoDaily || summary.aheadAvailable;
+  // Just the daily session: "Start studying" until today's reviews are
+  // cleared and the new-word count is met. Then the button disappears and
+  // the day's challenge is done — nothing to pull forward.
+  const newWordsLeft = summary.newLeft > 0 && summary.unseen > 0;
+  const dailyWorkLeft = summary.due > 0 || newWordsLeft;
+  const challengeDone = summary.newLeft === 0 && summary.due === 0;
 
   let action = null;
-  if (!quotaDone && canDoDaily) {
+  if (dailyWorkLeft) {
     action = { label: "Start studying", run: () => onStart({}) };
-  } else if (quotaDone && somethingLeft) {
-    // extra practice only — no new words past the daily target
-    action = {
-      label: "Quick 10",
-      run: () => onStart({ limit: 10, allowAheadNew: true, reviewOnly: true }),
-    };
-  } else if (notLoadedLevels.length > 0) {
+  } else if (!challengeDone && notLoadedLevels.length > 0) {
     action = { label: "Load a level", run: onOpenLevels };
   }
 
   let statusLine;
-  if (!quotaDone && canDoDaily) {
+  if (dailyWorkLeft && summary.reviewBacklog) {
     statusLine = (
       <>
-        {summary.due > 0
-          ? `${summary.due} card${summary.due === 1 ? "" : "s"} to review · `
-          : ""}
-        {summary.newLeft} new word{summary.newLeft === 1 ? "" : "s"} today.
+        ⚠️ {summary.due} reviews due — about {Math.round(summary.due / summary.goal)}×
+        your daily goal of {summary.goal}. Your review backlog is growing: raise{" "}
+        <b>New words per day</b> in Settings, or fit in an extra session to catch
+        up.
       </>
     );
-  } else if (quotaDone && somethingLeft) {
+  } else if (dailyWorkLeft && summary.reviewsFillGoal) {
     statusLine = (
       <>
-        🎉 Today's {settings.newPerDay} new words — done! Nice work.
-        <br />
-        {summary.due > 0
-          ? `🔁 ${summary.due} review${summary.due === 1 ? "" : "s"} still waiting. `
-          : summary.nextDue
-          ? `🔁 Next review: ${formatRelativeDate(summary.nextDue)}. `
-          : "✨ All caught up. "}
-        <b>Quick 10</b> keeps you going 💪
+        🔁 {summary.due} review{summary.due === 1 ? "" : "s"} due — that fills
+        today's goal, so no new words yet. Clear them (or raise{" "}
+        <b>New words per day</b>) to add new words again.
+      </>
+    );
+  } else if (dailyWorkLeft) {
+    const parts = [];
+    if (summary.due > 0)
+      parts.push(`${summary.due} card${summary.due === 1 ? "" : "s"} to review`);
+    if (newWordsLeft)
+      parts.push(`${summary.newLeft} new word${summary.newLeft === 1 ? "" : "s"} today`);
+    statusLine = <>{parts.join(" · ")}.</>;
+  } else if (challengeDone) {
+    statusLine = (
+      <>
+        🎉 Day complete{settings.name ? `, ${settings.name}` : ""}! Every review
+        is cleared and you've hit today's goal of {settings.newPerDay}.{" "}
+        {stats.streak > 0 ? (
+          <>Come back tomorrow to keep your {stats.streak}-day streak 🔥</>
+        ) : (
+          <>See you tomorrow 🌱</>
+        )}
       </>
     );
   } else {
@@ -72,7 +80,11 @@ export default function Home({ onStart, onOpenLevels }) {
         <div className="hero-left">
           <p className="eyebrow">{eyebrow} · Vocabulary trainer</p>
           <h1>
-            {settings.name
+            {challengeDone
+              ? settings.name
+                ? `Nice work today, ${settings.name}!`
+                : "Nice work today!"
+              : settings.name
               ? `Ready for today's practice, ${settings.name}?`
               : "Ready for today's practice?"}
           </h1>
@@ -86,10 +98,12 @@ export default function Home({ onStart, onOpenLevels }) {
           )}
         </div>
         <Ring
-          value={stats.today.newSeen}
+          value={Math.min(settings.newPerDay, stats.today.reviews)}
           max={settings.newPerDay}
-          label="New words today"
-          sub={`${stats.today.reviews} reviews done`}
+          label="Today's goal"
+          sub={`${stats.today.newSeen} new · ${
+            stats.today.reviews - stats.today.newSeen
+          } reviews`}
         />
       </div>
 

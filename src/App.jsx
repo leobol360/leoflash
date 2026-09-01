@@ -60,8 +60,11 @@ export default function App() {
   const startSession = (opts) => {
     const queue = buildSessionQueue(opts);
     if (queue.length === 0) {
+      const summary = Store.dueSummary();
       alert(
-        "You've studied every word in your loaded levels. Add another level in the level picker, or come back when reviews are due."
+        summary.newLeft === 0 && summary.unseen > 0
+          ? "That's today's new-word batch done, and nothing is due right now. Come back later for reviews, or raise \"New words per day\" in Settings."
+          : "You've studied every word in your loaded levels. Add another level in the level picker, or come back when reviews are due."
       );
       return;
     }

@@ -134,11 +134,14 @@ export default function Study({ queue, onExit, onKeepGoing }) {
     const elapsedSeconds = Math.round((Date.now() - startedAt.current) / 1000);
     const accuracy = total ? Math.round((correct / total) * 100) : 0;
     const summary = store.dueSummary();
-    const name = store.settings().name;
+    const settings = store.settings();
+    const name = settings.name;
     const streak = store.data.streak;
     const isBestStreak = streak >= 3 && streak === (store.data.maxStreak || 0);
     const milestone = STREAK_MILESTONES.includes(streak);
     const doneForToday = summary.due === 0 && summary.newLeft === 0;
+    const workLeft =
+      summary.due > 0 || (summary.newLeft > 0 && summary.unseen > 0);
 
     const emoji = milestone ? "🏅" : doneForToday ? "🎉" : accuracy >= 90 ? "🏆" : accuracy >= 70 ? "🎉" : "💪";
     const heading = milestone
@@ -165,26 +168,41 @@ export default function Study({ queue, onExit, onKeepGoing }) {
 
           {doneForToday ? (
             <p className="muted">
-              You've cleared the queue.
-              {summary.nextDue ? ` Next review ${formatRelativeDate(summary.nextDue)}.` : ""}
-              {" "}Come back tomorrow to keep the streak going.
+              🎉 That's today's goal of {settings.newPerDay} met and every review
+              cleared.
+              {summary.nextDue
+                ? ` Next review ${formatRelativeDate(summary.nextDue)}.`
+                : ""}{" "}
+              Come back tomorrow to keep your streak going.
+            </p>
+          ) : workLeft ? (
+            <p className="muted">
+              {summary.reviewBacklog
+                ? `⚠️ ${summary.due} reviews still due — your backlog is bigger than your daily goal. Raise "New words per day" in Settings, or keep clearing reviews.`
+                : summary.reviewsFillGoal
+                ? `🔁 ${summary.due} review${summary.due === 1 ? "" : "s"} still due — reviews are filling today's goal, so no new words until you catch up.`
+                : [
+                    summary.due > 0
+                      ? `${summary.due} card${summary.due === 1 ? "" : "s"} still due`
+                      : null,
+                    summary.newLeft > 0 && summary.unseen > 0
+                      ? `${summary.newLeft} new word${summary.newLeft === 1 ? "" : "s"} left today`
+                      : null,
+                  ]
+                    .filter(Boolean)
+                    .join(" · ") + "."}
             </p>
           ) : (
             <p className="muted">
-              {summary.due} card{summary.due === 1 ? "" : "s"} still due
-              {summary.newLeft > 0 ? ` · ${summary.newLeft} new word${summary.newLeft === 1 ? "" : "s"} left today` : ""}.
+              You've studied every word in your loaded levels — load another in
+              the level picker, or come back tomorrow.
             </p>
           )}
 
           <div className="done-actions">
-            {(summary.due > 0 || summary.newLeft > 0) && (
+            {workLeft && (
               <button className="btn btn-primary" onClick={() => onKeepGoing({})}>
                 Keep going
-              </button>
-            )}
-            {doneForToday && summary.aheadAvailable && (
-              <button className="btn btn-primary" onClick={() => onKeepGoing({ ahead: true })}>
-                Study ahead
               </button>
             )}
             <button className="btn btn-ghost" onClick={onExit}>

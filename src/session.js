@@ -4,61 +4,51 @@ import { Store, todayStr, shuffle } from "./store.js";
 
 const NEVER_REPEAT_DAYS = 3650; // matches KNOWN_INTERVAL_DAYS in store.js
 
-// Build the list of card ids for a new session.
-// opts: { levelOnly?, limit?, allowAheadNew?, reviewOnly?, ahead? }
-//   ahead         → deliberately study upcoming work (past the daily cap /
-//                   before cards are due) when the scheduled queue is empty
-//   allowAheadNew → top the queue up to `limit` with more cards (Quick 10)
-//   reviewOnly    → when topping up, use only words you've already started
-//                   (pulled-forward reviews) — never introduce new words
+// Build the list of card ids for a study session. Just the daily session:
+// due reviews first (always all of them), then new words filling whatever
+// slots are left under the daily goal. Nothing pulled forward from tomorrow.
+//   opts.levelOnly → study one CEFR level's due reviews + its share of
+//                    the day's remaining new-word slots
 export function buildSessionQueue(opts = {}) {
   const today = todayStr();
   let queue;
 
   if (opts.levelOnly) {
-    const ids = VOCAB.filter(
+    const levelIds = VOCAB.filter(
       (entry) => entry.level === opts.levelOnly && !Store.isRemoved(entry.id)
     )
       .map((entry) => entry.id)
       .filter((id) => !(Store.data.cards[id] || {}).known);
-    queue = ids.filter((id) => {
+    const due = [];
+    const unseen = [];
+    for (const id of levelIds) {
       const card = Store.data.cards[id];
-      return !card || !card.seen || card.due <= today;
-    });
-    if (queue.length === 0) queue = ids.slice(); // whole level if nothing due
-    shuffle(queue);
-  } else {
-    const scheduled = Store.buildQueue(); // due-today + up to newPerDay new, in loaded levels
-    queue = scheduled.queue;
-
-    const wantAhead =
-      opts.ahead || (opts.allowAheadNew && queue.length < (opts.limit || 10));
-
-    if (wantAhead) {
-      const queuedIds = new Set(queue);
-      const unseen = [];
-      const future = []; // [id, dueDate] — seen, not known, not due yet
-      for (const entry of VOCAB) {
-        if (!Store.inScope(entry) || queuedIds.has(entry.id)) continue;
-        const card = Store.data.cards[entry.id];
-        if (!card || !card.seen) unseen.push(entry.id);
-        else if (!card.known && card.due > today) future.push([entry.id, card.due]);
-      }
-      shuffle(unseen);
-      future.sort((a, b) => a[1].localeCompare(b[1])); // soonest review first
-      const futureIds = future.map(([id]) => id);
-      queue = queue.concat(
-        opts.reviewOnly ? futureIds : [...unseen, ...futureIds]
-      );
+      if (!card || !card.seen) unseen.push(id);
+      else if (card.due <= today) due.push(id);
     }
+    due.sort((a, b) =>
+      Store.data.cards[a].due.localeCompare(Store.data.cards[b].due)
+    );
+    shuffle(unseen);
+    queue =
+      due.length || unseen.length ? [...due, ...unseen] : levelIds.slice();
+  } else {
+    queue = Store.buildQueue().queue; // reviews first, then new up to the goal
   }
 
-  // cap: explicit limit, or one "day" worth when studying ahead
-  const cap =
-    opts.limit ||
-    (opts.ahead ? Math.max(10, Store.settings().newPerDay) : Infinity);
-  if (cap !== Infinity) queue = queue.slice(0, cap);
-  return queue;
+  // new words can only fill the slots still left under today's goal
+  // (reviews always come first and count toward it)
+  const newLeft = Store.dueSummary().newLeft;
+  let newTaken = 0;
+  return queue.filter((id) => {
+    const card = Store.data.cards[id];
+    if (card && card.seen) return true; // a review — always keep
+    if (newTaken < newLeft) {
+      newTaken++;
+      return true;
+    }
+    return false; // no new-word slots left today — drop
+  });
 }
 
 // Which exercise a card gets, weighted by how well it's known.

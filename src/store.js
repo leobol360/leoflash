@@ -374,18 +374,19 @@ const Store = {
       }
     }
 
-    // order due cards by how overdue they are (most overdue first)
+    // due reviews come first, oldest (most overdue) first
     due.sort((a, b) => this.data.cards[a].due.localeCompare(this.data.cards[b].due));
 
-    const newSeenToday = this.logToday().newSeen;
-    const newRemaining = Math.max(0, settings.newPerDay - newSeenToday);
+    // the daily number is a goal for the whole day: reviews are counted
+    // first, new words only fill the slots left under it
+    const goal = settings.newPerDay;
+    const gradedToday = this.logToday().reviews; // every card answered today
+    const slotsForNew = Math.max(0, goal - gradedToday - due.length);
 
-    // shuffle fresh so levels are mixed
-    shuffle(fresh);
-    const newCards = fresh.slice(0, newRemaining);
+    shuffle(fresh); // mix levels
+    const newCards = fresh.slice(0, slotsForNew);
 
-    const queue = [...due, ...newCards];
-    shuffle(queue);
+    const queue = [...due, ...newCards]; // reviews first, then new
     return { queue, dueCount: due.length, newCount: newCards.length };
   },
 
@@ -395,9 +396,8 @@ const Store = {
     const inScope = (entry) =>
       (!enabled || enabled.includes(entry.level)) && !this.isRemoved(entry.id);
     const today = todayStr();
-    let due = 0, learning = 0, newLeft = 0, mature = 0, unseen = 0, known = 0;
+    let due = 0, learning = 0, mature = 0, unseen = 0, known = 0;
     let nextDue = null;                          // soonest upcoming review date
-    const newSeenToday = this.logToday().newSeen;
     for (const entry of VOCAB.filter(inScope)) {
       const card = this.data.cards[entry.id];
       if (!card || !card.seen) { unseen++; continue; }
@@ -406,9 +406,18 @@ const Store = {
       else if (!nextDue || card.due < nextDue) nextDue = card.due;
       if (card.interval >= MATURE_INTERVAL_DAYS) mature++; else learning++;
     }
-    newLeft = Math.max(0, settings.newPerDay - newSeenToday);
-    const aheadAvailable = unseen > 0 || nextDue != null;
-    return { due, learning, mature, unseen, known, newLeft, nextDue, aheadAvailable };
+    const goal = settings.newPerDay;
+    const gradedToday = this.logToday().reviews;
+    // new-word slots left today = goal minus what's already answered minus
+    // reviews still waiting (reviews always take priority)
+    const newLeft = Math.max(0, goal - gradedToday - due);
+    // review pressure signals for the UI
+    const reviewsFillGoal = due > 0 && gradedToday + due >= goal;
+    const reviewBacklog = due >= goal * 2;
+    return {
+      due, learning, mature, unseen, known, newLeft, nextDue,
+      goal, reviewsFillGoal, reviewBacklog,
+    };
   },
 
   /* ---- grading (SM-2 variant) --------------------------- */
