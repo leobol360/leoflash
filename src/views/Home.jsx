@@ -118,7 +118,7 @@ export default function Home({ onStart, onOpenLevels }) {
           value={`${stats.seen}/${stats.total}`}
           sub={`${Math.round((stats.seen / Math.max(1, stats.total)) * 100)}% of loaded levels`}
         />
-        <StatCard label="Known well" value={stats.learned} sub={`${summary.known} marked "never"`} />
+        <StatCard label="Known well" value={stats.learned} sub={`${summary.known} you marked "I know it"`} />
         <StatCard label="Accuracy" value={`${stats.accuracy}%`} sub={`${stats.reviews} reviews total`} />
       </div>
 

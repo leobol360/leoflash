@@ -66,6 +66,7 @@ export default function Stats() {
   const practice = store.practiceSummary(35);
   const wordLevels = store.wordLevelProgress();
   const phraseLevels = store.phraseLevelProgress();
+  const phraseTenses = store.phraseTenseProgress();
 
   const wordsMastered = wordLevels.reduce((n, r) => n + r.mastered, 0);
   const wordsTotal = wordLevels.reduce((n, r) => n + r.total, 0);
@@ -131,7 +132,7 @@ export default function Stats() {
             <span className="bar">
               <span className="bar-known" style={{ width: `${phrasesPct}%` }} />
             </span>
-            <span className="muted tiny">{phrasesPct}% · top Leitner box</span>
+            <span className="muted tiny">{phrasesPct}% · parked or interval ≥ 21 days</span>
           </div>
         </div>
       </div>
@@ -226,6 +227,39 @@ export default function Stats() {
         rows={phraseLevels}
         noun="phrase"
       />
+
+      {phraseTenses.length > 1 && (
+        <div className="card">
+          <div className="card-head">
+            <h2>Phrases — grammatical tense</h2>
+            <span className="muted small">mastered / total</span>
+          </div>
+          <div className="lvlp-list">
+            {phraseTenses.map((row) => {
+              const pct = row.total
+                ? Math.round((row.mastered / row.total) * 100)
+                : 0;
+              return (
+                <div className="lvlp-row" key={row.key}>
+                  <div className="lvlp-top">
+                    <span className="lvlp-name">{row.label}</span>
+                    <span className="lvlp-count">
+                      {row.mastered}/{row.total}
+                    </span>
+                  </div>
+                  <span className="bar">
+                    <span
+                      className="bar-seen"
+                      style={{ width: `${row.total ? (row.seen / row.total) * 100 : 0}%` }}
+                    />
+                    <span className="bar-known" style={{ width: `${pct}%` }} />
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* ---- leeches ---- */}
       <div className="card">

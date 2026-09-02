@@ -4,12 +4,7 @@ import { Store } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
 import { formatInterval, formatRelativeDate } from "../format.js";
-import {
-  pickMode,
-  choiceOptions,
-  checkTyped,
-  projectedDays,
-} from "../session.js";
+import { pickMode, checkTyped, projectedDays } from "../session.js";
 import { Sentence, Example, Glossable } from "../components/ui.jsx";
 import WordForms from "../components/WordForms.jsx";
 
@@ -34,7 +29,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
   const [done, setDone] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [stage, setStage] = useState("prompt"); // learn: prompt | revealed
-  const [answered, setAnswered] = useState(false); // typed/choice done
+  const [answered, setAnswered] = useState(false); // typed answer done
   const [feedback, setFeedback] = useState(null); // { grade, almost }
   const [typed, setTyped] = useState("");
 
@@ -47,7 +42,6 @@ export default function Study({ queue, onExit, onKeepGoing }) {
     () => (Math.random() < LEARN_REVERSE_RATE ? "es" : "en"),
     [id]
   );
-  const options = useMemo(() => (entry && mode === "choice" ? choiceOptions(entry) : []), [id, mode]);
 
   // reset per-card state + audio
   useEffect(() => {
@@ -101,16 +95,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
     if (result.grade >= 2) setCorrect((n) => n + 1);
     setFeedback(result);
     setAnswered(true);
-    if (mode !== "choice") Speech.say(entry.word);
-  };
-
-  const chooseOption = (option) => {
-    if (answered) return;
-    const isCorrect = option.id === entry.id;
-    Store.grade(id, isCorrect ? 2 : 0, true);
-    if (isCorrect) setCorrect((n) => n + 1);
-    setFeedback({ grade: isCorrect ? 2 : 0, almost: false, picked: option.id });
-    setAnswered(true);
+    Speech.say(entry.word);
   };
 
   const markKnownAndAdvance = () => {
@@ -280,19 +265,6 @@ export default function Study({ queue, onExit, onKeepGoing }) {
             card={card}
           />
         )}
-
-        {mode === "choice" && (
-          <ChoiceCard
-            entry={entry}
-            options={options}
-            answered={answered}
-            feedback={feedback}
-            onChoose={chooseOption}
-            onAdvance={advance}
-            onNever={markKnownAndAdvance}
-            card={card}
-          />
-        )}
       </div>
     </div>
   );
@@ -300,9 +272,9 @@ export default function Study({ queue, onExit, onKeepGoing }) {
 
 // Small caption under a grade button: when the card will come back.
 function backIn(days) {
+  if (days >= 28 && days <= 32) return "back in a month";
   const label = formatInterval(days);
   if (label === "today") return "back today";
-  if (label === "removed") return "removed";
   return `back in ${label}`;
 }
 
@@ -418,7 +390,7 @@ function LearnCard({ entry, card, dir, stage, onReveal, onGrade }) {
                 Yes<small>{backIn(projectedDays(card, 2))}</small>
               </button>
               <button className="btn grade gN" onClick={() => onGrade("never")}>
-                Never<small>never again</small>
+                I know it<small>back in a month</small>
               </button>
             </div>
           </>
@@ -509,58 +481,7 @@ function TypedCard({ entry, mode, typed, setTyped, answered, feedback, onSubmit,
               Next review in {formatInterval((card && card.interval) || 1)}
             </span>
             <button className="btn btn-ghost tiny-btn" onClick={onNever}>
-              I already know this — never repeat
-            </button>
-          </div>
-        </div>
-      )}
-    </>
-  );
-}
-
-/* ---------- multiple choice ---------- */
-function ChoiceCard({ entry, options, answered, feedback, onChoose, onAdvance, onNever, card }) {
-  return (
-    <>
-      <div className="mode-tag">Choose the right word</div>
-      <div className="prompt-box">
-        <div className="p-es">{entry.es}</div>
-        <div className="p-def">{entry.def}</div>
-      </div>
-
-      <div className="choice-grid">
-        {options.map((option) => {
-          let className = "choice-btn";
-          if (answered) {
-            if (option.id === entry.id) className += " right";
-            else if (feedback && feedback.picked === option.id) className += " wrong";
-          }
-          return (
-            <button
-              key={option.id}
-              className={className}
-              disabled={answered}
-              onClick={() => onChoose(option)}
-            >
-              {option.word}
-            </button>
-          );
-        })}
-      </div>
-
-      {feedback && <Feedback entry={entry} feedback={feedback} />}
-
-      {answered && (
-        <div className="controls">
-          <button className="btn btn-primary wide" onClick={onAdvance}>
-            Continue <kbd>Enter</kbd>
-          </button>
-          <div className="post-answer">
-            <span className="muted small">
-              Next review in {formatInterval((card && card.interval) || 1)}
-            </span>
-            <button className="btn btn-ghost tiny-btn" onClick={onNever}>
-              I already know this — never repeat
+              I know this well — just a monthly refresh
             </button>
           </div>
         </div>

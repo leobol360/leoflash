@@ -1,0 +1,7522 @@
+{
+ "time": {
+  "es": "No tenemos tiempo.",
+  "en": "We don't have time."
+ },
+ "year": {
+  "es": "Fue un buen año.",
+  "en": "It was a good year."
+ },
+ "people": {
+  "es": "Hay mucha gente aquí.",
+  "en": "There are a lot of people here."
+ },
+ "way": {
+  "es": "No conozco el camino.",
+  "en": "I don't know the way."
+ },
+ "day": {
+  "es": "Ha sido un día largo.",
+  "en": "It's been a long day."
+ },
+ "man": {
+  "es": "Ese hombre es mi vecino.",
+  "en": "That man is my neighbour."
+ },
+ "thing": {
+  "es": "Es lo único que importa.",
+  "en": "It's the only thing that matters."
+ },
+ "woman": {
+  "es": "La mujer del abrigo rojo.",
+  "en": "The woman in the red coat."
+ },
+ "life": {
+  "es": "Así es la vida.",
+  "en": "That's life."
+ },
+ "child": {
+  "es": "Cuando era niño vivía aquí.",
+  "en": "When I was a child I lived here."
+ },
+ "world": {
+  "es": "Quiero ver el mundo.",
+  "en": "I want to see the world."
+ },
+ "school": {
+  "es": "Los niños están en la escuela.",
+  "en": "The children are at school."
+ },
+ "state": {
+  "es": "El coche está en mal estado.",
+  "en": "The car is in a bad state."
+ },
+ "family": {
+  "es": "Toda la familia vendrá.",
+  "en": "The whole family will come."
+ },
+ "student": {
+  "es": "Soy estudiante de música.",
+  "en": "I'm a music student."
+ },
+ "group": {
+  "es": "Vinimos en grupo.",
+  "en": "We came as a group."
+ },
+ "country": {
+  "es": "Es un país muy grande.",
+  "en": "It's a very big country."
+ },
+ "problem": {
+  "es": "No hay ningún problema.",
+  "en": "There's no problem."
+ },
+ "hand": {
+  "es": "Dame la mano.",
+  "en": "Give me your hand."
+ },
+ "part": {
+  "es": "Esa es la mejor parte.",
+  "en": "That's the best part."
+ },
+ "place": {
+  "es": "Conozco un buen sitio.",
+  "en": "I know a good place."
+ },
+ "case": {
+  "es": "En ese caso, me quedo.",
+  "en": "In that case, I'll stay."
+ },
+ "week": {
+  "es": "Nos vemos la semana que viene.",
+  "en": "See you next week."
+ },
+ "company": {
+  "es": "Trabaja para una empresa grande.",
+  "en": "She works for a big company."
+ },
+ "system": {
+  "es": "El sistema no funciona.",
+  "en": "The system isn't working."
+ },
+ "program": {
+  "es": "¿Qué programa estás viendo?",
+  "en": "What program are you watching?"
+ },
+ "question": {
+  "es": "Tengo una pregunta.",
+  "en": "I have a question."
+ },
+ "work": {
+  "es": "Todavía tengo trabajo.",
+  "en": "I still have work."
+ },
+ "government": {
+  "es": "El gobierno lo decidirá.",
+  "en": "The government will decide."
+ },
+ "number": {
+  "es": "No recuerdo el número.",
+  "en": "I don't remember the number."
+ },
+ "night": {
+  "es": "Anoche no dormí bien.",
+  "en": "I didn't sleep well last night."
+ },
+ "point": {
+  "es": "Entiendo tu punto de vista.",
+  "en": "I understand your point."
+ },
+ "home": {
+  "es": "Ya estoy en casa.",
+  "en": "I'm home now."
+ },
+ "water": {
+  "es": "El agua está muy fría.",
+  "en": "The water is very cold."
+ },
+ "room": {
+  "es": "Tu habitación está arriba.",
+  "en": "Your room is upstairs."
+ },
+ "mother": {
+  "es": "Mi madre cocina muy bien.",
+  "en": "My mother cooks very well."
+ },
+ "area": {
+  "es": "Vivimos en una zona tranquila.",
+  "en": "We live in a quiet area."
+ },
+ "money": {
+  "es": "No me queda dinero.",
+  "en": "I have no money left."
+ },
+ "story": {
+  "es": "Cuéntame la historia otra vez.",
+  "en": "Tell me the story again."
+ },
+ "fact": {
+  "es": "Eso no es un hecho.",
+  "en": "That's not a fact."
+ },
+ "month": {
+  "es": "El mes que viene cumplo años.",
+  "en": "Next month is my birthday."
+ },
+ "book": {
+  "es": "Este libro es aburrido.",
+  "en": "This book is boring."
+ },
+ "eye": {
+  "es": "Me duele un ojo.",
+  "en": "One of my eyes hurts."
+ },
+ "job": {
+  "es": "Le gusta su trabajo.",
+  "en": "She likes her job."
+ },
+ "word": {
+  "es": "No dijo ni una palabra.",
+  "en": "He didn't say a word."
+ },
+ "business": {
+  "es": "El negocio va bien.",
+  "en": "Business is going well."
+ },
+ "side": {
+  "es": "Siéntate a mi lado.",
+  "en": "Sit by my side."
+ },
+ "kind": {
+  "es": "Eres muy amable.",
+  "en": "You are very kind."
+ },
+ "head": {
+  "es": "Me duele la cabeza.",
+  "en": "My head hurts."
+ },
+ "house": {
+  "es": "Su casa es muy bonita.",
+  "en": "Their house is very nice."
+ },
+ "service": {
+  "es": "El servicio fue excelente.",
+  "en": "The service was excellent."
+ },
+ "friend": {
+  "es": "Es mi mejor amigo.",
+  "en": "He's my best friend."
+ },
+ "father": {
+  "es": "Mi padre trabaja mucho.",
+  "en": "My father works a lot."
+ },
+ "hour": {
+  "es": "Llego en una hora.",
+  "en": "I'll be there in an hour."
+ },
+ "game": {
+  "es": "Ganamos el partido.",
+  "en": "We won the game."
+ },
+ "line": {
+  "es": "Hay una línea larga.",
+  "en": "There's a long line."
+ },
+ "end": {
+  "es": "El final me sorprendió.",
+  "en": "The end surprised me."
+ },
+ "member": {
+  "es": "Soy miembro del club.",
+  "en": "I'm a member of the club."
+ },
+ "law": {
+  "es": "Eso va contra la ley.",
+  "en": "That's against the law."
+ },
+ "car": {
+  "es": "Mi coche no arranca.",
+  "en": "My car won't start."
+ },
+ "city": {
+  "es": "Me encanta esta ciudad.",
+  "en": "I love this city."
+ },
+ "community": {
+  "es": "Toda la comunidad ayudó.",
+  "en": "The whole community helped."
+ },
+ "name": {
+  "es": "No recuerdo su nombre.",
+  "en": "I don't remember her name."
+ },
+ "team": {
+  "es": "Trabajamos bien en equipo.",
+  "en": "We work well as a team."
+ },
+ "minute": {
+  "es": "Dame un minuto.",
+  "en": "Give me a minute."
+ },
+ "idea": {
+  "es": "Tengo una idea mejor.",
+  "en": "I have a better idea."
+ },
+ "body": {
+  "es": "Me duele todo el cuerpo.",
+  "en": "My whole body aches."
+ },
+ "information": {
+  "es": "Necesito más información.",
+  "en": "I need more information."
+ },
+ "back": {
+  "es": "Vuelvo en cinco minutos.",
+  "en": "I'll be back in five minutes."
+ },
+ "parent": {
+  "es": "Mis padres están de viaje.",
+  "en": "My parents are travelling."
+ },
+ "face": {
+  "es": "Tienes cara de cansado.",
+  "en": "You look tired."
+ },
+ "others": {
+  "es": "Los demás ya se fueron.",
+  "en": "The others have already left."
+ },
+ "level": {
+  "es": "Subimos al siguiente nivel.",
+  "en": "We moved up to the next level."
+ },
+ "office": {
+  "es": "Estoy en la oficina.",
+  "en": "I'm at the office."
+ },
+ "door": {
+  "es": "Cierra la puerta, por favor.",
+  "en": "Close the door, please."
+ },
+ "health": {
+  "es": "Cuida tu salud.",
+  "en": "Take care of your health."
+ },
+ "person": {
+  "es": "Es una buena persona.",
+  "en": "He's a good person."
+ },
+ "art": {
+  "es": "El arte moderno no me gusta.",
+  "en": "I don't like modern art."
+ },
+ "war": {
+  "es": "La guerra terminó por fin.",
+  "en": "The war finally ended."
+ },
+ "history": {
+  "es": "La historia se repite.",
+  "en": "History repeats itself."
+ },
+ "result": {
+  "es": "El resultado fue bueno.",
+  "en": "The result was good."
+ },
+ "change": {
+  "es": "Necesito un cambio.",
+  "en": "I need a change."
+ },
+ "morning": {
+  "es": "Buenos días, ¿qué tal?",
+  "en": "Good morning, how are you?"
+ },
+ "reason": {
+  "es": "No hay razón para llorar.",
+  "en": "There's no reason to cry."
+ },
+ "research": {
+  "es": "Su investigación es importante.",
+  "en": "Her research is important."
+ },
+ "moment": {
+  "es": "Espera un momento.",
+  "en": "Wait a moment."
+ },
+ "air": {
+  "es": "Necesito aire fresco.",
+  "en": "I need some fresh air."
+ },
+ "teacher": {
+  "es": "Nuestra profesora es simpática.",
+  "en": "Our teacher is nice."
+ },
+ "force": {
+  "es": "Abrió la puerta con fuerza.",
+  "en": "He opened the door with force."
+ },
+ "education": {
+  "es": "La educación es un derecho.",
+  "en": "Education is a right."
+ },
+ "foot": {
+  "es": "Me duele el pie.",
+  "en": "My foot hurts."
+ },
+ "boy": {
+  "es": "El niño está llorando.",
+  "en": "The boy is crying."
+ },
+ "age": {
+  "es": "¿Qué edad tienes?",
+  "en": "What's your age?"
+ },
+ "policy": {
+  "es": "Es la política de la empresa.",
+  "en": "It's the company policy."
+ },
+ "everything": {
+  "es": "Todo está bien.",
+  "en": "Everything is fine."
+ },
+ "process": {
+  "es": "El proceso es lento.",
+  "en": "The process is slow."
+ },
+ "music": {
+  "es": "Sube la música.",
+  "en": "Turn up the music."
+ },
+ "market": {
+  "es": "Voy al mercado los sábados.",
+  "en": "I go to the market on Saturdays."
+ },
+ "sense": {
+  "es": "Eso no tiene sentido.",
+  "en": "That makes no sense."
+ },
+ "nation": {
+  "es": "Toda la nación lo vio.",
+  "en": "The whole nation watched it."
+ },
+ "plan": {
+  "es": "Tengo un plan.",
+  "en": "I have a plan."
+ },
+ "college": {
+  "es": "Empieza la universidad en otoño.",
+  "en": "She starts college in autumn."
+ },
+ "interest": {
+  "es": "Muestra interés por el arte.",
+  "en": "She shows an interest in art."
+ },
+ "death": {
+  "es": "Su muerte fue repentina.",
+  "en": "His death was sudden."
+ },
+ "experience": {
+  "es": "Fue una gran experiencia.",
+  "en": "It was a great experience."
+ },
+ "effect": {
+  "es": "El café no me hace efecto.",
+  "en": "Coffee has no effect on me."
+ },
+ "use": {
+  "es": "No le veo el uso.",
+  "en": "I don't see the use of it."
+ },
+ "class": {
+  "es": "La clase empieza a las nueve.",
+  "en": "Class starts at nine."
+ },
+ "control": {
+  "es": "Todo está bajo control.",
+  "en": "Everything is under control."
+ },
+ "care": {
+  "es": "Conduce con cuidado.",
+  "en": "Drive with care."
+ },
+ "field": {
+  "es": "Los niños juegan en el campo.",
+  "en": "The children play in the field."
+ },
+ "development": {
+  "es": "El desarrollo tardó años.",
+  "en": "The development took years."
+ },
+ "role": {
+  "es": "Tiene un papel importante.",
+  "en": "He has an important role."
+ },
+ "effort": {
+  "es": "Haz un pequeño esfuerzo.",
+  "en": "Make a small effort."
+ },
+ "rate": {
+  "es": "La tasa de interés subió.",
+  "en": "The interest rate went up."
+ },
+ "heart": {
+  "es": "Te lo digo de corazón.",
+  "en": "I say this from the heart."
+ },
+ "drug": {
+  "es": "Este medicamento es fuerte.",
+  "en": "This drug is strong."
+ },
+ "show": {
+  "es": "Enséñame tu dibujo.",
+  "en": "Show me your drawing."
+ },
+ "leader": {
+  "es": "Necesitamos un buen líder.",
+  "en": "We need a good leader."
+ },
+ "light": {
+  "es": "Apaga la luz.",
+  "en": "Turn off the light."
+ },
+ "voice": {
+  "es": "Baja la voz.",
+  "en": "Lower your voice."
+ },
+ "wife": {
+  "es": "Su esposa es médica.",
+  "en": "His wife is a doctor."
+ },
+ "police": {
+  "es": "Llama a la policía.",
+  "en": "Call the police."
+ },
+ "mind": {
+  "es": "He cambiado de opinión.",
+  "en": "I've changed my mind."
+ },
+ "price": {
+  "es": "El precio es muy alto.",
+  "en": "The price is too high."
+ },
+ "report": {
+  "es": "Entrega el informe el lunes.",
+  "en": "Hand in the report on Monday."
+ },
+ "decision": {
+  "es": "Es tu decisión.",
+  "en": "It's your decision."
+ },
+ "son": {
+  "es": "Su hijo tiene diez años.",
+  "en": "Their son is ten years old."
+ },
+ "view": {
+  "es": "Desde aquí hay buenas vistas.",
+  "en": "There's a nice view from here."
+ },
+ "relationship": {
+  "es": "Tienen una buena relación.",
+  "en": "They have a good relationship."
+ },
+ "society": {
+  "es": "La sociedad ha cambiado.",
+  "en": "Society has changed."
+ },
+ "form": {
+  "es": "Firma el formulario aquí.",
+  "en": "Sign the form here."
+ },
+ "event": {
+  "es": "El evento fue un éxito.",
+  "en": "The event was a success."
+ },
+ "situation": {
+  "es": "La situación es complicada.",
+  "en": "The situation is complicated."
+ },
+ "value": {
+  "es": "El coche perdió valor.",
+  "en": "The car lost value."
+ },
+ "building": {
+  "es": "El edificio es muy alto.",
+  "en": "The building is very tall."
+ },
+ "action": {
+  "es": "Necesitamos actuar ya.",
+  "en": "We need to take action now."
+ },
+ "model": {
+  "es": "Es el último modelo.",
+  "en": "It's the latest model."
+ },
+ "season": {
+  "es": "El verano es mi estación favorita.",
+  "en": "Summer is my favourite season."
+ },
+ "road": {
+  "es": "La carretera está cortada.",
+  "en": "The road is closed."
+ },
+ "paper": {
+  "es": "Dame una hoja de papel.",
+  "en": "Give me a sheet of paper."
+ },
+ "space": {
+  "es": "No hay espacio en el coche.",
+  "en": "There's no space in the car."
+ },
+ "ground": {
+  "es": "El suelo está mojado.",
+  "en": "The ground is wet."
+ },
+ "future": {
+  "es": "Piensa en el futuro.",
+  "en": "Think about the future."
+ },
+ "nature": {
+  "es": "Me gusta estar en la naturaleza.",
+  "en": "I like being in nature."
+ },
+ "news": {
+  "es": "Tengo buenas noticias.",
+  "en": "I have good news."
+ },
+ "food": {
+  "es": "La comida está lista.",
+  "en": "The food is ready."
+ },
+ "figure": {
+  "es": "Las cifras han bajado.",
+  "en": "The figures have gone down."
+ },
+ "street": {
+  "es": "Cruza la calle con cuidado.",
+  "en": "Cross the street carefully."
+ },
+ "girl": {
+  "es": "La niña juega en el parque.",
+  "en": "The girl plays in the park."
+ },
+ "stage": {
+  "es": "Estamos en la primera etapa.",
+  "en": "We're at the first stage."
+ },
+ "order": {
+  "es": "Mi pedido no ha llegado.",
+  "en": "My order hasn't arrived."
+ },
+ "subject": {
+  "es": "Mi asignatura favorita es historia.",
+  "en": "My favourite subject is history."
+ },
+ "matter": {
+  "es": "No importa.",
+  "en": "It doesn't matter."
+ },
+ "record": {
+  "es": "Batió el récord.",
+  "en": "She broke the record."
+ },
+ "term": {
+  "es": "El segundo trimestre empieza en enero.",
+  "en": "The second term starts in January."
+ },
+ "language": {
+  "es": "El español es un idioma bonito.",
+  "en": "Spanish is a beautiful language."
+ },
+ "century": {
+  "es": "Estamos en el siglo veintiuno.",
+  "en": "We're in the twenty-first century."
+ },
+ "organization": {
+  "es": "Trabaja para una organización sin fines de lucro.",
+  "en": "She works for a non-profit organization."
+ },
+ "site": {
+  "es": "El sitio web no funciona.",
+  "en": "The website isn't working."
+ },
+ "patient": {
+  "es": "El paciente ya está mejor.",
+  "en": "The patient is better now."
+ },
+ "study": {
+  "es": "Tengo que estudiar esta noche.",
+  "en": "I have to study tonight."
+ },
+ "type": {
+  "es": "¿Qué tipo de té quieres?",
+  "en": "What type of tea do you want?"
+ },
+ "choice": {
+  "es": "No tengo elección.",
+  "en": "I have no choice."
+ },
+ "structure": {
+  "es": "La estructura del edificio es sólida.",
+  "en": "The structure of the building is solid."
+ },
+ "course": {
+  "es": "El curso dura tres meses.",
+  "en": "The course lasts three months."
+ },
+ "be": {
+  "es": "Quiero ser profesor.",
+  "en": "I want to be a teacher."
+ },
+ "have": {
+  "es": "No tengo hambre.",
+  "en": "I'm not hungry."
+ },
+ "do": {
+  "es": "¿Qué vas a hacer hoy?",
+  "en": "What are you going to do today?"
+ },
+ "say": {
+  "es": "No sé qué decir.",
+  "en": "I don't know what to say."
+ },
+ "get": {
+  "es": "Voy a por pan.",
+  "en": "I'll get some bread."
+ },
+ "make": {
+  "es": "Voy a hacer café.",
+  "en": "I'll make some coffee."
+ },
+ "go": {
+  "es": "Tengo que irme ya.",
+  "en": "I have to go now."
+ },
+ "know": {
+  "es": "Ya lo sé.",
+  "en": "I already know."
+ },
+ "think": {
+  "es": "Déjame pensar.",
+  "en": "Let me think."
+ },
+ "take": {
+  "es": "Coge una silla.",
+  "en": "Take a chair."
+ },
+ "see": {
+  "es": "Nos vemos mañana.",
+  "en": "See you tomorrow."
+ },
+ "come": {
+  "es": "Ven conmigo.",
+  "en": "Come with me."
+ },
+ "want": {
+  "es": "No quiero nada.",
+  "en": "I don't want anything."
+ },
+ "look": {
+  "es": "Mira por la ventana.",
+  "en": "Look out of the window."
+ },
+ "find": {
+  "es": "No puedo encontrarlo.",
+  "en": "I can't find it."
+ },
+ "give": {
+  "es": "Dame un poco de agua.",
+  "en": "Give me some water."
+ },
+ "tell": {
+  "es": "No se lo cuentes a nadie.",
+  "en": "Don't tell anyone."
+ },
+ "ask": {
+  "es": "Voy a preguntarle al profesor.",
+  "en": "I'll ask the teacher."
+ },
+ "seem": {
+  "es": "Parece fácil.",
+  "en": "It seems easy."
+ },
+ "feel": {
+  "es": "Me siento cansado.",
+  "en": "I feel tired."
+ },
+ "try": {
+  "es": "Voy a intentarlo.",
+  "en": "I'll try."
+ },
+ "leave": {
+  "es": "No te vayas todavía.",
+  "en": "Don't leave yet."
+ },
+ "call": {
+  "es": "Llámame más tarde.",
+  "en": "Call me later."
+ },
+ "need": {
+  "es": "Necesito descansar.",
+  "en": "I need to rest."
+ },
+ "become": {
+  "es": "Se hizo famoso.",
+  "en": "He became famous."
+ },
+ "mean": {
+  "es": "No quería decir eso.",
+  "en": "I didn't mean that."
+ },
+ "keep": {
+  "es": "Quédate el cambio.",
+  "en": "Keep the change."
+ },
+ "let": {
+  "es": "Déjame ayudarte.",
+  "en": "Let me help you."
+ },
+ "begin": {
+  "es": "Vamos a empezar.",
+  "en": "Let's begin."
+ },
+ "help": {
+  "es": "Ayúdame, por favor.",
+  "en": "Help me, please."
+ },
+ "hear": {
+  "es": "No te oigo bien.",
+  "en": "I can't hear you well."
+ },
+ "play": {
+  "es": "¿Sabes tocar la guitarra?",
+  "en": "Can you play the guitar?"
+ },
+ "run": {
+  "es": "Corre, que llegamos tarde.",
+  "en": "Run, we're late."
+ },
+ "move": {
+  "es": "No te muevas.",
+  "en": "Don't move."
+ },
+ "live": {
+  "es": "Vivo cerca de aquí.",
+  "en": "I live near here."
+ },
+ "believe": {
+  "es": "No me lo puedo creer.",
+  "en": "I can't believe it."
+ },
+ "bring": {
+  "es": "Trae tu abrigo.",
+  "en": "Bring your coat."
+ },
+ "happen": {
+  "es": "¿Qué ha pasado?",
+  "en": "What happened?"
+ },
+ "write": {
+  "es": "Escribe tu nombre aquí.",
+  "en": "Write your name here."
+ },
+ "sit": {
+  "es": "Siéntate, por favor.",
+  "en": "Sit down, please."
+ },
+ "stand": {
+  "es": "No puedo estar de pie tanto tiempo.",
+  "en": "I can't stand for so long."
+ },
+ "lose": {
+  "es": "No pierdas la esperanza.",
+  "en": "Don't lose hope."
+ },
+ "pay": {
+  "es": "Yo pago hoy.",
+  "en": "I'll pay today."
+ },
+ "meet": {
+  "es": "Encantado de conocerte.",
+  "en": "Nice to meet you."
+ },
+ "include": {
+  "es": "El precio incluye todo.",
+  "en": "The price includes everything."
+ },
+ "continue": {
+  "es": "Sigue por esta calle.",
+  "en": "Continue down this street."
+ },
+ "set": {
+  "es": "Pon la mesa, por favor.",
+  "en": "Set the table, please."
+ },
+ "learn": {
+  "es": "Quiero aprender francés.",
+  "en": "I want to learn French."
+ },
+ "lead": {
+  "es": "Tú guías y yo te sigo.",
+  "en": "You lead and I'll follow."
+ },
+ "understand": {
+  "es": "Ahora lo entiendo.",
+  "en": "Now I understand."
+ },
+ "watch": {
+  "es": "Vamos a ver una película.",
+  "en": "Let's watch a film."
+ },
+ "follow": {
+  "es": "Sígueme.",
+  "en": "Follow me."
+ },
+ "stop": {
+  "es": "¡Para el coche!",
+  "en": "Stop the car!"
+ },
+ "create": {
+  "es": "Quiero crear algo nuevo.",
+  "en": "I want to create something new."
+ },
+ "speak": {
+  "es": "Habla más despacio.",
+  "en": "Speak more slowly."
+ },
+ "read": {
+  "es": "Léeme la carta.",
+  "en": "Read me the letter."
+ },
+ "spend": {
+  "es": "Pasé la tarde leyendo.",
+  "en": "I spent the afternoon reading."
+ },
+ "grow": {
+  "es": "Los niños crecen deprisa.",
+  "en": "Children grow quickly."
+ },
+ "open": {
+  "es": "Abre la ventana.",
+  "en": "Open the window."
+ },
+ "walk": {
+  "es": "Vamos a dar un paseo.",
+  "en": "Let's go for a walk."
+ },
+ "win": {
+  "es": "Vamos a ganar.",
+  "en": "We're going to win."
+ },
+ "offer": {
+  "es": "Me ofreció ayuda.",
+  "en": "She offered me help."
+ },
+ "remember": {
+  "es": "Recuerda comprar leche.",
+  "en": "Remember to buy milk."
+ },
+ "consider": {
+  "es": "Considéralo hecho.",
+  "en": "Consider it done."
+ },
+ "appear": {
+  "es": "Apareció de repente.",
+  "en": "He appeared suddenly."
+ },
+ "buy": {
+  "es": "Voy a comprar el billete.",
+  "en": "I'll buy the ticket."
+ },
+ "serve": {
+  "es": "Sirven café aquí.",
+  "en": "They serve coffee here."
+ },
+ "die": {
+  "es": "La flor se murió.",
+  "en": "The flower died."
+ },
+ "send": {
+  "es": "Te lo envío hoy.",
+  "en": "I'll send it to you today."
+ },
+ "build": {
+  "es": "Van a construir un puente.",
+  "en": "They're going to build a bridge."
+ },
+ "stay": {
+  "es": "Quédate un rato más.",
+  "en": "Stay a little longer."
+ },
+ "fall": {
+  "es": "Ten cuidado, no te caigas.",
+  "en": "Be careful, don't fall."
+ },
+ "cut": {
+  "es": "Corta el pan, por favor.",
+  "en": "Cut the bread, please."
+ },
+ "reach": {
+  "es": "No llego a la estantería.",
+  "en": "I can't reach the shelf."
+ },
+ "remain": {
+  "es": "Todo sigue igual.",
+  "en": "Everything remains the same."
+ },
+ "suggest": {
+  "es": "¿Qué me sugieres?",
+  "en": "What do you suggest?"
+ },
+ "raise": {
+  "es": "Levanta la mano si sabes la respuesta.",
+  "en": "Raise your hand if you know the answer."
+ },
+ "pass": {
+  "es": "Pásame la sal.",
+  "en": "Pass me the salt."
+ },
+ "sell": {
+  "es": "Vamos a vender la casa.",
+  "en": "We're going to sell the house."
+ },
+ "require": {
+  "es": "Este trabajo requiere paciencia.",
+  "en": "This job requires patience."
+ },
+ "decide": {
+  "es": "Tú decides.",
+  "en": "You decide."
+ },
+ "pull": {
+  "es": "Tira de la cuerda.",
+  "en": "Pull the rope."
+ },
+ "return": {
+  "es": "Vuelvo enseguida.",
+  "en": "I'll return right away."
+ },
+ "explain": {
+  "es": "Explícamelo otra vez.",
+  "en": "Explain it to me again."
+ },
+ "hope": {
+  "es": "Espero que sí.",
+  "en": "I hope so."
+ },
+ "develop": {
+  "es": "El plan se está desarrollando bien.",
+  "en": "The plan is developing well."
+ },
+ "carry": {
+  "es": "Yo llevo la maleta.",
+  "en": "I'll carry the suitcase."
+ },
+ "break": {
+  "es": "Vamos a hacer una pausa.",
+  "en": "Let's take a break."
+ },
+ "receive": {
+  "es": "Recibí tu mensaje.",
+  "en": "I received your message."
+ },
+ "agree": {
+  "es": "Estoy de acuerdo.",
+  "en": "I agree."
+ },
+ "support": {
+  "es": "Siempre te apoyaré.",
+  "en": "I'll always support you."
+ },
+ "hit": {
+  "es": "La pelota me golpeó la cara.",
+  "en": "The ball hit my face."
+ },
+ "produce": {
+  "es": "Esta zona produce buen vino.",
+  "en": "This area produces good wine."
+ },
+ "eat": {
+  "es": "¿Ya has comido?",
+  "en": "Have you eaten yet?"
+ },
+ "cover": {
+  "es": "Cubre al bebé con una manta.",
+  "en": "Cover the baby with a blanket."
+ },
+ "catch": {
+  "es": "¡Coge la pelota!",
+  "en": "Catch the ball!"
+ },
+ "draw": {
+  "es": "Dibuja un círculo.",
+  "en": "Draw a circle."
+ },
+ "choose": {
+  "es": "Elige tú.",
+  "en": "You choose."
+ },
+ "cause": {
+  "es": "El fuego causó mucho daño.",
+  "en": "The fire caused a lot of damage."
+ },
+ "listen": {
+  "es": "Escúchame bien.",
+  "en": "Listen to me carefully."
+ },
+ "realize": {
+  "es": "No me di cuenta.",
+  "en": "I didn't realize."
+ },
+ "close": {
+  "es": "Cierra los ojos.",
+  "en": "Close your eyes."
+ },
+ "involve": {
+  "es": "No me metas en esto.",
+  "en": "Don't involve me in this."
+ },
+ "increase": {
+  "es": "Los precios van a aumentar.",
+  "en": "Prices are going to increase."
+ },
+ "expect": {
+  "es": "Te espero a las ocho.",
+  "en": "I expect you at eight."
+ },
+ "kill": {
+  "es": "El calor mató las plantas.",
+  "en": "The heat killed the plants."
+ },
+ "improve": {
+  "es": "Mi inglés está mejorando.",
+  "en": "My English is improving."
+ },
+ "prepare": {
+  "es": "Prepárate para salir.",
+  "en": "Get ready to leave."
+ },
+ "push": {
+  "es": "Empuja la puerta.",
+  "en": "Push the door."
+ },
+ "allow": {
+  "es": "No permiten perros aquí.",
+  "en": "They don't allow dogs here."
+ },
+ "describe": {
+  "es": "Descríbeme la casa.",
+  "en": "Describe the house to me."
+ },
+ "wait": {
+  "es": "Espérame aquí.",
+  "en": "Wait for me here."
+ },
+ "throw": {
+  "es": "Tira la basura.",
+  "en": "Throw out the rubbish."
+ },
+ "fill": {
+  "es": "Llena el vaso de agua.",
+  "en": "Fill the glass with water."
+ },
+ "worry": {
+  "es": "No te preocupes por mí.",
+  "en": "Don't worry about me."
+ },
+ "join": {
+  "es": "Únete a nosotros.",
+  "en": "Join us."
+ },
+ "save": {
+  "es": "Estoy ahorrando dinero.",
+  "en": "I'm saving money."
+ },
+ "mention": {
+  "es": "No lo menciones.",
+  "en": "Don't mention it."
+ },
+ "visit": {
+  "es": "Voy a visitar a mis abuelos.",
+  "en": "I'm going to visit my grandparents."
+ },
+ "fly": {
+  "es": "El avión vuela muy alto.",
+  "en": "The plane flies very high."
+ },
+ "drive": {
+  "es": "Conduce con cuidado.",
+  "en": "Drive carefully."
+ },
+ "stick": {
+  "es": "Pega la foto aquí.",
+  "en": "Stick the photo here."
+ },
+ "teach": {
+  "es": "¿Me enseñas a bailar?",
+  "en": "Will you teach me to dance?"
+ },
+ "thank": {
+  "es": "Te lo agradezco.",
+  "en": "I thank you for it."
+ },
+ "compare": {
+  "es": "No compares a tus hijos.",
+  "en": "Don't compare your children."
+ },
+ "wear": {
+  "es": "Ponte un abrigo.",
+  "en": "Wear a coat."
+ },
+ "arrive": {
+  "es": "Llegamos tarde.",
+  "en": "We arrived late."
+ },
+ "enjoy": {
+  "es": "Disfruta de la fiesta.",
+  "en": "Enjoy the party."
+ },
+ "good": {
+  "es": "Eres muy buena persona.",
+  "en": "You're a very good person."
+ },
+ "new": {
+  "es": "Tengo un coche nuevo.",
+  "en": "I have a new car."
+ },
+ "first": {
+  "es": "Tú primero.",
+  "en": "You first."
+ },
+ "last": {
+  "es": "Es la última vez.",
+  "en": "It's the last time."
+ },
+ "long": {
+  "es": "Fue un día muy largo.",
+  "en": "It was a very long day."
+ },
+ "great": {
+  "es": "¡Qué gran idea!",
+  "en": "What a great idea!"
+ },
+ "little": {
+  "es": "Solo un poco, por favor.",
+  "en": "Just a little, please."
+ },
+ "own": {
+  "es": "Tengo mi propia habitación.",
+  "en": "I have my own room."
+ },
+ "other": {
+  "es": "¿Dónde está el otro zapato?",
+  "en": "Where's the other shoe?"
+ },
+ "old": {
+  "es": "Esta casa es muy vieja.",
+  "en": "This house is very old."
+ },
+ "right": {
+  "es": "Esa es la respuesta correcta.",
+  "en": "That's the right answer."
+ },
+ "big": {
+  "es": "Es un problema muy grande.",
+  "en": "It's a very big problem."
+ },
+ "high": {
+  "es": "La montaña es muy alta.",
+  "en": "The mountain is very high."
+ },
+ "different": {
+  "es": "Somos muy diferentes.",
+  "en": "We are very different."
+ },
+ "small": {
+  "es": "El piso es pequeño.",
+  "en": "The flat is small."
+ },
+ "large": {
+  "es": "Quiero un café grande.",
+  "en": "I want a large coffee."
+ },
+ "next": {
+  "es": "Nos vemos la próxima semana.",
+  "en": "See you next week."
+ },
+ "early": {
+  "es": "Mañana me levanto temprano.",
+  "en": "I'm getting up early tomorrow."
+ },
+ "young": {
+  "es": "Todavía eres joven.",
+  "en": "You're still young."
+ },
+ "important": {
+  "es": "Esto es muy importante.",
+  "en": "This is very important."
+ },
+ "few": {
+  "es": "Vinieron pocas personas.",
+  "en": "Few people came."
+ },
+ "public": {
+  "es": "Es un parque público.",
+  "en": "It's a public park."
+ },
+ "bad": {
+  "es": "Hoy hace mal tiempo.",
+  "en": "The weather is bad today."
+ },
+ "same": {
+  "es": "Somos del mismo pueblo.",
+  "en": "We're from the same town."
+ },
+ "able": {
+  "es": "No fui capaz de hacerlo.",
+  "en": "I wasn't able to do it."
+ },
+ "local": {
+  "es": "Compramos productos locales.",
+  "en": "We buy local products."
+ },
+ "sure": {
+  "es": "¿Estás seguro?",
+  "en": "Are you sure?"
+ },
+ "better": {
+  "es": "Hoy me siento mejor.",
+  "en": "I feel better today."
+ },
+ "best": {
+  "es": "Es el mejor restaurante del pueblo.",
+  "en": "It's the best restaurant in town."
+ },
+ "real": {
+  "es": "¿Es oro de verdad?",
+  "en": "Is it real gold?"
+ },
+ "free": {
+  "es": "La entrada es gratis.",
+  "en": "Entry is free."
+ },
+ "true": {
+  "es": "Es verdad.",
+  "en": "It's true."
+ },
+ "whole": {
+  "es": "Me comí la manzana entera.",
+  "en": "I ate the whole apple."
+ },
+ "easy": {
+  "es": "Fue muy fácil.",
+  "en": "It was very easy."
+ },
+ "hard": {
+  "es": "El examen fue difícil.",
+  "en": "The exam was hard."
+ },
+ "special": {
+  "es": "Hoy es un día especial.",
+  "en": "Today is a special day."
+ },
+ "clear": {
+  "es": "Ahora está todo claro.",
+  "en": "Now everything is clear."
+ },
+ "certain": {
+  "es": "Estoy seguro de eso.",
+  "en": "I'm certain of that."
+ },
+ "personal": {
+  "es": "Es un asunto personal.",
+  "en": "It's a personal matter."
+ },
+ "difficult": {
+  "es": "Es una decisión difícil.",
+  "en": "It's a difficult decision."
+ },
+ "available": {
+  "es": "No hay habitaciones disponibles.",
+  "en": "There are no rooms available."
+ },
+ "likely": {
+  "es": "Es probable que llueva.",
+  "en": "It's likely to rain."
+ },
+ "short": {
+  "es": "Es un camino corto.",
+  "en": "It's a short way."
+ },
+ "single": {
+  "es": "No queda ni una sola entrada.",
+  "en": "There isn't a single ticket left."
+ },
+ "low": {
+  "es": "Habla en voz baja.",
+  "en": "Speak in a low voice."
+ },
+ "hot": {
+  "es": "El agua está muy caliente.",
+  "en": "The water is very hot."
+ },
+ "cold": {
+  "es": "Tengo las manos frías.",
+  "en": "My hands are cold."
+ },
+ "happy": {
+  "es": "Estoy muy feliz hoy.",
+  "en": "I'm very happy today."
+ },
+ "serious": {
+  "es": "¿Lo dices en serio?",
+  "en": "Are you serious?"
+ },
+ "ready": {
+  "es": "Ya estoy lista.",
+  "en": "I'm ready now."
+ },
+ "simple": {
+  "es": "La respuesta es simple.",
+  "en": "The answer is simple."
+ },
+ "strong": {
+  "es": "El café está muy fuerte.",
+  "en": "The coffee is very strong."
+ },
+ "heavy": {
+  "es": "Esta bolsa pesa mucho.",
+  "en": "This bag is very heavy."
+ },
+ "nice": {
+  "es": "Qué día tan agradable.",
+  "en": "What a nice day."
+ },
+ "fine": {
+  "es": "Estoy bien, gracias.",
+  "en": "I'm fine, thanks."
+ },
+ "poor": {
+  "es": "Es una familia pobre.",
+  "en": "It's a poor family."
+ },
+ "wrong": {
+  "es": "Me equivoqué de calle.",
+  "en": "I took the wrong street."
+ },
+ "dark": {
+  "es": "La habitación está muy oscura.",
+  "en": "The room is very dark."
+ },
+ "full": {
+  "es": "El vaso está lleno.",
+  "en": "The glass is full."
+ },
+ "dead": {
+  "es": "El teléfono está muerto.",
+  "en": "The phone is dead."
+ },
+ "safe": {
+  "es": "Aquí estás a salvo.",
+  "en": "You're safe here."
+ },
+ "quick": {
+  "es": "Dame una respuesta rápida.",
+  "en": "Give me a quick answer."
+ },
+ "slow": {
+  "es": "El tren es muy lento.",
+  "en": "The train is very slow."
+ },
+ "late": {
+  "es": "Es muy tarde.",
+  "en": "It's very late."
+ },
+ "possible": {
+  "es": "¿Es posible cambiarlo?",
+  "en": "Is it possible to change it?"
+ },
+ "popular": {
+  "es": "Esa canción es muy popular.",
+  "en": "That song is very popular."
+ },
+ "common": {
+  "es": "Es un error muy común.",
+  "en": "It's a very common mistake."
+ },
+ "huge": {
+  "es": "Hay una cola enorme.",
+  "en": "There's a huge queue."
+ },
+ "main": {
+  "es": "Esa es la razón principal.",
+  "en": "That's the main reason."
+ },
+ "recent": {
+  "es": "Es una noticia reciente.",
+  "en": "It's recent news."
+ },
+ "several": {
+  "es": "Lo intenté varias veces.",
+  "en": "I tried several times."
+ },
+ "enough": {
+  "es": "Ya tengo bastante.",
+  "en": "I have enough now."
+ },
+ "famous": {
+  "es": "Este pueblo es famoso por su vino.",
+  "en": "This town is famous for its wine."
+ },
+ "tired": {
+  "es": "Estoy muy cansada.",
+  "en": "I'm very tired."
+ },
+ "beautiful": {
+  "es": "Qué flores tan bonitas.",
+  "en": "What beautiful flowers."
+ },
+ "expensive": {
+  "es": "Ese reloj es muy caro.",
+  "en": "That watch is very expensive."
+ },
+ "cheap": {
+  "es": "Encontré un hotel barato.",
+  "en": "I found a cheap hotel."
+ },
+ "modern": {
+  "es": "Es un edificio moderno.",
+  "en": "It's a modern building."
+ },
+ "quiet": {
+  "es": "Necesito un sitio tranquilo.",
+  "en": "I need a quiet place."
+ },
+ "busy": {
+  "es": "Hoy estoy muy ocupado.",
+  "en": "I'm very busy today."
+ },
+ "not": {
+  "es": "No es difícil.",
+  "en": "It's not difficult."
+ },
+ "also": {
+  "es": "Yo también quiero ir.",
+  "en": "I also want to go."
+ },
+ "very": {
+  "es": "Está muy lejos.",
+  "en": "It's very far."
+ },
+ "just": {
+  "es": "Acabo de llegar.",
+  "en": "I've just arrived."
+ },
+ "now": {
+  "es": "Ven aquí ahora.",
+  "en": "Come here now."
+ },
+ "then": {
+  "es": "Primero comemos y luego salimos.",
+  "en": "First we eat, then we go out."
+ },
+ "more": {
+  "es": "Quiero un poco más.",
+  "en": "I want a little more."
+ },
+ "here": {
+  "es": "Ven aquí.",
+  "en": "Come here."
+ },
+ "well": {
+  "es": "Duerme bien.",
+  "en": "Sleep well."
+ },
+ "only": {
+  "es": "Solo quedan dos.",
+  "en": "There are only two left."
+ },
+ "even": {
+  "es": "Ni siquiera lo intentó.",
+  "en": "He didn't even try."
+ },
+ "there": {
+  "es": "Deja el libro ahí.",
+  "en": "Leave the book there."
+ },
+ "still": {
+  "es": "Todavía estoy trabajando.",
+  "en": "I'm still working."
+ },
+ "too": {
+  "es": "Es demasiado caro.",
+  "en": "It's too expensive."
+ },
+ "never": {
+  "es": "Nunca he estado en Roma.",
+  "en": "I've never been to Rome."
+ },
+ "really": {
+  "es": "¿De verdad quieres irte?",
+  "en": "Do you really want to leave?"
+ },
+ "most": {
+  "es": "La mayoría ya se fue.",
+  "en": "Most of them already left."
+ },
+ "often": {
+  "es": "Voy allí a menudo.",
+  "en": "I go there often."
+ },
+ "always": {
+  "es": "Siempre llega tarde.",
+  "en": "He's always late."
+ },
+ "sometimes": {
+  "es": "A veces cocino yo.",
+  "en": "Sometimes I cook."
+ },
+ "usually": {
+  "es": "Normalmente me acuesto pronto.",
+  "en": "I usually go to bed early."
+ },
+ "together": {
+  "es": "Vamos juntos.",
+  "en": "Let's go together."
+ },
+ "probably": {
+  "es": "Probablemente venga mañana.",
+  "en": "He'll probably come tomorrow."
+ },
+ "almost": {
+  "es": "Ya casi terminamos.",
+  "en": "We're almost done."
+ },
+ "especially": {
+  "es": "Me gusta el jazz, especialmente por la noche.",
+  "en": "I like jazz, especially at night."
+ },
+ "later": {
+  "es": "Hablamos más tarde.",
+  "en": "We'll talk later."
+ },
+ "ago": {
+  "es": "Se fue hace una hora.",
+  "en": "He left an hour ago."
+ },
+ "quickly": {
+  "es": "Termina rápido.",
+  "en": "Finish quickly."
+ },
+ "far": {
+  "es": "¿Está muy lejos?",
+  "en": "Is it very far?"
+ },
+ "soon": {
+  "es": "Vuelvo pronto.",
+  "en": "I'll be back soon."
+ },
+ "actually": {
+  "es": "En realidad no lo sé.",
+  "en": "Actually, I don't know."
+ },
+ "perhaps": {
+  "es": "Quizás tengas razón.",
+  "en": "Perhaps you're right."
+ },
+ "maybe": {
+  "es": "A lo mejor viene.",
+  "en": "Maybe she'll come."
+ },
+ "clearly": {
+  "es": "Se nota claramente.",
+  "en": "You can clearly see it."
+ },
+ "already": {
+  "es": "Ya lo he hecho.",
+  "en": "I've already done it."
+ },
+ "yet": {
+  "es": "Todavía no ha llegado.",
+  "en": "He hasn't arrived yet."
+ },
+ "instead": {
+  "es": "Toma té en vez de café.",
+  "en": "Have tea instead of coffee."
+ },
+ "rather": {
+  "es": "Hace bastante frío.",
+  "en": "It's rather cold."
+ },
+ "quite": {
+  "es": "Es bastante interesante.",
+  "en": "It's quite interesting."
+ },
+ "exactly": {
+  "es": "Eso es exactamente lo que quiero.",
+  "en": "That's exactly what I want."
+ },
+ "nearly": {
+  "es": "Casi me caigo.",
+  "en": "I nearly fell."
+ },
+ "hardly": {
+  "es": "Apenas dormí anoche.",
+  "en": "I hardly slept last night."
+ },
+ "about": {
+  "es": "Hablamos sobre el trabajo.",
+  "en": "We talked about work."
+ },
+ "between": {
+  "es": "La tienda está entre el banco y el parque.",
+  "en": "The shop is between the bank and the park."
+ },
+ "among": {
+  "es": "Está entre mis favoritos.",
+  "en": "It's among my favourites."
+ },
+ "through": {
+  "es": "Pasa por la puerta principal.",
+  "en": "Come through the main door."
+ },
+ "during": {
+  "es": "No hables durante la película.",
+  "en": "Don't talk during the film."
+ },
+ "without": {
+  "es": "No salgas sin abrigo.",
+  "en": "Don't go out without a coat."
+ },
+ "within": {
+  "es": "Te respondo dentro de una hora.",
+  "en": "I'll reply within an hour."
+ },
+ "against": {
+  "es": "Estoy en contra de esa idea.",
+  "en": "I'm against that idea."
+ },
+ "towards": {
+  "es": "Caminó hacia la salida.",
+  "en": "He walked towards the exit."
+ },
+ "across": {
+  "es": "La farmacia está enfrente.",
+  "en": "The pharmacy is across the road."
+ },
+ "along": {
+  "es": "Pasea por la playa.",
+  "en": "Walk along the beach."
+ },
+ "besides": {
+  "es": "Además, no tengo tiempo.",
+  "en": "Besides, I don't have time."
+ },
+ "despite": {
+  "es": "Salimos a pesar del frío.",
+  "en": "We went out despite the cold."
+ },
+ "although": {
+  "es": "Aunque es tarde, no tengo sueño.",
+  "en": "Although it's late, I'm not sleepy."
+ },
+ "while": {
+  "es": "Llamó mientras dormías.",
+  "en": "He called while you were sleeping."
+ },
+ "because": {
+  "es": "No fui porque estaba enfermo.",
+  "en": "I didn't go because I was ill."
+ },
+ "since": {
+  "es": "Vivo aquí desde el lunes.",
+  "en": "I've lived here since Monday."
+ },
+ "unless": {
+  "es": "No iré a menos que vengas.",
+  "en": "I won't go unless you come."
+ },
+ "whether": {
+  "es": "No sé si venir o no.",
+  "en": "I don't know whether to come or not."
+ },
+ "therefore": {
+  "es": "Está cerrado, por lo tanto volvemos mañana.",
+  "en": "It's closed, therefore we'll come back tomorrow."
+ },
+ "however": {
+  "es": "Es caro; sin embargo, es bueno.",
+  "en": "It's expensive; however, it's good."
+ },
+ "moreover": {
+  "es": "Es tarde y, además, hace frío.",
+  "en": "It's late and, moreover, it's cold."
+ },
+ "otherwise": {
+  "es": "Date prisa, si no llegaremos tarde.",
+  "en": "Hurry up, otherwise we'll be late."
+ },
+ "table": {
+  "es": "Pon los platos en la mesa.",
+  "en": "Put the plates on the table."
+ },
+ "chair": {
+  "es": "Esta silla está rota.",
+  "en": "This chair is broken."
+ },
+ "window": {
+  "es": "Abre la ventana, por favor.",
+  "en": "Open the window, please."
+ },
+ "floor": {
+  "es": "El baño está en la primera planta.",
+  "en": "The bathroom is on the first floor."
+ },
+ "wall": {
+  "es": "Hay un cuadro en la pared.",
+  "en": "There's a picture on the wall."
+ },
+ "kitchen": {
+  "es": "La cocina es pequeña.",
+  "en": "The kitchen is small."
+ },
+ "bed": {
+  "es": "Vete a la cama.",
+  "en": "Go to bed."
+ },
+ "bathroom": {
+  "es": "¿Dónde está el baño?",
+  "en": "Where's the bathroom?"
+ },
+ "garden": {
+  "es": "Tenemos un jardín grande.",
+  "en": "We have a big garden."
+ },
+ "key": {
+  "es": "No encuentro mis llaves.",
+  "en": "I can't find my keys."
+ },
+ "bag": {
+  "es": "Tu bolso está en la silla.",
+  "en": "Your bag is on the chair."
+ },
+ "clothes": {
+  "es": "Necesito ropa nueva.",
+  "en": "I need new clothes."
+ },
+ "shoe": {
+  "es": "Estos zapatos son cómodos.",
+  "en": "These shoes are comfortable."
+ },
+ "phone": {
+  "es": "Mi teléfono no tiene batería.",
+  "en": "My phone has no battery."
+ },
+ "letter": {
+  "es": "Recibí una carta hoy.",
+  "en": "I got a letter today."
+ },
+ "picture": {
+  "es": "Cuéntame lo que ves en el cuadro.",
+  "en": "Tell me what you see in the picture."
+ },
+ "photo": {
+  "es": "Sácame una foto.",
+  "en": "Take a photo of me."
+ },
+ "television": {
+  "es": "Apaga la televisión.",
+  "en": "Turn off the television."
+ },
+ "radio": {
+  "es": "Enciende la radio.",
+  "en": "Turn on the radio."
+ },
+ "computer": {
+  "es": "Mi ordenador va lento.",
+  "en": "My computer is slow."
+ },
+ "machine": {
+  "es": "La máquina no funciona.",
+  "en": "The machine isn't working."
+ },
+ "shop": {
+  "es": "La tienda ya está cerrada.",
+  "en": "The shop is closed now."
+ },
+ "restaurant": {
+  "es": "Este restaurante es muy bueno.",
+  "en": "This restaurant is very good."
+ },
+ "hotel": {
+  "es": "El hotel está lleno.",
+  "en": "The hotel is full."
+ },
+ "hospital": {
+  "es": "Mi hermana está en el hospital.",
+  "en": "My sister is in the hospital."
+ },
+ "bank": {
+  "es": "El banco cierra a las dos.",
+  "en": "The bank closes at two."
+ },
+ "station": {
+  "es": "Te espero en la estación.",
+  "en": "I'll wait for you at the station."
+ },
+ "airport": {
+  "es": "El aeropuerto está lejos.",
+  "en": "The airport is far away."
+ },
+ "bus": {
+  "es": "El autobús llega tarde.",
+  "en": "The bus is late."
+ },
+ "train": {
+  "es": "Perdimos el tren.",
+  "en": "We missed the train."
+ },
+ "plane": {
+  "es": "El avión sale a las seis.",
+  "en": "The plane leaves at six."
+ },
+ "bike": {
+  "es": "Voy en bici al trabajo.",
+  "en": "I go to work by bike."
+ },
+ "ticket": {
+  "es": "¿Tienes tu billete?",
+  "en": "Do you have your ticket?"
+ },
+ "bridge": {
+  "es": "Cruzamos el puente.",
+  "en": "We crossed the bridge."
+ },
+ "park": {
+  "es": "Demos un paseo por el parque.",
+  "en": "Let's take a walk in the park."
+ },
+ "beach": {
+  "es": "Vamos a la playa mañana.",
+  "en": "We're going to the beach tomorrow."
+ },
+ "sea": {
+  "es": "El mar está tranquilo hoy.",
+  "en": "The sea is calm today."
+ },
+ "river": {
+  "es": "El río pasa por el pueblo.",
+  "en": "The river runs through the town."
+ },
+ "mountain": {
+  "es": "Hay nieve en la montaña.",
+  "en": "There's snow on the mountain."
+ },
+ "tree": {
+  "es": "Nos sentamos bajo un árbol.",
+  "en": "We sat under a tree."
+ },
+ "flower": {
+  "es": "Me regaló una flor.",
+  "en": "He gave me a flower."
+ },
+ "animal": {
+  "es": "El perro es mi animal favorito.",
+  "en": "The dog is my favourite animal."
+ },
+ "dog": {
+  "es": "El perro ladra mucho.",
+  "en": "The dog barks a lot."
+ },
+ "cat": {
+  "es": "El gato duerme todo el día.",
+  "en": "The cat sleeps all day."
+ },
+ "bird": {
+  "es": "Un pájaro canta en el árbol.",
+  "en": "A bird is singing in the tree."
+ },
+ "fish": {
+  "es": "Cenamos pescado.",
+  "en": "We had fish for dinner."
+ },
+ "rain": {
+  "es": "Nos pilló la lluvia.",
+  "en": "We got caught in the rain."
+ },
+ "snow": {
+  "es": "A los niños les encanta la nieve.",
+  "en": "The children love the snow."
+ },
+ "wind": {
+  "es": "Hace mucho viento hoy.",
+  "en": "It's very windy today."
+ },
+ "sun": {
+  "es": "El sol brilla.",
+  "en": "The sun is shining."
+ },
+ "sky": {
+  "es": "El cielo está despejado.",
+  "en": "The sky is clear."
+ },
+ "fire": {
+  "es": "Nos sentamos junto al fuego.",
+  "en": "We sat by the fire."
+ },
+ "colour": {
+  "es": "¿Cuál es tu color favorito?",
+  "en": "What's your favourite colour?"
+ },
+ "sound": {
+  "es": "Oí un ruido raro.",
+  "en": "I heard a strange sound."
+ },
+ "smell": {
+  "es": "Huele muy bien.",
+  "en": "It smells very good."
+ },
+ "taste": {
+  "es": "Esta sopa sabe raro.",
+  "en": "This soup tastes strange."
+ },
+ "milk": {
+  "es": "No queda leche.",
+  "en": "There's no milk left."
+ },
+ "bread": {
+  "es": "Compra pan, por favor.",
+  "en": "Buy some bread, please."
+ },
+ "meat": {
+  "es": "No como carne.",
+  "en": "I don't eat meat."
+ },
+ "fruit": {
+  "es": "Come más fruta.",
+  "en": "Eat more fruit."
+ },
+ "vegetable": {
+  "es": "Las verduras están frescas.",
+  "en": "The vegetables are fresh."
+ },
+ "egg": {
+  "es": "Quiero dos huevos.",
+  "en": "I want two eggs."
+ },
+ "coffee": {
+  "es": "¿Quieres un café?",
+  "en": "Do you want a coffee?"
+ },
+ "tea": {
+  "es": "Prepárame un té, por favor.",
+  "en": "Make me a tea, please."
+ },
+ "breakfast": {
+  "es": "El desayuno está listo.",
+  "en": "Breakfast is ready."
+ },
+ "lunch": {
+  "es": "¿A qué hora es el almuerzo?",
+  "en": "What time is lunch?"
+ },
+ "dinner": {
+  "es": "La cena está en el horno.",
+  "en": "Dinner is in the oven."
+ },
+ "holiday": {
+  "es": "Necesito unas vacaciones.",
+  "en": "I need a holiday."
+ },
+ "weekend": {
+  "es": "¿Qué haces este fin de semana?",
+  "en": "What are you doing this weekend?"
+ },
+ "birthday": {
+  "es": "Mañana es mi cumpleaños.",
+  "en": "Tomorrow is my birthday."
+ },
+ "clock": {
+  "es": "El reloj va adelantado.",
+  "en": "The clock is fast."
+ },
+ "glass": {
+  "es": "Se rompió el vaso.",
+  "en": "The glass broke."
+ },
+ "cup": {
+  "es": "¿Me pones una taza de té?",
+  "en": "Can I have a cup of tea?"
+ },
+ "plate": {
+  "es": "Tu plato está frío.",
+  "en": "Your plate is cold."
+ },
+ "knife": {
+  "es": "Necesito un cuchillo.",
+  "en": "I need a knife."
+ },
+ "box": {
+  "es": "¿Qué hay en la caja?",
+  "en": "What's in the box?"
+ },
+ "bottle": {
+  "es": "Hay una botella de agua en la nevera.",
+  "en": "There's a bottle of water in the fridge."
+ },
+ "card": {
+  "es": "Pagué con tarjeta.",
+  "en": "I paid by card."
+ },
+ "gift": {
+  "es": "Es un regalo para ti.",
+  "en": "It's a gift for you."
+ },
+ "present": {
+  "es": "Aún no he abierto los regalos.",
+  "en": "I haven't opened the presents yet."
+ },
+ "party": {
+  "es": "La fiesta es el sábado.",
+  "en": "The party is on Saturday."
+ },
+ "wedding": {
+  "es": "Su boda fue preciosa.",
+  "en": "Their wedding was beautiful."
+ },
+ "meeting": {
+  "es": "La reunión terminó tarde.",
+  "en": "The meeting finished late."
+ },
+ "trip": {
+  "es": "Fue un viaje corto.",
+  "en": "It was a short trip."
+ },
+ "journey": {
+  "es": "El viaje fue muy largo.",
+  "en": "The journey was very long."
+ },
+ "message": {
+  "es": "Déjame un mensaje.",
+  "en": "Leave me a message."
+ },
+ "email": {
+  "es": "Te mando un correo.",
+  "en": "I'll send you an email."
+ },
+ "list": {
+  "es": "Hice una lista de la compra.",
+  "en": "I made a shopping list."
+ },
+ "mistake": {
+  "es": "Todos cometemos errores.",
+  "en": "We all make mistakes."
+ },
+ "answer": {
+  "es": "Necesito una respuesta hoy.",
+  "en": "I need an answer today."
+ },
+ "example": {
+  "es": "Dame un ejemplo.",
+  "en": "Give me an example."
+ },
+ "difference": {
+  "es": "No noto la diferencia.",
+  "en": "I don't notice the difference."
+ },
+ "chance": {
+  "es": "Dame otra oportunidad.",
+  "en": "Give me another chance."
+ },
+ "baby": {
+  "es": "El bebé está durmiendo.",
+  "en": "The baby is sleeping."
+ },
+ "husband": {
+  "es": "Su marido es cocinero.",
+  "en": "Her husband is a cook."
+ },
+ "brother": {
+  "es": "Mi hermano vive en Madrid.",
+  "en": "My brother lives in Madrid."
+ },
+ "sister": {
+  "es": "Mi hermana es mayor que yo.",
+  "en": "My sister is older than me."
+ },
+ "daughter": {
+  "es": "Su hija tiene cinco años.",
+  "en": "Their daughter is five years old."
+ },
+ "grandmother": {
+  "es": "Mi abuela hace un pastel riquísimo.",
+  "en": "My grandmother makes a delicious cake."
+ },
+ "grandfather": {
+  "es": "Mi abuelo tiene noventa años.",
+  "en": "My grandfather is ninety years old."
+ },
+ "uncle": {
+  "es": "Mi tío vive en el campo.",
+  "en": "My uncle lives in the country."
+ },
+ "aunt": {
+  "es": "Mi tía viene el domingo.",
+  "en": "My aunt is coming on Sunday."
+ },
+ "neighbour": {
+  "es": "Mi vecino es muy ruidoso.",
+  "en": "My neighbour is very noisy."
+ },
+ "colleague": {
+  "es": "Un compañero de trabajo me ayudó.",
+  "en": "A colleague helped me."
+ },
+ "boss": {
+  "es": "Mi jefe está de vacaciones.",
+  "en": "My boss is on holiday."
+ },
+ "customer": {
+  "es": "El cliente siempre tiene razón.",
+  "en": "The customer is always right."
+ },
+ "guest": {
+  "es": "Tenemos invitados esta noche.",
+  "en": "We have guests tonight."
+ },
+ "stranger": {
+  "es": "No hables con desconocidos.",
+  "en": "Don't talk to strangers."
+ },
+ "couple": {
+  "es": "Son una pareja muy simpática.",
+  "en": "They're a very nice couple."
+ },
+ "adult": {
+  "es": "Los adultos pagan más.",
+  "en": "Adults pay more."
+ },
+ "nurse": {
+  "es": "La enfermera fue muy amable.",
+  "en": "The nurse was very kind."
+ },
+ "doctor": {
+  "es": "Deberías ver a un médico.",
+  "en": "You should see a doctor."
+ },
+ "driver": {
+  "es": "El conductor no dijo nada.",
+  "en": "The driver said nothing."
+ },
+ "worker": {
+  "es": "Los trabajadores están en huelga.",
+  "en": "The workers are on strike."
+ },
+ "manager": {
+  "es": "Habla con el encargado.",
+  "en": "Speak to the manager."
+ },
+ "owner": {
+  "es": "El dueño no está hoy.",
+  "en": "The owner isn't here today."
+ },
+ "president": {
+  "es": "El presidente habló ayer.",
+  "en": "The president spoke yesterday."
+ },
+ "king": {
+  "es": "El rey visitó la ciudad.",
+  "en": "The king visited the city."
+ },
+ "queen": {
+  "es": "La reina abrió el hospital.",
+  "en": "The queen opened the hospital."
+ },
+ "artist": {
+  "es": "Es una artista muy conocida.",
+  "en": "She's a well-known artist."
+ },
+ "writer": {
+  "es": "Mi escritor favorito es español.",
+  "en": "My favourite writer is Spanish."
+ },
+ "actor": {
+  "es": "Ese actor sale en muchas películas.",
+  "en": "That actor is in many films."
+ },
+ "singer": {
+  "es": "La cantante tiene una voz preciosa.",
+  "en": "The singer has a beautiful voice."
+ },
+ "player": {
+  "es": "Es el mejor jugador del equipo.",
+  "en": "He's the best player on the team."
+ },
+ "scientist": {
+  "es": "Los científicos siguen estudiándolo.",
+  "en": "Scientists are still studying it."
+ },
+ "lawyer": {
+  "es": "Necesito hablar con un abogado.",
+  "en": "I need to speak to a lawyer."
+ },
+ "engineer": {
+  "es": "Mi hermana es ingeniera.",
+  "en": "My sister is an engineer."
+ },
+ "soldier": {
+  "es": "El soldado volvió a casa.",
+  "en": "The soldier went home."
+ },
+ "tourist": {
+  "es": "Hay muchos turistas en verano.",
+  "en": "There are many tourists in summer."
+ },
+ "finish": {
+  "es": "Termina la sopa.",
+  "en": "Finish your soup."
+ },
+ "start": {
+  "es": "Vamos a empezar ya.",
+  "en": "Let's start now."
+ },
+ "travel": {
+  "es": "Me encanta viajar.",
+  "en": "I love to travel."
+ },
+ "turn": {
+  "es": "Gira a la derecha aquí.",
+  "en": "Turn right here."
+ },
+ "climb": {
+  "es": "Subimos a la torre.",
+  "en": "We climbed the tower."
+ },
+ "jump": {
+  "es": "El gato saltó a la mesa.",
+  "en": "The cat jumped onto the table."
+ },
+ "hold": {
+  "es": "Sujétame esto un momento.",
+  "en": "Hold this for a moment."
+ },
+ "drop": {
+  "es": "Se me cayó el vaso.",
+  "en": "I dropped the glass."
+ },
+ "lift": {
+  "es": "No puedo levantar esta caja.",
+  "en": "I can't lift this box."
+ },
+ "press": {
+  "es": "Pulsa el botón verde.",
+  "en": "Press the green button."
+ },
+ "touch": {
+  "es": "No toques eso.",
+  "en": "Don't touch that."
+ },
+ "knock": {
+  "es": "Alguien llamó a la puerta.",
+  "en": "Someone knocked at the door."
+ },
+ "ring": {
+  "es": "El teléfono está sonando.",
+  "en": "The phone is ringing."
+ },
+ "shout": {
+  "es": "No me grites.",
+  "en": "Don't shout at me."
+ },
+ "laugh": {
+  "es": "Nos reímos mucho.",
+  "en": "We laughed a lot."
+ },
+ "smile": {
+  "es": "Sonríe para la foto.",
+  "en": "Smile for the photo."
+ },
+ "cry": {
+  "es": "El niño no para de llorar.",
+  "en": "The child won't stop crying."
+ },
+ "sleep": {
+  "es": "Necesito dormir más.",
+  "en": "I need to sleep more."
+ },
+ "wake": {
+  "es": "Me desperté muy temprano.",
+  "en": "I woke up very early."
+ },
+ "dream": {
+  "es": "Anoche soñé contigo.",
+  "en": "Last night I dreamed about you."
+ },
+ "rest": {
+  "es": "Descansa un rato.",
+  "en": "Rest for a while."
+ },
+ "wash": {
+  "es": "Lávate las manos.",
+  "en": "Wash your hands."
+ },
+ "clean": {
+  "es": "Limpia tu habitación.",
+  "en": "Clean your room."
+ },
+ "cook": {
+  "es": "Hoy cocino yo.",
+  "en": "I'm cooking today."
+ },
+ "fix": {
+  "es": "¿Puedes arreglar la luz?",
+  "en": "Can you fix the light?"
+ },
+ "repair": {
+  "es": "Hay que reparar el coche.",
+  "en": "The car needs repairing."
+ },
+ "paint": {
+  "es": "Vamos a pintar la pared.",
+  "en": "Let's paint the wall."
+ },
+ "cost": {
+  "es": "¿Cuánto cuesta esto?",
+  "en": "How much does this cost?"
+ },
+ "earn": {
+  "es": "Gana un buen sueldo.",
+  "en": "She earns a good salary."
+ },
+ "borrow": {
+  "es": "¿Me prestas cinco euros?",
+  "en": "Can I borrow five euros?"
+ },
+ "lend": {
+  "es": "¿Me puedes prestar el coche?",
+  "en": "Can you lend me the car?"
+ },
+ "owe": {
+  "es": "Me debes veinte euros.",
+  "en": "You owe me twenty euros."
+ },
+ "count": {
+  "es": "Cuenta hasta diez.",
+  "en": "Count to ten."
+ },
+ "measure": {
+  "es": "Mide la mesa primero.",
+  "en": "Measure the table first."
+ },
+ "weigh": {
+  "es": "¿Cuánto pesas?",
+  "en": "How much do you weigh?"
+ },
+ "add": {
+  "es": "Añade un poco de sal.",
+  "en": "Add a little salt."
+ },
+ "remove": {
+  "es": "Quita esa silla de ahí.",
+  "en": "Remove that chair from there."
+ },
+ "put": {
+  "es": "Pon el abrigo en la silla.",
+  "en": "Put your coat on the chair."
+ },
+ "second": {
+  "es": "Espera un segundo.",
+  "en": "Wait a second."
+ },
+ "period": {
+  "es": "Fue un periodo difícil.",
+  "en": "It was a difficult period."
+ },
+ "past": {
+  "es": "No pienses en el pasado.",
+  "en": "Don't think about the past."
+ },
+ "decade": {
+  "es": "Vivió allí una década.",
+  "en": "She lived there for a decade."
+ },
+ "midnight": {
+  "es": "Llegamos a medianoche.",
+  "en": "We arrived at midnight."
+ },
+ "noon": {
+  "es": "Nos vemos al mediodía.",
+  "en": "See you at noon."
+ },
+ "dawn": {
+  "es": "Salimos al amanecer.",
+  "en": "We left at dawn."
+ },
+ "sunset": {
+  "es": "El atardecer fue precioso.",
+  "en": "The sunset was beautiful."
+ },
+ "schedule": {
+  "es": "Tengo un horario muy apretado.",
+  "en": "I have a very tight schedule."
+ },
+ "calendar": {
+  "es": "Apúntalo en el calendario.",
+  "en": "Write it on the calendar."
+ },
+ "deadline": {
+  "es": "La fecha límite es mañana.",
+  "en": "The deadline is tomorrow."
+ },
+ "appointment": {
+  "es": "Tengo una cita a las tres.",
+  "en": "I have an appointment at three."
+ },
+ "occasion": {
+  "es": "Es una ocasión especial.",
+  "en": "It's a special occasion."
+ },
+ "once": {
+  "es": "Solo lo he visto una vez.",
+  "en": "I've only seen it once."
+ },
+ "twice": {
+  "es": "Te lo he dicho dos veces.",
+  "en": "I've told you twice."
+ },
+ "recently": {
+  "es": "No la he visto últimamente.",
+  "en": "I haven't seen her recently."
+ },
+ "immediately": {
+  "es": "Ven aquí inmediatamente.",
+  "en": "Come here immediately."
+ },
+ "suddenly": {
+  "es": "De repente empezó a llover.",
+  "en": "Suddenly it started to rain."
+ },
+ "finally": {
+  "es": "Por fin llegaste.",
+  "en": "You finally arrived."
+ },
+ "meanwhile": {
+  "es": "Mientras tanto, prepara la mesa.",
+  "en": "Meanwhile, set the table."
+ },
+ "forever": {
+  "es": "Esto no puede durar para siempre.",
+  "en": "This can't last forever."
+ },
+ "skin": {
+  "es": "Tiene la piel muy suave.",
+  "en": "She has very soft skin."
+ },
+ "bone": {
+  "es": "El perro está royendo un hueso.",
+  "en": "The dog is chewing a bone."
+ },
+ "blood": {
+  "es": "Hay sangre en el suelo.",
+  "en": "There's blood on the floor."
+ },
+ "brain": {
+  "es": "El cerebro necesita descanso.",
+  "en": "The brain needs rest."
+ },
+ "tooth": {
+  "es": "Me duele una muela.",
+  "en": "One of my teeth hurts."
+ },
+ "tongue": {
+  "es": "Me mordí la lengua.",
+  "en": "I bit my tongue."
+ },
+ "throat": {
+  "es": "Me duele la garganta.",
+  "en": "My throat hurts."
+ },
+ "chest": {
+  "es": "Siento un dolor en el pecho.",
+  "en": "I feel a pain in my chest."
+ },
+ "stomach": {
+  "es": "Me duele el estómago.",
+  "en": "My stomach hurts."
+ },
+ "knee": {
+  "es": "Me hice daño en la rodilla.",
+  "en": "I hurt my knee."
+ },
+ "shoulder": {
+  "es": "Me duele el hombro.",
+  "en": "My shoulder hurts."
+ },
+ "finger": {
+  "es": "Me corté el dedo.",
+  "en": "I cut my finger."
+ },
+ "hair": {
+  "es": "Tienes el pelo mojado.",
+  "en": "Your hair is wet."
+ },
+ "neck": {
+  "es": "Me duele el cuello.",
+  "en": "My neck hurts."
+ },
+ "muscle": {
+  "es": "Me duelen los músculos.",
+  "en": "My muscles hurt."
+ },
+ "breath": {
+  "es": "Respira hondo.",
+  "en": "Take a deep breath."
+ },
+ "roof": {
+  "es": "El tejado gotea.",
+  "en": "The roof is leaking."
+ },
+ "ceiling": {
+  "es": "Hay una mancha en el techo.",
+  "en": "There's a mark on the ceiling."
+ },
+ "stairs": {
+  "es": "Sube las escaleras despacio.",
+  "en": "Go up the stairs slowly."
+ },
+ "gate": {
+  "es": "Cierra la verja al salir.",
+  "en": "Close the gate when you leave."
+ },
+ "lock": {
+  "es": "La cerradura no funciona.",
+  "en": "The lock doesn't work."
+ },
+ "shelf": {
+  "es": "El libro está en el estante de arriba.",
+  "en": "The book is on the top shelf."
+ },
+ "drawer": {
+  "es": "Los cuchillos están en el cajón.",
+  "en": "The knives are in the drawer."
+ },
+ "cupboard": {
+  "es": "El azúcar está en el armario.",
+  "en": "The sugar is in the cupboard."
+ },
+ "sink": {
+  "es": "Deja los platos en el fregadero.",
+  "en": "Leave the dishes in the sink."
+ },
+ "tap": {
+  "es": "Cierra el grifo.",
+  "en": "Turn off the tap."
+ },
+ "oven": {
+  "es": "El horno está muy caliente.",
+  "en": "The oven is very hot."
+ },
+ "fridge": {
+  "es": "Mete la leche en la nevera.",
+  "en": "Put the milk in the fridge."
+ },
+ "sofa": {
+  "es": "Siéntate en el sofá.",
+  "en": "Sit on the sofa."
+ },
+ "mirror": {
+  "es": "Mírate al espejo.",
+  "en": "Look at yourself in the mirror."
+ },
+ "lamp": {
+  "es": "Enciende la lámpara.",
+  "en": "Turn on the lamp."
+ },
+ "towel": {
+  "es": "Necesito una toalla limpia.",
+  "en": "I need a clean towel."
+ },
+ "pillow": {
+  "es": "Mi almohada es muy blanda.",
+  "en": "My pillow is too soft."
+ },
+ "blanket": {
+  "es": "Ponte una manta.",
+  "en": "Put a blanket on."
+ },
+ "tool": {
+  "es": "Necesito una herramienta más pequeña.",
+  "en": "I need a smaller tool."
+ },
+ "rope": {
+  "es": "Ata la caja con una cuerda.",
+  "en": "Tie the box with a rope."
+ },
+ "rice": {
+  "es": "Comimos pollo con arroz.",
+  "en": "We had chicken with rice."
+ },
+ "potato": {
+  "es": "Voy a pelar las patatas.",
+  "en": "I'll peel the potatoes."
+ },
+ "tomato": {
+  "es": "Corta el tomate en rodajas.",
+  "en": "Cut the tomato into slices."
+ },
+ "onion": {
+  "es": "La cebolla me hace llorar.",
+  "en": "The onion makes me cry."
+ },
+ "apple": {
+  "es": "¿Quieres una manzana?",
+  "en": "Do you want an apple?"
+ },
+ "cheese": {
+  "es": "Me encanta el queso.",
+  "en": "I love cheese."
+ },
+ "butter": {
+  "es": "No queda mantequilla.",
+  "en": "There's no butter left."
+ },
+ "sugar": {
+  "es": "¿Cuánto azúcar quieres?",
+  "en": "How much sugar do you want?"
+ },
+ "salt": {
+  "es": "Pásame la sal, por favor.",
+  "en": "Pass me the salt, please."
+ },
+ "oil": {
+  "es": "El precio del petróleo ha subido.",
+  "en": "The price of oil has gone up."
+ },
+ "sauce": {
+  "es": "La salsa está deliciosa.",
+  "en": "The sauce is delicious."
+ },
+ "soup": {
+  "es": "La sopa está caliente.",
+  "en": "The soup is hot."
+ },
+ "salad": {
+  "es": "De primero quiero una ensalada.",
+  "en": "I want a salad to start."
+ },
+ "cake": {
+  "es": "¿Quieres un trozo de pastel?",
+  "en": "Do you want a piece of cake?"
+ },
+ "chocolate": {
+  "es": "Me gusta el chocolate negro.",
+  "en": "I like dark chocolate."
+ },
+ "juice": {
+  "es": "Quiero un zumo de naranja.",
+  "en": "I want an orange juice."
+ },
+ "meal": {
+  "es": "Fue una comida estupenda.",
+  "en": "It was a great meal."
+ },
+ "snack": {
+  "es": "Voy a comer un tentempié.",
+  "en": "I'm going to have a snack."
+ },
+ "shirt": {
+  "es": "Tu camisa está arrugada.",
+  "en": "Your shirt is wrinkled."
+ },
+ "dress": {
+  "es": "Me encanta tu vestido.",
+  "en": "I love your dress."
+ },
+ "jacket": {
+  "es": "Coge una chaqueta.",
+  "en": "Take a jacket."
+ },
+ "coat": {
+  "es": "Ponte el abrigo.",
+  "en": "Put on your coat."
+ },
+ "sock": {
+  "es": "Se me ha roto un calcetín.",
+  "en": "One of my socks has a hole."
+ },
+ "hat": {
+  "es": "Bonito sombrero.",
+  "en": "Nice hat."
+ },
+ "pocket": {
+  "es": "Tengo las llaves en el bolsillo.",
+  "en": "I have the keys in my pocket."
+ },
+ "button": {
+  "es": "Se me cayó un botón.",
+  "en": "A button fell off."
+ },
+ "uniform": {
+  "es": "Llevo uniforme para trabajar.",
+  "en": "I wear a uniform for work."
+ },
+ "cloud": {
+  "es": "No hay ni una nube.",
+  "en": "There isn't a single cloud."
+ },
+ "storm": {
+  "es": "Se acerca una tormenta.",
+  "en": "A storm is coming."
+ },
+ "fog": {
+  "es": "Hay mucha niebla esta mañana.",
+  "en": "There's a lot of fog this morning."
+ },
+ "ice": {
+  "es": "¿Quieres hielo en la bebida?",
+  "en": "Do you want ice in your drink?"
+ },
+ "heat": {
+  "es": "No aguanto este calor.",
+  "en": "I can't stand this heat."
+ },
+ "temperature": {
+  "es": "La temperatura ha bajado.",
+  "en": "The temperature has dropped."
+ },
+ "weather": {
+  "es": "Hace buen tiempo hoy.",
+  "en": "The weather is nice today."
+ },
+ "shadow": {
+  "es": "Descansemos a la sombra.",
+  "en": "Let's rest in the shadow."
+ },
+ "wave": {
+  "es": "Las olas son muy grandes.",
+  "en": "The waves are very big."
+ },
+ "sand": {
+  "es": "Tengo arena en los zapatos.",
+  "en": "I have sand in my shoes."
+ },
+ "rock": {
+  "es": "Nos sentamos en una roca.",
+  "en": "We sat on a rock."
+ },
+ "stone": {
+  "es": "Le tiró una piedra al agua.",
+  "en": "He threw a stone into the water."
+ },
+ "soil": {
+  "es": "Esta tierra es muy buena.",
+  "en": "This soil is very good."
+ },
+ "grass": {
+  "es": "No pises el césped.",
+  "en": "Don't walk on the grass."
+ },
+ "leaf": {
+  "es": "Cayó una hoja del árbol.",
+  "en": "A leaf fell from the tree."
+ },
+ "branch": {
+  "es": "El pájaro está en la rama.",
+  "en": "The bird is on the branch."
+ },
+ "seed": {
+  "es": "Planta las semillas ahora.",
+  "en": "Plant the seeds now."
+ },
+ "wood": {
+  "es": "La mesa es de madera.",
+  "en": "The table is made of wood."
+ },
+ "forest": {
+  "es": "Nos perdimos en el bosque.",
+  "en": "We got lost in the forest."
+ },
+ "island": {
+  "es": "Viven en una isla pequeña.",
+  "en": "They live on a small island."
+ },
+ "hill": {
+  "es": "La casa está en la colina.",
+  "en": "The house is on the hill."
+ },
+ "valley": {
+  "es": "El pueblo está en el valle.",
+  "en": "The town is in the valley."
+ },
+ "lake": {
+  "es": "Nos bañamos en el lago.",
+  "en": "We swam in the lake."
+ },
+ "farm": {
+  "es": "Mis abuelos tienen una granja.",
+  "en": "My grandparents have a farm."
+ },
+ "path": {
+  "es": "Sigue el sendero.",
+  "en": "Follow the path."
+ },
+ "horse": {
+  "es": "El caballo corre muy rápido.",
+  "en": "The horse runs very fast."
+ },
+ "cow": {
+  "es": "Las vacas están en el campo.",
+  "en": "The cows are in the field."
+ },
+ "pig": {
+  "es": "Tienen tres cerdos.",
+  "en": "They have three pigs."
+ },
+ "sheep": {
+  "es": "Hay ovejas en la colina.",
+  "en": "There are sheep on the hill."
+ },
+ "chicken": {
+  "es": "Vamos a cenar pollo.",
+  "en": "We're having chicken for dinner."
+ },
+ "rabbit": {
+  "es": "El conejo se escapó.",
+  "en": "The rabbit ran away."
+ },
+ "mouse": {
+  "es": "Hay un ratón en la cocina.",
+  "en": "There's a mouse in the kitchen."
+ },
+ "bear": {
+  "es": "Vimos un oso en el bosque.",
+  "en": "We saw a bear in the forest."
+ },
+ "snake": {
+  "es": "Le tengo miedo a las serpientes.",
+  "en": "I'm afraid of snakes."
+ },
+ "insect": {
+  "es": "Hay un insecto en mi habitación.",
+  "en": "There's an insect in my room."
+ },
+ "bee": {
+  "es": "Una abeja me picó.",
+  "en": "A bee stung me."
+ },
+ "fear": {
+  "es": "No tengas miedo.",
+  "en": "Don't be afraid."
+ },
+ "anger": {
+  "es": "No podía ocultar su enfado.",
+  "en": "He couldn't hide his anger."
+ },
+ "joy": {
+  "es": "Lloró de alegría.",
+  "en": "She cried with joy."
+ },
+ "love": {
+  "es": "Te quiero mucho.",
+  "en": "I love you very much."
+ },
+ "pride": {
+  "es": "Habló con orgullo de su hija.",
+  "en": "He spoke with pride about his daughter."
+ },
+ "shame": {
+  "es": "Qué vergüenza.",
+  "en": "What a shame."
+ },
+ "courage": {
+  "es": "Hace falta valor para hacerlo.",
+  "en": "It takes courage to do it."
+ },
+ "luck": {
+  "es": "¡Buena suerte!",
+  "en": "Good luck!"
+ },
+ "danger": {
+  "es": "Estás en peligro.",
+  "en": "You're in danger."
+ },
+ "safety": {
+  "es": "La seguridad es lo primero.",
+  "en": "Safety comes first."
+ },
+ "freedom": {
+  "es": "La libertad es importante.",
+  "en": "Freedom is important."
+ },
+ "peace": {
+  "es": "Solo quiero un poco de paz.",
+  "en": "I just want some peace."
+ },
+ "truth": {
+  "es": "Dime la verdad.",
+  "en": "Tell me the truth."
+ },
+ "lie": {
+  "es": "Eso es mentira.",
+  "en": "That's a lie."
+ },
+ "secret": {
+  "es": "Te voy a contar un secreto.",
+  "en": "I'll tell you a secret."
+ },
+ "surprise": {
+  "es": "¡Qué sorpresa!",
+  "en": "What a surprise!"
+ },
+ "comfort": {
+  "es": "Viajamos con comodidad.",
+  "en": "We travelled in comfort."
+ },
+ "stress": {
+  "es": "Tengo mucho estrés en el trabajo.",
+  "en": "I have a lot of stress at work."
+ },
+ "habit": {
+  "es": "Es un mal hábito.",
+  "en": "It's a bad habit."
+ },
+ "custom": {
+  "es": "Es una costumbre local.",
+  "en": "It's a local custom."
+ },
+ "culture": {
+  "es": "Me interesa mucho su cultura.",
+  "en": "I'm very interested in their culture."
+ },
+ "belief": {
+  "es": "Respeto tus creencias.",
+  "en": "I respect your beliefs."
+ },
+ "opinion": {
+  "es": "En mi opinión, es un error.",
+  "en": "In my opinion, it's a mistake."
+ },
+ "memory": {
+  "es": "Tengo mala memoria.",
+  "en": "I have a bad memory."
+ },
+ "goal": {
+  "es": "Mi objetivo es aprender inglés.",
+  "en": "My goal is to learn English."
+ },
+ "purpose": {
+  "es": "¿Cuál es el propósito de esto?",
+  "en": "What's the purpose of this?"
+ },
+ "advantage": {
+  "es": "Tiene muchas ventajas.",
+  "en": "It has many advantages."
+ },
+ "benefit": {
+  "es": "El ejercicio tiene muchos beneficios.",
+  "en": "Exercise has many benefits."
+ },
+ "risk": {
+  "es": "No merece la pena el riesgo.",
+  "en": "It's not worth the risk."
+ },
+ "opportunity": {
+  "es": "Es una gran oportunidad.",
+  "en": "It's a great opportunity."
+ },
+ "responsibility": {
+  "es": "Es tu responsabilidad.",
+  "en": "It's your responsibility."
+ },
+ "duty": {
+  "es": "Es mi deber ayudar.",
+  "en": "It's my duty to help."
+ },
+ "permission": {
+  "es": "¿Tengo tu permiso?",
+  "en": "Do I have your permission?"
+ },
+ "rule": {
+  "es": "Es una regla importante.",
+  "en": "It's an important rule."
+ },
+ "method": {
+  "es": "Este método funciona muy bien.",
+  "en": "This method works very well."
+ },
+ "step": {
+  "es": "Ten cuidado con el escalón.",
+  "en": "Be careful with the step."
+ },
+ "amount": {
+  "es": "Es una gran cantidad de dinero.",
+  "en": "It's a large amount of money."
+ },
+ "quantity": {
+  "es": "Necesito una cantidad pequeña.",
+  "en": "I need a small quantity."
+ },
+ "total": {
+  "es": "¿Cuál es el total?",
+  "en": "What's the total?"
+ },
+ "average": {
+  "es": "Su nota está por encima de la media.",
+  "en": "His grade is above average."
+ },
+ "half": {
+  "es": "Dame la mitad.",
+  "en": "Give me half."
+ },
+ "pair": {
+  "es": "Compré un par de zapatos.",
+  "en": "I bought a pair of shoes."
+ },
+ "majority": {
+  "es": "La mayoría está de acuerdo.",
+  "en": "The majority agrees."
+ },
+ "accept": {
+  "es": "Acepto tu disculpa.",
+  "en": "I accept your apology."
+ },
+ "admit": {
+  "es": "Admite que te equivocaste.",
+  "en": "Admit that you were wrong."
+ },
+ "advise": {
+  "es": "Te aconsejo que descanses.",
+  "en": "I advise you to rest."
+ },
+ "affect": {
+  "es": "El ruido me afecta mucho.",
+  "en": "The noise affects me a lot."
+ },
+ "announce": {
+  "es": "Van a anunciar al ganador.",
+  "en": "They're going to announce the winner."
+ },
+ "apologize": {
+  "es": "Quiero disculparme.",
+  "en": "I want to apologize."
+ },
+ "argue": {
+  "es": "No discutas conmigo.",
+  "en": "Don't argue with me."
+ },
+ "arrange": {
+  "es": "He organizado una cena.",
+  "en": "I've arranged a dinner."
+ },
+ "attack": {
+  "es": "El perro atacó al gato.",
+  "en": "The dog attacked the cat."
+ },
+ "attend": {
+  "es": "¿Vas a asistir a la reunión?",
+  "en": "Are you going to attend the meeting?"
+ },
+ "attract": {
+  "es": "La luz atrae a los insectos.",
+  "en": "Light attracts insects."
+ },
+ "avoid": {
+  "es": "Evita el centro a esta hora.",
+  "en": "Avoid the centre at this time."
+ },
+ "beat": {
+  "es": "Le ganamos al otro equipo.",
+  "en": "We beat the other team."
+ },
+ "behave": {
+  "es": "Pórtate bien.",
+  "en": "Behave yourself."
+ },
+ "belong": {
+  "es": "Este abrigo es mío.",
+  "en": "This coat belongs to me."
+ },
+ "bend": {
+  "es": "Dobla las rodillas.",
+  "en": "Bend your knees."
+ },
+ "bite": {
+  "es": "El perro no muerde.",
+  "en": "The dog doesn't bite."
+ },
+ "blame": {
+  "es": "No me eches la culpa.",
+  "en": "Don't blame me."
+ },
+ "celebrate": {
+  "es": "Vamos a celebrar tu cumpleaños.",
+  "en": "Let's celebrate your birthday."
+ },
+ "charge": {
+  "es": "¿Cuánto cobran por la entrada?",
+  "en": "How much do they charge for entry?"
+ },
+ "chase": {
+  "es": "El perro persiguió al gato.",
+  "en": "The dog chased the cat."
+ },
+ "collect": {
+  "es": "Colecciono sellos.",
+  "en": "I collect stamps."
+ },
+ "complain": {
+  "es": "Deja de quejarte.",
+  "en": "Stop complaining."
+ },
+ "connect": {
+  "es": "Conecta el cable a la tele.",
+  "en": "Connect the cable to the TV."
+ },
+ "contain": {
+  "es": "Esta bebida no contiene azúcar.",
+  "en": "This drink doesn't contain sugar."
+ },
+ "contribute": {
+  "es": "Todos aportamos algo.",
+  "en": "We all contributed something."
+ },
+ "deliver": {
+  "es": "El paquete llega mañana.",
+  "en": "They deliver the package tomorrow."
+ },
+ "deny": {
+  "es": "Negó haberlo hecho.",
+  "en": "He denied doing it."
+ },
+ "depend": {
+  "es": "Depende del tiempo.",
+  "en": "It depends on the weather."
+ },
+ "deserve": {
+  "es": "Te mereces un descanso.",
+  "en": "You deserve a rest."
+ },
+ "destroy": {
+  "es": "El fuego destruyó la casa.",
+  "en": "The fire destroyed the house."
+ },
+ "disappear": {
+  "es": "Mis llaves han desaparecido.",
+  "en": "My keys have disappeared."
+ },
+ "discover": {
+  "es": "Descubrimos un sitio nuevo.",
+  "en": "We discovered a new place."
+ },
+ "discuss": {
+  "es": "Tenemos que hablar de esto.",
+  "en": "We need to discuss this."
+ },
+ "divide": {
+  "es": "Divide la tarta en ocho.",
+  "en": "Divide the cake into eight."
+ },
+ "doubt": {
+  "es": "Lo dudo mucho.",
+  "en": "I doubt it very much."
+ },
+ "employ": {
+  "es": "La empresa emplea a mil personas.",
+  "en": "The company employs a thousand people."
+ },
+ "examine": {
+  "es": "El médico me examinó la garganta.",
+  "en": "The doctor examined my throat."
+ },
+ "exist": {
+  "es": "Ese problema ya no existe.",
+  "en": "That problem no longer exists."
+ },
+ "explore": {
+  "es": "Vamos a explorar el casco antiguo.",
+  "en": "Let's explore the old town."
+ },
+ "express": {
+  "es": "Es difícil expresar lo que siento.",
+  "en": "It's hard to express how I feel."
+ },
+ "fail": {
+  "es": "El plan fracasó.",
+  "en": "The plan failed."
+ },
+ "feed": {
+  "es": "Dale de comer al perro.",
+  "en": "Feed the dog."
+ },
+ "fight": {
+  "es": "No os peleéis.",
+  "en": "Don't fight."
+ },
+ "float": {
+  "es": "El corcho flota en el agua.",
+  "en": "Cork floats on water."
+ },
+ "fold": {
+  "es": "Dobla la ropa, por favor.",
+  "en": "Fold the clothes, please."
+ },
+ "forget": {
+  "es": "No lo olvides.",
+  "en": "Don't forget it."
+ },
+ "forgive": {
+  "es": "Perdóname.",
+  "en": "Forgive me."
+ },
+ "freeze": {
+  "es": "El agua se congela a cero grados.",
+  "en": "Water freezes at zero degrees."
+ },
+ "gather": {
+  "es": "La familia se reunió para la cena.",
+  "en": "The family gathered for dinner."
+ },
+ "hang": {
+  "es": "Cuelga el cuadro aquí.",
+  "en": "Hang the picture here."
+ },
+ "hide": {
+  "es": "El niño se escondió detrás del sofá.",
+  "en": "The child hid behind the sofa."
+ },
+ "hunt": {
+  "es": "Llevo una hora buscando las llaves.",
+  "en": "I've been hunting for the keys for an hour."
+ },
+ "hurry": {
+  "es": "Date prisa, es tarde.",
+  "en": "Hurry, it's late."
+ },
+ "hurt": {
+  "es": "¿Te has hecho daño?",
+  "en": "Did you hurt yourself?"
+ },
+ "imagine": {
+  "es": "Imagínate vivir aquí.",
+  "en": "Imagine living here."
+ },
+ "indicate": {
+  "es": "La flecha indica la salida.",
+  "en": "The arrow indicates the exit."
+ },
+ "influence": {
+  "es": "Sus amigos lo influyen mucho.",
+  "en": "His friends influence him a lot."
+ },
+ "inform": {
+  "es": "Nos informaron del cambio.",
+  "en": "They informed us of the change."
+ },
+ "intend": {
+  "es": "Tengo la intención de quedarme.",
+  "en": "I intend to stay."
+ },
+ "invent": {
+  "es": "¿Quién inventó la radio?",
+  "en": "Who invented the radio?"
+ },
+ "invite": {
+  "es": "Te invito a mi fiesta.",
+  "en": "I'm inviting you to my party."
+ },
+ "kick": {
+  "es": "No le des una patada a la puerta.",
+  "en": "Don't kick the door."
+ },
+ "lay": {
+  "es": "Deja al bebé en la cama con cuidado.",
+  "en": "Lay the baby on the bed carefully."
+ },
+ "lean": {
+  "es": "No te apoyes en la pared.",
+  "en": "Don't lean on the wall."
+ },
+ "link": {
+  "es": "Los dos casos están relacionados.",
+  "en": "The two cases are linked."
+ },
+ "mark": {
+  "es": "El profesor corrigió los exámenes.",
+  "en": "The teacher marked the exams."
+ },
+ "marry": {
+  "es": "Se casaron el año pasado.",
+  "en": "They got married last year."
+ },
+ "melt": {
+  "es": "El hielo se derritió rápido.",
+  "en": "The ice melted quickly."
+ },
+ "mix": {
+  "es": "Mezcla el agua y la harina.",
+  "en": "Mix the water and the flour."
+ },
+ "notice": {
+  "es": "No me di cuenta de nada.",
+  "en": "I didn't notice anything."
+ },
+ "obey": {
+  "es": "El perro obedece a mi padre.",
+  "en": "The dog obeys my father."
+ },
+ "operate": {
+  "es": "¿Sabes usar esta máquina?",
+  "en": "Do you know how to operate this machine?"
+ },
+ "pack": {
+  "es": "Todavía no he hecho la maleta.",
+  "en": "I haven't packed yet."
+ },
+ "perform": {
+  "es": "El grupo tocó dos horas.",
+  "en": "The band performed for two hours."
+ },
+ "pick": {
+  "es": "Elige una carta.",
+  "en": "Pick a card."
+ },
+ "plant": {
+  "es": "Plantamos un árbol.",
+  "en": "We planted a tree."
+ },
+ "pour": {
+  "es": "Sirve el vino, por favor.",
+  "en": "Pour the wine, please."
+ },
+ "practice": {
+  "es": "Practica todos los días.",
+  "en": "Practice every day."
+ },
+ "prefer": {
+  "es": "Prefiero quedarme en casa.",
+  "en": "I prefer to stay home."
+ },
+ "pretend": {
+  "es": "Fingió estar dormido.",
+  "en": "He pretended to be asleep."
+ },
+ "prevent": {
+  "es": "Cierra la puerta para evitar el frío.",
+  "en": "Close the door to prevent the cold."
+ },
+ "promise": {
+  "es": "Te lo prometo.",
+  "en": "I promise you."
+ },
+ "prove": {
+  "es": "Demuéstralo.",
+  "en": "Prove it."
+ },
+ "provide": {
+  "es": "El hotel ofrece desayuno.",
+  "en": "The hotel provides breakfast."
+ },
+ "punish": {
+  "es": "No castigues al niño.",
+  "en": "Don't punish the child."
+ },
+ "react": {
+  "es": "¿Cómo reaccionaste?",
+  "en": "How did you react?"
+ },
+ "recognize": {
+  "es": "No te reconocí.",
+  "en": "I didn't recognize you."
+ },
+ "recommend": {
+  "es": "¿Me recomiendas una película?",
+  "en": "Can you recommend a film?"
+ },
+ "reduce": {
+  "es": "Tenemos que reducir gastos.",
+  "en": "We need to reduce spending."
+ },
+ "refuse": {
+  "es": "Se negó a ayudar.",
+  "en": "He refused to help."
+ },
+ "regret": {
+  "es": "Me arrepiento de haberlo dicho.",
+  "en": "I regret saying it."
+ },
+ "relax": {
+  "es": "Relájate un poco.",
+  "en": "Relax a little."
+ },
+ "remind": {
+  "es": "Recuérdame llamar a mi madre.",
+  "en": "Remind me to call my mother."
+ },
+ "repeat": {
+  "es": "¿Puedes repetirlo?",
+  "en": "Can you repeat it?"
+ },
+ "replace": {
+  "es": "Hay que cambiar la bombilla.",
+  "en": "We need to replace the bulb."
+ },
+ "reply": {
+  "es": "Todavía no me ha respondido.",
+  "en": "She hasn't replied yet."
+ },
+ "rescue": {
+  "es": "Rescataron al perro del río.",
+  "en": "They rescued the dog from the river."
+ },
+ "respect": {
+  "es": "Respeto tu opinión.",
+  "en": "I respect your opinion."
+ },
+ "rise": {
+  "es": "El sol sale a las siete.",
+  "en": "The sun rises at seven."
+ },
+ "roll": {
+  "es": "La pelota rodó por la calle.",
+  "en": "The ball rolled down the street."
+ },
+ "rub": {
+  "es": "Se frotó los ojos.",
+  "en": "He rubbed his eyes."
+ },
+ "rush": {
+  "es": "No tengas prisa.",
+  "en": "Don't rush."
+ },
+ "search": {
+  "es": "Estoy buscando mi cartera.",
+  "en": "I'm searching for my wallet."
+ },
+ "seek": {
+  "es": "Buscamos una solución.",
+  "en": "We are seeking a solution."
+ },
+ "select": {
+  "es": "Selecciona una opción.",
+  "en": "Select an option."
+ },
+ "separate": {
+  "es": "Separa la ropa blanca.",
+  "en": "Separate the white clothes."
+ },
+ "settle": {
+  "es": "Se instalaron en el campo.",
+  "en": "They settled in the country."
+ },
+ "shake": {
+  "es": "Agita bien la botella.",
+  "en": "Shake the bottle well."
+ },
+ "share": {
+  "es": "¿Compartimos un postre?",
+  "en": "Shall we share a dessert?"
+ },
+ "shine": {
+  "es": "El sol brilla mucho hoy.",
+  "en": "The sun is shining a lot today."
+ },
+ "shoot": {
+  "es": "La película se rodó en México.",
+  "en": "The film was shot in Mexico."
+ },
+ "shut": {
+  "es": "Cierra la puerta.",
+  "en": "Shut the door."
+ },
+ "sign": {
+  "es": "Firma aquí, por favor.",
+  "en": "Sign here, please."
+ },
+ "slide": {
+  "es": "El niño se deslizó por el tobogán.",
+  "en": "The child slid down the slide."
+ },
+ "slip": {
+  "es": "Me resbalé en el hielo.",
+  "en": "I slipped on the ice."
+ },
+ "solve": {
+  "es": "No puedo resolver este problema.",
+  "en": "I can't solve this problem."
+ },
+ "sort": {
+  "es": "Ordena los papeles por fecha.",
+  "en": "Sort the papers by date."
+ },
+ "spell": {
+  "es": "¿Cómo se escribe tu apellido?",
+  "en": "How do you spell your surname?"
+ },
+ "spread": {
+  "es": "El fuego se extendió deprisa.",
+  "en": "The fire spread quickly."
+ },
+ "stare": {
+  "es": "Deja de mirarme fijamente.",
+  "en": "Stop staring at me."
+ },
+ "steal": {
+  "es": "Me robaron la cartera.",
+  "en": "Someone stole my wallet."
+ },
+ "stir": {
+  "es": "Remueve la sopa.",
+  "en": "Stir the soup."
+ },
+ "stretch": {
+  "es": "Estira las piernas antes de correr.",
+  "en": "Stretch your legs before you run."
+ },
+ "strike": {
+  "es": "Los trabajadores están en huelga.",
+  "en": "The workers are on strike."
+ },
+ "struggle": {
+  "es": "Me cuesta abrir el frasco.",
+  "en": "I'm struggling to open the jar."
+ },
+ "succeed": {
+  "es": "Al final lo conseguí.",
+  "en": "In the end I succeeded."
+ },
+ "suffer": {
+  "es": "Sufre de dolores de cabeza.",
+  "en": "She suffers from headaches."
+ },
+ "suit": {
+  "es": "Ese color te queda bien.",
+  "en": "That colour suits you."
+ },
+ "supply": {
+  "es": "El río abastece de agua a la ciudad.",
+  "en": "The river supplies water to the city."
+ },
+ "suppose": {
+  "es": "Supongo que sí.",
+  "en": "I suppose so."
+ },
+ "survive": {
+  "es": "Sobrevivieron dos días sin comida.",
+  "en": "They survived two days without food."
+ },
+ "swim": {
+  "es": "No sé nadar.",
+  "en": "I can't swim."
+ },
+ "switch": {
+  "es": "Cambiemos de tema.",
+  "en": "Let's switch the subject."
+ },
+ "tear": {
+  "es": "Rompió la carta.",
+  "en": "She tore the letter."
+ },
+ "tend": {
+  "es": "Suelo llegar temprano.",
+  "en": "I tend to arrive early."
+ },
+ "tie": {
+  "es": "Átate los zapatos.",
+  "en": "Tie your shoes."
+ },
+ "translate": {
+  "es": "¿Me traduces esto?",
+  "en": "Can you translate this for me?"
+ },
+ "treat": {
+  "es": "Nos trataron muy bien.",
+  "en": "They treated us very well."
+ },
+ "trust": {
+  "es": "Confío en ti.",
+  "en": "I trust you."
+ },
+ "twist": {
+  "es": "Me torcí el tobillo.",
+  "en": "I twisted my ankle."
+ },
+ "warn": {
+  "es": "Te lo advierto.",
+  "en": "I'm warning you."
+ },
+ "waste": {
+  "es": "No malgastes el agua.",
+  "en": "Don't waste water."
+ },
+ "whisper": {
+  "es": "Me susurró algo al oído.",
+  "en": "She whispered something in my ear."
+ },
+ "wipe": {
+  "es": "Limpia la mesa.",
+  "en": "Wipe the table."
+ },
+ "wonder": {
+  "es": "Me pregunto dónde estará.",
+  "en": "I wonder where he is."
+ },
+ "wrap": {
+  "es": "Envuelve el regalo.",
+  "en": "Wrap the gift."
+ },
+ "afraid": {
+  "es": "Tengo miedo de la oscuridad.",
+  "en": "I'm afraid of the dark."
+ },
+ "alive": {
+  "es": "El pez sigue vivo.",
+  "en": "The fish is still alive."
+ },
+ "alone": {
+  "es": "Déjame solo.",
+  "en": "Leave me alone."
+ },
+ "angry": {
+  "es": "Está enfadado conmigo.",
+  "en": "He's angry with me."
+ },
+ "asleep": {
+  "es": "Los niños ya están dormidos.",
+  "en": "The children are asleep."
+ },
+ "boring": {
+  "es": "La película fue aburrida.",
+  "en": "The film was boring."
+ },
+ "brave": {
+  "es": "Fuiste muy valiente.",
+  "en": "You were very brave."
+ },
+ "bright": {
+  "es": "La habitación es muy luminosa.",
+  "en": "The room is very bright."
+ },
+ "calm": {
+  "es": "Mantén la calma.",
+  "en": "Stay calm."
+ },
+ "careful": {
+  "es": "Ten cuidado.",
+  "en": "Be careful."
+ },
+ "clever": {
+  "es": "Qué idea tan inteligente.",
+  "en": "What a clever idea."
+ },
+ "comfortable": {
+  "es": "Ponte cómodo.",
+  "en": "Make yourself comfortable."
+ },
+ "confused": {
+  "es": "Estoy un poco confundido.",
+  "en": "I'm a bit confused."
+ },
+ "dangerous": {
+  "es": "Esa calle es peligrosa de noche.",
+  "en": "That street is dangerous at night."
+ },
+ "deep": {
+  "es": "El lago es muy profundo.",
+  "en": "The lake is very deep."
+ },
+ "delicious": {
+  "es": "La cena estuvo deliciosa.",
+  "en": "The dinner was delicious."
+ },
+ "dirty": {
+  "es": "Tus zapatos están sucios.",
+  "en": "Your shoes are dirty."
+ },
+ "empty": {
+  "es": "La botella está vacía.",
+  "en": "The bottle is empty."
+ },
+ "exciting": {
+  "es": "Fue un partido emocionante.",
+  "en": "It was an exciting match."
+ },
+ "fair": {
+  "es": "Eso no es justo.",
+  "en": "That's not fair."
+ },
+ "favourite": {
+  "es": "Este es mi libro favorito.",
+  "en": "This is my favourite book."
+ },
+ "foreign": {
+  "es": "Habla dos idiomas extranjeros.",
+  "en": "She speaks two foreign languages."
+ },
+ "fresh": {
+  "es": "El pan está muy fresco.",
+  "en": "The bread is very fresh."
+ },
+ "friendly": {
+  "es": "El camarero fue muy amable.",
+  "en": "The waiter was very friendly."
+ },
+ "funny": {
+  "es": "Qué historia tan graciosa.",
+  "en": "What a funny story."
+ },
+ "gentle": {
+  "es": "Sé delicado con el bebé.",
+  "en": "Be gentle with the baby."
+ },
+ "guilty": {
+  "es": "Me siento culpable.",
+  "en": "I feel guilty."
+ },
+ "healthy": {
+  "es": "Lleva una vida sana.",
+  "en": "She lives a healthy life."
+ },
+ "ill": {
+  "es": "Me siento enfermo.",
+  "en": "I feel ill."
+ },
+ "lonely": {
+  "es": "A veces me siento solo.",
+  "en": "Sometimes I feel lonely."
+ },
+ "loud": {
+  "es": "La música está muy alta.",
+  "en": "The music is very loud."
+ },
+ "lovely": {
+  "es": "Qué tarde tan agradable.",
+  "en": "What a lovely afternoon."
+ },
+ "lucky": {
+  "es": "Qué suerte tienes.",
+  "en": "You're so lucky."
+ },
+ "narrow": {
+  "es": "El pasillo es muy estrecho.",
+  "en": "The corridor is very narrow."
+ },
+ "nervous": {
+  "es": "Estoy nervioso por el examen.",
+  "en": "I'm nervous about the exam."
+ },
+ "normal": {
+  "es": "Es normal sentirse así.",
+  "en": "It's normal to feel this way."
+ },
+ "obvious": {
+  "es": "Era obvio que estaba cansada.",
+  "en": "It was obvious that she was tired."
+ },
+ "ordinary": {
+  "es": "Fue un día normal y corriente.",
+  "en": "It was an ordinary day."
+ },
+ "perfect": {
+  "es": "El día estuvo perfecto.",
+  "en": "The day was perfect."
+ },
+ "polite": {
+  "es": "Sé educado con los invitados.",
+  "en": "Be polite to the guests."
+ },
+ "powerful": {
+  "es": "Es un motor muy potente.",
+  "en": "It's a very powerful engine."
+ },
+ "proud": {
+  "es": "Estoy orgulloso de ti.",
+  "en": "I'm proud of you."
+ },
+ "rare": {
+  "es": "Es raro verlo tan callado.",
+  "en": "It's rare to see him so quiet."
+ },
+ "rich": {
+  "es": "Es una familia muy rica.",
+  "en": "It's a very rich family."
+ },
+ "rude": {
+  "es": "No seas maleducado.",
+  "en": "Don't be rude."
+ },
+ "sad": {
+  "es": "La noticia me puso triste.",
+  "en": "The news made me sad."
+ },
+ "scared": {
+  "es": "El niño está asustado.",
+  "en": "The child is scared."
+ },
+ "sharp": {
+  "es": "Ten cuidado, el cuchillo está afilado.",
+  "en": "Be careful, the knife is sharp."
+ },
+ "shy": {
+  "es": "Es demasiado tímido para hablar.",
+  "en": "He's too shy to speak."
+ },
+ "silent": {
+  "es": "Guarda silencio, por favor.",
+  "en": "Please stay silent."
+ },
+ "similar": {
+  "es": "Nuestros gustos son parecidos.",
+  "en": "Our tastes are similar."
+ },
+ "smooth": {
+  "es": "Tiene la piel muy suave.",
+  "en": "She has very smooth skin."
+ },
+ "soft": {
+  "es": "La cama es muy blanda.",
+  "en": "The bed is very soft."
+ },
+ "stupid": {
+  "es": "Fue un error estúpido.",
+  "en": "It was a stupid mistake."
+ },
+ "sweet": {
+  "es": "El té está demasiado dulce.",
+  "en": "The tea is too sweet."
+ },
+ "tall": {
+  "es": "Es más alto que yo.",
+  "en": "He's taller than me."
+ },
+ "terrible": {
+  "es": "Hoy hace un tiempo terrible.",
+  "en": "The weather is terrible today."
+ },
+ "thick": {
+  "es": "Necesito una manta gruesa.",
+  "en": "I need a thick blanket."
+ },
+ "thin": {
+  "es": "Corta el jamón fino.",
+  "en": "Cut the ham thin."
+ },
+ "thirsty": {
+  "es": "Tengo mucha sed.",
+  "en": "I'm very thirsty."
+ },
+ "tight": {
+  "es": "El vestido me queda apretado.",
+  "en": "The dress is too tight for me."
+ },
+ "tiny": {
+  "es": "Viven en un piso diminuto.",
+  "en": "They live in a tiny flat."
+ },
+ "ugly": {
+  "es": "Es un edificio feo.",
+  "en": "It's an ugly building."
+ },
+ "useful": {
+  "es": "Esta herramienta es muy útil.",
+  "en": "This tool is very useful."
+ },
+ "usual": {
+  "es": "Lo de siempre, por favor.",
+  "en": "The usual, please."
+ },
+ "warm": {
+  "es": "Hace un día cálido.",
+  "en": "It's a warm day."
+ },
+ "weak": {
+  "es": "Me siento débil.",
+  "en": "I feel weak."
+ },
+ "wet": {
+  "es": "El suelo está mojado.",
+  "en": "The floor is wet."
+ },
+ "wide": {
+  "es": "La calle es muy ancha.",
+  "en": "The street is very wide."
+ },
+ "wild": {
+  "es": "Vimos animales salvajes.",
+  "en": "We saw wild animals."
+ },
+ "wise": {
+  "es": "Fue una decisión sabia.",
+  "en": "It was a wise decision."
+ },
+ "wonderful": {
+  "es": "Pasamos un día maravilloso.",
+  "en": "We had a wonderful day."
+ },
+ "worried": {
+  "es": "Estoy preocupada por él.",
+  "en": "I'm worried about him."
+ },
+ "achieve": {
+  "es": "Logró su objetivo.",
+  "en": "She achieved her goal."
+ },
+ "acquire": {
+  "es": "Adquirió mucha experiencia.",
+  "en": "He acquired a lot of experience."
+ },
+ "adapt": {
+  "es": "Me está costando adaptarme.",
+  "en": "I'm struggling to adapt."
+ },
+ "adjust": {
+  "es": "Ajusta el asiento.",
+  "en": "Adjust the seat."
+ },
+ "admire": {
+  "es": "Admiro tu paciencia.",
+  "en": "I admire your patience."
+ },
+ "afford": {
+  "es": "No puedo permitírmelo.",
+  "en": "I can't afford it."
+ },
+ "apply": {
+  "es": "Voy a solicitar el trabajo.",
+  "en": "I'm going to apply for the job."
+ },
+ "approach": {
+  "es": "Un hombre se me acercó.",
+  "en": "A man approached me."
+ },
+ "approve": {
+  "es": "El jefe aprobó el plan.",
+  "en": "The boss approved the plan."
+ },
+ "assist": {
+  "es": "¿Puedo ayudarle?",
+  "en": "May I assist you?"
+ },
+ "assume": {
+  "es": "Supuse que no vendrías.",
+  "en": "I assumed you wouldn't come."
+ },
+ "attach": {
+  "es": "He adjuntado la foto.",
+  "en": "I've attached the photo."
+ },
+ "blow": {
+  "es": "El viento sopla fuerte.",
+  "en": "The wind is blowing hard."
+ },
+ "calculate": {
+  "es": "Deja que calcule el total.",
+  "en": "Let me calculate the total."
+ },
+ "cancel": {
+  "es": "Tuvimos que cancelar el viaje.",
+  "en": "We had to cancel the trip."
+ },
+ "clarify": {
+  "es": "Déjame aclararte una cosa.",
+  "en": "Let me clarify one thing."
+ },
+ "combine": {
+  "es": "Combina el trabajo y los estudios.",
+  "en": "She combines work and study."
+ },
+ "communicate": {
+  "es": "No nos comunicamos bien.",
+  "en": "We don't communicate well."
+ },
+ "complete": {
+  "es": "Completa el formulario.",
+  "en": "Complete the form."
+ },
+ "conclude": {
+  "es": "El informe concluye que hace falta más dinero.",
+  "en": "The report concludes that more money is needed."
+ },
+ "confess": {
+  "es": "Tengo que confesarte algo.",
+  "en": "I have to confess something."
+ },
+ "confirm": {
+  "es": "Confirma tu asistencia.",
+  "en": "Confirm your attendance."
+ },
+ "confront": {
+  "es": "Tienes que enfrentarte al problema.",
+  "en": "You have to confront the problem."
+ },
+ "consist": {
+  "es": "El curso consta de diez unidades.",
+  "en": "The course consists of ten units."
+ },
+ "construct": {
+  "es": "Van a construir un hospital nuevo.",
+  "en": "They're going to construct a new hospital."
+ },
+ "consult": {
+  "es": "Consulta con tu médico.",
+  "en": "Consult your doctor."
+ },
+ "consume": {
+  "es": "El coche consume poca gasolina.",
+  "en": "The car consumes little petrol."
+ },
+ "convince": {
+  "es": "Me convenció para ir.",
+  "en": "She convinced me to go."
+ },
+ "cooperate": {
+  "es": "Si cooperamos, terminaremos antes.",
+  "en": "If we cooperate, we'll finish sooner."
+ },
+ "cough": {
+  "es": "No paro de toser.",
+  "en": "I can't stop coughing."
+ },
+ "crawl": {
+  "es": "El bebé empieza a gatear.",
+  "en": "The baby is starting to crawl."
+ },
+ "criticize": {
+  "es": "No me critiques.",
+  "en": "Don't criticize me."
+ },
+ "cross": {
+  "es": "Cruza la calle con cuidado.",
+  "en": "Cross the road carefully."
+ },
+ "cure": {
+  "es": "No hay cura para el resfriado común.",
+  "en": "There's no cure for the common cold."
+ },
+ "dare": {
+  "es": "No me atrevo a decírselo.",
+  "en": "I don't dare tell him."
+ },
+ "debate": {
+  "es": "Debatieron durante horas.",
+  "en": "They debated for hours."
+ },
+ "decline": {
+  "es": "Las ventas han bajado.",
+  "en": "Sales have declined."
+ },
+ "define": {
+  "es": "¿Cómo defines el éxito?",
+  "en": "How do you define success?"
+ },
+ "delay": {
+  "es": "El vuelo se retrasó dos horas.",
+  "en": "The flight was delayed by two hours."
+ },
+ "delete": {
+  "es": "Borré el archivo sin querer.",
+  "en": "I deleted the file by mistake."
+ },
+ "demonstrate": {
+  "es": "Déjame demostrarte cómo funciona.",
+  "en": "Let me demonstrate how it works."
+ },
+ "differ": {
+  "es": "Nuestras opiniones difieren.",
+  "en": "Our opinions differ."
+ },
+ "dig": {
+  "es": "El perro cavó un agujero.",
+  "en": "The dog dug a hole."
+ },
+ "disagree": {
+  "es": "No estoy de acuerdo contigo.",
+  "en": "I disagree with you."
+ },
+ "disappoint": {
+  "es": "No quiero decepcionarte.",
+  "en": "I don't want to disappoint you."
+ },
+ "distribute": {
+  "es": "Repartieron comida a todos.",
+  "en": "They distributed food to everyone."
+ },
+ "disturb": {
+  "es": "No molestes a tu hermana.",
+  "en": "Don't disturb your sister."
+ },
+ "donate": {
+  "es": "Donaron dinero al hospital.",
+  "en": "They donated money to the hospital."
+ },
+ "download": {
+  "es": "Descárgate la aplicación.",
+  "en": "Download the app."
+ },
+ "edit": {
+  "es": "Todavía tengo que editar el texto.",
+  "en": "I still have to edit the text."
+ },
+ "elect": {
+  "es": "La eligieron alcaldesa.",
+  "en": "They elected her mayor."
+ },
+ "emerge": {
+  "es": "Han salido nuevos datos.",
+  "en": "New details have emerged."
+ },
+ "emphasize": {
+  "es": "Quiero recalcar una cosa.",
+  "en": "I want to emphasize one thing."
+ },
+ "enable": {
+  "es": "El préstamo nos permitió comprar la casa.",
+  "en": "The loan enabled us to buy the house."
+ },
+ "encounter": {
+  "es": "Tuvimos algunos problemas.",
+  "en": "We encountered a few problems."
+ },
+ "ensure": {
+  "es": "Asegúrate de cerrar con llave.",
+  "en": "Ensure the door is locked."
+ },
+ "escape": {
+  "es": "El pájaro se escapó.",
+  "en": "The bird escaped."
+ },
+ "establish": {
+  "es": "La empresa se fundó en 1990.",
+  "en": "The company was established in 1990."
+ },
+ "estimate": {
+  "es": "Calculan la obra en un año.",
+  "en": "They estimate the work at a year."
+ },
+ "evaluate": {
+  "es": "Evaluamos cada proyecto al final.",
+  "en": "We evaluate each project at the end."
+ },
+ "exchange": {
+  "es": "Intercambiamos regalos.",
+  "en": "We exchanged gifts."
+ },
+ "exclude": {
+  "es": "El precio no incluye los impuestos.",
+  "en": "The price excludes taxes."
+ },
+ "expand": {
+  "es": "El negocio se está expandiendo.",
+  "en": "The business is expanding."
+ },
+ "explode": {
+  "es": "El globo explotó.",
+  "en": "The balloon exploded."
+ },
+ "export": {
+  "es": "Este país exporta café.",
+  "en": "This country exports coffee."
+ },
+ "expose": {
+  "es": "No expongas la piel al sol.",
+  "en": "Don't expose your skin to the sun."
+ },
+ "extend": {
+  "es": "Ampliaron el plazo una semana.",
+  "en": "They extended the deadline by a week."
+ },
+ "fade": {
+  "es": "El color se ha ido perdiendo.",
+  "en": "The colour has faded."
+ },
+ "fasten": {
+  "es": "Abróchate el cinturón.",
+  "en": "Fasten your seatbelt."
+ },
+ "flood": {
+  "es": "El río inundó los campos.",
+  "en": "The river flooded the fields."
+ },
+ "forbid": {
+  "es": "Está prohibido correr aquí.",
+  "en": "Running is forbidden here."
+ },
+ "frighten": {
+  "es": "El ruido asustó al perro.",
+  "en": "The noise frightened the dog."
+ },
+ "gain": {
+  "es": "He ganado peso este año.",
+  "en": "I've gained weight this year."
+ },
+ "generate": {
+  "es": "El sol genera energía.",
+  "en": "The sun generates energy."
+ },
+ "glance": {
+  "es": "Echó un vistazo al reloj.",
+  "en": "She glanced at the clock."
+ },
+ "grab": {
+  "es": "Me agarró del brazo.",
+  "en": "He grabbed my arm."
+ },
+ "grant": {
+  "es": "Le concedieron el permiso.",
+  "en": "They granted him permission."
+ },
+ "guarantee": {
+  "es": "Te lo garantizo.",
+  "en": "I guarantee it."
+ },
+ "guard": {
+  "es": "Dos perros vigilan la casa.",
+  "en": "Two dogs guard the house."
+ },
+ "handle": {
+  "es": "Ella lo manejó muy bien.",
+  "en": "She handled it very well."
+ },
+ "heal": {
+  "es": "La herida está curando bien.",
+  "en": "The wound is healing well."
+ },
+ "hesitate": {
+  "es": "No dudes en llamarme.",
+  "en": "Don't hesitate to call me."
+ },
+ "highlight": {
+  "es": "Resalta la parte importante.",
+  "en": "Highlight the important part."
+ },
+ "identify": {
+  "es": "¿Puedes identificar al hombre?",
+  "en": "Can you identify the man?"
+ },
+ "ignore": {
+  "es": "Ignora sus comentarios.",
+  "en": "Ignore his comments."
+ },
+ "illustrate": {
+  "es": "El dibujo ilustra la idea.",
+  "en": "The drawing illustrates the idea."
+ },
+ "implement": {
+  "es": "Van a aplicar las nuevas normas.",
+  "en": "They're going to implement the new rules."
+ },
+ "imply": {
+  "es": "¿Estás insinuando que mentí?",
+  "en": "Are you implying that I lied?"
+ },
+ "import": {
+  "es": "El país importa la mayor parte del petróleo.",
+  "en": "The country imports most of its oil."
+ },
+ "impress": {
+  "es": "Su discurso me impresionó.",
+  "en": "Her speech impressed me."
+ },
+ "injure": {
+  "es": "Dos personas resultaron heridas.",
+  "en": "Two people were injured."
+ },
+ "insert": {
+  "es": "Introduce la tarjeta aquí.",
+  "en": "Insert the card here."
+ },
+ "inspect": {
+  "es": "Un agente revisó los pasaportes.",
+  "en": "An officer inspected the passports."
+ },
+ "inspire": {
+  "es": "Su historia me inspiró.",
+  "en": "Her story inspired me."
+ },
+ "install": {
+  "es": "Instalamos una calefacción nueva.",
+  "en": "We installed new heating."
+ },
+ "instruct": {
+  "es": "Nos dijeron que esperáramos fuera.",
+  "en": "We were instructed to wait outside."
+ },
+ "interfere": {
+  "es": "No te metas en esto.",
+  "en": "Don't interfere in this."
+ },
+ "interpret": {
+  "es": "¿Cómo interpretas este resultado?",
+  "en": "How do you interpret this result?"
+ },
+ "interrupt": {
+  "es": "Perdona que te interrumpa.",
+  "en": "Sorry to interrupt you."
+ },
+ "introduce": {
+  "es": "Deja que te presente a mi hermana.",
+  "en": "Let me introduce you to my sister."
+ },
+ "invest": {
+  "es": "Invirtieron en un hotel pequeño.",
+  "en": "They invested in a small hotel."
+ },
+ "investigate": {
+  "es": "La policía está investigando el robo.",
+  "en": "The police are investigating the theft."
+ },
+ "justify": {
+  "es": "¿Cómo justificas ese gasto?",
+  "en": "How do you justify that expense?"
+ },
+ "launch": {
+  "es": "La empresa lanzó un teléfono nuevo.",
+  "en": "The company launched a new phone."
+ },
+ "lecture": {
+  "es": "Da clases de historia en la universidad.",
+  "en": "She lectures in history at the university."
+ },
+ "locate": {
+  "es": "No conseguimos localizar la avería.",
+  "en": "We couldn't locate the fault."
+ },
+ "maintain": {
+  "es": "Es difícil mantener un jardín tan grande.",
+  "en": "It's hard to maintain such a big garden."
+ },
+ "manufacture": {
+  "es": "La fábrica produce piezas de coche.",
+  "en": "The factory manufactures car parts."
+ },
+ "monitor": {
+  "es": "Los médicos vigilaron su corazón toda la noche.",
+  "en": "Doctors monitored her heart all night."
+ },
+ "negotiate": {
+  "es": "Negociamos un precio mejor.",
+  "en": "We negotiated a better price."
+ },
+ "nod": {
+  "es": "Asintió con la cabeza.",
+  "en": "She nodded."
+ },
+ "obtain": {
+  "es": "Puedes obtener el impreso en la oficina.",
+  "en": "You can obtain the form from the office."
+ },
+ "occupy": {
+  "es": "La cama ocupa media habitación.",
+  "en": "The bed occupies half the room."
+ },
+ "occur": {
+  "es": "El accidente ocurrió a medianoche.",
+  "en": "The accident occurred at midnight."
+ },
+ "oppose": {
+  "es": "Muchos vecinos se oponen a la carretera.",
+  "en": "Many neighbours oppose the road."
+ },
+ "overcome": {
+  "es": "Superó su miedo a volar.",
+  "en": "She overcame her fear of flying."
+ },
+ "participate": {
+  "es": "Todos pueden participar.",
+  "en": "Everyone can participate."
+ },
+ "persuade": {
+  "es": "Lo convencí de ir al médico.",
+  "en": "I persuaded him to see a doctor."
+ },
+ "possess": {
+  "es": "Posee un talento poco común.",
+  "en": "She possesses a rare talent."
+ },
+ "postpone": {
+  "es": "Aplazaron el concierto hasta junio.",
+  "en": "They postponed the concert until June."
+ },
+ "praise": {
+  "es": "El profesor elogió su trabajo.",
+  "en": "The teacher praised her work."
+ },
+ "predict": {
+  "es": "Es difícil predecir el tiempo aquí.",
+  "en": "It's hard to predict the weather here."
+ },
+ "preserve": {
+  "es": "Debemos conservar estos edificios.",
+  "en": "We must preserve these buildings."
+ },
+ "proceed": {
+  "es": "Diríjase a la puerta de embarque cinco.",
+  "en": "Please proceed to gate five."
+ },
+ "prohibit": {
+  "es": "Está prohibido fumar aquí.",
+  "en": "Smoking is prohibited here."
+ },
+ "promote": {
+  "es": "La ascendieron a directora.",
+  "en": "She was promoted to manager."
+ },
+ "pronounce": {
+  "es": "¿Cómo se pronuncia este nombre?",
+  "en": "How do you pronounce this name?"
+ },
+ "propose": {
+  "es": "Propongo que volvamos a vernos.",
+  "en": "I propose that we meet again."
+ },
+ "protest": {
+  "es": "Los estudiantes protestaron por las tasas.",
+  "en": "Students protested against the fees."
+ },
+ "publish": {
+  "es": "Publicó su primera novela el año pasado.",
+  "en": "She published her first novel last year."
+ },
+ "purchase": {
+  "es": "Puedes comprar las entradas por internet.",
+  "en": "You can purchase tickets online."
+ },
+ "pursue": {
+  "es": "Decidió dedicarse a la abogacía.",
+  "en": "She decided to pursue a career in law."
+ },
+ "qualify": {
+  "es": "Se sacó el título de enfermero.",
+  "en": "He qualified as a nurse."
+ },
+ "recall": {
+  "es": "No recuerdo sus palabras exactas.",
+  "en": "I can't recall her exact words."
+ },
+ "recover": {
+  "es": "Tardó semanas en recuperarse.",
+  "en": "It took weeks to recover."
+ },
+ "recruit": {
+  "es": "El club busca voluntarios.",
+  "en": "The club is recruiting volunteers."
+ },
+ "refer": {
+  "es": "Se refirió al informe varias veces.",
+  "en": "She referred to the report several times."
+ },
+ "reflect": {
+  "es": "El lago reflejaba las montañas.",
+  "en": "The lake reflected the mountains."
+ },
+ "register": {
+  "es": "Tienes que inscribirte antes.",
+  "en": "You must register beforehand."
+ },
+ "regulate": {
+  "es": "El gobierno regula la seguridad alimentaria.",
+  "en": "The government regulates food safety."
+ },
+ "reject": {
+  "es": "Rechazaron nuestra primera oferta.",
+  "en": "They rejected our first offer."
+ },
+ "relate": {
+  "es": "Los dos hechos están relacionados.",
+  "en": "The two events are related."
+ },
+ "release": {
+  "es": "La película se estrena en mayo.",
+  "en": "The film will be released in May."
+ },
+ "rely": {
+  "es": "Puedes contar con ella.",
+  "en": "You can rely on her."
+ },
+ "remark": {
+  "es": "Comentó que hacía frío.",
+  "en": "She remarked that it was cold."
+ },
+ "represent": {
+  "es": "Representa a nuestra región.",
+  "en": "He represents our region."
+ },
+ "request": {
+  "es": "Se ruega guardar silencio.",
+  "en": "You are requested to keep quiet."
+ },
+ "resemble": {
+  "es": "Se parece a su madre.",
+  "en": "She resembles her mother."
+ },
+ "reserve": {
+  "es": "Reservé una mesa para cuatro.",
+  "en": "I reserved a table for four."
+ },
+ "resign": {
+  "es": "El ministro dimitió tras el escándalo.",
+  "en": "The minister resigned after the scandal."
+ },
+ "resist": {
+  "es": "No pude resistirme al pastel.",
+  "en": "I couldn't resist the cake."
+ },
+ "resolve": {
+  "es": "Resolvimos el problema en paz.",
+  "en": "We resolved the problem peacefully."
+ },
+ "respond": {
+  "es": "No respondió a mi mensaje.",
+  "en": "He didn't respond to my message."
+ },
+ "restore": {
+  "es": "Restauraron el viejo cine.",
+  "en": "They restored the old cinema."
+ },
+ "restrict": {
+  "es": "El acceso está restringido.",
+  "en": "Access is restricted."
+ },
+ "retain": {
+  "es": "Conserve el recibo.",
+  "en": "Retain your receipt."
+ },
+ "reveal": {
+  "es": "Reveló la sorpresa demasiado pronto.",
+  "en": "She revealed the surprise too soon."
+ },
+ "reverse": {
+  "es": "Metió el coche marcha atrás.",
+  "en": "He reversed the car in."
+ },
+ "review": {
+  "es": "Repasemos el plan antes de decidir.",
+  "en": "Let's review the plan before we decide."
+ },
+ "reward": {
+  "es": "La empresa premia a los clientes fieles.",
+  "en": "The company rewards loyal customers."
+ },
+ "ride": {
+  "es": "Voy al trabajo en bici.",
+  "en": "I ride to work."
+ },
+ "roar": {
+  "es": "El león rugió con fuerza.",
+  "en": "The lion roared loudly."
+ },
+ "scan": {
+  "es": "Escanea el documento y mándamelo.",
+  "en": "Scan the document and send it to me."
+ },
+ "scratch": {
+  "es": "No te rasques la picadura.",
+  "en": "Don't scratch the bite."
+ },
+ "scream": {
+  "es": "Gritó al ver la araña.",
+  "en": "She screamed when she saw the spider."
+ },
+ "seal": {
+  "es": "Cierra la caja con cinta.",
+  "en": "Seal the box with tape."
+ },
+ "seize": {
+  "es": "Aprovechó la oportunidad de viajar.",
+  "en": "He seized the chance to travel."
+ },
+ "shift": {
+  "es": "¿Me ayudas a mover el sofá?",
+  "en": "Can you help me shift the sofa?"
+ },
+ "shiver": {
+  "es": "Tiritaba de frío.",
+  "en": "She was shivering with cold."
+ },
+ "shrug": {
+  "es": "Se encogió de hombros y se fue.",
+  "en": "He shrugged and left."
+ },
+ "sigh": {
+  "es": "Suspiró y cerró el libro.",
+  "en": "She sighed and closed the book."
+ },
+ "sniff": {
+  "es": "El perro olfateó el suelo.",
+  "en": "The dog sniffed the ground."
+ },
+ "specify": {
+  "es": "Indica tu talla al hacer el pedido.",
+  "en": "Specify your size when ordering."
+ },
+ "split": {
+  "es": "Vamos a dividir la cuenta.",
+  "en": "Let's split the bill."
+ },
+ "spot": {
+  "es": "La vi al otro lado de la sala.",
+  "en": "I spotted her across the room."
+ },
+ "squeeze": {
+  "es": "Exprime el limón sobre el pescado.",
+  "en": "Squeeze the lemon over the fish."
+ },
+ "submit": {
+  "es": "Entrega la solicitud antes de fin de mes.",
+  "en": "Submit your application by the end of the month."
+ },
+ "surround": {
+  "es": "La casa está rodeada de árboles.",
+  "en": "The house is surrounded by trees."
+ },
+ "suspect": {
+  "es": "Sospecho que él lo hizo.",
+  "en": "I suspect he did it."
+ },
+ "swallow": {
+  "es": "Traga la pastilla con agua.",
+  "en": "Swallow the tablet with water."
+ },
+ "swear": {
+  "es": "Te juro que cerré la puerta.",
+  "en": "I swear I locked the door."
+ },
+ "sweep": {
+  "es": "Barre el suelo, por favor.",
+  "en": "Sweep the floor, please."
+ },
+ "threaten": {
+  "es": "Amenazó con llamar a la policía.",
+  "en": "He threatened to call the police."
+ },
+ "tremble": {
+  "es": "Le temblaban las manos.",
+  "en": "Her hands were trembling."
+ },
+ "undergo": {
+  "es": "El edificio está en obras.",
+  "en": "The building is undergoing work."
+ },
+ "unite": {
+  "es": "La crisis unió a todo el pueblo.",
+  "en": "The crisis united the whole town."
+ },
+ "urge": {
+  "es": "Los médicos instan a la gente a vacunarse.",
+  "en": "Doctors urge people to get vaccinated."
+ },
+ "vary": {
+  "es": "Los precios varían según la temporada.",
+  "en": "Prices vary by season."
+ },
+ "witness": {
+  "es": "Presenció el accidente desde la ventana.",
+  "en": "She witnessed the accident from the window."
+ },
+ "journalist": {
+  "es": "Un periodista me llamó.",
+  "en": "A journalist called me."
+ },
+ "designer": {
+  "es": "Es diseñadora de moda.",
+  "en": "She's a fashion designer."
+ },
+ "mechanic": {
+  "es": "El mecánico revisó los frenos.",
+  "en": "The mechanic checked the brakes."
+ },
+ "electrician": {
+  "es": "Llamamos a un electricista.",
+  "en": "We called an electrician."
+ },
+ "plumber": {
+  "es": "El fontanero arregló la fuga.",
+  "en": "The plumber fixed the leak."
+ },
+ "farmer": {
+  "es": "El agricultor cultiva trigo.",
+  "en": "The farmer grows wheat."
+ },
+ "waiter": {
+  "es": "El camarero trajo la carta.",
+  "en": "The waiter brought the menu."
+ },
+ "cleaner": {
+  "es": "La persona de la limpieza viene dos veces por semana.",
+  "en": "The cleaner comes twice a week."
+ },
+ "chef": {
+  "es": "El chef preparó un menú especial.",
+  "en": "The chef prepared a special menu."
+ },
+ "dentist": {
+  "es": "Tengo cita con el dentista el martes.",
+  "en": "I have a dentist appointment on Tuesday."
+ },
+ "pilot": {
+  "es": "El piloto anunció un pequeño retraso.",
+  "en": "The pilot announced a short delay."
+ },
+ "photographer": {
+  "es": "El fotógrafo hizo cientos de fotos.",
+  "en": "The photographer took hundreds of photos."
+ },
+ "musician": {
+  "es": "Los músicos afinaron sus instrumentos.",
+  "en": "The musicians tuned their instruments."
+ },
+ "politician": {
+  "es": "Ningún político quiere subir los impuestos.",
+  "en": "No politician wants to raise taxes."
+ },
+ "professor": {
+  "es": "Es catedrática de física.",
+  "en": "She's a professor of physics."
+ },
+ "reporter": {
+  "es": "Un reportero entrevistó al alcalde.",
+  "en": "A reporter interviewed the mayor."
+ },
+ "secretary": {
+  "es": "El secretario organizó la reunión.",
+  "en": "The secretary arranged the meeting."
+ },
+ "assistant": {
+  "es": "Trabaja de dependienta.",
+  "en": "She works as a shop assistant."
+ },
+ "author": {
+  "es": "La autora firmó su nueva novela.",
+  "en": "The author signed her new novel."
+ },
+ "guide": {
+  "es": "El guía conocía la historia de cada edificio.",
+  "en": "The guide knew the history of every building."
+ },
+ "injury": {
+  "es": "Se recuperó despacio de la lesión.",
+  "en": "He recovered slowly from the injury."
+ },
+ "pain": {
+  "es": "Tiene mucho dolor.",
+  "en": "She's in a lot of pain."
+ },
+ "disease": {
+  "es": "La enfermedad se contagia por contacto.",
+  "en": "The disease spreads through contact."
+ },
+ "infection": {
+  "es": "Tiene una infección de oído.",
+  "en": "He has an ear infection."
+ },
+ "fever": {
+  "es": "El niño tiene fiebre alta.",
+  "en": "The child has a high fever."
+ },
+ "headache": {
+  "es": "Tengo un dolor de cabeza terrible.",
+  "en": "I have a terrible headache."
+ },
+ "allergy": {
+  "es": "Tengo alergia a los frutos secos.",
+  "en": "I have a nut allergy."
+ },
+ "bruise": {
+  "es": "Tengo un moratón en la pierna.",
+  "en": "I have a bruise on my leg."
+ },
+ "symptom": {
+  "es": "El primer síntoma es la tos.",
+  "en": "The first symptom is a cough."
+ },
+ "treatment": {
+  "es": "El tratamiento duró tres meses.",
+  "en": "The treatment lasted three months."
+ },
+ "medicine": {
+  "es": "Toma la medicina dos veces al día.",
+  "en": "Take the medicine twice a day."
+ },
+ "tablet": {
+  "es": "Toma una pastilla después de comer.",
+  "en": "Take a tablet after meals."
+ },
+ "bandage": {
+  "es": "La enfermera le puso una venda.",
+  "en": "The nurse put a bandage on him."
+ },
+ "injection": {
+  "es": "La inyección no dolió nada.",
+  "en": "The injection didn't hurt at all."
+ },
+ "operation": {
+  "es": "La van a operar de la rodilla.",
+  "en": "She's having a knee operation."
+ },
+ "surgery": {
+  "es": "Necesita cirugía en el hombro.",
+  "en": "He needs shoulder surgery."
+ },
+ "recovery": {
+  "es": "El descanso ayuda a la recuperación.",
+  "en": "Rest helps recovery."
+ },
+ "ankle": {
+  "es": "Me torcí el tobillo.",
+  "en": "I twisted my ankle."
+ },
+ "elbow": {
+  "es": "Me di en el codo con la mesa.",
+  "en": "I hit my elbow on the table."
+ },
+ "thumb": {
+  "es": "Me di con el martillo en el pulgar.",
+  "en": "I hit my thumb with the hammer."
+ },
+ "toe": {
+  "es": "Me di con el dedo del pie en la puerta.",
+  "en": "I stubbed my toe on the door."
+ },
+ "lip": {
+  "es": "Tengo los labios secos.",
+  "en": "My lips are dry."
+ },
+ "nail": {
+  "es": "Se pintó las uñas de rojo.",
+  "en": "She painted her nails red."
+ },
+ "wound": {
+  "es": "La herida está sanando bien.",
+  "en": "The wound is healing well."
+ },
+ "wrist": {
+  "es": "Lleva el reloj en la muñeca izquierda.",
+  "en": "He wears a watch on his left wrist."
+ },
+ "chin": {
+  "es": "Apoyó la barbilla en la mano.",
+  "en": "He rested his chin on his hand."
+ },
+ "lung": {
+  "es": "Fumar daña los pulmones.",
+  "en": "Smoking damages the lungs."
+ },
+ "rib": {
+  "es": "Se rompió una costilla en la caída.",
+  "en": "He broke a rib in the fall."
+ },
+ "library": {
+  "es": "Devolví los libros a la biblioteca.",
+  "en": "I returned the books to the library."
+ },
+ "museum": {
+  "es": "El museo tiene una exposición nueva.",
+  "en": "The museum has a new exhibition."
+ },
+ "theatre": {
+  "es": "Reservamos entradas para el teatro.",
+  "en": "We booked tickets for the theatre."
+ },
+ "gallery": {
+  "es": "Sus cuadros están en una galería.",
+  "en": "Her paintings are in a gallery."
+ },
+ "factory": {
+  "es": "La fábrica hace muebles.",
+  "en": "The factory makes furniture."
+ },
+ "garage": {
+  "es": "El coche está en el taller.",
+  "en": "The car is at the garage."
+ },
+ "prison": {
+  "es": "Pasó dos años en la cárcel.",
+  "en": "He spent two years in prison."
+ },
+ "square": {
+  "es": "Quedamos en la plaza mayor.",
+  "en": "We're meeting in the main square."
+ },
+ "stadium": {
+  "es": "El estadio tiene capacidad para cuarenta mil personas.",
+  "en": "The stadium holds forty thousand people."
+ },
+ "tower": {
+  "es": "Sube a la torre para ver las vistas.",
+  "en": "Climb the tower to see the view."
+ },
+ "palace": {
+  "es": "El palacio abre en verano.",
+  "en": "The palace opens in summer."
+ },
+ "monument": {
+  "es": "Hay un monumento en el parque.",
+  "en": "There's a monument in the park."
+ },
+ "neighbourhood": {
+  "es": "Es un barrio muy tranquilo.",
+  "en": "It's a very quiet neighbourhood."
+ },
+ "suburb": {
+  "es": "Viven en las afueras.",
+  "en": "They live in a suburb."
+ },
+ "port": {
+  "es": "El puerto está lleno de barcos.",
+  "en": "The port is full of boats."
+ },
+ "harbour": {
+  "es": "Los barcos están en el puerto.",
+  "en": "The boats are in the harbour."
+ },
+ "pavement": {
+  "es": "Camina por la acera.",
+  "en": "Walk on the pavement."
+ },
+ "playground": {
+  "es": "Los niños juegan en el parque infantil.",
+  "en": "The children play in the playground."
+ },
+ "warehouse": {
+  "es": "La mercancía está en el almacén.",
+  "en": "The goods are in the warehouse."
+ },
+ "zoo": {
+  "es": "Llevamos a los niños al zoo.",
+  "en": "We took the kids to the zoo."
+ },
+ "ocean": {
+  "es": "El océano es enorme.",
+  "en": "The ocean is huge."
+ },
+ "moon": {
+  "es": "Anoche había luna llena.",
+  "en": "There was a full moon last night."
+ },
+ "star": {
+  "es": "Desde aquí se ven muchas estrellas.",
+  "en": "You can see many stars from here."
+ },
+ "planet": {
+  "es": "La Tierra es el tercer planeta.",
+  "en": "Earth is the third planet."
+ },
+ "universe": {
+  "es": "El universo es enorme.",
+  "en": "The universe is huge."
+ },
+ "earthquake": {
+  "es": "El terremoto destruyó muchas casas.",
+  "en": "The earthquake destroyed many houses."
+ },
+ "volcano": {
+  "es": "El volcán entró en erupción.",
+  "en": "The volcano erupted."
+ },
+ "desert": {
+  "es": "Cruzaron el desierto en coche.",
+  "en": "They crossed the desert by car."
+ },
+ "jungle": {
+  "es": "La selva estaba llena de ruidos.",
+  "en": "The jungle was full of noises."
+ },
+ "cave": {
+  "es": "Encontraron pinturas en la cueva.",
+  "en": "They found paintings in the cave."
+ },
+ "cliff": {
+  "es": "El camino va por el acantilado.",
+  "en": "The path runs along the cliff."
+ },
+ "coast": {
+  "es": "Condujimos por la costa.",
+  "en": "We drove along the coast."
+ },
+ "shore": {
+  "es": "Caminamos por la orilla.",
+  "en": "We walked along the shore."
+ },
+ "stream": {
+  "es": "Los niños jugaban en el arroyo.",
+  "en": "The children played in the stream."
+ },
+ "waterfall": {
+  "es": "La cascada es impresionante.",
+  "en": "The waterfall is impressive."
+ },
+ "thunder": {
+  "es": "El perro le tiene miedo a los truenos.",
+  "en": "The dog is scared of thunder."
+ },
+ "lightning": {
+  "es": "Un rayo cayó cerca de casa.",
+  "en": "Lightning struck near the house."
+ },
+ "tide": {
+  "es": "Está subiendo la marea.",
+  "en": "The tide is coming in."
+ },
+ "frost": {
+  "es": "Esta mañana había escarcha.",
+  "en": "There was frost this morning."
+ },
+ "dust": {
+  "es": "Los muebles están llenos de polvo.",
+  "en": "The furniture is covered in dust."
+ },
+ "beef": {
+  "es": "Comimos carne de res.",
+  "en": "We had beef."
+ },
+ "pork": {
+  "es": "No come carne de cerdo.",
+  "en": "She doesn't eat pork."
+ },
+ "sausage": {
+  "es": "Cenamos salchichas.",
+  "en": "We had sausages for dinner."
+ },
+ "garlic": {
+  "es": "Añade un diente de ajo.",
+  "en": "Add a clove of garlic."
+ },
+ "pepper": {
+  "es": "Ponle sal y pimienta.",
+  "en": "Add salt and pepper."
+ },
+ "mushroom": {
+  "es": "Pedí una tortilla de champiñones.",
+  "en": "I ordered a mushroom omelette."
+ },
+ "lettuce": {
+  "es": "Lava la lechuga.",
+  "en": "Wash the lettuce."
+ },
+ "carrot": {
+  "es": "A los conejos les encantan las zanahorias.",
+  "en": "Rabbits love carrots."
+ },
+ "lemon": {
+  "es": "Ponle una rodaja de limón.",
+  "en": "Add a slice of lemon."
+ },
+ "grape": {
+  "es": "El vino se hace con uvas.",
+  "en": "Wine is made from grapes."
+ },
+ "nut": {
+  "es": "Es alérgica a los frutos secos.",
+  "en": "She's allergic to nuts."
+ },
+ "herb": {
+  "es": "La albahaca es mi hierba favorita.",
+  "en": "Basil is my favourite herb."
+ },
+ "flour": {
+  "es": "No queda harina.",
+  "en": "There's no flour left."
+ },
+ "jam": {
+  "es": "Untó mermelada en la tostada.",
+  "en": "She spread jam on the toast."
+ },
+ "honey": {
+  "es": "Le pongo miel al té.",
+  "en": "I put honey in my tea."
+ },
+ "pastry": {
+  "es": "La masa quedó muy ligera.",
+  "en": "The pastry was very light."
+ },
+ "dessert": {
+  "es": "De postre hay tarta de manzana.",
+  "en": "For dessert there's apple pie."
+ },
+ "biscuit": {
+  "es": "¿Quieres una galleta?",
+  "en": "Do you want a biscuit?"
+ },
+ "cereal": {
+  "es": "Los niños desayunan cereales.",
+  "en": "The children have cereal for breakfast."
+ },
+ "toast": {
+  "es": "Desayuné tostadas con miel.",
+  "en": "I had toast and honey for breakfast."
+ },
+ "vinegar": {
+  "es": "Aliña la ensalada con aceite y vinagre.",
+  "en": "Dress the salad with oil and vinegar."
+ },
+ "spice": {
+  "es": "Este plato lleva muchas especias.",
+  "en": "This dish has a lot of spices."
+ },
+ "aim": {
+  "es": "El objetivo es ganar confianza.",
+  "en": "The aim is to build confidence."
+ },
+ "progress": {
+  "es": "Has hecho muchos progresos.",
+  "en": "You've made a lot of progress."
+ },
+ "growth": {
+  "es": "El pueblo ha crecido mucho.",
+  "en": "The town has seen a lot of growth."
+ },
+ "improvement": {
+  "es": "Hay una gran mejora en su escritura.",
+  "en": "There's a big improvement in her writing."
+ },
+ "quality": {
+  "es": "La calidad del sonido es excelente.",
+  "en": "The sound quality is excellent."
+ },
+ "disadvantage": {
+  "es": "La principal desventaja es el precio.",
+  "en": "The main disadvantage is the price."
+ },
+ "issue": {
+  "es": "La vivienda es un problema serio aquí.",
+  "en": "Housing is a serious issue here."
+ },
+ "factor": {
+  "es": "El precio fue el factor principal.",
+  "en": "Price was the main factor."
+ },
+ "consequence": {
+  "es": "No pensó en las consecuencias.",
+  "en": "She didn't think about the consequences."
+ },
+ "impact": {
+  "es": "La noticia tuvo un gran impacto.",
+  "en": "The news had a big impact."
+ },
+ "pressure": {
+  "es": "Hay mucha presión para terminar.",
+  "en": "There's a lot of pressure to finish."
+ },
+ "balance": {
+  "es": "Hay que encontrar un equilibrio.",
+  "en": "You have to find a balance."
+ },
+ "limit": {
+  "es": "Hay un límite de tres por persona.",
+  "en": "There's a limit of three per person."
+ },
+ "range": {
+  "es": "Tienen una amplia gama de tés.",
+  "en": "They have a wide range of teas."
+ },
+ "standard": {
+  "es": "El nivel del trabajo es muy alto.",
+  "en": "The standard of the work is very high."
+ },
+ "procedure": {
+  "es": "Sigue el procedimiento con cuidado.",
+  "en": "Follow the procedure carefully."
+ },
+ "routine": {
+  "es": "El ejercicio es parte de mi rutina.",
+  "en": "Exercise is part of my routine."
+ },
+ "skill": {
+  "es": "Cocinar es una habilidad.",
+  "en": "Cooking is a skill."
+ },
+ "knowledge": {
+  "es": "Tiene amplios conocimientos de arte.",
+  "en": "She has a wide knowledge of art."
+ },
+ "solution": {
+  "es": "No hay una solución fácil.",
+  "en": "There's no easy solution."
+ },
+ "option": {
+  "es": "Estudiamos todas las opciones.",
+  "en": "We looked at every option."
+ },
+ "success": {
+  "es": "El acto fue un gran éxito.",
+  "en": "The event was a huge success."
+ },
+ "failure": {
+  "es": "El plan fue un fracaso.",
+  "en": "The plan was a failure."
+ },
+ "silence": {
+  "es": "Hubo un largo silencio.",
+  "en": "There was a long silence."
+ },
+ "noise": {
+  "es": "El ruido no me deja dormir.",
+  "en": "The noise keeps me awake."
+ },
+ "scene": {
+  "es": "La policía llegó al lugar enseguida.",
+  "en": "The police arrived at the scene quickly."
+ },
+ "pattern": {
+  "es": "Hay un patrón claro en los datos.",
+  "en": "There's a clear pattern in the data."
+ },
+ "trend": {
+  "es": "Hay una tendencia hacia el teletrabajo.",
+  "en": "There's a trend towards remote work."
+ },
+ "accurate": {
+  "es": "Su descripción fue muy precisa.",
+  "en": "Her description was very accurate."
+ },
+ "actual": {
+  "es": "El coste real fue mayor.",
+  "en": "The actual cost was higher."
+ },
+ "additional": {
+  "es": "Hay un cargo adicional por el equipaje.",
+  "en": "There's an additional charge for luggage."
+ },
+ "adequate": {
+  "es": "La luz no es adecuada para leer.",
+  "en": "The light isn't adequate for reading."
+ },
+ "annual": {
+  "es": "Es la reunión anual.",
+  "en": "It's the annual meeting."
+ },
+ "anxious": {
+  "es": "Está ansiosa por la entrevista.",
+  "en": "She's anxious about the interview."
+ },
+ "apparent": {
+  "es": "Pronto quedó claro que estaba perdido.",
+  "en": "It soon became apparent that he was lost."
+ },
+ "appropriate": {
+  "es": "Lleva ropa adecuada para el frío.",
+  "en": "Wear appropriate clothing for the cold."
+ },
+ "artificial": {
+  "es": "El zumo no tiene colorantes artificiales.",
+  "en": "The juice has no artificial colours."
+ },
+ "aware": {
+  "es": "¿Eres consciente del riesgo?",
+  "en": "Are you aware of the risk?"
+ },
+ "awful": {
+  "es": "El tráfico estuvo horrible.",
+  "en": "The traffic was awful."
+ },
+ "basic": {
+  "es": "Tiene un nivel básico de español.",
+  "en": "He has a basic level of Spanish."
+ },
+ "brief": {
+  "es": "Dio una explicación breve.",
+  "en": "He gave a brief explanation."
+ },
+ "broad": {
+  "es": "El curso da una visión amplia.",
+  "en": "The course gives a broad view."
+ },
+ "casual": {
+  "es": "Es una cena informal.",
+  "en": "It's a casual dinner."
+ },
+ "central": {
+  "es": "El piso está muy céntrico.",
+  "en": "The flat is very central."
+ },
+ "complex": {
+  "es": "Es un problema complejo.",
+  "en": "It's a complex problem."
+ },
+ "complicated": {
+  "es": "Las instrucciones son muy complicadas.",
+  "en": "The instructions are very complicated."
+ },
+ "concerned": {
+  "es": "Los padres están preocupados.",
+  "en": "The parents are concerned."
+ },
+ "conscious": {
+  "es": "Seguía consciente cuando llegó la ambulancia.",
+  "en": "She was still conscious when the ambulance arrived."
+ },
+ "constant": {
+  "es": "Hay un ruido constante en la calle.",
+  "en": "There's a constant noise in the street."
+ },
+ "convenient": {
+  "es": "¿Te viene bien el martes?",
+  "en": "Is Tuesday convenient for you?"
+ },
+ "crucial": {
+  "es": "Las próximas semanas son cruciales.",
+  "en": "The next few weeks are crucial."
+ },
+ "cruel": {
+  "es": "Fue cruel dejar al perro solo.",
+  "en": "It was cruel to leave the dog alone."
+ },
+ "current": {
+  "es": "¿Cuál es tu dirección actual?",
+  "en": "What's your current address?"
+ },
+ "decent": {
+  "es": "Por fin encontramos un hotel decente.",
+  "en": "We finally found a decent hotel."
+ },
+ "desperate": {
+  "es": "Estaban desesperados por ayuda.",
+  "en": "They were desperate for help."
+ },
+ "digital": {
+  "es": "Todos los registros son digitales.",
+  "en": "All the records are digital."
+ },
+ "direct": {
+  "es": "¿Hay un tren directo a Bilbao?",
+  "en": "Is there a direct train to Bilbao?"
+ },
+ "distant": {
+  "es": "Se oía un trueno lejano.",
+  "en": "You could hear distant thunder."
+ },
+ "domestic": {
+  "es": "Los vuelos nacionales salen de la Terminal 1.",
+  "en": "Domestic flights leave from Terminal 1."
+ },
+ "dramatic": {
+  "es": "Hubo un cambio drástico en el tiempo.",
+  "en": "There was a dramatic change in the weather."
+ },
+ "eager": {
+  "es": "Los alumnos tenían ganas de empezar.",
+  "en": "The students were eager to start."
+ },
+ "effective": {
+  "es": "El ejercicio es una forma eficaz de reducir el estrés.",
+  "en": "Exercise is an effective way to reduce stress."
+ },
+ "efficient": {
+  "es": "El nuevo sistema es más eficiente.",
+  "en": "The new system is more efficient."
+ },
+ "elderly": {
+  "es": "El servicio ayuda a las personas mayores.",
+  "en": "The service helps elderly people."
+ },
+ "enormous": {
+  "es": "Viven en una casa enorme.",
+  "en": "They live in an enormous house."
+ },
+ "entire": {
+  "es": "Se pasó el día entero limpiando.",
+  "en": "She spent the entire day cleaning."
+ },
+ "equal": {
+  "es": "Corta la tarta en trozos iguales.",
+  "en": "Cut the cake into equal pieces."
+ },
+ "essential": {
+  "es": "El agua es esencial para la vida.",
+  "en": "Water is essential for life."
+ },
+ "exact": {
+  "es": "¿Qué hora es exactamente?",
+  "en": "What's the exact time?"
+ },
+ "excellent": {
+  "es": "La comida fue excelente.",
+  "en": "The food was excellent."
+ },
+ "extraordinary": {
+  "es": "Tiene una memoria extraordinaria.",
+  "en": "She has an extraordinary memory."
+ },
+ "extreme": {
+  "es": "Tuvimos un tiempo extremo toda la semana.",
+  "en": "We had extreme weather all week."
+ },
+ "familiar": {
+  "es": "Su cara me resultaba familiar.",
+  "en": "Her face looked familiar."
+ },
+ "financial": {
+  "es": "La empresa tiene problemas económicos.",
+  "en": "The company is in financial trouble."
+ },
+ "flexible": {
+  "es": "Tengo un horario flexible.",
+  "en": "I have flexible hours."
+ },
+ "formal": {
+  "es": "Para esto necesitas una carta formal.",
+  "en": "You need a formal letter for this."
+ },
+ "former": {
+  "es": "Es una antigua profesora mía.",
+  "en": "She's a former teacher of mine."
+ },
+ "frequent": {
+  "es": "Es un visitante frecuente del museo.",
+  "en": "He's a frequent visitor to the museum."
+ },
+ "genuine": {
+  "es": "¿Es un bolso de cuero auténtico?",
+  "en": "Is this a genuine leather bag?"
+ },
+ "global": {
+  "es": "El cambio climático es un problema global.",
+  "en": "Climate change is a global problem."
+ },
+ "grateful": {
+  "es": "Te estoy muy agradecido.",
+  "en": "I'm very grateful to you."
+ },
+ "horrible": {
+  "es": "¡Qué olor tan horrible!",
+  "en": "What a horrible smell!"
+ },
+ "ideal": {
+  "es": "Es el sitio ideal para un pícnic.",
+  "en": "It's the ideal spot for a picnic."
+ },
+ "illegal": {
+  "es": "Es ilegal aparcar aquí.",
+  "en": "It's illegal to park here."
+ },
+ "immediate": {
+  "es": "Necesitamos una respuesta inmediata.",
+  "en": "We need an immediate answer."
+ },
+ "impossible": {
+  "es": "Es imposible contentar a todos.",
+  "en": "It's impossible to please everyone."
+ },
+ "impressive": {
+  "es": "El castillo es impresionante.",
+  "en": "The castle is impressive."
+ },
+ "incredible": {
+  "es": "Las vistas desde arriba eran increíbles.",
+  "en": "The view from the top was incredible."
+ },
+ "independent": {
+  "es": "Es independiente desde los dieciocho.",
+  "en": "She's been independent since she was eighteen."
+ },
+ "individual": {
+  "es": "Cada alumno recibe atención individual.",
+  "en": "Each student gets individual attention."
+ },
+ "industrial": {
+  "es": "Es una zona industrial antigua.",
+  "en": "It's an old industrial area."
+ },
+ "inevitable": {
+  "es": "Una subida de precios parece inevitable.",
+  "en": "A rise in prices seems inevitable."
+ },
+ "initial": {
+  "es": "Mi reacción inicial fue de sorpresa.",
+  "en": "My initial reaction was surprise."
+ },
+ "innocent": {
+  "es": "El tribunal lo declaró inocente.",
+  "en": "The court found him innocent."
+ },
+ "intense": {
+  "es": "Hacía un calor intenso cerca del fuego.",
+  "en": "There was intense heat near the fire."
+ },
+ "internal": {
+  "es": "El informe es solo de uso interno.",
+  "en": "The report is for internal use only."
+ },
+ "legal": {
+  "es": "¿Es legal grabar una llamada?",
+  "en": "Is it legal to record a call?"
+ },
+ "major": {
+  "es": "Es un problema importante.",
+  "en": "It's a major problem."
+ },
+ "massive": {
+  "es": "La respuesta fue enorme.",
+  "en": "The response was massive."
+ },
+ "mature": {
+  "es": "Es muy madura para su edad.",
+  "en": "She's very mature for her age."
+ },
+ "mental": {
+  "es": "El ajedrez es buen ejercicio mental.",
+  "en": "Chess is good mental exercise."
+ },
+ "mild": {
+  "es": "Ha sido un invierno suave.",
+  "en": "It's been a mild winter."
+ },
+ "minor": {
+  "es": "Solo fue una herida leve.",
+  "en": "It was only a minor injury."
+ },
+ "moderate": {
+  "es": "Haz ejercicio moderado.",
+  "en": "Do moderate exercise."
+ },
+ "multiple": {
+  "es": "Tiene varias razones para marcharse.",
+  "en": "She has multiple reasons for leaving."
+ },
+ "mysterious": {
+  "es": "Había una luz misteriosa en el cielo.",
+  "en": "There was a mysterious light in the sky."
+ },
+ "negative": {
+  "es": "La película tuvo críticas negativas.",
+  "en": "The film got negative reviews."
+ },
+ "nuclear": {
+  "es": "El país cierra sus centrales nucleares.",
+  "en": "The country is closing its nuclear plants."
+ },
+ "odd": {
+  "es": "Es raro que no haya llamado.",
+  "en": "It's odd that she hasn't called."
+ },
+ "ongoing": {
+  "es": "La investigación sigue en curso.",
+  "en": "The investigation is ongoing."
+ },
+ "permanent": {
+  "es": "Consiguió un contrato fijo.",
+  "en": "She got a permanent contract."
+ },
+ "physical": {
+  "es": "El trabajo requiere esfuerzo físico.",
+  "en": "The job involves physical work."
+ },
+ "positive": {
+  "es": "Intenta ser positivo.",
+  "en": "Try to stay positive."
+ },
+ "potential": {
+  "es": "Hablamos de los posibles problemas.",
+  "en": "We discussed the potential problems."
+ },
+ "practical": {
+  "es": "Me dio algún consejo práctico.",
+  "en": "She gave me some practical advice."
+ },
+ "precious": {
+  "es": "El tiempo en familia es valioso.",
+  "en": "Time with family is precious."
+ },
+ "previous": {
+  "es": "En mi trabajo anterior viajaba mucho.",
+  "en": "In my previous job I travelled a lot."
+ },
+ "primary": {
+  "es": "Nuestro objetivo principal es la seguridad.",
+  "en": "Our primary aim is safety."
+ },
+ "private": {
+  "es": "Esta es una carretera privada.",
+  "en": "This is a private road."
+ },
+ "proper": {
+  "es": "Lleva un calzado adecuado.",
+  "en": "Wear proper shoes."
+ },
+ "rapid": {
+  "es": "Ha habido un crecimiento rápido.",
+  "en": "There has been rapid growth."
+ },
+ "rational": {
+  "es": "Necesitamos una conversación racional.",
+  "en": "We need a rational discussion."
+ },
+ "reasonable": {
+  "es": "Los precios parecen razonables.",
+  "en": "The prices seem reasonable."
+ },
+ "regular": {
+  "es": "Es un cliente habitual.",
+  "en": "He's a regular customer."
+ },
+ "relevant": {
+  "es": "Que tus comentarios sean pertinentes.",
+  "en": "Keep your comments relevant."
+ },
+ "reliable": {
+  "es": "Es una persona de confianza.",
+  "en": "She's a reliable person."
+ },
+ "remarkable": {
+  "es": "Tuvo una recuperación notable.",
+  "en": "She made a remarkable recovery."
+ },
+ "remote": {
+  "es": "Viven en un pueblo apartado.",
+  "en": "They live in a remote village."
+ },
+ "responsible": {
+  "es": "¿Quién es el responsable de cerrar?",
+  "en": "Who is responsible for locking up?"
+ },
+ "rough": {
+  "es": "El mar estaba agitado ese día.",
+  "en": "The sea was rough that day."
+ },
+ "rural": {
+  "es": "Se crió en una zona rural.",
+  "en": "He grew up in a rural area."
+ },
+ "severe": {
+  "es": "Tiene un dolor de cabeza fuerte.",
+  "en": "She has a severe headache."
+ },
+ "significant": {
+  "es": "Hubo una caída importante de las ventas.",
+  "en": "There was a significant drop in sales."
+ },
+ "sophisticated": {
+  "es": "Es un software avanzado.",
+  "en": "It's a sophisticated piece of software."
+ },
+ "specific": {
+  "es": "¿Puedes concretar más la fecha?",
+  "en": "Can you be more specific about the date?"
+ },
+ "stable": {
+  "es": "Su estado ahora es estable.",
+  "en": "His condition is now stable."
+ },
+ "steady": {
+  "es": "Tiene un trabajo estable.",
+  "en": "She has a steady job."
+ },
+ "straightforward": {
+  "es": "El formulario es bastante sencillo.",
+  "en": "The form is fairly straightforward."
+ },
+ "strict": {
+  "es": "Nuestro profesor es muy estricto.",
+  "en": "Our teacher is very strict."
+ },
+ "substantial": {
+  "es": "Obtuvieron un beneficio considerable.",
+  "en": "They made a substantial profit."
+ },
+ "sudden": {
+  "es": "Hubo un cambio de planes repentino.",
+  "en": "There was a sudden change of plan."
+ },
+ "sufficient": {
+  "es": "Tenemos comida suficiente para una semana.",
+  "en": "We have sufficient food for a week."
+ },
+ "suitable": {
+  "es": "Esta película no es apta para niños.",
+  "en": "This film isn't suitable for children."
+ },
+ "temporary": {
+  "es": "Es solo una solución temporal.",
+  "en": "It's just a temporary solution."
+ },
+ "typical": {
+  "es": "Era un día típico de invierno.",
+  "en": "It was a typical winter's day."
+ },
+ "unique": {
+  "es": "Cada huella dactilar es única.",
+  "en": "Every fingerprint is unique."
+ },
+ "urban": {
+  "es": "La vida urbana puede ser estresante.",
+  "en": "Urban life can be stressful."
+ },
+ "urgent": {
+  "es": "Es un asunto urgente.",
+  "en": "It's an urgent matter."
+ },
+ "valid": {
+  "es": "Tu billete es válido un mes.",
+  "en": "Your ticket is valid for one month."
+ },
+ "valuable": {
+  "es": "Me dio un consejo muy valioso.",
+  "en": "She gave me some valuable advice."
+ },
+ "various": {
+  "es": "Lo comentamos por varias razones.",
+  "en": "We discussed it for various reasons."
+ },
+ "vast": {
+  "es": "Una multitud inmensa llenó la plaza.",
+  "en": "A vast crowd filled the square."
+ },
+ "violent": {
+  "es": "Hubo una tormenta violenta por la noche.",
+  "en": "There was a violent storm overnight."
+ },
+ "visible": {
+  "es": "Las estrellas se veían con claridad.",
+  "en": "The stars were clearly visible."
+ },
+ "vital": {
+  "es": "Es vital que todos lleguen puntuales.",
+  "en": "It's vital that everyone arrives on time."
+ },
+ "willing": {
+  "es": "Siempre está dispuesta a ayudar.",
+  "en": "She's always willing to help."
+ },
+ "wooden": {
+  "es": "Se sentaron en un banco de madera.",
+  "en": "They sat on a wooden bench."
+ },
+ "absolutely": {
+  "es": "Tienes toda la razón.",
+  "en": "You're absolutely right."
+ },
+ "apparently": {
+  "es": "Por lo visto, la tienda va a cerrar.",
+  "en": "Apparently, the shop is closing."
+ },
+ "approximately": {
+  "es": "El viaje dura unas dos horas.",
+  "en": "The trip takes approximately two hours."
+ },
+ "barely": {
+  "es": "Apenas te oigo.",
+  "en": "I can barely hear you."
+ },
+ "basically": {
+  "es": "Básicamente, necesitamos más tiempo.",
+  "en": "Basically, we need more time."
+ },
+ "briefly": {
+  "es": "Déjame explicarlo brevemente.",
+  "en": "Let me explain briefly."
+ },
+ "completely": {
+  "es": "Se me olvidó por completo.",
+  "en": "I completely forgot."
+ },
+ "consequently": {
+  "es": "Perdió el tren y por eso llegó tarde.",
+  "en": "She missed the train and consequently was late."
+ },
+ "constantly": {
+  "es": "Mira el móvil constantemente.",
+  "en": "He's constantly checking his phone."
+ },
+ "deeply": {
+  "es": "La noticia la afectó profundamente.",
+  "en": "She was deeply upset by the news."
+ },
+ "deliberately": {
+  "es": "Dejó la puerta abierta a propósito.",
+  "en": "He deliberately left the door open."
+ },
+ "directly": {
+  "es": "El banco está justo enfrente de la estación.",
+  "en": "The bank is directly opposite the station."
+ },
+ "effectively": {
+  "es": "Tenemos que aprovechar mejor el tiempo.",
+  "en": "We need to use our time more effectively."
+ },
+ "entirely": {
+  "es": "Eso es un asunto completamente distinto.",
+  "en": "That's an entirely different matter."
+ },
+ "eventually": {
+  "es": "Al final encontraron una solución.",
+  "en": "Eventually, they found a solution."
+ },
+ "frankly": {
+  "es": "Francamente, me da igual.",
+  "en": "Frankly, I don't care."
+ },
+ "gently": {
+  "es": "Remueve la mezcla con suavidad.",
+  "en": "Stir the mixture gently."
+ },
+ "gradually": {
+  "es": "El dolor fue pasando poco a poco.",
+  "en": "The pain gradually went away."
+ },
+ "greatly": {
+  "es": "Agradecemos mucho tu apoyo.",
+  "en": "We greatly appreciate your support."
+ },
+ "increasingly": {
+  "es": "Es cada vez más difícil.",
+  "en": "It's becoming increasingly difficult."
+ },
+ "indeed": {
+  "es": "Fue, en efecto, un viaje maravilloso.",
+  "en": "It was, indeed, a wonderful trip."
+ },
+ "largely": {
+  "es": "El proyecto fue en gran parte un éxito.",
+  "en": "The project was largely successful."
+ },
+ "mainly": {
+  "es": "El público era sobre todo gente joven.",
+  "en": "The audience was mainly young people."
+ },
+ "merely": {
+  "es": "Solo hice una pregunta.",
+  "en": "I merely asked a question."
+ },
+ "obviously": {
+  "es": "Obviamente, la seguridad es lo primero.",
+  "en": "Obviously, safety comes first."
+ },
+ "originally": {
+  "es": "La casa era originalmente una granja.",
+  "en": "The house was originally a farm."
+ },
+ "particularly": {
+  "es": "Me interesa especialmente la historia.",
+  "en": "I'm particularly interested in the history."
+ },
+ "personally": {
+  "es": "Personalmente, prefiero quedarme en casa.",
+  "en": "Personally, I'd rather stay home."
+ },
+ "precisely": {
+  "es": "Eso es exactamente lo que quería decir.",
+  "en": "That's precisely what I meant."
+ },
+ "previously": {
+  "es": "Antes había trabajado en París.",
+  "en": "She had previously worked in Paris."
+ },
+ "primarily": {
+  "es": "El curso es sobre todo para principiantes.",
+  "en": "The course is primarily for beginners."
+ },
+ "properly": {
+  "es": "Asegúrate de cerrar bien la tapa.",
+  "en": "Make sure the lid is closed properly."
+ },
+ "rarely": {
+  "es": "Casi nunca comemos fuera.",
+  "en": "We rarely eat out."
+ },
+ "relatively": {
+  "es": "El examen fue relativamente fácil.",
+  "en": "The exam was relatively easy."
+ },
+ "roughly": {
+  "es": "Había unas cien personas.",
+  "en": "There were roughly a hundred people."
+ },
+ "seriously": {
+  "es": "¿En serio te vas a mudar?",
+  "en": "Are you seriously going to move?"
+ },
+ "shortly": {
+  "es": "El médico le atenderá en breve.",
+  "en": "The doctor will see you shortly."
+ },
+ "significantly": {
+  "es": "Los precios han subido bastante.",
+  "en": "Prices have risen significantly."
+ },
+ "simply": {
+  "es": "Simplemente añade agua.",
+  "en": "Simply add water."
+ },
+ "slightly": {
+  "es": "Es un poco más alta que yo.",
+  "en": "She's slightly taller than me."
+ },
+ "somehow": {
+  "es": "De alguna manera lo conseguiremos.",
+  "en": "We'll manage it somehow."
+ },
+ "somewhat": {
+  "es": "Los resultados fueron algo decepcionantes.",
+  "en": "The results were somewhat disappointing."
+ },
+ "strongly": {
+  "es": "Te recomiendo encarecidamente este libro.",
+  "en": "I strongly recommend this book."
+ },
+ "successfully": {
+  "es": "Terminó el curso con éxito.",
+  "en": "She successfully completed the course."
+ },
+ "surely": {
+  "es": "No te irás ya, ¿verdad?",
+  "en": "Surely you're not leaving already?"
+ },
+ "thoroughly": {
+  "es": "Lava bien las verduras.",
+  "en": "Wash the vegetables thoroughly."
+ },
+ "thus": {
+  "es": "Era el hijo mayor y, por tanto, el heredero.",
+  "en": "He was the eldest son and thus the heir."
+ },
+ "totally": {
+  "es": "Estoy totalmente de acuerdo.",
+  "en": "I totally agree."
+ },
+ "truly": {
+  "es": "Fue una noche verdaderamente inolvidable.",
+  "en": "It was a truly memorable evening."
+ },
+ "typically": {
+  "es": "Las reuniones suelen durar una hora.",
+  "en": "Meetings typically last an hour."
+ },
+ "ultimately": {
+  "es": "Al final, la decisión es tuya.",
+  "en": "Ultimately, the choice is yours."
+ },
+ "unfortunately": {
+  "es": "Por desgracia, se canceló.",
+  "en": "Unfortunately, it was cancelled."
+ },
+ "virtually": {
+  "es": "El pueblo estaba prácticamente vacío.",
+  "en": "The town was virtually empty."
+ },
+ "widely": {
+  "es": "El libro se lee mucho en los colegios.",
+  "en": "The book is widely read in schools."
+ },
+ "career": {
+  "es": "Tuvo una larga carrera en el periodismo.",
+  "en": "She had a long career in journalism."
+ },
+ "client": {
+  "es": "El abogado se reunió con sus clientes.",
+  "en": "The lawyer met his clients."
+ },
+ "contract": {
+  "es": "Lee el contrato antes de firmar.",
+  "en": "Read the contract before you sign."
+ },
+ "department": {
+  "es": "Trabaja en el departamento de marketing.",
+  "en": "She works in the marketing department."
+ },
+ "employee": {
+  "es": "La empresa tiene cincuenta empleados.",
+  "en": "The company has fifty employees."
+ },
+ "employer": {
+  "es": "Mi empresa ofrece clases de idiomas.",
+  "en": "My employer offers language classes."
+ },
+ "enterprise": {
+  "es": "Llevan una pequeña empresa familiar.",
+  "en": "They run a small family enterprise."
+ },
+ "executive": {
+  "es": "Los directivos se reunieron por la fusión.",
+  "en": "The executives met about the merger."
+ },
+ "expense": {
+  "es": "El viaje es nuestro mayor gasto.",
+  "en": "Travel is our biggest expense."
+ },
+ "income": {
+  "es": "La mayor parte de los ingresos viene de las ventas.",
+  "en": "Most of the income comes from sales."
+ },
+ "industry": {
+  "es": "El turismo da mucho empleo aquí.",
+  "en": "The tourist industry employs many people here."
+ },
+ "invoice": {
+  "es": "Paga la factura en treinta días.",
+  "en": "Pay the invoice within thirty days."
+ },
+ "labour": {
+  "es": "La mano de obra costó más que las piezas.",
+  "en": "The labour cost more than the parts."
+ },
+ "occupation": {
+  "es": "Indique su nombre y su profesión.",
+  "en": "Please state your name and occupation."
+ },
+ "overtime": {
+  "es": "Gana más haciendo horas extra.",
+  "en": "He earns more by doing overtime."
+ },
+ "partner": {
+  "es": "Es socia de un bufete.",
+  "en": "She's a partner in a law firm."
+ },
+ "profession": {
+  "es": "La enseñanza es una profesión gratificante.",
+  "en": "Teaching is a rewarding profession."
+ },
+ "profit": {
+  "es": "La tienda tuvo un pequeño beneficio.",
+  "en": "The shop made a small profit."
+ },
+ "promotion": {
+  "es": "Consiguió un ascenso a los dos años.",
+  "en": "She got a promotion after two years."
+ },
+ "salary": {
+  "es": "El sueldo se paga a fin de mes.",
+  "en": "The salary is paid at the end of the month."
+ },
+ "sector": {
+  "es": "Trabaja en el sector público.",
+  "en": "She works in the public sector."
+ },
+ "staff": {
+  "es": "La mitad del personal está de vacaciones.",
+  "en": "Half the staff are on holiday."
+ },
+ "trade": {
+  "es": "El comercio entre los dos países ha crecido.",
+  "en": "Trade between the two countries has grown."
+ },
+ "union": {
+  "es": "El sindicato pidió una subida.",
+  "en": "The union asked for a pay rise."
+ },
+ "vacancy": {
+  "es": "Hay una vacante de recepcionista.",
+  "en": "There's a vacancy for a receptionist."
+ },
+ "wage": {
+  "es": "La fábrica paga un salario justo.",
+  "en": "The factory pays a fair wage."
+ },
+ "workforce": {
+  "es": "La empresa redujo su plantilla.",
+  "en": "The company cut its workforce."
+ },
+ "workshop": {
+  "es": "Asistí a un taller de fotografía.",
+  "en": "I attended a photography workshop."
+ },
+ "account": {
+  "es": "Abrí una cuenta de ahorros.",
+  "en": "I opened a savings account."
+ },
+ "asset": {
+  "es": "La casa es su principal bien.",
+  "en": "The house is their main asset."
+ },
+ "budget": {
+  "es": "El viaje ya se ha pasado del presupuesto.",
+  "en": "The trip is over budget already."
+ },
+ "cash": {
+  "es": "¿Llevas dinero en efectivo?",
+  "en": "Do you have any cash?"
+ },
+ "credit": {
+  "es": "Compré el sofá a crédito.",
+  "en": "I bought the sofa on credit."
+ },
+ "currency": {
+  "es": "La moneda local es el peso.",
+  "en": "The local currency is the peso."
+ },
+ "debt": {
+  "es": "Intentan pagar sus deudas.",
+  "en": "They're trying to pay off their debts."
+ },
+ "economy": {
+  "es": "La economía se recupera poco a poco.",
+  "en": "The economy is slowly recovering."
+ },
+ "fee": {
+  "es": "La cuota de socio es cincuenta euros.",
+  "en": "The membership fee is fifty euros."
+ },
+ "finance": {
+  "es": "Trabaja en finanzas.",
+  "en": "She works in finance."
+ },
+ "fund": {
+  "es": "Crearon un fondo para la iglesia.",
+  "en": "They set up a fund for the church."
+ },
+ "inflation": {
+  "es": "La inflación llegó al cinco por ciento.",
+  "en": "Inflation reached five per cent."
+ },
+ "investment": {
+  "es": "La educación es una inversión de futuro.",
+  "en": "Education is an investment in the future."
+ },
+ "loan": {
+  "es": "Pidió un préstamo para el coche.",
+  "en": "She took out a loan for the car."
+ },
+ "mortgage": {
+  "es": "Aún les quedan veinte años de hipoteca.",
+  "en": "They still have twenty years left on the mortgage."
+ },
+ "payment": {
+  "es": "El primer pago vence el mes que viene.",
+  "en": "The first payment is due next month."
+ },
+ "pension": {
+  "es": "Vive de una pequeña pensión.",
+  "en": "He lives on a small pension."
+ },
+ "receipt": {
+  "es": "Guarda el recibo por si acaso.",
+  "en": "Keep the receipt just in case."
+ },
+ "recession": {
+  "es": "Muchas tiendas cerraron en la recesión.",
+  "en": "Many shops closed during the recession."
+ },
+ "refund": {
+  "es": "Me devolvieron todo el dinero.",
+  "en": "They gave me a full refund."
+ },
+ "savings": {
+  "es": "Usamos nuestros ahorros para la entrada.",
+  "en": "We used our savings for the deposit."
+ },
+ "stock": {
+  "es": "Esa talla está agotada.",
+  "en": "That size is out of stock."
+ },
+ "tax": {
+  "es": "Hay un impuesto alto sobre el tabaco.",
+  "en": "There's a high tax on cigarettes."
+ },
+ "transaction": {
+  "es": "Cada operación queda registrada.",
+  "en": "Every transaction is recorded."
+ },
+ "transfer": {
+  "es": "Hice una transferencia esta mañana.",
+  "en": "I made a transfer this morning."
+ },
+ "wealth": {
+  "es": "La riqueza de la ciudad vino del petróleo.",
+  "en": "The city's wealth came from oil."
+ },
+ "advertisement": {
+  "es": "Vi el piso en un anuncio.",
+  "en": "I saw the flat in an advertisement."
+ },
+ "announcement": {
+  "es": "Hubo un anuncio sobre el retraso.",
+  "en": "There was an announcement about the delay."
+ },
+ "article": {
+  "es": "Escribió un artículo sobre historia local.",
+  "en": "She wrote an article about local history."
+ },
+ "audience": {
+  "es": "El público aplaudió mucho.",
+  "en": "The audience clapped a lot."
+ },
+ "broadcast": {
+  "es": "Escuchamos el boletín de noticias.",
+  "en": "We listened to the news broadcast."
+ },
+ "column": {
+  "es": "Escribe una columna semanal.",
+  "en": "He writes a weekly column."
+ },
+ "coverage": {
+  "es": "El partido tuvo mucha cobertura.",
+  "en": "The match got a lot of coverage."
+ },
+ "editor": {
+  "es": "El editor cortó el último párrafo.",
+  "en": "The editor cut the last paragraph."
+ },
+ "headline": {
+  "es": "La noticia fue el titular de portada.",
+  "en": "The story was the front-page headline."
+ },
+ "magazine": {
+  "es": "Lee una revista de viajes.",
+  "en": "She reads a travel magazine."
+ },
+ "media": {
+  "es": "La noticia salió en los medios nacionales.",
+  "en": "The story was covered by the national media."
+ },
+ "publicity": {
+  "es": "La película tuvo mucha publicidad.",
+  "en": "The film got a lot of publicity."
+ },
+ "quote": {
+  "es": "El artículo incluía una cita del alcalde.",
+  "en": "The article included a quote from the mayor."
+ },
+ "rumour": {
+  "es": "Corre el rumor de que la fábrica va a cerrar.",
+  "en": "There's a rumour that the factory will close."
+ },
+ "survey": {
+  "es": "Una encuesta reveló que la gente quiere más parques.",
+  "en": "A survey found that people want more parks."
+ },
+ "authority": {
+  "es": "La administración local gestiona los colegios.",
+  "en": "The local authority manages the schools."
+ },
+ "campaign": {
+  "es": "Hicieron una campaña para salvar la biblioteca.",
+  "en": "They ran a campaign to save the library."
+ },
+ "candidate": {
+  "es": "Hay cuatro candidatos para el puesto.",
+  "en": "There are four candidates for the position."
+ },
+ "citizen": {
+  "es": "Se hizo ciudadana española el año pasado.",
+  "en": "She became a Spanish citizen last year."
+ },
+ "committee": {
+  "es": "El comité se reúne una vez al mes.",
+  "en": "The committee meets once a month."
+ },
+ "council": {
+  "es": "El ayuntamiento aprobó el parque.",
+  "en": "The council approved the park."
+ },
+ "court": {
+  "es": "El caso llegó a los tribunales.",
+  "en": "The case went to court."
+ },
+ "criminal": {
+  "es": "La policía busca a los criminales.",
+  "en": "The police are looking for the criminals."
+ },
+ "democracy": {
+  "es": "Lucharon por la democracia.",
+  "en": "They fought for democracy."
+ },
+ "evidence": {
+  "es": "No había pruebas de que estuviera allí.",
+  "en": "There was no evidence that he was there."
+ },
+ "governor": {
+  "es": "El gobernador visitó la zona inundada.",
+  "en": "The governor visited the flooded area."
+ },
+ "immigration": {
+  "es": "La inmigración ha cambiado la ciudad.",
+  "en": "Immigration has changed the city."
+ },
+ "jury": {
+  "es": "El jurado la declaró inocente.",
+  "en": "The jury found her not guilty."
+ },
+ "justice": {
+  "es": "Buscan justicia para las víctimas.",
+  "en": "They are seeking justice for the victims."
+ },
+ "legislation": {
+  "es": "En junio entra en vigor una nueva ley.",
+  "en": "New legislation comes into force in June."
+ },
+ "mayor": {
+  "es": "El alcalde inauguró el puente.",
+  "en": "The mayor opened the bridge."
+ },
+ "minister": {
+  "es": "El ministro anunció nueva financiación.",
+  "en": "The minister announced new funding."
+ },
+ "opposition": {
+  "es": "Hubo una fuerte oposición al plan.",
+  "en": "There was fierce opposition to the plan."
+ },
+ "parliament": {
+  "es": "El parlamento vota mañana.",
+  "en": "Parliament votes tomorrow."
+ },
+ "poll": {
+  "es": "La última encuesta muestra que el apoyo baja.",
+  "en": "The latest poll shows support is falling."
+ },
+ "refugee": {
+  "es": "El campamento acoge a miles de refugiados.",
+  "en": "The camp shelters thousands of refugees."
+ },
+ "regulation": {
+  "es": "Hay que cumplir las normas de seguridad.",
+  "en": "Safety regulations must be followed."
+ },
+ "territory": {
+  "es": "Los pájaros defienden su territorio.",
+  "en": "The birds defend their territory."
+ },
+ "treaty": {
+  "es": "Los dos países firmaron un tratado de paz.",
+  "en": "The two countries signed a peace treaty."
+ },
+ "vote": {
+  "es": "Ganó por solo doce votos.",
+  "en": "She won by just twelve votes."
+ },
+ "welfare": {
+  "es": "La organización trabaja por el bienestar infantil.",
+  "en": "The charity works for children's welfare."
+ },
+ "certificate": {
+  "es": "Al terminar el curso te dan un certificado.",
+  "en": "You get a certificate when you finish the course."
+ },
+ "curriculum": {
+  "es": "La música es parte del plan de estudios.",
+  "en": "Music is part of the curriculum."
+ },
+ "degree": {
+  "es": "Tiene una licenciatura en biología.",
+  "en": "She has a degree in biology."
+ },
+ "diploma": {
+  "es": "Consiguió un diploma en diseño gráfico.",
+  "en": "He earned a diploma in graphic design."
+ },
+ "essay": {
+  "es": "Escribe una redacción sobre tu ciudad.",
+  "en": "Write an essay about your hometown."
+ },
+ "graduate": {
+  "es": "Es una recién licenciada.",
+  "en": "She's a recent graduate."
+ },
+ "grammar": {
+  "es": "La gramática inglesa tiene muchas excepciones.",
+  "en": "English grammar has a lot of exceptions."
+ },
+ "lesson": {
+  "es": "Tengo clase de piano los miércoles.",
+  "en": "I have a piano lesson on Wednesdays."
+ },
+ "pupil": {
+  "es": "Hay treinta alumnos en la clase.",
+  "en": "There are thirty pupils in the class."
+ },
+ "qualification": {
+  "es": "¿Qué titulación se necesita?",
+  "en": "What qualifications do you need?"
+ },
+ "scholarship": {
+  "es": "Consiguió una beca para estudiar fuera.",
+  "en": "She won a scholarship to study abroad."
+ },
+ "semester": {
+  "es": "El segundo semestre empieza en febrero.",
+  "en": "The second semester starts in February."
+ },
+ "seminar": {
+  "es": "El seminario trató lo básico del marketing.",
+  "en": "The seminar covered marketing basics."
+ },
+ "textbook": {
+  "es": "Abrid el libro de texto por la página cuarenta.",
+  "en": "Open your textbooks to page forty."
+ },
+ "tutor": {
+  "es": "Tiene un profesor particular de matemáticas.",
+  "en": "She has a private tutor for maths."
+ },
+ "vocabulary": {
+  "es": "Leer mucho amplía el vocabulario.",
+  "en": "Reading a lot builds your vocabulary."
+ },
+ "device": {
+  "es": "Este aparato mide la tensión.",
+  "en": "This device measures blood pressure."
+ },
+ "file": {
+  "es": "Guarda el archivo antes de cerrar.",
+  "en": "Save the file before you close it."
+ },
+ "folder": {
+  "es": "Pon las facturas en la carpeta azul.",
+  "en": "Put the invoices in the blue folder."
+ },
+ "gadget": {
+  "es": "Su cocina está llena de aparatos.",
+  "en": "His kitchen is full of gadgets."
+ },
+ "hardware": {
+  "es": "Tenemos que actualizar el hardware.",
+  "en": "We need to upgrade the hardware."
+ },
+ "keyboard": {
+  "es": "Se me atascó una tecla del teclado.",
+  "en": "One of the keys on my keyboard is stuck."
+ },
+ "laptop": {
+  "es": "Trabaja con el portátil en las cafeterías.",
+  "en": "She works on her laptop in cafés."
+ },
+ "network": {
+  "es": "La red de la oficina se ha caído.",
+  "en": "The office network is down."
+ },
+ "software": {
+  "es": "Usamos software gratuito.",
+  "en": "We use free software."
+ },
+ "storage": {
+  "es": "Este teléfono tiene poco almacenamiento.",
+  "en": "This phone has little storage."
+ },
+ "upgrade": {
+  "es": "La actualización añadió funciones nuevas.",
+  "en": "The upgrade added new features."
+ },
+ "virus": {
+  "es": "Un virus me borró la mitad de los archivos.",
+  "en": "A virus deleted half my files."
+ },
+ "website": {
+  "es": "Puedes reservar en su página web.",
+  "en": "You can book on their website."
+ },
+ "arrival": {
+  "es": "Nuestra llegada se retrasó por la niebla.",
+  "en": "Our arrival was delayed by fog."
+ },
+ "departure": {
+  "es": "Comprueba la hora de salida en el billete.",
+  "en": "Check the departure time on your ticket."
+ },
+ "destination": {
+  "es": "Nuestro destino era un pueblo pesquero.",
+  "en": "Our destination was a fishing village."
+ },
+ "fare": {
+  "es": "El billete de autobús ha vuelto a subir.",
+  "en": "The bus fare has gone up again."
+ },
+ "flight": {
+  "es": "Nuestro vuelo sale a las seis.",
+  "en": "Our flight leaves at six."
+ },
+ "luggage": {
+  "es": "Viajamos con poco equipaje.",
+  "en": "We travelled with little luggage."
+ },
+ "passenger": {
+  "es": "El avión lleva ciento ochenta pasajeros.",
+  "en": "The plane carries a hundred and eighty passengers."
+ },
+ "passport": {
+  "es": "Mi pasaporte caduca el año que viene.",
+  "en": "My passport expires next year."
+ },
+ "reservation": {
+  "es": "Tengo una reserva a nombre de García.",
+  "en": "I have a reservation under the name García."
+ },
+ "resort": {
+  "es": "Es una estación de esquí muy popular.",
+  "en": "It's a popular ski resort."
+ },
+ "route": {
+  "es": "Tomamos la ruta panorámica.",
+  "en": "We took the scenic route."
+ },
+ "tourism": {
+  "es": "La isla depende del turismo.",
+  "en": "The island depends on tourism."
+ },
+ "visa": {
+  "es": "Necesitas un visado para trabajar allí.",
+  "en": "You need a visa to work there."
+ },
+ "voyage": {
+  "es": "La travesía por el Atlántico duró dos semanas.",
+  "en": "The voyage across the Atlantic took two weeks."
+ },
+ "athlete": {
+  "es": "Los atletas olímpicos entrenan años.",
+  "en": "Olympic athletes train for years."
+ },
+ "championship": {
+  "es": "Ganó el campeonato nacional.",
+  "en": "She won the national championship."
+ },
+ "coach": {
+  "es": "El entrenador les hacía practicar cada día.",
+  "en": "The coach made them practise every day."
+ },
+ "defeat": {
+  "es": "El equipo sufrió una dura derrota.",
+  "en": "The team suffered a heavy defeat."
+ },
+ "opponent": {
+  "es": "Su rival era mucho más alta.",
+  "en": "Her opponent was much taller."
+ },
+ "referee": {
+  "es": "El árbitro pitó.",
+  "en": "The referee blew the whistle."
+ },
+ "score": {
+  "es": "El resultado final fue dos a dos.",
+  "en": "The final score was two two."
+ },
+ "spectator": {
+  "es": "Miles de espectadores llenaron el estadio.",
+  "en": "Thousands of spectators filled the stadium."
+ },
+ "tournament": {
+  "es": "El torneo dura dos semanas.",
+  "en": "The tournament lasts two weeks."
+ },
+ "trophy": {
+  "es": "Levantaron el trofeo ante su afición.",
+  "en": "They lifted the trophy in front of their fans."
+ },
+ "concert": {
+  "es": "Esta noche vamos a un concierto de jazz.",
+  "en": "We're going to a jazz concert tonight."
+ },
+ "drama": {
+  "es": "Estudia arte dramático.",
+  "en": "She studies drama."
+ },
+ "exhibition": {
+  "es": "Hay una exposición de fotografía en el museo.",
+  "en": "There's a photography exhibition at the museum."
+ },
+ "fiction": {
+  "es": "Leo sobre todo novela.",
+  "en": "I read mostly fiction."
+ },
+ "novel": {
+  "es": "Su primera novela fue un éxito.",
+  "en": "Her first novel was a bestseller."
+ },
+ "orchestra": {
+  "es": "La orquesta afinó antes del concierto.",
+  "en": "The orchestra tuned up before the concert."
+ },
+ "performance": {
+  "es": "Su interpretación fue magnífica.",
+  "en": "Her performance was superb."
+ },
+ "poetry": {
+  "es": "Escribe poesía en su tiempo libre.",
+  "en": "He writes poetry in his free time."
+ },
+ "rehearsal": {
+  "es": "El ensayo general es mañana por la noche.",
+  "en": "The final rehearsal is tomorrow night."
+ },
+ "sculpture": {
+  "es": "Hay una escultura de bronce en la plaza.",
+  "en": "There's a bronze sculpture in the square."
+ },
+ "disappointment": {
+  "es": "Para mi decepción, se canceló.",
+  "en": "To my disappointment, it was cancelled."
+ },
+ "enthusiasm": {
+  "es": "Los niños mostraron mucho entusiasmo.",
+  "en": "The children showed great enthusiasm."
+ },
+ "frustration": {
+  "es": "Cerró la puerta de un portazo por la frustración.",
+  "en": "He slammed the door in frustration."
+ },
+ "grief": {
+  "es": "Estaba abrumada por el dolor.",
+  "en": "She was overcome with grief."
+ },
+ "guilt": {
+  "es": "Sentía una profunda culpa.",
+  "en": "He felt a deep sense of guilt."
+ },
+ "jealousy": {
+  "es": "Su éxito provocó algo de envidia.",
+  "en": "Her success caused some jealousy."
+ },
+ "loneliness": {
+  "es": "Tuvo que lidiar con la soledad.",
+  "en": "She struggled with loneliness."
+ },
+ "passion": {
+  "es": "La música es su gran pasión.",
+  "en": "Music is her great passion."
+ },
+ "pity": {
+  "es": "Sentí lástima por el perro perdido.",
+  "en": "I felt pity for the lost dog."
+ },
+ "pleasure": {
+  "es": "Es un placer conocerte.",
+  "en": "It's a pleasure to meet you."
+ },
+ "relief": {
+  "es": "Fue un alivio saber que estaban a salvo.",
+  "en": "It was a relief to know they were safe."
+ },
+ "satisfaction": {
+  "es": "Miró el cuadro con satisfacción.",
+  "en": "She looked at the painting with satisfaction."
+ },
+ "sorrow": {
+  "es": "Todo el pueblo compartió su pena.",
+  "en": "The whole town shared in her sorrow."
+ },
+ "sympathy": {
+  "es": "Tienes mi más sentido pésame.",
+  "en": "You have my deepest sympathy."
+ },
+ "tension": {
+  "es": "Se notaba la tensión en la sala.",
+  "en": "You could feel the tension in the room."
+ },
+ "abandon": {
+  "es": "Tuvieron que abandonar el coche.",
+  "en": "They had to abandon the car."
+ },
+ "absorb": {
+  "es": "Las plantas absorben el agua por las raíces.",
+  "en": "Plants absorb water through their roots."
+ },
+ "accompany": {
+  "es": "Un profesor debe acompañar al grupo.",
+  "en": "A teacher must accompany the group."
+ },
+ "accuse": {
+  "es": "Lo acusó de mentir.",
+  "en": "She accused him of lying."
+ },
+ "acknowledge": {
+  "es": "Reconoció que se había equivocado.",
+  "en": "He acknowledged that he had made a mistake."
+ },
+ "adopt": {
+  "es": "Adoptaron un enfoque más relajado.",
+  "en": "They adopted a more relaxed approach."
+ },
+ "anticipate": {
+  "es": "No previmos tanta gente.",
+  "en": "We didn't anticipate such a big crowd."
+ },
+ "arise": {
+  "es": "Surgió un problema con el pago.",
+  "en": "A problem arose with the payment."
+ },
+ "assemble": {
+  "es": "El mueble es fácil de montar.",
+  "en": "The furniture is easy to assemble."
+ },
+ "assign": {
+  "es": "A cada alumno se le asignó un tema.",
+  "en": "Each student was assigned a topic."
+ },
+ "associate": {
+  "es": "Asocio esa canción con mi infancia.",
+  "en": "I associate that song with my childhood."
+ },
+ "cease": {
+  "es": "La lluvia por fin cesó a mediodía.",
+  "en": "The rain finally ceased at noon."
+ },
+ "collaborate": {
+  "es": "Las dos universidades colaboran.",
+  "en": "The two universities collaborate."
+ },
+ "collapse": {
+  "es": "El puente viejo se derrumbó.",
+  "en": "The old bridge collapsed."
+ },
+ "compensate": {
+  "es": "La aerolínea nos compensó por el retraso.",
+  "en": "The airline compensated us for the delay."
+ },
+ "comply": {
+  "es": "Todos los restaurantes deben cumplir las normas.",
+  "en": "All restaurants must comply with the rules."
+ },
+ "conceal": {
+  "es": "No pudo ocultar su decepción.",
+  "en": "She could not conceal her disappointment."
+ },
+ "condemn": {
+  "es": "Los líderes condenaron el ataque.",
+  "en": "World leaders condemned the attack."
+ },
+ "confine": {
+  "es": "La enfermedad lo obligó a guardar cama.",
+  "en": "The illness confined him to bed."
+ },
+ "conform": {
+  "es": "No todo el mundo quiere amoldarse.",
+  "en": "Not everyone wants to conform."
+ },
+ "conserve": {
+  "es": "Deberíamos ahorrar agua en verano.",
+  "en": "We should conserve water in summer."
+ },
+ "constitute": {
+  "es": "Las mujeres constituyen la mitad de la plantilla.",
+  "en": "Women constitute half the workforce."
+ },
+ "contradict": {
+  "es": "Los dos informes se contradicen.",
+  "en": "The two reports contradict each other."
+ },
+ "convey": {
+  "es": "Los colores pueden transmitir emociones.",
+  "en": "Colours can convey emotion."
+ },
+ "cope": {
+  "es": "Lleva bien la presión.",
+  "en": "She copes well under pressure."
+ },
+ "dedicate": {
+  "es": "Dedicó su vida a la enseñanza.",
+  "en": "He dedicated his life to teaching."
+ },
+ "depict": {
+  "es": "El cuadro representa una boda de pueblo.",
+  "en": "The painting depicts a country wedding."
+ },
+ "derive": {
+  "es": "La palabra procede del latín.",
+  "en": "The word derives from Latin."
+ },
+ "deteriorate": {
+  "es": "Su salud empeoró en invierno.",
+  "en": "Her health deteriorated over the winter."
+ },
+ "diminish": {
+  "es": "El dolor fue disminuyendo.",
+  "en": "The pain gradually diminished."
+ },
+ "disclose": {
+  "es": "La empresa se negó a revelar las cifras.",
+  "en": "The company refused to disclose the figures."
+ },
+ "distinguish": {
+  "es": "Los bebés aprenden a distinguir voces.",
+  "en": "Babies learn to distinguish voices."
+ },
+ "distract": {
+  "es": "No distraigas al conductor.",
+  "en": "Don't distract the driver."
+ },
+ "dominate": {
+  "es": "Una sola empresa domina el mercado.",
+  "en": "One company dominates the market."
+ },
+ "elaborate": {
+  "es": "¿Puedes desarrollar más ese punto?",
+  "en": "Could you elaborate on that point?"
+ },
+ "embrace": {
+  "es": "Adoptaron la nueva tecnología con ganas.",
+  "en": "They embraced the new technology."
+ },
+ "endure": {
+  "es": "Soportaron meses de penurias.",
+  "en": "They endured months of hardship."
+ },
+ "enhance": {
+  "es": "Una buena luz mejora las fotos.",
+  "en": "Good lighting enhances the photos."
+ },
+ "evolve": {
+  "es": "El plan se convirtió en algo más grande.",
+  "en": "The plan evolved into something bigger."
+ },
+ "exaggerate": {
+  "es": "Siempre exagera sus problemas.",
+  "en": "He always exaggerates his problems."
+ },
+ "exceed": {
+  "es": "El coste no debe superar los quinientos euros.",
+  "en": "The cost must not exceed five hundred euros."
+ },
+ "exert": {
+  "es": "Tuvo que hacer un gran esfuerzo.",
+  "en": "She had to exert all her strength."
+ },
+ "exhibit": {
+  "es": "La galería expone a artistas locales.",
+  "en": "The gallery exhibits local artists."
+ },
+ "exploit": {
+  "es": "Deberíamos aprovechar esta oportunidad.",
+  "en": "We should exploit this opportunity."
+ },
+ "facilitate": {
+  "es": "La aplicación facilita los pagos.",
+  "en": "The app facilitates payments."
+ },
+ "fascinate": {
+  "es": "El espacio siempre me ha fascinado.",
+  "en": "Space has always fascinated me."
+ },
+ "flourish": {
+  "es": "Su negocio prosperó tras la mudanza.",
+  "en": "Their business flourished after the move."
+ },
+ "forge": {
+  "es": "Forjaron una amistad sólida.",
+  "en": "They forged a strong friendship."
+ },
+ "formulate": {
+  "es": "Tenemos que formular una estrategia nueva.",
+  "en": "We need to formulate a new strategy."
+ },
+ "fulfil": {
+  "es": "El curso no cumplió mis expectativas.",
+  "en": "The course did not fulfil my expectations."
+ },
+ "gaze": {
+  "es": "Contemplaba el océano.",
+  "en": "She gazed out at the ocean."
+ },
+ "grasp": {
+  "es": "No acabé de captar la explicación.",
+  "en": "I couldn't quite grasp the explanation."
+ },
+ "grin": {
+  "es": "Sonrió de oreja a oreja.",
+  "en": "He grinned from ear to ear."
+ },
+ "halt": {
+  "es": "El tren se detuvo en una estación pequeña.",
+  "en": "The train halted at a small station."
+ },
+ "hinder": {
+  "es": "El mal tiempo dificultó la búsqueda.",
+  "en": "Bad weather hindered the search."
+ },
+ "ignite": {
+  "es": "Una chispa prendió la hierba seca.",
+  "en": "A spark ignited the dry grass."
+ },
+ "impose": {
+  "es": "El gobierno impuso un toque de queda.",
+  "en": "The government imposed a curfew."
+ },
+ "incorporate": {
+  "es": "El diseño incorpora luz natural.",
+  "en": "The design incorporates natural light."
+ },
+ "induce": {
+  "es": "Nada pudo hacerle cambiar de opinión.",
+  "en": "Nothing could induce him to change his mind."
+ },
+ "integrate": {
+  "es": "El software se integra con tu calendario.",
+  "en": "The software integrates with your calendar."
+ },
+ "intervene": {
+  "es": "Un profesor tuvo que intervenir en la pelea.",
+  "en": "A teacher had to intervene in the fight."
+ },
+ "linger": {
+  "es": "Nos entretuvimos una hora tomando café.",
+  "en": "We lingered over coffee for an hour."
+ },
+ "merge": {
+  "es": "Las dos empresas se fusionaron.",
+  "en": "The two companies merged."
+ },
+ "migrate": {
+  "es": "Muchas aves migran al sur en invierno.",
+  "en": "Many birds migrate south in winter."
+ },
+ "minimize": {
+  "es": "Intentamos reducir al mínimo las molestias.",
+  "en": "We tried to minimize the disruption."
+ },
+ "modify": {
+  "es": "Modificamos la receta para usar menos azúcar.",
+  "en": "We modified the recipe to use less sugar."
+ },
+ "navigate": {
+  "es": "Es difícil orientarse sin un mapa.",
+  "en": "It's hard to navigate without a map."
+ },
+ "overlook": {
+  "es": "Es fácil pasar por alto los errores pequeños.",
+  "en": "It's easy to overlook small errors."
+ },
+ "overwhelm": {
+  "es": "Se vio desbordada por los mensajes.",
+  "en": "She was overwhelmed by the messages."
+ },
+ "perceive": {
+  "es": "Percibimos un cambio en su humor.",
+  "en": "We perceived a change in his mood."
+ },
+ "persist": {
+  "es": "Si el dolor persiste, ve al médico.",
+  "en": "If the pain persists, see a doctor."
+ },
+ "portray": {
+  "es": "La película lo presenta como un héroe.",
+  "en": "The film portrays him as a hero."
+ },
+ "prevail": {
+  "es": "El sentido común acabó imponiéndose.",
+  "en": "Common sense finally prevailed."
+ },
+ "prioritize": {
+  "es": "Tienes que priorizar tus tareas.",
+  "en": "You need to prioritize your tasks."
+ },
+ "prolong": {
+  "es": "Las conversaciones prolongaron la crisis.",
+  "en": "The talks prolonged the crisis."
+ },
+ "provoke": {
+  "es": "La decisión provocó mucha indignación.",
+  "en": "The decision provoked a lot of anger."
+ },
+ "reckon": {
+  "es": "Creo que va a llover.",
+  "en": "I reckon it'll rain."
+ },
+ "reinforce": {
+  "es": "El muro se reforzó con acero.",
+  "en": "The wall was reinforced with steel."
+ },
+ "render": {
+  "es": "La lesión lo dejó sin poder trabajar.",
+  "en": "The injury rendered him unable to work."
+ },
+ "resent": {
+  "es": "Le molestaba que la trataran como a una niña.",
+  "en": "She resented being treated like a child."
+ },
+ "reside": {
+  "es": "Residen en un pueblo costero pequeño.",
+  "en": "They reside in a small coastal town."
+ },
+ "restrain": {
+  "es": "Apenas podía contener la ira.",
+  "en": "He could hardly restrain his anger."
+ },
+ "resume": {
+  "es": "El partido se reanudó tras la lluvia.",
+  "en": "The match resumed after the rain."
+ },
+ "retrieve": {
+  "es": "El perro trajo la pelota.",
+  "en": "The dog retrieved the ball."
+ },
+ "scatter": {
+  "es": "El viento esparció los papeles.",
+  "en": "The wind scattered the papers."
+ },
+ "shatter": {
+  "es": "El vaso se hizo añicos en el suelo.",
+  "en": "The glass shattered on the floor."
+ },
+ "simplify": {
+  "es": "Simplificamos el formulario.",
+  "en": "We simplified the form."
+ },
+ "soar": {
+  "es": "Los precios de la vivienda se dispararon.",
+  "en": "House prices soared."
+ },
+ "specialize": {
+  "es": "Se especializa en derecho fiscal.",
+  "en": "She specializes in tax law."
+ },
+ "speculate": {
+  "es": "La gente especulaba sobre los motivos.",
+  "en": "People speculated about the reasons."
+ },
+ "stimulate": {
+  "es": "La clase busca estimular el debate.",
+  "en": "The lesson is designed to stimulate discussion."
+ },
+ "strive": {
+  "es": "Nos esforzamos por mejorar cada año.",
+  "en": "We strive to improve every year."
+ },
+ "summon": {
+  "es": "Lo llamaron al despacho del jefe.",
+  "en": "He was summoned to the manager's office."
+ },
+ "sustain": {
+  "es": "Es difícil mantener ese ritmo.",
+  "en": "It's hard to sustain that pace."
+ },
+ "tackle": {
+  "es": "La ciudad intenta combatir la contaminación.",
+  "en": "The city is trying to tackle pollution."
+ },
+ "tolerate": {
+  "es": "No voy a tolerar la mala educación.",
+  "en": "I won't tolerate rudeness."
+ },
+ "transform": {
+  "es": "La pintura nueva transformó la habitación.",
+  "en": "The new paint transformed the room."
+ },
+ "undermine": {
+  "es": "Las críticas constantes minaron su confianza.",
+  "en": "Constant criticism undermined her confidence."
+ },
+ "undertake": {
+  "es": "Emprendieron una gran reforma.",
+  "en": "They undertook a major renovation."
+ },
+ "verify": {
+  "es": "Verifica tu dirección de correo.",
+  "en": "Verify your email address."
+ },
+ "withdraw": {
+  "es": "Sacó cien euros del cajero.",
+  "en": "He withdrew a hundred euros from the machine."
+ },
+ "abstract": {
+  "es": "La libertad es un concepto abstracto.",
+  "en": "Freedom is an abstract concept."
+ },
+ "absurd": {
+  "es": "Es absurdo pagar tanto por un café.",
+  "en": "It's absurd to pay that much for a coffee."
+ },
+ "abundant": {
+  "es": "Aquí abunda el pescado fresco.",
+  "en": "Fresh fish is abundant here."
+ },
+ "accessible": {
+  "es": "A la playa se llega en autobús.",
+  "en": "The beach is accessible by bus."
+ },
+ "acute": {
+  "es": "Hay una grave escasez de vivienda.",
+  "en": "There's an acute shortage of housing."
+ },
+ "adjacent": {
+  "es": "Nos alojamos en habitaciones contiguas.",
+  "en": "We stayed in adjacent rooms."
+ },
+ "ambiguous": {
+  "es": "Las instrucciones eran ambiguas.",
+  "en": "The instructions were ambiguous."
+ },
+ "ambitious": {
+  "es": "Es un plan ambicioso.",
+  "en": "It's an ambitious plan."
+ },
+ "arbitrary": {
+  "es": "La elección de colores parece arbitraria.",
+  "en": "The choice of colours seems arbitrary."
+ },
+ "authentic": {
+  "es": "El restaurante sirve comida tailandesa auténtica.",
+  "en": "The restaurant serves authentic Thai food."
+ },
+ "bizarre": {
+  "es": "Contó una historia extrañísima.",
+  "en": "She told a bizarre story."
+ },
+ "bleak": {
+  "es": "El futuro pintaba desolador.",
+  "en": "The future looked bleak."
+ },
+ "chronic": {
+  "es": "Sufre un dolor de espalda crónico.",
+  "en": "He suffers from chronic back pain."
+ },
+ "clumsy": {
+  "es": "Fue una disculpa torpe.",
+  "en": "That was a clumsy apology."
+ },
+ "coherent": {
+  "es": "Dio un relato coherente de los hechos.",
+  "en": "She gave a coherent account of events."
+ },
+ "compact": {
+  "es": "La cámara es ligera y compacta.",
+  "en": "The camera is light and compact."
+ },
+ "compatible": {
+  "es": "Este cargador no es compatible con mi teléfono.",
+  "en": "This charger isn't compatible with my phone."
+ },
+ "competent": {
+  "es": "Es una conductora competente.",
+  "en": "She's a competent driver."
+ },
+ "comprehensive": {
+  "es": "La guía ofrece información completa.",
+  "en": "The guide gives comprehensive information."
+ },
+ "consistent": {
+  "es": "Su trabajo es constante y fiable.",
+  "en": "Her work is consistent and reliable."
+ },
+ "conventional": {
+  "es": "Eligieron un diseño convencional.",
+  "en": "They chose a conventional design."
+ },
+ "deliberate": {
+  "es": "Fue un intento deliberado de engañarnos.",
+  "en": "It was a deliberate attempt to mislead us."
+ },
+ "distinct": {
+  "es": "Hay un claro olor a gas.",
+  "en": "There's a distinct smell of gas."
+ },
+ "diverse": {
+  "es": "La ciudad tiene una población diversa.",
+  "en": "The city has a diverse population."
+ },
+ "durable": {
+  "es": "Estas botas son muy resistentes.",
+  "en": "These boots are very durable."
+ },
+ "eligible": {
+  "es": "¿Tienes derecho a votar aquí?",
+  "en": "Are you eligible to vote here?"
+ },
+ "ethical": {
+  "es": "La empresa sigue prácticas éticas.",
+  "en": "The company follows ethical practices."
+ },
+ "exotic": {
+  "es": "El mercado vende fruta exótica.",
+  "en": "The market sells exotic fruit."
+ },
+ "explicit": {
+  "es": "Dio instrucciones explícitas.",
+  "en": "She gave explicit instructions."
+ },
+ "fatal": {
+  "es": "Cometió un error fatal.",
+  "en": "He made one fatal mistake."
+ },
+ "feasible": {
+  "es": "¿Es viable terminar para el viernes?",
+  "en": "Is it feasible to finish by Friday?"
+ },
+ "fragile": {
+  "es": "Cuidado con la caja: es frágil.",
+  "en": "Handle the box with care — it's fragile."
+ },
+ "fundamental": {
+  "es": "Hay una diferencia fundamental entre los dos.",
+  "en": "There's a fundamental difference between the two."
+ },
+ "hostile": {
+  "es": "El público era hostil con el ponente.",
+  "en": "The crowd was hostile to the speaker."
+ },
+ "identical": {
+  "es": "Las gemelas llevaban vestidos idénticos.",
+  "en": "The twins wore identical dresses."
+ },
+ "imminent": {
+  "es": "Parece que una tormenta es inminente.",
+  "en": "A storm seems imminent."
+ },
+ "inherent": {
+  "es": "Todo deporte tiene riesgos inherentes.",
+  "en": "There are inherent risks in any sport."
+ },
+ "intricate": {
+  "es": "El reloj tiene un mecanismo intrincado.",
+  "en": "The clock has an intricate mechanism."
+ },
+ "intriguing": {
+  "es": "Planteó una pregunta intrigante.",
+  "en": "She raised an intriguing question."
+ },
+ "notable": {
+  "es": "Hubo una mejora notable.",
+  "en": "There was a notable improvement."
+ },
+ "obscure": {
+  "es": "Citó a un poeta poco conocido.",
+  "en": "He quoted an obscure poet."
+ },
+ "prominent": {
+  "es": "Es una destacada empresaria local.",
+  "en": "She's a prominent local businesswoman."
+ },
+ "prone": {
+  "es": "Es propenso a los dolores de cabeza con el calor.",
+  "en": "He's prone to headaches in hot weather."
+ },
+ "radical": {
+  "es": "Propusieron una solución radical.",
+  "en": "They proposed a radical solution."
+ },
+ "reluctant": {
+  "es": "Era reacia a marcharse.",
+  "en": "She was reluctant to leave."
+ },
+ "rigid": {
+  "es": "Las normas son demasiado rígidas.",
+  "en": "The rules are too rigid."
+ },
+ "robust": {
+  "es": "Necesitamos un sistema más robusto.",
+  "en": "We need a more robust system."
+ },
+ "scarce": {
+  "es": "El agua escaseaba durante la sequía.",
+  "en": "Water was scarce during the drought."
+ },
+ "subtle": {
+  "es": "Hay una diferencia sutil de sabor.",
+  "en": "There's a subtle difference in taste."
+ },
+ "superficial": {
+  "es": "Los daños eran solo superficiales.",
+  "en": "The damage was only superficial."
+ },
+ "tedious": {
+  "es": "Rellenar formularios es una tarea tediosa.",
+  "en": "Filling in forms is a tedious job."
+ },
+ "thorough": {
+  "es": "La policía hizo un registro minucioso.",
+  "en": "The police made a thorough search."
+ },
+ "vague": {
+  "es": "Dio una respuesta vaga.",
+  "en": "She gave a vague answer."
+ },
+ "versatile": {
+  "es": "El huevo es un ingrediente versátil.",
+  "en": "Eggs are a versatile ingredient."
+ },
+ "vivid": {
+  "es": "Tengo un recuerdo muy vívido de ese día.",
+  "en": "I have a vivid memory of that day."
+ },
+ "vulnerable": {
+  "es": "Los pájaros jóvenes son vulnerables a los gatos.",
+  "en": "Young birds are vulnerable to cats."
+ },
+ "attic": {
+  "es": "Guardamos cajas viejas en el desván.",
+  "en": "We keep old boxes in the attic."
+ },
+ "basement": {
+  "es": "El gimnasio está en el sótano.",
+  "en": "The gym is in the basement."
+ },
+ "corridor": {
+  "es": "Su despacho está al final del pasillo.",
+  "en": "Her office is at the end of the corridor."
+ },
+ "fireplace": {
+  "es": "Estuvimos junto a la chimenea toda la tarde.",
+  "en": "We sat by the fireplace all evening."
+ },
+ "staircase": {
+  "es": "Una escalinata subía hasta el vestíbulo.",
+  "en": "A grand staircase led up to the hall."
+ },
+ "terrace": {
+  "es": "Cenamos en la terraza.",
+  "en": "We had dinner on the terrace."
+ },
+ "wardrobe": {
+  "es": "Cuelga el abrigo en el armario.",
+  "en": "Hang your coat in the wardrobe."
+ },
+ "cushion": {
+  "es": "Se puso un cojín en la espalda.",
+  "en": "She put a cushion behind her back."
+ },
+ "mattress": {
+  "es": "Este colchón es demasiado duro para mí.",
+  "en": "This mattress is too firm for me."
+ },
+ "rug": {
+  "es": "Hay una alfombra de lana junto a la cama.",
+  "en": "There's a woollen rug by the bed."
+ },
+ "curtain": {
+  "es": "Corre las cortinas, se hace de noche.",
+  "en": "Draw the curtains, it's getting dark."
+ },
+ "kettle": {
+  "es": "Pon el hervidor para un té.",
+  "en": "Put the kettle on for some tea."
+ },
+ "saucepan": {
+  "es": "Lleva el agua a ebullición en un cazo.",
+  "en": "Bring the water to the boil in a saucepan."
+ },
+ "jug": {
+  "es": "Llenó la jarra de zumo de naranja.",
+  "en": "She filled the jug with orange juice."
+ },
+ "tray": {
+  "es": "Le subió el desayuno en una bandeja.",
+  "en": "He brought breakfast up on a tray."
+ },
+ "broom": {
+  "es": "Barrió el patio con una escoba.",
+  "en": "She swept the yard with a broom."
+ },
+ "bucket": {
+  "es": "Llena el cubo con agua y jabón.",
+  "en": "Fill the bucket with soapy water."
+ },
+ "sponge": {
+  "es": "Limpia la superficie con una esponja húmeda.",
+  "en": "Wipe the surface with a damp sponge."
+ },
+ "screwdriver": {
+  "es": "Necesitas un destornillador pequeño para esto.",
+  "en": "You'll need a small screwdriver for this."
+ },
+ "drill": {
+  "es": "Usa un taladro para colgar la estantería.",
+  "en": "Use a drill to put up the shelf."
+ },
+ "ladder": {
+  "es": "Se subió a la escalera para limpiar el canalón.",
+  "en": "He climbed the ladder to clean the gutter."
+ },
+ "torch": {
+  "es": "Llévate una linterna por si se va la luz.",
+  "en": "Take a torch in case the power goes out."
+ },
+ "umbrella": {
+  "es": "Me dejé el paraguas en el autobús.",
+  "en": "I left my umbrella on the bus."
+ },
+ "wallet": {
+  "es": "Guarda la cartera en el bolsillo de atrás.",
+  "en": "He keeps his wallet in his back pocket."
+ },
+ "backpack": {
+  "es": "Preparó una mochila ligera para la caminata.",
+  "en": "She packed a light backpack for the hike."
+ },
+ "suitcase": {
+  "es": "Mi maleta superaba el límite de peso.",
+  "en": "My suitcase was over the weight limit."
+ },
+ "notebook": {
+  "es": "Apunto las palabras nuevas en una libreta.",
+  "en": "I write new words in a notebook."
+ },
+ "envelope": {
+  "es": "Cierra el sobre y ponle un sello.",
+  "en": "Seal the envelope and add a stamp."
+ },
+ "avocado": {
+  "es": "Machaca el aguacate para el guacamole.",
+  "en": "Mash the avocado for the guacamole."
+ },
+ "melon": {
+  "es": "Una rodaja de melón es refrescante en verano.",
+  "en": "A slice of melon is refreshing in summer."
+ },
+ "cucumber": {
+  "es": "Añade pepino en rodajas al sándwich.",
+  "en": "Add sliced cucumber to the sandwich."
+ },
+ "cabbage": {
+  "es": "Comimos sopa de col.",
+  "en": "We had cabbage soup."
+ },
+ "spinach": {
+  "es": "Las espinacas son ricas en hierro.",
+  "en": "Spinach is rich in iron."
+ },
+ "salmon": {
+  "es": "Hicimos salmón a la plancha para cenar.",
+  "en": "We grilled some salmon for dinner."
+ },
+ "prawn": {
+  "es": "El arroz estaba lleno de gambas.",
+  "en": "The rice was full of prawns."
+ },
+ "lamb": {
+  "es": "El cordero asado es una comida de domingo.",
+  "en": "Roast lamb is a Sunday meal."
+ },
+ "bacon": {
+  "es": "Desayuné beicon con huevos.",
+  "en": "I had bacon and eggs for breakfast."
+ },
+ "ham": {
+  "es": "Un sándwich de jamón, por favor.",
+  "en": "A ham sandwich, please."
+ },
+ "stew": {
+  "es": "El guiso de ternera huele de maravilla.",
+  "en": "The beef stew smells wonderful."
+ },
+ "dough": {
+  "es": "Amasa la masa diez minutos.",
+  "en": "Knead the dough for ten minutes."
+ },
+ "seasoning": {
+  "es": "Prueba el punto de sal antes de servir.",
+  "en": "Check the seasoning before you serve."
+ },
+ "dressing": {
+  "es": "Aliña la ensalada con un aderezo ligero.",
+  "en": "Toss the salad with a light dressing."
+ },
+ "squirrel": {
+  "es": "Una ardilla enterró una nuez en el jardín.",
+  "en": "A squirrel buried a nut in the garden."
+ },
+ "deer": {
+  "es": "Vimos un ciervo en el lindero del bosque.",
+  "en": "We saw a deer at the edge of the wood."
+ },
+ "camel": {
+  "es": "Los camellos aguantan días sin agua.",
+  "en": "Camels can go for days without water."
+ },
+ "lizard": {
+  "es": "Una lagartija estaba sobre el muro caliente.",
+  "en": "A lizard sat on the warm wall."
+ },
+ "frog": {
+  "es": "Las ranas croaban junto al estanque.",
+  "en": "Frogs were croaking by the pond."
+ },
+ "owl": {
+  "es": "Oímos ulular a un búho en la oscuridad.",
+  "en": "We heard an owl hooting in the dark."
+ },
+ "pigeon": {
+  "es": "Las palomas se juntaron alrededor del banco.",
+  "en": "Pigeons gathered around the bench."
+ },
+ "swan": {
+  "es": "Una pareja de cisnes cruzó el lago.",
+  "en": "A pair of swans glided across the lake."
+ },
+ "mosquito": {
+  "es": "Cierra la ventana o entrarán los mosquitos.",
+  "en": "Close the window or the mosquitoes will get in."
+ }
+}

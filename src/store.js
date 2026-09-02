@@ -4,7 +4,7 @@
    ============================================================ */
 
 import { VOCAB, ACTIVE_LEVELS } from "./data.js";
-import { PHRASES } from "./phrases.js";
+import { PHRASES, PHRASE_TENSES } from "./phrases.js";
 
 const STORAGE_KEY = "leoflash";
 // older key names, read once and migrated into STORAGE_KEY so progress carries over
@@ -15,20 +15,46 @@ const MS_PER_DAY = 86_400_000;
 const DEFAULT_EASE_FACTOR = 2.5;   // SM-2 starting ease
 const MIN_EASE_FACTOR = 1.3;       // SM-2 never lets ease drop below this
 const MAX_INTERVAL_DAYS = 365;     // cap so reviews never drift more than a year out
-const KNOWN_INTERVAL_DAYS = 3650;  // "Never repeat" — effectively retired (~10 years)
+const KNOWN_REFRESH_DAYS = 30;     // "I know it" — kept, but refreshed once a month
 const MATURE_INTERVAL_DAYS = 21;   // interval at which a card counts as fully learned
 const LEARNED_INTERVAL_DAYS = 7;   // interval at which a card counts as "learned"
 const MIN_STARTED_MASTERY = 0.08;  // a touched-but-weak card still shows some progress
 
-// Phrase practice uses a simple Leitner box: days until a phrase comes
-// back, indexed by box (0 = brand new / just missed, 6 = well known).
-const PHRASE_BOX_DAYS = [0, 1, 2, 4, 8, 16, 30];
-const PHRASE_MASTERED_BOX = 6;
-// one number drives phrases: it's both the daily new-phrase target AND
-// the size of a Practice round. Used when the setting is missing/invalid.
-const DEFAULT_PHRASES_PER_DAY = 10;
+// Phrase-translation practice runs its own SM-2 schedule (same tuning as
+// the word cards), kept in data.phraseCards. It never touches data.cards.
+const DEFAULT_PHRASES_PER_DAY = 10; // daily new-phrase target (Settings)
 const MAX_PHRASES_PER_DAY = 50;
-const QUICK_PHRASE_ROUND = 5; // "Quick 5": extra practice past the daily target
+// A phrase you've typed perfectly more than this many times (or hit "Never"
+// on) is "parked": still mastered, but it comes back once a month instead of
+// dropping out of rotation for good. A real miss un-parks it.
+const PHRASE_MONTHLY_DAYS = 30;
+const PHRASE_PERFECT_TO_PARK = 4;
+
+// One SM-2 step. Given { easeFactor, interval, reps, lapses } and a grade
+// (0 again · 1 hard · 2 good · 3 easy), return the next values.
+function sm2Step({ easeFactor, interval, reps, lapses }, grade) {
+  const quality = [2, 3, 4, 5][grade];
+  const nextEase = Math.max(
+    MIN_EASE_FACTOR,
+    easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
+  );
+  if (grade === 0) {
+    return { easeFactor: nextEase, interval: 1, reps: 0, lapses: lapses + 1 };
+  }
+  let next;
+  if (reps === 0) next = grade === 1 ? 2 : grade === 3 ? 4 : 3;
+  else if (reps === 1) next = grade === 1 ? 3 : grade === 3 ? 8 : 6;
+  else {
+    const mult = grade === 1 ? 1.2 : grade === 3 ? nextEase * 1.3 : nextEase;
+    next = Math.round(interval * mult);
+  }
+  return {
+    easeFactor: nextEase,
+    interval: Math.max(1, Math.min(next, MAX_INTERVAL_DAYS)),
+    reps: reps + 1,
+    lapses,
+  };
+}
 
 /* ---- tiny pub/sub so the UI can react to changes ---- */
 let revision = 0;
@@ -111,10 +137,28 @@ function migrate(data) {
       card.lastReviewed = card.last;
     }
     delete card.last;
+    // "known" used to retire a card for ~10 years; now it just refreshes
+    // monthly. Pull any long-retired known card back onto the 30-day cycle.
+    if (card.known && (card.interval || 0) > KNOWN_REFRESH_DAYS) {
+      card.interval = KNOWN_REFRESH_DAYS;
+      card.due = addDays(todayStr(), KNOWN_REFRESH_DAYS);
+    }
   }
 
   data.maxStreak = Math.max(data.maxStreak || 0, data.streak || 0);
-  data.phraseCards = data.phraseCards || {}; // id -> Leitner progress for phrase practice
+  data.phraseCards = data.phraseCards || {}; // id -> SM-2 progress for phrase-translation practice
+  // the old idioms bank + its Leitner cards are gone — drop any leftover progress
+  if (Object.values(data.phraseCards).some((c) => "box" in c)) data.phraseCards = {};
+  for (const c of Object.values(data.phraseCards)) {
+    if (c.perfect === undefined) c.perfect = 0;
+    // "known" (retired for good) is now "monthly" (mastered, back every 30 days)
+    if (c.known) {
+      c.monthly = true;
+      c.interval = PHRASE_MONTHLY_DAYS;
+      c.due = addDays(todayStr(), PHRASE_MONTHLY_DAYS);
+    }
+    delete c.known;
+  }
   data.phraseLog = data.phraseLog || {};     // date -> { reviews, correct, newSeen } for phrases
   data.phraseStreak = data.phraseStreak || 0;
   data.phraseMaxStreak = data.phraseMaxStreak || 0;
@@ -306,7 +350,7 @@ const Store = {
         due: todayStr(),
         lastReviewed: null,
         seen: false,      // has ever been studied
-        known: false,     // "Never repeat" — learner already knows it well
+        known: false,     // "I know it" — mastered, but still refreshed monthly
         correctCount: 0,
         totalCount: 0,
       };
@@ -314,16 +358,17 @@ const Store = {
     return this.data.cards[id];
   },
 
-  // "Never" button — the learner already knows this word; take it out of rotation.
+  // "I know it" button — the learner knows this word well. It stops coming
+  // up in regular study but still returns once a month so it isn't forgotten.
   markKnown(id) {
     const card = this.card(id);
     const firstTime = !card.seen;
     card.seen = true;
     card.known = true;
-    card.interval = KNOWN_INTERVAL_DAYS;
+    card.interval = KNOWN_REFRESH_DAYS;
     card.reps = Math.max(card.reps, 5);
     card.lastReviewed = todayStr();
-    card.due = addDays(todayStr(), KNOWN_INTERVAL_DAYS);
+    card.due = addDays(todayStr(), KNOWN_REFRESH_DAYS);
     card.totalCount++;
     card.correctCount++;
     const log = this.logToday();
@@ -366,8 +411,8 @@ const Store = {
 
     for (const entry of pool) {
       const card = this.data.cards[entry.id];
-      if (card && card.known) continue;             // never repeat
       if (card && card.seen) {
+        // "known" cards are in too — but only on their monthly refresh date
         if (card.due <= today) due.push(entry.id);
       } else {
         fresh.push(entry.id);
@@ -401,10 +446,11 @@ const Store = {
     for (const entry of VOCAB.filter(inScope)) {
       const card = this.data.cards[entry.id];
       if (!card || !card.seen) { unseen++; continue; }
-      if (card.known) { known++; mature++; continue; }
+      if (card.known) known++;
+      if (card.known || card.interval >= MATURE_INTERVAL_DAYS) mature++;
+      else learning++;
       if (card.due <= today) due++;
       else if (!nextDue || card.due < nextDue) nextDue = card.due;
-      if (card.interval >= MATURE_INTERVAL_DAYS) mature++; else learning++;
     }
     const goal = settings.newPerDay;
     const gradedToday = this.logToday().reviews;
@@ -429,30 +475,13 @@ const Store = {
     card.totalCount++;
     if (grade >= 2) card.correctCount++;
 
-    // SM-2 quality score (0-5); our four grades map onto 2..5
-    const quality = [2, 3, 4, 5][grade];
-    card.easeFactor = Math.max(
-      MIN_EASE_FACTOR,
-      card.easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
-    );
-
-    if (grade === 0) {
-      card.reps = 0;
-      card.lapses++;
-      card.interval = 1;
-    } else {
-      if (card.reps === 0) {
-        card.interval = grade === 1 ? 2 : grade === 3 ? 4 : 3;
-      } else if (card.reps === 1) {
-        card.interval = grade === 1 ? 3 : grade === 3 ? 8 : 6;
-      } else {
-        const multiplier = grade === 1 ? 1.2 : grade === 3 ? card.easeFactor * 1.3 : card.easeFactor;
-        card.interval = Math.round(card.interval * multiplier);
-      }
-      card.interval = Math.max(1, Math.min(card.interval, MAX_INTERVAL_DAYS));
-      card.reps++;
+    Object.assign(card, sm2Step(card, grade));
+    if (card.known) {
+      // a "known" card on its monthly check: a miss drops it back into normal
+      // study, anything else keeps it on the 30-day refresh cycle.
+      if (grade === 0) card.known = false;
+      else card.interval = KNOWN_REFRESH_DAYS;
     }
-
     card.lastReviewed = todayStr();
     card.due = addDays(todayStr(), card.interval);
 
@@ -601,7 +630,8 @@ const Store = {
       .filter((group) => group.total > 0);
   },
 
-  // Per-level phrase completion, counting only mastered phrases (Leitner box 6).
+  // Per-level phrase completion, counting only phrases mastered for good
+  // (SM-2 interval >= 21 days). Loaded levels only.
   phraseLevelProgress() {
     return Object.keys(ACTIVE_LEVELS)
       .filter((level) => this.levelEnabled(level))
@@ -612,7 +642,7 @@ const Store = {
           const status = this.phraseStatus(phrase.id);
           if (status === "new") continue;
           started++;
-          if (status === "mastered") mastered++;
+          if (status === "mature") mastered++;
         }
         return {
           level,
@@ -628,60 +658,65 @@ const Store = {
       .filter((group) => group.total > 0);
   },
 
-  /* ---- phrase practice (Leitner) ----------------------- */
+  // Per-tense mastery across the phrases in the learner's levels:
+  // [{ key, label, total, seen, mastered }], skipping tenses with no phrases.
+  phraseTenseProgress() {
+    const acc = new Map(
+      PHRASE_TENSES.map((t) => [t.key, { ...t, total: 0, seen: 0, mastered: 0 }])
+    );
+    for (const phrase of this.scopedPhrases()) {
+      const row = acc.get(phrase.tense) || acc.get("present");
+      row.total++;
+      const status = this.phraseStatus(phrase.id);
+      if (status === "new") continue;
+      row.seen++;
+      if (status === "mature") row.mastered++;
+    }
+    return [...acc.values()].filter((row) => row.total > 0);
+  },
+
+  /* ---- phrase-translation practice (its own SM-2 schedule) ---- */
+
   phraseCard(id) {
     if (!this.data.phraseCards[id]) {
       this.data.phraseCards[id] = {
         id,
-        box: 0,
+        easeFactor: DEFAULT_EASE_FACTOR,
+        interval: 0,
+        reps: 0,
+        lapses: 0,
         due: todayStr(),
-        seen: false,
-        correct: 0,
-        attempts: 0,
         lastReviewed: null,
+        seen: false,
+        monthly: false, // parked: mastered, comes back every ~30 days
+        perfect: 0,     // times typed exactly right (>4 → parked)
+        correctCount: 0,
+        totalCount: 0,
       };
     }
     return this.data.phraseCards[id];
   },
 
-  // "new" | "learning" | "review" | "mastered" for the reference list badges
+  // "new" | "learning" | "known" | "mature" — same scale as the word cards
   phraseStatus(id) {
     const card = this.data.phraseCards[id];
     if (!card || !card.seen) return "new";
-    if (card.box >= PHRASE_MASTERED_BOX) return "mastered";
-    if (card.box >= 3) return "review";
+    if (card.monthly || (card.interval || 0) >= MATURE_INTERVAL_DAYS) return "mature";
+    if ((card.interval || 0) >= LEARNED_INTERVAL_DAYS) return "known";
     return "learning";
   },
 
-  // Phrases within the levels the learner picked at the start.
+  // Phrases inside the levels the learner picked at the start.
   scopedPhrases() {
     return PHRASES.filter((phrase) => this.levelEnabled(phrase.level));
   },
 
-  phraseStats() {
-    let learning = 0, review = 0, mastered = 0, seen = 0;
-    const scoped = this.scopedPhrases();
-    for (const phrase of scoped) {
-      const status = this.phraseStatus(phrase.id);
-      if (status === "new") continue;
-      seen++;
-      if (status === "mastered") mastered++;
-      else if (status === "review") review++;
-      else learning++;
-    }
-    let reviews = 0, correct = 0;
-    for (const day of Object.values(this.data.phraseLog || {})) {
-      reviews += day.reviews;
-      correct += day.correct;
-    }
-    return {
-      total: scoped.length, seen, learning, review, mastered,
-      reviews,
-      accuracy: reviews ? Math.round((correct / reviews) * 100) : 0,
-      streak: this.data.phraseStreak || 0,
-      maxStreak: this.data.phraseMaxStreak || this.data.phraseStreak || 0,
-      today: this.phraseLogToday(),
-    };
+  // Daily new-phrase target (Settings, 1..50).
+  phrasesPerDay() {
+    const n = Math.round(this.settings().phrasesPerDay);
+    return Number.isFinite(n) && n > 0
+      ? Math.min(MAX_PHRASES_PER_DAY, n)
+      : DEFAULT_PHRASES_PER_DAY;
   },
 
   // date -> { reviews, correct, newSeen } for phrase practice
@@ -690,15 +725,6 @@ const Store = {
     if (!this.data.phraseLog[today])
       this.data.phraseLog[today] = { reviews: 0, correct: 0, newSeen: 0 };
     return this.data.phraseLog[today];
-  },
-
-  // Phrases per day: the daily new-phrase target and the Practice round
-  // size, in one setting (Settings, 1..50).
-  phrasesPerDay() {
-    const n = Math.round(this.settings().phrasesPerDay);
-    return Number.isFinite(n) && n > 0
-      ? Math.min(MAX_PHRASES_PER_DAY, n)
-      : DEFAULT_PHRASES_PER_DAY;
   },
 
   updatePhraseStreak() {
@@ -713,6 +739,32 @@ const Store = {
     );
   },
 
+  phraseStats() {
+    let learning = 0, known = 0, mature = 0, seen = 0;
+    const scoped = this.scopedPhrases();
+    for (const phrase of scoped) {
+      const status = this.phraseStatus(phrase.id);
+      if (status === "new") continue;
+      seen++;
+      if (status === "mature") mature++;
+      else if (status === "known") known++;
+      else learning++;
+    }
+    let reviews = 0, correct = 0;
+    for (const day of Object.values(this.data.phraseLog || {})) {
+      reviews += day.reviews;
+      correct += day.correct;
+    }
+    return {
+      total: scoped.length, seen, learning, known, mature,
+      reviews,
+      accuracy: reviews ? Math.round((correct / reviews) * 100) : 0,
+      streak: this.data.phraseStreak || 0,
+      maxStreak: this.data.phraseMaxStreak || this.data.phraseStreak || 0,
+      today: this.phraseLogToday(),
+    };
+  },
+
   // Today's phrase practice at a glance (mirrors dueSummary() for words).
   phraseDaySummary() {
     const today = todayStr();
@@ -721,7 +773,7 @@ const Store = {
     for (const phrase of this.scopedPhrases()) {
       const card = this.data.phraseCards[phrase.id];
       if (!card || !card.seen) { unseen++; continue; }
-      if (card.box >= PHRASE_MASTERED_BOX) continue;
+      // parked phrases still come back — every ~30 days — so they count here too
       if (card.due <= today) due++;
       else if (!nextDue || card.due < nextDue) nextDue = card.due;
     }
@@ -729,97 +781,131 @@ const Store = {
       0,
       this.phrasesPerDay() - this.phraseLogToday().newSeen
     );
-    return {
-      due,
-      unseen,
-      newLeft,
-      nextDue,
-      aheadAvailable: unseen > 0 || nextDue != null,
-    };
+    return { due, unseen, newLeft, nextDue };
   },
 
-  // "Quick 5": extra practice once the daily target is met. Due phrases and
-  // already-started ones only — never introduces a brand-new phrase.
-  quickPhraseSession(size = QUICK_PHRASE_ROUND) {
+  // A phrase-practice session: every phrase card that's due, then new
+  // phrase cards up to the daily budget. New ones are ordered by the
+  // state of the matching WORD card — words you're actively reviewing
+  // first, then words in your rotation, then brand-new words — and then
+  // interleaved by tense so one session mixes present/past/future/…
+  // Reading the word cards here never changes them.
+  buildPhraseQueue() {
     const today = todayStr();
     const due = [];
-    const ahead = [];
-    for (const phrase of this.scopedPhrases()) {
-      const card = this.data.phraseCards[phrase.id];
-      if (!card || !card.seen || card.box >= PHRASE_MASTERED_BOX) continue;
-      (card.due <= today ? due : ahead).push(phrase);
-    }
-    const bySoonest = (a, b) =>
-      this.data.phraseCards[a.id].due.localeCompare(this.data.phraseCards[b.id].due);
-    due.sort(bySoonest);
-    ahead.sort(bySoonest);
-    let round = [...due, ...ahead];
-    if (round.length < size) {
-      // top up with any seen phrase (mastered included) so Quick 5 is never empty
-      const extra = shuffle(
-        this.scopedPhrases().filter((phrase) => {
-          const card = this.data.phraseCards[phrase.id];
-          return card && card.seen && !round.includes(phrase);
-        })
-      );
-      round = round.concat(extra);
-    }
-    return round.slice(0, size);
-  },
+    const fresh = []; // [phraseId, priority, tense]  (lower priority = sooner)
 
-  // Phrases for one practice round: those due for review first (most
-  // overdue first), then unseen ones, capped at phrasesPerDay().
-  // Only phrases inside the learner's chosen levels.
-  buildPhraseSession(size = this.phrasesPerDay()) {
-    const today = todayStr();
-    const due = [];
-    const fresh = [];
     for (const phrase of this.scopedPhrases()) {
-      const card = this.data.phraseCards[phrase.id];
-      if (!card || !card.seen) fresh.push(phrase);
-      else if (card.due <= today) due.push(phrase);
+      const pcard = this.data.phraseCards[phrase.id];
+      if (pcard && pcard.seen) {
+        // every started phrase (parked ones included) is a review once due
+        if (pcard.due <= today) due.push(phrase.id);
+        continue;
+      }
+      const wcard = this.data.cards[phrase.word];
+      let priority;
+      if (wcard && wcard.seen && !wcard.known && wcard.due <= today) priority = 0;
+      else if (wcard && wcard.seen && !wcard.known) priority = 1;
+      else if (!wcard || !wcard.seen) priority = 2;
+      else priority = 3; // word already marked "known"
+      fresh.push([phrase.id, priority, phrase.tense || "present"]);
     }
+
     due.sort((a, b) =>
-      this.data.phraseCards[a.id].due.localeCompare(this.data.phraseCards[b.id].due)
+      this.data.phraseCards[a].due.localeCompare(this.data.phraseCards[b].due)
+    );
+
+    const newLeft = Math.max(
+      0,
+      this.phrasesPerDay() - this.phraseLogToday().newSeen
     );
     shuffle(fresh);
-    return [...due, ...fresh].slice(0, size);
+    fresh.sort((a, b) => a[1] - b[1]); // priority first, shuffled within a priority
+    const picked = fresh.slice(0, newLeft);
+
+    // round-robin the day's new phrases across their tenses
+    const buckets = new Map();
+    for (const [id, , tense] of picked) {
+      if (!buckets.has(tense)) buckets.set(tense, []);
+      buckets.get(tense).push(id);
+    }
+    const lists = [...buckets.values()];
+    const newCards = [];
+    for (let i = 0; newCards.length < picked.length; i++) {
+      const list = lists[i % lists.length];
+      if (list.length) newCards.push(list.shift());
+    }
+
+    return [...due, ...newCards];
   },
 
-  // A random round ignoring the schedule (used when nothing is due).
-  randomPhraseSession(size = this.phrasesPerDay()) {
-    return shuffle(this.scopedPhrases()).slice(0, size);
-  },
-
-  // Grade one answered phrase. A hit moves it one box up (so it comes back
-  // less often); a miss drops it about halfway down (so it comes back
-  // sooner, but a slip on a well-known phrase isn't reset to zero).
-  // Returns { card, dueInDays } so the UI can show when it's next due.
-  gradePhrase(id, wasCorrect) {
+  // "Never" for a phrase — park it: mastered, but still back once a month.
+  parkPhraseMonthly(id) {
     const card = this.phraseCard(id);
     const firstTime = !card.seen;
     card.seen = true;
-    card.attempts++;
-    if (wasCorrect) {
-      card.correct++;
-      card.box = Math.min(PHRASE_MASTERED_BOX, card.box + 1);
-    } else {
-      card.box = Math.max(1, Math.floor(card.box / 2));
-    }
-    const dueInDays = PHRASE_BOX_DAYS[card.box];
-    card.due = addDays(todayStr(), dueInDays);
+    card.monthly = true;
+    card.interval = PHRASE_MONTHLY_DAYS;
+    card.reps = Math.max(card.reps, 3);
+    card.due = addDays(todayStr(), PHRASE_MONTHLY_DAYS);
     card.lastReviewed = todayStr();
-
-    // record it for the daily ring / streak / accuracy (doesn't touch the quiz flow)
+    card.totalCount++;
+    card.correctCount++;
     const log = this.phraseLogToday();
     log.reviews++;
-    if (wasCorrect) log.correct++;
+    log.correct++;
+    if (firstTime) log.newSeen++;
+    this.updatePhraseStreak();
+    this.save();
+    return card;
+  },
+
+  // Grade an answered phrase with the same SM-2 step as the word cards.
+  // grade: 0 again | 1 hard | 2 good | 3 easy. `wasExact` = the learner typed
+  // the sentence verbatim. Never touches data.cards.
+  // Returns { card, interval } for the "next review in ..." line.
+  gradePhrase(id, grade, wasExact = false) {
+    const card = this.phraseCard(id);
+    const firstTime = !card.seen;
+    card.seen = true;
+    card.totalCount++;
+    if (grade >= 2) card.correctCount++;
+
+    if (wasExact) card.perfect = (card.perfect || 0) + 1;
+    else if (grade === 0) card.perfect = 0; // a real miss resets the run
+
+    Object.assign(card, sm2Step(card, grade));
+
+    if (grade === 0) {
+      card.monthly = false; // un-park: it needs work again
+    } else if (card.monthly || (card.perfect || 0) > PHRASE_PERFECT_TO_PARK) {
+      // mastered for good — keep it on a monthly refresher, not gone for good
+      card.monthly = true;
+      card.interval = PHRASE_MONTHLY_DAYS;
+    }
+
+    card.lastReviewed = todayStr();
+    card.due = addDays(todayStr(), card.interval);
+
+    const log = this.phraseLogToday();
+    log.reviews++;
+    if (grade >= 2) log.correct++;
     if (firstTime) log.newSeen++;
     this.updatePhraseStreak();
 
     this.save();
-    return { card, dueInDays };
+    return { card, interval: card.interval };
   },
+
+  // True once every phrase in the learner's levels has been introduced and
+  // the deck is essentially mastered (≥80% parked or mature). The Phrases
+  // screen then nudges them to ask Leonardo for a fresh deck.
+  phraseDeckExhausted() {
+    const s = this.phraseStats();
+    if (!s.total) return false;
+    return s.seen >= s.total && s.mature >= Math.ceil(s.total * 0.8);
+  },
+
 };
 
 function shuffle(arr) {

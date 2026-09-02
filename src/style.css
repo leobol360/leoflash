@@ -295,7 +295,7 @@ main { padding-bottom: 120px; padding-top: 8px; }
   border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px;
 }
 
-/* prompts (type / gap / choice) */
+/* prompts (type / gap / listen) */
 .prompt-box {
   background: linear-gradient(160deg, var(--surface), var(--surface-2));
   border: 1px solid var(--border); border-radius: var(--radius);
@@ -325,17 +325,6 @@ main { padding-bottom: 120px; padding-top: 8px; }
   border-radius: var(--radius); box-shadow: var(--shadow);
 }
 .huge-speak { width: 76px; height: 76px; font-size: 2rem; border-radius: 50%; }
-
-.choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-@media (max-width: 460px) { .choice-grid { grid-template-columns: 1fr; } }
-.choice-btn {
-  font: inherit; font-size: 1rem; font-weight: 500; padding: 16px;
-  border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
-  color: var(--text); cursor: pointer; transition: .12s;
-}
-.choice-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
-.choice-btn.right { border-color: var(--ok); background: rgba(52,211,153,.15); color: var(--ok); }
-.choice-btn.wrong { border-color: var(--bad); background: rgba(251,113,133,.15); color: var(--bad); }
 
 /* feedback */
 .feedback { border-radius: var(--radius-sm); padding: 0; }

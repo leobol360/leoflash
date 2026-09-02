@@ -181,13 +181,12 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
         />
 
         <NumberField
-          label="Phrases per day"
+          label="New phrases per day"
           hint={
             <>
-              One number for phrases: your daily target on the <b>Phrases</b>{" "}
-              screen, and how many a <b>Practice</b> round shows you (study then
-              quiz). Due phrases come back for review on top, automatically; once
-              you hit the target, <b>Quick 5</b> keeps you going.
+              How many new sentences the <b>Phrases</b> screen introduces each
+              day. Phrases you've started come back for review on top,
+              automatically. Their schedule is separate from your word cards.
             </>
           }
           value={settings.phrasesPerDay}
