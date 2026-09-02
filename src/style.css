@@ -658,6 +658,15 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
   background: var(--accent-soft); border-radius: 0 8px 8px 0;
 }
 .gr-hint { margin: -2px 0 8px; font-size: .78rem; color: var(--muted); line-height: 1.4; }
+.gr-practice {
+  border-top: 1px dashed var(--border); padding-top: 14px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.gr-practice .answer-form { margin-top: 2px; }
+.gr-practice-es {
+  font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600;
+  color: var(--accent-strong);
+}
 .gr-block h4 {
   margin: 0 0 7px; font-size: .74rem; text-transform: uppercase; letter-spacing: .08em;
   color: var(--muted); font-weight: 700;

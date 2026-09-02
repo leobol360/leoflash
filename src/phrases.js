@@ -68,6 +68,25 @@ export const PHRASES = Object.entries(PHRASE_JSON).flatMap(([word, entry]) => {
 const BY_ID = new Map(PHRASES.map((p) => [p.id, p]));
 export const getPhrase = (id) => BY_ID.get(id);
 
+// Phrases grouped by grammatical tense — used by the Grammar screen's
+// free practice (no schedule, no scoring against your deck).
+const BY_TENSE = new Map();
+for (const p of PHRASES) {
+  if (!BY_TENSE.has(p.tense)) BY_TENSE.set(p.tense, []);
+  BY_TENSE.get(p.tense).push(p);
+}
+export const phrasesInTense = (tense) => BY_TENSE.get(tense) || [];
+export function randomPhrase(tense, excludeId) {
+  const pool = BY_TENSE.get(tense) || [];
+  if (pool.length === 0) return null;
+  if (pool.length === 1) return pool[0];
+  let p;
+  do {
+    p = pool[Math.floor(Math.random() * pool.length)];
+  } while (p.id === excludeId);
+  return p;
+}
+
 /* ---- similarity score that auto-grades the typed answer ---- */
 
 const normalize = (text) =>

@@ -1,7 +1,16 @@
-import { useMemo, useState } from "react";
-import { GRAMMAR, GRAMMAR_GROUPS } from "../grammar.js";
+import { useMemo, useRef, useState } from "react";
+import { GRAMMAR, GRAMMAR_GROUPS, GRAMMAR_TENSE } from "../grammar.js";
+import { randomPhrase, similarity } from "../phrases.js";
+import { Speech } from "../speech.js";
 
 const LEVEL_LABEL = { a1: "A1", a2: "A2", b1: "B1", b2: "B2" };
+
+const verdictFor = (pct) =>
+  pct >= 90
+    ? { fb: "fb-ok", label: "Correct" }
+    : pct >= 60
+    ? { fb: "fb-almost", label: "Almost" }
+    : { fb: "fb-bad", label: "Not quite" };
 
 export default function Grammar() {
   const [group, setGroup] = useState("all");
@@ -161,7 +170,123 @@ function GrammarCard({ g, open, onToggle }) {
               </ul>
             </div>
           )}
+
+          {GRAMMAR_TENSE[g.id] && <TensePractice tense={GRAMMAR_TENSE[g.id]} />}
         </div>
+      )}
+    </div>
+  );
+}
+
+/* Free practice for one tense: a random Spanish sentence in that tense, you
+   type the English, get a % match. No schedule, nothing counts. */
+function TensePractice({ tense }) {
+  const [phrase, setPhrase] = useState(() => randomPhrase(tense));
+  const [typed, setTyped] = useState("");
+  const [result, setResult] = useState(null); // { match, fb, label, gaveUp } | null
+  const [showHint, setShowHint] = useState(false);
+  const inputRef = useRef(null);
+
+  if (!phrase) return null;
+  const answered = result != null;
+
+  const check = () => {
+    if (!typed.trim() || answered) return;
+    const match = similarity(typed, phrase.en);
+    setResult({ match, ...verdictFor(match) });
+    Speech.say(phrase.en);
+  };
+  const giveUp = () => {
+    if (answered) return;
+    setResult({
+      match: similarity(typed, phrase.en),
+      fb: "fb-bad",
+      label: "No pasa nada",
+      gaveUp: true,
+    });
+    Speech.say(phrase.en);
+  };
+  const nextOne = () => {
+    setPhrase(randomPhrase(tense, phrase.id));
+    setTyped("");
+    setResult(null);
+    setShowHint(false);
+  };
+
+  return (
+    <div className="gr-block gr-practice">
+      <h4>Practica este tiempo</h4>
+      <p className="gr-hint">
+        Escribe la frase en inglés. Es solo práctica: no cuenta para ningún
+        repaso, solo te dice qué tan cerca quedaste.
+      </p>
+      <div className="gr-practice-es">{phrase.es}</div>
+
+      {!answered &&
+        (showHint ? (
+          <div className="phrase-hint">
+            {phrase.en}
+            <span className="phrase-hint-note">así se escribe</span>
+          </div>
+        ) : (
+          <button
+            type="button"
+            className="btn btn-ghost tiny-btn"
+            onClick={() => setShowHint(true)}
+          >
+            Show English hint
+          </button>
+        ))}
+
+      {!answered ? (
+        <form
+          className="answer-form"
+          autoComplete="off"
+          onSubmit={(e) => {
+            e.preventDefault();
+            check();
+          }}
+        >
+          <input
+            ref={inputRef}
+            type="text"
+            value={typed}
+            onChange={(e) => setTyped(e.target.value)}
+            placeholder="Type it in English…"
+            autoCapitalize="off"
+            autoCorrect="off"
+            spellCheck="false"
+          />
+          <button className="btn btn-primary" type="submit">
+            Check
+          </button>
+          <button className="btn btn-danger" type="button" onClick={giveUp}>
+            Don't know
+          </button>
+        </form>
+      ) : (
+        <>
+          <div className={"feedback " + result.fb}>
+            <div className="fb-head">
+              {result.gaveUp
+                ? "Así se escribe"
+                : `${result.label} — ${result.match}% match`}
+            </div>
+            <div className="fb-es">
+              You wrote: <b>{typed || "—"}</b>
+            </div>
+            <div className="fb-word">
+              <b>{phrase.en}</b>
+              <button className="icon-btn" onClick={() => Speech.say(phrase.en)}>
+                🔊
+              </button>
+            </div>
+            <div className="fb-es muted">{phrase.es}</div>
+          </div>
+          <button className="btn btn-primary wide" onClick={nextOne}>
+            Otra frase
+          </button>
+        </>
       )}
     </div>
   );
