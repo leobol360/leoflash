@@ -4,6 +4,7 @@ import { Store } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
 import { Ring, StatCard } from "../components/ui.jsx";
+import { lookup } from "../glossary.js";
 import { formatInterval, formatRelativeDate } from "../format.js";
 
 function backIn(days) {
@@ -26,6 +27,39 @@ const GRADE_BANDS = [
 ];
 const bandForMatch = (pct) => GRADE_BANDS.find((b) => pct >= b.min);
 
+/* The English sentence as a hint: words the learner is actively studying
+   (this phrase's target, plus any word with a live flashcard) are blanked;
+   everything else — the vocabulary that isn't being drilled — shows in
+   English so they can lean on it and pick up new words. */
+function EnglishHint({ en, target }) {
+  const tgt = (target || "").toLowerCase();
+  const hidden = (core) => {
+    const hit = lookup(core);
+    if (!hit) return core.toLowerCase() === tgt;
+    const w = (hit.word || "").toLowerCase();
+    if (w === tgt) return true; // this phrase's word (any inflected form)
+    const card = Store.data.cards[hit.word];
+    return !!(card && card.seen && !card.known); // another word you're drilling
+  };
+  return (
+    <div className="phrase-hint">
+      {en.split(/(\s+)/).map((tok, i) => {
+        const m = tok.match(/^([^A-Za-z']*)([A-Za-z'’-]*)([^A-Za-z']*)$/);
+        if (!m || !m[2]) return <span key={i}>{tok}</span>;
+        const [, pre, core, post] = m;
+        return (
+          <span key={i}>
+            {pre}
+            {hidden(core) ? <span className="blank">____</span> : core}
+            {post}
+          </span>
+        );
+      })}
+      <span className="phrase-hint-note">words you're studying are hidden</span>
+    </div>
+  );
+}
+
 export default function Phrases() {
   const [session, setSession] = useState(null); // { key, queue } | null
 
@@ -35,7 +69,7 @@ export default function Phrases() {
       alert(
         Store.phraseDeckExhausted()
           ? DECK_DONE_MSG
-          : "Nothing to practise right now — come back later, or raise your daily goal in Settings."
+          : "Nothing to practise right now — come back later, or add a level in the level picker."
       );
       return;
     }
@@ -92,7 +126,7 @@ function PhraseHome({ onStart }) {
     statusLine = <>🏆 {DECK_DONE_MSG}</>;
   } else {
     statusLine = (
-      <>🌱 You've practised every phrase for your loaded levels — load another level, or come back tomorrow.</>
+      <>🌱 You've practised every phrase for your loaded levels — add another level, or come back tomorrow.</>
     );
   }
 
@@ -155,9 +189,10 @@ function PhraseHome({ onStart }) {
       </div>
 
       <p className="muted small" style={{ marginTop: 14 }}>
-        Short Spanish sentences built from your vocabulary — mostly words you're
-        reviewing right now. Type the English; it's scored automatically on how
-        close you got. It has its own schedule and never changes your word cards.
+        Short Spanish sentences in the grammatical tenses your level teaches —
+        words you're studying come first, then the rest of your levels. Type the
+        English; it's scored automatically on how close you got. It has its own
+        schedule and never changes your word cards.
       </p>
     </div>
   );
@@ -174,6 +209,7 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
   const [correct, setCorrect] = useState(0);
   const [typed, setTyped] = useState("");
   const [result, setResult] = useState(null); // { match, band, interval } once answered
+  const [showHint, setShowHint] = useState(false);
   const inputRef = useRef(null);
 
   const finished = pos >= total;
@@ -201,9 +237,23 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
     Speech.say(phrase.en);
   };
 
+  // "I don't know it" — grade the phrase wrong right away and show the answer
+  const giveUp = () => {
+    if (checked) return;
+    const interval = Store.gradePhrase(phrase.id, 0, false).interval;
+    setResult({
+      match: similarity(typed, phrase.en),
+      band: GRADE_BANDS.find((b) => b.grade === 0),
+      interval,
+      gaveUp: true,
+    });
+    Speech.say(phrase.en);
+  };
+
   const next = () => {
     setTyped("");
     setResult(null);
+    setShowHint(false);
     setDone((n) => n + 1);
     setPos((n) => n + 1);
   };
@@ -267,7 +317,7 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
             <p className="muted">🏆 {DECK_DONE_MSG}</p>
           ) : (
             <p className="muted">
-              You've practised every phrase for your loaded levels — load another,
+              You've practised every phrase for your loaded levels — add another,
               or come back tomorrow.
             </p>
           )}
@@ -302,6 +352,19 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
       <div className="card practice-card">
         <div className="study-en">{phrase.es}</div>
 
+        {!checked &&
+          (showHint ? (
+            <EnglishHint en={phrase.en} target={phrase.word} />
+          ) : (
+            <button
+              type="button"
+              className="btn btn-ghost tiny-btn phrase-hint-btn"
+              onClick={() => setShowHint(true)}
+            >
+              Show English hint
+            </button>
+          ))}
+
         <form
           className="answer-form"
           autoComplete="off"
@@ -322,14 +385,21 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
             disabled={checked}
           />
           {!checked && (
-            <button className="btn btn-primary" type="submit">Check</button>
+            <>
+              <button className="btn btn-primary" type="submit">Check</button>
+              <button className="btn btn-danger" type="button" onClick={giveUp}>
+                Don't know
+              </button>
+            </>
           )}
         </form>
 
         {checked && (
           <div className={"feedback " + result.band.fb}>
             <div className="fb-head">
-              {result.band.label} — {result.match}% match
+              {result.gaveUp
+                ? "Marked as “No” — here's the answer"
+                : `${result.band.label} — ${result.match}% match`}
             </div>
             <div className="fb-es">
               You wrote: <b>{typed || "—"}</b>

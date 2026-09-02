@@ -98,6 +98,15 @@ export default function Study({ queue, onExit, onKeepGoing }) {
     Speech.say(entry.word);
   };
 
+  // "I don't know it" — grade it wrong right away and show the answer
+  const giveUp = () => {
+    if (answered) return;
+    Store.grade(id, 0, true);
+    setFeedback({ grade: 0, almost: false });
+    setAnswered(true);
+    Speech.say(entry.word);
+  };
+
   const markKnownAndAdvance = () => {
     Store.markKnown(id);
     advance();
@@ -242,6 +251,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
       <div className="stage">
         {mode === "learn" && (
           <LearnCard
+            key={entry.id}
             entry={entry}
             card={card}
             dir={learnDir}
@@ -260,6 +270,7 @@ export default function Study({ queue, onExit, onKeepGoing }) {
             answered={answered}
             feedback={feedback}
             onSubmit={submitAnswer}
+            onGiveUp={giveUp}
             onAdvance={advance}
             onNever={markKnownAndAdvance}
             card={card}
@@ -282,6 +293,14 @@ function backIn(days) {
 function LearnCard({ entry, card, dir, stage, onReveal, onGrade }) {
   const revealed = stage === "revealed";
   const reversed = dir === "es";
+  // the answer side is only mounted once the flip has finished turning, so its
+  // content can never be seen through the card mid-rotation
+  const [flipDone, setFlipDone] = useState(false);
+  useEffect(() => {
+    if (!revealed) return;
+    const t = setTimeout(() => setFlipDone(true), 560);
+    return () => clearTimeout(t);
+  }, [revealed]);
 
   // the full "answer" side: the English word, how it sounds, and everything about it
   const englishDetail = (
@@ -318,7 +337,10 @@ function LearnCard({ entry, card, dir, stage, onReveal, onGrade }) {
           ? "New word · what's it in English? Then rate yourself"
           : "New word · read, listen, then rate yourself"}
       </div>
-      <div className={"flip" + (revealed ? " flipped" : "")} onClick={() => !revealed && onReveal()}>
+      <div
+        className={"flip" + (revealed ? " flipped" : "") + (flipDone ? " flip-done" : "")}
+        onClick={() => !revealed && onReveal()}
+      >
         <div className="flip-inner">
           <div className="flip-face front">
             {reversed ? (
@@ -401,7 +423,7 @@ function LearnCard({ entry, card, dir, stage, onReveal, onGrade }) {
 }
 
 /* ---------- typed answer (type / gap / listen) ---------- */
-function TypedCard({ entry, mode, typed, setTyped, answered, feedback, onSubmit, onAdvance, onNever, card }) {
+function TypedCard({ entry, mode, typed, setTyped, answered, feedback, onSubmit, onGiveUp, onAdvance, onNever, card }) {
   const inputRef = useRef(null);
   useEffect(() => {
     if (!answered) inputRef.current?.focus();
@@ -467,6 +489,11 @@ function TypedCard({ entry, mode, typed, setTyped, answered, feedback, onSubmit,
         <button className="btn btn-primary" type="submit">
           {answered ? "Continue" : "Check"}
         </button>
+        {!answered && (
+          <button className="btn btn-danger" type="button" onClick={onGiveUp}>
+            Don't know
+          </button>
+        )}
       </form>
 
       {feedback && <Feedback entry={entry} feedback={feedback} />}

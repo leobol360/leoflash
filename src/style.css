@@ -252,25 +252,54 @@ main { padding-bottom: 120px; padding-top: 8px; }
 }
 
 /* flip card — the back face stays in normal flow so the card grows to
-   fit its content; the (short) front face is overlaid on top of it. */
+   fit its content; the (short) front face is overlaid on top of it.
+   No face content is shown while the card is turning: the front hides at
+   the halfway point and the back only appears once the flip has finished,
+   so between the two you see just the blank card body. */
 .flip { perspective: 1400px; cursor: pointer; }
 .flip-inner {
-  position: relative; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.4,.15,.25,1);
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform .55s cubic-bezier(.4,.15,.25,1);
   min-height: 300px;
+  /* a solid card body behind both faces, visible during the turn */
+  background: var(--surface);
+  background-image: linear-gradient(160deg, var(--surface), var(--surface-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 .flip.flipped .flip-inner { transform: rotateY(180deg); }
 .flip-face {
   backface-visibility: hidden;
-  background: linear-gradient(160deg, var(--surface), var(--surface-2));
-  border: 1px solid var(--border); border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  -webkit-backface-visibility: hidden;
+  background: var(--surface);
+  background-image: linear-gradient(160deg, var(--surface), var(--surface-2));
+  border-radius: var(--radius);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 12px; padding: 28px; text-align: center;
+  transition-property: visibility;
+  transition-duration: 0s;
 }
 /* back is in flow → it sets the card's height */
-.flip-face.back { transform: rotateY(180deg); min-height: 300px; }
+.flip-face.back {
+  transform: rotateY(180deg) translateZ(1px);
+  min-height: 300px;
+  visibility: hidden;
+  transition-delay: .55s;        /* appears only when the card is flat again */
+}
 /* front is short — overlay it on the back */
-.flip-face.front { position: absolute; inset: 0; }
+.flip-face.front {
+  position: absolute; inset: 0;
+  transform: translateZ(1px);
+  transition-delay: .28s;        /* hides at the halfway point of the turn */
+}
+.flip.flipped .flip-face.back { visibility: visible; }
+.flip.flipped .flip-face.front { visibility: hidden; }
+/* JS-backed guarantee: the back's content stays invisible (it still occupies
+   space so the card keeps its height) until the flip has actually finished */
+.flip:not(.flip-done) .flip-face.back > * { visibility: hidden; }
 .fc-word { font-family: var(--font-serif); font-size: clamp(2rem, 8vw, 3rem); font-weight: 600; }
 .fc-ipa { color: var(--muted); font-size: .95rem; }
 .fc-hint { font-size: .78rem; color: var(--muted); margin-top: 8px; }
@@ -311,13 +340,15 @@ main { padding-bottom: 120px; padding-top: 8px; }
   vertical-align: baseline;
 }
 
-.answer-form { display: flex; gap: 8px; }
+.answer-form { display: flex; flex-wrap: wrap; gap: 8px; }
 .answer-form input {
-  flex: 1; font: inherit; font-size: 1.05rem; padding: 13px 16px;
+  flex: 1 1 100%; font: inherit; font-size: 1.05rem; padding: 13px 16px;
   border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
   color: var(--text);
 }
 .answer-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+/* Check / Don't know / Continue share the row under the input */
+.answer-form button { flex: 1 1 auto; }
 
 .listen-box {
   display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -574,6 +605,13 @@ mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3
 .study-es { color: var(--muted); font-size: 1rem; }
 
 .practice-card { display: flex; flex-direction: column; gap: 10px; }
+.phrase-hint-btn { align-self: flex-start; }
+.phrase-hint {
+  font-size: 1rem; line-height: 1.7; padding: 12px 14px; border-radius: var(--radius-sm);
+  background: var(--surface-2); border: 1px solid var(--border); color: var(--muted);
+}
+.phrase-hint .blank { color: var(--accent); letter-spacing: 1px; }
+.phrase-hint-note { display: block; margin-top: 4px; font-size: .75rem; opacity: .7; }
 .phrase-cat { font-size: .78rem; font-weight: 600; color: var(--accent-strong); }
 .practice-es { font-size: 1.15rem; font-weight: 600; }
 .practice-gap {

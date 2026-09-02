@@ -32,12 +32,32 @@ export const PHRASE_TENSES = [
 const TENSE_LABEL = new Map(PHRASE_TENSES.map((t) => [t.key, t.label]));
 export const tenseLabel = (key) => TENSE_LABEL.get(key) || "Present";
 
+// Which grammatical tenses a learner practises at each CEFR level — cumulative,
+// so a higher level also gets everything below it. A phrase is only shown once
+// its tense is one the selected level(s) actually teach.
+const A1 = ["present", "imperative", "present_continuous"];
+const A2 = [...A1, "past", "future"];
+const B1 = [...A2, "present_perfect", "past_continuous"];
+const B2 = [...B1, "conditional"];
+export const TENSES_BY_LEVEL = { a1: A1, a2: A2, b1: B1, b2: B2, software: B2 };
+
+// Union of the tenses taught across a set of levels.
+export function tensesForLevels(levels) {
+  const set = new Set();
+  for (const lvl of levels)
+    for (const t of TENSES_BY_LEVEL[lvl] || B2) set.add(t);
+  return set;
+}
+
 // id === the vocab word, plus "#n" for the 2nd, 3rd… sentence of that word.
+// cardId === that word's flashcard id (lower-cased), so we can look up how
+// far the learner has got with the underlying word.
 export const PHRASES = Object.entries(PHRASE_JSON).flatMap(([word, entry]) => {
   const variants = Array.isArray(entry) ? entry : [entry];
   return variants.map((p, i) => ({
     id: i === 0 ? word : `${word}#${i}`,
     word,
+    cardId: word.toLowerCase().trim(),
     level: LEVEL_BY_WORD.get(word) || "a1",
     es: p.es,
     en: p.en,

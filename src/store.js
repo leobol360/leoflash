@@ -4,7 +4,7 @@
    ============================================================ */
 
 import { VOCAB, ACTIVE_LEVELS } from "./data.js";
-import { PHRASES, PHRASE_TENSES } from "./phrases.js";
+import { PHRASES, PHRASE_TENSES, tensesForLevels } from "./phrases.js";
 
 const STORAGE_KEY = "leoflash";
 // older key names, read once and migrated into STORAGE_KEY so progress carries over
@@ -631,12 +631,19 @@ const Store = {
   },
 
   // Per-level phrase completion, counting only phrases mastered for good
-  // (SM-2 interval >= 21 days). Loaded levels only.
+  // (SM-2 interval >= 21 days). Loaded levels only, and only phrases in a
+  // tense the level teaches (matching what practice actually shows).
   phraseLevelProgress() {
+    const tenses = this.allowedPhraseTenses();
     return Object.keys(ACTIVE_LEVELS)
       .filter((level) => this.levelEnabled(level))
       .map((level) => {
-        const phrases = PHRASES.filter((phrase) => phrase.level === level);
+        const phrases = PHRASES.filter(
+          (phrase) =>
+            phrase.level === level &&
+            tenses.has(phrase.tense) &&
+            !this.isRemoved(phrase.cardId)
+        );
         let mastered = 0, started = 0;
         for (const phrase of phrases) {
           const status = this.phraseStatus(phrase.id);
@@ -706,9 +713,22 @@ const Store = {
     return "learning";
   },
 
-  // Phrases inside the levels the learner picked at the start.
+  // Grammatical tenses the learner's chosen levels actually teach.
+  allowedPhraseTenses() {
+    return tensesForLevels(this.enabledLevels());
+  },
+
+  // The phrase deck for this learner: the word is in a chosen level and not
+  // curated out of the deck, AND the sentence is written in a tense those
+  // levels teach (so an a1 learner never gets a conditional sentence).
   scopedPhrases() {
-    return PHRASES.filter((phrase) => this.levelEnabled(phrase.level));
+    const tenses = this.allowedPhraseTenses();
+    return PHRASES.filter(
+      (phrase) =>
+        this.levelEnabled(phrase.level) &&
+        !this.isRemoved(phrase.cardId) &&
+        tenses.has(phrase.tense)
+    );
   },
 
   // Daily new-phrase target (Settings, 1..50).
@@ -784,12 +804,14 @@ const Store = {
     return { due, unseen, newLeft, nextDue };
   },
 
-  // A phrase-practice session: every phrase card that's due, then new
-  // phrase cards up to the daily budget. New ones are ordered by the
-  // state of the matching WORD card — words you're actively reviewing
-  // first, then words in your rotation, then brand-new words — and then
-  // interleaved by tense so one session mixes present/past/future/…
-  // Reading the word cards here never changes them.
+  // A phrase-practice session: every phrase card that's due, then new phrase
+  // cards up to the daily budget. Every phrase here is in a tense the chosen
+  // levels teach (scopedPhrases handles that). New phrases are ordered by the
+  // state of the matching WORD card — words being reviewed today first, then
+  // words in the rotation, then words marked "known", and finally, only as a
+  // fallback, words not studied yet (random within the chosen levels), so the
+  // session is never empty. Picked phrases are interleaved by tense. Reading
+  // the word cards here never changes them.
   buildPhraseQueue() {
     const today = todayStr();
     const due = [];
@@ -802,12 +824,12 @@ const Store = {
         if (pcard.due <= today) due.push(phrase.id);
         continue;
       }
-      const wcard = this.data.cards[phrase.word];
+      const wcard = this.data.cards[phrase.cardId];
       let priority;
       if (wcard && wcard.seen && !wcard.known && wcard.due <= today) priority = 0;
       else if (wcard && wcard.seen && !wcard.known) priority = 1;
-      else if (!wcard || !wcard.seen) priority = 2;
-      else priority = 3; // word already marked "known"
+      else if (wcard && wcard.seen) priority = 2; // word marked "known"
+      else priority = 3; // word not studied yet — random fallback from the levels
       fresh.push([phrase.id, priority, phrase.tense || "present"]);
     }
 
@@ -897,10 +919,12 @@ const Store = {
     return { card, interval: card.interval };
   },
 
-  // True once every phrase in the learner's levels has been introduced and
-  // the deck is essentially mastered (≥80% parked or mature). The Phrases
-  // screen then nudges them to ask Leonardo for a fresh deck.
+  // True once ALL levels are loaded and their whole phrase deck has been
+  // introduced and essentially mastered (≥80% parked or mature). Only then
+  // does the Phrases screen nudge the learner to ask Leonardo for a fresh
+  // deck — before that, adding a level still unlocks more.
   phraseDeckExhausted() {
+    if (this.settings().enabledLevels) return false; // a level is still off
     const s = this.phraseStats();
     if (!s.total) return false;
     return s.seen >= s.total && s.mature >= Math.ceil(s.total * 0.8);
