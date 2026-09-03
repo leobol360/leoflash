@@ -36,7 +36,10 @@ export default function Study({ queue, onExit, onKeepGoing }) {
   const finished = position >= total;
   const id = finished ? null : queue[position];
   const entry = useMemo(() => (id ? VOCAB.find((word) => word.id === id) : null), [id]);
-  const mode = useMemo(() => (id ? pickMode(Store.data.cards[id]) : null), [id]);
+  const mode = useMemo(
+    () => (id ? pickMode(Store.data.cards[id], Store.settings().reviewStyle) : null),
+    [id]
+  );
   // some flashcards are shown Spanish-first (front = meaning, back = the English word)
   const learnDir = useMemo(
     () => (Math.random() < LEARN_REVERSE_RATE ? "es" : "en"),
@@ -332,12 +335,14 @@ function LearnCard({ entry, card, dir, stage, onReveal, onGrade }) {
     </>
   );
 
+  const isReview = !!(card && card.seen);
   return (
     <>
       <div className="mode-tag">
+        {isReview ? "Review" : "New word"} ·{" "}
         {reversed
-          ? "New word · what's it in English? Then rate yourself"
-          : "New word · read, listen, then rate yourself"}
+          ? "what's it in English? Then rate yourself"
+          : "recall it, then rate yourself"}
       </div>
       <div
         className={"flip" + (revealed ? " flipped" : "") + (flipDone ? " flip-done" : "")}
@@ -488,13 +493,13 @@ function TypedCard({ entry, mode, typed, setTyped, answered, feedback, onSubmit,
           spellCheck="false"
           disabled={answered}
         />
-        <button className="btn btn-primary" type="submit">
-          {answered ? "Continue" : "Check"}
-        </button>
         {!answered && (
-          <button className="btn btn-danger" type="button" onClick={onGiveUp}>
-            Don't know
-          </button>
+          <>
+            <button className="btn btn-primary" type="submit">Check</button>
+            <button className="btn btn-danger" type="button" onClick={onGiveUp}>
+              Don't know
+            </button>
+          </>
         )}
       </form>
 

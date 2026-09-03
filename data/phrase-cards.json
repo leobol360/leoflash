@@ -236,7 +236,7 @@
  },
  "kind": {
   "es": "Eres muy amable.",
-  "en": "You are very kind.",
+  "en": "You're very kind.",
   "tense": "present"
  },
  "head": {
@@ -1536,7 +1536,7 @@
  },
  "different": {
   "es": "Somos muy diferentes.",
-  "en": "We are very different.",
+  "en": "We're very different.",
   "tense": "present"
  },
  "small": {
@@ -4366,7 +4366,7 @@
  },
  "seek": {
   "es": "Buscamos una solución.",
-  "en": "We are seeking a solution.",
+  "en": "We're seeking a solution.",
   "tense": "present_continuous"
  },
  "select": {
@@ -5676,7 +5676,7 @@
  },
  "request": {
   "es": "Se ruega guardar silencio.",
-  "en": "You are requested to keep quiet.",
+  "en": "You're requested to keep quiet.",
   "tense": "past"
  },
  "resemble": {
@@ -7081,7 +7081,7 @@
  },
  "responsible": {
   "es": "¿Quién es el responsable de cerrar?",
-  "en": "Who is responsible for locking up?",
+  "en": "Who's responsible for locking up?",
   "tense": "present"
  },
  "rough": {
@@ -7906,7 +7906,7 @@
  },
  "justice": {
   "es": "Buscan justicia para las víctimas.",
-  "en": "They are seeking justice for the victims.",
+  "en": "They're seeking justice for the victims.",
   "tense": "present_continuous"
  },
  "legislation": {
@@ -8441,7 +8441,7 @@
  },
  "conceal": {
   "es": "No pudo ocultar su decepción.",
-  "en": "She could not conceal her disappointment.",
+  "en": "She couldn't conceal her disappointment.",
   "tense": "present"
  },
  "condemn": {
@@ -8561,7 +8561,7 @@
  },
  "exceed": {
   "es": "El coste no debe superar los quinientos euros.",
-  "en": "The cost must not exceed five hundred euros.",
+  "en": "The cost mustn't exceed five hundred euros.",
   "tense": "past"
  },
  "exert": {
@@ -8606,7 +8606,7 @@
  },
  "fulfil": {
   "es": "El curso no cumplió mis expectativas.",
-  "en": "The course did not fulfil my expectations.",
+  "en": "The course didn't fulfil my expectations.",
   "tense": "past"
  },
  "gaze": {
@@ -9416,7 +9416,7 @@
  },
  "pine": {
   "es": "Están talando el pino viejo.",
-  "en": "They are cutting down the old pine.",
+  "en": "They're cutting down the old pine.",
   "tense": "present_continuous"
  },
  "moss": {
@@ -9566,7 +9566,7 @@
  },
  "vaccine": {
   "es": "Están probando una vacuna nueva ahora.",
-  "en": "They are testing a new vaccine now.",
+  "en": "They're testing a new vaccine now.",
   "tense": "present_continuous"
  },
  "dose": {
@@ -9596,7 +9596,7 @@
  },
  "bossy": {
   "es": "Está siendo mandón con el personal nuevo.",
-  "en": "He is being bossy with the new staff.",
+  "en": "He's being bossy with the new staff.",
   "tense": "present_continuous"
  },
  "cautious": {
@@ -9671,7 +9671,7 @@
  },
  "optimistic": {
   "es": "Me mantendré optimista sobre los resultados.",
-  "en": "I will stay optimistic about the results.",
+  "en": "I'll stay optimistic about the results.",
   "tense": "future"
  },
  "outgoing": {
@@ -9686,7 +9686,7 @@
  },
  "reckless": {
   "es": "Está conduciendo de forma imprudente.",
-  "en": "He is driving in a reckless way.",
+  "en": "He's driving in a reckless way.",
   "tense": "present_continuous"
  },
  "reserved": {
@@ -9716,7 +9716,7 @@
  },
  "stubborn": {
   "es": "Estás siendo terco con el plan.",
-  "en": "You are being stubborn about the plan.",
+  "en": "You're being stubborn about the plan.",
   "tense": "present_continuous"
  },
  "sympathetic": {
@@ -9746,7 +9746,7 @@
  },
  "witty": {
   "es": "Está muy ingeniosa en la cena.",
-  "en": "She is being witty at the dinner.",
+  "en": "She's being witty at the dinner.",
   "tense": "present_continuous"
  },
  "accomplish": {
@@ -9761,7 +9761,7 @@
  },
  "amend": {
   "es": "Enmendarán el contrato la próxima semana.",
-  "en": "They will amend the contract next week.",
+  "en": "They'll amend the contract next week.",
   "tense": "future"
  },
  "ascend": {
@@ -9791,7 +9791,7 @@
  },
  "comprehend": {
   "es": "Comprenderás las reglas tras una partida.",
-  "en": "You will comprehend the rules after a game.",
+  "en": "You'll comprehend the rules after a game.",
   "tense": "future"
  },
  "condense": {
@@ -9836,7 +9836,7 @@
  },
  "discard": {
   "es": "Estamos descartando las piezas rotas.",
-  "en": "We are discarding the broken parts.",
+  "en": "We're discarding the broken parts.",
   "tense": "present_continuous"
  },
  "dismantle": {
@@ -9866,7 +9866,7 @@
  },
  "embed": {
   "es": "Está insertando el vídeo en la página.",
-  "en": "She is embedding the video in the page.",
+  "en": "She's embedding the video in the page.",
   "tense": "present_continuous"
  },
  "endorse": {
@@ -10071,7 +10071,7 @@
  },
  "organism": {
   "es": "Ese organismo no sobreviviría al frío.",
-  "en": "That organism would not survive the cold.",
+  "en": "That organism wouldn't survive the cold.",
   "tense": "conditional"
  },
  "bacteria": {
@@ -10136,7 +10136,7 @@
  },
  "betrayal": {
   "es": "Todavía se está recuperando de la traición.",
-  "en": "He is still recovering from the betrayal.",
+  "en": "He's still recovering from the betrayal.",
   "tense": "present_continuous"
  },
  "companionship": {
@@ -10226,7 +10226,7 @@
  },
  "criterion": {
   "es": "Estamos añadiendo un criterio más a la lista.",
-  "en": "We are adding one more criterion to the list.",
+  "en": "We're adding one more criterion to the list.",
   "tense": "present_continuous"
  },
  "dilemma": {
@@ -10316,7 +10316,7 @@
  },
  "rationale": {
   "es": "Está explicando el fundamento del cambio.",
-  "en": "She is explaining the rationale behind the change.",
+  "en": "She's explaining the rationale behind the change.",
   "tense": "present_continuous"
  },
  "spectrum": {
@@ -10356,7 +10356,7 @@
  },
  "fluffy": {
   "es": "Bate las claras hasta que queden esponjosas.",
-  "en": "Beat the egg whites until they are fluffy.",
+  "en": "Beat the egg whites until they're fluffy.",
   "tense": "imperative"
  },
  "glossy": {
@@ -10496,7 +10496,7 @@
  },
  "allocate": {
   "es": "Están asignando fondos a las escuelas rurales.",
-  "en": "They are allocating funds to rural schools.",
+  "en": "They're allocating funds to rural schools.",
   "tense": "present_continuous"
  },
  "appraise": {
@@ -10541,7 +10541,7 @@
  },
  "condone": {
   "es": "La escuela no tolerará el acoso.",
-  "en": "The school will not condone bullying.",
+  "en": "The school won't condone bullying.",
   "tense": "future"
  },
  "confer": {
@@ -10581,12 +10581,12 @@
  },
  "discern": {
   "es": "Apenas discernirías su cara en esa foto.",
-  "en": "You would barely discern his face in that photo.",
+  "en": "You'd barely discern his face in that photo.",
   "tense": "conditional"
  },
  "disguise": {
   "es": "Se está disfrazando de camarero para la fiesta.",
-  "en": "He is disguising himself as a waiter for the party.",
+  "en": "He's disguising himself as a waiter for the party.",
   "tense": "present_continuous"
  },
  "endanger": {
@@ -10676,7 +10676,7 @@
  },
  "oversee": {
   "es": "Ella está supervisando toda la mudanza.",
-  "en": "She is overseeing the whole move.",
+  "en": "She's overseeing the whole move.",
   "tense": "present_continuous"
  },
  "perpetuate": {
@@ -11006,7 +11006,7 @@
  },
  "inheritance": {
   "es": "Está usando la herencia para abrir un taller.",
-  "en": "He is using the inheritance to open a workshop.",
+  "en": "He's using the inheritance to open a workshop.",
   "tense": "present_continuous"
  },
  "offspring": {
@@ -11121,7 +11121,7 @@
  },
  "frail": {
   "es": "Sin ejercicio, te volverías frágil muy pronto.",
-  "en": "Without exercise, you would become frail very soon.",
+  "en": "Without exercise, you'd become frail very soon.",
   "tense": "conditional"
  },
  "curly": {
@@ -11331,7 +11331,7 @@
  },
  "tentative": {
   "es": "Te daría una fecha provisional para el lunes.",
-  "en": "I would give you a tentative date for Monday.",
+  "en": "I'd give you a tentative date for Monday.",
   "tense": "conditional"
  },
  "ubiquitous": {
@@ -11366,7 +11366,7 @@
  },
  "circumvent": {
   "es": "Están eludiendo la norma con un vacío legal.",
-  "en": "They are circumventing the rule with a loophole.",
+  "en": "They're circumventing the rule with a loophole.",
   "tense": "present_continuous"
  },
  "culminate": {
@@ -11456,7 +11456,7 @@
  },
  "implore": {
   "es": "Le está implorando que se quede una noche más.",
-  "en": "She is imploring him to stay one more night.",
+  "en": "She's imploring him to stay one more night.",
   "tense": "present_continuous"
  },
  "instigate": {
@@ -11471,7 +11471,7 @@
  },
  "muster": {
   "es": "Reuniré el valor para hablar con ella.",
-  "en": "I will muster the courage to talk to her.",
+  "en": "I'll muster the courage to talk to her.",
   "tense": "future"
  },
  "nurture": {
@@ -11501,7 +11501,7 @@
  },
  "procrastinate": {
   "es": "Si procrastinas, perderás el plazo.",
-  "en": "If you procrastinate, you will miss the deadline.",
+  "en": "If you procrastinate, you'll miss the deadline.",
   "tense": "future"
  },
  "quash": {
@@ -11591,7 +11591,7 @@
  },
  "find out": {
   "es": "Pronto averiguaremos quién ganó el concurso.",
-  "en": "We will soon find out who won the contest.",
+  "en": "We'll soon find out who won the contest.",
   "tense": "future"
  },
  "figure out": {
@@ -11631,7 +11631,7 @@
  },
  "come across": {
   "es": "Te encontrarías con muchas palabras nuevas allí.",
-  "en": "You would come across many new words there.",
+  "en": "You'd come across many new words there.",
   "tense": "conditional"
  },
  "come up": {
@@ -11651,7 +11651,7 @@
  },
  "get by": {
   "es": "Nos las arreglaremos con un solo coche.",
-  "en": "We will get by with just one car.",
+  "en": "We'll get by with just one car.",
   "tense": "future"
  },
  "get over": {
@@ -11666,7 +11666,7 @@
  },
  "get through": {
   "es": "Está superando una semana muy difícil.",
-  "en": "He is getting through a very hard week.",
+  "en": "He's getting through a very hard week.",
   "tense": "present_continuous"
  },
  "give up": {
@@ -11711,7 +11711,7 @@
  },
  "put up with": {
   "es": "No aguantaré ese ruido toda la noche.",
-  "en": "I will not put up with that noise all night.",
+  "en": "I won't put up with that noise all night.",
   "tense": "future"
  },
  "put on": {
@@ -11741,7 +11741,7 @@
  },
  "look forward to": {
   "es": "Tengo muchas ganas de las vacaciones de verano.",
-  "en": "I am looking forward to the summer holidays.",
+  "en": "I'm looking forward to the summer holidays.",
   "tense": "future"
  },
  "look up to": {
@@ -11751,12 +11751,12 @@
  },
  "run out of": {
   "es": "Sin lista, te quedarías sin ideas para regalos.",
-  "en": "Without a list, you would run out of gift ideas.",
+  "en": "Without a list, you'd run out of gift ideas.",
   "tense": "conditional"
  },
  "run into": {
   "es": "Siempre me estoy encontrando con él en el metro.",
-  "en": "I am always running into him on the metro.",
+  "en": "I'm always running into him on the metro.",
   "tense": "present_continuous"
  },
  "take off": {
@@ -11771,7 +11771,7 @@
  },
  "take up": {
   "es": "El año que viene empezaré a hacer natación.",
-  "en": "Next year I will take up swimming.",
+  "en": "Next year I'll take up swimming.",
   "tense": "future"
  },
  "take after": {
@@ -11816,7 +11816,7 @@
  },
  "cut down": {
   "es": "Está reduciendo el café a una taza al día.",
-  "en": "He is cutting down coffee to one cup a day.",
+  "en": "He's cutting down coffee to one cup a day.",
   "tense": "present_continuous"
  },
  "cut off": {
@@ -11831,7 +11831,7 @@
  },
  "drop off": {
   "es": "Te dejaré en la estación de camino al trabajo.",
-  "en": "I will drop you off at the station on my way to work.",
+  "en": "I'll drop you off at the station on my way to work.",
   "tense": "future"
  },
  "end up": {
@@ -11871,7 +11871,7 @@
  },
  "hang on": {
   "es": "Yo esperaría un momento antes de colgar.",
-  "en": "I would hang on a moment before hanging up.",
+  "en": "I'd hang on a moment before hanging up.",
   "tense": "conditional"
  },
  "hold on": {
@@ -11891,7 +11891,7 @@
  },
  "make up": {
   "es": "Se inventará una excusa para no venir.",
-  "en": "He will make up an excuse not to come.",
+  "en": "He'll make up an excuse not to come.",
   "tense": "future"
  },
  "pass out": {
@@ -12011,7 +12011,7 @@
  },
  "milestone": {
   "es": "Mañana alcanzaremos un hito importante.",
-  "en": "Tomorrow we will reach an important milestone.",
+  "en": "Tomorrow we'll reach an important milestone.",
   "tense": "future"
  },
  "obstacle": {
@@ -12041,7 +12041,7 @@
  },
  "setback": {
   "es": "Un pequeño revés no arruinará el plan.",
-  "en": "A small setback will not ruin the plan.",
+  "en": "A small setback won't ruin the plan.",
   "tense": "future"
  },
  "shortcoming": {
@@ -12071,7 +12071,7 @@
  },
  "adamant": {
   "es": "Ella se mantendrá firme sobre la fecha.",
-  "en": "She will be adamant about the date.",
+  "en": "She'll be adamant about the date.",
   "tense": "future"
  },
  "ambivalent": {
@@ -12111,7 +12111,7 @@
  },
  "inadvertent": {
   "es": "Un error involuntario no cambiaría el resultado.",
-  "en": "An inadvertent mistake would not change the result.",
+  "en": "An inadvertent mistake wouldn't change the result.",
   "tense": "conditional"
  },
  "inconspicuous": {
@@ -12176,7 +12176,7 @@
  },
  "adhere": {
   "es": "El cartel no se está adhiriendo bien a la pared.",
-  "en": "The poster is not adhering well to the wall.",
+  "en": "The poster isn't adhering well to the wall.",
   "tense": "present_continuous"
  },
  "affirm": {
@@ -12296,7 +12296,7 @@
  },
  "fathom": {
   "es": "Todavía estoy intentando comprender sus motivos.",
-  "en": "I am still trying to fathom his reasons.",
+  "en": "I'm still trying to fathom his reasons.",
   "tense": "present_continuous"
  },
  "feign": {
@@ -12311,7 +12311,7 @@
  },
  "forgo": {
   "es": "Renunciaré al postre para llegar a tiempo.",
-  "en": "I will forgo dessert to arrive on time.",
+  "en": "I'll forgo dessert to arrive on time.",
   "tense": "future"
  },
  "forsake": {
@@ -12321,7 +12321,7 @@
  },
  "grapple": {
   "es": "Sin ayuda, lidiarías con el problema durante días.",
-  "en": "Without help, you would grapple with the problem for days.",
+  "en": "Without help, you'd grapple with the problem for days.",
   "tense": "conditional"
  },
  "harness": {
@@ -12386,7 +12386,7 @@
  },
  "liaise": {
   "es": "Ella está haciendo de enlace entre los dos equipos.",
-  "en": "She is liaising between the two teams.",
+  "en": "She's liaising between the two teams.",
   "tense": "present_continuous"
  },
  "mimic": {
@@ -12416,7 +12416,7 @@
  },
  "overhear": {
   "es": "Sin querer estoy oyendo vuestra conversación.",
-  "en": "I am accidentally overhearing your conversation.",
+  "en": "I'm accidentally overhearing your conversation.",
   "tense": "present_continuous"
  },
  "overturn": {
@@ -12476,7 +12476,7 @@
  },
  "reap": {
   "es": "Ahora está cosechando lo que sembró hace años.",
-  "en": "He is now reaping what he sowed years ago.",
+  "en": "He's now reaping what he sowed years ago.",
   "tense": "present_continuous"
  },
  "rebuke": {
@@ -12501,12 +12501,12 @@
  },
  "renovate": {
   "es": "Renovarían el teatro si consiguieran fondos.",
-  "en": "They would renovate the theatre if they got funding.",
+  "en": "They'd renovate the theatre if they got funding.",
   "tense": "conditional"
  },
  "repress": {
   "es": "Está reprimiendo la risa durante la ceremonia.",
-  "en": "He is repressing his laughter during the ceremony.",
+  "en": "He's repressing his laughter during the ceremony.",
   "tense": "present_continuous"
  },
  "reprimand": {
@@ -12531,7 +12531,7 @@
  },
  "scour": {
   "es": "Recorrería toda la tienda para encontrar esa pieza.",
-  "en": "I would scour the whole shop to find that part.",
+  "en": "I'd scour the whole shop to find that part.",
   "tense": "conditional"
  },
  "seep": {
@@ -12551,7 +12551,7 @@
  },
  "shudder": {
   "es": "Te estremecerás al oír esa historia.",
-  "en": "You will shudder when you hear that story.",
+  "en": "You'll shudder when you hear that story.",
   "tense": "future"
  },
  "sift": {
@@ -12581,7 +12581,7 @@
  },
  "stumble": {
   "es": "Tropezarás con esa raíz si no miras.",
-  "en": "You will stumble on that root if you don't look.",
+  "en": "You'll stumble on that root if you don't look.",
   "tense": "future"
  },
  "subside": {
@@ -12591,7 +12591,7 @@
  },
  "surpass": {
   "es": "Con práctica, superarías tu récord anterior.",
-  "en": "With practice, you would surpass your previous record.",
+  "en": "With practice, you'd surpass your previous record.",
   "tense": "conditional"
  },
  "swarm": {
@@ -12626,7 +12626,7 @@
  },
  "tread": {
   "es": "Está pisando con cuidado sobre el hielo.",
-  "en": "She is treading carefully on the ice.",
+  "en": "She's treading carefully on the ice.",
   "tense": "present_continuous"
  },
  "trickle": {
@@ -12681,12 +12681,12 @@
  },
  "wrestle": {
   "es": "Sin ayuda, lucharías con esa hoja de cálculo toda la tarde.",
-  "en": "Without help, you would wrestle with that spreadsheet all afternoon.",
+  "en": "Without help, you'd wrestle with that spreadsheet all afternoon.",
   "tense": "conditional"
  },
  "yearn": {
   "es": "Está anhelando volver a ver el mar.",
-  "en": "She is yearning to see the sea again.",
+  "en": "She's yearning to see the sea again.",
   "tense": "present_continuous"
  },
  "cohesive": {
@@ -12716,7 +12716,7 @@
  },
  "devout": {
   "es": "Se está volviendo más devota con los años.",
-  "en": "She is becoming more devout with the years.",
+  "en": "She's becoming more devout with the years.",
   "tense": "present_continuous"
  },
  "diffident": {
@@ -12831,7 +12831,7 @@
  },
  "prolific": {
   "es": "Con más tiempo, sería un autor prolífico.",
-  "en": "With more time, he would be a prolific author.",
+  "en": "With more time, he'd be a prolific author.",
   "tense": "conditional"
  },
  "prosaic": {
@@ -12866,7 +12866,7 @@
  },
  "staunch": {
   "es": "Se está volviendo una defensora incondicional del proyecto.",
-  "en": "She is becoming a staunch supporter of the project.",
+  "en": "She's becoming a staunch supporter of the project.",
   "tense": "present_continuous"
  },
  "steadfast": {
@@ -12941,7 +12941,7 @@
  },
  "fluctuation": {
   "es": "Habrá una pequeña fluctuación en el precio.",
-  "en": "There will be a small fluctuation in the price.",
+  "en": "There'll be a small fluctuation in the price.",
   "tense": "future"
  },
  "hindsight": {
@@ -13041,12 +13041,12 @@
  },
  "blend": {
   "es": "Yo mezclaría la fruta con un poco de yogur.",
-  "en": "I would blend the fruit with a little yogurt.",
+  "en": "I'd blend the fruit with a little yogurt.",
   "tense": "conditional"
  },
  "chop": {
   "es": "Está picando la cebolla muy fina.",
-  "en": "She is chopping the onion very finely.",
+  "en": "She's chopping the onion very finely.",
   "tense": "present_continuous"
  },
  "grate": {
@@ -13061,7 +13061,7 @@
  },
  "knead": {
   "es": "Amasarás la masa durante diez minutos.",
-  "en": "You will knead the dough for ten minutes.",
+  "en": "You'll knead the dough for ten minutes.",
   "tense": "future"
  },
  "marinate": {
@@ -13071,12 +13071,12 @@
  },
  "mash": {
   "es": "Yo haría puré las patatas con un poco de mantequilla.",
-  "en": "I would mash the potatoes with a little butter.",
+  "en": "I'd mash the potatoes with a little butter.",
   "tense": "conditional"
  },
  "peel": {
   "es": "Está pelando las manzanas para la tarta.",
-  "en": "He is peeling the apples for the pie.",
+  "en": "He's peeling the apples for the pie.",
   "tense": "present_continuous"
  },
  "roast": {
@@ -13091,7 +13091,7 @@
  },
  "whisk": {
   "es": "Batirás los huevos hasta que hagan espuma.",
-  "en": "You will whisk the eggs until they are frothy.",
+  "en": "You'll whisk the eggs until they're frothy.",
   "tense": "future"
  },
  "stale": {
@@ -13241,7 +13241,7 @@
  },
  "hemisphere": {
   "es": "En junio será invierno en el hemisferio sur.",
-  "en": "In June it will be winter in the southern hemisphere.",
+  "en": "In June it'll be winter in the southern hemisphere.",
   "tense": "future"
  },
  "latitude": {
@@ -13316,7 +13316,7 @@
  },
  "resignation": {
   "es": "Está aceptando el resultado con resignación.",
-  "en": "He is accepting the result with resignation.",
+  "en": "He's accepting the result with resignation.",
   "tense": "present_continuous"
  },
  "scorn": {
@@ -13391,7 +13391,7 @@
  },
  "magnitude": {
   "es": "Pronto veremos la magnitud del daño.",
-  "en": "We will soon see the magnitude of the damage.",
+  "en": "We'll soon see the magnitude of the damage.",
   "tense": "future"
  },
  "mindset": {
@@ -13436,7 +13436,7 @@
  },
  "pretext": {
   "es": "Está usando la lluvia como pretexto para no venir.",
-  "en": "He is using the rain as a pretext not to come.",
+  "en": "He's using the rain as a pretext not to come.",
   "tense": "present_continuous"
  },
  "proximity": {
@@ -13496,7 +13496,7 @@
  },
  "zeal": {
   "es": "Está trabajando con demasiado fervor esta semana.",
-  "en": "He is working with too much zeal this week.",
+  "en": "He's working with too much zeal this week.",
   "tense": "present_continuous"
  },
  "accentuate": {
@@ -13571,7 +13571,7 @@
  },
  "concoct": {
   "es": "Se inventará una historia para justificar el retraso.",
-  "en": "He will concoct a story to explain the delay.",
+  "en": "He'll concoct a story to explain the delay.",
   "tense": "future"
  },
  "confound": {
@@ -13581,7 +13581,7 @@
  },
  "curate": {
   "es": "Ella comisariaría una exposición preciosa con esas fotos.",
-  "en": "She would curate a lovely show with those photos.",
+  "en": "She'd curate a lovely show with those photos.",
   "tense": "conditional"
  },
  "debunk": {
@@ -13736,7 +13736,7 @@
  },
  "indulge": {
   "es": "Se está permitiendo un postre extra hoy.",
-  "en": "She is indulging in an extra dessert today.",
+  "en": "She's indulging in an extra dessert today.",
   "tense": "present_continuous"
  },
  "infiltrate": {
@@ -13751,7 +13751,7 @@
  },
  "inhale": {
   "es": "Inhalarás aire más limpio en la montaña.",
-  "en": "You will inhale cleaner air in the mountains.",
+  "en": "You'll inhale cleaner air in the mountains.",
   "tense": "future"
  },
  "jettison": {
@@ -13796,7 +13796,7 @@
  },
  "bewilderment": {
   "es": "Está mirando el formulario con desconcierto.",
-  "en": "She is looking at the form in bewilderment.",
+  "en": "She's looking at the form in bewilderment.",
   "tense": "present_continuous"
  },
  "candour": {
@@ -13946,7 +13946,7 @@
  },
  "fortitude": {
   "es": "Está afrontando el tratamiento con mucha entereza.",
-  "en": "She is facing the treatment with great fortitude.",
+  "en": "She's facing the treatment with great fortitude.",
   "tense": "present_continuous"
  },
  "futility": {
@@ -13976,7 +13976,7 @@
  },
  "hunch": {
   "es": "Estoy siguiendo una corazonada sobre el vecino.",
-  "en": "I am following a hunch about the neighbour.",
+  "en": "I'm following a hunch about the neighbour.",
   "tense": "present_continuous"
  },
  "impasse": {
@@ -14001,12 +14001,12 @@
  },
  "juncture": {
   "es": "En esta coyuntura, yo esperaría un poco más.",
-  "en": "At this juncture, I would wait a little longer.",
+  "en": "At this juncture, I'd wait a little longer.",
   "tense": "conditional"
  },
  "lapse": {
   "es": "Está teniendo un pequeño lapso de memoria.",
-  "en": "She is having a small lapse of memory.",
+  "en": "She's having a small lapse of memory.",
   "tense": "present_continuous"
  },
  "likeness": {
@@ -14061,12 +14061,12 @@
  },
  "poise": {
   "es": "Con práctica, hablarías con más aplomo.",
-  "en": "With practice, you would speak with more poise.",
+  "en": "With practice, you'd speak with more poise.",
   "tense": "conditional"
  },
  "predicament": {
   "es": "Se está metiendo en un buen aprieto con esa mentira.",
-  "en": "He is getting into quite a predicament with that lie.",
+  "en": "He's getting into quite a predicament with that lie.",
   "tense": "present_continuous"
  },
  "premonition": {
@@ -14126,7 +14126,7 @@
  },
  "stint": {
   "es": "Está haciendo un período de seis meses en la sucursal.",
-  "en": "He is doing a six-month stint at the branch.",
+  "en": "He's doing a six-month stint at the branch.",
   "tense": "present_continuous"
  },
  "throng": {
@@ -14321,7 +14321,7 @@
  },
  "egregious": {
   "es": "Ese será un error atroz si lo publican.",
-  "en": "That will be an egregious mistake if they publish it.",
+  "en": "That'll be an egregious mistake if they publish it.",
   "tense": "future"
  },
  "enigmatic": {
@@ -14351,7 +14351,7 @@
  },
  "fervent": {
   "es": "Se volverá un seguidor ferviente del club.",
-  "en": "He will become a fervent supporter of the club.",
+  "en": "He'll become a fervent supporter of the club.",
   "tense": "future"
  },
  "flagrant": {
@@ -14561,7 +14561,7 @@
  },
  "profuse": {
   "es": "Recibirás un agradecimiento profuso por la ayuda.",
-  "en": "You will get profuse thanks for the help.",
+  "en": "You'll get profuse thanks for the help.",
   "tense": "future"
  },
  "raucous": {
@@ -14726,7 +14726,7 @@
  },
  "cajole": {
   "es": "Está engatusando al niño para que coma verdura.",
-  "en": "She is cajoling the child into eating vegetables.",
+  "en": "She's cajoling the child into eating vegetables.",
   "tense": "present_continuous"
  },
  "castigate": {
@@ -14831,7 +14831,7 @@
  },
  "waver": {
   "es": "No vaciles cuando te pregunten el precio.",
-  "en": "You will not waver when they ask you the price.",
+  "en": "You won't waver when they ask you the price.",
   "tense": "future"
  },
  "disparate": {
@@ -14901,7 +14901,7 @@
  },
  "notwithstanding": {
   "es": "A pesar de la lluvia, aún iría a la feria.",
-  "en": "The rain notwithstanding, I would still go to the fair.",
+  "en": "The rain notwithstanding, I'd still go to the fair.",
   "tense": "conditional"
  },
  "albeit": {
@@ -14921,7 +14921,7 @@
  },
  "thereby": {
   "es": "Ahorrarás agua y, de ese modo, dinero.",
-  "en": "You will save water and thereby money.",
+  "en": "You'll save water and thereby money.",
   "tense": "future"
  },
  "nonetheless": {
@@ -14991,12 +14991,12 @@
  },
  "proviso": {
   "es": "Firmaría el contrato con una salvedad sobre el plazo.",
-  "en": "I would sign the contract with one proviso about the deadline.",
+  "en": "I'd sign the contract with one proviso about the deadline.",
   "tense": "conditional"
  },
  "standpoint": {
   "es": "Está explicando el problema desde el punto de vista del cliente.",
-  "en": "She is explaining the problem from the customer's standpoint.",
+  "en": "She's explaining the problem from the customer's standpoint.",
   "tense": "present_continuous"
  },
  "consortium": {
@@ -15026,7 +15026,7 @@
  },
  "debug": {
   "es": "Está depurando el inicio de sesión desde ayer.",
-  "en": "She is debugging the login flow since yesterday.",
+  "en": "She's debugging the login flow since yesterday.",
   "tense": "present_continuous"
  },
  "server": {
@@ -15056,7 +15056,7 @@
  },
  "repository": {
   "es": "Están moviendo el repositorio a otra organización.",
-  "en": "They are moving the repository to another organisation.",
+  "en": "They're moving the repository to another organisation.",
   "tense": "present_continuous"
  },
  "commit": {
@@ -15111,12 +15111,12 @@
  },
  "pull request": {
   "es": "Yo aprobaría ese pull request tras un cambio menor.",
-  "en": "I would approve that pull request after one small change.",
+  "en": "I'd approve that pull request after one small change.",
   "tense": "conditional"
  },
  "merge conflict": {
   "es": "Estoy resolviendo un conflicto de fusión en dos archivos.",
-  "en": "I am resolving a merge conflict in two files.",
+  "en": "I'm resolving a merge conflict in two files.",
   "tense": "present_continuous"
  },
  "rebase": {
@@ -15141,12 +15141,12 @@
  },
  "fork": {
   "es": "Yo haría un fork del proyecto antes de tocar nada.",
-  "en": "I would fork the project before changing anything.",
+  "en": "I'd fork the project before changing anything.",
   "tense": "conditional"
  },
  "changelog": {
   "es": "Está actualizando el registro de cambios antes de publicar.",
-  "en": "He is updating the changelog before the release.",
+  "en": "He's updating the changelog before the release.",
   "tense": "present_continuous"
  },
  "code review": {
@@ -15296,7 +15296,7 @@
  },
  "refactor": {
   "es": "Está refactorizando el módulo de pagos esta semana.",
-  "en": "He is refactoring the payments module this week.",
+  "en": "He's refactoring the payments module this week.",
   "tense": "present_continuous"
  },
  "legacy code": {

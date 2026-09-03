@@ -268,6 +268,26 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
           <span>Speak the word automatically on flashcards</span>
         </label>
 
+        <label className="field">
+          <span>
+            Review style
+            <small className="field-hint">
+              How your due words come back. <b>Flip card</b> = see it, flip,
+              rate yourself (No / Almost / Yes). <b>Type it</b> = write the
+              word / fill the gap / listen &amp; type. New words always start
+              as a flip card.
+            </small>
+          </span>
+          <select
+            value={settings.reviewStyle}
+            onChange={(e) => update({ reviewStyle: e.target.value })}
+          >
+            <option value="mixed">Mixed (default)</option>
+            <option value="flip">Mostly flip cards</option>
+            <option value="type">Always type it</option>
+          </select>
+        </label>
+
         <h3>Levels loaded</h3>
         <p className="muted small">
           Which CEFR levels are in your study rotation. Adding a level loads its

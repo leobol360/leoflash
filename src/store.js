@@ -98,6 +98,7 @@ const DEFAULT_SETTINGS = {
   voice: "",            // preferred speechSynthesis voice name
   voiceAccent: "any",   // "us" | "gb" | "any" — which English accent to offer
   autoSpeak: true,
+  reviewStyle: "mixed", // review exercises: "mixed" | "flip" | "type"
   enabledLevels: null,  // null = all levels; otherwise ["a1","a2",...] loaded into study
   levelsChosen: false,  // has the learner picked their levels yet?
 };

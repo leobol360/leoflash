@@ -49,16 +49,31 @@ export function buildSessionQueue(opts = {}) {
   });
 }
 
-// Which exercise a card gets, weighted by how well it's known.
-// Every review makes you produce the word — typing, never picking from a list.
-export function pickMode(card) {
+// Which exercise a card gets. A brand-new word (never studied) always gets
+// the flip card ("learn") — you can't type a word you've never seen. Every
+// review after that follows `style` (Settings → Review style):
+//   "flip"  → mostly the flip card, some typing
+//   "type"  → never the flip card: type / gap / listen only
+//   "mixed" → an even blend of flip + type + gap + listen (default)
+// `gap` (fill the blank in the example) needs the word reasonably known, so
+// it's held back until a card has a couple of reps.
+export function pickMode(card, style = "mixed") {
   if (!card || !card.seen) return "learn";
   const reps = card.reps || 0;
-  if (reps <= 1) return "type";
-  const roll = Math.random();
-  if (roll < 0.45) return "type";
-  if (roll < 0.75) return "gap";
-  return "listen";
+  const r = Math.random();
+
+  if (style === "flip") {
+    return r < 0.7 ? "learn" : r < 0.85 ? "type" : "listen";
+  }
+  if (style === "type") {
+    if (reps < 2) return r < 0.7 ? "type" : "listen";
+    return r < 0.4 ? "type" : r < 0.7 ? "gap" : "listen";
+  }
+  // mixed
+  if (reps < 2) {
+    return r < 0.34 ? "learn" : r < 0.7 ? "type" : "listen";
+  }
+  return r < 0.25 ? "learn" : r < 0.5 ? "type" : r < 0.78 ? "gap" : "listen";
 }
 
 function normalizeAnswer(text) {

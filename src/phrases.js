@@ -89,10 +89,13 @@ export function randomPhrase(tense, excludeId) {
 
 /* ---- similarity score + word diff that grade the typed answer ---- */
 
-// one word, lower-cased, apostrophes and punctuation stripped
-// ("don't" and "dont" both → "dont", "That's." → "thats").
+// one word, lower-cased, surrounding punctuation stripped. The apostrophe is
+// KEPT and required: "don't" ≠ "dont" — but a curly ’ still matches a plain '.
 const normWord = (w) =>
-  (w || "").toLowerCase().replace(/['’]/g, "").replace(/[.,!?;:"“”¿¡()]/g, "");
+  (w || "")
+    .toLowerCase()
+    .replace(/[’‘´`]/g, "'")
+    .replace(/[.,!?;:"“”¿¡()]/g, "");
 
 const tokenize = (text) =>
   (text || "")
