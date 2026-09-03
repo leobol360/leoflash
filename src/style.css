@@ -372,6 +372,17 @@ main { padding-bottom: 120px; padding-top: 8px; }
 .fb-es { font-size: .9rem; margin-top: 2px; }
 .fb-def { font-size: .9rem; color: var(--muted); margin-top: 4px; }
 .fb-ex { font-style: italic; font-size: .88rem; margin-top: 6px; }
+/* word-level diff of the typed answer vs the expected sentence */
+.diff { display: inline; }
+.diff-bad {
+  color: var(--bad); text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+.diff-near { color: var(--warn); text-decoration: underline dotted; }
+.diff-miss {
+  background: rgba(251,113,133,.18); color: var(--bad);
+  border-radius: 4px; padding: 0 3px; text-decoration: underline;
+}
 mark { background: var(--accent-soft); color: var(--accent-strong); padding: 0 3px; border-radius: 4px; }
 
 /* hover/tap glossary: Spanish translation for known English words */

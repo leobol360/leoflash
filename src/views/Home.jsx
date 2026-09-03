@@ -32,13 +32,18 @@ export default function Home({ onStart, onOpenLevels }) {
   }
 
   let statusLine;
-  if (dailyWorkLeft && summary.reviewBacklog) {
+  if (dailyWorkLeft && summary.newBrake === "hard") {
     statusLine = (
       <>
-        ⚠️ {summary.due} reviews due — about {Math.round(summary.due / summary.goal)}×
-        your daily goal of {summary.goal}. Your review backlog is growing: raise{" "}
-        <b>New words per day</b> in Settings, or fit in an extra session to catch
-        up.
+        ⚠️ {summary.due} reviews due — <b>new words are paused</b> until your
+        backlog drops below 80. Clear reviews first; this stops the pile-up.
+      </>
+    );
+  } else if (dailyWorkLeft && summary.newBrake === "soft") {
+    statusLine = (
+      <>
+        🚦 {summary.due} reviews due — new words are <b>capped at{" "}
+        {summary.newLeft}</b> today while you catch up (backlog over 50).
       </>
     );
   } else if (dailyWorkLeft && summary.reviewsFillGoal) {

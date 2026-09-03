@@ -195,8 +195,10 @@ export default function Study({ queue, onExit, onKeepGoing }) {
             </p>
           ) : workLeft ? (
             <p className="muted">
-              {summary.reviewBacklog
-                ? `⚠️ ${summary.due} reviews still due — your backlog is bigger than your daily goal. Raise "New words per day" in Settings, or keep clearing reviews.`
+              {summary.newBrake === "hard"
+                ? `⚠️ ${summary.due} reviews still due — new words are paused until you're back under 80. Keep clearing reviews.`
+                : summary.newBrake === "soft"
+                ? `🚦 ${summary.due} reviews still due — new words are capped at ${summary.newLeft} until your backlog drops below 50.`
                 : summary.reviewsFillGoal
                 ? `🔁 ${summary.due} review${summary.due === 1 ? "" : "s"} still due — reviews are filling today's goal, so no new words until you catch up.`
                 : [

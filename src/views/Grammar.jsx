@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from "react";
 import { GRAMMAR, GRAMMAR_GROUPS, GRAMMAR_TENSE } from "../grammar.js";
-import { randomPhrase, similarity } from "../phrases.js";
+import { randomPhrase, similarity, wordDiff } from "../phrases.js";
 import { Speech } from "../speech.js";
 
 const LEVEL_LABEL = { a1: "A1", a2: "A2", b1: "B1", b2: "B2" };
@@ -11,6 +11,9 @@ const verdictFor = (pct) =>
     : pct >= 60
     ? { fb: "fb-almost", label: "Almost" }
     : { fb: "fb-bad", label: "Not quite" };
+
+const diffClass = (state, badClass) =>
+  state === "ok" ? "" : state === "near" ? "diff-near" : badClass;
 
 export default function Grammar() {
   const [group, setGroup] = useState("all");
@@ -193,7 +196,7 @@ function TensePractice({ tense }) {
   const check = () => {
     if (!typed.trim() || answered) return;
     const match = similarity(typed, phrase.en);
-    setResult({ match, ...verdictFor(match) });
+    setResult({ match, ...verdictFor(match), diff: wordDiff(typed, phrase.en) });
     Speech.say(phrase.en);
   };
   const giveUp = () => {
@@ -203,6 +206,7 @@ function TensePractice({ tense }) {
       fb: "fb-bad",
       label: "No pasa nada",
       gaveUp: true,
+      diff: wordDiff(typed, phrase.en),
     });
     Speech.say(phrase.en);
   };
@@ -273,10 +277,27 @@ function TensePractice({ tense }) {
                 : `${result.label} — ${result.match}% match`}
             </div>
             <div className="fb-es">
-              You wrote: <b>{typed || "—"}</b>
+              You wrote:{" "}
+              {result.diff.typed.length ? (
+                <span className="diff">
+                  {result.diff.typed.map((w, i) => (
+                    <span key={i} className={diffClass(w.state, "diff-bad")}>
+                      {w.text}{" "}
+                    </span>
+                  ))}
+                </span>
+              ) : (
+                <b>—</b>
+              )}
             </div>
             <div className="fb-word">
-              <b>{phrase.en}</b>
+              <span className="diff">
+                {result.diff.reference.map((w, i) => (
+                  <b key={i} className={diffClass(w.state, "diff-miss")}>
+                    {w.text}{" "}
+                  </b>
+                ))}
+              </span>
               <button className="icon-btn" onClick={() => Speech.say(phrase.en)}>
                 🔊
               </button>

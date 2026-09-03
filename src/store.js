@@ -20,15 +20,40 @@ const MATURE_INTERVAL_DAYS = 21;   // interval at which a card counts as fully l
 const LEARNED_INTERVAL_DAYS = 7;   // interval at which a card counts as "learned"
 const MIN_STARTED_MASTERY = 0.08;  // a touched-but-weak card still shows some progress
 
+// New-card brake — the thing that keeps a review backlog from spiralling.
+// Once the reviews still waiting today pass these counts, throttle (then
+// stop) new material for the day so you clear the debt instead of growing it.
+const NEW_BRAKE_SOFT_DUE = 50;  // > this many reviews due  → at most NEW_BRAKE_CAP new
+const NEW_BRAKE_HARD_DUE = 80;  // > this many reviews due  → no new at all
+const NEW_BRAKE_CAP = 10;
+// Phrases run their own, smaller schedule, so they brake sooner.
+const PHRASE_BRAKE_SOFT_DUE = 30;
+const PHRASE_BRAKE_HARD_DUE = 50;
+
+// Apply the backlog brake to an already-computed new-item budget.
+function braked(rawLeft, dueCount, softAt, hardAt) {
+  if (dueCount > hardAt) return 0;
+  return dueCount > softAt ? Math.min(rawLeft, NEW_BRAKE_CAP) : rawLeft;
+}
+// New words today: the goal minus what's done minus the reviews still
+// waiting (reviews always take priority), then the backlog brake.
+function newBudget(goal, gradedToday, dueCount, softAt, hardAt) {
+  const left = Math.max(0, goal - gradedToday - dueCount);
+  return braked(left, dueCount, softAt, hardAt);
+}
+function brakeLevel(dueCount, softAt, hardAt) {
+  return dueCount > hardAt ? "hard" : dueCount > softAt ? "soft" : null;
+}
+
 // Phrase-translation practice runs its own SM-2 schedule (same tuning as
 // the word cards), kept in data.phraseCards. It never touches data.cards.
 const DEFAULT_PHRASES_PER_DAY = 10; // daily new-phrase target (Settings)
 const MAX_PHRASES_PER_DAY = 50;
-// A phrase you've typed perfectly more than this many times (or hit "Never"
-// on) is "parked": still mastered, but it comes back once a month instead of
-// dropping out of rotation for good. A real miss un-parks it.
+// A phrase answered 100 % verbatim this many times is "parked": mastered,
+// back in a month. Until then a perfect answer is just a "Yes" (3 days). A
+// real miss (< 60 %) resets the count. See gradePhrase.
 const PHRASE_MONTHLY_DAYS = 30;
-const PHRASE_PERFECT_TO_PARK = 4;
+const PHRASE_PERFECT_TO_PARK = 5;
 
 // One SM-2 step. Given { easeFactor, interval, reps, lapses } and a grade
 // (0 again · 1 hard · 2 good · 3 easy), return the next values.
@@ -426,7 +451,9 @@ const Store = {
     // first, new words only fill the slots left under it
     const goal = settings.newPerDay;
     const gradedToday = this.logToday().reviews; // every card answered today
-    const slotsForNew = Math.max(0, goal - gradedToday - due.length);
+    const slotsForNew = newBudget(
+      goal, gradedToday, due.length, NEW_BRAKE_SOFT_DUE, NEW_BRAKE_HARD_DUE
+    );
 
     shuffle(fresh); // mix levels
     const newCards = fresh.slice(0, slotsForNew);
@@ -454,15 +481,15 @@ const Store = {
     }
     const goal = settings.newPerDay;
     const gradedToday = this.logToday().reviews;
-    // new-word slots left today = goal minus what's already answered minus
-    // reviews still waiting (reviews always take priority)
-    const newLeft = Math.max(0, goal - gradedToday - due);
+    const newLeft = newBudget(
+      goal, gradedToday, due, NEW_BRAKE_SOFT_DUE, NEW_BRAKE_HARD_DUE
+    );
     // review pressure signals for the UI
     const reviewsFillGoal = due > 0 && gradedToday + due >= goal;
-    const reviewBacklog = due >= goal * 2;
+    const newBrake = brakeLevel(due, NEW_BRAKE_SOFT_DUE, NEW_BRAKE_HARD_DUE);
     return {
       due, learning, mature, unseen, known, newLeft, nextDue,
-      goal, reviewsFillGoal, reviewBacklog,
+      goal, reviewsFillGoal, newBrake,
     };
   },
 
@@ -797,11 +824,13 @@ const Store = {
       if (card.due <= today) due++;
       else if (!nextDue || card.due < nextDue) nextDue = card.due;
     }
-    const newLeft = Math.max(
+    const rawNewLeft = Math.max(
       0,
       this.phrasesPerDay() - this.phraseLogToday().newSeen
     );
-    return { due, unseen, newLeft, nextDue };
+    const newLeft = braked(rawNewLeft, due, PHRASE_BRAKE_SOFT_DUE, PHRASE_BRAKE_HARD_DUE);
+    const newBrake = brakeLevel(due, PHRASE_BRAKE_SOFT_DUE, PHRASE_BRAKE_HARD_DUE);
+    return { due, unseen, newLeft, nextDue, newBrake };
   },
 
   // A phrase-practice session: every phrase card that's due, then new phrase
@@ -837,9 +866,10 @@ const Store = {
       this.data.phraseCards[a].due.localeCompare(this.data.phraseCards[b].due)
     );
 
-    const newLeft = Math.max(
-      0,
-      this.phrasesPerDay() - this.phraseLogToday().newSeen
+    // backlog brake: throttle / stop new phrases when reviews pile up
+    const newLeft = braked(
+      Math.max(0, this.phrasesPerDay() - this.phraseLogToday().newSeen),
+      due.length, PHRASE_BRAKE_SOFT_DUE, PHRASE_BRAKE_HARD_DUE
     );
     shuffle(fresh);
     fresh.sort((a, b) => a[1] - b[1]); // priority first, shuffled within a priority
@@ -861,62 +891,48 @@ const Store = {
     return [...due, ...newCards];
   },
 
-  // "Never" for a phrase — park it: mastered, but still back once a month.
-  parkPhraseMonthly(id) {
+  // Grade an answered phrase straight from how close the typed English was
+  // to the expected sentence (0–100 %, punctuation/case/spacing ignored):
+  //   100 %  → counts a perfect answer; back in 3 days ("Yes") until you've
+  //            hit 5 of them, then it's parked — mastered, back in a month
+  //   90–99  → back in 3 days
+  //   60–89  → back in 2 days
+  //   0–59   → back tomorrow, and the perfect count resets
+  // Fixed steps, no SM-2 progression. Never touches data.cards.
+  // Returns { card, interval, perfect, parked }.
+  gradePhrase(id, match) {
     const card = this.phraseCard(id);
     const firstTime = !card.seen;
+    const pct = Math.max(0, Math.min(100, Math.round(match || 0)));
+    const got = pct >= 60;
+
+    if (pct >= 100) card.perfect = (card.perfect || 0) + 1;
+    else if (!got) card.perfect = 0;
+
+    const parked = pct >= 100 && (card.perfect || 0) >= PHRASE_PERFECT_TO_PARK;
+    let interval;
+    if (parked) interval = PHRASE_MONTHLY_DAYS;
+    else if (pct >= 90) interval = 3;
+    else if (pct >= 60) interval = 2;
+    else interval = 1;
+
     card.seen = true;
-    card.monthly = true;
-    card.interval = PHRASE_MONTHLY_DAYS;
-    card.reps = Math.max(card.reps, 3);
-    card.due = addDays(todayStr(), PHRASE_MONTHLY_DAYS);
-    card.lastReviewed = todayStr();
+    card.monthly = parked;
+    card.interval = interval;
     card.totalCount++;
-    card.correctCount++;
-    const log = this.phraseLogToday();
-    log.reviews++;
-    log.correct++;
-    if (firstTime) log.newSeen++;
-    this.updatePhraseStreak();
-    this.save();
-    return card;
-  },
-
-  // Grade an answered phrase with the same SM-2 step as the word cards.
-  // grade: 0 again | 1 hard | 2 good | 3 easy. `wasExact` = the learner typed
-  // the sentence verbatim. Never touches data.cards.
-  // Returns { card, interval } for the "next review in ..." line.
-  gradePhrase(id, grade, wasExact = false) {
-    const card = this.phraseCard(id);
-    const firstTime = !card.seen;
-    card.seen = true;
-    card.totalCount++;
-    if (grade >= 2) card.correctCount++;
-
-    if (wasExact) card.perfect = (card.perfect || 0) + 1;
-    else if (grade === 0) card.perfect = 0; // a real miss resets the run
-
-    Object.assign(card, sm2Step(card, grade));
-
-    if (grade === 0) {
-      card.monthly = false; // un-park: it needs work again
-    } else if (card.monthly || (card.perfect || 0) > PHRASE_PERFECT_TO_PARK) {
-      // mastered for good — keep it on a monthly refresher, not gone for good
-      card.monthly = true;
-      card.interval = PHRASE_MONTHLY_DAYS;
-    }
-
+    if (got) card.correctCount++;
+    if (!got) card.lapses = (card.lapses || 0) + 1;
     card.lastReviewed = todayStr();
-    card.due = addDays(todayStr(), card.interval);
+    card.due = addDays(todayStr(), interval);
 
     const log = this.phraseLogToday();
     log.reviews++;
-    if (grade >= 2) log.correct++;
+    if (got) log.correct++;
     if (firstTime) log.newSeen++;
     this.updatePhraseStreak();
 
     this.save();
-    return { card, interval: card.interval };
+    return { card, interval, perfect: card.perfect || 0, parked };
   },
 
   // True once ALL levels are loaded and their whole phrase deck has been

@@ -167,10 +167,10 @@ export default function Settings({ onOpenLevels, onRestored, onReset }) {
           hint={
             <>
               Your daily target. <b>Due reviews always come first</b> and count
-              toward it — new words only fill the slots left over. So on a heavy
-              review day you'll get fewer new words (or none), and the app tells
-              you when your reviews alone reach the target. A steady pace is
-              10–20.
+              toward it — new words only fill the slots left over. There's also a
+              backlog brake: over <b>50</b> reviews due caps new words at 10,
+              over <b>80</b> pauses them, so a pile-up can't spiral. A steady
+              pace is 10–20.
             </>
           }
           value={settings.newPerDay}

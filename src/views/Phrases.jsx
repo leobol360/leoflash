@@ -1,31 +1,33 @@
 import { useEffect, useRef, useState } from "react";
-import { getPhrase, similarity } from "../phrases.js";
+import { getPhrase, similarity, wordDiff } from "../phrases.js";
 import { Store } from "../store.js";
 import { useStore } from "../useStore.js";
 import { Speech } from "../speech.js";
 import { Ring, StatCard } from "../components/ui.jsx";
 import { lookup } from "../glossary.js";
-import { formatInterval, formatRelativeDate } from "../format.js";
-
-function backIn(days) {
-  if (days >= 28 && days <= 32) return "back in a month";
-  const label = formatInterval(days);
-  if (label === "today") return "back today";
-  return `back in ${label}`;
-}
+import { formatRelativeDate } from "../format.js";
 
 const DECK_DONE_MSG =
   "You've got a total grip on this phrase deck — contact Leonardo so he can refresh your phrases deck.";
 
-// The answer is graded automatically from how close it is to the expected
-// English (0–100% by edit distance). Bands, highest first:
-const GRADE_BANDS = [
-  { min: 91, grade: "never", label: "I know it", fb: "fb-ok" },
-  { min: 61, grade: 2, label: "Yes", fb: "fb-ok" },
-  { min: 26, grade: 1, label: "Almost", fb: "fb-almost" },
-  { min: 0, grade: 0, label: "No", fb: "fb-bad" },
-];
-const bandForMatch = (pct) => GRADE_BANDS.find((b) => pct >= b.min);
+const PERFECT_TO_PARK = 5;
+
+// className for one word of the typed/expected diff
+const diffClass = (state, badClass) =>
+  state === "ok" ? "" : state === "near" ? "diff-near" : badClass;
+
+// The verdict shown for a graded phrase. Bands by similarity % (spacing /
+// case / final punctuation ignored); a 100% answer only reads "I know it"
+// once it's the 5th perfect one — before that it's a "Yes".
+function verdict(match, parked) {
+  if (match >= 100)
+    return parked
+      ? { label: "I know it", fb: "fb-ok", back: "in a month" }
+      : { label: "Yes", fb: "fb-ok", back: "in 3 days" };
+  if (match >= 90) return { label: "Yes", fb: "fb-ok", back: "in 3 days" };
+  if (match >= 60) return { label: "Almost", fb: "fb-almost", back: "in 2 days" };
+  return { label: "No", fb: "fb-bad", back: "tomorrow" };
+}
 
 /* The English sentence as a hint: words the learner is actively studying
    (this phrase's target, plus any word with a live flashcard) are blanked;
@@ -103,11 +105,20 @@ function PhraseHome({ onStart }) {
   const deckDone = store.phraseDeckExhausted();
 
   let statusLine;
-  if (workLeft) {
+  if (workLeft && summary.newBrake === "hard") {
+    statusLine = (
+      <>
+        ⚠️ {summary.due} phrases to review — <b>new phrases are paused</b> until
+        the backlog clears. Reviews first.
+      </>
+    );
+  } else if (workLeft) {
     const parts = [];
     if (summary.due > 0)
       parts.push(`${summary.due} phrase${summary.due === 1 ? "" : "s"} to review`);
-    if (newWordsLeft)
+    if (summary.newBrake === "soft" && summary.newLeft > 0)
+      parts.push(`${summary.newLeft} new phrases today (capped — clearing backlog)`);
+    else if (newWordsLeft)
       parts.push(`${summary.newLeft} new phrase${summary.newLeft === 1 ? "" : "s"} today`);
     statusLine = <>{parts.join(" · ")}.</>;
   } else if (challengeDone) {
@@ -224,28 +235,26 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
   const check = () => {
     if (!typed.trim() || checked) return;
     const match = similarity(typed, phrase.en);
-    const band = bandForMatch(match);
-    let interval;
-    if (band.grade === "never") {
-      interval = Store.parkPhraseMonthly(phrase.id).interval;
-      setCorrect((n) => n + 1);
-    } else {
-      interval = Store.gradePhrase(phrase.id, band.grade, match === 100).interval;
-      if (band.grade >= 2) setCorrect((n) => n + 1);
-    }
-    setResult({ match, band, interval });
+    const { perfect, parked } = Store.gradePhrase(phrase.id, match);
+    if (match >= 60) setCorrect((n) => n + 1);
+    setResult({
+      match, band: verdict(match, parked), perfect, parked,
+      diff: wordDiff(typed, phrase.en),
+    });
     Speech.say(phrase.en);
   };
 
   // "I don't know it" — grade the phrase wrong right away and show the answer
   const giveUp = () => {
     if (checked) return;
-    const interval = Store.gradePhrase(phrase.id, 0, false).interval;
+    Store.gradePhrase(phrase.id, 0);
     setResult({
       match: similarity(typed, phrase.en),
-      band: GRADE_BANDS.find((b) => b.grade === 0),
-      interval,
+      band: verdict(0, false),
+      perfect: 0,
+      parked: false,
       gaveUp: true,
+      diff: wordDiff(typed, phrase.en),
     });
     Speech.say(phrase.en);
   };
@@ -293,7 +302,7 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
           </h1>
           <div className="done-stats">
             <div><b>{total}</b><span>phrases</span></div>
-            <div><b>{accuracy}%</b><span>got it (≥61%)</span></div>
+            <div><b>{accuracy}%</b><span>got it (≥60%)</span></div>
             <div><b>{Math.floor(seconds / 60)}m {seconds % 60}s</b><span>time</span></div>
           </div>
 
@@ -402,15 +411,37 @@ function PhraseSession({ queue, onExit, onKeepGoing }) {
                 : `${result.band.label} — ${result.match}% match`}
             </div>
             <div className="fb-es">
-              You wrote: <b>{typed || "—"}</b>
+              You wrote:{" "}
+              {result.diff.typed.length ? (
+                <span className="diff">
+                  {result.diff.typed.map((w, i) => (
+                    <span key={i} className={diffClass(w.state, "diff-bad")}>
+                      {w.text}{" "}
+                    </span>
+                  ))}
+                </span>
+              ) : (
+                <b>—</b>
+              )}
             </div>
             <div className="fb-word">
-              <b>{phrase.en}</b>
+              <span className="diff">
+                {result.diff.reference.map((w, i) => (
+                  <b key={i} className={diffClass(w.state, "diff-miss")}>
+                    {w.text}{" "}
+                  </b>
+                ))}
+              </span>
               <button className="icon-btn" onClick={() => Speech.say(phrase.en)}>🔊</button>
             </div>
             <div className="fb-es muted">{phrase.es}</div>
             <div className="fb-es muted">
-              {backIn(result.interval).replace(/^back/, "Back")}.
+              Back {result.band.back}.
+              {result.match >= 100 && !result.parked && (
+                <> · {result.perfect}/{PERFECT_TO_PARK} perfect — master it with{" "}
+                {PERFECT_TO_PARK - result.perfect} more.</>
+              )}
+              {result.parked && <> · mastered 🏆</>}
             </div>
           </div>
         )}

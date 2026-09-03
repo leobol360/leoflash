@@ -87,14 +87,19 @@ export function randomPhrase(tense, excludeId) {
   return p;
 }
 
-/* ---- similarity score that auto-grades the typed answer ---- */
+/* ---- similarity score + word diff that grade the typed answer ---- */
 
-const normalize = (text) =>
+// one word, lower-cased, apostrophes and punctuation stripped
+// ("don't" and "dont" both → "dont", "That's." → "thats").
+const normWord = (w) =>
+  (w || "").toLowerCase().replace(/['’]/g, "").replace(/[.,!?;:"“”¿¡()]/g, "");
+
+const tokenize = (text) =>
   (text || "")
-    .toLowerCase()
     .trim()
-    .replace(/[.,!?;:"'¿¡()]/g, "")
-    .replace(/\s+/g, " ");
+    .split(/\s+/)
+    .map((raw) => ({ raw, norm: normWord(raw) }))
+    .filter((t) => t.norm);
 
 function levenshtein(a, b) {
   const rows = a.length, cols = b.length;
@@ -110,13 +115,86 @@ function levenshtein(a, b) {
   return dist[rows][cols];
 }
 
-// 0–100: how close the typed answer is to the expected English, by edit
-// distance over the longer of the two (punctuation/·case ignored).
+// A word only counts as right if it's spelled exactly (after lower-case /
+// punctuation / apostrophe stripping). A misspelling — even a close one like
+// "require" for "requires" — is wrong; it's just shown differently.
+const CLOSE = 0.6; // typed word this similar to the target → "near" (still wrong)
+
+// Align the typed answer to the expected sentence, word by word — a plain
+// word-level edit distance (every non-exact word costs a full point). Drives
+// both the % score and the highlighted diff, so they always agree.
+function align(typed, reference) {
+  const a = tokenize(typed);
+  const b = tokenize(reference);
+  const m = a.length, n = b.length;
+  const cost = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) cost[i][0] = i;
+  for (let j = 0; j <= n; j++) cost[0][j] = j;
+  const same = (i, j) => a[i - 1].norm === b[j - 1].norm;
+  for (let i = 1; i <= m; i++)
+    for (let j = 1; j <= n; j++)
+      cost[i][j] = Math.min(
+        cost[i - 1][j] + 1,
+        cost[i][j - 1] + 1,
+        cost[i - 1][j - 1] + (same(i, j) ? 0 : 1)
+      );
+
+  // backtrack into an op list
+  const ops = [];
+  let i = m, j = n;
+  const hits = (x) => Math.abs(cost[i][j] - x) < 1e-9;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && hits(cost[i - 1][j - 1] + (same(i, j) ? 0 : 1))) {
+      if (same(i, j)) {
+        ops.push({ t: "match", a: a[i - 1].raw, b: b[j - 1].raw });
+      } else {
+        // wrong word — but flag a genuine typo so the UI can show it softer
+        const s = 1 - levenshtein(a[i - 1].norm, b[j - 1].norm) /
+          Math.max(a[i - 1].norm.length, b[j - 1].norm.length);
+        ops.push({ t: s >= CLOSE ? "near" : "sub", a: a[i - 1].raw, b: b[j - 1].raw });
+      }
+      i--; j--;
+    } else if (i > 0 && hits(cost[i - 1][j] + 1)) {
+      ops.push({ t: "ins", a: a[i - 1].raw }); i--;
+    } else {
+      ops.push({ t: "del", b: b[j - 1].raw }); j--;
+    }
+  }
+  ops.reverse();
+  return { ops, distance: cost[m][n], denom: Math.max(m, n) };
+}
+
+// 0–100: the share of words typed exactly right, in order
+// (case / punctuation / apostrophes ignored).
 export function similarity(typed, reference) {
-  const a = normalize(typed);
-  const b = normalize(reference);
-  if (!a && !b) return 100;
-  if (!a || !b) return 0;
-  if (a === b) return 100;
-  return Math.round((1 - levenshtein(a, b) / Math.max(a.length, b.length)) * 100);
+  const a = tokenize(typed), b = tokenize(reference);
+  if (!a.length && !b.length) return 100;
+  if (!a.length || !b.length) return 0;
+  const { distance, denom } = align(typed, reference);
+  return Math.round(Math.max(0, 1 - distance / denom) * 100);
+}
+
+// Word-by-word diff for the feedback panel.
+//   typed:     [{ text, state }]  state: "ok" | "near" | "bad" (wrong/extra)
+//   reference: [{ text, state }]  state: "ok" | "near" | "bad" (wrong/missed)
+export function wordDiff(typed, reference) {
+  const { ops } = align(typed, reference);
+  const typedOut = [], refOut = [];
+  for (const op of ops) {
+    if (op.t === "match") {
+      typedOut.push({ text: op.a, state: "ok" });
+      refOut.push({ text: op.b, state: "ok" });
+    } else if (op.t === "near") {
+      typedOut.push({ text: op.a, state: "near" });
+      refOut.push({ text: op.b, state: "near" });
+    } else if (op.t === "sub") {
+      typedOut.push({ text: op.a, state: "bad" });
+      refOut.push({ text: op.b, state: "bad" });
+    } else if (op.t === "ins") {
+      typedOut.push({ text: op.a, state: "bad" }); // extra word
+    } else {
+      refOut.push({ text: op.b, state: "bad" }); // missed word
+    }
+  }
+  return { typed: typedOut, reference: refOut };
 }
