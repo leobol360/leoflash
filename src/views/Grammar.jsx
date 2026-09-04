@@ -43,9 +43,9 @@ export default function Grammar() {
       <div className="card">
         <h2>Grammar · English tenses &amp; structures</h2>
         <p className="muted small">
-          Los tiempos verbales explicados con palabras sencillas: para qué sirve
-          cada uno, cuándo usarlo y cómo se forma (afirmativa, negativa y
-          pregunta), con ejemplos. Explicaciones en español, ejemplos en inglés.
+          Para qué sirve cada tiempo, cuándo usarlo y cómo se forma
+          (afirmativa, negativa, pregunta y pregunta con Wh-). Explicación en
+          español, ejemplos en inglés.
         </p>
       </div>
 
@@ -141,10 +141,10 @@ function GrammarCard({ g, open, onToggle }) {
 
           {g.signals && g.signals.length > 0 && (
             <div className="gr-block">
-              <h4>Palabras que suelen acompañarlo</h4>
+              <h4>Pistas típicas</h4>
               <p className="gr-hint">
-                Si ves alguna de estas palabras en una frase, casi siempre te está
-                pidiendo este tiempo verbal.
+                Palabras que suelen aparecer con este tiempo. Son una pista, no
+                una regla fija.
               </p>
               <div className="gr-signals">
                 {g.signals.map((s, i) => (
@@ -221,8 +221,7 @@ function TensePractice({ tense }) {
     <div className="gr-block gr-practice">
       <h4>Practica este tiempo</h4>
       <p className="gr-hint">
-        Escribe la frase en inglés. Es solo práctica: no cuenta para ningún
-        repaso, solo te dice qué tan cerca quedaste.
+        Escribe la frase en inglés. Es solo práctica: no cuenta para tu repaso.
       </p>
       <div className="gr-practice-es">{phrase.es}</div>
 
