@@ -37,8 +37,8 @@ export const tenseLabel = (key) => TENSE_LABEL.get(key) || "Present";
 // its tense is one the selected level(s) actually teach.
 const A1 = ["present", "imperative", "present_continuous"];
 const A2 = [...A1, "past", "future"];
-const B1 = [...A2, "present_perfect", "past_continuous"];
-const B2 = [...B1, "conditional"];
+const B1 = [...A2, "present_perfect", "past_continuous", "conditional"];
+const B2 = [...B1];
 export const TENSES_BY_LEVEL = { a1: A1, a2: A2, b1: B1, b2: B2, software: B2 };
 
 // Union of the tenses taught across a set of levels.

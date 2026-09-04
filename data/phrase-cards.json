@@ -1,8 +1,8 @@
 {
  "time": {
-  "es": "No tenemos tiempo.",
-  "en": "We don't have time.",
-  "tense": "present"
+  "es": "Se nos está acabando el tiempo.",
+  "en": "We're running out of time.",
+  "tense": "present_continuous"
  },
  "year": {
   "es": "Fue un buen año.",
@@ -30,9 +30,9 @@
   "tense": "present"
  },
  "thing": {
-  "es": "Es lo único que importa.",
-  "en": "It's the only thing that matters.",
-  "tense": "present"
+  "es": "Las cosas están mejorando.",
+  "en": "Things are getting better.",
+  "tense": "present_continuous"
  },
  "woman": {
   "es": "La mujer del abrigo rojo.",
@@ -55,9 +55,9 @@
   "tense": "present"
  },
  "school": {
-  "es": "Los niños están en la escuela.",
-  "en": "The children are at school.",
-  "tense": "present"
+  "es": "Los niños van andando al colegio.",
+  "en": "The children are walking to school.",
+  "tense": "present_continuous"
  },
  "state": {
   "es": "El coche está en mal estado.",
@@ -85,9 +85,9 @@
   "tense": "present"
  },
  "problem": {
-  "es": "No hay ningún problema.",
-  "en": "There's no problem.",
-  "tense": "present"
+  "es": "El coche nos está dando problemas otra vez.",
+  "en": "The car is giving us problems again.",
+  "tense": "present_continuous"
  },
  "hand": {
   "es": "Dame la mano.",
@@ -120,9 +120,9 @@
   "tense": "present"
  },
  "system": {
-  "es": "El sistema no funciona.",
-  "en": "The system isn't working.",
-  "tense": "present"
+  "es": "El sistema se está actualizando ahora.",
+  "en": "The system is updating now.",
+  "tense": "present_continuous"
  },
  "program": {
   "es": "¿Qué programa estás viendo?",
@@ -165,9 +165,9 @@
   "tense": "present"
  },
  "water": {
-  "es": "El agua está muy fría.",
-  "en": "The water is very cold.",
-  "tense": "present"
+  "es": "El agua está hirviendo.",
+  "en": "The water is boiling.",
+  "tense": "present_continuous"
  },
  "room": {
   "es": "Tu habitación está arriba.",
@@ -255,9 +255,9 @@
   "tense": "past"
  },
  "friend": {
-  "es": "Es mi mejor amigo.",
-  "en": "He's my best friend.",
-  "tense": "present"
+  "es": "Un amigo se está quedando con nosotros esta semana.",
+  "en": "A friend is staying with us this week.",
+  "tense": "present_continuous"
  },
  "father": {
   "es": "Mi padre trabaja mucho.",
@@ -435,9 +435,9 @@
   "tense": "present"
  },
  "teacher": {
-  "es": "Nuestra profesora es simpática.",
-  "en": "Our teacher is nice.",
-  "tense": "present"
+  "es": "El profesor está escribiendo en la pizarra.",
+  "en": "The teacher is writing on the board.",
+  "tense": "present_continuous"
  },
  "force": {
   "es": "Abrió la puerta con fuerza.",
@@ -525,9 +525,9 @@
   "tense": "past"
  },
  "effect": {
-  "es": "El café no me hace efecto.",
-  "en": "Coffee has no effect on me.",
-  "tense": "present"
+  "es": "La medicina está empezando a hacer efecto.",
+  "en": "The medicine is starting to take effect.",
+  "tense": "present_continuous"
  },
  "use": {
   "es": "No le veo el uso.",
@@ -605,9 +605,9 @@
   "tense": "present"
  },
  "wife": {
-  "es": "Su esposa es médica.",
-  "en": "His wife is a doctor.",
-  "tense": "present"
+  "es": "Su mujer está trabajando hasta tarde hoy.",
+  "en": "His wife is working late tonight.",
+  "tense": "present_continuous"
  },
  "police": {
   "es": "Llama a la policía.",
@@ -635,9 +635,9 @@
   "tense": "present"
  },
  "son": {
-  "es": "Su hijo tiene diez años.",
-  "en": "Their son is ten years old.",
-  "tense": "present"
+  "es": "Su hijo empieza el colegio este año.",
+  "en": "Their son is starting school this year.",
+  "tense": "present_continuous"
  },
  "view": {
   "es": "Desde aquí hay buenas vistas.",
@@ -675,9 +675,9 @@
   "tense": "past"
  },
  "building": {
-  "es": "El edificio es muy alto.",
-  "en": "The building is very tall.",
-  "tense": "present"
+  "es": "Están pintando el edificio.",
+  "en": "They're painting the building.",
+  "tense": "present_continuous"
  },
  "action": {
   "es": "Necesitamos actuar ya.",
@@ -705,9 +705,9 @@
   "tense": "imperative"
  },
  "space": {
-  "es": "No hay espacio en el coche.",
-  "en": "There's no space in the car.",
-  "tense": "present"
+  "es": "Los niños están ocupando todo el espacio.",
+  "en": "The kids are taking up all the space.",
+  "tense": "present_continuous"
  },
  "ground": {
   "es": "El suelo está mojado.",
@@ -725,9 +725,9 @@
   "tense": "present"
  },
  "news": {
-  "es": "Tengo buenas noticias.",
-  "en": "I have good news.",
-  "tense": "present"
+  "es": "La noticia se está extendiendo rápido.",
+  "en": "The news is spreading fast.",
+  "tense": "present_continuous"
  },
  "food": {
   "es": "La comida está lista.",
@@ -780,9 +780,9 @@
   "tense": "present"
  },
  "language": {
-  "es": "El español es un idioma bonito.",
-  "en": "Spanish is a beautiful language.",
-  "tense": "present"
+  "es": "Está aprendiendo un idioma nuevo.",
+  "en": "She's learning a new language.",
+  "tense": "present_continuous"
  },
  "century": {
   "es": "Estamos en el siglo veintiuno.",
@@ -800,9 +800,9 @@
   "tense": "present"
  },
  "patient": {
-  "es": "El paciente ya está mejor.",
-  "en": "The patient is better now.",
-  "tense": "present"
+  "es": "El paciente está descansando ahora.",
+  "en": "The patient is resting now.",
+  "tense": "present_continuous"
  },
  "study": {
   "es": "Tengo que estudiar esta noche.",
@@ -840,9 +840,9 @@
   "tense": "present"
  },
  "do": {
-  "es": "¿Qué vas a hacer hoy?",
-  "en": "What are you going to do today?",
-  "tense": "present"
+  "es": "¿Qué estás haciendo ahora mismo?",
+  "en": "What are you doing right now?",
+  "tense": "present_continuous"
  },
  "say": {
   "es": "No sé qué decir.",
@@ -990,9 +990,9 @@
   "tense": "present"
  },
  "run": {
-  "es": "Corre, que llegamos tarde.",
-  "en": "Run, we're late.",
-  "tense": "present"
+  "es": "Los niños están corriendo en el parque.",
+  "en": "The kids are running in the park.",
+  "tense": "present_continuous"
  },
  "move": {
   "es": "No te muevas.",
@@ -1045,9 +1045,9 @@
   "tense": "future"
  },
  "meet": {
-  "es": "Encantado de conocerte.",
-  "en": "Nice to meet you.",
-  "tense": "present"
+  "es": "Esta noche nos vemos con los vecinos.",
+  "en": "We're meeting the neighbours tonight.",
+  "tense": "present_continuous"
  },
  "include": {
   "es": "El precio incluye todo.",
@@ -1065,9 +1065,9 @@
   "tense": "present"
  },
  "learn": {
-  "es": "Quiero aprender francés.",
-  "en": "I want to learn French.",
-  "tense": "present"
+  "es": "Está aprendiendo a conducir.",
+  "en": "She's learning to drive.",
+  "tense": "present_continuous"
  },
  "lead": {
   "es": "Tú guías y yo te sigo.",
@@ -1095,9 +1095,9 @@
   "tense": "imperative"
  },
  "create": {
-  "es": "Quiero crear algo nuevo.",
-  "en": "I want to create something new.",
-  "tense": "present"
+  "es": "La clase está haciendo un mural.",
+  "en": "The class is creating a mural.",
+  "tense": "present_continuous"
  },
  "speak": {
   "es": "Habla más despacio.",
@@ -1130,9 +1130,9 @@
   "tense": "present"
  },
  "win": {
-  "es": "Vamos a ganar.",
-  "en": "We're going to win.",
-  "tense": "present"
+  "es": "Nuestro equipo va ganando dos a uno.",
+  "en": "Our team is winning two to one.",
+  "tense": "present_continuous"
  },
  "offer": {
   "es": "Me ofreció ayuda.",
@@ -1175,9 +1175,9 @@
   "tense": "future"
  },
  "build": {
-  "es": "Van a construir un puente.",
-  "en": "They're going to build a bridge.",
-  "tense": "present"
+  "es": "Están construyendo un colegio nuevo aquí.",
+  "en": "They're building a new school here.",
+  "tense": "present_continuous"
  },
  "stay": {
   "es": "Quédate un rato más.",
@@ -1210,9 +1210,9 @@
   "tense": "present"
  },
  "raise": {
-  "es": "Levanta la mano si sabes la respuesta.",
-  "en": "Raise your hand if you know the answer.",
-  "tense": "present"
+  "es": "El colegio está recaudando dinero para libros.",
+  "en": "The school is raising money for books.",
+  "tense": "present_continuous"
  },
  "pass": {
   "es": "Pásame la sal.",
@@ -1245,9 +1245,9 @@
   "tense": "future"
  },
  "explain": {
-  "es": "Explícamelo otra vez.",
-  "en": "Explain it to me again.",
-  "tense": "present"
+  "es": "El profesor está explicando los deberes.",
+  "en": "The teacher is explaining the homework.",
+  "tense": "present_continuous"
  },
  "hope": {
   "es": "Espero que sí.",
@@ -1315,9 +1315,9 @@
   "tense": "present"
  },
  "choose": {
-  "es": "Elige tú.",
-  "en": "You choose.",
-  "tense": "present"
+  "es": "Estamos eligiendo un nombre para el bebé.",
+  "en": "We're choosing a name for the baby.",
+  "tense": "present_continuous"
  },
  "cause": {
   "es": "El fuego causó mucho daño.",
@@ -1420,9 +1420,9 @@
   "tense": "imperative"
  },
  "visit": {
-  "es": "Voy a visitar a mis abuelos.",
-  "en": "I'm going to visit my grandparents.",
-  "tense": "present"
+  "es": "Mis primos vienen de visita este fin de semana.",
+  "en": "My cousins are visiting this weekend.",
+  "tense": "present_continuous"
  },
  "fly": {
   "es": "El avión vuela muy alto.",
@@ -2220,9 +2220,9 @@
   "tense": "present"
  },
  "kitchen": {
-  "es": "La cocina es pequeña.",
-  "en": "The kitchen is small.",
-  "tense": "present"
+  "es": "Está limpiando la cocina.",
+  "en": "He's cleaning the kitchen.",
+  "tense": "present_continuous"
  },
  "bed": {
   "es": "Vete a la cama.",
@@ -2500,9 +2500,9 @@
   "tense": "present"
  },
  "egg": {
-  "es": "Quiero dos huevos.",
-  "en": "I want two eggs.",
-  "tense": "present"
+  "es": "Freiré dos huevos para el desayuno.",
+  "en": "I'll fry two eggs for breakfast.",
+  "tense": "future"
  },
  "coffee": {
   "es": "¿Quieres un café?",
@@ -2525,9 +2525,9 @@
   "tense": "present"
  },
  "dinner": {
-  "es": "La cena está en el horno.",
-  "en": "Dinner is in the oven.",
-  "tense": "present"
+  "es": "Estoy haciendo la cena ahora mismo.",
+  "en": "I'm making dinner right now.",
+  "tense": "present_continuous"
  },
  "holiday": {
   "es": "Necesito unas vacaciones.",
@@ -2540,9 +2540,9 @@
   "tense": "present"
  },
  "birthday": {
-  "es": "Mañana es mi cumpleaños.",
-  "en": "Tomorrow is my birthday.",
-  "tense": "present"
+  "es": "Será su cumpleaños la semana que viene.",
+  "en": "It'll be her birthday next week.",
+  "tense": "future"
  },
  "clock": {
   "es": "El reloj va adelantado.",
@@ -2555,9 +2555,9 @@
   "tense": "past"
  },
  "cup": {
-  "es": "¿Me pones una taza de té?",
-  "en": "Can I have a cup of tea?",
-  "tense": "present"
+  "es": "Está lavando las tazas.",
+  "en": "She's washing the cups.",
+  "tense": "present_continuous"
  },
  "plate": {
   "es": "Tu plato está frío.",
@@ -2570,9 +2570,9 @@
   "tense": "present"
  },
  "box": {
-  "es": "¿Qué hay en la caja?",
-  "en": "What's in the box?",
-  "tense": "present"
+  "es": "Yo llevaré la caja pesada.",
+  "en": "I'll carry the heavy box.",
+  "tense": "future"
  },
  "bottle": {
   "es": "Hay una botella de agua en la nevera.",
@@ -2585,9 +2585,9 @@
   "tense": "past"
  },
  "gift": {
-  "es": "Es un regalo para ti.",
-  "en": "It's a gift for you.",
-  "tense": "present"
+  "es": "Estoy envolviendo tu regalo ahora.",
+  "en": "I'm wrapping your gift now.",
+  "tense": "present_continuous"
  },
  "present": {
   "es": "Aún no he abierto los regalos.",
@@ -2600,9 +2600,9 @@
   "tense": "present"
  },
  "wedding": {
-  "es": "Su boda fue preciosa.",
-  "en": "Their wedding was beautiful.",
-  "tense": "past"
+  "es": "Su boda será en junio.",
+  "en": "Their wedding will be in June.",
+  "tense": "future"
  },
  "meeting": {
   "es": "La reunión terminó tarde.",
@@ -2615,9 +2615,9 @@
   "tense": "past"
  },
  "journey": {
-  "es": "El viaje fue muy largo.",
-  "en": "The journey was very long.",
-  "tense": "past"
+  "es": "Estamos disfrutando el viaje.",
+  "en": "We're enjoying the journey.",
+  "tense": "present_continuous"
  },
  "message": {
   "es": "Déjame un mensaje.",
@@ -2640,9 +2640,9 @@
   "tense": "present"
  },
  "answer": {
-  "es": "Necesito una respuesta hoy.",
-  "en": "I need an answer today.",
-  "tense": "present"
+  "es": "Te daré una respuesta mañana.",
+  "en": "I'll give you an answer tomorrow.",
+  "tense": "future"
  },
  "example": {
   "es": "Dame un ejemplo.",
@@ -2670,9 +2670,9 @@
   "tense": "present"
  },
  "brother": {
-  "es": "Mi hermano vive en Madrid.",
-  "en": "My brother lives in Madrid.",
-  "tense": "present"
+  "es": "Mi hermano nos está visitando esta semana.",
+  "en": "My brother is visiting us this week.",
+  "tense": "present_continuous"
  },
  "sister": {
   "es": "Mi hermana es mayor que yo.",
@@ -2685,9 +2685,9 @@
   "tense": "present"
  },
  "grandmother": {
-  "es": "Mi abuela hace un pastel riquísimo.",
-  "en": "My grandmother makes a delicious cake.",
-  "tense": "present"
+  "es": "Mi abuela cumplirá noventa años pronto.",
+  "en": "My grandmother will turn ninety soon.",
+  "tense": "future"
  },
  "grandfather": {
   "es": "Mi abuelo tiene noventa años.",
@@ -2705,9 +2705,9 @@
   "tense": "present_continuous"
  },
  "neighbour": {
-  "es": "Mi vecino es muy ruidoso.",
-  "en": "My neighbour is very noisy.",
-  "tense": "present"
+  "es": "Nuestro vecino está pintando su valla.",
+  "en": "Our neighbour is painting his fence.",
+  "tense": "present_continuous"
  },
  "colleague": {
   "es": "Un compañero de trabajo me ayudó.",
@@ -2720,9 +2720,9 @@
   "tense": "present"
  },
  "customer": {
-  "es": "El cliente siempre tiene razón.",
-  "en": "The customer is always right.",
-  "tense": "present"
+  "es": "Un cliente te devolverá la llamada.",
+  "en": "A customer will call you back.",
+  "tense": "future"
  },
  "guest": {
   "es": "Tenemos invitados esta noche.",
@@ -2740,9 +2740,9 @@
   "tense": "present"
  },
  "adult": {
-  "es": "Los adultos pagan más.",
-  "en": "Adults pay more.",
-  "tense": "present"
+  "es": "Los adultos están hablando en la cocina.",
+  "en": "The adults are talking in the kitchen.",
+  "tense": "present_continuous"
  },
  "nurse": {
   "es": "La enfermera fue muy amable.",
@@ -2755,9 +2755,9 @@
   "tense": "present"
  },
  "driver": {
-  "es": "El conductor no dijo nada.",
-  "en": "The driver said nothing.",
-  "tense": "past"
+  "es": "El conductor nos recogerá a las ocho.",
+  "en": "The driver will pick us up at eight.",
+  "tense": "future"
  },
  "worker": {
   "es": "Los trabajadores están en huelga.",
@@ -2770,9 +2770,9 @@
   "tense": "present"
  },
  "owner": {
-  "es": "El dueño no está hoy.",
-  "en": "The owner isn't here today.",
-  "tense": "present"
+  "es": "El dueño nos está enseñando el piso.",
+  "en": "The owner is showing us the flat.",
+  "tense": "present_continuous"
  },
  "president": {
   "es": "El presidente habló ayer.",
@@ -2785,9 +2785,9 @@
   "tense": "past"
  },
  "queen": {
-  "es": "La reina abrió el hospital.",
-  "en": "The queen opened the hospital.",
-  "tense": "past"
+  "es": "La reina visitará el pueblo mañana.",
+  "en": "The queen will visit the town tomorrow.",
+  "tense": "future"
  },
  "artist": {
   "es": "Es una artista muy conocida.",
@@ -2800,9 +2800,9 @@
   "tense": "present"
  },
  "actor": {
-  "es": "Ese actor sale en muchas películas.",
-  "en": "That actor is in many films.",
-  "tense": "present"
+  "es": "Ese actor está rodando una película nueva.",
+  "en": "That actor is filming a new movie.",
+  "tense": "present_continuous"
  },
  "singer": {
   "es": "La cantante tiene una voz preciosa.",
@@ -2815,9 +2815,9 @@
   "tense": "present"
  },
  "scientist": {
-  "es": "Los científicos siguen estudiándolo.",
-  "en": "Scientists are still studying it.",
-  "tense": "present"
+  "es": "Los científicos probarán la vacuna el año que viene.",
+  "en": "Scientists will test the vaccine next year.",
+  "tense": "future"
  },
  "lawyer": {
   "es": "Necesito hablar con un abogado.",
@@ -2830,9 +2830,9 @@
   "tense": "present"
  },
  "soldier": {
-  "es": "El soldado volvió a casa.",
-  "en": "The soldier went home.",
-  "tense": "past"
+  "es": "El soldado está vigilando la entrada.",
+  "en": "The soldier is guarding the gate.",
+  "tense": "present_continuous"
  },
  "tourist": {
   "es": "Hay muchos turistas en verano.",
@@ -2845,9 +2845,9 @@
   "tense": "present"
  },
  "start": {
-  "es": "Vamos a empezar ya.",
-  "en": "Let's start now.",
-  "tense": "present"
+  "es": "La película empezará a las nueve.",
+  "en": "The film will start at nine.",
+  "tense": "future"
  },
  "travel": {
   "es": "Me encanta viajar.",
@@ -2865,9 +2865,9 @@
   "tense": "past"
  },
  "jump": {
-  "es": "El gato saltó a la mesa.",
-  "en": "The cat jumped onto the table.",
-  "tense": "past"
+  "es": "Los niños están saltando en la cama.",
+  "en": "The kids are jumping on the bed.",
+  "tense": "present_continuous"
  },
  "hold": {
   "es": "Sujétame esto un momento.",
@@ -2895,9 +2895,9 @@
   "tense": "imperative"
  },
  "knock": {
-  "es": "Alguien llamó a la puerta.",
-  "en": "Someone knocked at the door.",
-  "tense": "past"
+  "es": "Llamaré dos veces para que sepas que soy yo.",
+  "en": "I'll knock twice so you know it's me.",
+  "tense": "future"
  },
  "ring": {
   "es": "El teléfono está sonando.",
@@ -2925,9 +2925,9 @@
   "tense": "future"
  },
  "sleep": {
-  "es": "Necesito dormir más.",
-  "en": "I need to sleep more.",
-  "tense": "present"
+  "es": "El bebé está durmiendo ahora.",
+  "en": "The baby is sleeping now.",
+  "tense": "present_continuous"
  },
  "wake": {
   "es": "Me desperté muy temprano.",
@@ -2940,9 +2940,9 @@
   "tense": "past"
  },
  "rest": {
-  "es": "Descansa un rato.",
-  "en": "Rest for a while.",
-  "tense": "present"
+  "es": "Descansaremos después de comer.",
+  "en": "We'll rest after lunch.",
+  "tense": "future"
  },
  "wash": {
   "es": "Lávate las manos.",
@@ -2955,9 +2955,9 @@
   "tense": "present"
  },
  "cook": {
-  "es": "Hoy cocino yo.",
-  "en": "I'm cooking today.",
-  "tense": "present"
+  "es": "Está cocinando pasta para todos.",
+  "en": "He's cooking pasta for everyone.",
+  "tense": "present_continuous"
  },
  "fix": {
   "es": "¿Puedes arreglar la luz?",
@@ -2970,9 +2970,9 @@
   "tense": "present"
  },
  "paint": {
-  "es": "Vamos a pintar la pared.",
-  "en": "Let's paint the wall.",
-  "tense": "present"
+  "es": "Pintaré la puerta de blanco.",
+  "en": "I'll paint the door white.",
+  "tense": "future"
  },
  "cost": {
   "es": "¿Cuánto cuesta esto?",
@@ -2985,9 +2985,9 @@
   "tense": "present"
  },
  "borrow": {
-  "es": "¿Me prestas cinco euros?",
-  "en": "Can I borrow five euros?",
-  "tense": "present"
+  "es": "Hoy se está llevando prestada mi bici.",
+  "en": "He's borrowing my bike today.",
+  "tense": "present_continuous"
  },
  "lend": {
   "es": "¿Me puedes prestar el coche?",
@@ -3000,9 +3000,9 @@
   "tense": "present"
  },
  "count": {
-  "es": "Cuenta hasta diez.",
-  "en": "Count to ten.",
-  "tense": "present"
+  "es": "El profesor contará a los alumnos.",
+  "en": "The teacher will count the students.",
+  "tense": "future"
  },
  "measure": {
   "es": "Mide la mesa primero.",
@@ -3020,9 +3020,9 @@
   "tense": "imperative"
  },
  "remove": {
-  "es": "Quita esa silla de ahí.",
-  "en": "Remove that chair from there.",
-  "tense": "present"
+  "es": "Están quitando el cartel viejo.",
+  "en": "They're removing the old sign.",
+  "tense": "present_continuous"
  },
  "put": {
   "es": "Pon el abrigo en la silla.",
@@ -3050,9 +3050,9 @@
   "tense": "past"
  },
  "midnight": {
-  "es": "Llegamos a medianoche.",
-  "en": "We arrived at midnight.",
-  "tense": "past"
+  "es": "La tienda cerrará a medianoche.",
+  "en": "The shop will close at midnight.",
+  "tense": "future"
  },
  "noon": {
   "es": "Nos vemos al mediodía.",
@@ -3070,9 +3070,9 @@
   "tense": "past"
  },
  "schedule": {
-  "es": "Tengo un horario muy apretado.",
-  "en": "I have a very tight schedule.",
-  "tense": "present"
+  "es": "Estoy revisando el horario ahora.",
+  "en": "I'm checking the schedule now.",
+  "tense": "present_continuous"
  },
  "calendar": {
   "es": "Apúntalo en el calendario.",
@@ -3090,9 +3090,9 @@
   "tense": "present"
  },
  "occasion": {
-  "es": "Es una ocasión especial.",
-  "en": "It's a special occasion.",
-  "tense": "present"
+  "es": "Esta será una ocasión especial.",
+  "en": "This will be a special occasion.",
+  "tense": "future"
  },
  "once": {
   "es": "Solo lo he visto una vez.",
@@ -3115,9 +3115,9 @@
   "tense": "imperative"
  },
  "suddenly": {
-  "es": "De repente empezó a llover.",
-  "en": "Suddenly it started to rain.",
-  "tense": "past"
+  "es": "El tiempo está cambiando de repente.",
+  "en": "The weather is suddenly changing.",
+  "tense": "present_continuous"
  },
  "finally": {
   "es": "Por fin llegaste.",
@@ -3130,9 +3130,9 @@
   "tense": "present"
  },
  "forever": {
-  "es": "Esto no puede durar para siempre.",
-  "en": "This can't last forever.",
-  "tense": "present"
+  "es": "Recordaré este día para siempre.",
+  "en": "I'll remember this day forever.",
+  "tense": "future"
  },
  "skin": {
   "es": "Tiene la piel muy suave.",
@@ -3150,9 +3150,9 @@
   "tense": "present"
  },
  "brain": {
-  "es": "El cerebro necesita descanso.",
-  "en": "The brain needs rest.",
-  "tense": "present"
+  "es": "Hoy mi cerebro está funcionando despacio.",
+  "en": "My brain is working slowly today.",
+  "tense": "present_continuous"
  },
  "tooth": {
   "es": "Me duele una muela.",
@@ -3165,9 +3165,9 @@
   "tense": "present"
  },
  "throat": {
-  "es": "Me duele la garganta.",
-  "en": "My throat hurts.",
-  "tense": "present"
+  "es": "Mañana la garganta estará mejor.",
+  "en": "My throat will feel better tomorrow.",
+  "tense": "future"
  },
  "chest": {
   "es": "Siento un dolor en el pecho.",
@@ -3180,9 +3180,9 @@
   "tense": "present"
  },
  "knee": {
-  "es": "Me hice daño en la rodilla.",
-  "en": "I hurt my knee.",
-  "tense": "present"
+  "es": "La rodilla me está doliendo otra vez.",
+  "en": "My knee is hurting again.",
+  "tense": "present_continuous"
  },
  "shoulder": {
   "es": "Me duele el hombro.",
@@ -3195,9 +3195,9 @@
   "tense": "present"
  },
  "hair": {
-  "es": "Tienes el pelo mojado.",
-  "en": "Your hair is wet.",
-  "tense": "present"
+  "es": "Me cortaré el pelo la semana que viene.",
+  "en": "I'll cut my hair next week.",
+  "tense": "future"
  },
  "neck": {
   "es": "Me duele el cuello.",
@@ -3220,9 +3220,9 @@
   "tense": "present_continuous"
  },
  "ceiling": {
-  "es": "Hay una mancha en el techo.",
-  "en": "There's a mark on the ceiling.",
-  "tense": "present"
+  "es": "Está goteando agua del techo.",
+  "en": "Water is dripping from the ceiling.",
+  "tense": "present_continuous"
  },
  "stairs": {
   "es": "Sube las escaleras despacio.",
@@ -3245,9 +3245,9 @@
   "tense": "present"
  },
  "drawer": {
-  "es": "Los cuchillos están en el cajón.",
-  "en": "The knives are in the drawer.",
-  "tense": "present"
+  "es": "Pondré los tenedores en el cajón.",
+  "en": "I'll put the forks in the drawer.",
+  "tense": "future"
  },
  "cupboard": {
   "es": "El azúcar está en el armario.",
@@ -3290,9 +3290,9 @@
   "tense": "imperative"
  },
  "towel": {
-  "es": "Necesito una toalla limpia.",
-  "en": "I need a clean towel.",
-  "tense": "present"
+  "es": "Se está secando las manos con una toalla.",
+  "en": "She's drying her hands on a towel.",
+  "tense": "present_continuous"
  },
  "pillow": {
   "es": "Mi almohada es muy blanda.",
@@ -3310,9 +3310,9 @@
   "tense": "present"
  },
  "rope": {
-  "es": "Ata la caja con una cuerda.",
-  "en": "Tie the box with a rope.",
-  "tense": "present"
+  "es": "Necesitaremos una cuerda más larga.",
+  "en": "We'll need a longer rope.",
+  "tense": "future"
  },
  "rice": {
   "es": "Comimos pollo con arroz.",
@@ -3340,9 +3340,9 @@
   "tense": "imperative"
  },
  "cheese": {
-  "es": "Me encanta el queso.",
-  "en": "I love cheese.",
-  "tense": "present"
+  "es": "Está rallando queso sobre la sopa.",
+  "en": "He's grating cheese over the soup.",
+  "tense": "present_continuous"
  },
  "butter": {
   "es": "No queda mantequilla.",
@@ -3365,9 +3365,9 @@
   "tense": "present_perfect"
  },
  "sauce": {
-  "es": "La salsa está deliciosa.",
-  "en": "The sauce is delicious.",
-  "tense": "present"
+  "es": "La salsa espesará en diez minutos.",
+  "en": "The sauce will thicken in ten minutes.",
+  "tense": "future"
  },
  "soup": {
   "es": "La sopa está caliente.",
@@ -3385,9 +3385,9 @@
   "tense": "imperative"
  },
  "chocolate": {
-  "es": "Me gusta el chocolate negro.",
-  "en": "I like dark chocolate.",
-  "tense": "present"
+  "es": "El chocolate se está derritiendo al sol.",
+  "en": "The chocolate is melting in the sun.",
+  "tense": "present_continuous"
  },
  "juice": {
   "es": "Quiero un zumo de naranja.",
@@ -3400,9 +3400,9 @@
   "tense": "past"
  },
  "snack": {
-  "es": "Voy a comer un tentempié.",
-  "en": "I'm going to have a snack.",
-  "tense": "present"
+  "es": "Comeré algo antes de la cena.",
+  "en": "I'll have a snack before dinner.",
+  "tense": "future"
  },
  "shirt": {
   "es": "Tu camisa está arrugada.",
@@ -3425,9 +3425,9 @@
   "tense": "imperative"
  },
  "sock": {
-  "es": "Se me ha roto un calcetín.",
-  "en": "One of my socks has a hole.",
-  "tense": "present"
+  "es": "Estoy buscando el otro calcetín.",
+  "en": "I'm looking for my other sock.",
+  "tense": "present_continuous"
  },
  "hat": {
   "es": "Bonito sombrero.",
@@ -3440,9 +3440,9 @@
   "tense": "present"
  },
  "button": {
-  "es": "Se me cayó un botón.",
-  "en": "A button fell off.",
-  "tense": "past"
+  "es": "Coseré el botón otra vez.",
+  "en": "I'll sew the button back on.",
+  "tense": "future"
  },
  "uniform": {
   "es": "Llevo uniforme para trabajar.",
@@ -3460,9 +3460,9 @@
   "tense": "present_continuous"
  },
  "fog": {
-  "es": "Hay mucha niebla esta mañana.",
-  "en": "There's a lot of fog this morning.",
-  "tense": "present"
+  "es": "La niebla se está levantando despacio.",
+  "en": "The fog is lifting slowly.",
+  "tense": "present_continuous"
  },
  "ice": {
   "es": "¿Quieres hielo en la bebida?",
@@ -3485,9 +3485,9 @@
   "tense": "present"
  },
  "shadow": {
-  "es": "Descansemos a la sombra.",
-  "en": "Let's rest in the shadow.",
-  "tense": "present"
+  "es": "El árbol nos dará algo de sombra.",
+  "en": "The tree will give us some shadow.",
+  "tense": "future"
  },
  "wave": {
   "es": "Las olas son muy grandes.",
@@ -3500,9 +3500,9 @@
   "tense": "present"
  },
  "rock": {
-  "es": "Nos sentamos en una roca.",
-  "en": "We sat on a rock.",
-  "tense": "past"
+  "es": "Los niños están trepando por las rocas.",
+  "en": "The kids are climbing on the rocks.",
+  "tense": "present_continuous"
  },
  "stone": {
   "es": "Le tiró una piedra al agua.",
@@ -3520,9 +3520,9 @@
   "tense": "imperative"
  },
  "leaf": {
-  "es": "Cayó una hoja del árbol.",
-  "en": "A leaf fell from the tree.",
-  "tense": "past"
+  "es": "La última hoja caerá pronto.",
+  "en": "The last leaf will fall soon.",
+  "tense": "future"
  },
  "branch": {
   "es": "El pájaro está en la rama.",
@@ -3535,9 +3535,9 @@
   "tense": "present"
  },
  "wood": {
-  "es": "La mesa es de madera.",
-  "en": "The table is made of wood.",
-  "tense": "past"
+  "es": "Está cortando leña para el fuego.",
+  "en": "He's chopping wood for the fire.",
+  "tense": "present_continuous"
  },
  "forest": {
   "es": "Nos perdimos en el bosque.",
@@ -3550,9 +3550,9 @@
   "tense": "present"
  },
  "hill": {
-  "es": "La casa está en la colina.",
-  "en": "The house is on the hill.",
-  "tense": "present"
+  "es": "Subiremos la colina mañana.",
+  "en": "We'll walk up the hill tomorrow.",
+  "tense": "future"
  },
  "valley": {
   "es": "El pueblo está en el valle.",
@@ -3565,9 +3565,9 @@
   "tense": "past"
  },
  "farm": {
-  "es": "Mis abuelos tienen una granja.",
-  "en": "My grandparents have a farm.",
-  "tense": "present"
+  "es": "Están construyendo una granja nueva cerca.",
+  "en": "They're building a new farm nearby.",
+  "tense": "present_continuous"
  },
  "path": {
   "es": "Sigue el sendero.",
@@ -3580,9 +3580,9 @@
   "tense": "present"
  },
  "cow": {
-  "es": "Las vacas están en el campo.",
-  "en": "The cows are in the field.",
-  "tense": "present"
+  "es": "Las vacas vendrán para el ordeño.",
+  "en": "The cows will come in for milking.",
+  "tense": "future"
  },
  "pig": {
   "es": "Tienen tres cerdos.",
@@ -3595,9 +3595,9 @@
   "tense": "present"
  },
  "chicken": {
-  "es": "Vamos a cenar pollo.",
-  "en": "We're having chicken for dinner.",
-  "tense": "present"
+  "es": "Está asando un pollo para el almuerzo.",
+  "en": "She's roasting a chicken for lunch.",
+  "tense": "present_continuous"
  },
  "rabbit": {
   "es": "El conejo se escapó.",
@@ -3610,9 +3610,9 @@
   "tense": "present"
  },
  "bear": {
-  "es": "Vimos un oso en el bosque.",
-  "en": "We saw a bear in the forest.",
-  "tense": "past"
+  "es": "Un oso no se acercará tanto.",
+  "en": "A bear will not come this close.",
+  "tense": "future"
  },
  "snake": {
   "es": "Le tengo miedo a las serpientes.",
@@ -3625,9 +3625,9 @@
   "tense": "present"
  },
  "bee": {
-  "es": "Una abeja me picó.",
-  "en": "A bee stung me.",
-  "tense": "present"
+  "es": "Una abeja está zumbando entre las flores.",
+  "en": "A bee is buzzing around the flowers.",
+  "tense": "present_continuous"
  },
  "fear": {
   "es": "No tengas miedo.",
@@ -3645,9 +3645,9 @@
   "tense": "past"
  },
  "love": {
-  "es": "Te quiero mucho.",
-  "en": "I love you very much.",
-  "tense": "present"
+  "es": "Te encantará este restaurante.",
+  "en": "You'll love this restaurant.",
+  "tense": "future"
  },
  "pride": {
   "es": "Habló con orgullo de su hija.",
@@ -3660,9 +3660,9 @@
   "tense": "present"
  },
  "courage": {
-  "es": "Hace falta valor para hacerlo.",
-  "en": "It takes courage to do it.",
-  "tense": "present"
+  "es": "Está encontrando el valor para hablar.",
+  "en": "She's finding the courage to speak up.",
+  "tense": "present_continuous"
  },
  "luck": {
   "es": "¡Buena suerte!",
@@ -3675,9 +3675,9 @@
   "tense": "present"
  },
  "safety": {
-  "es": "La seguridad es lo primero.",
-  "en": "Safety comes first.",
-  "tense": "present"
+  "es": "Las nuevas normas mejorarán la seguridad.",
+  "en": "The new rules will improve safety.",
+  "tense": "future"
  },
  "freedom": {
   "es": "La libertad es importante.",
@@ -3695,9 +3695,9 @@
   "tense": "imperative"
  },
  "lie": {
-  "es": "Eso es mentira.",
-  "en": "That's a lie.",
-  "tense": "present"
+  "es": "Está diciendo una mentira otra vez.",
+  "en": "He's telling a lie again.",
+  "tense": "present_continuous"
  },
  "secret": {
   "es": "Te voy a contar un secreto.",
@@ -3715,9 +3715,9 @@
   "tense": "past"
  },
  "stress": {
-  "es": "Tengo mucho estrés en el trabajo.",
-  "en": "I have a lot of stress at work.",
-  "tense": "present"
+  "es": "Las vacaciones bajarán mi estrés.",
+  "en": "The holiday will lower my stress.",
+  "tense": "future"
  },
  "habit": {
   "es": "Es un mal hábito.",
@@ -3730,9 +3730,9 @@
   "tense": "present"
  },
  "culture": {
-  "es": "Me interesa mucho su cultura.",
-  "en": "I'm very interested in their culture.",
-  "tense": "past"
+  "es": "La ciudad está perdiendo su cultura local.",
+  "en": "The city is losing its local culture.",
+  "tense": "present_continuous"
  },
  "belief": {
   "es": "Respeto tus creencias.",
@@ -3745,9 +3745,9 @@
   "tense": "present"
  },
  "memory": {
-  "es": "Tengo mala memoria.",
-  "en": "I have a bad memory.",
-  "tense": "present"
+  "es": "Este viaje será un recuerdo precioso.",
+  "en": "This trip will be a lovely memory.",
+  "tense": "future"
  },
  "goal": {
   "es": "Mi objetivo es aprender inglés.",
@@ -3760,9 +3760,9 @@
   "tense": "present"
  },
  "advantage": {
-  "es": "Tiene muchas ventajas.",
-  "en": "It has many advantages.",
-  "tense": "present"
+  "es": "El otro equipo está ganando ventaja.",
+  "en": "The other team is gaining an advantage.",
+  "tense": "present_continuous"
  },
  "benefit": {
   "es": "El ejercicio tiene muchos beneficios.",
@@ -3775,9 +3775,9 @@
   "tense": "present"
  },
  "opportunity": {
-  "es": "Es una gran oportunidad.",
-  "en": "It's a great opportunity.",
-  "tense": "present"
+  "es": "Esta será tu última oportunidad.",
+  "en": "This will be your last opportunity.",
+  "tense": "future"
  },
  "responsibility": {
   "es": "Es tu responsabilidad.",
@@ -3795,9 +3795,9 @@
   "tense": "imperative"
  },
  "rule": {
-  "es": "Es una regla importante.",
-  "en": "It's an important rule.",
-  "tense": "present"
+  "es": "Están cambiando las normas de aparcamiento.",
+  "en": "They're changing the parking rules.",
+  "tense": "present_continuous"
  },
  "method": {
   "es": "Este método funciona muy bien.",
@@ -3815,9 +3815,9 @@
   "tense": "present"
  },
  "quantity": {
-  "es": "Necesito una cantidad pequeña.",
-  "en": "I need a small quantity.",
-  "tense": "present"
+  "es": "Pediremos una cantidad mayor la próxima vez.",
+  "en": "We'll order a larger quantity next time.",
+  "tense": "future"
  },
  "total": {
   "es": "¿Cuál es el total?",
@@ -3835,9 +3835,9 @@
   "tense": "imperative"
  },
  "pair": {
-  "es": "Compré un par de zapatos.",
-  "en": "I bought a pair of shoes.",
-  "tense": "past"
+  "es": "Estoy estrenando un par de zapatos.",
+  "en": "I'm wearing a new pair of shoes.",
+  "tense": "present_continuous"
  },
  "majority": {
   "es": "La mayoría está de acuerdo.",
@@ -3850,9 +3850,9 @@
   "tense": "present"
  },
  "admit": {
-  "es": "Admite que te equivocaste.",
-  "en": "Admit that you were wrong.",
-  "tense": "past"
+  "es": "Nunca admitirá su error.",
+  "en": "He'll never admit his mistake.",
+  "tense": "future"
  },
  "advise": {
   "es": "Te aconsejo que descanses.",
@@ -3865,9 +3865,9 @@
   "tense": "present"
  },
  "announce": {
-  "es": "Van a anunciar al ganador.",
-  "en": "They're going to announce the winner.",
-  "tense": "present"
+  "es": "Están anunciando los resultados ahora.",
+  "en": "They're announcing the results now.",
+  "tense": "present_continuous"
  },
  "apologize": {
   "es": "Quiero disculparme.",
@@ -3890,9 +3890,9 @@
   "tense": "past"
  },
  "attend": {
-  "es": "¿Vas a asistir a la reunión?",
-  "en": "Are you going to attend the meeting?",
-  "tense": "present"
+  "es": "Asistiré a la reunión por internet.",
+  "en": "I'll attend the meeting online.",
+  "tense": "future"
  },
  "attract": {
   "es": "La luz atrae a los insectos.",
@@ -3905,9 +3905,9 @@
   "tense": "present"
  },
  "beat": {
-  "es": "Le ganamos al otro equipo.",
-  "en": "We beat the other team.",
-  "tense": "present"
+  "es": "Nuestro equipo les está ganando por dos goles.",
+  "en": "Our team is beating theirs by two goals.",
+  "tense": "present_continuous"
  },
  "behave": {
   "es": "Pórtate bien.",
@@ -3920,9 +3920,9 @@
   "tense": "present"
  },
  "bend": {
-  "es": "Dobla las rodillas.",
-  "en": "Bend your knees.",
-  "tense": "present"
+  "es": "La carretera girará a la izquierda más adelante.",
+  "en": "The road will bend to the left ahead.",
+  "tense": "future"
  },
  "bite": {
   "es": "El perro no muerde.",
@@ -3940,9 +3940,9 @@
   "tense": "present"
  },
  "charge": {
-  "es": "¿Cuánto cobran por la entrada?",
-  "en": "How much do they charge for entry?",
-  "tense": "present"
+  "es": "El móvil se está cargando en la cocina.",
+  "en": "My phone is charging in the kitchen.",
+  "tense": "present_continuous"
  },
  "chase": {
   "es": "El perro persiguió al gato.",
@@ -3960,9 +3960,9 @@
   "tense": "imperative"
  },
  "connect": {
-  "es": "Conecta el cable a la tele.",
-  "en": "Connect the cable to the TV.",
-  "tense": "present"
+  "es": "Este vuelo hará conexión en París.",
+  "en": "This flight will connect in Paris.",
+  "tense": "future"
  },
  "contain": {
   "es": "Esta bebida no contiene azúcar.",
@@ -3975,9 +3975,9 @@
   "tense": "past"
  },
  "deliver": {
-  "es": "El paquete llega mañana.",
-  "en": "They deliver the package tomorrow.",
-  "tense": "present"
+  "es": "Están entregando el sofá esta tarde.",
+  "en": "They're delivering the sofa this afternoon.",
+  "tense": "present_continuous"
  },
  "deny": {
   "es": "Negó haberlo hecho.",
@@ -3990,9 +3990,9 @@
   "tense": "present"
  },
  "deserve": {
-  "es": "Te mereces un descanso.",
-  "en": "You deserve a rest.",
-  "tense": "present"
+  "es": "El esfuerzo te dará lo que mereces.",
+  "en": "Hard work will get you what you deserve.",
+  "tense": "future"
  },
  "destroy": {
   "es": "El fuego destruyó la casa.",
@@ -4010,9 +4010,9 @@
   "tense": "past"
  },
  "discuss": {
-  "es": "Tenemos que hablar de esto.",
-  "en": "We need to discuss this.",
-  "tense": "present"
+  "es": "El equipo está hablando del presupuesto.",
+  "en": "The team is discussing the budget.",
+  "tense": "present_continuous"
  },
  "divide": {
   "es": "Divide la tarta en ocho.",
@@ -4025,9 +4025,9 @@
   "tense": "present"
  },
  "employ": {
-  "es": "La empresa emplea a mil personas.",
-  "en": "The company employs a thousand people.",
-  "tense": "present"
+  "es": "La fábrica contratará más personal.",
+  "en": "The factory will employ more staff.",
+  "tense": "future"
  },
  "examine": {
   "es": "El médico me examinó la garganta.",
@@ -4040,9 +4040,9 @@
   "tense": "present"
  },
  "explore": {
-  "es": "Vamos a explorar el casco antiguo.",
-  "en": "Let's explore the old town.",
-  "tense": "present"
+  "es": "Estamos explorando la costa esta semana.",
+  "en": "We're exploring the coast this week.",
+  "tense": "present_continuous"
  },
  "express": {
   "es": "Es difícil expresar lo que siento.",
@@ -4055,9 +4055,9 @@
   "tense": "past"
  },
  "feed": {
-  "es": "Dale de comer al perro.",
-  "en": "Feed the dog.",
-  "tense": "present"
+  "es": "Daré de comer al gato antes de salir.",
+  "en": "I'll feed the cat before we leave.",
+  "tense": "future"
  },
  "fight": {
   "es": "No os peleéis.",
@@ -4080,9 +4080,9 @@
   "tense": "imperative"
  },
  "forgive": {
-  "es": "Perdóname.",
-  "en": "Forgive me.",
-  "tense": "present"
+  "es": "Poco a poco lo está perdonando.",
+  "en": "She's slowly forgiving him.",
+  "tense": "present_continuous"
  },
  "freeze": {
   "es": "El agua se congela a cero grados.",
@@ -4095,9 +4095,9 @@
   "tense": "past"
  },
  "hang": {
-  "es": "Cuelga el cuadro aquí.",
-  "en": "Hang the picture here.",
-  "tense": "present"
+  "es": "Colgaré la ropa fuera.",
+  "en": "I'll hang the washing outside.",
+  "tense": "future"
  },
  "hide": {
   "es": "El niño se escondió detrás del sofá.",
@@ -4120,9 +4120,9 @@
   "tense": "past"
  },
  "imagine": {
-  "es": "Imagínate vivir aquí.",
-  "en": "Imagine living here.",
-  "tense": "present"
+  "es": "Me estoy imaginando una playa tranquila.",
+  "en": "I'm imagining a quiet beach.",
+  "tense": "present_continuous"
  },
  "indicate": {
   "es": "La flecha indica la salida.",
@@ -4135,9 +4135,9 @@
   "tense": "present"
  },
  "inform": {
-  "es": "Nos informaron del cambio.",
-  "en": "They informed us of the change.",
-  "tense": "past"
+  "es": "Te informaremos por correo.",
+  "en": "We'll inform you by email.",
+  "tense": "future"
  },
  "intend": {
   "es": "Tengo la intención de quedarme.",
@@ -4150,9 +4150,9 @@
   "tense": "past"
  },
  "invite": {
-  "es": "Te invito a mi fiesta.",
-  "en": "I'm inviting you to my party.",
-  "tense": "present"
+  "es": "Están invitando a toda la clase.",
+  "en": "They're inviting the whole class.",
+  "tense": "present_continuous"
  },
  "kick": {
   "es": "No le des una patada a la puerta.",
@@ -4175,9 +4175,9 @@
   "tense": "past"
  },
  "mark": {
-  "es": "El profesor corrigió los exámenes.",
-  "en": "The teacher marked the exams.",
-  "tense": "past"
+  "es": "El profesor corregirá los exámenes esta noche.",
+  "en": "The teacher will mark the tests tonight.",
+  "tense": "future"
  },
  "marry": {
   "es": "Se casaron el año pasado.",
@@ -4195,9 +4195,9 @@
   "tense": "imperative"
  },
  "notice": {
-  "es": "No me di cuenta de nada.",
-  "en": "I didn't notice anything.",
-  "tense": "present"
+  "es": "Notarás la diferencia enseguida.",
+  "en": "You'll notice the difference straight away.",
+  "tense": "future"
  },
  "obey": {
   "es": "El perro obedece a mi padre.",
@@ -4215,9 +4215,9 @@
   "tense": "past"
  },
  "perform": {
-  "es": "El grupo tocó dos horas.",
-  "en": "The band performed for two hours.",
-  "tense": "past"
+  "es": "El coro actuará el sábado.",
+  "en": "The choir will perform on Saturday.",
+  "tense": "future"
  },
  "pick": {
   "es": "Elige una carta.",
@@ -4240,9 +4240,9 @@
   "tense": "present"
  },
  "prefer": {
-  "es": "Prefiero quedarme en casa.",
-  "en": "I prefer to stay home.",
-  "tense": "present"
+  "es": "Creo que preferirás el asiento de ventana.",
+  "en": "I think you'll prefer the window seat.",
+  "tense": "future"
  },
  "pretend": {
   "es": "Fingió estar dormido.",
@@ -4260,9 +4260,9 @@
   "tense": "present"
  },
  "prove": {
-  "es": "Demuéstralo.",
-  "en": "Prove it.",
-  "tense": "present"
+  "es": "El tiempo me dará la razón.",
+  "en": "Time will prove me right.",
+  "tense": "future"
  },
  "provide": {
   "es": "El hotel ofrece desayuno.",
@@ -4280,9 +4280,9 @@
   "tense": "past"
  },
  "recognize": {
-  "es": "No te reconocí.",
-  "en": "I didn't recognize you.",
-  "tense": "present"
+  "es": "Reconocerás la casa por la puerta roja.",
+  "en": "You'll recognize the house by the red door.",
+  "tense": "future"
  },
  "recommend": {
   "es": "¿Me recomiendas una película?",
@@ -4295,9 +4295,9 @@
   "tense": "present"
  },
  "refuse": {
-  "es": "Se negó a ayudar.",
-  "en": "He refused to help.",
-  "tense": "past"
+  "es": "Rechazará la oferta, estoy seguro.",
+  "en": "He'll refuse the offer, I'm sure.",
+  "tense": "future"
  },
  "regret": {
   "es": "Me arrepiento de haberlo dicho.",
@@ -4315,9 +4315,9 @@
   "tense": "present"
  },
  "repeat": {
-  "es": "¿Puedes repetirlo?",
-  "en": "Can you repeat it?",
-  "tense": "present"
+  "es": "No lo repetiré otra vez.",
+  "en": "I won't repeat myself again.",
+  "tense": "future"
  },
  "replace": {
   "es": "Hay que cambiar la bombilla.",
@@ -4330,9 +4330,9 @@
   "tense": "past"
  },
  "rescue": {
-  "es": "Rescataron al perro del río.",
-  "en": "They rescued the dog from the river.",
-  "tense": "past"
+  "es": "El equipo rescatará a los escaladores al amanecer.",
+  "en": "The team will rescue the climbers at dawn.",
+  "tense": "future"
  },
  "respect": {
   "es": "Respeto tu opinión.",
@@ -4345,9 +4345,9 @@
   "tense": "present"
  },
  "roll": {
-  "es": "La pelota rodó por la calle.",
-  "en": "The ball rolled down the street.",
-  "tense": "past"
+  "es": "La pelota rodará bajo el sofá.",
+  "en": "The ball will roll under the sofa.",
+  "tense": "future"
  },
  "rub": {
   "es": "Se frotó los ojos.",
@@ -4370,9 +4370,9 @@
   "tense": "present_continuous"
  },
  "select": {
-  "es": "Selecciona una opción.",
-  "en": "Select an option.",
-  "tense": "present"
+  "es": "El jurado seleccionará a tres ganadores.",
+  "en": "The judges will select three winners.",
+  "tense": "future"
  },
  "separate": {
   "es": "Separa la ropa blanca.",
@@ -4385,9 +4385,9 @@
   "tense": "past"
  },
  "shake": {
-  "es": "Agita bien la botella.",
-  "en": "Shake the bottle well.",
-  "tense": "present"
+  "es": "El puente temblará con viento fuerte.",
+  "en": "The bridge will shake in strong wind.",
+  "tense": "future"
  },
  "share": {
   "es": "¿Compartimos un postre?",
@@ -4410,9 +4410,9 @@
   "tense": "present"
  },
  "sign": {
-  "es": "Firma aquí, por favor.",
-  "en": "Sign here, please.",
-  "tense": "present"
+  "es": "Firmaré el contrato mañana.",
+  "en": "I'll sign the contract tomorrow.",
+  "tense": "future"
  },
  "slide": {
   "es": "El niño se deslizó por el tobogán.",
@@ -4425,9 +4425,9 @@
   "tense": "past"
  },
  "solve": {
-  "es": "No puedo resolver este problema.",
-  "en": "I can't solve this problem.",
-  "tense": "present"
+  "es": "Un descanso corto me ayudará a resolverlo.",
+  "en": "A short break will help me solve it.",
+  "tense": "future"
  },
  "sort": {
   "es": "Ordena los papeles por fecha.",
@@ -4440,9 +4440,9 @@
   "tense": "present"
  },
  "spread": {
-  "es": "El fuego se extendió deprisa.",
-  "en": "The fire spread quickly.",
-  "tense": "present"
+  "es": "La noticia se extenderá rápido.",
+  "en": "The news will spread fast.",
+  "tense": "future"
  },
  "stare": {
   "es": "Deja de mirarme fijamente.",
@@ -4460,9 +4460,9 @@
   "tense": "present"
  },
  "stretch": {
-  "es": "Estira las piernas antes de correr.",
-  "en": "Stretch your legs before you run.",
-  "tense": "present"
+  "es": "La carretera se extenderá kilómetros.",
+  "en": "The road will stretch for miles.",
+  "tense": "future"
  },
  "strike": {
   "es": "Los trabajadores están en huelga.",
@@ -4475,9 +4475,9 @@
   "tense": "present"
  },
  "succeed": {
-  "es": "Al final lo conseguí.",
-  "en": "In the end I succeeded.",
-  "tense": "past"
+  "es": "Con práctica lo lograrás.",
+  "en": "With practice you'll succeed.",
+  "tense": "future"
  },
  "suffer": {
   "es": "Sufre de dolores de cabeza.",
@@ -4490,9 +4490,9 @@
   "tense": "present"
  },
  "supply": {
-  "es": "El río abastece de agua a la ciudad.",
-  "en": "The river supplies water to the city.",
-  "tense": "present"
+  "es": "El pozo nuevo abastecerá a todo el pueblo.",
+  "en": "The new well will supply the whole village.",
+  "tense": "future"
  },
  "suppose": {
   "es": "Supongo que sí.",
@@ -4505,9 +4505,9 @@
   "tense": "past"
  },
  "swim": {
-  "es": "No sé nadar.",
-  "en": "I can't swim.",
-  "tense": "present"
+  "es": "Nadaremos en el lago mañana.",
+  "en": "We'll swim in the lake tomorrow.",
+  "tense": "future"
  },
  "switch": {
   "es": "Cambiemos de tema.",
@@ -4520,9 +4520,9 @@
   "tense": "present"
  },
  "tend": {
-  "es": "Suelo llegar temprano.",
-  "en": "I tend to arrive early.",
-  "tense": "present"
+  "es": "Los precios tenderán a subir en verano.",
+  "en": "Prices will tend to rise in summer.",
+  "tense": "future"
  },
  "tie": {
   "es": "Átate los zapatos.",
@@ -4535,9 +4535,9 @@
   "tense": "present"
  },
  "treat": {
-  "es": "Nos trataron muy bien.",
-  "en": "They treated us very well.",
-  "tense": "past"
+  "es": "El médico tratará la herida.",
+  "en": "The doctor will treat the wound.",
+  "tense": "future"
  },
  "trust": {
   "es": "Confío en ti.",
@@ -4550,9 +4550,9 @@
   "tense": "past"
  },
  "warn": {
-  "es": "Te lo advierto.",
-  "en": "I'm warning you.",
-  "tense": "present"
+  "es": "Te avisaré si la carretera está helada.",
+  "en": "I'll warn you if the road is icy.",
+  "tense": "future"
  },
  "waste": {
   "es": "No malgastes el agua.",
@@ -4570,9 +4570,9 @@
   "tense": "present"
  },
  "wonder": {
-  "es": "Me pregunto dónde estará.",
-  "en": "I wonder where he is.",
-  "tense": "present"
+  "es": "Te preguntarás por qué esperaste tanto.",
+  "en": "You'll wonder why you waited so long.",
+  "tense": "future"
  },
  "wrap": {
   "es": "Envuelve el regalo.",
@@ -4585,9 +4585,9 @@
   "tense": "present"
  },
  "alive": {
-  "es": "El pez sigue vivo.",
-  "en": "The fish is still alive.",
-  "tense": "present"
+  "es": "La tradición seguirá viva durante años.",
+  "en": "The tradition will stay alive for years.",
+  "tense": "future"
  },
  "alone": {
   "es": "Déjame solo.",
@@ -4610,9 +4610,9 @@
   "tense": "past_continuous"
  },
  "brave": {
-  "es": "Fuiste muy valiente.",
-  "en": "You were very brave.",
-  "tense": "past"
+  "es": "Tendrás que ser valiente para esta atracción.",
+  "en": "You'll need to be brave for this ride.",
+  "tense": "future"
  },
  "bright": {
   "es": "La habitación es muy luminosa.",
@@ -4640,9 +4640,9 @@
   "tense": "imperative"
  },
  "confused": {
-  "es": "Estoy un poco confundido.",
-  "en": "I'm a bit confused.",
-  "tense": "past"
+  "es": "Los alumnos nuevos se sentirán confundidos al principio.",
+  "en": "New students will feel confused at first.",
+  "tense": "future"
  },
  "dangerous": {
   "es": "Esa calle es peligrosa de noche.",
@@ -4655,9 +4655,9 @@
   "tense": "present"
  },
  "delicious": {
-  "es": "La cena estuvo deliciosa.",
-  "en": "The dinner was delicious.",
-  "tense": "past"
+  "es": "La sopa estará deliciosa con hierbas frescas.",
+  "en": "The soup will be delicious with fresh herbs.",
+  "tense": "future"
  },
  "dirty": {
   "es": "Tus zapatos están sucios.",
@@ -4670,9 +4670,9 @@
   "tense": "present"
  },
  "exciting": {
-  "es": "Fue un partido emocionante.",
-  "en": "It was an exciting match.",
-  "tense": "past"
+  "es": "La final será emocionante.",
+  "en": "The final will be exciting.",
+  "tense": "future"
  },
  "fair": {
   "es": "Eso no es justo.",
@@ -4685,9 +4685,9 @@
   "tense": "present"
  },
  "foreign": {
-  "es": "Habla dos idiomas extranjeros.",
-  "en": "She speaks two foreign languages.",
-  "tense": "present"
+  "es": "La mitad de los invitados serán extranjeros.",
+  "en": "Half the guests will be foreign.",
+  "tense": "future"
  },
  "fresh": {
   "es": "El pan está muy fresco.",
@@ -4700,9 +4700,9 @@
   "tense": "past"
  },
  "funny": {
-  "es": "Qué historia tan graciosa.",
-  "en": "What a funny story.",
-  "tense": "present"
+  "es": "Ese vídeo será gracioso en el programa.",
+  "en": "That clip will be funny in the show.",
+  "tense": "future"
  },
  "gentle": {
   "es": "Sé delicado con el bebé.",
@@ -4720,9 +4720,9 @@
   "tense": "present"
  },
  "ill": {
-  "es": "Me siento enfermo.",
-  "en": "I feel ill.",
-  "tense": "present"
+  "es": "Te sentirás mal si comes tan rápido.",
+  "en": "You'll feel ill if you eat that fast.",
+  "tense": "future"
  },
  "lonely": {
   "es": "A veces me siento solo.",
@@ -4735,9 +4735,9 @@
   "tense": "present"
  },
  "lovely": {
-  "es": "Qué tarde tan agradable.",
-  "en": "What a lovely afternoon.",
-  "tense": "present"
+  "es": "El jardín estará precioso en primavera.",
+  "en": "The garden will be lovely in spring.",
+  "tense": "future"
  },
  "lucky": {
   "es": "Qué suerte tienes.",
@@ -4750,9 +4750,9 @@
   "tense": "present"
  },
  "nervous": {
-  "es": "Estoy nervioso por el examen.",
-  "en": "I'm nervous about the exam.",
-  "tense": "present"
+  "es": "Estaré nervioso antes de la entrevista.",
+  "en": "I'll be nervous before the interview.",
+  "tense": "future"
  },
  "normal": {
   "es": "Es normal sentirse así.",
@@ -4765,9 +4765,9 @@
   "tense": "past"
  },
  "ordinary": {
-  "es": "Fue un día normal y corriente.",
-  "en": "It was an ordinary day.",
-  "tense": "past"
+  "es": "Mañana será un día de trabajo normal.",
+  "en": "Tomorrow will be an ordinary work day.",
+  "tense": "future"
  },
  "perfect": {
   "es": "El día estuvo perfecto.",
@@ -4785,9 +4785,9 @@
   "tense": "present"
  },
  "proud": {
-  "es": "Estoy orgulloso de ti.",
-  "en": "I'm proud of you.",
-  "tense": "present"
+  "es": "Tus padres estarán orgullosos de ti.",
+  "en": "Your parents will be proud of you.",
+  "tense": "future"
  },
  "rare": {
   "es": "Es raro verlo tan callado.",
@@ -5015,9 +5015,9 @@
   "tense": "imperative"
  },
  "cancel": {
-  "es": "Tuvimos que cancelar el viaje.",
-  "en": "We had to cancel the trip.",
-  "tense": "past"
+  "es": "Cancelarán el partido si llueve.",
+  "en": "They'll cancel the match if it rains.",
+  "tense": "future"
  },
  "clarify": {
   "es": "Déjame aclararte una cosa.",
@@ -5035,9 +5035,9 @@
   "tense": "present"
  },
  "complete": {
-  "es": "Completa el formulario.",
-  "en": "Complete the form.",
-  "tense": "present"
+  "es": "Está completando el último formulario ahora.",
+  "en": "She's completing the last form now.",
+  "tense": "present_continuous"
  },
  "conclude": {
   "es": "El informe concluye que hace falta más dinero.",
@@ -5050,9 +5050,9 @@
   "tense": "present"
  },
  "confirm": {
-  "es": "Confirma tu asistencia.",
-  "en": "Confirm your attendance.",
-  "tense": "present"
+  "es": "El hotel ha confirmado nuestra reserva.",
+  "en": "The hotel has confirmed our booking.",
+  "tense": "present_perfect"
  },
  "confront": {
   "es": "Tienes que enfrentarte al problema.",
@@ -5065,9 +5065,9 @@
   "tense": "present"
  },
  "construct": {
-  "es": "Van a construir un hospital nuevo.",
-  "en": "They're going to construct a new hospital.",
-  "tense": "present"
+  "es": "Construirían la casa de piedra.",
+  "en": "They would construct the house from stone.",
+  "tense": "conditional"
  },
  "consult": {
   "es": "Consulta con tu médico.",
@@ -5080,9 +5080,9 @@
   "tense": "present"
  },
  "convince": {
-  "es": "Me convenció para ir.",
-  "en": "She convinced me to go.",
-  "tense": "past"
+  "es": "Poco a poco estaba convenciendo a la junta.",
+  "en": "He was slowly convincing the board.",
+  "tense": "past_continuous"
  },
  "cooperate": {
   "es": "Si cooperamos, terminaremos antes.",
@@ -5110,9 +5110,9 @@
   "tense": "present"
  },
  "cure": {
-  "es": "No hay cura para el resfriado común.",
-  "en": "There's no cure for the common cold.",
-  "tense": "present"
+  "es": "El descanso y el agua curarán un resfriado leve.",
+  "en": "Rest and water will cure a mild cold.",
+  "tense": "future"
  },
  "dare": {
   "es": "No me atrevo a decírselo.",
@@ -5130,9 +5130,9 @@
   "tense": "present_perfect"
  },
  "define": {
-  "es": "¿Cómo defines el éxito?",
-  "en": "How do you define success?",
-  "tense": "present"
+  "es": "El profesor está definiendo los términos clave.",
+  "en": "The teacher is defining the key terms.",
+  "tense": "present_continuous"
  },
  "delay": {
   "es": "El vuelo se retrasó dos horas.",
@@ -5150,9 +5150,9 @@
   "tense": "imperative"
  },
  "differ": {
-  "es": "Nuestras opiniones difieren.",
-  "en": "Our opinions differ.",
-  "tense": "present"
+  "es": "Sus opiniones han diferido desde el principio.",
+  "en": "Their views have differed from the start.",
+  "tense": "present_perfect"
  },
  "dig": {
   "es": "El perro cavó un agujero.",
@@ -5165,9 +5165,9 @@
   "tense": "present"
  },
  "disappoint": {
-  "es": "No quiero decepcionarte.",
-  "en": "I don't want to disappoint you.",
-  "tense": "present"
+  "es": "Un final flojo decepcionaría a los lectores.",
+  "en": "A weak ending would disappoint the readers.",
+  "tense": "conditional"
  },
  "distribute": {
   "es": "Repartieron comida a todos.",
@@ -5185,9 +5185,9 @@
   "tense": "past"
  },
  "download": {
-  "es": "Descárgate la aplicación.",
-  "en": "Download the app.",
-  "tense": "present"
+  "es": "Estaba descargando la película cuando se cortó el wifi.",
+  "en": "I was downloading the film when the wifi dropped.",
+  "tense": "past_continuous"
  },
  "edit": {
   "es": "Todavía tengo que editar el texto.",
@@ -5205,9 +5205,9 @@
   "tense": "present_perfect"
  },
  "emphasize": {
-  "es": "Quiero recalcar una cosa.",
-  "en": "I want to emphasize one thing.",
-  "tense": "present"
+  "es": "El jefe recalcará la seguridad en la charla.",
+  "en": "The manager will emphasize safety in the talk.",
+  "tense": "future"
  },
  "enable": {
   "es": "El préstamo nos permitió comprar la casa.",
@@ -5220,9 +5220,9 @@
   "tense": "past"
  },
  "ensure": {
-  "es": "Asegúrate de cerrar con llave.",
-  "en": "Ensure the door is locked.",
-  "tense": "past"
+  "es": "El guardia se está asegurando de que todos firmen.",
+  "en": "The guard is ensuring everyone signs in.",
+  "tense": "present_continuous"
  },
  "escape": {
   "es": "El pájaro se escapó.",
@@ -5235,9 +5235,9 @@
   "tense": "past"
  },
  "estimate": {
-  "es": "Calculan la obra en un año.",
-  "en": "They estimate the work at a year.",
-  "tense": "present"
+  "es": "Los expertos han estimado el coste en dos millones.",
+  "en": "Experts have estimated the cost at two million.",
+  "tense": "present_perfect"
  },
  "evaluate": {
   "es": "Evaluamos cada proyecto al final.",
@@ -5250,9 +5250,9 @@
   "tense": "past"
  },
  "exclude": {
-  "es": "El precio no incluye los impuestos.",
-  "en": "The price excludes taxes.",
-  "tense": "present"
+  "es": "Esa norma excluiría a la mitad del equipo.",
+  "en": "That rule would exclude half the team.",
+  "tense": "conditional"
  },
  "expand": {
   "es": "El negocio se está expandiendo.",
@@ -5275,9 +5275,9 @@
   "tense": "imperative"
  },
  "extend": {
-  "es": "Ampliaron el plazo una semana.",
-  "en": "They extended the deadline by a week.",
-  "tense": "past"
+  "es": "El ayuntamiento estaba ampliando el parque el año pasado.",
+  "en": "The council was extending the park last year.",
+  "tense": "past_continuous"
  },
  "fade": {
   "es": "El color se ha ido perdiendo.",
@@ -5295,9 +5295,9 @@
   "tense": "past"
  },
  "forbid": {
-  "es": "Está prohibido correr aquí.",
-  "en": "Running is forbidden here.",
-  "tense": "present"
+  "es": "La nueva ley prohibirá fumar en las playas.",
+  "en": "The new law will forbid smoking on beaches.",
+  "tense": "future"
  },
  "frighten": {
   "es": "El ruido asustó al perro.",
@@ -5315,9 +5315,9 @@
   "tense": "present"
  },
  "glance": {
-  "es": "Echó un vistazo al reloj.",
-  "en": "She glanced at the clock.",
-  "tense": "past"
+  "es": "Está mirando el móvil de reojo bajo la mesa.",
+  "en": "He's glancing at his phone under the table.",
+  "tense": "present_continuous"
  },
  "grab": {
   "es": "Me agarró del brazo.",
@@ -5330,9 +5330,9 @@
   "tense": "past"
  },
  "guarantee": {
-  "es": "Te lo garantizo.",
-  "en": "I guarantee it.",
-  "tense": "present"
+  "es": "La empresa ha garantizado las piezas cinco años.",
+  "en": "The company has guaranteed the parts for five years.",
+  "tense": "present_perfect"
  },
  "guard": {
   "es": "Dos perros vigilan la casa.",
@@ -5355,9 +5355,9 @@
   "tense": "imperative"
  },
  "highlight": {
-  "es": "Resalta la parte importante.",
-  "en": "Highlight the important part.",
-  "tense": "present"
+  "es": "Un color vivo resaltaría el título.",
+  "en": "A bright colour would highlight the title.",
+  "tense": "conditional"
  },
  "identify": {
   "es": "¿Puedes identificar al hombre?",
@@ -5370,9 +5370,9 @@
   "tense": "present"
  },
  "illustrate": {
-  "es": "El dibujo ilustra la idea.",
-  "en": "The drawing illustrates the idea.",
-  "tense": "present"
+  "es": "El artista estaba ilustrando un libro infantil.",
+  "en": "The artist was illustrating a children's book.",
+  "tense": "past_continuous"
  },
  "implement": {
   "es": "Van a aplicar las nuevas normas.",
@@ -5385,9 +5385,9 @@
   "tense": "present"
  },
  "import": {
-  "es": "El país importa la mayor parte del petróleo.",
-  "en": "The country imports most of its oil.",
-  "tense": "present"
+  "es": "La tienda importará más café el mes que viene.",
+  "en": "The shop will import more coffee next month.",
+  "tense": "future"
  },
  "impress": {
   "es": "Su discurso me impresionó.",
@@ -5400,9 +5400,9 @@
   "tense": "past"
  },
  "insert": {
-  "es": "Introduce la tarjeta aquí.",
-  "en": "Insert the card here.",
-  "tense": "present"
+  "es": "Está introduciendo la pila nueva.",
+  "en": "She's inserting the new battery.",
+  "tense": "present_continuous"
  },
  "inspect": {
   "es": "Un agente revisó los pasaportes.",
@@ -5415,9 +5415,9 @@
   "tense": "past"
  },
  "install": {
-  "es": "Instalamos una calefacción nueva.",
-  "en": "We installed new heating.",
-  "tense": "past"
+  "es": "El equipo ha instalado los paneles solares.",
+  "en": "The team has installed the solar panels.",
+  "tense": "present_perfect"
  },
  "instruct": {
   "es": "Nos dijeron que esperáramos fuera.",
@@ -5435,9 +5435,9 @@
   "tense": "present"
  },
  "interrupt": {
-  "es": "Perdona que te interrumpa.",
-  "en": "Sorry to interrupt you.",
-  "tense": "present"
+  "es": "Una llamada interrumpiría la reunión.",
+  "en": "A phone call would interrupt the meeting.",
+  "tense": "conditional"
  },
  "introduce": {
   "es": "Deja que te presente a mi hermana.",
@@ -5460,9 +5460,9 @@
   "tense": "present"
  },
  "launch": {
-  "es": "La empresa lanzó un teléfono nuevo.",
-  "en": "The company launched a new phone.",
-  "tense": "past"
+  "es": "La empresa estaba lanzando su aplicación esa semana.",
+  "en": "The startup was launching its app that week.",
+  "tense": "past_continuous"
  },
  "lecture": {
   "es": "Da clases de historia en la universidad.",
@@ -5475,9 +5475,9 @@
   "tense": "present"
  },
  "maintain": {
-  "es": "Es difícil mantener un jardín tan grande.",
-  "en": "It's hard to maintain such a big garden.",
-  "tense": "present"
+  "es": "Un jardinero mantendrá el terreno.",
+  "en": "A gardener will maintain the grounds.",
+  "tense": "future"
  },
  "manufacture": {
   "es": "La fábrica produce piezas de coche.",
@@ -5490,9 +5490,9 @@
   "tense": "past"
  },
  "negotiate": {
-  "es": "Negociamos un precio mejor.",
-  "en": "We negotiated a better price.",
-  "tense": "past"
+  "es": "Los sindicatos están negociando un acuerdo nuevo.",
+  "en": "The unions are negotiating a new deal.",
+  "tense": "present_continuous"
  },
  "nod": {
   "es": "Asintió con la cabeza.",
@@ -5505,9 +5505,9 @@
   "tense": "present"
  },
  "occupy": {
-  "es": "La cama ocupa media habitación.",
-  "en": "The bed occupies half the room.",
-  "tense": "present"
+  "es": "Las cajas han ocupado el cuarto libre durante meses.",
+  "en": "Boxes have occupied the spare room for months.",
+  "tense": "present_perfect"
  },
  "occur": {
   "es": "El accidente ocurrió a medianoche.",
@@ -5520,9 +5520,9 @@
   "tense": "present"
  },
  "overcome": {
-  "es": "Superó su miedo a volar.",
-  "en": "She overcame her fear of flying.",
-  "tense": "present"
+  "es": "Más apoyo la ayudaría a superar el miedo.",
+  "en": "More support would help her overcome the fear.",
+  "tense": "conditional"
  },
  "participate": {
   "es": "Todos pueden participar.",
@@ -5535,9 +5535,9 @@
   "tense": "past"
  },
  "possess": {
-  "es": "Posee un talento poco común.",
-  "en": "She possesses a rare talent.",
-  "tense": "present"
+  "es": "La familia ha poseído la tierra durante generaciones.",
+  "en": "The family has possessed the land for generations.",
+  "tense": "present_perfect"
  },
  "postpone": {
   "es": "Aplazaron el concierto hasta junio.",
@@ -5550,9 +5550,9 @@
   "tense": "past"
  },
  "predict": {
-  "es": "Es difícil predecir el tiempo aquí.",
-  "en": "It's hard to predict the weather here.",
-  "tense": "present"
+  "es": "La aplicación predecirá el tiempo de mañana.",
+  "en": "The app will predict tomorrow's weather.",
+  "tense": "future"
  },
  "preserve": {
   "es": "Debemos conservar estos edificios.",
@@ -5570,9 +5570,9 @@
   "tense": "past"
  },
  "promote": {
-  "es": "La ascendieron a directora.",
-  "en": "She was promoted to manager.",
-  "tense": "past"
+  "es": "La discográfica está promocionando su álbum nuevo.",
+  "en": "The label is promoting her new album.",
+  "tense": "present_continuous"
  },
  "pronounce": {
   "es": "¿Cómo se pronuncia este nombre?",
@@ -5585,9 +5585,9 @@
   "tense": "present"
  },
  "protest": {
-  "es": "Los estudiantes protestaron por las tasas.",
-  "en": "Students protested against the fees.",
-  "tense": "past"
+  "es": "Los vecinos han protestado por el ruido durante semanas.",
+  "en": "Residents have protested against the noise for weeks.",
+  "tense": "present_perfect"
  },
  "publish": {
   "es": "Publicó su primera novela el año pasado.",
@@ -5600,9 +5600,9 @@
   "tense": "present"
  },
  "pursue": {
-  "es": "Decidió dedicarse a la abogacía.",
-  "en": "She decided to pursue a career in law.",
-  "tense": "past"
+  "es": "Con una beca, ella estudiaría una carrera de ciencias.",
+  "en": "With a scholarship she would pursue a science degree.",
+  "tense": "conditional"
  },
  "qualify": {
   "es": "Se sacó el título de enfermero.",
@@ -5615,9 +5615,9 @@
   "tense": "present"
  },
  "recover": {
-  "es": "Tardó semanas en recuperarse.",
-  "en": "It took weeks to recover.",
-  "tense": "past"
+  "es": "Se estaba recuperando bien hasta que cogió un resfriado.",
+  "en": "He was recovering well until he caught a cold.",
+  "tense": "past_continuous"
  },
  "recruit": {
   "es": "El club busca voluntarios.",
@@ -5635,9 +5635,9 @@
   "tense": "past"
  },
  "register": {
-  "es": "Tienes que inscribirte antes.",
-  "en": "You must register beforehand.",
-  "tense": "present"
+  "es": "Te registrarás en recepción al llegar.",
+  "en": "You'll register at the front desk on arrival.",
+  "tense": "future"
  },
  "regulate": {
   "es": "El gobierno regula la seguridad alimentaria.",
@@ -5650,9 +5650,9 @@
   "tense": "past"
  },
  "relate": {
-  "es": "Los dos hechos están relacionados.",
-  "en": "The two events are related.",
-  "tense": "past"
+  "es": "El profesor está relacionando el cuento con la vida real.",
+  "en": "The teacher is relating the story to real life.",
+  "tense": "present_continuous"
  },
  "release": {
   "es": "La película se estrena en mayo.",
@@ -5670,9 +5670,9 @@
   "tense": "past"
  },
  "represent": {
-  "es": "Representa a nuestra región.",
-  "en": "He represents our region.",
-  "tense": "present"
+  "es": "Ha representado al país dos veces.",
+  "en": "She has represented the country twice.",
+  "tense": "present_perfect"
  },
  "request": {
   "es": "Se ruega guardar silencio.",
@@ -5685,9 +5685,9 @@
   "tense": "present"
  },
  "reserve": {
-  "es": "Reservé una mesa para cuatro.",
-  "en": "I reserved a table for four.",
-  "tense": "past"
+  "es": "Yo reservaría una mesa junto a la ventana.",
+  "en": "I would reserve a table by the window.",
+  "tense": "conditional"
  },
  "resign": {
   "es": "El ministro dimitió tras el escándalo.",
@@ -5700,9 +5700,9 @@
   "tense": "present"
  },
  "resolve": {
-  "es": "Resolvimos el problema en paz.",
-  "en": "We resolved the problem peacefully.",
-  "tense": "past"
+  "es": "Estaban resolviendo sus diferencias con calma.",
+  "en": "They were resolving their differences calmly.",
+  "tense": "past_continuous"
  },
  "respond": {
   "es": "No respondió a mi mensaje.",
@@ -5715,9 +5715,9 @@
   "tense": "past"
  },
  "restrict": {
-  "es": "El acceso está restringido.",
-  "en": "Access is restricted.",
-  "tense": "past"
+  "es": "La ciudad restringirá el tráfico en el centro.",
+  "en": "The city will restrict traffic in the centre.",
+  "tense": "future"
  },
  "retain": {
   "es": "Conserve el recibo.",
@@ -5730,9 +5730,9 @@
   "tense": "past"
  },
  "reverse": {
-  "es": "Metió el coche marcha atrás.",
-  "en": "He reversed the car in.",
-  "tense": "past"
+  "es": "Está metiendo la furgoneta marcha atrás en el garaje.",
+  "en": "He's reversing the van into the garage.",
+  "tense": "present_continuous"
  },
  "review": {
   "es": "Repasemos el plan antes de decidir.",
@@ -5745,9 +5745,9 @@
   "tense": "present"
  },
  "ride": {
-  "es": "Voy al trabajo en bici.",
-  "en": "I ride to work.",
-  "tense": "present"
+  "es": "He recorrido este sendero muchas veces.",
+  "en": "I've ridden this trail many times.",
+  "tense": "present_perfect"
  },
  "roar": {
   "es": "El león rugió con fuerza.",
@@ -5765,9 +5765,9 @@
   "tense": "imperative"
  },
  "scream": {
-  "es": "Gritó al ver la araña.",
-  "en": "She screamed when she saw the spider.",
-  "tense": "past"
+  "es": "Un ruido fuerte haría gritar al bebé.",
+  "en": "A loud noise would make the baby scream.",
+  "tense": "conditional"
  },
  "seal": {
   "es": "Cierra la caja con cinta.",
@@ -5780,9 +5780,9 @@
   "tense": "past"
  },
  "shift": {
-  "es": "¿Me ayudas a mover el sofá?",
-  "en": "Can you help me shift the sofa?",
-  "tense": "present"
+  "es": "Estuvimos moviendo las cajas toda la tarde.",
+  "en": "We were shifting the boxes all afternoon.",
+  "tense": "past_continuous"
  },
  "shiver": {
   "es": "Tiritaba de frío.",
@@ -5800,9 +5800,9 @@
   "tense": "past"
  },
  "sniff": {
-  "es": "El perro olfateó el suelo.",
-  "en": "The dog sniffed the ground.",
-  "tense": "past"
+  "es": "El perro olfateará las golosinas.",
+  "en": "The dog will sniff out the treats.",
+  "tense": "future"
  },
  "specify": {
   "es": "Indica tu talla al hacer el pedido.",
@@ -5815,9 +5815,9 @@
   "tense": "present"
  },
  "spot": {
-  "es": "La vi al otro lado de la sala.",
-  "en": "I spotted her across the room.",
-  "tense": "past"
+  "es": "El guía está localizando pájaros con prismáticos.",
+  "en": "The guide is spotting birds through binoculars.",
+  "tense": "present_continuous"
  },
  "squeeze": {
   "es": "Exprime el limón sobre el pescado.",
@@ -5830,9 +5830,9 @@
   "tense": "present"
  },
  "surround": {
-  "es": "La casa está rodeada de árboles.",
-  "en": "The house is surrounded by trees.",
-  "tense": "past"
+  "es": "La policía ha rodeado el edificio.",
+  "en": "The police have surrounded the building.",
+  "tense": "present_perfect"
  },
  "suspect": {
   "es": "Sospecho que él lo hizo.",
@@ -5845,9 +5845,9 @@
   "tense": "present"
  },
  "swear": {
-  "es": "Te juro que cerré la puerta.",
-  "en": "I swear I locked the door.",
-  "tense": "past"
+  "es": "Juraría que fue un accidente.",
+  "en": "He would swear it was an accident.",
+  "tense": "conditional"
  },
  "sweep": {
   "es": "Barre el suelo, por favor.",
@@ -5870,9 +5870,9 @@
   "tense": "present_continuous"
  },
  "unite": {
-  "es": "La crisis unió a todo el pueblo.",
-  "en": "The crisis united the whole town.",
-  "tense": "past"
+  "es": "La canción estaba uniendo a todo el público.",
+  "en": "The song was uniting the whole crowd.",
+  "tense": "past_continuous"
  },
  "urge": {
   "es": "Los médicos instan a la gente a vacunarse.",
@@ -5885,9 +5885,9 @@
   "tense": "present"
  },
  "witness": {
-  "es": "Presenció el accidente desde la ventana.",
-  "en": "She witnessed the accident from the window.",
-  "tense": "past"
+  "es": "Miles de personas presenciarán el eclipse esta noche.",
+  "en": "Thousands will witness the eclipse tonight.",
+  "tense": "future"
  },
  "journalist": {
   "es": "Un periodista me llamó.",
@@ -5900,9 +5900,9 @@
   "tense": "present"
  },
  "mechanic": {
-  "es": "El mecánico revisó los frenos.",
-  "en": "The mechanic checked the brakes.",
-  "tense": "past"
+  "es": "El mecánico está arreglando los frenos ahora.",
+  "en": "The mechanic is fixing the brakes now.",
+  "tense": "present_continuous"
  },
  "electrician": {
   "es": "Llamamos a un electricista.",
@@ -5915,9 +5915,9 @@
   "tense": "past"
  },
  "farmer": {
-  "es": "El agricultor cultiva trigo.",
-  "en": "The farmer grows wheat.",
-  "tense": "present"
+  "es": "El agricultor ya ha plantado el trigo.",
+  "en": "The farmer has planted the wheat already.",
+  "tense": "present_perfect"
  },
  "waiter": {
   "es": "El camarero trajo la carta.",
@@ -5930,9 +5930,9 @@
   "tense": "present"
  },
  "chef": {
-  "es": "El chef preparó un menú especial.",
-  "en": "The chef prepared a special menu.",
-  "tense": "past"
+  "es": "Un buen chef probaría la salsa primero.",
+  "en": "A good chef would taste the sauce first.",
+  "tense": "conditional"
  },
  "dentist": {
   "es": "Tengo cita con el dentista el martes.",
@@ -5945,9 +5945,9 @@
   "tense": "past"
  },
  "photographer": {
-  "es": "El fotógrafo hizo cientos de fotos.",
-  "en": "The photographer took hundreds of photos.",
-  "tense": "past"
+  "es": "El fotógrafo estaba haciendo fotos del atardecer.",
+  "en": "The photographer was taking photos of the sunset.",
+  "tense": "past_continuous"
  },
  "musician": {
   "es": "Los músicos afinaron sus instrumentos.",
@@ -5960,9 +5960,9 @@
   "tense": "present"
  },
  "professor": {
-  "es": "Es catedrática de física.",
-  "en": "She's a professor of physics.",
-  "tense": "present"
+  "es": "La catedrática publicará su investigación en junio.",
+  "en": "The professor will publish her research in June.",
+  "tense": "future"
  },
  "reporter": {
   "es": "Un reportero entrevistó al alcalde.",
@@ -5975,9 +5975,9 @@
   "tense": "past"
  },
  "assistant": {
-  "es": "Trabaja de dependienta.",
-  "en": "She works as a shop assistant.",
-  "tense": "present"
+  "es": "La asistente está atendiendo el teléfono hoy.",
+  "en": "The assistant is answering the phones today.",
+  "tense": "present_continuous"
  },
  "author": {
   "es": "La autora firmó su nueva novela.",
@@ -5990,9 +5990,9 @@
   "tense": "past"
  },
  "injury": {
-  "es": "Se recuperó despacio de la lesión.",
-  "en": "He recovered slowly from the injury.",
-  "tense": "past"
+  "es": "La lesión lo ha dejado fuera un mes.",
+  "en": "The injury has kept him out for a month.",
+  "tense": "present_perfect"
  },
  "pain": {
   "es": "Tiene mucho dolor.",
@@ -6005,9 +6005,9 @@
   "tense": "present"
  },
  "infection": {
-  "es": "Tiene una infección de oído.",
-  "en": "He has an ear infection.",
-  "tense": "present"
+  "es": "Sin antibióticos, la infección se extendería.",
+  "en": "Without antibiotics the infection would spread.",
+  "tense": "conditional"
  },
  "fever": {
   "es": "El niño tiene fiebre alta.",
@@ -6020,9 +6020,9 @@
   "tense": "present"
  },
  "allergy": {
-  "es": "Tengo alergia a los frutos secos.",
-  "en": "I have a nut allergy.",
-  "tense": "present"
+  "es": "Su alergia estaba empeorando en primavera.",
+  "en": "Her allergy was getting worse in spring.",
+  "tense": "past_continuous"
  },
  "bruise": {
   "es": "Tengo un moratón en la pierna.",
@@ -6035,9 +6035,9 @@
   "tense": "present"
  },
  "treatment": {
-  "es": "El tratamiento duró tres meses.",
-  "en": "The treatment lasted three months.",
-  "tense": "past"
+  "es": "El tratamiento durará unas seis semanas.",
+  "en": "The treatment will take about six weeks.",
+  "tense": "future"
  },
  "medicine": {
   "es": "Toma la medicina dos veces al día.",
@@ -6065,9 +6065,9 @@
   "tense": "present_continuous"
  },
  "surgery": {
-  "es": "Necesita cirugía en el hombro.",
-  "en": "He needs shoulder surgery.",
-  "tense": "present"
+  "es": "Se está recuperando de la cirugía en casa.",
+  "en": "She's recovering from surgery at home.",
+  "tense": "present_continuous"
  },
  "recovery": {
   "es": "El descanso ayuda a la recuperación.",
@@ -6080,9 +6080,9 @@
   "tense": "past"
  },
  "elbow": {
-  "es": "Me di en el codo con la mesa.",
-  "en": "I hit my elbow on the table.",
-  "tense": "present"
+  "es": "Me he hecho daño en el codo jugando al tenis.",
+  "en": "I've hurt my elbow playing tennis.",
+  "tense": "present_perfect"
  },
  "thumb": {
   "es": "Me di con el martillo en el pulgar.",
@@ -6095,9 +6095,9 @@
   "tense": "past"
  },
  "lip": {
-  "es": "Tengo los labios secos.",
-  "en": "My lips are dry.",
-  "tense": "present"
+  "es": "El viento frío te agrietaría los labios.",
+  "en": "The cold wind would chap your lips.",
+  "tense": "conditional"
  },
  "nail": {
   "es": "Se pintó las uñas de rojo.",
@@ -6115,9 +6115,9 @@
   "tense": "past"
  },
  "chin": {
-  "es": "Apoyó la barbilla en la mano.",
-  "en": "He rested his chin on his hand.",
-  "tense": "past"
+  "es": "Estaba con la barbilla apoyada en las manos, medio dormido.",
+  "en": "He was resting his chin on his hands, half asleep.",
+  "tense": "past_continuous"
  },
  "lung": {
   "es": "Fumar daña los pulmones.",
@@ -6130,9 +6130,9 @@
   "tense": "past"
  },
  "library": {
-  "es": "Devolví los libros a la biblioteca.",
-  "en": "I returned the books to the library.",
-  "tense": "past"
+  "es": "La biblioteca abrirá una sucursal nueva en el centro.",
+  "en": "The library will open a new branch downtown.",
+  "tense": "future"
  },
  "museum": {
   "es": "El museo tiene una exposición nueva.",
@@ -6145,9 +6145,9 @@
   "tense": "past"
  },
  "gallery": {
-  "es": "Sus cuadros están en una galería.",
-  "en": "Her paintings are in a gallery.",
-  "tense": "present"
+  "es": "La galería está exponiendo a artistas locales este mes.",
+  "en": "The gallery is showing local artists this month.",
+  "tense": "present_continuous"
  },
  "factory": {
   "es": "La fábrica hace muebles.",
@@ -6160,9 +6160,9 @@
   "tense": "present"
  },
  "prison": {
-  "es": "Pasó dos años en la cárcel.",
-  "en": "He spent two years in prison.",
-  "tense": "past"
+  "es": "Ha pasado dos años en la cárcel.",
+  "en": "He has spent two years in prison.",
+  "tense": "present_perfect"
  },
  "square": {
   "es": "Quedamos en la plaza mayor.",
@@ -6175,9 +6175,9 @@
   "tense": "present"
  },
  "tower": {
-  "es": "Sube a la torre para ver las vistas.",
-  "en": "Climb the tower to see the view.",
-  "tense": "present"
+  "es": "Desde esa torre verías toda la ciudad.",
+  "en": "From that tower you would see the whole city.",
+  "tense": "conditional"
  },
  "palace": {
   "es": "El palacio abre en verano.",
@@ -6190,9 +6190,9 @@
   "tense": "present"
  },
  "neighbourhood": {
-  "es": "Es un barrio muy tranquilo.",
-  "en": "It's a very quiet neighbourhood.",
-  "tense": "present"
+  "es": "El barrio estaba cambiando rápido en aquella época.",
+  "en": "The neighbourhood was changing fast back then.",
+  "tense": "past_continuous"
  },
  "suburb": {
   "es": "Viven en las afueras.",
@@ -6205,9 +6205,9 @@
   "tense": "present"
  },
  "harbour": {
-  "es": "Los barcos están en el puerto.",
-  "en": "The boats are in the harbour.",
-  "tense": "present"
+  "es": "El ferry saldrá del puerto al mediodía.",
+  "en": "The ferry will leave the harbour at noon.",
+  "tense": "future"
  },
  "pavement": {
   "es": "Camina por la acera.",
@@ -6220,9 +6220,9 @@
   "tense": "present"
  },
  "warehouse": {
-  "es": "La mercancía está en el almacén.",
-  "en": "The goods are in the warehouse.",
-  "tense": "present"
+  "es": "Están trasladando la mercancía a un almacén más grande.",
+  "en": "They're moving the stock to a bigger warehouse.",
+  "tense": "present_continuous"
  },
  "zoo": {
   "es": "Llevamos a los niños al zoo.",
@@ -6235,9 +6235,9 @@
   "tense": "present"
  },
  "moon": {
-  "es": "Anoche había luna llena.",
-  "en": "There was a full moon last night.",
-  "tense": "past"
+  "es": "La luna llena ha iluminado todo el valle.",
+  "en": "The full moon has lit up the whole valley.",
+  "tense": "present_perfect"
  },
  "star": {
   "es": "Desde aquí se ven muchas estrellas.",
@@ -6250,9 +6250,9 @@
   "tense": "present"
  },
  "universe": {
-  "es": "El universo es enorme.",
-  "en": "The universe is huge.",
-  "tense": "present"
+  "es": "Un telescopio así te mostraría medio universo.",
+  "en": "A telescope like that would show half the universe.",
+  "tense": "conditional"
  },
  "earthquake": {
   "es": "El terremoto destruyó muchas casas.",
@@ -6265,9 +6265,9 @@
   "tense": "past"
  },
  "desert": {
-  "es": "Cruzaron el desierto en coche.",
-  "en": "They crossed the desert by car.",
-  "tense": "past"
+  "es": "Estaban cruzando el desierto cuando se averió el jeep.",
+  "en": "They were crossing the desert when the jeep broke down.",
+  "tense": "past_continuous"
  },
  "jungle": {
   "es": "La selva estaba llena de ruidos.",
@@ -6280,9 +6280,9 @@
   "tense": "past"
  },
  "cliff": {
-  "es": "El camino va por el acantilado.",
-  "en": "The path runs along the cliff.",
-  "tense": "present"
+  "es": "El sendero subirá por el acantilado un kilómetro.",
+  "en": "The path will climb along the cliff for a mile.",
+  "tense": "future"
  },
  "coast": {
   "es": "Condujimos por la costa.",
@@ -6295,9 +6295,9 @@
   "tense": "past"
  },
  "stream": {
-  "es": "Los niños jugaban en el arroyo.",
-  "en": "The children played in the stream.",
-  "tense": "past"
+  "es": "Los niños están chapoteando en el arroyo.",
+  "en": "The children are paddling in the stream.",
+  "tense": "present_continuous"
  },
  "waterfall": {
   "es": "La cascada es impresionante.",
@@ -6310,9 +6310,9 @@
   "tense": "past"
  },
  "lightning": {
-  "es": "Un rayo cayó cerca de casa.",
-  "en": "Lightning struck near the house.",
-  "tense": "present"
+  "es": "Un rayo ha caído dos veces en el roble viejo.",
+  "en": "Lightning has struck the old oak twice.",
+  "tense": "present_perfect"
  },
  "tide": {
   "es": "Está subiendo la marea.",
@@ -6330,9 +6330,9 @@
   "tense": "past"
  },
  "beef": {
-  "es": "Comimos carne de res.",
-  "en": "We had beef.",
-  "tense": "past"
+  "es": "Yo pediría la carne de res, aquí está muy buena.",
+  "en": "I would order the beef, it's very good here.",
+  "tense": "conditional"
  },
  "pork": {
   "es": "No come carne de cerdo.",
@@ -6355,9 +6355,9 @@
   "tense": "imperative"
  },
  "mushroom": {
-  "es": "Pedí una tortilla de champiñones.",
-  "en": "I ordered a mushroom omelette.",
-  "tense": "past"
+  "es": "Estaba friendo champiñones para la salsa.",
+  "en": "She was frying mushrooms for the sauce.",
+  "tense": "past_continuous"
  },
  "lettuce": {
   "es": "Lava la lechuga.",
@@ -6375,9 +6375,9 @@
   "tense": "imperative"
  },
  "grape": {
-  "es": "El vino se hace con uvas.",
-  "en": "Wine is made from grapes.",
-  "tense": "past"
+  "es": "Las uvas estarán maduras para septiembre.",
+  "en": "The grapes will be ripe by September.",
+  "tense": "future"
  },
  "nut": {
   "es": "Es alérgica a los frutos secos.",
@@ -6390,9 +6390,9 @@
   "tense": "present"
  },
  "flour": {
-  "es": "No queda harina.",
-  "en": "There's no flour left.",
-  "tense": "past"
+  "es": "Está tamizando la harina en el bol.",
+  "en": "He's sifting the flour into the bowl.",
+  "tense": "present_continuous"
  },
  "jam": {
   "es": "Untó mermelada en la tostada.",
@@ -6405,9 +6405,9 @@
   "tense": "past"
  },
  "pastry": {
-  "es": "La masa quedó muy ligera.",
-  "en": "The pastry was very light.",
-  "tense": "past"
+  "es": "La masa ha quedado ligera y hojaldrada.",
+  "en": "The pastry has turned out light and flaky.",
+  "tense": "present_perfect"
  },
  "dessert": {
   "es": "De postre hay tarta de manzana.",
@@ -6425,9 +6425,9 @@
   "tense": "present"
  },
  "toast": {
-  "es": "Desayuné tostadas con miel.",
-  "en": "I had toast and honey for breakfast.",
-  "tense": "past"
+  "es": "Una tostada te asentaría el estómago.",
+  "en": "A slice of toast would settle your stomach.",
+  "tense": "conditional"
  },
  "vinegar": {
   "es": "Aliña la ensalada con aceite y vinagre.",
@@ -6440,9 +6440,9 @@
   "tense": "present"
  },
  "aim": {
-  "es": "El objetivo es ganar confianza.",
-  "en": "The aim is to build confidence.",
-  "tense": "present"
+  "es": "Estábamos perdiendo de vista el objetivo original.",
+  "en": "We were losing sight of the original aim.",
+  "tense": "past_continuous"
  },
  "progress": {
   "es": "Has hecho muchos progresos.",
@@ -6465,9 +6465,9 @@
   "tense": "present"
  },
  "disadvantage": {
-  "es": "La principal desventaja es el precio.",
-  "en": "The main disadvantage is the price.",
-  "tense": "present"
+  "es": "El precio alto será una gran desventaja.",
+  "en": "The high price will be a real disadvantage.",
+  "tense": "future"
  },
  "issue": {
   "es": "La vivienda es un problema serio aquí.",
@@ -6480,9 +6480,9 @@
   "tense": "past"
  },
  "consequence": {
-  "es": "No pensó en las consecuencias.",
-  "en": "She didn't think about the consequences.",
-  "tense": "present"
+  "es": "Ya estamos notando las consecuencias de la sequía.",
+  "en": "We're already feeling the consequences of the drought.",
+  "tense": "present_continuous"
  },
  "impact": {
   "es": "La noticia tuvo un gran impacto.",
@@ -6495,9 +6495,9 @@
   "tense": "present"
  },
  "balance": {
-  "es": "Hay que encontrar un equilibrio.",
-  "en": "You have to find a balance.",
-  "tense": "present"
+  "es": "Por fin ha encontrado un equilibrio entre trabajo y casa.",
+  "en": "She has finally found a balance between work and home.",
+  "tense": "present_perfect"
  },
  "limit": {
   "es": "Hay un límite de tres por persona.",
@@ -6510,9 +6510,9 @@
   "tense": "present"
  },
  "standard": {
-  "es": "El nivel del trabajo es muy alto.",
-  "en": "The standard of the work is very high.",
-  "tense": "present"
+  "es": "Más formación subiría el nivel del equipo.",
+  "en": "More training would raise the standard of the team.",
+  "tense": "conditional"
  },
  "procedure": {
   "es": "Sigue el procedimiento con cuidado.",
@@ -6525,9 +6525,9 @@
   "tense": "present"
  },
  "skill": {
-  "es": "Cocinar es una habilidad.",
-  "en": "Cooking is a skill.",
-  "tense": "present"
+  "es": "Estaba mejorando su habilidad en la cocina semana a semana.",
+  "en": "He was developing his cooking skill week by week.",
+  "tense": "past_continuous"
  },
  "knowledge": {
   "es": "Tiene amplios conocimientos de arte.",
@@ -6540,9 +6540,9 @@
   "tense": "present"
  },
  "option": {
-  "es": "Estudiamos todas las opciones.",
-  "en": "We looked at every option.",
-  "tense": "past"
+  "es": "Tendrás tres opciones al pagar.",
+  "en": "You'll have three options at the checkout.",
+  "tense": "future"
  },
  "success": {
   "es": "El acto fue un gran éxito.",
@@ -6555,9 +6555,9 @@
   "tense": "past"
  },
  "silence": {
-  "es": "Hubo un largo silencio.",
-  "en": "There was a long silence.",
-  "tense": "past"
+  "es": "Toda la sala está en silencio.",
+  "en": "The whole room is sitting in silence.",
+  "tense": "present_continuous"
  },
  "noise": {
   "es": "El ruido no me deja dormir.",
@@ -6570,9 +6570,9 @@
   "tense": "past"
  },
  "pattern": {
-  "es": "Hay un patrón claro en los datos.",
-  "en": "There's a clear pattern in the data.",
-  "tense": "present"
+  "es": "Los analistas han detectado un patrón claro en las ventas.",
+  "en": "Analysts have spotted a clear pattern in the sales.",
+  "tense": "present_perfect"
  },
  "trend": {
   "es": "Hay una tendencia hacia el teletrabajo.",
@@ -6585,9 +6585,9 @@
   "tense": "past"
  },
  "actual": {
-  "es": "El coste real fue mayor.",
-  "en": "The actual cost was higher.",
-  "tense": "past"
+  "es": "La cifra real te sorprendería.",
+  "en": "The actual figure would surprise you.",
+  "tense": "conditional"
  },
  "additional": {
   "es": "Hay un cargo adicional por el equipaje.",
@@ -6600,9 +6600,9 @@
   "tense": "present"
  },
  "annual": {
-  "es": "Es la reunión anual.",
-  "en": "It's the annual meeting.",
-  "tense": "present"
+  "es": "Estaban organizando la feria anual en marzo.",
+  "en": "They were planning the annual fair in March.",
+  "tense": "past_continuous"
  },
  "anxious": {
   "es": "Está ansiosa por la entrevista.",
@@ -6615,9 +6615,9 @@
   "tense": "past"
  },
  "appropriate": {
-  "es": "Lleva ropa adecuada para el frío.",
-  "en": "Wear appropriate clothing for the cold.",
-  "tense": "present"
+  "es": "Un traje oscuro será apropiado para la ceremonia.",
+  "en": "A dark suit will be appropriate for the ceremony.",
+  "tense": "future"
  },
  "artificial": {
   "es": "El zumo no tiene colorantes artificiales.",
@@ -6630,9 +6630,9 @@
   "tense": "present"
  },
  "awful": {
-  "es": "El tráfico estuvo horrible.",
-  "en": "The traffic was awful.",
-  "tense": "past"
+  "es": "El tiempo está siendo horrible toda la semana.",
+  "en": "The weather is being awful all week.",
+  "tense": "present_continuous"
  },
  "basic": {
   "es": "Tiene un nivel básico de español.",
@@ -6645,9 +6645,9 @@
   "tense": "past"
  },
  "broad": {
-  "es": "El curso da una visión amplia.",
-  "en": "The course gives a broad view.",
-  "tense": "present"
+  "es": "El curso le ha dado una visión amplia del tema.",
+  "en": "The course has given her a broad view of the topic.",
+  "tense": "present_perfect"
  },
  "casual": {
   "es": "Es una cena informal.",
@@ -6660,9 +6660,9 @@
   "tense": "present"
  },
  "complex": {
-  "es": "Es un problema complejo.",
-  "en": "It's a complex problem.",
-  "tense": "present"
+  "es": "Sin guía, la ruta sería demasiado compleja.",
+  "en": "Without a guide the route would be too complex.",
+  "tense": "conditional"
  },
  "complicated": {
   "es": "Las instrucciones son muy complicadas.",
@@ -6675,9 +6675,9 @@
   "tense": "past"
  },
  "conscious": {
-  "es": "Seguía consciente cuando llegó la ambulancia.",
-  "en": "She was still conscious when the ambulance arrived.",
-  "tense": "past"
+  "es": "Se mantenía consciente hasta que llegó la ambulancia.",
+  "en": "He was staying conscious until the ambulance arrived.",
+  "tense": "past_continuous"
  },
  "constant": {
   "es": "Hay un ruido constante en la calle.",
@@ -6690,9 +6690,9 @@
   "tense": "present"
  },
  "crucial": {
-  "es": "Las próximas semanas son cruciales.",
-  "en": "The next few weeks are crucial.",
-  "tense": "present"
+  "es": "La próxima votación será crucial para el proyecto.",
+  "en": "The next vote will be crucial for the project.",
+  "tense": "future"
  },
  "cruel": {
   "es": "Fue cruel dejar al perro solo.",
@@ -6705,9 +6705,9 @@
   "tense": "present"
  },
  "decent": {
-  "es": "Por fin encontramos un hotel decente.",
-  "en": "We finally found a decent hotel.",
-  "tense": "past"
+  "es": "Por fin estamos teniendo internet decente por aquí.",
+  "en": "We're finally getting decent internet out here.",
+  "tense": "present_continuous"
  },
  "desperate": {
   "es": "Estaban desesperados por ayuda.",
@@ -6720,9 +6720,9 @@
   "tense": "present"
  },
  "direct": {
-  "es": "¿Hay un tren directo a Bilbao?",
-  "en": "Is there a direct train to Bilbao?",
-  "tense": "present"
+  "es": "Han añadido un tren directo a la costa.",
+  "en": "They've added a direct train to the coast.",
+  "tense": "present_perfect"
  },
  "distant": {
   "es": "Se oía un trueno lejano.",
@@ -6735,9 +6735,9 @@
   "tense": "present"
  },
  "dramatic": {
-  "es": "Hubo un cambio drástico en el tiempo.",
-  "en": "There was a dramatic change in the weather.",
-  "tense": "past"
+  "es": "Un entrenador nuevo marcaría una diferencia enorme.",
+  "en": "A new coach would make a dramatic difference.",
+  "tense": "conditional"
  },
  "eager": {
   "es": "Los alumnos tenían ganas de empezar.",
@@ -6750,9 +6750,9 @@
   "tense": "present"
  },
  "efficient": {
-  "es": "El nuevo sistema es más eficiente.",
-  "en": "The new system is more efficient.",
-  "tense": "present"
+  "es": "La nueva línea se estaba volviendo más eficiente cada mes.",
+  "en": "The new line was becoming more efficient each month.",
+  "tense": "past_continuous"
  },
  "elderly": {
   "es": "El servicio ayuda a las personas mayores.",
@@ -6765,9 +6765,9 @@
   "tense": "present"
  },
  "entire": {
-  "es": "Se pasó el día entero limpiando.",
-  "en": "She spent the entire day cleaning.",
-  "tense": "past"
+  "es": "Las reparaciones durarán todo el verano.",
+  "en": "The repairs will take the entire summer.",
+  "tense": "future"
  },
  "equal": {
   "es": "Corta la tarta en trozos iguales.",
@@ -6785,9 +6785,9 @@
   "tense": "present"
  },
  "excellent": {
-  "es": "La comida fue excelente.",
-  "en": "The food was excellent.",
-  "tense": "past"
+  "es": "El nuevo cocinero está haciendo un trabajo excelente.",
+  "en": "The new chef is doing an excellent job.",
+  "tense": "present_continuous"
  },
  "extraordinary": {
   "es": "Tiene una memoria extraordinaria.",
@@ -6800,9 +6800,9 @@
   "tense": "past"
  },
  "familiar": {
-  "es": "Su cara me resultaba familiar.",
-  "en": "Her face looked familiar.",
-  "tense": "past"
+  "es": "Esta melodía se ha vuelto familiar con los años.",
+  "en": "This tune has become familiar over the years.",
+  "tense": "present_perfect"
  },
  "financial": {
   "es": "La empresa tiene problemas económicos.",
@@ -6815,9 +6815,9 @@
   "tense": "present"
  },
  "formal": {
-  "es": "Para esto necesitas una carta formal.",
-  "en": "You need a formal letter for this.",
-  "tense": "present"
+  "es": "Una queja formal les llamaría la atención.",
+  "en": "A formal complaint would get their attention.",
+  "tense": "conditional"
  },
  "former": {
   "es": "Es una antigua profesora mía.",
@@ -6830,9 +6830,9 @@
   "tense": "present"
  },
  "genuine": {
-  "es": "¿Es un bolso de cuero auténtico?",
-  "en": "Is this a genuine leather bag?",
-  "tense": "present"
+  "es": "El vendedor aseguraba que el cuadro era auténtico.",
+  "en": "The dealer was claiming the painting was genuine.",
+  "tense": "past_continuous"
  },
  "global": {
   "es": "El cambio climático es un problema global.",
@@ -6845,9 +6845,9 @@
   "tense": "present"
  },
  "horrible": {
-  "es": "¡Qué olor tan horrible!",
-  "en": "What a horrible smell!",
-  "tense": "present"
+  "es": "El tráfico será horrible el viernes por la tarde.",
+  "en": "The traffic will be horrible on Friday evening.",
+  "tense": "future"
  },
  "ideal": {
   "es": "Es el sitio ideal para un pícnic.",
@@ -6860,9 +6860,9 @@
   "tense": "present"
  },
  "immediate": {
-  "es": "Necesitamos una respuesta inmediata.",
-  "en": "We need an immediate answer.",
-  "tense": "present"
+  "es": "El equipo le está dando atención inmediata al problema.",
+  "en": "The team is giving the issue immediate attention.",
+  "tense": "present_continuous"
  },
  "impossible": {
   "es": "Es imposible contentar a todos.",
@@ -6875,9 +6875,9 @@
   "tense": "present"
  },
  "incredible": {
-  "es": "Las vistas desde arriba eran increíbles.",
-  "en": "The view from the top was incredible.",
-  "tense": "past"
+  "es": "La vista desde la cima ha sido increíble.",
+  "en": "The view from the summit has been incredible.",
+  "tense": "present_perfect"
  },
  "independent": {
   "es": "Es independiente desde los dieciocho.",
@@ -6895,9 +6895,9 @@
   "tense": "present"
  },
  "inevitable": {
-  "es": "Una subida de precios parece inevitable.",
-  "en": "A rise in prices seems inevitable.",
-  "tense": "present"
+  "es": "Sin cambios, la derrota sería inevitable.",
+  "en": "Without changes, a loss would be inevitable.",
+  "tense": "conditional"
  },
  "initial": {
   "es": "Mi reacción inicial fue de sorpresa.",
@@ -6910,9 +6910,9 @@
   "tense": "past"
  },
  "intense": {
-  "es": "Hacía un calor intenso cerca del fuego.",
-  "en": "There was intense heat near the fire.",
-  "tense": "past"
+  "es": "El calor cerca del horno se estaba volviendo intenso.",
+  "en": "The heat near the furnace was getting intense.",
+  "tense": "past_continuous"
  },
  "internal": {
   "es": "El informe es solo de uso interno.",
@@ -6925,9 +6925,9 @@
   "tense": "present"
  },
  "major": {
-  "es": "Es un problema importante.",
-  "en": "It's a major problem.",
-  "tense": "present"
+  "es": "La tormenta causará retrasos importantes mañana.",
+  "en": "The storm will cause major delays tomorrow.",
+  "tense": "future"
  },
  "massive": {
   "es": "La respuesta fue enorme.",
@@ -6940,9 +6940,9 @@
   "tense": "present"
  },
  "mental": {
-  "es": "El ajedrez es buen ejercicio mental.",
-  "en": "Chess is good mental exercise.",
-  "tense": "present"
+  "es": "Está haciendo ejercicios mentales a diario para mantenerse ágil.",
+  "en": "She's doing daily mental exercises to stay sharp.",
+  "tense": "present_continuous"
  },
  "mild": {
   "es": "Ha sido un invierno suave.",
@@ -6965,9 +6965,9 @@
   "tense": "present"
  },
  "mysterious": {
-  "es": "Había una luz misteriosa en el cielo.",
-  "en": "There was a mysterious light in the sky.",
-  "tense": "past"
+  "es": "Ha llegado un paquete misterioso a la oficina.",
+  "en": "A mysterious parcel has arrived at the office.",
+  "tense": "present_perfect"
  },
  "negative": {
   "es": "La película tuvo críticas negativas.",
@@ -6990,9 +6990,9 @@
   "tense": "present_continuous"
  },
  "permanent": {
-  "es": "Consiguió un contrato fijo.",
-  "en": "She got a permanent contract.",
-  "tense": "past"
+  "es": "Un contrato fijo cambiaría sus planes.",
+  "en": "A permanent contract would change her plans.",
+  "tense": "conditional"
  },
  "physical": {
   "es": "El trabajo requiere esfuerzo físico.",
@@ -7010,9 +7010,9 @@
   "tense": "past"
  },
  "practical": {
-  "es": "Me dio algún consejo práctico.",
-  "en": "She gave me some practical advice.",
-  "tense": "past"
+  "es": "El taller nos estaba dando consejos prácticos.",
+  "en": "The workshop was giving us practical tips.",
+  "tense": "past_continuous"
  },
  "precious": {
   "es": "El tiempo en familia es valioso.",
@@ -7025,9 +7025,9 @@
   "tense": "past"
  },
  "primary": {
-  "es": "Nuestro objetivo principal es la seguridad.",
-  "en": "Our primary aim is safety.",
-  "tense": "present"
+  "es": "La seguridad seguirá siendo nuestra prioridad principal.",
+  "en": "Safety will remain our primary concern.",
+  "tense": "future"
  },
  "private": {
   "es": "Esta es una carretera privada.",
@@ -7045,9 +7045,9 @@
   "tense": "present_perfect"
  },
  "rational": {
-  "es": "Necesitamos una conversación racional.",
-  "en": "We need a rational discussion.",
-  "tense": "present"
+  "es": "Se está manteniendo racional a pesar de la presión.",
+  "en": "He's staying rational despite the pressure.",
+  "tense": "present_continuous"
  },
  "reasonable": {
   "es": "Los precios parecen razonables.",
@@ -7065,9 +7065,9 @@
   "tense": "imperative"
  },
  "reliable": {
-  "es": "Es una persona de confianza.",
-  "en": "She's a reliable person.",
-  "tense": "present"
+  "es": "El coche viejo ha sido sorprendentemente fiable.",
+  "en": "The old car has been surprisingly reliable.",
+  "tense": "present_perfect"
  },
  "remarkable": {
   "es": "Tuvo una recuperación notable.",
@@ -7080,9 +7080,9 @@
   "tense": "present"
  },
  "responsible": {
-  "es": "¿Quién es el responsable de cerrar?",
-  "en": "Who's responsible for locking up?",
-  "tense": "present"
+  "es": "Un conductor responsable reduciría la velocidad aquí.",
+  "en": "A responsible driver would slow down here.",
+  "tense": "conditional"
  },
  "rough": {
   "es": "El mar estaba agitado ese día.",
@@ -7095,9 +7095,9 @@
   "tense": "past"
  },
  "severe": {
-  "es": "Tiene un dolor de cabeza fuerte.",
-  "en": "She has a severe headache.",
-  "tense": "present"
+  "es": "El dolor de cabeza se le estaba volviendo más fuerte.",
+  "en": "Her headache was becoming more severe.",
+  "tense": "past_continuous"
  },
  "significant": {
   "es": "Hubo una caída importante de las ventas.",
@@ -7110,9 +7110,9 @@
   "tense": "past"
  },
  "specific": {
-  "es": "¿Puedes concretar más la fecha?",
-  "en": "Can you be more specific about the date?",
-  "tense": "present"
+  "es": "El guía será más concreto sobre la ruta.",
+  "en": "The guide will be more specific about the route.",
+  "tense": "future"
  },
  "stable": {
   "es": "Su estado ahora es estable.",
@@ -7125,9 +7125,9 @@
   "tense": "present"
  },
  "straightforward": {
-  "es": "El formulario es bastante sencillo.",
-  "en": "The form is fairly straightforward.",
-  "tense": "present"
+  "es": "La instalación está resultando bastante sencilla.",
+  "en": "The setup is proving quite straightforward.",
+  "tense": "present_continuous"
  },
  "strict": {
   "es": "Nuestro profesor es muy estricto.",
@@ -7140,9 +7140,9 @@
   "tense": "past"
  },
  "sudden": {
-  "es": "Hubo un cambio de planes repentino.",
-  "en": "There was a sudden change of plan.",
-  "tense": "past"
+  "es": "Ha habido una bajada repentina de temperatura.",
+  "en": "There has been a sudden drop in temperature.",
+  "tense": "present_perfect"
  },
  "sufficient": {
   "es": "Tenemos comida suficiente para una semana.",
@@ -7155,9 +7155,9 @@
   "tense": "present"
  },
  "temporary": {
-  "es": "Es solo una solución temporal.",
-  "en": "It's just a temporary solution.",
-  "tense": "present"
+  "es": "Un arreglo temporal nos daría una semana.",
+  "en": "A temporary fix would buy us a week.",
+  "tense": "conditional"
  },
  "typical": {
   "es": "Era un día típico de invierno.",
@@ -7170,9 +7170,9 @@
   "tense": "present"
  },
  "urban": {
-  "es": "La vida urbana puede ser estresante.",
-  "en": "Urban life can be stressful.",
-  "tense": "present"
+  "es": "La región se estaba volviendo más urbana cada década.",
+  "en": "The region was becoming more urban every decade.",
+  "tense": "past_continuous"
  },
  "urgent": {
   "es": "Es un asunto urgente.",
@@ -7185,9 +7185,9 @@
   "tense": "present"
  },
  "valuable": {
-  "es": "Me dio un consejo muy valioso.",
-  "en": "She gave me some valuable advice.",
-  "tense": "past"
+  "es": "Esta experiencia será valiosa en tu currículum.",
+  "en": "This experience will be valuable on your CV.",
+  "tense": "future"
  },
  "various": {
   "es": "Lo comentamos por varias razones.",
@@ -7200,9 +7200,9 @@
   "tense": "past"
  },
  "violent": {
-  "es": "Hubo una tormenta violenta por la noche.",
-  "en": "There was a violent storm overnight.",
-  "tense": "past"
+  "es": "Una tormenta violenta está avanzando por la costa.",
+  "en": "A violent storm is moving across the coast.",
+  "tense": "present_continuous"
  },
  "visible": {
   "es": "Las estrellas se veían con claridad.",
@@ -7215,9 +7215,9 @@
   "tense": "present"
  },
  "willing": {
-  "es": "Siempre está dispuesta a ayudar.",
-  "en": "She's always willing to help.",
-  "tense": "present"
+  "es": "Siempre ha estado dispuesto a ayudar a los recién llegados.",
+  "en": "He has always been willing to help newcomers.",
+  "tense": "present_perfect"
  },
  "wooden": {
   "es": "Se sentaron en un banco de madera.",
@@ -7235,9 +7235,9 @@
   "tense": "present_continuous"
  },
  "approximately": {
-  "es": "El viaje dura unas dos horas.",
-  "en": "The trip takes approximately two hours.",
-  "tense": "present"
+  "es": "El viaje entero duraría aproximadamente tres horas.",
+  "en": "The whole trip would take approximately three hours.",
+  "tense": "conditional"
  },
  "barely": {
   "es": "Apenas te oigo.",
@@ -7255,9 +7255,9 @@
   "tense": "imperative"
  },
  "completely": {
-  "es": "Se me olvidó por completo.",
-  "en": "I completely forgot.",
-  "tense": "past"
+  "es": "Estaba interpretando el mapa completamente mal.",
+  "en": "I was completely misreading the map.",
+  "tense": "past_continuous"
  },
  "consequently": {
   "es": "Perdió el tren y por eso llegó tarde.",
@@ -7270,9 +7270,9 @@
   "tense": "present"
  },
  "deeply": {
-  "es": "La noticia la afectó profundamente.",
-  "en": "She was deeply upset by the news.",
-  "tense": "past"
+  "es": "La comunidad estará profundamente agradecida por la donación.",
+  "en": "The community will be deeply grateful for the donation.",
+  "tense": "future"
  },
  "deliberately": {
   "es": "Dejó la puerta abierta a propósito.",
@@ -7285,9 +7285,9 @@
   "tense": "present"
  },
  "effectively": {
-  "es": "Tenemos que aprovechar mejor el tiempo.",
-  "en": "We need to use our time more effectively.",
-  "tense": "present"
+  "es": "El equipo está trabajando más eficazmente desde el traslado.",
+  "en": "The team is working more effectively since the move.",
+  "tense": "present_continuous"
  },
  "entirely": {
   "es": "Eso es un asunto completamente distinto.",
@@ -7300,9 +7300,9 @@
   "tense": "past"
  },
  "frankly": {
-  "es": "Francamente, me da igual.",
-  "en": "Frankly, I don't care.",
-  "tense": "present"
+  "es": "Francamente, el plan no ha funcionado en absoluto.",
+  "en": "Frankly, the plan has not worked at all.",
+  "tense": "present_perfect"
  },
  "gently": {
   "es": "Remueve la mezcla con suavidad.",
@@ -7315,9 +7315,9 @@
   "tense": "past"
  },
  "greatly": {
-  "es": "Agradecemos mucho tu apoyo.",
-  "en": "We greatly appreciate your support.",
-  "tense": "present"
+  "es": "Una habitación tranquila mejoraría mucho su concentración.",
+  "en": "A quiet room would greatly improve his focus.",
+  "tense": "conditional"
  },
  "increasingly": {
   "es": "Es cada vez más difícil.",
@@ -7335,9 +7335,9 @@
   "tense": "past"
  },
  "mainly": {
-  "es": "El público era sobre todo gente joven.",
-  "en": "The audience was mainly young people.",
-  "tense": "past"
+  "es": "El público estaba esperando sobre todo al grupo principal.",
+  "en": "The crowd was mainly waiting for the headline act.",
+  "tense": "past_continuous"
  },
  "merely": {
   "es": "Solo hice una pregunta.",
@@ -7350,9 +7350,9 @@
   "tense": "present"
  },
  "originally": {
-  "es": "La casa era originalmente una granja.",
-  "en": "The house was originally a farm.",
-  "tense": "past"
+  "es": "La obra durará más de lo previsto en un principio.",
+  "en": "The play will run longer than originally planned.",
+  "tense": "future"
  },
  "particularly": {
   "es": "Me interesa especialmente la historia.",
@@ -7365,9 +7365,9 @@
   "tense": "past"
  },
  "precisely": {
-  "es": "Eso es exactamente lo que quería decir.",
-  "en": "That's precisely what I meant.",
-  "tense": "past"
+  "es": "El ingeniero está midiendo el hueco con precisión.",
+  "en": "The engineer is measuring the gap precisely.",
+  "tense": "present_continuous"
  },
  "previously": {
   "es": "Antes había trabajado en París.",
@@ -7385,9 +7385,9 @@
   "tense": "imperative"
  },
  "rarely": {
-  "es": "Casi nunca comemos fuera.",
-  "en": "We rarely eat out.",
-  "tense": "present"
+  "es": "Pocas veces hemos visto la tienda tan llena.",
+  "en": "We have rarely seen the shop this busy.",
+  "tense": "present_perfect"
  },
  "relatively": {
   "es": "El examen fue relativamente fácil.",
@@ -7400,9 +7400,9 @@
   "tense": "past"
  },
  "seriously": {
-  "es": "¿En serio te vas a mudar?",
-  "en": "Are you seriously going to move?",
-  "tense": "present"
+  "es": "Nadie se opondría en serio al cambio.",
+  "en": "Nobody would seriously object to the change.",
+  "tense": "conditional"
  },
  "shortly": {
   "es": "El médico le atenderá en breve.",
@@ -7430,9 +7430,9 @@
   "tense": "future"
  },
  "somewhat": {
-  "es": "Los resultados fueron algo decepcionantes.",
-  "en": "The results were somewhat disappointing.",
-  "tense": "past"
+  "es": "Los resultados estaban resultando algo decepcionantes.",
+  "en": "The results were turning out somewhat disappointing.",
+  "tense": "past_continuous"
  },
  "strongly": {
   "es": "Te recomiendo encarecidamente este libro.",
@@ -7445,9 +7445,9 @@
   "tense": "past"
  },
  "surely": {
-  "es": "No te irás ya, ¿verdad?",
-  "en": "Surely you're not leaving already?",
-  "tense": "present"
+  "es": "Seguramente el tiempo mejorará para el fin de semana.",
+  "en": "Surely the weather will improve by the weekend.",
+  "tense": "future"
  },
  "thoroughly": {
   "es": "Lava bien las verduras.",
@@ -7460,9 +7460,9 @@
   "tense": "past"
  },
  "totally": {
-  "es": "Estoy totalmente de acuerdo.",
-  "en": "I totally agree.",
-  "tense": "present"
+  "es": "Estoy replanteándome totalmente todo el diseño.",
+  "en": "I'm totally rethinking the whole design.",
+  "tense": "present_continuous"
  },
  "truly": {
   "es": "Fue una noche verdaderamente inolvidable.",
@@ -7475,9 +7475,9 @@
   "tense": "present"
  },
  "ultimately": {
-  "es": "Al final, la decisión es tuya.",
-  "en": "Ultimately, the choice is yours.",
-  "tense": "present"
+  "es": "El retraso al final nos ha ahorrado dinero.",
+  "en": "The delay has ultimately saved us money.",
+  "tense": "present_perfect"
  },
  "unfortunately": {
   "es": "Por desgracia, se canceló.",
@@ -7490,9 +7490,9 @@
   "tense": "past"
  },
  "widely": {
-  "es": "El libro se lee mucho en los colegios.",
-  "en": "The book is widely read in schools.",
-  "tense": "present"
+  "es": "La novela sería muy elogiada si se tradujera.",
+  "en": "The novel would be widely praised if it were translated.",
+  "tense": "conditional"
  },
  "career": {
   "es": "Tuvo una larga carrera en el periodismo.",
@@ -7510,9 +7510,9 @@
   "tense": "imperative"
  },
  "department": {
-  "es": "Trabaja en el departamento de marketing.",
-  "en": "She works in the marketing department.",
-  "tense": "present"
+  "es": "El departamento de ventas estuvo contratando toda la primavera.",
+  "en": "The sales department was hiring all spring.",
+  "tense": "past_continuous"
  },
  "employee": {
   "es": "La empresa tiene cincuenta empleados.",
@@ -7525,9 +7525,9 @@
   "tense": "present"
  },
  "enterprise": {
-  "es": "Llevan una pequeña empresa familiar.",
-  "en": "They run a small family enterprise.",
-  "tense": "present"
+  "es": "La nueva empresa creará cincuenta empleos.",
+  "en": "The new enterprise will create fifty jobs.",
+  "tense": "future"
  },
  "executive": {
   "es": "Los directivos se reunieron por la fusión.",
@@ -7540,9 +7540,9 @@
   "tense": "present"
  },
  "income": {
-  "es": "La mayor parte de los ingresos viene de las ventas.",
-  "en": "Most of the income comes from sales.",
-  "tense": "present"
+  "es": "Sus ingresos están bajando por la huelga.",
+  "en": "Their income is falling because of the strike.",
+  "tense": "present_continuous"
  },
  "industry": {
   "es": "El turismo da mucho empleo aquí.",
@@ -7555,9 +7555,9 @@
   "tense": "present"
  },
  "labour": {
-  "es": "La mano de obra costó más que las piezas.",
-  "en": "The labour cost more than the parts.",
-  "tense": "present"
+  "es": "La mano de obra ha construido todo este pueblo.",
+  "en": "Manual labour has built this whole village.",
+  "tense": "present_perfect"
  },
  "occupation": {
   "es": "Indique su nombre y su profesión.",
@@ -7575,9 +7575,9 @@
   "tense": "present"
  },
  "profession": {
-  "es": "La enseñanza es una profesión gratificante.",
-  "en": "Teaching is a rewarding profession.",
-  "tense": "present"
+  "es": "La enfermería sería una buena profesión para ella.",
+  "en": "Nursing would be a good profession for her.",
+  "tense": "conditional"
  },
  "profit": {
   "es": "La tienda tuvo un pequeño beneficio.",
@@ -7590,9 +7590,9 @@
   "tense": "past"
  },
  "salary": {
-  "es": "El sueldo se paga a fin de mes.",
-  "en": "The salary is paid at the end of the month.",
-  "tense": "past"
+  "es": "Su sueldo estaba subiendo despacio cada año.",
+  "en": "His salary was rising slowly every year.",
+  "tense": "past_continuous"
  },
  "sector": {
   "es": "Trabaja en el sector público.",
@@ -7610,9 +7610,9 @@
   "tense": "present_perfect"
  },
  "union": {
-  "es": "El sindicato pidió una subida.",
-  "en": "The union asked for a pay rise.",
-  "tense": "past"
+  "es": "El sindicato hará una votación el viernes.",
+  "en": "The union will hold a vote on Friday.",
+  "tense": "future"
  },
  "vacancy": {
   "es": "Hay una vacante de recepcionista.",
@@ -7625,9 +7625,9 @@
   "tense": "present"
  },
  "workforce": {
-  "es": "La empresa redujo su plantilla.",
-  "en": "The company cut its workforce.",
-  "tense": "present"
+  "es": "La fábrica está formando a toda su plantilla.",
+  "en": "The factory is training its whole workforce.",
+  "tense": "present_continuous"
  },
  "workshop": {
   "es": "Asistí a un taller de fotografía.",
@@ -7640,9 +7640,9 @@
   "tense": "past"
  },
  "asset": {
-  "es": "La casa es su principal bien.",
-  "en": "The house is their main asset.",
-  "tense": "present"
+  "es": "Su calma ha sido un gran activo para el equipo.",
+  "en": "Her calm has been a real asset to the team.",
+  "tense": "present_perfect"
  },
  "budget": {
   "es": "El viaje ya se ha pasado del presupuesto.",
@@ -7660,9 +7660,9 @@
   "tense": "past"
  },
  "currency": {
-  "es": "La moneda local es el peso.",
-  "en": "The local currency is the peso.",
-  "tense": "present"
+  "es": "Una moneda más débil impulsaría las exportaciones.",
+  "en": "A weaker currency would boost exports.",
+  "tense": "conditional"
  },
  "debt": {
   "es": "Intentan pagar sus deudas.",
@@ -7675,9 +7675,9 @@
   "tense": "present"
  },
  "fee": {
-  "es": "La cuota de socio es cincuenta euros.",
-  "en": "The membership fee is fifty euros.",
-  "tense": "present"
+  "es": "El club estaba subiendo la cuota todos los años.",
+  "en": "The club was raising its fee every year.",
+  "tense": "past_continuous"
  },
  "finance": {
   "es": "Trabaja en finanzas.",
@@ -7690,9 +7690,9 @@
   "tense": "present"
  },
  "inflation": {
-  "es": "La inflación llegó al cinco por ciento.",
-  "en": "Inflation reached five per cent.",
-  "tense": "past"
+  "es": "Dicen que la inflación bajará el año que viene.",
+  "en": "Inflation will slow down next year, they say.",
+  "tense": "future"
  },
  "investment": {
   "es": "La educación es una inversión de futuro.",
@@ -7705,9 +7705,9 @@
   "tense": "past"
  },
  "mortgage": {
-  "es": "Aún les quedan veinte años de hipoteca.",
-  "en": "They still have twenty years left on the mortgage.",
-  "tense": "past"
+  "es": "Están pagando la hipoteca antes de tiempo.",
+  "en": "They're paying off the mortgage early.",
+  "tense": "present_continuous"
  },
  "payment": {
   "es": "El primer pago vence el mes que viene.",
@@ -7725,9 +7725,9 @@
   "tense": "imperative"
  },
  "recession": {
-  "es": "Muchas tiendas cerraron en la recesión.",
-  "en": "Many shops closed during the recession.",
-  "tense": "past"
+  "es": "La recesión ha golpeado más a las tiendas pequeñas.",
+  "en": "The recession has hit small shops hardest.",
+  "tense": "present_perfect"
  },
  "refund": {
   "es": "Me devolvieron todo el dinero.",
@@ -7740,9 +7740,9 @@
   "tense": "present"
  },
  "stock": {
-  "es": "Esa talla está agotada.",
-  "en": "That size is out of stock.",
-  "tense": "present"
+  "es": "Una tienda más grande tendría más artículos en stock.",
+  "en": "A bigger shop would keep more items in stock.",
+  "tense": "conditional"
  },
  "tax": {
   "es": "Hay un impuesto alto sobre el tabaco.",
@@ -7755,9 +7755,9 @@
   "tense": "past"
  },
  "transfer": {
-  "es": "Hice una transferencia esta mañana.",
-  "en": "I made a transfer this morning.",
-  "tense": "past"
+  "es": "El banco estuvo procesando la transferencia toda la tarde.",
+  "en": "The bank was processing the transfer all afternoon.",
+  "tense": "past_continuous"
  },
  "wealth": {
   "es": "La riqueza de la ciudad vino del petróleo.",
@@ -7770,9 +7770,9 @@
   "tense": "past"
  },
  "announcement": {
-  "es": "Hubo un anuncio sobre el retraso.",
-  "en": "There was an announcement about the delay.",
-  "tense": "past"
+  "es": "Pronto habrá un anuncio sobre los resultados.",
+  "en": "There will be an announcement about the results soon.",
+  "tense": "future"
  },
  "article": {
   "es": "Escribió un artículo sobre historia local.",
@@ -7785,9 +7785,9 @@
   "tense": "past"
  },
  "broadcast": {
-  "es": "Escuchamos el boletín de noticias.",
-  "en": "We listened to the news broadcast.",
-  "tense": "past"
+  "es": "La emisora está transmitiendo el partido en directo.",
+  "en": "The station is broadcasting the match live.",
+  "tense": "present_continuous"
  },
  "column": {
   "es": "Escribe una columna semanal.",
@@ -7800,9 +7800,9 @@
   "tense": "past"
  },
  "editor": {
-  "es": "El editor cortó el último párrafo.",
-  "en": "The editor cut the last paragraph.",
-  "tense": "present"
+  "es": "El editor ha recortado el artículo a la mitad.",
+  "en": "The editor has cut the article in half.",
+  "tense": "present_perfect"
  },
  "headline": {
   "es": "La noticia fue el titular de portada.",
@@ -7815,9 +7815,9 @@
   "tense": "present"
  },
  "media": {
-  "es": "La noticia salió en los medios nacionales.",
-  "en": "The story was covered by the national media.",
-  "tense": "past"
+  "es": "La noticia llegaría a los medios nacionales en pocas horas.",
+  "en": "The story would reach the national media within hours.",
+  "tense": "conditional"
  },
  "publicity": {
   "es": "La película tuvo mucha publicidad.",
@@ -7835,9 +7835,9 @@
   "tense": "future"
  },
  "survey": {
-  "es": "Una encuesta reveló que la gente quiere más parques.",
-  "en": "A survey found that people want more parks.",
-  "tense": "past"
+  "es": "La empresa estaba haciendo una encuesta sobre los hábitos de los clientes.",
+  "en": "The company was running a survey on customer habits.",
+  "tense": "past_continuous"
  },
  "authority": {
   "es": "La administración local gestiona los colegios.",
@@ -7850,9 +7850,9 @@
   "tense": "past"
  },
  "candidate": {
-  "es": "Hay cuatro candidatos para el puesto.",
-  "en": "There are four candidates for the position.",
-  "tense": "present"
+  "es": "El candidato más fuerte tendrá una entrevista.",
+  "en": "The strongest candidate will get an interview.",
+  "tense": "future"
  },
  "citizen": {
   "es": "Se hizo ciudadana española el año pasado.",
@@ -7865,9 +7865,9 @@
   "tense": "present"
  },
  "council": {
-  "es": "El ayuntamiento aprobó el parque.",
-  "en": "The council approved the park.",
-  "tense": "past"
+  "es": "El ayuntamiento está revisando el plan de aparcamiento.",
+  "en": "The council is reviewing the parking plan.",
+  "tense": "present_continuous"
  },
  "court": {
   "es": "El caso llegó a los tribunales.",
@@ -7885,9 +7885,9 @@
   "tense": "present"
  },
  "evidence": {
-  "es": "No había pruebas de que estuviera allí.",
-  "en": "There was no evidence that he was there.",
-  "tense": "past"
+  "es": "Los investigadores han encontrado nuevas pruebas.",
+  "en": "Investigators have found new evidence.",
+  "tense": "present_perfect"
  },
  "governor": {
   "es": "El gobernador visitó la zona inundada.",
@@ -7910,9 +7910,9 @@
   "tense": "present_continuous"
  },
  "legislation": {
-  "es": "En junio entra en vigor una nueva ley.",
-  "en": "New legislation comes into force in June.",
-  "tense": "present"
+  "es": "Una nueva ley prohibiría el plástico de un solo uso.",
+  "en": "New legislation would ban single-use plastic.",
+  "tense": "conditional"
  },
  "mayor": {
   "es": "El alcalde inauguró el puente.",
@@ -7925,9 +7925,9 @@
   "tense": "past"
  },
  "opposition": {
-  "es": "Hubo una fuerte oposición al plan.",
-  "en": "There was fierce opposition to the plan.",
-  "tense": "past"
+  "es": "Los vecinos estaban organizando la oposición a la carretera.",
+  "en": "The residents were organising opposition to the road.",
+  "tense": "past_continuous"
  },
  "parliament": {
   "es": "El parlamento vota mañana.",
@@ -7945,9 +7945,9 @@
   "tense": "present"
  },
  "regulation": {
-  "es": "Hay que cumplir las normas de seguridad.",
-  "en": "Safety regulations must be followed.",
-  "tense": "past"
+  "es": "El nuevo reglamento ha cambiado cómo cierran los bares.",
+  "en": "The new regulation has changed how bars close.",
+  "tense": "present_perfect"
  },
  "territory": {
   "es": "Los pájaros defienden su territorio.",
@@ -7960,9 +7960,9 @@
   "tense": "past"
  },
  "vote": {
-  "es": "Ganó por solo doce votos.",
-  "en": "She won by just twelve votes.",
-  "tense": "past"
+  "es": "Una votación reñida iría a una segunda vuelta.",
+  "en": "A close vote would go to a second round.",
+  "tense": "conditional"
  },
  "welfare": {
   "es": "La organización trabaja por el bienestar infantil.",
@@ -7975,9 +7975,9 @@
   "tense": "present"
  },
  "curriculum": {
-  "es": "La música es parte del plan de estudios.",
-  "en": "Music is part of the curriculum.",
-  "tense": "present"
+  "es": "El colegio estaba actualizando su plan de estudios ese año.",
+  "en": "The school was updating its curriculum that year.",
+  "tense": "past_continuous"
  },
  "degree": {
   "es": "Tiene una licenciatura en biología.",
@@ -7995,9 +7995,9 @@
   "tense": "imperative"
  },
  "graduate": {
-  "es": "Es una recién licenciada.",
-  "en": "She's a recent graduate.",
-  "tense": "present"
+  "es": "La recién licenciada ya ha encontrado trabajo.",
+  "en": "The new graduate has already found a job.",
+  "tense": "present_perfect"
  },
  "grammar": {
   "es": "La gramática inglesa tiene muchas excepciones.",
@@ -8010,9 +8010,9 @@
   "tense": "present"
  },
  "pupil": {
-  "es": "Hay treinta alumnos en la clase.",
-  "en": "There are thirty pupils in the class.",
-  "tense": "present"
+  "es": "Una clase más pequeña le daría más atención a cada alumno.",
+  "en": "A smaller class would give each pupil more attention.",
+  "tense": "conditional"
  },
  "qualification": {
   "es": "¿Qué titulación se necesita?",
@@ -8025,9 +8025,9 @@
   "tense": "past"
  },
  "semester": {
-  "es": "El segundo semestre empieza en febrero.",
-  "en": "The second semester starts in February.",
-  "tense": "present"
+  "es": "Estaba cursando tres asignaturas ese semestre.",
+  "en": "I was taking three courses that semester.",
+  "tense": "past_continuous"
  },
  "seminar": {
   "es": "El seminario trató lo básico del marketing.",
@@ -8045,9 +8045,9 @@
   "tense": "present"
  },
  "vocabulary": {
-  "es": "Leer mucho amplía el vocabulario.",
-  "en": "Reading a lot builds your vocabulary.",
-  "tense": "present"
+  "es": "Leer en inglés me ha ampliado el vocabulario.",
+  "en": "Reading in English has widened my vocabulary.",
+  "tense": "present_perfect"
  },
  "device": {
   "es": "Este aparato mide la tensión.",
@@ -8065,9 +8065,9 @@
   "tense": "imperative"
  },
  "gadget": {
-  "es": "Su cocina está llena de aparatos.",
-  "en": "His kitchen is full of gadgets.",
-  "tense": "present"
+  "es": "Un aparato así te ahorraría una hora al día.",
+  "en": "A gadget like that would save you an hour a day.",
+  "tense": "conditional"
  },
  "hardware": {
   "es": "Tenemos que actualizar el hardware.",
@@ -8080,9 +8080,9 @@
   "tense": "present"
  },
  "laptop": {
-  "es": "Trabaja con el portátil en las cafeterías.",
-  "en": "She works on her laptop in cafés.",
-  "tense": "present"
+  "es": "Estaba trabajando con el portátil en el tren.",
+  "en": "She was working on her laptop on the train.",
+  "tense": "past_continuous"
  },
  "network": {
   "es": "La red de la oficina se ha caído.",
@@ -8095,9 +8095,9 @@
   "tense": "present"
  },
  "storage": {
-  "es": "Este teléfono tiene poco almacenamiento.",
-  "en": "This phone has little storage.",
-  "tense": "present"
+  "es": "El teléfono nuevo ya se ha quedado sin almacenamiento.",
+  "en": "The new phone has run out of storage already.",
+  "tense": "present_perfect"
  },
  "upgrade": {
   "es": "La actualización añadió funciones nuevas.",
@@ -8110,9 +8110,9 @@
   "tense": "past"
  },
  "website": {
-  "es": "Puedes reservar en su página web.",
-  "en": "You can book on their website.",
-  "tense": "present"
+  "es": "Una página web más limpia atraería a más clientes.",
+  "en": "A cleaner website would attract more customers.",
+  "tense": "conditional"
  },
  "arrival": {
   "es": "Nuestra llegada se retrasó por la niebla.",
@@ -8135,9 +8135,9 @@
   "tense": "present_perfect"
  },
  "flight": {
-  "es": "Nuestro vuelo sale a las seis.",
-  "en": "Our flight leaves at six.",
-  "tense": "present"
+  "es": "Estábamos embarcando en el vuelo cuando anunciaron el retraso.",
+  "en": "We were boarding the flight when they announced the delay.",
+  "tense": "past_continuous"
  },
  "luggage": {
   "es": "Viajamos con poco equipaje.",
@@ -8150,9 +8150,9 @@
   "tense": "past"
  },
  "passport": {
-  "es": "Mi pasaporte caduca el año que viene.",
-  "en": "My passport expires next year.",
-  "tense": "present"
+  "es": "Mi pasaporte ha caducado, así que no puedo viajar.",
+  "en": "My passport has expired, so I can't travel.",
+  "tense": "present_perfect"
  },
  "reservation": {
   "es": "Tengo una reserva a nombre de García.",
@@ -8165,9 +8165,9 @@
   "tense": "present"
  },
  "route": {
-  "es": "Tomamos la ruta panorámica.",
-  "en": "We took the scenic route.",
-  "tense": "past"
+  "es": "La ruta de la costa tardaría una hora más.",
+  "en": "The coastal route would take an extra hour.",
+  "tense": "conditional"
  },
  "tourism": {
   "es": "La isla depende del turismo.",
@@ -8180,9 +8180,9 @@
   "tense": "present"
  },
  "voyage": {
-  "es": "La travesía por el Atlántico duró dos semanas.",
-  "en": "The voyage across the Atlantic took two weeks.",
-  "tense": "past"
+  "es": "Iban por la mitad de la travesía cuando llegó la tormenta.",
+  "en": "They were halfway through the voyage when the storm hit.",
+  "tense": "past_continuous"
  },
  "athlete": {
   "es": "Los atletas olímpicos entrenan años.",
@@ -8195,9 +8195,9 @@
   "tense": "past"
  },
  "coach": {
-  "es": "El entrenador les hacía practicar cada día.",
-  "en": "The coach made them practise every day.",
-  "tense": "past"
+  "es": "El entrenador ha formado a tres campeones.",
+  "en": "The coach has trained three champions.",
+  "tense": "present_perfect"
  },
  "defeat": {
   "es": "El equipo sufrió una dura derrota.",
@@ -8210,9 +8210,9 @@
   "tense": "past"
  },
  "referee": {
-  "es": "El árbitro pitó.",
-  "en": "The referee blew the whistle.",
-  "tense": "present"
+  "es": "Un árbitro más estricto pararía las faltas.",
+  "en": "A stricter referee would stop the fouls.",
+  "tense": "conditional"
  },
  "score": {
   "es": "El resultado final fue dos a dos.",
@@ -8225,9 +8225,9 @@
   "tense": "past"
  },
  "tournament": {
-  "es": "El torneo dura dos semanas.",
-  "en": "The tournament lasts two weeks.",
-  "tense": "present"
+  "es": "El club estaba organizando un torneo de tenis esa semana.",
+  "en": "The club was hosting a tennis tournament that week.",
+  "tense": "past_continuous"
  },
  "trophy": {
   "es": "Levantaron el trofeo ante su afición.",
@@ -8240,9 +8240,9 @@
   "tense": "present"
  },
  "drama": {
-  "es": "Estudia arte dramático.",
-  "en": "She studies drama.",
-  "tense": "present"
+  "es": "El teatro ha representado la obra cada verano.",
+  "en": "The theatre has staged the drama every summer.",
+  "tense": "present_perfect"
  },
  "exhibition": {
   "es": "Hay una exposición de fotografía en el museo.",
@@ -8255,9 +8255,9 @@
   "tense": "present"
  },
  "novel": {
-  "es": "Su primera novela fue un éxito.",
-  "en": "Her first novel was a bestseller.",
-  "tense": "past"
+  "es": "Esa trama sería una gran novela.",
+  "en": "That plot would make a great novel.",
+  "tense": "conditional"
  },
  "orchestra": {
   "es": "La orquesta afinó antes del concierto.",
@@ -8270,9 +8270,9 @@
   "tense": "past"
  },
  "poetry": {
-  "es": "Escribe poesía en su tiempo libre.",
-  "en": "He writes poetry in his free time.",
-  "tense": "present"
+  "es": "Estuvo escribiendo poesía durante toda su enfermedad.",
+  "en": "He was writing poetry through his whole illness.",
+  "tense": "past_continuous"
  },
  "rehearsal": {
   "es": "El ensayo general es mañana por la noche.",
@@ -8285,9 +8285,9 @@
   "tense": "present"
  },
  "disappointment": {
-  "es": "Para mi decepción, se canceló.",
-  "en": "To my disappointment, it was cancelled.",
-  "tense": "past"
+  "es": "El resultado ha sido una gran decepción.",
+  "en": "The result has been a big disappointment.",
+  "tense": "present_perfect"
  },
  "enthusiasm": {
   "es": "Los niños mostraron mucho entusiasmo.",
@@ -8300,9 +8300,9 @@
   "tense": "past"
  },
  "grief": {
-  "es": "Estaba abrumada por el dolor.",
-  "en": "She was overcome with grief.",
-  "tense": "past"
+  "es": "El tiempo y el apoyo aliviarían su dolor.",
+  "en": "Time and support would ease her grief.",
+  "tense": "conditional"
  },
  "guilt": {
   "es": "Sentía una profunda culpa.",
@@ -8315,9 +8315,9 @@
   "tense": "past"
  },
  "loneliness": {
-  "es": "Tuvo que lidiar con la soledad.",
-  "en": "She struggled with loneliness.",
-  "tense": "past"
+  "es": "Estaba luchando contra una creciente sensación de soledad.",
+  "en": "He was fighting a growing sense of loneliness.",
+  "tense": "past_continuous"
  },
  "passion": {
   "es": "La música es su gran pasión.",
@@ -8330,9 +8330,9 @@
   "tense": "past"
  },
  "pleasure": {
-  "es": "Es un placer conocerte.",
-  "en": "It's a pleasure to meet you.",
-  "tense": "present"
+  "es": "Ha sido un verdadero placer trabajar contigo.",
+  "en": "It has been a real pleasure working with you.",
+  "tense": "present_perfect"
  },
  "relief": {
   "es": "Fue un alivio saber que estaban a salvo.",
@@ -8345,9 +8345,9 @@
   "tense": "past"
  },
  "sorrow": {
-  "es": "Todo el pueblo compartió su pena.",
-  "en": "The whole town shared in her sorrow.",
-  "tense": "past"
+  "es": "Contar la noticia solo aumentaría su tristeza.",
+  "en": "Sharing the news would only add to their sorrow.",
+  "tense": "conditional"
  },
  "sympathy": {
   "es": "Tienes mi más sentido pésame.",
@@ -8360,9 +8360,9 @@
   "tense": "present"
  },
  "abandon": {
-  "es": "Tuvieron que abandonar el coche.",
-  "en": "They had to abandon the car.",
-  "tense": "past"
+  "es": "Estaban abandonando la barca mientras se llenaba de agua.",
+  "en": "They were abandoning the boat as it filled with water.",
+  "tense": "past_continuous"
  },
  "absorb": {
   "es": "Las plantas absorben el agua por las raíces.",
@@ -8375,9 +8375,9 @@
   "tense": "present"
  },
  "accuse": {
-  "es": "Lo acusó de mentir.",
-  "en": "She accused him of lying.",
-  "tense": "past"
+  "es": "Un cliente ha acusado a la tienda de cobrar de más.",
+  "en": "A customer has accused the shop of overcharging.",
+  "tense": "present_perfect"
  },
  "acknowledge": {
   "es": "Reconoció que se había equivocado.",
@@ -8390,9 +8390,9 @@
   "tense": "past"
  },
  "anticipate": {
-  "es": "No previmos tanta gente.",
-  "en": "We didn't anticipate such a big crowd.",
-  "tense": "present"
+  "es": "Un buen jefe se anticiparía a este problema.",
+  "en": "A good manager would anticipate this problem.",
+  "tense": "conditional"
  },
  "arise": {
   "es": "Surgió un problema con el pago.",
@@ -8405,9 +8405,9 @@
   "tense": "present"
  },
  "assign": {
-  "es": "A cada alumno se le asignó un tema.",
-  "en": "Each student was assigned a topic.",
-  "tense": "past"
+  "es": "El profesor estaba asignando los proyectos uno a uno.",
+  "en": "The teacher was assigning the projects one by one.",
+  "tense": "past_continuous"
  },
  "associate": {
   "es": "Asocio esa canción con mi infancia.",
@@ -8420,9 +8420,9 @@
   "tense": "past"
  },
  "collaborate": {
-  "es": "Las dos universidades colaboran.",
-  "en": "The two universities collaborate.",
-  "tense": "present"
+  "es": "Los dos laboratorios han colaborado durante una década.",
+  "en": "The two labs have collaborated for a decade.",
+  "tense": "present_perfect"
  },
  "collapse": {
   "es": "El puente viejo se derrumbó.",
@@ -8435,9 +8435,9 @@
   "tense": "past"
  },
  "comply": {
-  "es": "Todos los restaurantes deben cumplir las normas.",
-  "en": "All restaurants must comply with the rules.",
-  "tense": "present"
+  "es": "Una empresa responsable cumpliría todas las normas.",
+  "en": "A responsible firm would comply with every rule.",
+  "tense": "conditional"
  },
  "conceal": {
   "es": "No pudo ocultar su decepción.",
@@ -8450,9 +8450,9 @@
   "tense": "past"
  },
  "confine": {
-  "es": "La enfermedad lo obligó a guardar cama.",
-  "en": "The illness confined him to bed.",
-  "tense": "past"
+  "es": "Un dolor de espalda lo tenía confinado en el sofá.",
+  "en": "A bad back was confining him to the sofa.",
+  "tense": "past_continuous"
  },
  "conform": {
   "es": "No todo el mundo quiere amoldarse.",
@@ -8465,9 +8465,9 @@
   "tense": "present"
  },
  "constitute": {
-  "es": "Las mujeres constituyen la mitad de la plantilla.",
-  "en": "Women constitute half the workforce.",
-  "tense": "present"
+  "es": "Los voluntarios han constituido la mayor parte del personal este año.",
+  "en": "Volunteers have constituted most of the staff this year.",
+  "tense": "present_perfect"
  },
  "contradict": {
   "es": "Los dos informes se contradicen.",
@@ -8480,9 +8480,9 @@
   "tense": "present"
  },
  "cope": {
-  "es": "Lleva bien la presión.",
-  "en": "She copes well under pressure.",
-  "tense": "present"
+  "es": "Menos reuniones ayudarían al equipo a llevarlo mejor.",
+  "en": "Fewer meetings would help the team cope.",
+  "tense": "conditional"
  },
  "dedicate": {
   "es": "Dedicó su vida a la enseñanza.",
@@ -8495,9 +8495,9 @@
   "tense": "present"
  },
  "derive": {
-  "es": "La palabra procede del latín.",
-  "en": "The word derives from Latin.",
-  "tense": "present"
+  "es": "Los investigadores estaban deduciendo la fórmula a partir de los datos.",
+  "en": "The researchers were deriving the formula from the data.",
+  "tense": "past_continuous"
  },
  "deteriorate": {
   "es": "Su salud empeoró en invierno.",
@@ -8510,9 +8510,9 @@
   "tense": "past"
  },
  "disclose": {
-  "es": "La empresa se negó a revelar las cifras.",
-  "en": "The company refused to disclose the figures.",
-  "tense": "past"
+  "es": "El banco por fin ha revelado las comisiones.",
+  "en": "The bank has finally disclosed the fees.",
+  "tense": "present_perfect"
  },
  "distinguish": {
   "es": "Los bebés aprenden a distinguir voces.",
@@ -8530,9 +8530,9 @@
   "tense": "present"
  },
  "elaborate": {
-  "es": "¿Puedes desarrollar más ese punto?",
-  "en": "Could you elaborate on that point?",
-  "tense": "present"
+  "es": "Una nota al pie ampliaría ese punto.",
+  "en": "A footnote would elaborate on that point.",
+  "tense": "conditional"
  },
  "embrace": {
   "es": "Adoptaron la nueva tecnología con ganas.",
@@ -8545,9 +8545,9 @@
   "tense": "past"
  },
  "enhance": {
-  "es": "Una buena luz mejora las fotos.",
-  "en": "Good lighting enhances the photos.",
-  "tense": "present"
+  "es": "El editor estaba realzando los colores en cada foto.",
+  "en": "The editor was enhancing the colours in each photo.",
+  "tense": "past_continuous"
  },
  "evolve": {
   "es": "El plan se convirtió en algo más grande.",
@@ -8560,9 +8560,9 @@
   "tense": "present"
  },
  "exceed": {
-  "es": "El coste no debe superar los quinientos euros.",
-  "en": "The cost mustn't exceed five hundred euros.",
-  "tense": "past"
+  "es": "La factura ha vuelto a superar nuestro presupuesto.",
+  "en": "The bill has exceeded our budget again.",
+  "tense": "present_perfect"
  },
  "exert": {
   "es": "Tuvo que hacer un gran esfuerzo.",
@@ -8575,9 +8575,9 @@
   "tense": "present"
  },
  "exploit": {
-  "es": "Deberíamos aprovechar esta oportunidad.",
-  "en": "We should exploit this opportunity.",
-  "tense": "present"
+  "es": "Un jugador astuto aprovecharía esa debilidad.",
+  "en": "A clever player would exploit that weakness.",
+  "tense": "conditional"
  },
  "facilitate": {
   "es": "La aplicación facilita los pagos.",
@@ -8590,9 +8590,9 @@
   "tense": "past"
  },
  "flourish": {
-  "es": "Su negocio prosperó tras la mudanza.",
-  "en": "Their business flourished after the move.",
-  "tense": "past"
+  "es": "El mercado estaba prosperando antes de que abriera el centro comercial.",
+  "en": "The market was flourishing before the new mall opened.",
+  "tense": "past_continuous"
  },
  "forge": {
   "es": "Forjaron una amistad sólida.",
@@ -8605,9 +8605,9 @@
   "tense": "present"
  },
  "fulfil": {
-  "es": "El curso no cumplió mis expectativas.",
-  "en": "The course didn't fulfil my expectations.",
-  "tense": "past"
+  "es": "El viaje ha cumplido un sueño de toda la vida.",
+  "en": "The trip has fulfilled a lifelong dream.",
+  "tense": "present_perfect"
  },
  "gaze": {
   "es": "Contemplaba el océano.",
@@ -8620,9 +8620,9 @@
   "tense": "present"
  },
  "grin": {
-  "es": "Sonrió de oreja a oreja.",
-  "en": "He grinned from ear to ear.",
-  "tense": "past"
+  "es": "Cualquier niño sonreiría con un regalo así.",
+  "en": "Any kid would grin at a gift like that.",
+  "tense": "conditional"
  },
  "halt": {
   "es": "El tren se detuvo en una estación pequeña.",
@@ -8635,9 +8635,9 @@
   "tense": "past"
  },
  "ignite": {
-  "es": "Una chispa prendió la hierba seca.",
-  "en": "A spark ignited the dry grass.",
-  "tense": "past"
+  "es": "Un cable suelto estaba prendiendo poco a poco el aislante.",
+  "en": "A loose wire was slowly igniting the insulation.",
+  "tense": "past_continuous"
  },
  "impose": {
   "es": "El gobierno impuso un toque de queda.",
@@ -8650,9 +8650,9 @@
   "tense": "present"
  },
  "induce": {
-  "es": "Nada pudo hacerle cambiar de opinión.",
-  "en": "Nothing could induce him to change his mind.",
-  "tense": "present"
+  "es": "La leche caliente le ha provocado un sueño profundo.",
+  "en": "The warm milk has induced a deep sleep.",
+  "tense": "present_perfect"
  },
  "integrate": {
   "es": "El software se integra con tu calendario.",
@@ -8665,9 +8665,9 @@
   "tense": "past"
  },
  "linger": {
-  "es": "Nos entretuvimos una hora tomando café.",
-  "en": "We lingered over coffee for an hour.",
-  "tense": "past"
+  "es": "El olor a humo se quedaría durante días.",
+  "en": "The smell of smoke would linger for days.",
+  "tense": "conditional"
  },
  "merge": {
   "es": "Las dos empresas se fusionaron.",
@@ -8680,9 +8680,9 @@
   "tense": "present"
  },
  "minimize": {
-  "es": "Intentamos reducir al mínimo las molestias.",
-  "en": "We tried to minimize the disruption.",
-  "tense": "past"
+  "es": "El equipo estaba reduciendo al mínimo el ruido cerca del colegio.",
+  "en": "The crew was minimizing the noise near the school.",
+  "tense": "past_continuous"
  },
  "modify": {
   "es": "Modificamos la receta para usar menos azúcar.",
@@ -8695,9 +8695,9 @@
   "tense": "present"
  },
  "overlook": {
-  "es": "Es fácil pasar por alto los errores pequeños.",
-  "en": "It's easy to overlook small errors.",
-  "tense": "present"
+  "es": "El informe ha pasado por alto un detalle clave.",
+  "en": "The report has overlooked a key detail.",
+  "tense": "present_perfect"
  },
  "overwhelm": {
   "es": "Se vio desbordada por los mensajes.",
@@ -8710,9 +8710,9 @@
   "tense": "past"
  },
  "persist": {
-  "es": "Si el dolor persiste, ve al médico.",
-  "en": "If the pain persists, see a doctor.",
-  "tense": "present"
+  "es": "El problema persistiría sin una solución de verdad.",
+  "en": "The problem would persist without a real fix.",
+  "tense": "conditional"
  },
  "portray": {
   "es": "La película lo presenta como un héroe.",
@@ -8725,9 +8725,9 @@
   "tense": "past"
  },
  "prioritize": {
-  "es": "Tienes que priorizar tus tareas.",
-  "en": "You need to prioritize your tasks.",
-  "tense": "present"
+  "es": "Estaba priorizando primero los correos urgentes.",
+  "en": "She was prioritizing the urgent emails first.",
+  "tense": "past_continuous"
  },
  "prolong": {
   "es": "Las conversaciones prolongaron la crisis.",
@@ -8745,9 +8745,9 @@
   "tense": "future"
  },
  "reinforce": {
-  "es": "El muro se reforzó con acero.",
-  "en": "The wall was reinforced with steel.",
-  "tense": "past"
+  "es": "Los ingenieros han reforzado el puente viejo.",
+  "en": "Engineers have reinforced the old bridge.",
+  "tense": "present_perfect"
  },
  "render": {
   "es": "La lesión lo dejó sin poder trabajar.",
@@ -8760,9 +8760,9 @@
   "tense": "past"
  },
  "reside": {
-  "es": "Residen en un pueblo costero pequeño.",
-  "en": "They reside in a small coastal town.",
-  "tense": "present"
+  "es": "En otra vida, ella viviría junto al mar.",
+  "en": "In another life she would reside by the sea.",
+  "tense": "conditional"
  },
  "restrain": {
   "es": "Apenas podía contener la ira.",
@@ -8775,9 +8775,9 @@
   "tense": "past"
  },
  "retrieve": {
-  "es": "El perro trajo la pelota.",
-  "en": "The dog retrieved the ball.",
-  "tense": "past"
+  "es": "El buzo estaba recuperando la cámara perdida.",
+  "en": "The diver was retrieving the lost camera.",
+  "tense": "past_continuous"
  },
  "scatter": {
   "es": "El viento esparció los papeles.",
@@ -8790,9 +8790,9 @@
   "tense": "past"
  },
  "simplify": {
-  "es": "Simplificamos el formulario.",
-  "en": "We simplified the form.",
-  "tense": "past"
+  "es": "La nueva aplicación ha simplificado el proceso de reserva.",
+  "en": "The new app has simplified the booking process.",
+  "tense": "present_perfect"
  },
  "soar": {
   "es": "Los precios de la vivienda se dispararon.",
@@ -8805,9 +8805,9 @@
   "tense": "present"
  },
  "speculate": {
-  "es": "La gente especulaba sobre los motivos.",
-  "en": "People speculated about the reasons.",
-  "tense": "past"
+  "es": "Sin datos, la gente solo especularía.",
+  "en": "Without facts, people would just speculate.",
+  "tense": "conditional"
  },
  "stimulate": {
   "es": "La clase busca estimular el debate.",
@@ -8820,9 +8820,9 @@
   "tense": "present"
  },
  "summon": {
-  "es": "Lo llamaron al despacho del jefe.",
-  "en": "He was summoned to the manager's office.",
-  "tense": "past"
+  "es": "El director estuvo llamando a alumnos al despacho toda la mañana.",
+  "en": "The head was summoning students to the office all morning.",
+  "tense": "past_continuous"
  },
  "sustain": {
   "es": "Es difícil mantener ese ritmo.",
@@ -8845,9 +8845,9 @@
   "tense": "past"
  },
  "undermine": {
-  "es": "Las críticas constantes minaron su confianza.",
-  "en": "Constant criticism undermined her confidence.",
-  "tense": "past"
+  "es": "Los rumores han socavado la confianza en la marca.",
+  "en": "The rumours have undermined trust in the brand.",
+  "tense": "present_perfect"
  },
  "undertake": {
   "es": "Emprendieron una gran reforma.",
@@ -8860,9 +8860,9 @@
   "tense": "present"
  },
  "withdraw": {
-  "es": "Sacó cien euros del cajero.",
-  "en": "He withdrew a hundred euros from the machine.",
-  "tense": "past"
+  "es": "En una emergencia sacarías dinero en cualquier cajero.",
+  "en": "In an emergency you would withdraw cash at any machine.",
+  "tense": "conditional"
  },
  "abstract": {
   "es": "La libertad es un concepto abstracto.",
@@ -8875,9 +8875,9 @@
   "tense": "present"
  },
  "abundant": {
-  "es": "Aquí abunda el pescado fresco.",
-  "en": "Fresh fish is abundant here.",
-  "tense": "present"
+  "es": "En un buen año, la fruta sería abundante aquí.",
+  "en": "In a good year, fruit would be abundant here.",
+  "tense": "conditional"
  },
  "accessible": {
   "es": "A la playa se llega en autobús.",
@@ -8890,9 +8890,9 @@
   "tense": "present"
  },
  "adjacent": {
-  "es": "Nos alojamos en habitaciones contiguas.",
-  "en": "We stayed in adjacent rooms.",
-  "tense": "past"
+  "es": "Una habitación contigua nos daría más espacio.",
+  "en": "An adjacent room would give us more space.",
+  "tense": "conditional"
  },
  "ambiguous": {
   "es": "Las instrucciones eran ambiguas.",
@@ -8905,9 +8905,9 @@
   "tense": "present"
  },
  "arbitrary": {
-  "es": "La elección de colores parece arbitraria.",
-  "en": "The choice of colours seems arbitrary.",
-  "tense": "present"
+  "es": "Sin normas claras, la elección parecería arbitraria.",
+  "en": "Without clear rules the choice would seem arbitrary.",
+  "tense": "conditional"
  },
  "authentic": {
   "es": "El restaurante sirve comida tailandesa auténtica.",
@@ -8920,9 +8920,9 @@
   "tense": "past"
  },
  "bleak": {
-  "es": "El futuro pintaba desolador.",
-  "en": "The future looked bleak.",
-  "tense": "past"
+  "es": "Sin la subvención, el panorama sería desolador.",
+  "en": "Without the grant, the outlook would be bleak.",
+  "tense": "conditional"
  },
  "chronic": {
   "es": "Sufre un dolor de espalda crónico.",
@@ -8935,9 +8935,9 @@
   "tense": "past"
  },
  "coherent": {
-  "es": "Dio un relato coherente de los hechos.",
-  "en": "She gave a coherent account of events.",
-  "tense": "past"
+  "es": "Un esquema claro haría el ensayo más coherente.",
+  "en": "A clear outline would make the essay more coherent.",
+  "tense": "conditional"
  },
  "compact": {
   "es": "La cámara es ligera y compacta.",
@@ -8950,9 +8950,9 @@
   "tense": "present"
  },
  "competent": {
-  "es": "Es una conductora competente.",
-  "en": "She's a competent driver.",
-  "tense": "present"
+  "es": "Un electricista competente arreglaría esto en una hora.",
+  "en": "A competent electrician would fix this in an hour.",
+  "tense": "conditional"
  },
  "comprehensive": {
   "es": "La guía ofrece información completa.",
@@ -8965,9 +8965,9 @@
   "tense": "present"
  },
  "conventional": {
-  "es": "Eligieron un diseño convencional.",
-  "en": "They chose a conventional design.",
-  "tense": "past"
+  "es": "Un horno convencional lo cocinaría de forma más uniforme.",
+  "en": "A conventional oven would cook it more evenly.",
+  "tense": "conditional"
  },
  "deliberate": {
   "es": "Fue un intento deliberado de engañarnos.",
@@ -8980,9 +8980,9 @@
   "tense": "present"
  },
  "diverse": {
-  "es": "La ciudad tiene una población diversa.",
-  "en": "The city has a diverse population.",
-  "tense": "present"
+  "es": "Un jurado más diverso lo valoraría mejor.",
+  "en": "A more diverse panel would judge it better.",
+  "tense": "conditional"
  },
  "durable": {
   "es": "Estas botas son muy resistentes.",
@@ -8995,9 +8995,9 @@
   "tense": "present"
  },
  "ethical": {
-  "es": "La empresa sigue prácticas éticas.",
-  "en": "The company follows ethical practices.",
-  "tense": "present"
+  "es": "Una empresa ética pagaría a sus proveedores de forma justa.",
+  "en": "An ethical company would pay its suppliers fairly.",
+  "tense": "conditional"
  },
  "exotic": {
   "es": "El mercado vende fruta exótica.",
@@ -9010,9 +9010,9 @@
   "tense": "past"
  },
  "fatal": {
-  "es": "Cometió un error fatal.",
-  "en": "He made one fatal mistake.",
-  "tense": "past"
+  "es": "Un giro mal dado en esa carretera sería fatal.",
+  "en": "One wrong turn on that road would be fatal.",
+  "tense": "conditional"
  },
  "feasible": {
   "es": "¿Es viable terminar para el viernes?",
@@ -9025,9 +9025,9 @@
   "tense": "present"
  },
  "fundamental": {
-  "es": "Hay una diferencia fundamental entre los dos.",
-  "en": "There's a fundamental difference between the two.",
-  "tense": "present"
+  "es": "Un cambio fundamental llevaría años.",
+  "en": "A fundamental change would take years.",
+  "tense": "conditional"
  },
  "hostile": {
   "es": "El público era hostil con el ponente.",
@@ -9040,9 +9040,9 @@
   "tense": "past"
  },
  "imminent": {
-  "es": "Parece que una tormenta es inminente.",
-  "en": "A storm seems imminent.",
-  "tense": "present"
+  "es": "Si se juntaran las nubes, una tormenta sería inminente.",
+  "en": "If the clouds gathered, a storm would be imminent.",
+  "tense": "conditional"
  },
  "inherent": {
   "es": "Todo deporte tiene riesgos inherentes.",
@@ -9055,9 +9055,9 @@
   "tense": "present"
  },
  "intriguing": {
-  "es": "Planteó una pregunta intrigante.",
-  "en": "She raised an intriguing question.",
-  "tense": "past"
+  "es": "Ese título parecería intrigante en una estantería.",
+  "en": "That title would look intriguing on a shelf.",
+  "tense": "conditional"
  },
  "notable": {
   "es": "Hubo una mejora notable.",
@@ -9070,9 +9070,9 @@
   "tense": "past"
  },
  "prominent": {
-  "es": "Es una destacada empresaria local.",
-  "en": "She's a prominent local businesswoman.",
-  "tense": "present"
+  "es": "Un cartel más grande haría la tienda más visible.",
+  "en": "A bigger sign would make the shop more prominent.",
+  "tense": "conditional"
  },
  "prone": {
   "es": "Es propenso a los dolores de cabeza con el calor.",
@@ -9085,9 +9085,9 @@
   "tense": "past"
  },
  "reluctant": {
-  "es": "Era reacia a marcharse.",
-  "en": "She was reluctant to leave.",
-  "tense": "past"
+  "es": "La mayoría sería reacia a prestarle dinero a un desconocido.",
+  "en": "Most people would be reluctant to lend a stranger money.",
+  "tense": "conditional"
  },
  "rigid": {
   "es": "Las normas son demasiado rígidas.",
@@ -9100,9 +9100,9 @@
   "tense": "present"
  },
  "scarce": {
-  "es": "El agua escaseaba durante la sequía.",
-  "en": "Water was scarce during the drought.",
-  "tense": "past"
+  "es": "En una sequía, el agua limpia escasearía.",
+  "en": "In a drought, clean water would be scarce.",
+  "tense": "conditional"
  },
  "subtle": {
   "es": "Hay una diferencia sutil de sabor.",
@@ -9115,9 +9115,9 @@
   "tense": "past"
  },
  "tedious": {
-  "es": "Rellenar formularios es una tarea tediosa.",
-  "en": "Filling in forms is a tedious job.",
-  "tense": "present"
+  "es": "Sin una plantilla, el informe sería tedioso.",
+  "en": "Without a template, the report would be tedious.",
+  "tense": "conditional"
  },
  "thorough": {
   "es": "La policía hizo un registro minucioso.",
@@ -9130,9 +9130,9 @@
   "tense": "past"
  },
  "versatile": {
-  "es": "El huevo es un ingrediente versátil.",
-  "en": "Eggs are a versatile ingredient.",
-  "tense": "present"
+  "es": "Una mesa plegable sería más versátil.",
+  "en": "A folding table would be more versatile.",
+  "tense": "conditional"
  },
  "vivid": {
   "es": "Tengo un recuerdo muy vívido de ese día.",
@@ -9145,9 +9145,9 @@
   "tense": "present"
  },
  "attic": {
-  "es": "Guardamos cajas viejas en el desván.",
-  "en": "We keep old boxes in the attic.",
-  "tense": "present"
+  "es": "Un desván acondicionado añadiría una habitación entera.",
+  "en": "A finished attic would add a whole bedroom.",
+  "tense": "conditional"
  },
  "basement": {
   "es": "El gimnasio está en el sótano.",
@@ -9160,9 +9160,9 @@
   "tense": "present"
  },
  "fireplace": {
-  "es": "Estuvimos junto a la chimenea toda la tarde.",
-  "en": "We sat by the fireplace all evening.",
-  "tense": "past"
+  "es": "Una chimenea de verdad haría la sala acogedora.",
+  "en": "A real fireplace would make the room cosy.",
+  "tense": "conditional"
  },
  "staircase": {
   "es": "Una escalinata subía hasta el vestíbulo.",
@@ -9175,9 +9175,9 @@
   "tense": "past"
  },
  "wardrobe": {
-  "es": "Cuelga el abrigo en el armario.",
-  "en": "Hang your coat in the wardrobe.",
-  "tense": "present"
+  "es": "Un armario empotrado despejaría el suelo.",
+  "en": "A built-in wardrobe would free up the floor.",
+  "tense": "conditional"
  },
  "cushion": {
   "es": "Se puso un cojín en la espalda.",
@@ -15009,11 +15009,18 @@
   "en": "That matter is outside your remit; pass it to legal.",
   "tense": "imperative"
  },
- "bug": {
-  "es": "El equipo corregirá ese fallo en la próxima versión.",
-  "en": "The team will fix that bug in the next release.",
-  "tense": "future"
- },
+ "bug": [
+  {
+   "es": "El equipo corregirá ese fallo en la próxima versión.",
+   "en": "The team will fix that bug in the next release.",
+   "tense": "future"
+  },
+  {
+   "es": "Funcionó.",
+   "en": "It worked.",
+   "tense": "past"
+  }
+ ],
  "feature": {
   "es": "Ya hemos lanzado la nueva funcionalidad a producción.",
   "en": "We have already shipped the new feature to production.",
@@ -15049,11 +15056,18 @@
   "en": "The team has rewritten the whole frontend in a month.",
   "tense": "present_perfect"
  },
- "backend": {
-  "es": "Un backend más simple facilitaría el mantenimiento.",
-  "en": "A simpler backend would make maintenance easier.",
-  "tense": "conditional"
- },
+ "backend": [
+  {
+   "es": "Un backend más simple facilitaría el mantenimiento.",
+   "en": "A simpler backend would make maintenance easier.",
+   "tense": "conditional"
+  },
+  {
+   "es": "Lo guardo en el servicio.",
+   "en": "I store it in the service.",
+   "tense": "present"
+  }
+ ],
  "repository": {
   "es": "Están moviendo el repositorio a otra organización.",
   "en": "They're moving the repository to another organisation.",
@@ -15069,11 +15083,18 @@
   "en": "Don't crash the app with such a large file.",
   "tense": "imperative"
  },
- "deployment": {
-  "es": "El despliegue de mañana incluirá dos correcciones.",
-  "en": "Tomorrow's deployment will include two fixes.",
-  "tense": "future"
- },
+ "deployment": [
+  {
+   "es": "El despliegue de mañana incluirá dos correcciones.",
+   "en": "Tomorrow's deployment will include two fixes.",
+   "tense": "future"
+  },
+  {
+   "es": "Lo desplegamos a producción.",
+   "en": "We deployed it to production.",
+   "tense": "past"
+  }
+ ],
  "API": {
   "es": "La API ha cambiado y varios clientes han dejado de funcionar.",
   "en": "The API has changed and several clients have stopped working.",
@@ -15104,11 +15125,18 @@
   "en": "The company will release the library as open source.",
   "tense": "future"
  },
- "test": {
-  "es": "El equipo ha añadido pruebas para cada endpoint nuevo.",
-  "en": "The team has added a test for every new endpoint.",
-  "tense": "present_perfect"
- },
+ "test": [
+  {
+   "es": "El equipo ha añadido pruebas para cada endpoint nuevo.",
+   "en": "The team has added a test for every new endpoint.",
+   "tense": "present_perfect"
+  },
+  {
+   "es": "QA dio el visto bueno.",
+   "en": "QA signed off.",
+   "tense": "past"
+  }
+ ],
  "pull request": {
   "es": "Yo aprobaría ese pull request tras un cambio menor.",
   "en": "I'd approve that pull request after one small change.",
@@ -15169,11 +15197,18 @@
   "en": "The team has moved the service into a container.",
   "tense": "present_perfect"
  },
- "rollout": {
-  "es": "Un despliegue progresivo reduciría el riesgo del cambio.",
-  "en": "A gradual rollout would reduce the risk of the change.",
-  "tense": "conditional"
- },
+ "rollout": [
+  {
+   "es": "Un despliegue progresivo reduciría el riesgo del cambio.",
+   "en": "A gradual rollout would reduce the risk of the change.",
+   "tense": "conditional"
+  },
+  {
+   "es": "Pudimos desplegarlo.",
+   "en": "We were able to deploy it.",
+   "tense": "past"
+  }
+ ],
  "downtime": {
   "es": "El sitio está teniendo mucho tiempo de inactividad esta semana.",
   "en": "The site is having a lot of downtime this week.",
@@ -15294,11 +15329,18 @@
   "en": "A stricter compiler would catch that type error.",
   "tense": "conditional"
  },
- "refactor": {
-  "es": "Está refactorizando el módulo de pagos esta semana.",
-  "en": "He's refactoring the payments module this week.",
-  "tense": "present_continuous"
- },
+ "refactor": [
+  {
+   "es": "Está refactorizando el módulo de pagos esta semana.",
+   "en": "He's refactoring the payments module this week.",
+   "tense": "present_continuous"
+  },
+  {
+   "es": "en toda la aplicación",
+   "en": "across the whole app",
+   "tense": "present"
+  }
+ ],
  "legacy code": {
   "es": "El código heredado estaba dificultando cada cambio.",
   "en": "The legacy code was making every change harder.",
@@ -15329,11 +15371,18 @@
   "en": "The app is suffering a memory leak in the background.",
   "tense": "present_continuous"
  },
- "caching": {
-  "es": "El almacenamiento en caché estaba sirviendo datos viejos.",
-  "en": "The caching was serving stale data.",
-  "tense": "past_continuous"
- },
+ "caching": [
+  {
+   "es": "El almacenamiento en caché estaba sirviendo datos viejos.",
+   "en": "The caching was serving stale data.",
+   "tense": "past_continuous"
+  },
+  {
+   "es": "datos viejos que ya no valen",
+   "en": "stale data",
+   "tense": "present"
+  }
+ ],
  "rate limit": {
   "es": "Respeta el límite de peticiones de la API externa.",
   "en": "Respect the rate limit of the external API.",
